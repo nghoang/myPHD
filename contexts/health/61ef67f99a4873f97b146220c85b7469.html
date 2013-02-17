@@ -1,0 +1,749 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   
+   
+      
+      
+   
+
+
+
+
+   
+   <!DOCTYPE html>
+   <!-- Consider adding a manifest.appcache: h5bp.com/d/Offline -->
+   <html xmlns="http://www.w3.org/1999/xhtml" class="no-js" xml:lang="en" lang="en">
+      <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# website: http://ogp.me/ns/website#">
+
+         <!-- Must be within first 512 bytes; keep close to top -->
+         <meta charset="UTF-8" />
+
+         <!-- Force latest IE rendering engine mode or Chrome Frame -->
+         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+         <title>HealthGraph</title>
+
+         <!-- Facebook Open Graph -->
+         <meta property="fb:app_id" content="62572192129"/>
+         <meta property="og:type" content="website" />
+         
+         <meta property="og:image" content="URL to an image" />
+         <meta property="og:title" content="Name of blog" />
+         <meta property="og:description" name="description" content="" /><!-- Set on a per-page basis -->
+
+         <!-- Mobile optimized -->
+         <meta name="HandheldFriendly" content="True" />
+         <meta name="MobileOptimized" content="320" />
+         <meta name="viewport" content="width=device-width" />
+
+         <!-- Place favicon.ico and apple-touch-icon.png in the root directory: mathiasbynens.be/notes/touch-icons -->
+
+         <link rel="stylesheet" href="http://d2b4ufapzmnxpw.cloudfront.net/build/5081/static/css/healthgraph/reset.css" />
+         <link class="no-js" rel="stylesheet" href="http://d2b4ufapzmnxpw.cloudfront.net/build/5081/static/css/healthgraph/prevent-fouc.css" />
+         <link rel="stylesheet" href="http://d2b4ufapzmnxpw.cloudfront.net/build/5081/static/css/healthgraph/common.css" />
+         
+            <link rel="stylesheet" href="http://d2b4ufapzmnxpw.cloudfront.net/build/5081/static/css/healthgraph/subpage.css" />
+         
+         
+            <link rel="stylesheet" href="http://d2b4ufapzmnxpw.cloudfront.net/build/5081/static/css/healthgraph/introducing-the-health-graph.css" />
+         
+         <link rel="stylesheet" href="http://d2b4ufapzmnxpw.cloudfront.net/build/5081/static/css/healthgraph/helpers.css" />
+         <link rel="stylesheet" href="http://d2b4ufapzmnxpw.cloudfront.net/build/5081/static/css/healthgraph/print.css" />
+         
+         <link rel="stylesheet" href="http://d2b4ufapzmnxpw.cloudfront.net/build/5081/static/hercules/style/spectrum.css" />
+      </head>
+
+      <!-- ID = Section-specific; Class = page-specific -->
+      <body id="subpage" class="introducing-the-health-graph ">
+
+         <script src="http://d2b4ufapzmnxpw.cloudfront.net/build/5081/static/hercules/script/libs/modernizr-2.5.3.custom.min.js"></script>
+         <script src="http://d2b4ufapzmnxpw.cloudfront.net/build/5081/static/hercules/script/browser-detect.js"></script>
+         
+         <script src="http://d2b4ufapzmnxpw.cloudfront.net/build/5081/static/hercules/script/libs/respond/src.min.js"></script>
+
+         <!--[if lte IE 8]><p class="chromeframe">You are running an older version of Internet Explorer that may not support all features of this site. Please <a href="http://browsehappy.com/">upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site as intended.</p><![endif]-->
+
+         <div class="content">
+
+            <header id="top" role="banner">
+
+               <div class="content">
+
+                  <a id="branding" title="Home" href="/healthgraph/home"><img id="emblem" src="http://d2b4ufapzmnxpw.cloudfront.net/build/5081/static/images/healthgraph/logo-healthGraph-header.png" alt="" height="66" width="333" /></a>
+
+                  <nav role="navigation">
+
+                     <hgroup class="implied">
+                        <h2>Primary Navigation</h2>
+                     </hgroup>
+
+                     <ul>
+
+                        <li>
+                           <a href="/healthgraph/overview">Documentation</a>
+                        </li>
+
+                        <li><a title="Support" href="//groups.google.com/group/HealthGraph">Support</a></li>
+
+                        <li><a title="Blog" href="//blog.healthgraph.com">Blog</a></li>
+
+
+                        <li id="search">
+                           <form action="search-results" method="get">
+                              <input title="Search" type="search" name="q" />
+                              <input type="image" src="http://d2b4ufapzmnxpw.cloudfront.net/build/5081/static/images/healthgraph/search.png" />
+                           </form>
+                        </li>
+                     </ul>
+
+                  </nav><!-- navigation -->
+
+               </div><!-- .content -->
+
+            </header>
+            
+            
+            <aside>
+               <p id="parent-site">
+                  <a href="//runkeeper.com/"><code class="informal">RunKeeper.com</code> &rarr;</a>
+               </p>
+            </aside>
+
+            <div id="content" class="content">
+
+               
+         <aside role="complementary">
+
+            <hgroup class="implied">
+               <h2>Sidebar</h2>
+            </hgroup>
+
+            <nav class="content">
+
+               <hgroup class="implied">
+                  <h2>Resources</h2>
+               </hgroup>
+
+               <ul>
+
+                  <li id="get-started">
+                     <details open="">
+                        <summary><img src="http://d2b4ufapzmnxpw.cloudfront.net/build/5081/static/images/healthgraph/getting-started.png"/>Get Started</summary>
+                        <ul>
+
+                           <li>
+                              <a href="/healthgraph/getting-started">Getting Started</a>
+                           </li>
+
+                           <li>
+                              <a href="/healthgraph/introducing-the-health-graph">Learn More</a>
+                           </li>
+
+                           <li>
+                              <a href="/healthgraph/earn-elite-affiliate-revenue">How to Earn Elite Affiliate Revenue</a>
+                           </li>
+
+                           <li>
+                              <a href="/healthgraph/app-ideas">Health Graph App Ideas</a>
+                           </li>
+
+                           <li>
+                              <a href="/healthgraph/faq"><abbr>FAQ</abbr>s</a>
+                           </li>
+
+                        </ul>
+                     </details>
+                  </li><!-- #get-started -->
+
+                  <li id="documentation">
+                     <details >
+                        <summary><img src="http://d2b4ufapzmnxpw.cloudfront.net/build/5081/static/images/healthgraph/documentation.png"/>Documentation</summary>
+                        <ul>
+
+                           <li>
+                              <a href="/healthgraph/overview">Overview</a>
+                           </li>
+
+                           <li>
+                              <a href="/healthgraph/registration-authorization">Registration &amp; Authorization</a>
+                           </li>
+                           
+                           <li>
+                              <a href="/healthgraph/users">Users</a>
+                           </li>
+
+                           <li>
+                              <a href="/healthgraph/profile">Profile</a>
+                           </li>
+
+                           <li>
+                              <a href="/healthgraph/settings">Settings</a>
+                           </li>
+
+                           <li>
+                              <a href="/healthgraph/fitness-activities">Fitness Activities</a>
+                           </li>
+
+                           <li>
+                              <a href="/healthgraph/strength-training">Strength Training Activities</a>
+                           </li>
+
+                           <li>
+                              <a href="/healthgraph/background-activity-sets">Background Activities</a>
+                           </li>
+
+                           <li>
+                              <a href="/healthgraph/sleep-sets">Sleep</a>
+                           </li>
+
+                           <li>
+                              <a href="/healthgraph/nutrition-sets">Nutrition</a>
+                           </li>
+
+                           <li>
+                              <a href="/healthgraph/weight-sets">Weight</a>
+                           </li>
+
+                           <li>
+                              <a href="/healthgraph/general-measurement-sets">General Body Measurements</a>
+                           </li>
+
+                           <li>
+                              <a href="/healthgraph/diabetes-sets">Diabetes Measurements</a>
+                           </li>
+
+                           <li>
+                              <a href="/healthgraph/records">Personal Records</a>
+                           </li>
+
+                           <li>
+                              <a href="/healthgraph/friends">Friends</a>
+                           </li>
+
+                           <li>
+                              <a href="/healthgraph/comments">Comment Threads</a>
+                           </li>
+
+                           <li>
+                              <a href="/healthgraph/root-resource">Root Resource</a>
+                           </li>
+
+                           <li>
+                              <a href="/healthgraph/change-log">Change Log</a>
+                           </li>
+
+                           <li>
+                              <a href="/healthgraph/example-api-calls">Example <abbr>API</abbr> Calls</a>
+                           </li>
+
+                           <li>
+                              <a href="/healthgraph/response-codes"><abbr>HTTP</abbr> Response Codes</a>
+                           </li>
+
+                           <li>
+                              <a href="/healthgraph/error-messages">Error Messages</a>
+                           </li>
+
+                           <li>
+                              <a href="/healthgraph/rate-limits">Rate Limits</a>
+                           </li>
+
+                        </ul>
+                     </details>
+                  </li><!-- #documentation -->
+                  <li id="plugins">
+                     <details >
+                        <summary><img src="http://d2b4ufapzmnxpw.cloudfront.net/build/5081/static/images/healthgraph/plugins.png"/>Plugins</summary>
+                        <ul>
+
+                           <li>
+                              <a href="/healthgraph/healthy-button-plugin">Healthy Button</a>
+                           </li>
+
+                           <li>
+                              <a href="/healthgraph/login-plugin">RunKeeper Connect</a>
+                           </li>
+
+                        </ul>
+                     </details>
+                  </li><!-- #plugins -->
+                  <li id="developer-tools">
+                     <details >
+                        <summary><img src="http://d2b4ufapzmnxpw.cloudfront.net/build/5081/static/images/healthgraph/developer-tools.png"/>Developer Tools</summary>
+                        <ul>
+
+                           <li>
+                              <a title="Developer Forum" href="//groups.google.com/group/HealthGraph">Developer Forum</a>
+                           </li>
+
+                           <li>
+                              <a href="/healthgraph/third-party-libraries">Third-Party Libraries</a>
+                           </li>
+                           
+                           <li>
+                              <a href="/healthgraph/console">Developer Console</a>
+                           </li>
+                           
+                           <li>
+                              <a title="Developer Blog" href="//blog.healthgraph.com">Developer Blog</a>
+                           </li>
+                           
+                        </ul>
+                     </details>
+                  </li><!-- #developer-tools -->
+
+                  <li id="official-business">
+                     <details >
+                        <summary><img src="http://d2b4ufapzmnxpw.cloudfront.net/build/5081/static/images/healthgraph/official-business.png"/>Official Business</summary>
+                        <ul>
+
+                           <li>
+                              <a href="/healthgraph/api-policies">Health Graph <abbr>API</abbr> Policies</a>
+                           </li>
+
+                           <li>
+                              <a href="//runkeeper.com/termsofservice">RunKeeper Terms of Service</a>
+                           </li>
+
+                        </ul>
+                     </details>
+                  </li><!-- #official-business -->
+
+               </ul>
+            
+            </nav><!-- .content -->
+         
+         </aside><!-- complementary -->
+      
+      
+
+               <article role="main" id="top">
+
+                  <div class="content">
+
+                     
+         
+      <header class="title"><script type="text/javascript">var NREUMQ=NREUMQ||[];NREUMQ.push(["mark","firstbyte",new Date().getTime()])</script>
+      	<hgroup>
+      		<h2>Introducing the HealthGraph</h2>
+      	</hgroup>
+      </header>
+      <!-- The following is purposely not marked up as sections/headings b/c it is conversational in tone -->
+      <p><b>What you’ll learn:</b></p>
+      <div class="toc">
+         <ol>
+            <li>What the Health Graph is, how it works and what value it provides.</li>
+            <li>How the RunKeeper app has used the Health Graph and RunKeeper.com to build a community of millions of fitness enthusiasts, engage users and increase revenue.</li>
+            <li>How developers of apps, fitness sensors and websites can tap into the power of the Health Graph and RunKeeper.com to acquire new users and generate revenue.</li>
+         </ol>
+      </div>
+      <div class="unit">
+         <p><b>You’re familiar with the concept of the social graph.</b></p>
+         <img src="http://d2b4ufapzmnxpw.cloudfront.net/build/5081/static/kronos/images/healthgraph/RKsocialGraph.jpg" alt="A web of connections between friends (profile photos, scattered) and “You” (icon, centered)" title="The Social Graph" />
+      </div><!-- .unit -->
+      <div class="unit">
+         <p><b>The social graph has evolved into the Open Graph.</b></p>
+         <p>The social graph has evolved into the Open Graph—a system of connections that includes not just personal relationships, but also your personal 'likes' and interests. Any website, individual or group that you 'like' is eligible for inclusion in your open graph.</p>
+      </div><!-- .unit -->
+      <div class="unit">
+         <p><b>But the Open Graph is still missing a few things…</b></p>
+         <ul>
+            <li>Changes to your body measurements over time—a 'like' relationship doesn't include a time factor.</li>
+            <li>The impact of your activities, sleep patterns and nutrition on your health and body measurements.</li>
+            <li>An analysis of the elements of your social graph that will help motivate you to reach your fitness goals.</li>
+         </ul>
+      </div><!-- .unit -->
+      <div class="unit">
+         <p><b>That’s where the Health Graph comes into play!</b></p>
+         <img src="http://d2b4ufapzmnxpw.cloudfront.net/build/5081/static/kronos/images/healthgraph/healthGraph.jpg" alt="Charts and graphs displaying HealthGraph data" title="The Health Graph" />
+      </div><!-- .unit -->
+      <div class="unit">
+         <p><b>In words, the Health Graph is…</b></p>
+         <ul>
+            <li>A system of individual health connections or interrelations - a digital map of your personal health.</li>
+            <li>A record of the evolution of these items over time.</li>
+            <li>Any body measurement stats and health/fitness related actions that impact your fitness and personal health are eligible for inclusion in your Health Graph.</li>
+         </ul>
+      </div><!-- .unit -->
+      <div class="unit">
+         <p><b>What insight does the Health Graph provide?</b></p>
+         <ul>
+            <li>A snapshot of your current physical condition.</li>
+            <li>A picture of how your health has evolved over time.</li>
+            <li>An understanding of how your activities and behaviors correlate with changes in your health.</li>
+            <li>Data about how your social interactions influence these changes in your activities and behaviors.</li>
+         </ul>
+         <img src="http://d2b4ufapzmnxpw.cloudfront.net/build/5081/static/kronos/images/healthgraph/healthChart.jpg" alt="Line chart, “Your Weight (pounds)” versus Time (month and year) with labeled points: “Saw a friend sign up for a 10K”, “Signed up for first 10K”, “Started training for a 10K”, “Ran a 10K in 1:14:27”" title="Health Chart" />
+      </div><!-- .unit -->
+      <div class="unit">
+         <p><b>Imagine an app that…</b></p>
+         <ul>
+            <li>Identifies periods of weight loss in your fitness history.</li>
+            <li>Establishes correlations between weight loss and nutrition, sleep, activity performance, social motivation, etc.</li>
+            <li>Visually displays the relationship between these health data points.</li>
+         </ul>
+         <!--img src="http://d2b4ufapzmnxpw.cloudfront.net/build/5081/static/kronos/images/healthgraph/Screen_shot_2011-05-12_at_3.20.47_PM.png" alt="Health Data Table" title="Health Data Table" /-->
+         <table>
+            <caption>Health Data Example</caption>
+            <thead>
+               <tr>
+                  <th scope="col">Data</th>
+                  <th scope="col">Week of May 17<sup>th</sup></th>
+                  <th scope="col">Week of May 24<sup>th</sup></th>
+                  <th scope="col">Week of June 1<sup>st</sup></th>
+                  <th scope="col">Week of June 7<sup>th</sup></th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <th scope="row">Weight</th>
+                  <td>180 <abbr title="pounds">lbs</abbr></td>
+                  <td>182 <abbr title="pounds">lbs</abbr></td>
+                  <td>176 <abbr title="pounds">lbs</abbr></td>
+                  <td>169 <abbr title="pounds">lbs</abbr></td>
+               </tr>
+               <tr>
+                  <th scope="row"><abbr title="Average" class="trunc">Avg</abbr> Daily Calories</th>
+                  <td>3,400</td>
+                  <td>3,500</td>
+                  <td>2,400</td>
+                  <td>2,300</td>
+               </tr>
+               <tr>
+                  <th scope="row"><abbr title="Average" class="trunc">Avg</abbr> Daily Sleep</th>
+                  <td>6 <abbr title="hours" class="trunc">hrs</abbr></td>
+                  <td>5 <abbr title="hours" class="trunc">hrs</abbr></td>
+                  <td>8 <abbr title="hours" class="trunc">hrs</abbr></td>
+                  <td>8 <abbr title="hours" class="trunc">hrs</abbr></td>
+               </tr>
+               <tr>
+                  <th scope="row"><abbr title="Average" class="trunc">Avg</abbr> Daily Activity Duration</th>
+                  <td>15 <abbr title="minutes" class="trunc">mins</abbr></td>
+                  <td>18 <abbr title="minutes" class="trunc">mins</abbr></td>
+                  <td>30 <abbr title="minutes" class="trunc">mins</abbr></td>
+                  <td>35 <abbr title="minutes" class="trunc">mins</abbr></td>
+               </tr>
+               <tr>
+                  <th scope="row">Social Network Motivation</th>
+                  <td>2 comments received</td>
+                  <td>2 comments received</td>
+                  <td>6 comments received</td>
+                  <td>10 comments received</td>
+               </tr>
+            </tbody>
+         </table>
+      </div><!-- .unit -->
+      <div class="unit">
+         <p><b>So… who’s using the Health Graph now?</b></p>
+         <p>RunKeeper’s mobile app leveraged the power of the Health Graph and <code class="url informal">RunKeeper.com</code> to build a community of millions of fitness enthusiasts and increase revenue.</p>
+         <img src="http://d2b4ufapzmnxpw.cloudfront.net/build/5081/static/kronos/images/healthgraph/downloads.jpg" alt="Area chart, Downloads (in millions) versus Date (month and year): slopes upward from less than 1 million in April 2010 to over 5 million in February 2011" title="Downloads" />
+      </div><!-- .unit -->
+      <div class="unit">
+         <p><b>How is the RunKeeper mobile app using the Health Graph?</b></p>
+         <p>RunKeeper’s mobile app is built on the Health Graph. The Health Graph <abbr>API</abbr> is a portal to the Health Graph’s robust data set, and also provides access to the viral marketing resources and sales channels available on <code class="url informal">RunKeeper.com</code>.</p>
+
+         <!-- #1.) All of this text should be HTML. #2.) It isn’t clear what it actually means. -->
+         <img src="http://d2b4ufapzmnxpw.cloudfront.net/build/5081/static/kronos/images/healthgraph/builtOnHealthGraph.jpg" alt="RunKeeper.com &amp; RunKeeper Mobile App. Social Sharing: Levers for app data/activities; FitnessReports: Visual display of fitness data; Elite Subscriptions: Access to premium features; eCommerce Store: Devices &amp; Apparel. The Health Graph API. The Health Graph." title="Built on the Health Graph" />
+      </div><!-- .unit -->
+      <div class="unit">
+         <p><b>How did the Health Graph and <code class="url informal">RunKeeper.com</code> help them grow?</b></p>
+         <ul class="prose">
+            <li>
+               <p><b>Acquired millions of new users for free and fostered widespread app distribution</b> by using <code class="url informal">RunKeeper.com</code>’s built-in social levers to publish content to the RunKeeper FitnessFeed and users’ social networks.</p>
+               <img src="http://d2b4ufapzmnxpw.cloudfront.net/build/5081/static/kronos/images/healthgraph/social.jpg" alt="Facebook, Twitter" />
+            </li>
+            <li>
+               <p><b>Increased device sales</b> by leveraging the <code class="url informal">RunKeeper.com</code> FitnessFeed and access to users’ social networks to promote devices available for purchase in the <code class="url informal">RunKeeper.com</code> store.</p>
+               <img src="http://d2b4ufapzmnxpw.cloudfront.net/build/5081/static/kronos/images/healthgraph/devices.jpg" alt="Devices" />
+            </li>
+            <li>
+               <p><b>Generated subscription revenue</b> by creating premium product features tied to a recurring subscription model.</p>
+               <img src="http://d2b4ufapzmnxpw.cloudfront.net/build/5081/static/kronos/images/healthgraph/runKeeperElite.jpg" alt="RunKeeper Elite" />
+            </li>
+            <li>
+               <p><b>Created value for users</b> by providing a visual display of personal health & fitness data from multiple devices.</p>
+               <img src="http://d2b4ufapzmnxpw.cloudfront.net/build/5081/static/kronos/images/healthgraph/fitnessReport.jpg" alt="Screenshot: Stacked bar graph of fitness data, Total distance (in miles) versus Time (in weeks)" title="FitnessReport example" />
+            </li>
+            <li>
+               <p><b>Managed costs</b> by utilizing a scalable cloud storage solution for health and fitness data.</p>
+               <img src="http://d2b4ufapzmnxpw.cloudfront.net/build/5081/static/kronos/images/healthgraph/cloud.png" alt="Cloud" />
+            </li>
+         </ul>
+      </div><!-- .unit -->
+      <div class="unit">
+         <p><b>Now, we’re opening up the Health Graph and <code class="url informal">RunKeeper.com</code> to you!</b></p>
+         <p>By integrating with the Health Graph API, data from your app populates in an individual’s Health Graph. It can then be accessed by any other app, device or website that the user allows to access their Health Graph.</p>
+      </div><!-- .unit -->
+      <section id="developer-benefits">
+         <hgroup>
+            <h2>Developer Benefits</h2>
+         </hgroup>
+         <div class="unit">
+            <p><b>Acquire users, drive downloads and increase device sales.</b></p>
+            <ul class="prose">
+               <li>
+                  <p><b>Gain exposure to millions of passionate fitness enthusiasts</b> through access to the RunKeeper.com FitnessFeed. Your app’s listing in the FitnessFeed connects directly to a landing page for your app or your product page in the RunKeeper.com Store.</p>
+                  <img src="http://d2b4ufapzmnxpw.cloudfront.net/build/5081/static/kronos/images/healthgraph/fitnessFeed.jpg" alt="Devices with lines pointing from them to their respective names represented in the FitnessFeed" title="FitnessFeed device branding" />
+               </li>
+               <li>
+                  <p><b>Promote your app through users' social networks</b>, and potentially reach millions of new users.</p>
+                  <!-- These alts are probably too verbose… -->
+                  <img src="http://d2b4ufapzmnxpw.cloudfront.net/build/5081/static/kronos/images/healthgraph/Screen_shot_2011-05-13_at_11.37.09_AM.png" alt="Sarah Hodges: “Triathalon training! Intervals. Next stop = weights &amp; pool…” — Check out the 3.00 mile run I did with RunKeeper: Duration 0:27:25 | Calories Burned 377; Average Pace: 9.08 / mile | Average Speed: 6.57 mph" title="RunKeeper post on Facebook" />
+               </li>
+               <li>
+                  <p><b>Generate revenue</b> through RunKeeper’s Elite Subscription model.</p>
+                  <ul>
+                     <li>Earn 50% commission on Elite sales you drive.</li>
+                     <li>Incorporate existing premium Elite features into your app (RunKeeper Live, Advanced FitnessReports, Advanced FitnessAlerts, Discounted Training Plans).</li>
+                     <li>Or, create new Elite features by building them into your app.</li>
+                     <li>Receive recurring payments through PayPal.</li>
+                     <li>Quickly get up and running - simply embed an Elite link that we provide into your app or website.</li>
+                  </ul>            
+               </li>
+            </ul><!-- .prose -->
+         </div><!-- .unit -->
+         <div id="elite-affiliate-program-sample-apps" class="unit">
+            <p><b>Elite Affiliate Program: Sample Apps</b></p>
+            <ul class="options total3">
+               <li>
+                  <img src="http://d2b4ufapzmnxpw.cloudfront.net/build/5081/static/kronos/images/healthgraph/app-gps.jpg" alt="GPS Apps" title="GPS Apps" />
+                  <p><b>GPS Tracking App</b></p>
+                  <p>Offer RunKeeper LIVE integration (premium Elite feature).</p>
+                  <p>Promote Elite to your users and earn 50% from the sale of all subscriptions.</p>
+               </li>
+               <li>
+                  <img src="http://d2b4ufapzmnxpw.cloudfront.net/build/5081/static/kronos/images/healthgraph/app-heart.jpg" alt="Heart Rate Device" title="Heart Rate Device" />
+                  <p><b>Heart Rate Device</b></p>
+                  <p>Tie premium reporting for your app to the Elite subscription through the Advanced FitnessReports feature.</p>
+                  <p>Promote Elite to your users and earn 50% from the sale of all subscriptions.</p>
+               </li>
+               <li>
+                  <img src="http://d2b4ufapzmnxpw.cloudfront.net/build/5081/static/kronos/images/healthgraph/app-gaming.jpg" alt="Gaming Apps" title="Gaming Apps" />
+                  <p><b>Gaming App</b></p>
+                  <p>Build levels into the game that can only be accessed by Elite members.</p>
+                  <p>Promote Elite to your users and earn 50% from the sale of all subscriptions.</p>
+               </li>
+            </ul><!-- .options.total3 -->
+         </div><!-- #elite-affiliate-program-sample-apps.unit -->
+         <div class="unit">
+            <p><b>Add value to your app with RunKeeper.com's FitnessReports (data visualizations).</b></p>
+            <p>Provide a complete personal health picture to users by showcasing data from your app in RunKeeper FitnessReports alongside other apps using the Health Graph.</p>
+            <img src="http://d2b4ufapzmnxpw.cloudfront.net/build/5081/static/kronos/images/healthgraph/fitnessReport.jpg" alt="Screenshot: Stacked bar graph of fitness data, Total distance (in miles) versus Time (in weeks)" title="FitnessReport example" />
+         </div><!-- .unit -->
+         <div id="data" class="unit">
+            <p><b>Access over 7 billion data points to create a relevant user experience.</b></p>
+            <p>Parse the Health Graph's rich data set to identify meaningful correlations between data points that can become the foundation for your app or device integration. Check out some of the stats available today through the Health Graph:</p>
+            <!-- DI will invalidate but it's OK; I'm a professional -->
+            <dl class="options total3">
+               <di>
+                  <dt>Cardio Activities</dt>
+                  <dd>
+                     <ul>
+                        <li>Total Distance</li>
+                        <li>Average Distance per Activity</li>
+                        <li>Total Duration</li>
+                        <li>Average Duration per Activity</li>
+                        <li>Total Calories Burned</li>
+                        <li>Average Calories Burned per Activity</li>
+                        <li>Average Pace</li>
+                        <li>Average Speed</li>
+                        <li>Total Elevation Climb</li>
+                        <li>Average Elevation Climb per Activity</li>
+                        <li>Average Heart Rate</li>
+                     </ul>
+                  </dd>
+               </di>
+               <di>
+                  <dt>Strength Training</dt>
+                  <dd>
+                     <ul>
+                        <li>Exercise Type</li>
+                        <li>Muscle Group</li>
+                        <li>Name of Routine</li>
+                        <li>Number of Reps</li>
+                        <li>Weight per Rep</li>
+                     </ul>
+                  </dd>
+               </di>
+               <di>
+                  <dt>Sleep</dt>
+                  <dd>
+                     <ul>
+                        <li>Total Sleep</li>
+                        <li>Total <abbr>REM</abbr> Sleep</li>
+                        <li>Total Light Sleep</li>
+                        <li>Total Deep Sleep</li>
+                        <li>Total Times Woken</li>
+                        <li>Total Times Awoken per Night</li>
+                        <li>Average Sleep Per Night</li>
+                        <li>Average REM Sleep per Night</li>
+                        <li>Average Light Sleep per Night</li>
+                        <li>Average Deep Sleep per Night</li>
+                        <li>Average Times Woken per Night</li>
+                        <li>Average Times Awoken per Night</li>
+                     </ul>
+                  </dd>
+               </di>
+               <di>
+                  <dt>Weight</dt>
+                  <dd>
+                     <ul>
+                        <li>Weight</li>
+                        <li>% Body Fat</li>
+                        <li><abbr>BMI</abbr></li>
+                     </ul>
+                  </dd>
+               </di>
+               <di>
+                  <dt>Health</dt>
+                  <dd>
+                     <ul>
+                        <li>Systolic Blood Pressure</li>
+                        <li>Diastolic Blood Pressure</li>
+                        <li>Total Cholesterol</li>
+                        <li><abbr>LDL</abbr> Cholesterol</li>
+                        <li><abbr>HDL</abbr> Cholesterol</li>
+                        <li>Vitamin D</li>
+                        <li>C-reactive Protein (<abbr>hsCRP</abbr>)</li>
+                        <li>C-reactive Protein (“regular” <abbr>CRP</abbr>)
+                        <li>Thyroid Stimulating Hormone (<abbr>TSH</abbr>)</li>
+                        <li>Uric Acid</li>
+                     </ul>
+                  </dd>
+               </di>
+               <di>
+                  <dt>Diabetes</dt>
+                  <dd>
+                     <ul>
+                        <li>Fasting Plasma Blood Glucose Test (<abbr>FPG</abbr>)</li>
+                        <li>Oral Blood Glucose Tolerance Test (<abbr>OBTT</abbr>)</li>
+                        <li>Blood Glucose Random Plasma Glucose</li>
+                        <li>Test</li>
+                        <li>Hemoglobin A1C</li>
+                        <li>Insulin</li>
+                        <li>C-peptide</li>
+                        <li>Triglyceride Level</li>
+                     </ul>
+                  </dd>
+               </di>
+               <di>
+                  <dt>Nutrition</dt>
+                  <dd>
+                     <ul>
+                        <li>Calories</li>
+                        <li>Carbs</li>
+                        <li>Fat</li>
+                        <li>Fiber</li>
+                        <li>Protein</li>
+                        <li>Sodium</li>
+                        <li>Water</li>
+                     </ul>
+                  </dd>
+               </di>
+            </dl>
+         </div><!-- .unit -->
+      </section><!-- #developer-benefits -->
+   
+      
+
+                  </div>
+
+               </article><!-- main#top -->
+
+            </div><!-- #content -->
+
+            <footer role="contentinfo">
+
+               <div class="content">
+
+                  <p id="copyright">© 2012 FitnessKeeper, <abbr>Inc</abbr>.</p><!-- #copyright -->
+
+                  <nav>
+
+                     <hgroup class="implied">
+                        <h2>See Also</h2>
+                     </hgroup>
+
+                     <ul>
+
+                        <li><a title="RunKeeper Blog" href="//runkeeper.com/blog">Blog</a></li>
+
+                        <li><a title="Contact RunKeeper" href="//runkeeper.com/contact">Contact</a></li>
+
+                        <li><a title="RunKeeper Jobs" href="//runkeeper.com/jobs">Jobs</a></li>
+
+                        <li><a title="RunKeeper Terms of Service" href="//runkeeper.com/termsofservice">Terms of Service</a></li>
+
+                        <li><a title="RunKeeper Privacy Policy" href="//runkeeper.com/privacypolicy">Privacy Policy</a></li>
+
+                        <li><a href="http://store.runkeeper.com">RunKeeper Store</a></li>
+
+                     </ul>
+
+                  </nav>
+
+                  <ul class="social">
+
+                     <li><a href="//twitter.com/runkeeper"><img title="Twitter" src="http://d2b4ufapzmnxpw.cloudfront.net/build/5081/static/images/healthgraph/t.png" /></a></li>
+                     <li><a href="//www.facebook.com/runkeeper"><img title="Facebook" src="http://d2b4ufapzmnxpw.cloudfront.net/build/5081/static/images/healthgraph/f.png" /></a></li>
+
+                  </ul>
+
+               </div><!-- .content -->
+
+            </footer><!-- contentinfo -->
+
+         </div><!-- .content -->
+
+         <!-- JavaScript at the bottom for fast page loading -->
+         <div id="scripts">
+            <script src="http://d2b4ufapzmnxpw.cloudfront.net/build/5081/static/js/jquery-1.7.1.min.js"></script>
+
+            <!-- scripts concatenated and minified via build script -->
+            <script src="http://d2b4ufapzmnxpw.cloudfront.net/build/5081/static/hercules/script/libs/html-outliner/h5o.min.js"></script>
+            <script src="http://d2b4ufapzmnxpw.cloudfront.net/build/5081/static/hercules/script/libs/html-outliner/src.js"></script>
+            <script src="http://d2b4ufapzmnxpw.cloudfront.net/build/5081/static/hercules/script/spectrum.js"></script>
+            
+
+            
+
+            
+            <script src="http://d2b4ufapzmnxpw.cloudfront.net/build/5081/static/hercules/script/script.js"></script>
+
+            <script src="http://d2b4ufapzmnxpw.cloudfront.net/build/5081/static/js/console.js"></script>
+         </div><!-- #scripts -->
+
+      <script type="text/javascript">if (!NREUMQ.f) { NREUMQ.f=function() {NREUMQ.push(["load",new Date().getTime()]);var e=document.createElement("script");e.type="text/javascript";e.async=true;e.src="https://d1ros97qkrwjf5.cloudfront.net/42/eum/rum.js";document.body.appendChild(e);if(NREUMQ.a)NREUMQ.a();};NREUMQ.a=window.onload;window.onload=NREUMQ.f;};NREUMQ.push(["nrf2","beacon-1.newrelic.com","ec1b9ef29f",226195,"blQEZUVZX0RUAkNQClceJURETF5aGglSWAlNWQFDVkhZGX0EVlURUXYUUEdQYl5BBHZaEVBeCHNSWV8ZQwhSTg==",0,5,new Date().getTime()])</script></body>
+
+   </html>
+
+
+
+

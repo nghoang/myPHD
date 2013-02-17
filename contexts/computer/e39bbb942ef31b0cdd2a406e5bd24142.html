@@ -1,0 +1,2455 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html dir='ltr' xmlns='http://www.w3.org/1999/xhtml' xmlns:b='http://www.google.com/2005/gml/b' xmlns:data='http://www.google.com/2005/gml/data' xmlns:expr='http://www.google.com/2005/gml/expr'>
+<head>
+<link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'/>
+<meta content='text/html; charset=UTF-8' http-equiv='Content-Type'/>
+<script type="text/javascript">(function() { var a=window,b="jstiming",d="tick";var e=function(c){this.t={};this.tick=function(c,p,h){h=void 0!=h?h:(new Date).getTime();this.t[c]=[h,p]};this[d]("start",null,c)},f=new e;a.jstiming={Timer:e,load:f};if(a.performance&&a.performance.timing){var g=a.performance.timing,j=a[b].load,k=g.navigationStart,l=g.responseStart;0<k&&l>=k&&(j[d]("_wtsrt",void 0,k),j[d]("wtsrt_","_wtsrt",l),j[d]("tbsd_","wtsrt_"))}
+try{var m=null;a.chrome&&a.chrome.csi&&(m=Math.floor(a.chrome.csi().pageT),j&&0<k&&(j[d]("_tbnd",void 0,a.chrome.csi().startE),j[d]("tbnd_","_tbnd",k)));null==m&&a.gtbExternal&&(m=a.gtbExternal.pageT());null==m&&a.external&&(m=a.external.pageT,j&&0<k&&(j[d]("_tbnd",void 0,a.external.startE),j[d]("tbnd_","_tbnd",k)));m&&(a[b].pt=m)}catch(n){};a.tickAboveFold=function(c){var i=0;if(c.offsetParent){do i+=c.offsetTop;while(c=c.offsetParent)}c=i;750>=c&&a[b].load[d]("aft")};var q=!1;function r(){q||(q=!0,a[b].load[d]("firstScrollTime"))}a.addEventListener?a.addEventListener("scroll",r,!1):a.attachEvent("onscroll",r);
+ })();</script>
+<meta content='true' name='MSSmartTagsPreventParsing'/>
+<meta content='blogger' name='generator'/>
+<link href='http://ebookmaterials.blogspot.co.uk/favicon.ico' rel='icon' type='image/x-icon'/>
+<link href='http://ebookmaterials.blogspot.com/2010/09/computer-networking-chapter-2-ppts.html' rel='canonical'/>
+<link rel="alternate" type="application/atom+xml" title="Ebook materials, ECE ,EEE,CSE, IT,MCA,MBA,JNTU books materials,interview questions,jobs - Atom" href="http://ebookmaterials.blogspot.com/feeds/posts/default" />
+<link rel="alternate" type="application/rss+xml" title="Ebook materials, ECE ,EEE,CSE, IT,MCA,MBA,JNTU books materials,interview questions,jobs - RSS" href="http://ebookmaterials.blogspot.com/feeds/posts/default?alt=rss" />
+<link rel="service.post" type="application/atom+xml" title="Ebook materials, ECE ,EEE,CSE, IT,MCA,MBA,JNTU books materials,interview questions,jobs - Atom" href="http://www.blogger.com/feeds/5764591189701154136/posts/default" />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://www.blogger.com/rsd.g?blogID=5764591189701154136" />
+<link rel="alternate" type="application/atom+xml" title="Ebook materials, ECE ,EEE,CSE, IT,MCA,MBA,JNTU books materials,interview questions,jobs - Atom" href="http://ebookmaterials.blogspot.com/feeds/4896624561704043709/comments/default" />
+<link href='https://plus.google.com/106165714703484612787' rel='publisher'/>
+<!--[if IE]> <script> (function() { var html5 = ("abbr,article,aside,audio,canvas,datalist,details," + "figure,footer,header,hgroup,mark,menu,meter,nav,output," + "progress,section,time,video").split(','); for (var i = 0; i < html5.length; i++) { document.createElement(html5[i]); } try { document.execCommand('BackgroundImageCache', false, true); } catch(e) {} })(); </script> <![endif]-->
+<!-- Start www.bloggertipandtrick.net: Changing the Blogger Title Tag -->
+<title>computer networking chapter 2 ppts ~ Ebook materials, ECE ,EEE,CSE, IT,MCA,MBA,JNTU books materials,interview questions,jobs</title>
+<!-- End www.bloggertipandtrick.net: Changing the Blogger Title Tag -->
+<link href='YOUR-FAVICON-URL' rel='shortcut icon' type='image/vnd.microsoft.icon'/>
+<link type='text/css' rel='stylesheet' href='//www.blogger.com/static/v1/widgets/1937454905-widget_css_bundle.css' />
+<style id='page-skin-1' type='text/css'><!--
+/*
+-----------------------------------------------
+Blogger Template Style
+Name:   iTech
+Author: Lasantha Bandara
+URL 1:  http://www.premiumbloggertemplates.com/
+URL 2:  http://www.bloggertipandtrick.net/
+Date:   May 2012
+License:  This free Blogger template is licensed under the Creative Commons Attribution 3.0 License, which permits both personal and commercial use.
+However, to satisfy the 'attribution' clause of the license, you are required to keep the footer links intact which provides due credit to its authors. For more specific details about the license, you may visit the URL below:
+http://creativecommons.org/licenses/by/3.0/
+----------------------------------------------- */
+body#layout ul{list-style-type:none;list-style:none}
+body#layout ul li{list-style-type:none;list-style:none}
+body#layout #myGallery{display:none}
+body#layout .featuredposts{display:none}
+body#layout .fp-slider{display:none}
+body#layout #navcontainer{display:none}
+body#layout .menu-secondary-wrap{display:none}
+body#layout .menu-secondary-container{display:none}
+body#layout #skiplinks{display:none}
+body#layout .feedtwitter{display:none}
+body#layout #header-wrapper {margin-bottom:10px;min-height:50px;}
+body#layout .social-profiles-widget h3 {display:none;}
+/* Variable definitions
+====================
+<Variable name="bgcolor" description="Page Background Color"
+type="color" default="#fff">
+<Variable name="textcolor" description="Text Color"
+type="color" default="#333">
+<Variable name="linkcolor" description="Link Color"
+type="color" default="#58a">
+<Variable name="pagetitlecolor" description="Blog Title Color"
+type="color" default="#666">
+<Variable name="descriptioncolor" description="Blog Description Color"
+type="color" default="#999">
+<Variable name="titlecolor" description="Post Title Color"
+type="color" default="#c60">
+<Variable name="bordercolor" description="Border Color"
+type="color" default="#ccc">
+<Variable name="sidebarcolor" description="Sidebar Title Color"
+type="color" default="#999">
+<Variable name="sidebartextcolor" description="Sidebar Text Color"
+type="color" default="#666">
+<Variable name="visitedlinkcolor" description="Visited Link Color"
+type="color" default="#999">
+<Variable name="bodyfont" description="Text Font"
+type="font" default="normal normal 100% Georgia, Serif">
+<Variable name="headerfont" description="Sidebar Title Font"
+type="font"
+default="normal normal 78% 'Trebuchet MS',Trebuchet,Arial,Verdana,Sans-serif">
+<Variable name="pagetitlefont" description="Blog Title Font"
+type="font"
+default="normal normal 200% Georgia, Serif">
+<Variable name="descriptionfont" description="Blog Description Font"
+type="font"
+default="normal normal 78% 'Trebuchet MS', Trebuchet, Arial, Verdana, Sans-serif">
+<Variable name="postfooterfont" description="Post Footer Font"
+type="font"
+default="normal normal 78% 'Trebuchet MS', Trebuchet, Arial, Verdana, Sans-serif">
+<Variable name="startSide" description="Side where text starts in blog language"
+type="automatic" default="left">
+<Variable name="endSide" description="Side where text ends in blog language"
+type="automatic" default="right">
+*/
+/* Use this with templates/template-twocol.html */
+body{background:#184583 url(http://4.bp.blogspot.com/-MZOGvv3Cw9w/T-MlIF57REI/AAAAAAAAAfY/vIaeDuIEL6E/s000/background.jpg) center top no-repeat;color:#555555;font-family: Arial, Helvetica, Sans-serif;font-size: 13px;margin:0px;padding:0px;}
+a:link,a:visited{color:#19529E;text-decoration:underline;outline:none;}
+a:hover{color:#FF8E00;text-decoration:none;outline:none;}
+a img{border-width:0}
+#body-wrapper{margin:0px;padding:0px;background:url(http://4.bp.blogspot.com/-e4uA3XaBwmM/T-MlIpNAvjI/AAAAAAAAAfg/DSip_xX_ERs/s000/wrapper-bg.png) left top repeat-x;}
+/* Header-----------------------------------------------*/
+#header-wrapper{width:960px;margin:0 auto 0;height:60px;padding:24px 0px 14px 0px;overflow:hidden;}
+#header-inner{background-position:center;margin-left:auto;margin-right:auto}
+#header{margin:0;border:0 solid #cccccc;color:#666666;float:left;width:48%;overflow:hidden;}
+#header h1{color:#F5F6F8;text-shadow:0px 1px 0px #000;margin:0 5px 0;padding:0px 0px 0px 0px;font-family:&#39;Oswald&#39;,Arial,Helvetica,Sans-serif;font-weight:bold;font-size:32px;line-height:32px;}
+#header .description{padding-left:7px;color:#F5F6F8;text-shadow:0px 1px 0px #000;line-height:14px;font-size:14px;padding-top:0px;margin-top:10px;font-family:Arial,Helvetica,Sans-serif;}
+#header h1 a,#header h1 a:visited{color:#F5F6F8;text-decoration:none}
+#header h2{padding-left:5px;color:#F5F6F8;font:14px Arial,Helvetica,Sans-serif}
+#header2{float:right;width:50%;margin-right:0px;padding-right:0px;overflow:hidden;}
+#header2 .widget{padding:0px 0px 0px 0px;float:right}
+.social-profiles-widget img{margin:0 4px 0 0}
+.social-profiles-widget img:hover{opacity:0.8}
+#top-social-profiles{padding-top:10px;height:32px;text-align:right;margin-right:15px}
+#top-social-profiles img{margin:0 0 0 6px !important}
+#top-social-profiles img:hover{opacity:0.8}
+#top-social-profiles .widget-container{background:none;padding:0;border:0}
+/* Outer-Wrapper----------------------------------------------- */
+#outer-wrapper{width:960px;margin:0px auto 0px;padding:0px;text-align:left;}
+#content-wrapper{background:#fff;padding:15px;border-bottom:1px solid #D6DEE9;}
+#main-wrapper{width:460px;margin:0px;padding:0px;float:left;word-wrap:break-word;overflow:hidden;text-shadow:0px 1px 0px #fff;}
+#lsidebar-wrapper{width:160px;float:left;margin:0px 15px 0px 0px;padding:0px;word-wrap:break-word;overflow:hidden;text-shadow:0px 1px 0px #fff;}
+#rsidebar-wrapper{width:280px;float:right;margin:0px 0px 0px 13px;padding:0px;word-wrap:break-word;overflow:hidden;text-shadow:0px 1px 0px #fff;}
+/* Headings----------------------------------------------- */
+h2{}
+/* Posts-----------------------------------------------*/
+h2.date-header{margin:1.5em 0 .5em;display:none;}
+.wrapfullpost{}
+.post{margin-bottom:15px;}
+.post-title{color:#173A6A;margin:0 0 10px 0;padding:0;font-family:'Oswald',sans-serif;font-size:20px;line-height:20px;font-weight:bold;text-transform:uppercase;}
+.post-title a,.post-title a:visited,.post-title strong{display:block;text-decoration:none;color:#173A6A;text-decoration:none;}
+.post-title strong,.post-title a:hover{color:#2E5DB4;text-decoration:none;}
+.post-body{margin:0px;padding:0px 10px 0px 0px;font-family:Arial, Helvetica, Sans-serif;font-size:12px;line-height:20px;}
+.post-footer{margin:5px 0;}
+.comment-link{margin-left:.6em}
+.post-body img{padding:6px;border:1px solid #eee;background:#ffffff;}
+.postmeta-primary{color:#999;font-size:12px;line-height:18px;padding:0 0 5px 0}
+.postmeta-secondary{color:#999;font-size:12px;line-height:18px;padding:0 0 10px 0}
+.postmeta-primary span,.postmeta-secondary span{padding:3px 0 3px 20px;background-position:left center;background-repeat:no-repeat}
+.meta_date{background-image:url(http://4.bp.blogspot.com/-ncEMQ-J28hk/T-MlIxMkkgI/AAAAAAAAAfo/VI4h1Nmu8t0/s000/date.png)}
+.meta_author{background-image:url(http://2.bp.blogspot.com/-ymo7zwSg_-Y/T-MlJY1od0I/AAAAAAAAAfw/AZJutfQ8smg/s000/author.png)}
+.meta_comments{background-image:url(http://1.bp.blogspot.com/--VtvfWudUJM/T-MlJr94oUI/AAAAAAAAAf4/vbg9TGp0M9U/s000/comments.png)}
+.meta_edit{background-image:url(images/edit.png)}
+.meta_categories{background-image:url(http://3.bp.blogspot.com/-F-u3LEYNUSU/T-MlJ2iw6BI/AAAAAAAAAgA/7Iw-SJ4i3Eo/s000/category.png)}
+.meta_tags{background-image:url(http://1.bp.blogspot.com/-UcYIfT31yL4/T-MlKPoKLtI/AAAAAAAAAgI/iYSQsFhClZo/s000/tags.png)}
+.readmore{margin-bottom:5px;float:right}
+.readmore a{color:#193E6F;background:#DDE7F5 url(http://1.bp.blogspot.com/-NWhyOAetKjQ/T-MlKdQoybI/AAAAAAAAAgQ/wQQqCAFhHkk/s000/readmore-bg.png) left top repeat-x;border:1px solid #BFD0E7;padding:8px 14px;display:inline-block;font-size:12px;line-height:12px;text-decoration:none;text-transform:uppercase}
+.readmore a:hover{color:#FFF;text-shadow:0px 1px 0px #000;background:#193D6D url(http://1.bp.blogspot.com/-NWhyOAetKjQ/T-MlKdQoybI/AAAAAAAAAgQ/wQQqCAFhHkk/s000/readmore-bg.png) left -124px repeat-x;border:1px solid #376098;text-decoration:none}
+/* Sidebar Content----------------------------------------------- */
+.sidebar{margin:0 0 10px 0;font-size:13px;color:#133563;}
+.sidebar a{text-decoration:none;color:#133563;}
+.sidebar a:hover{text-decoration:none;color:#FF8100;}
+.sidebar h2{background:url(http://2.bp.blogspot.com/-v1NrZn_Kfqs/T-MlKbzXylI/AAAAAAAAAgY/dRrIu6KEvVM/s000/widgettitle-bg.png) left top repeat-x;margin:0 0 10px 0;padding:10px 0 10px 10px;color:#FFF;font-size:16px;line-height:16px;font-family:Arial,Helvetica,Sans-serif;font-weight:bold;text-decoration:none;text-transform:uppercase;text-shadow:0px 1px 0px #000;}
+.sidebar ul{list-style-type:none;list-style:none;margin:0px;padding:0px;}
+.sidebar ul li{padding:0 0 9px 12px;margin:0 0 8px 0;background:url(http://2.bp.blogspot.com/-SYdHeVHqeD0/T-MlKh-8c6I/AAAAAAAAAgg/0jEREdnKdSM/s000/widget-list.png) left 4px no-repeat;}
+.sidebar .widget{margin:0 0 15px 0;padding:0;color:#133563;font-size:13px;}
+.main .widget{margin:0 0 5px;padding:0 0 2px}
+.main .Blog{border-bottom-width:0}
+/* FOOTER ----------------------------------------------- */
+#footer-container{background:#14396B;margin-bottom:15px;text-shadow:0 1px 0 #000;}
+#footer{width:960px;margin:0 auto;padding:10px 0px;height:30px;overflow:hidden;}
+#copyrights{color:#FFF;background:#14396B;float:left;height:30px;width:440px;overflow:hidden;}
+#copyrights a{color:#FFF}
+#copyrights a:hover{color:#FFF;text-decoration:none}
+#credits{color:#AAC5E9;font-size:11px;float:right;text-align:right;height:30px;width:440px;overflow:hidden;}
+#credits a{color:#AAC5E9;text-decoration:none}
+#credits a:hover{text-decoration:none;color:#AAC5E9}
+#footer-widgets-container{background:#183F74 url(http://1.bp.blogspot.com/-bnudPzV7VMw/T-MlLENKFoI/AAAAAAAAAgo/iDm_fDZvY8g/s000/footer-widgets-bg.png) left top repeat-x;padding:20px 0;border-top:1px solid #3A6195;border-bottom:1px solid #234D85;margin-top:15px;text-shadow:0 1px 0 #000;}
+#footer-widgets{width:960px;margin:0 auto}
+.footer-widget-box{width:225px;float:left;margin-right:20px}
+.footer-widget-box-last{margin-right:0}
+#footer-widgets .widget-container{color:#A0BDE5}
+#footer-widgets .widget-container a{color:#A0BDE5;text-decoration:none}
+#footer-widgets .widget-container a:hover{color:#FFF;text-decoration:underline}
+#footer-widgets h2{background:url(http://2.bp.blogspot.com/-v1NrZn_Kfqs/T-MlKbzXylI/AAAAAAAAAgY/dRrIu6KEvVM/s000/widgettitle-bg.png) left top repeat-x;margin:0 0 10px 0;padding:10px 0 10px 10px;color:#FFF;font-size:16px;line-height:16px;font-family:Arial,Helvetica,Sans-serif;font-weight:bold;text-decoration:none;text-transform:uppercase;text-shadow:0px 1px 0px #000;}
+#footer-widgets .widget ul{list-style-type:none;list-style:none;margin:0px;padding:0px;}
+#footer-widgets .widget ul li{padding:0 0 9px 12px;margin:0 0 8px 0;background:url(http://2.bp.blogspot.com/-SYdHeVHqeD0/T-MlKh-8c6I/AAAAAAAAAgg/0jEREdnKdSM/s000/widget-list.png) left 4px no-repeat;}
+.footersec {}
+.footersec .widget{margin-bottom:20px;}
+.footersec ul{}
+.footersec ul li{}
+.crelink{float:right;text-align:right;}
+/* Search ----------------------------------------------- */
+#search{border:1px solid #C4D1E3;background:#FFF url(http://1.bp.blogspot.com/-zoA_z1q91j0/T-MlLbhITsI/AAAAAAAAAgw/6ZpiPPENGVI/s000/search.png) 99% 50% no-repeat;text-align:left;padding:6px 24px 6px 6px}
+#search #s{background:none;color:#7491C3;border:0;width:100%;padding:0;margin:0;outline:none}
+#content-search{width:300px;padding:15px 0}
+/* Comments----------------------------------------------- */
+#comments{padding:10px;background-color:#fff;border:1px solid #eee;}
+#comments h4{font-size:16px;font-weight:bold;margin:1em 0;color:#999999}
+#comments-block3{padding:0;margin:0;float:left;overflow:hidden;position:relative;}
+#comment-name-url{width:365px;float:left}
+#comment-date{width:365px;float:left;margin-top:5px;font-size:10px;}
+#comment-header{float:left;padding:5px 0 40px 10px;margin:5px 0px 15px 0px;position:relative;background-color:#fff;border:1px dashed #ddd;}
+.avatar-image-container{background:url(http://2.bp.blogspot.com/-AlNDpn_xI_c/T-MlLisooSI/AAAAAAAAAg4/pHiMMn5dYZU/s000/comment-avatar.jpg);width:32px;height:32px;float:right;margin:5px 10px 5px 5px;border:1px solid #ddd;}
+.avatar-image-container img{width:32px;height:32px;}
+a.comments-autor-name{color:#000;font:normal bold 14px Arial,Tahoma,Verdana}
+a.says{color:#000;font:normal 14px Arial,Tahoma,Verdana}
+.says a:hover{text-decoration:none}
+.deleted-comment{font-style:italic;color:gray}
+#blog-pager-newer-link{float:left}
+#blog-pager-older-link{float:right}
+#blog-pager{text-align:center}
+.feed-links{clear:both;line-height:2.5em}
+/* Profile ----------------------------------------------- */
+.profile-img{float:left;margin-top:0;margin-right:5px;margin-bottom:5px;margin-left:0;padding:4px;border:1px solid #cccccc}
+.profile-data{margin:0;text-transform:uppercase;letter-spacing:.1em;font:normal normal 78% 'Trebuchet MS', Trebuchet, Arial, Verdana, Sans-serif;color:#999999;font-weight:bold;line-height:1.6em}
+.profile-datablock{margin:.5em 0 .5em}
+.profile-textblock{margin:0.5em 0;line-height:1.6em}
+.avatar-image-container{background:url(http://2.bp.blogspot.com/-AlNDpn_xI_c/T-MlLisooSI/AAAAAAAAAg4/pHiMMn5dYZU/s000/comment-avatar.jpg);width:32px;height:32px;float:right;margin:5px 10px 5px 5px;border:1px solid #ddd;}
+.avatar-image-container img{width:32px;height:32px;}
+.profile-link{font:normal normal 78% 'Trebuchet MS', Trebuchet, Arial, Verdana, Sans-serif;text-transform:uppercase;letter-spacing:.1em}
+#navbar-iframe{height:0;visibility:hidden;display:none;}
+
+--></style>
+<script src='https://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js' type='text/javascript'></script>
+<script type='text/javascript'>
+//<![CDATA[
+
+(function($){
+	/* hoverIntent by Brian Cherne */
+	$.fn.hoverIntent = function(f,g) {
+		// default configuration options
+		var cfg = {
+			sensitivity: 7,
+			interval: 100,
+			timeout: 0
+		};
+		// override configuration options with user supplied object
+		cfg = $.extend(cfg, g ? { over: f, out: g } : f );
+
+		// instantiate variables
+		// cX, cY = current X and Y position of mouse, updated by mousemove event
+		// pX, pY = previous X and Y position of mouse, set by mouseover and polling interval
+		var cX, cY, pX, pY;
+
+		// A private function for getting mouse position
+		var track = function(ev) {
+			cX = ev.pageX;
+			cY = ev.pageY;
+		};
+
+		// A private function for comparing current and previous mouse position
+		var compare = function(ev,ob) {
+			ob.hoverIntent_t = clearTimeout(ob.hoverIntent_t);
+			// compare mouse positions to see if they've crossed the threshold
+			if ( ( Math.abs(pX-cX) + Math.abs(pY-cY) ) < cfg.sensitivity ) {
+				$(ob).unbind("mousemove",track);
+				// set hoverIntent state to true (so mouseOut can be called)
+				ob.hoverIntent_s = 1;
+				return cfg.over.apply(ob,[ev]);
+			} else {
+				// set previous coordinates for next time
+				pX = cX; pY = cY;
+				// use self-calling timeout, guarantees intervals are spaced out properly (avoids JavaScript timer bugs)
+				ob.hoverIntent_t = setTimeout( function(){compare(ev, ob);} , cfg.interval );
+			}
+		};
+
+		// A private function for delaying the mouseOut function
+		var delay = function(ev,ob) {
+			ob.hoverIntent_t = clearTimeout(ob.hoverIntent_t);
+			ob.hoverIntent_s = 0;
+			return cfg.out.apply(ob,[ev]);
+		};
+
+		// A private function for handling mouse 'hovering'
+		var handleHover = function(e) {
+			// next three lines copied from jQuery.hover, ignore children onMouseOver/onMouseOut
+			var p = (e.type == "mouseover" ? e.fromElement : e.toElement) || e.relatedTarget;
+			while ( p && p != this ) { try { p = p.parentNode; } catch(e) { p = this; } }
+			if ( p == this ) { return false; }
+
+			// copy objects to be passed into t (required for event object to be passed in IE)
+			var ev = jQuery.extend({},e);
+			var ob = this;
+
+			// cancel hoverIntent timer if it exists
+			if (ob.hoverIntent_t) { ob.hoverIntent_t = clearTimeout(ob.hoverIntent_t); }
+
+			// else e.type == "onmouseover"
+			if (e.type == "mouseover") {
+				// set "previous" X and Y position based on initial entry point
+				pX = ev.pageX; pY = ev.pageY;
+				// update "current" X and Y position based on mousemove
+				$(ob).bind("mousemove",track);
+				// start polling interval (self-calling timeout) to compare mouse coordinates over time
+				if (ob.hoverIntent_s != 1) { ob.hoverIntent_t = setTimeout( function(){compare(ev,ob);} , cfg.interval );}
+
+			// else e.type == "onmouseout"
+			} else {
+				// unbind expensive mousemove event
+				$(ob).unbind("mousemove",track);
+				// if hoverIntent state is true, then call the mouseOut function after the specified delay
+				if (ob.hoverIntent_s == 1) { ob.hoverIntent_t = setTimeout( function(){delay(ev,ob);} , cfg.timeout );}
+			}
+		};
+
+		// bind the function to the two event listeners
+		return this.mouseover(handleHover).mouseout(handleHover);
+	};
+	
+})(jQuery);
+
+//]]>
+</script>
+<script type='text/javascript'>
+//<![CDATA[
+
+/*
+ * Superfish v1.4.8 - jQuery menu widget
+ * Copyright (c) 2008 Joel Birch
+ *
+ * Dual licensed under the MIT and GPL licenses:
+ * 	http://www.opensource.org/licenses/mit-license.php
+ * 	http://www.gnu.org/licenses/gpl.html
+ *
+ * CHANGELOG: http://users.tpg.com.au/j_birch/plugins/superfish/changelog.txt
+ */
+
+;(function($){
+	$.fn.superfish = function(op){
+
+		var sf = $.fn.superfish,
+			c = sf.c,
+			$arrow = $(['<span class="',c.arrowClass,'"> &#187;</span>'].join('')),
+			over = function(){
+				var $$ = $(this), menu = getMenu($$);
+				clearTimeout(menu.sfTimer);
+				$$.showSuperfishUl().siblings().hideSuperfishUl();
+			},
+			out = function(){
+				var $$ = $(this), menu = getMenu($$), o = sf.op;
+				clearTimeout(menu.sfTimer);
+				menu.sfTimer=setTimeout(function(){
+					o.retainPath=($.inArray($$[0],o.$path)>-1);
+					$$.hideSuperfishUl();
+					if (o.$path.length && $$.parents(['li.',o.hoverClass].join('')).length<1){over.call(o.$path);}
+				},o.delay);	
+			},
+			getMenu = function($menu){
+				var menu = $menu.parents(['ul.',c.menuClass,':first'].join(''))[0];
+				sf.op = sf.o[menu.serial];
+				return menu;
+			},
+			addArrow = function($a){ $a.addClass(c.anchorClass).append($arrow.clone()); };
+			
+		return this.each(function() {
+			var s = this.serial = sf.o.length;
+			var o = $.extend({},sf.defaults,op);
+			o.$path = $('li.'+o.pathClass,this).slice(0,o.pathLevels).each(function(){
+				$(this).addClass([o.hoverClass,c.bcClass].join(' '))
+					.filter('li:has(ul)').removeClass(o.pathClass);
+			});
+			sf.o[s] = sf.op = o;
+			
+			$('li:has(ul)',this)[($.fn.hoverIntent && !o.disableHI) ? 'hoverIntent' : 'hover'](over,out).each(function() {
+				if (o.autoArrows) addArrow( $('>a:first-child',this) );
+			})
+			.not('.'+c.bcClass)
+				.hideSuperfishUl();
+			
+			var $a = $('a',this);
+			$a.each(function(i){
+				var $li = $a.eq(i).parents('li');
+				$a.eq(i).focus(function(){over.call($li);}).blur(function(){out.call($li);});
+			});
+			o.onInit.call(this);
+			
+		}).each(function() {
+			var menuClasses = [c.menuClass];
+			if (sf.op.dropShadows  && !($.browser.msie && $.browser.version < 7)) menuClasses.push(c.shadowClass);
+			$(this).addClass(menuClasses.join(' '));
+		});
+	};
+
+	var sf = $.fn.superfish;
+	sf.o = [];
+	sf.op = {};
+	sf.IE7fix = function(){
+		var o = sf.op;
+		if ($.browser.msie && $.browser.version > 6 && o.dropShadows && o.animation.opacity!=undefined)
+			this.toggleClass(sf.c.shadowClass+'-off');
+		};
+	sf.c = {
+		bcClass     : 'sf-breadcrumb',
+		menuClass   : 'sf-js-enabled',
+		anchorClass : 'sf-with-ul',
+		arrowClass  : 'sf-sub-indicator',
+		shadowClass : 'sf-shadow'
+	};
+	sf.defaults = {
+		hoverClass	: 'sfHover',
+		pathClass	: 'overideThisToUse',
+		pathLevels	: 1,
+		delay		: 800,
+		animation	: {opacity:'show'},
+		speed		: 'normal',
+		autoArrows	: true,
+		dropShadows : true,
+		disableHI	: false,		// true disables hoverIntent detection
+		onInit		: function(){}, // callback functions
+		onBeforeShow: function(){},
+		onShow		: function(){},
+		onHide		: function(){}
+	};
+	$.fn.extend({
+		hideSuperfishUl : function(){
+			var o = sf.op,
+				not = (o.retainPath===true) ? o.$path : '';
+			o.retainPath = false;
+			var $ul = $(['li.',o.hoverClass].join(''),this).add(this).not(not).removeClass(o.hoverClass)
+					.find('>ul').hide().css('visibility','hidden');
+			o.onHide.call($ul);
+			return this;
+		},
+		showSuperfishUl : function(){
+			var o = sf.op,
+				sh = sf.c.shadowClass+'-off',
+				$ul = this.addClass(o.hoverClass)
+					.find('>ul:hidden').css('visibility','visible');
+			sf.IE7fix.call($ul);
+			o.onBeforeShow.call($ul);
+			$ul.animate(o.animation,o.speed,function(){ sf.IE7fix.call($ul); o.onShow.call($ul); });
+			return this;
+		}
+	});
+
+})(jQuery);
+
+
+
+//]]>
+</script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+jQuery.noConflict();
+jQuery(function(){ 
+	jQuery('ul.menu-primary').superfish({ 
+	animation: {opacity:'show'},
+autoArrows:  true,
+                dropShadows: false, 
+                speed: 200,
+                delay: 800
+                });
+            });
+
+jQuery(function(){ 
+	jQuery('ul.menu-secondary').superfish({ 
+	animation: {opacity:'show'},
+autoArrows:  true,
+                dropShadows: false, 
+                speed: 200,
+                delay: 800
+                });
+            });
+
+jQuery(document).ready(function() {
+	jQuery('.fp-slides').cycle({
+		fx: 'scrollHorz',
+		timeout: 4000,
+		delay: 0,
+		speed: 400,
+		next: '.fp-next',
+		prev: '.fp-prev',
+		pager: '.fp-pager',
+		continuous: 0,
+		sync: 1,
+		pause: 1,
+		pauseOnPagerHover: 1,
+		cleartype: true,
+		cleartypeNoBg: true
+	});
+ });
+
+/* ]]> */
+
+</script>
+<script type='text/javascript'>
+//<![CDATA[
+
+function showrecentcomments(json){for(var i=0;i<a_rc;i++){var b_rc=json.feed.entry[i];var c_rc;if(i==json.feed.entry.length)break;for(var k=0;k<b_rc.link.length;k++){if(b_rc.link[k].rel=='alternate'){c_rc=b_rc.link[k].href;break;}}c_rc=c_rc.replace("#","#comment-");var d_rc=c_rc.split("#");d_rc=d_rc[0];var e_rc=d_rc.split("/");e_rc=e_rc[5];e_rc=e_rc.split(".html");e_rc=e_rc[0];var f_rc=e_rc.replace(/-/g," ");f_rc=f_rc.link(d_rc);var g_rc=b_rc.published.$t;var h_rc=g_rc.substring(0,4);var i_rc=g_rc.substring(5,7);var j_rc=g_rc.substring(8,10);var k_rc=new Array();k_rc[1]="Jan";k_rc[2]="Feb";k_rc[3]="Mar";k_rc[4]="Apr";k_rc[5]="May";k_rc[6]="Jun";k_rc[7]="Jul";k_rc[8]="Aug";k_rc[9]="Sep";k_rc[10]="Oct";k_rc[11]="Nov";k_rc[12]="Dec";if("content" in b_rc){var l_rc=b_rc.content.$t;}else if("summary" in b_rc){var l_rc=b_rc.summary.$t;}else var l_rc="";var re=/<\S[^>]*>/g;l_rc=l_rc.replace(re,"");if(m_rc==true)document.write('On '+k_rc[parseInt(i_rc,10)]+' '+j_rc+' ');document.write('<a href="'+c_rc+'">'+b_rc.author[0].name.$t+'</a> commented');if(n_rc==true)document.write(' on '+f_rc);document.write(': ');if(l_rc.length<o_rc){document.write('<i>&#8220;');document.write(l_rc);document.write('&#8221;</i><br/><br/>');}else{document.write('<i>&#8220;');l_rc=l_rc.substring(0,o_rc);var p_rc=l_rc.lastIndexOf(" ");l_rc=l_rc.substring(0,p_rc);document.write(l_rc+'&hellip;&#8221;</i>');document.write('<br/><br/>');}}}
+
+function rp(json){document.write('<ul>');for(var i=0;i<numposts;i++){document.write('<li>');var entry=json.feed.entry[i];var posttitle=entry.title.$t;var posturl;if(i==json.feed.entry.length)break;for(var k=0;k<entry.link.length;k++){if(entry.link[k].rel=='alternate'){posturl=entry.link[k].href;break}}posttitle=posttitle.link(posturl);var readmorelink="(more)";readmorelink=readmorelink.link(posturl);var postdate=entry.published.$t;var cdyear=postdate.substring(0,4);var cdmonth=postdate.substring(5,7);var cdday=postdate.substring(8,10);var monthnames=new Array();monthnames[1]="Jan";monthnames[2]="Feb";monthnames[3]="Mar";monthnames[4]="Apr";monthnames[5]="May";monthnames[6]="Jun";monthnames[7]="Jul";monthnames[8]="Aug";monthnames[9]="Sep";monthnames[10]="Oct";monthnames[11]="Nov";monthnames[12]="Dec";if("content"in entry){var postcontent=entry.content.$t}else if("summary"in entry){var postcontent=entry.summary.$t}else var postcontent="";var re=/<\S[^>]*>/g;postcontent=postcontent.replace(re,"");document.write(posttitle);if(showpostdate==true)document.write(' - '+monthnames[parseInt(cdmonth,10)]+' '+cdday);if(showpostsummary==true){if(postcontent.length<numchars){document.write(postcontent)}else{postcontent=postcontent.substring(0,numchars);var quoteEnd=postcontent.lastIndexOf(" ");postcontent=postcontent.substring(0,quoteEnd);document.write(postcontent+'...'+readmorelink)}}document.write('</li>')}document.write('</ul>')}
+
+//]]>
+</script>
+<script type='text/javascript'>
+summary_noimg = 550;
+summary_img = 450;
+img_thumb_height = 150;
+img_thumb_width = 200; 
+</script>
+<script type='text/javascript'>
+//<![CDATA[
+
+function removeHtmlTag(strx,chop){ 
+	if(strx.indexOf("<")!=-1)
+	{
+		var s = strx.split("<"); 
+		for(var i=0;i<s.length;i++){ 
+			if(s[i].indexOf(">")!=-1){ 
+				s[i] = s[i].substring(s[i].indexOf(">")+1,s[i].length); 
+			} 
+		} 
+		strx =  s.join(""); 
+	}
+	chop = (chop < strx.length-1) ? chop : strx.length-2; 
+	while(strx.charAt(chop-1)!=' ' && strx.indexOf(' ',chop)!=-1) chop++; 
+	strx = strx.substring(0,chop-1); 
+	return strx+'...'; 
+}
+
+function createSummaryAndThumb(pID){
+	var div = document.getElementById(pID);
+	var imgtag = "";
+	var img = div.getElementsByTagName("img");
+	var summ = summary_noimg;
+	if(img.length>=1) {	
+		imgtag = '<span style="float:left; padding:0px 10px 5px 0px;"><img src="'+img[0].src+'" width="'+img_thumb_width+'px" height="'+img_thumb_height+'px"/></span>';
+		summ = summary_img;
+	}
+	
+	var summary = imgtag + '<div>' + removeHtmlTag(div.innerHTML,summ) + '</div>';
+	div.innerHTML = summary;
+}
+
+//]]>
+</script>
+<style type='text/css'>
+.clearfix:after{content:"\0020";display:block;height:0;clear:both;visibility:hidden;overflow:hidden}
+#container,#header,#main,#main-fullwidth,#footer,.clearfix{display:block}
+.clear{clear:both}
+h1,h2,h3,h4,h5,h6{margin-bottom:16px;font-weight:normal;line-height:1}
+h1{font-size:40px}
+h2{font-size:30px}
+h3{font-size:20px}
+h4{font-size:16px}
+h5{font-size:14px}
+h6{font-size:12px}
+h1 img,h2 img,h3 img,h4 img,h5 img,h6 img{margin:0}
+table{margin-bottom:20px;width:100%}
+th{font-weight:bold}
+thead th{background:#c3d9ff}
+th,td,caption{padding:4px 10px 4px 5px}
+tr.even td{background:#e5ecf9}
+tfoot{font-style:italic}
+caption{background:#eee}
+li ul,li ol{margin:0}
+ul,ol{margin:0 20px 20px 0;padding-left:40px}
+ul{list-style-type:disc}
+ol{list-style-type:decimal}
+dl{margin:0 0 20px 0}
+dl dt{font-weight:bold}
+dd{margin-left:20px}
+blockquote{margin:20px;color:#666;}
+pre{margin:20px 0;white-space:pre}
+pre,code,tt{font:13px 'andale mono','lucida console',monospace;line-height:18px}
+#search {overflow:hidden;}
+#header h1{font-family:'Oswald',Arial,Helvetica,Sans-serif;font-weight:bold;font-size:32px;line-height:32px;}
+#header .description{font-family:Arial,Helvetica,Sans-serif;}
+.post-title {font-family:'Oswald',sans-serif;}
+.sidebar h2{font-family:Arial,Helvetica,Sans-serif;}
+#footer-widgets h2{font-family:Arial,Helvetica,Sans-serif;}
+.menus,.menus *{margin:0;padding:0;list-style:none;list-style-type:none;line-height:1.0}
+.menus ul{position:absolute;top:-999em;width:100%}
+.menus ul li{width:100%}
+.menus li:hover{visibility:inherit}
+.menus li{float:left;position:relative}
+.menus a{display:block;position:relative}
+.menus li:hover ul,.menus li.sfHover ul{left:0;top:100%;z-index:99}
+.menus li:hover li ul,.menus li.sfHover li ul{top:-999em}
+.menus li li:hover ul,.menus li li.sfHover ul{left:100%;top:0}
+.menus li li:hover li ul,.menus li li.sfHover li ul{top:-999em}
+.menus li li li:hover ul,.menus li li li.sfHover ul{left:100%;top:0}
+.sf-shadow ul{padding:0 8px 9px 0;-moz-border-radius-bottomleft:17px;-moz-border-radius-topright:17px;-webkit-border-top-right-radius:17px;-webkit-border-bottom-left-radius:17px}
+.menus .sf-shadow ul.sf-shadow-off{background:transparent}
+.menu-primary-container{float:right;padding:0;position:relative;height:32px;background:url(http://2.bp.blogspot.com/-BFBWayrTbs4/T-MlLjL_hkI/AAAAAAAAAhA/gGRUX66oMUw/s000/menu-primary-bg.png) left top repeat-x;z-index:400;margin-top:10px}
+.menu-primary{}
+.menu-primary ul{min-width:160px}
+.menu-primary li a{color:#BFD4F4;text-shadow:0px 1px 0px #000;padding:10px 15px;text-decoration:none;text-transform:uppercase;font:normal 12px/12px Arial,Helvetica,Sans-serif;margin:0 3px 0 0;border:1px solid #2B548E}
+.menu-primary li a:hover,.menu-primary li a:active,.menu-primary li a:focus,.menu-primary li:hover > a,.menu-primary li.current-cat > a,.menu-primary li.current_page_item > a,.menu-primary li.current-menu-item > a{color:#FFF;outline:0;background:url(http://2.bp.blogspot.com/-BFBWayrTbs4/T-MlLjL_hkI/AAAAAAAAAhA/gGRUX66oMUw/s000/menu-primary-bg.png) left -132px repeat-x;border:1px solid #2B548E}
+.menu-primary li li a{color:#fff;text-transform:none;background:#153766;padding:10px 15px;margin:0;border:0;font-weight:normal}
+.menu-primary li li a:hover,.menu-primary li li a:active,.menu-primary li li a:focus,.menu-primary li li:hover > a,.menu-primary li li.current-cat > a,.menu-primary li li.current_page_item > a,.menu-primary li li.current-menu-item > a{color:#fff;background:#FE8400;outline:0;border-bottom:0;text-decoration:none;border:0}
+.menu-primary a.sf-with-ul{padding-right:20px;min-width:1px}
+.menu-primary .sf-sub-indicator{position:absolute;display:block;overflow:hidden;right:0;top:0;padding:9px 10px 0 0}
+.menu-primary li li .sf-sub-indicator{padding:9px 10px 0 0}
+.wrap-menu-primary .sf-shadow ul{background:url('http://4.bp.blogspot.com/-XRHn3NKzEWE/T-MlL5_jWmI/AAAAAAAAAhI/-O0xcqI3OB0/s000/menu-primary-shadow.png') no-repeat bottom right}
+.menu-secondary-container{position:relative;height:42px;z-index:300;background:url(http://1.bp.blogspot.com/-MXYfo3Jn7c8/T-MlMINO-lI/AAAAAAAAAhQ/Mtj3BIlkje0/s000/menu-secondary-bg.png) left top repeat-x;margin-top:15px}
+.menu-secondary{}
+.menu-secondary ul{min-width:160px}
+.menu-secondary li a{color:#FFF;text-shadow:0px 1px 0px #000;padding:15px 15px;text-decoration:none;text-transform:uppercase;font:normal 12px/12px 'Oswald',sans-serif}
+.menu-secondary li a:hover,.menu-secondary li a:active,.menu-secondary li a:focus,.menu-secondary li:hover > a,.menu-secondary li.current-cat > a,.menu-secondary li.current_page_item > a,.menu-secondary li.current-menu-item > a{color:#FFF;background:url(http://1.bp.blogspot.com/-MXYfo3Jn7c8/T-MlMINO-lI/AAAAAAAAAhQ/Mtj3BIlkje0/s000/menu-secondary-bg.png) left -142px repeat-x;outline:0}
+.menu-secondary li li a{color:#fff;background:#183C6D;padding:10px 15px;text-transform:none;margin:0;font-weight:normal}
+.menu-secondary li li a:hover,.menu-secondary li li a:active,.menu-secondary li li a:focus,.menu-secondary li li:hover > a,.menu-secondary li li.current-cat > a,.menu-secondary li li.current_page_item > a,.menu-secondary li li.current-menu-item > a{color:#fff;background:#254D83;outline:0}
+.menu-secondary a.sf-with-ul{padding-right:26px;min-width:1px}
+.menu-secondary .sf-sub-indicator{position:absolute;display:block;overflow:hidden;right:0;top:0;padding:14px 13px 0 0}
+.menu-secondary li li .sf-sub-indicator{padding:9px 13px 0 0}
+.wrap-menu-secondary .sf-shadow ul{background:url('http://3.bp.blogspot.com/-tReRAfXMsV8/T-MlMSc2eZI/AAAAAAAAAhY/IHASC8f1afI/s000/menu-secondary-shadow.png') no-repeat bottom right}
+.fp-slider{margin:0 0 15px 0;padding:0px;width:460px;height:332px;overflow:hidden;position:relative;}
+.fp-slides-container{}
+.fp-slides,.fp-thumbnail,.fp-prev-next,.fp-nav{width:460px}
+.fp-slides,.fp-thumbnail{height:300px;overflow:hidden;position:relative}
+.fp-title{color:#fff;text-shadow:0px 1px 0px #000;text-shadow:0px 1px 0px #000;font:bold 18px Arial,Helvetica,Sans-serif;padding:0 0 2px 0;margin:0}
+.fp-title a,.fp-title a:hover{color:#fff;text-shadow:0px 1px 0px #000;text-shadow:0px 1px 0px #000;text-decoration:none}
+.fp-content{position:absolute;bottom:0;left:0;right:0;background:#111;opacity:0.7;filter:alpha(opacity = 70);padding:10px 15px;overflow:hidden}
+.fp-content p{color:#fff;text-shadow:0px 1px 0px #000;text-shadow:0px 1px 0px #000;padding:0;margin:0;line-height:18px}
+.fp-more,.fp-more:hover{color:#fff;font-weight:bold}
+.fp-nav{height:12px;text-align:center;padding:10px 0;background:#333;}
+.fp-pager a{background-image:url(http://4.bp.blogspot.com/-8HsQmiyw2BI/T-MlM7CB4uI/AAAAAAAAAhg/49X8wH7DFTY/s000/featured-pager.png);cursor:pointer;margin:0 8px 0 0;padding:0;display:inline-block;width:12px;height:12px;overflow:hidden;text-indent:-999px;background-position:0 0;float:none;line-height:1;opacity:0.7;filter:alpha(opacity = 70)}
+.fp-pager a:hover,.fp-pager a.activeSlide{text-decoration:none;background-position:0 -112px;opacity:1.0;filter:alpha(opacity = 100)}
+.fp-prev-next-wrap{position:relative;z-index:200}
+.fp-prev-next{position:absolute;bottom:130px;left:0;right:0;height:37px}
+.fp-prev{margin-top:-180px;float:left;margin-left:14px;width:37px;height:37px;background:url(http://4.bp.blogspot.com/-G7MfmvF2xaA/T-MlM774gNI/AAAAAAAAAho/meYZB4exS_4/s000/featured-prev.png) left top no-repeat;opacity:0.6;filter:alpha(opacity = 60)}
+.fp-prev:hover{opacity:0.8;filter:alpha(opacity = 80)}
+.fp-next{margin-top:-180px;float:right;width:36px;height:37px;margin-right:14px;background:url(http://2.bp.blogspot.com/-Y5Ygi4BbM_Q/T-MlNPBwoTI/AAAAAAAAAhw/HIjHGxrjbhU/s000/featured-next.png) right top no-repeat;opacity:0.6;filter:alpha(opacity = 60)}
+.fp-next:hover{opacity:0.8;filter:alpha(opacity = 80)}
+/* -- number page navigation -- */
+#blog-pager {padding:6px;font-size:11px;}
+#comment-form iframe{padding:5px;width:420px;height:275px;}
+.tabs-widget{list-style:none;list-style-type:none;margin:0 0 10px 0;padding:0;height:24px}
+.tabs-widget li{list-style:none;list-style-type:none;margin:0 0 0 4px;padding:0;float:left}
+.tabs-widget li:first-child{margin:0}
+.tabs-widget li a{color:#234778;background:url(http://1.bp.blogspot.com/-KeSl8pR-8a8/T-MlNjhGhuI/AAAAAAAAAh4/49WQqSmJrj0/s000/tabs-bg.png) left top repeat-x;padding:6px 16px;display:block;text-decoration:none;font:bold 12px/12px Arial,Helvetica,Sans-serif;border:1px solid #BFD0E7}
+.tabs-widget li a:hover,.tabs-widget li a.tabs-widget-current{background:url(http://1.bp.blogspot.com/-KeSl8pR-8a8/T-MlNjhGhuI/AAAAAAAAAh4/49WQqSmJrj0/s000/tabs-bg.png) left -124px repeat-x;color:#fff;text-shadow:0px 1px 0px #000;border:1px solid #FF8100;text-decoration:none}
+.tabs-widget-content{}
+.tabviewsection{margin-top:10px;margin-bottom:10px;}
+#crosscol-wrapper{display:none;}
+.PopularPosts .item-title{font-weight:bold;padding-bottom:0.2em;text-shadow:0px 1px 0px #fff;}
+.PopularPosts .widget-content ul li{padding:0.7em 0;background:none}
+.widget-container{list-style-type:none;list-style:none;margin:0 0 15px 0;padding:0;color:#133563;font-size:13px;padding:0px;}
+h3.widgettitle{background:url(http://2.bp.blogspot.com/-v1NrZn_Kfqs/T-MlKbzXylI/AAAAAAAAAgY/dRrIu6KEvVM/s000/widgettitle-bg.png) left top repeat-x;margin:0 0 10px 0;padding:10px 0 10px 10px;color:#FFF;font-size:16px;line-height:16px;font-family:Arial,Helvetica,Sans-serif;font-weight:bold;text-decoration:none;text-transform:uppercase;text-shadow:0px 1px 0px #000;}
+div.span-1,div.span-2,div.span-3,div.span-4,div.span-5,div.span-6,div.span-7,div.span-8,div.span-9,div.span-10,div.span-11,div.span-12,div.span-13,div.span-14,div.span-15,div.span-16,div.span-17,div.span-18,div.span-19,div.span-20,div.span-21,div.span-22,div.span-23,div.span-24{float:left;margin-right:10px}
+.span-1{width:30px}.span-2{width:70px}.span-3{width:110px}.span-4{width:150px}.span-5{width:190px}.span-6{width:230px}.span-7{width:270px}.span-8{width:310px}.span-9{width:350px}.span-10{width:390px}.span-11{width:430px}.span-12{width:470px}.span-13{width:510px}.span-14{width:550px}.span-15{width:590px}.span-16{width:630px}.span-17{width:670px}.span-18{width:710px}.span-19{width:750px}.span-20{width:790px}.span-21{width:830px}.span-22{width:870px}.span-23{width:910px}.span-24,div.span-24{width:960px;margin:0}input.span-1,textarea.span-1,input.span-2,textarea.span-2,input.span-3,textarea.span-3,input.span-4,textarea.span-4,input.span-5,textarea.span-5,input.span-6,textarea.span-6,input.span-7,textarea.span-7,input.span-8,textarea.span-8,input.span-9,textarea.span-9,input.span-10,textarea.span-10,input.span-11,textarea.span-11,input.span-12,textarea.span-12,input.span-13,textarea.span-13,input.span-14,textarea.span-14,input.span-15,textarea.span-15,input.span-16,textarea.span-16,input.span-17,textarea.span-17,input.span-18,textarea.span-18,input.span-19,textarea.span-19,input.span-20,textarea.span-20,input.span-21,textarea.span-21,input.span-22,textarea.span-22,input.span-23,textarea.span-23,input.span-24,textarea.span-24{border-left-width:1px!important;border-right-width:1px!important;padding-left:5px!important;padding-right:5px!important}input.span-1,textarea.span-1{width:18px!important}input.span-2,textarea.span-2{width:58px!important}input.span-3,textarea.span-3{width:98px!important}input.span-4,textarea.span-4{width:138px!important}input.span-5,textarea.span-5{width:178px!important}input.span-6,textarea.span-6{width:218px!important}input.span-7,textarea.span-7{width:258px!important}input.span-8,textarea.span-8{width:298px!important}input.span-9,textarea.span-9{width:338px!important}input.span-10,textarea.span-10{width:378px!important}input.span-11,textarea.span-11{width:418px!important}input.span-12,textarea.span-12{width:458px!important}input.span-13,textarea.span-13{width:498px!important}input.span-14,textarea.span-14{width:538px!important}input.span-15,textarea.span-15{width:578px!important}input.span-16,textarea.span-16{width:618px!important}input.span-17,textarea.span-17{width:658px!important}input.span-18,textarea.span-18{width:698px!important}input.span-19,textarea.span-19{width:738px!important}input.span-20,textarea.span-20{width:778px!important}input.span-21,textarea.span-21{width:818px!important}input.span-22,textarea.span-22{width:858px!important}input.span-23,textarea.span-23{width:898px!important}input.span-24,textarea.span-24{width:938px!important}.last{margin-right:0;padding-right:0}
+.last,div.last{margin-right:0}
+</style>
+<style type='text/css'>
+.post-body img {padding:0px;background:transparent;border:none;}
+</style>
+<!--[if lte IE 8]> <style type='text/css'> #search{border:1px solid #C4D1E3;background:#FFF url(http://1.bp.blogspot.com/-zoA_z1q91j0/T-MlLbhITsI/AAAAAAAAAgw/6ZpiPPENGVI/s000/search.png) 99% 20% no-repeat;text-align:left;padding:6px 24px 6px 6px;height:16px;} .fp-slider {height:300px;} .fp-nav {display:none;} </style> <![endif]-->
+<script src='http://apis.google.com/js/plusone.js' type='text/javascript'>
+{lang: 'en-US'}
+</script>
+<script type="text/javascript">
+if (window.jstiming) window.jstiming.load.tick('headEnd');
+</script></head>
+<body>
+<div id='body-wrapper'><div id='outer-wrapper'><div id='wrap2'>
+<div class='span-24' style='height:32px;'>
+<div class='menu-primary-container'>
+<div class='pagelistmenusblog section' id='pagelistmenusblog'><div class='widget HTML' id='HTML2'>
+<div class='widget-content'>
+<!-- ity.im Basic Code 728x90 POPUP ENABLED -->
+<script type="text/javascript" src="http://ity.im/adserver_remote/adserver2.js"></script>
+<script type="text/javascript">
+var varsarray=[];
+varsarray[0]='55940';
+varsarray[1]='1';
+if(!token) {var token='0'} else {var token=token+1;}
+var loadtype='0';
+var adtype='2';
+var background_color='#F0F0F0';
+var border_color='#000000';
+var text_color='#060606';
+var text_rollcolor='#0033FF';
+var domain_color='#9F9F9F';
+varsarray['interhours']='';
+varsarray['interpages']='';
+adserver_initialize(token,loadtype,adtype,background_color,border_color,text_color,text_rollcolor,domain_color,varsarray);
+</script>
+</div>
+<div class='clear'></div>
+<span class='widget-item-control'>
+<span class='item-control blog-admin'>
+<a class='quickedit' href='//www.blogger.com/rearrange?blogID=5764591189701154136&widgetType=HTML&widgetId=HTML2&action=editWidget&sectionId=pagelistmenusblog' onclick='return _WidgetManager._PopupConfig(document.getElementById("HTML2"));' target='configHTML2' title='Edit'>
+<img alt='' height='18' src='http://img1.blogblog.com/img/icon18_wrench_allbkg.png' width='18'/>
+</a>
+</span>
+</span>
+<div class='clear'></div>
+</div><div class='widget AdSense' id='AdSense3'>
+<div class='widget-content'>
+<script type="text/javascript"><!--
+google_ad_client="pub-8023282607660344";
+google_ad_host="pub-1556223355139109";
+google_ad_width=728;
+google_ad_height=15;
+google_ad_format="728x15_0ads_al_s";
+google_ad_host_channel="0001+S0020+L0005";
+google_color_border="FFFFFF";
+google_color_bg="FFFFFF";
+google_color_link="5588AA";
+google_color_url="333333";
+google_color_text="5588AA";
+//--></script>
+<script type="text/javascript"
+  src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+<div class='clear'></div>
+<span class='widget-item-control'>
+<span class='item-control blog-admin'>
+<a class='quickedit' href='//www.blogger.com/rearrange?blogID=5764591189701154136&widgetType=AdSense&widgetId=AdSense3&action=editWidget&sectionId=pagelistmenusblog' onclick='return _WidgetManager._PopupConfig(document.getElementById("AdSense3"));' target='configAdSense3' title='Edit'>
+<img alt='' height='18' src='http://img1.blogblog.com/img/icon18_wrench_allbkg.png' width='18'/>
+</a>
+</span>
+</span>
+<div class='clear'></div>
+</div>
+</div></div>
+</div>
+</div>
+<div style='clear:both;'></div>
+<div id='header-wrapper'>
+<div class='header section' id='header'><div class='widget Header' id='Header1'>
+<div id='header-inner'>
+<a href='http://ebookmaterials.blogspot.co.uk/' style='display: block'>
+<img alt='Ebook materials, ECE ,EEE,CSE, IT,MCA,MBA,JNTU books materials,interview questions,jobs' height='81px; ' id='Header1_headerimg' src='http://2.bp.blogspot.com/-hmfHzXCrmQg/T2cPI1dBKKI/AAAAAAAAAPk/Gl_g6AVh--0/s1600/211024_225179147498799_2786565_n.jpg' style='display: block;padding-left:0px;padding-top:0px;' width='180px; '/>
+</a>
+</div>
+</div></div>
+<div class='header section' id='header2'><div class='widget AdSense' id='AdSense6'>
+<div class='widget-content'>
+<script type="text/javascript"><!--
+google_ad_client="pub-8023282607660344";
+google_ad_host="pub-1556223355139109";
+google_ad_width=728;
+google_ad_height=15;
+google_ad_format="728x15_0ads_al_s";
+google_ad_host_channel="0001+S0020+L0002";
+google_color_border="FFFFFF";
+google_color_bg="FFFFFF";
+google_color_link="666666";
+google_color_url="5588AA";
+google_color_text="999999";
+//--></script>
+<script type="text/javascript"
+  src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+<div class='clear'></div>
+<span class='widget-item-control'>
+<span class='item-control blog-admin'>
+<a class='quickedit' href='//www.blogger.com/rearrange?blogID=5764591189701154136&widgetType=AdSense&widgetId=AdSense6&action=editWidget&sectionId=header2' onclick='return _WidgetManager._PopupConfig(document.getElementById("AdSense6"));' target='configAdSense6' title='Edit'>
+<img alt='' height='18' src='http://img1.blogblog.com/img/icon18_wrench_allbkg.png' width='18'/>
+</a>
+</span>
+</span>
+<div class='clear'></div>
+</div>
+</div></div>
+<div style='clear:both;'></div>
+</div>
+<div style='clear:both;'></div>
+<div class='span-24'>
+<div class='menu-secondary-container'>
+<ul class='menus menu-secondary'>
+<li><a href='http://ebookmaterials.blogspot.co.uk/'>Home</a></li>
+<li><a href='http://ebookmaterials.blogspot.in/search/label/materials'>Ebooks/Materials</a>
+<ul class='children'>
+<li><a href='http://ebookmaterials.blogspot.com/2010/08/ebooks.html'>CSE/IT</a>
+<ul class='children'>
+<li><a href='http://ebookmaterials.blogspot.in/search/label/CSE%20and%20IT%20ebooks'>Ebooks</a></li>
+<li><a href='http://ebookmaterials.blogspot.in/search/label/jntu%20cse%20all%20materials'>Materials</a></li>
+<li><a href='http://ebookmaterials.blogspot.in/search/label/JNTU%20Syllabus'>Syllabus</a></li>
+<li><a href='http://ebookmaterials.blogspot.in/search/label/B.Tech%20and%20MCA%20softwares'>Softwares</a></li>
+<li><a href='http://ebookmaterials.blogspot.in/search/label/free%20computer%20online%20ebooks'>free Online ebooks</a></li>
+</ul></li>
+<li><a href='http://ebookmaterials.blogspot.in/search/label/ECE%20ebooks'>ECE</a>
+<ul class='children'>
+<li><a href='http://ebookmaterials.blogspot.in/search/label/ECE%20ebooks'>Ebooks</a></li>
+<li><a href='http://ebookmaterials.blogspot.com/2010/01/ece-new-books_18.html'>Question Banks</a></li>
+<li><a href='http://ebookmaterials.blogspot.com/2010/03/free-electronics-handbooks.html'>Hand Books</a></li>
+<li><a href='http://ebookmaterials.blogspot.com/2010/01/ece-new-books.html'>New Ebooks</a></li>
+</ul></li>
+<li><a href='http://ebookmaterials.blogspot.in/search/label/EEE%20ebooks'>EEE</a>
+<ul class='children'>
+<li><a href='http://ebookmaterials.blogspot.in/search/label/EEE%20ebooks'>Ebooks</a></li>
+<li><a href='http://ebookmaterials.blogspot.in/search/label/Electrical%20ebooks'>Electrical Ebooks</a></li>
+<li><a href='http://ebookmaterials.blogspot.in/search/label/EEE%20ebooks'>Syllabus</a></li>
+</ul></li>
+<li><a href='http://ebookmaterials.blogspot.com/search/label/MCA%20%20BOOKS%20%28semister%20wise%29'>MCA</a>
+<ul class='children'>
+<li><a href='http://ebookmaterials.blogspot.com/search/label/MCA%20%20BOOKS%20%28semister%20wise%29'>Syllabus</a></li>
+<li><a href='http://ebookmaterials.blogspot.in/2010/07/jntu-cse-all-materials.html'>Materials</a></li>
+<li><a href='http://ebookmaterials.blogspot.in/search/label/JNTU%20lab%20manuals'>Lab Manuals</a></li>
+<li><a href='http://ebookmaterials.blogspot.in/search/label/free%20computer%20online%20ebooks'>free Online ebooks</a></li>
+<li><a href='http://ebookmaterials.blogspot.in/search/label/MCA%20project%20Details%282009---2012%29'>Project Details</a></li>
+</ul></li>
+<li><a href='http://ebookmaterials.blogspot.com/search/label/mba%20books%20%28semister%20vise%29'>MBA</a>
+<ul class='children'>
+<li><a href='http://ebookmaterials.blogspot.com/search/label/mba%20books%20%28semister%20vise%29'>Ebooks</a></li>
+<li><a href='http://ebookmaterials.blogspot.com/search/label/mba%20books%20%28semister%20vise%29'>Syllabus</a></li>
+<li><a href='http://ebookmaterials.blogspot.in/2012/06/mba-case-studies.html'>case studies</a></li>
+</ul></li>
+<li><a href='http://ebookmaterials.blogspot.com/2011/03/mtech-cse.html'>M.Tech(CSE)</a>
+<ul class='children'>
+<li><a href='http://ebookmaterials.blogspot.com/2011/03/mtech-cse.html'>Ebooks</a></li>
+<li><a href='http://ebookmaterials.blogspot.com/2011/03/mtech-cse.html'>Syllabus</a></li>
+</ul></li>
+</ul>
+</li>
+<li><a href='#'>PROJECTS</a>
+<ul class='children'>
+<li><a href='http://ebookmaterials.blogspot.com/2010/01/technical-projects.html'>Computer</a></li>
+<li><a href='http://ebookmaterials.blogspot.com/2010/03/electronics-projects.html'>Electrical</a></li>
+<li><a href='http://ebookmaterials.blogspot.com/2010/03/electrical-projects.html'>Electronics</a></li>
+<li><a href='http://ebookmaterials.blogspot.com/2010/03/mba-projects2.html'>Management</a></li>
+</ul>
+</li>
+<li><a href='http://ebookmaterials.blogspot.com/search/label/Interview%20Questions%20with%20answers'>Interview Questions</a>
+<ul class='children'>
+<li><a href='http://ebookmaterials.blogspot.com/2011/10/computer-programming-languages.html'>Programming Languages</a></li>
+<li><a href='http://ebookmaterials.blogspot.com/2011/10/database-interview-questions-with.html'>Databases</a></li>
+<li><a href='http://ebookmaterials.blogspot.com/2011/10/world-wide-web-interview-questions-with.html'>World  wide web</a></li>
+<li><a href='http://ebookmaterials.blogspot.com/2011/10/operating-systems-interview-questions.html'>Operating Systems</a></li>
+<li><a href='http://ebookmaterials.blogspot.com/2011/10/interview-tips-and-gd.html'>CV tips and GD</a></li>
+<li><a href='http://ebookmaterials.blogspot.com/2011/10/cv-tips-and-models.html'>Model CVs</a></li>
+<li><a href='http://ebookmaterials.blogspot.com/2011/10/engineering-subjects-interview.html'>Engineering Subjects</a></li>
+</ul>
+</li>
+<li><a href='#'>Study materials</a>
+<ul class='children'>
+<li><a href='http://ebookmaterials.blogspot.in/search/label/Arithmetic%20books'>Arithmetic Booksr</a></li>
+<li><a href='http://ebookmaterials.blogspot.in/search/label/Reasoning'>Reasoning</a></li>
+<li><a href='http://ebookmaterials.blogspot.in/search/label/Gate%20Materials'>GATE</a></li>
+<li><a href='http://ebookmaterials.blogspot.in/search/label/GRE%20%20books'>GRE</a></li>
+<li><a href='http://ebookmaterials.blogspot.in/search/label/Verbal%20and%20Non%20Verbal'>Verbal and Non verbal</a></li>
+<li><a href='http://ebookmaterials.blogspot.in/search/label/English%20Competition%20books'>English</a></li>
+</ul>
+</li>
+<li><a href='#'>Publishers Books</a>
+<ul class='children'>
+<li><a href='http://ebookmaterials.blogspot.in/search/label/Complete%20Reference%20Ebooks%20Collection'>Complete Reference</a></li>
+<li><a href='http://ebookmaterials.blogspot.in/search/label/Oreilly%20ebooks%20collections'>Orilly Collections</a></li>
+<li><a href='http://ebookmaterials.blogspot.in/search/label/Wrox%20Beginners%20ebooks%20Collection'>Wrox Beginners</a></li>
+<li><a href='http://ebookmaterials.blogspot.in/search/label/Software%20Bible%20ebooks%20Collection'>Software Bible</a></li>
+<li><a href='http://ebookmaterials.blogspot.in/search/label/Dummies%20ebooks%20collection'>Dummies collection</a></li>
+<li><a href='http://ebookmaterials.blogspot.in/search/label/Manning%20In%20Action%20Collection%20ebooks'>Manning Action</a></li>
+<li><a href='http://ebookmaterials.blogspot.in/search/label/MATLAB%20ebooks%20Collections'>MATLAB Ebooks</a></li>
+<li><a href='http://ebookmaterials.blogspot.in/search/label/Sams%20Teach%20Yourself%20ebooks%20collections'>Sams Tech</a></li>
+</ul>
+</li>
+<li><a href='#'>Paapers</a>
+<ul class='children'>
+<li><a href='http://ebookmaterials.blogspot.in/search/label/Seminars'>Seminars</a></li>
+<li><a href='http://ebookmaterials.blogspot.in/search/label/Paper%20presentation'>Paper presentations</a></li>
+</ul>
+</li>
+<li><a href='http://ebookmaterials.blogspot.in/2012/07/ebookmaterials-contact-form.html'>Contact</a></li>
+</ul>
+</div>
+</div>
+<div style='clear:both;'></div>
+<div id='content-wrapper'>
+<div id='crosscol-wrapper' style='text-align:center'>
+<div class='crosscol section' id='crosscol'></div>
+</div>
+<div id='lsidebar-wrapper'>
+<div class='sidebar section' id='sidebarleft'><div class='widget AdSense' id='AdSense2'>
+<div class='widget-content'>
+<script type="text/javascript"><!--
+google_ad_client="pub-8023282607660344";
+google_ad_host="pub-1556223355139109";
+google_ad_width=160;
+google_ad_height=600;
+google_ad_format="160x600_as";
+google_ad_type="text_image";
+google_ad_host_channel="0001+S0004+L0001";
+google_color_border="FFFFFF";
+google_color_bg="FFFFFF";
+google_color_link="5588AA";
+google_color_url="5588AA";
+google_color_text="666666";
+//--></script>
+<script type="text/javascript"
+  src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+<div class='clear'></div>
+<span class='widget-item-control'>
+<span class='item-control blog-admin'>
+<a class='quickedit' href='//www.blogger.com/rearrange?blogID=5764591189701154136&widgetType=AdSense&widgetId=AdSense2&action=editWidget&sectionId=sidebarleft' onclick='return _WidgetManager._PopupConfig(document.getElementById("AdSense2"));' target='configAdSense2' title='Edit'>
+<img alt='' height='18' src='http://img1.blogblog.com/img/icon18_wrench_allbkg.png' width='18'/>
+</a>
+</span>
+</span>
+<div class='clear'></div>
+</div>
+</div><div class='widget Label' id='Label1'>
+<h2>Categories</h2>
+<div class='widget-content list-label-widget-content'>
+<ul>
+<li>
+<a dir='ltr' href='http://ebookmaterials.blogspot.co.uk/search/label/Adsense%20news?&max-results=3' title='View all posts filed under Adsense news'>Adsense news
+</a>
+</li>
+<li>
+<a dir='ltr' href='http://ebookmaterials.blogspot.co.uk/search/label/All%20Lecturer%20notes?&max-results=3' title='View all posts filed under All Lecturer notes'>All Lecturer notes
+</a>
+</li>
+<li>
+<a dir='ltr' href='http://ebookmaterials.blogspot.co.uk/search/label/Arithmetic%20books?&max-results=3' title='View all posts filed under Arithmetic books'>Arithmetic books
+</a>
+</li>
+<li>
+<a dir='ltr' href='http://ebookmaterials.blogspot.co.uk/search/label/B.Tech%20and%20MCA%20softwares?&max-results=3' title='View all posts filed under B.Tech and MCA softwares'>B.Tech and MCA softwares
+</a>
+</li>
+<li>
+<a dir='ltr' href='http://ebookmaterials.blogspot.co.uk/search/label/Best%20Hosting?&max-results=3' title='View all posts filed under Best Hosting'>Best Hosting
+</a>
+</li>
+<li>
+<a dir='ltr' href='http://ebookmaterials.blogspot.co.uk/search/label/Blogger%20Help?&max-results=3' title='View all posts filed under Blogger Help'>Blogger Help
+</a>
+</li>
+<li>
+<a dir='ltr' href='http://ebookmaterials.blogspot.co.uk/search/label/BPO%2FMBA%20jobs?&max-results=3' title='View all posts filed under BPO/MBA jobs'>BPO/MBA jobs
+</a>
+</li>
+<li>
+<a dir='ltr' href='http://ebookmaterials.blogspot.co.uk/search/label/C%20Quiz?&max-results=3' title='View all posts filed under C Quiz'>C Quiz
+</a>
+</li>
+<li>
+<a dir='ltr' href='http://ebookmaterials.blogspot.co.uk/search/label/Complete%20Reference%20Ebooks%20Collection?&max-results=3' title='View all posts filed under Complete Reference Ebooks Collection'>Complete Reference Ebooks Collection
+</a>
+</li>
+<li>
+<a dir='ltr' href='http://ebookmaterials.blogspot.co.uk/search/label/computer%20projects?&max-results=3' title='View all posts filed under computer projects'>computer projects
+</a>
+</li>
+<li>
+<a dir='ltr' href='http://ebookmaterials.blogspot.co.uk/search/label/Consultency%20list?&max-results=3' title='View all posts filed under Consultency list'>Consultency list
+</a>
+</li>
+<li>
+<a dir='ltr' href='http://ebookmaterials.blogspot.co.uk/search/label/CSE%20and%20IT%20ebooks?&max-results=3' title='View all posts filed under CSE and IT ebooks'>CSE and IT ebooks
+</a>
+</li>
+<li>
+<a dir='ltr' href='http://ebookmaterials.blogspot.co.uk/search/label/dot%20net%20books?&max-results=3' title='View all posts filed under dot net books'>dot net books
+</a>
+</li>
+<li>
+<a dir='ltr' href='http://ebookmaterials.blogspot.co.uk/search/label/Dummies%20ebooks%20collection?&max-results=3' title='View all posts filed under Dummies ebooks collection'>Dummies ebooks collection
+</a>
+</li>
+<li>
+<a dir='ltr' href='http://ebookmaterials.blogspot.co.uk/search/label/ECE%20ebooks?&max-results=3' title='View all posts filed under ECE ebooks'>ECE ebooks
+</a>
+</li>
+<li>
+<a dir='ltr' href='http://ebookmaterials.blogspot.co.uk/search/label/Ece%20new%20books?&max-results=3' title='View all posts filed under Ece new books'>Ece new books
+</a>
+</li>
+<li>
+<a dir='ltr' href='http://ebookmaterials.blogspot.co.uk/search/label/EEE%20ebooks?&max-results=3' title='View all posts filed under EEE ebooks'>EEE ebooks
+</a>
+</li>
+<li>
+<a dir='ltr' href='http://ebookmaterials.blogspot.co.uk/search/label/Electrical%20ebooks?&max-results=3' title='View all posts filed under Electrical ebooks'>Electrical ebooks
+</a>
+</li>
+<li>
+<a dir='ltr' href='http://ebookmaterials.blogspot.co.uk/search/label/English%20Competition%20books?&max-results=3' title='View all posts filed under English Competition books'>English Competition books
+</a>
+</li>
+<li>
+<a dir='ltr' href='http://ebookmaterials.blogspot.co.uk/search/label/English%20ebooks%20and%20videos?&max-results=3' title='View all posts filed under English ebooks and videos'>English ebooks and videos
+</a>
+</li>
+<li>
+<a dir='ltr' href='http://ebookmaterials.blogspot.co.uk/search/label/free%20computer%20online%20ebooks?&max-results=3' title='View all posts filed under free computer online ebooks'>free computer online ebooks
+</a>
+</li>
+<li>
+<a dir='ltr' href='http://ebookmaterials.blogspot.co.uk/search/label/Gate%20Materials?&max-results=3' title='View all posts filed under Gate Materials'>Gate Materials
+</a>
+</li>
+<li>
+<a dir='ltr' href='http://ebookmaterials.blogspot.co.uk/search/label/Govt%20Jobs?&max-results=3' title='View all posts filed under Govt Jobs'>Govt Jobs
+</a>
+</li>
+<li>
+<a dir='ltr' href='http://ebookmaterials.blogspot.co.uk/search/label/GRE%20%20books?&max-results=3' title='View all posts filed under GRE  books'>GRE  books
+</a>
+</li>
+<li>
+<a dir='ltr' href='http://ebookmaterials.blogspot.co.uk/search/label/Important%20News?&max-results=3' title='View all posts filed under Important News'>Important News
+</a>
+</li>
+<li>
+<a dir='ltr' href='http://ebookmaterials.blogspot.co.uk/search/label/Infosys%20campus%20connectivity?&max-results=3' title='View all posts filed under Infosys campus connectivity'>Infosys campus connectivity
+</a>
+</li>
+<li>
+<a dir='ltr' href='http://ebookmaterials.blogspot.co.uk/search/label/Interview%20Questions%20with%20answers?&max-results=3' title='View all posts filed under Interview Questions with answers'>Interview Questions with answers
+</a>
+</li>
+<li>
+<a dir='ltr' href='http://ebookmaterials.blogspot.co.uk/search/label/IT%20Certification%20books?&max-results=3' title='View all posts filed under IT Certification books'>IT Certification books
+</a>
+</li>
+<li>
+<a dir='ltr' href='http://ebookmaterials.blogspot.co.uk/search/label/jntu%20cse%20all%20materials?&max-results=3' title='View all posts filed under jntu cse all materials'>jntu cse all materials
+</a>
+</li>
+<li>
+<a dir='ltr' href='http://ebookmaterials.blogspot.co.uk/search/label/Jntu%20EEE%20ebooks?&max-results=3' title='View all posts filed under Jntu EEE ebooks'>Jntu EEE ebooks
+</a>
+</li>
+<li>
+<a dir='ltr' href='http://ebookmaterials.blogspot.co.uk/search/label/JNTU%20lab%20manuals?&max-results=3' title='View all posts filed under JNTU lab manuals'>JNTU lab manuals
+</a>
+</li>
+<li>
+<a dir='ltr' href='http://ebookmaterials.blogspot.co.uk/search/label/Jntu%20materials?&max-results=3' title='View all posts filed under Jntu materials'>Jntu materials
+</a>
+</li>
+<li>
+<a dir='ltr' href='http://ebookmaterials.blogspot.co.uk/search/label/JNTU%20Syllabus?&max-results=3' title='View all posts filed under JNTU Syllabus'>JNTU Syllabus
+</a>
+</li>
+<li>
+<a dir='ltr' href='http://ebookmaterials.blogspot.co.uk/search/label/JNTU%20Zone?&max-results=3' title='View all posts filed under JNTU Zone'>JNTU Zone
+</a>
+</li>
+<li>
+<a dir='ltr' href='http://ebookmaterials.blogspot.co.uk/search/label/Jobs%20Zone?&max-results=3' title='View all posts filed under Jobs Zone'>Jobs Zone
+</a>
+</li>
+<li>
+<a dir='ltr' href='http://ebookmaterials.blogspot.co.uk/search/label/Just%20for%20fun?&max-results=3' title='View all posts filed under Just for fun'>Just for fun
+</a>
+</li>
+<li>
+<a dir='ltr' href='http://ebookmaterials.blogspot.co.uk/search/label/karthikkumar%28it%29?&max-results=3' title='View all posts filed under karthikkumar(it)'>karthikkumar(it)
+</a>
+</li>
+<li>
+<a dir='ltr' href='http://ebookmaterials.blogspot.co.uk/search/label/Manning%20In%20Action%20Collection%20ebooks?&max-results=3' title='View all posts filed under Manning In Action Collection ebooks'>Manning In Action Collection ebooks
+</a>
+</li>
+<li>
+<a dir='ltr' href='http://ebookmaterials.blogspot.co.uk/search/label/materials?&max-results=3' title='View all posts filed under materials'>materials
+</a>
+</li>
+<li>
+<a dir='ltr' href='http://ebookmaterials.blogspot.co.uk/search/label/Mathematics%20and%20Puzzles?&max-results=3' title='View all posts filed under Mathematics and Puzzles'>Mathematics and Puzzles
+</a>
+</li>
+<li>
+<a dir='ltr' href='http://ebookmaterials.blogspot.co.uk/search/label/MATLAB%20ebooks%20Collections?&max-results=3' title='View all posts filed under MATLAB ebooks Collections'>MATLAB ebooks Collections
+</a>
+</li>
+<li>
+<a dir='ltr' href='http://ebookmaterials.blogspot.co.uk/search/label/mba%20books%20%28semister%20vise%29?&max-results=3' title='View all posts filed under mba books (semister vise)'>mba books (semister vise)
+</a>
+</li>
+<li>
+<a dir='ltr' href='http://ebookmaterials.blogspot.co.uk/search/label/Mba%20projects?&max-results=3' title='View all posts filed under Mba projects'>Mba projects
+</a>
+</li>
+<li>
+<a dir='ltr' href='http://ebookmaterials.blogspot.co.uk/search/label/MBA%20zone?&max-results=3' title='View all posts filed under MBA zone'>MBA zone
+</a>
+</li>
+<li>
+<a dir='ltr' href='http://ebookmaterials.blogspot.co.uk/search/label/MCA%20%20BOOKS%20%28semister%20wise%29?&max-results=3' title='View all posts filed under MCA  BOOKS (semister wise)'>MCA  BOOKS (semister wise)
+</a>
+</li>
+<li>
+<a dir='ltr' href='http://ebookmaterials.blogspot.co.uk/search/label/MCA%20project%20Details%282009---2012%29?&max-results=3' title='View all posts filed under MCA project Details(2009---2012)'>MCA project Details(2009---2012)
+</a>
+</li>
+<li>
+<a dir='ltr' href='http://ebookmaterials.blogspot.co.uk/search/label/mini%20projects?&max-results=3' title='View all posts filed under mini projects'>mini projects
+</a>
+</li>
+<li>
+<a dir='ltr' href='http://ebookmaterials.blogspot.co.uk/search/label/MTech-CSE?&max-results=3' title='View all posts filed under MTech-CSE'>MTech-CSE
+</a>
+</li>
+<li>
+<a dir='ltr' href='http://ebookmaterials.blogspot.co.uk/search/label/new%20ece%20books?&max-results=3' title='View all posts filed under new ece books'>new ece books
+</a>
+</li>
+<li>
+<a dir='ltr' href='http://ebookmaterials.blogspot.co.uk/search/label/New%20Jntu%20text%20books?&max-results=3' title='View all posts filed under New Jntu text books'>New Jntu text books
+</a>
+</li>
+<li>
+<a dir='ltr' href='http://ebookmaterials.blogspot.co.uk/search/label/Old%20question%20papers?&max-results=3' title='View all posts filed under Old question papers'>Old question papers
+</a>
+</li>
+<li>
+<a dir='ltr' href='http://ebookmaterials.blogspot.co.uk/search/label/Oreilly%20ebooks%20collections?&max-results=3' title='View all posts filed under Oreilly ebooks collections'>Oreilly ebooks collections
+</a>
+</li>
+<li>
+<a dir='ltr' href='http://ebookmaterials.blogspot.co.uk/search/label/Paper%20presentation?&max-results=3' title='View all posts filed under Paper presentation'>Paper presentation
+</a>
+</li>
+<li>
+<a dir='ltr' href='http://ebookmaterials.blogspot.co.uk/search/label/Personality%20Development?&max-results=3' title='View all posts filed under Personality Development'>Personality Development
+</a>
+</li>
+<li>
+<a dir='ltr' href='http://ebookmaterials.blogspot.co.uk/search/label/PHP%20books?&max-results=3' title='View all posts filed under PHP books'>PHP books
+</a>
+</li>
+<li>
+<a dir='ltr' href='http://ebookmaterials.blogspot.co.uk/search/label/Placement%20Quiz?&max-results=3' title='View all posts filed under Placement Quiz'>Placement Quiz
+</a>
+</li>
+<li>
+<a dir='ltr' href='http://ebookmaterials.blogspot.co.uk/search/label/Previous%20Question%20Papers?&max-results=3' title='View all posts filed under Previous Question Papers'>Previous Question Papers
+</a>
+</li>
+<li>
+<a dir='ltr' href='http://ebookmaterials.blogspot.co.uk/search/label/projects?&max-results=3' title='View all posts filed under projects'>projects
+</a>
+</li>
+<li>
+<a dir='ltr' href='http://ebookmaterials.blogspot.co.uk/search/label/Reasoning?&max-results=3' title='View all posts filed under Reasoning'>Reasoning
+</a>
+</li>
+<li>
+<a dir='ltr' href='http://ebookmaterials.blogspot.co.uk/search/label/Sams%20Teach%20Yourself%20ebooks%20collections?&max-results=3' title='View all posts filed under Sams Teach Yourself ebooks collections'>Sams Teach Yourself ebooks collections
+</a>
+</li>
+<li>
+<a dir='ltr' href='http://ebookmaterials.blogspot.co.uk/search/label/Seminars?&max-results=3' title='View all posts filed under Seminars'>Seminars
+</a>
+</li>
+<li>
+<a dir='ltr' href='http://ebookmaterials.blogspot.co.uk/search/label/Software%20Bible%20ebooks%20Collection?&max-results=3' title='View all posts filed under Software Bible ebooks Collection'>Software Bible ebooks Collection
+</a>
+</li>
+<li>
+<a dir='ltr' href='http://ebookmaterials.blogspot.co.uk/search/label/Teaching%20jobs?&max-results=3' title='View all posts filed under Teaching jobs'>Teaching jobs
+</a>
+</li>
+<li>
+<a dir='ltr' href='http://ebookmaterials.blogspot.co.uk/search/label/Technical%20%20projects?&max-results=3' title='View all posts filed under Technical  projects'>Technical  projects
+</a>
+</li>
+<li>
+<a dir='ltr' href='http://ebookmaterials.blogspot.co.uk/search/label/Technical%20Interview%20Questions?&max-results=3' title='View all posts filed under Technical Interview Questions'>Technical Interview Questions
+</a>
+</li>
+<li>
+<a dir='ltr' href='http://ebookmaterials.blogspot.co.uk/search/label/technical%20projects?&max-results=3' title='View all posts filed under technical projects'>technical projects
+</a>
+</li>
+<li>
+<a dir='ltr' href='http://ebookmaterials.blogspot.co.uk/search/label/Toefl%20%20books?&max-results=3' title='View all posts filed under Toefl  books'>Toefl  books
+</a>
+</li>
+<li>
+<a dir='ltr' href='http://ebookmaterials.blogspot.co.uk/search/label/Upload%20user%20content?&max-results=3' title='View all posts filed under Upload user content'>Upload user content
+</a>
+</li>
+<li>
+<a dir='ltr' href='http://ebookmaterials.blogspot.co.uk/search/label/useful%20documents?&max-results=3' title='View all posts filed under useful documents'>useful documents
+</a>
+</li>
+<li>
+<a dir='ltr' href='http://ebookmaterials.blogspot.co.uk/search/label/vasista%20c%20programms?&max-results=3' title='View all posts filed under vasista c programms'>vasista c programms
+</a>
+</li>
+<li>
+<a dir='ltr' href='http://ebookmaterials.blogspot.co.uk/search/label/Verbal%20and%20Non%20Verbal?&max-results=3' title='View all posts filed under Verbal and Non Verbal'>Verbal and Non Verbal
+</a>
+</li>
+<li>
+<a dir='ltr' href='http://ebookmaterials.blogspot.co.uk/search/label/Wrox%20Beginners%20ebooks%20Collection?&max-results=3' title='View all posts filed under Wrox Beginners ebooks Collection'>Wrox Beginners ebooks Collection
+</a>
+</li>
+</ul>
+<div class='clear'></div>
+<span class='widget-item-control'>
+<span class='item-control blog-admin'>
+<a class='quickedit' href='//www.blogger.com/rearrange?blogID=5764591189701154136&widgetType=Label&widgetId=Label1&action=editWidget&sectionId=sidebarleft' onclick='return _WidgetManager._PopupConfig(document.getElementById("Label1"));' target='configLabel1' title='Edit'>
+<img alt='' height='18' src='http://img1.blogblog.com/img/icon18_wrench_allbkg.png' width='18'/>
+</a>
+</span>
+</span>
+<div class='clear'></div>
+</div>
+</div><div class='widget AdSense' id='AdSense5'>
+<div class='widget-content'>
+<script type="text/javascript"><!--
+google_ad_client="pub-8023282607660344";
+google_ad_host="pub-1556223355139109";
+google_ad_width=160;
+google_ad_height=90;
+google_ad_format="160x90_0ads_al_s";
+google_ad_host_channel="0001+S0018+L0006";
+google_color_border="FFFFFF";
+google_color_bg="FFFFFF";
+google_color_link="336699";
+google_color_url="336699";
+google_color_text="333333";
+//--></script>
+<script type="text/javascript"
+  src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+<div class='clear'></div>
+<span class='widget-item-control'>
+<span class='item-control blog-admin'>
+<a class='quickedit' href='//www.blogger.com/rearrange?blogID=5764591189701154136&widgetType=AdSense&widgetId=AdSense5&action=editWidget&sectionId=sidebarleft' onclick='return _WidgetManager._PopupConfig(document.getElementById("AdSense5"));' target='configAdSense5' title='Edit'>
+<img alt='' height='18' src='http://img1.blogblog.com/img/icon18_wrench_allbkg.png' width='18'/>
+</a>
+</span>
+</span>
+<div class='clear'></div>
+</div>
+</div><div class='widget BlogArchive' id='BlogArchive1'>
+<h2>Blog Archive</h2>
+<div class='widget-content'>
+<div id='ArchiveList'>
+<div id='BlogArchive1_ArchiveList'>
+<select id='BlogArchive1_ArchiveMenu'>
+<option value=''>Blog Archive</option>
+<option value='http://ebookmaterials.blogspot.co.uk/2012_11_01_archive.html'>Nov 2012 (11)</option>
+<option value='http://ebookmaterials.blogspot.co.uk/2012_10_01_archive.html'>Oct 2012 (77)</option>
+<option value='http://ebookmaterials.blogspot.co.uk/2012_09_01_archive.html'>Sep 2012 (34)</option>
+<option value='http://ebookmaterials.blogspot.co.uk/2012_08_01_archive.html'>Aug 2012 (40)</option>
+<option value='http://ebookmaterials.blogspot.co.uk/2012_07_01_archive.html'>Jul 2012 (211)</option>
+<option value='http://ebookmaterials.blogspot.co.uk/2012_06_01_archive.html'>Jun 2012 (51)</option>
+<option value='http://ebookmaterials.blogspot.co.uk/2012_05_01_archive.html'>May 2012 (74)</option>
+<option value='http://ebookmaterials.blogspot.co.uk/2012_04_01_archive.html'>Apr 2012 (84)</option>
+<option value='http://ebookmaterials.blogspot.co.uk/2012_03_01_archive.html'>Mar 2012 (95)</option>
+<option value='http://ebookmaterials.blogspot.co.uk/2012_02_01_archive.html'>Feb 2012 (42)</option>
+<option value='http://ebookmaterials.blogspot.co.uk/2012_01_01_archive.html'>Jan 2012 (66)</option>
+<option value='http://ebookmaterials.blogspot.co.uk/2011_12_01_archive.html'>Dec 2011 (42)</option>
+<option value='http://ebookmaterials.blogspot.co.uk/2011_11_01_archive.html'>Nov 2011 (27)</option>
+<option value='http://ebookmaterials.blogspot.co.uk/2011_10_01_archive.html'>Oct 2011 (140)</option>
+<option value='http://ebookmaterials.blogspot.co.uk/2011_09_01_archive.html'>Sep 2011 (76)</option>
+<option value='http://ebookmaterials.blogspot.co.uk/2011_08_01_archive.html'>Aug 2011 (47)</option>
+<option value='http://ebookmaterials.blogspot.co.uk/2011_07_01_archive.html'>Jul 2011 (116)</option>
+<option value='http://ebookmaterials.blogspot.co.uk/2011_06_01_archive.html'>Jun 2011 (35)</option>
+<option value='http://ebookmaterials.blogspot.co.uk/2011_05_01_archive.html'>May 2011 (36)</option>
+<option value='http://ebookmaterials.blogspot.co.uk/2011_04_01_archive.html'>Apr 2011 (73)</option>
+<option value='http://ebookmaterials.blogspot.co.uk/2011_03_01_archive.html'>Mar 2011 (163)</option>
+<option value='http://ebookmaterials.blogspot.co.uk/2011_02_01_archive.html'>Feb 2011 (58)</option>
+<option value='http://ebookmaterials.blogspot.co.uk/2011_01_01_archive.html'>Jan 2011 (157)</option>
+<option value='http://ebookmaterials.blogspot.co.uk/2010_12_01_archive.html'>Dec 2010 (216)</option>
+<option value='http://ebookmaterials.blogspot.co.uk/2010_11_01_archive.html'>Nov 2010 (83)</option>
+<option value='http://ebookmaterials.blogspot.co.uk/2010_10_01_archive.html'>Oct 2010 (301)</option>
+<option value='http://ebookmaterials.blogspot.co.uk/2010_09_01_archive.html'>Sep 2010 (214)</option>
+<option value='http://ebookmaterials.blogspot.co.uk/2010_08_01_archive.html'>Aug 2010 (158)</option>
+<option value='http://ebookmaterials.blogspot.co.uk/2010_07_01_archive.html'>Jul 2010 (416)</option>
+<option value='http://ebookmaterials.blogspot.co.uk/2010_06_01_archive.html'>Jun 2010 (72)</option>
+<option value='http://ebookmaterials.blogspot.co.uk/2010_05_01_archive.html'>May 2010 (6)</option>
+<option value='http://ebookmaterials.blogspot.co.uk/2010_04_01_archive.html'>Apr 2010 (143)</option>
+<option value='http://ebookmaterials.blogspot.co.uk/2010_03_01_archive.html'>Mar 2010 (202)</option>
+<option value='http://ebookmaterials.blogspot.co.uk/2010_02_01_archive.html'>Feb 2010 (179)</option>
+<option value='http://ebookmaterials.blogspot.co.uk/2010_01_01_archive.html'>Jan 2010 (100)</option>
+<option value='http://ebookmaterials.blogspot.co.uk/2009_12_01_archive.html'>Dec 2009 (22)</option>
+<option value='http://ebookmaterials.blogspot.co.uk/2009_11_01_archive.html'>Nov 2009 (51)</option>
+<option value='http://ebookmaterials.blogspot.co.uk/2009_10_01_archive.html'>Oct 2009 (19)</option>
+</select>
+</div>
+</div>
+<div class='clear'></div>
+<span class='widget-item-control'>
+<span class='item-control blog-admin'>
+<a class='quickedit' href='//www.blogger.com/rearrange?blogID=5764591189701154136&widgetType=BlogArchive&widgetId=BlogArchive1&action=editWidget&sectionId=sidebarleft' onclick='return _WidgetManager._PopupConfig(document.getElementById("BlogArchive1"));' target='configBlogArchive1' title='Edit'>
+<img alt='' height='18' src='http://img1.blogblog.com/img/icon18_wrench_allbkg.png' width='18'/>
+</a>
+</span>
+</span>
+<div class='clear'></div>
+</div>
+</div><div class='widget Attribution' id='Attribution1'>
+<div class='widget-content' style='text-align: center;'>
+Copy right to ebookmaterials. Powered by <a href='http://www.blogger.com' target='_blank'>Blogger</a>.
+</div>
+<div class='clear'></div>
+<span class='widget-item-control'>
+<span class='item-control blog-admin'>
+<a class='quickedit' href='//www.blogger.com/rearrange?blogID=5764591189701154136&widgetType=Attribution&widgetId=Attribution1&action=editWidget&sectionId=sidebarleft' onclick='return _WidgetManager._PopupConfig(document.getElementById("Attribution1"));' target='configAttribution1' title='Edit'>
+<img alt='' height='18' src='http://img1.blogblog.com/img/icon18_wrench_allbkg.png' width='18'/>
+</a>
+</span>
+</span>
+<div class='clear'></div>
+</div><div class='widget HTML' id='HTML5'>
+<div class='widget-content'>
+<script type="text/javascript">
+    var infolinks_pid = 80752;
+    var infolinks_wsid = 0;
+</script>
+<script type="text/javascript" src="http://resources.infolinks.com/js/infolinks_main.js"></script>
+</div>
+<div class='clear'></div>
+<span class='widget-item-control'>
+<span class='item-control blog-admin'>
+<a class='quickedit' href='//www.blogger.com/rearrange?blogID=5764591189701154136&widgetType=HTML&widgetId=HTML5&action=editWidget&sectionId=sidebarleft' onclick='return _WidgetManager._PopupConfig(document.getElementById("HTML5"));' target='configHTML5' title='Edit'>
+<img alt='' height='18' src='http://img1.blogblog.com/img/icon18_wrench_allbkg.png' width='18'/>
+</a>
+</span>
+</span>
+<div class='clear'></div>
+</div>
+</div>
+<p></p></div>
+<div id='main-wrapper'>
+<div class='main section' id='main'><div class='widget HTML' id='HTML26'>
+<div class='widget-content'>
+<input type="hidden" name="IL_RELATED_TAGS" value="1"/>
+<table border="0">
+<tr>
+<td><img src="http://i34.tinypic.com/dztlkp.gif" / /> </td>
+<td>
+<font color="Red" size="4"> <a href="http://ebookmaterials.blogspot.com/2012/09/part-time-jobs.html">Part time job(earn money)</a> 
+</font>
+
+</td>
+</tr>
+</table>
+
+
+<table border="0">
+<tr>
+<td>
+<p>
+<img src="http://www.animatedgif.net/new/new10_e0.gif"/>
+<a href="http://ebookmaterials.blogspot.in/2012/08/placement-quiz.html">Placement Quiz</a> </p>
+</td>
+<td>
+<p>
+<img src="http://www.animatedgif.net/new/new10_e0.gif"/>
+<a href="http://ebookmaterials.blogspot.in/2012/08/c-quiz.html">C Quiz</a> </p>
+</td>
+</tr>
+</table>
+</div>
+<div class='clear'></div>
+<span class='widget-item-control'>
+<span class='item-control blog-admin'>
+<a class='quickedit' href='//www.blogger.com/rearrange?blogID=5764591189701154136&widgetType=HTML&widgetId=HTML26&action=editWidget&sectionId=main' onclick='return _WidgetManager._PopupConfig(document.getElementById("HTML26"));' target='configHTML26' title='Edit'>
+<img alt='' height='18' src='http://img1.blogblog.com/img/icon18_wrench_allbkg.png' width='18'/>
+</a>
+</span>
+</span>
+<div class='clear'></div>
+</div><div class='widget HTML' id='HTML8'>
+<h2 class='title'>Search</h2>
+<div class='widget-content'>
+<div style="border: 3px solid blue ; background-color:white; ">
+<br/>
+Search for all types of data<br/>
+<form action="http://www.google.com/cse" id="cse-search-box" target="_blank">
+  <div>
+    <input type="hidden" name="cx" value="partner-pub-8023282607660344:otbkwvm32ff" />
+    <input type="hidden" name="ie" value="ISO-8859-1" />
+    <input type="text" name="q" size="51" />
+<input type="submit" name="sa" value="Search" />
+        <br/>
+    <input id="custom" type="radio" name="cx" value="partner-pub-8023282607660344:otbkwvm32ff" / checked /><label for=custom> ebookmaterials </label> <input id="www" type="radio" name="cx" value="!partner-pub-8023282607660344:otbkwvm32ff"  /><label for=www> Web Search </label>
+    
+  </div>
+</form>
+<script type="text/javascript" src="//www.google.com/cse/brand?form=cse-search-box&amp;lang=en"></script>
+
+</div>
+</div>
+<div class='clear'></div>
+<span class='widget-item-control'>
+<span class='item-control blog-admin'>
+<a class='quickedit' href='//www.blogger.com/rearrange?blogID=5764591189701154136&widgetType=HTML&widgetId=HTML8&action=editWidget&sectionId=main' onclick='return _WidgetManager._PopupConfig(document.getElementById("HTML8"));' target='configHTML8' title='Edit'>
+<img alt='' height='18' src='http://img1.blogblog.com/img/icon18_wrench_allbkg.png' width='18'/>
+</a>
+</span>
+</span>
+<div class='clear'></div>
+</div><div class='widget HTML' id='HTML25'>
+<div class='widget-content'>
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-8023282607660344";
+google_ad_host = "pub-1556223355139109";
+/* ebookmaterials-middle1 */
+google_ad_slot = "6073923916";
+google_ad_width = 336;
+google_ad_height = 280;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</div>
+<div class='clear'></div>
+<span class='widget-item-control'>
+<span class='item-control blog-admin'>
+<a class='quickedit' href='//www.blogger.com/rearrange?blogID=5764591189701154136&widgetType=HTML&widgetId=HTML25&action=editWidget&sectionId=main' onclick='return _WidgetManager._PopupConfig(document.getElementById("HTML25"));' target='configHTML25' title='Edit'>
+<img alt='' height='18' src='http://img1.blogblog.com/img/icon18_wrench_allbkg.png' width='18'/>
+</a>
+</span>
+</span>
+<div class='clear'></div>
+</div><div class='widget Blog' id='Blog1'>
+<div class='blog-posts hfeed'>
+<!-- google_ad_section_start(name=default) -->
+
+          <div class="date-outer">
+        
+
+          <div class="date-posts">
+        
+<div class='post-outer'>
+<div class='wrapfullpost'>
+<div class='post hentry'>
+<a name='4896624561704043709'></a>
+<h3 class='post-title entry-title'>
+<a href='http://ebookmaterials.blogspot.co.uk/2010/09/computer-networking-chapter-2-ppts.html'>computer networking chapter 2 ppts</a>
+</h3>
+<div class='post-header-line-1'></div>
+<div class='postmeta-primary'>
+<span class='meta_date'>1:32 AM</span>
+ &nbsp;<span class='meta_categories'></span>
+ &nbsp;<span class='meta_comments'><a href='http://ebookmaterials.blogspot.co.uk/2010/09/computer-networking-chapter-2-ppts.html#comment-form' onclick=''>No comments</a></span>
+</div>
+<div class='post-body entry-content'>
+<div class="postbody"><span style="color: rgb(64, 0, 255);">computer networking chapter 2 ppt</span>s<br /><br /><div class="codetitle"><b>Code:</b></div><div class="codecontent">http://www.4shared.com/file/57148914/367221c2/computer_networking_-_chapter-2.html?s=1</div></div>
+<div style='clear:both;'></div>
+<div class='post-share-buttons'>
+<a class='goog-inline-block share-button sb-email' href='http://www.blogger.com/share-post.g?blogID=5764591189701154136&postID=4896624561704043709&target=email' target='_blank' title='Email This'><span class='share-button-link-text'>Email This</span></a><a class='goog-inline-block share-button sb-blog' href='http://www.blogger.com/share-post.g?blogID=5764591189701154136&postID=4896624561704043709&target=blog' onclick='window.open(this.href, "_blank", "height=270,width=475"); return false;' target='_blank' title='BlogThis!'><span class='share-button-link-text'>BlogThis!</span></a><a class='goog-inline-block share-button sb-twitter' href='http://www.blogger.com/share-post.g?blogID=5764591189701154136&postID=4896624561704043709&target=twitter' target='_blank' title='Share to Twitter'><span class='share-button-link-text'>Share to Twitter</span></a><a class='goog-inline-block share-button sb-facebook' href='http://www.blogger.com/share-post.g?blogID=5764591189701154136&postID=4896624561704043709&target=facebook' onclick='window.open(this.href, "_blank", "height=430,width=640"); return false;' target='_blank' title='Share to Facebook'><span class='share-button-link-text'>Share to Facebook</span></a><div class='goog-inline-block dummy-container'><g:plusone source='blogger:blog:plusone' href='http://ebookmaterials.blogspot.com/2010/09/computer-networking-chapter-2-ppts.html' size='medium' width='300' annotation='inline'/></div>
+</div>
+<span class='reaction-buttons'>
+</span>
+<div style='clear: both;'></div>
+</div>
+<div class='post-footer'>
+<div class='post-footer-line post-footer-line-'></div>
+<div class='post-footer-line post-footer-line-2'></div>
+<div class='post-footer-line post-footer-line-3'>
+</div></div>
+</div>
+</div>
+<div class='blog-pager' id='blog-pager'>
+<span id='blog-pager-newer-link'>
+<a class='blog-pager-newer-link' href='http://ebookmaterials.blogspot.co.uk/2010/09/computer-networking-chapter-3-ppts.html' id='Blog1_blog-pager-newer-link' title='Newer Post'>Newer Post</a>
+</span>
+<span id='blog-pager-older-link'>
+<a class='blog-pager-older-link' href='http://ebookmaterials.blogspot.co.uk/2010/09/computer-networking-chapter4-ppts.html' id='Blog1_blog-pager-older-link' title='Older Post'>Older Post</a>
+</span>
+<a class='home-link' href='http://ebookmaterials.blogspot.co.uk/'>Home</a>
+</div>
+<div class='clear'></div>
+<div class='comments' id='comments'>
+<a name='comments'></a>
+<h4>
+0
+comments:
+        
+</h4>
+<div id='Blog1_comments-block-wrapper'>
+<dl class='avatar-comment-indent' id='comments-block'>
+</dl>
+</div>
+<p class='comment-footer'>
+<div class='comment-form'>
+<a name='comment-form'></a>
+<h4 id='comment-post-message'>Post a Comment</h4>
+<p><b>Please Comment this post</b></p>
+<a href='http://www.blogger.com/comment-iframe.g?blogID=5764591189701154136&postID=4896624561704043709' id='comment-editor-src'></a>
+<iframe allowtransparency='true' class='blogger-iframe-colorize blogger-comment-from-post' frameborder='0' height='410' id='comment-editor' name='comment-editor' src='' width='100%'></iframe>
+<script type="text/javascript" src="//www.blogger.com/static/v1/jsbin/848709640-comment_from_post_iframe.js"></script>
+<script type='text/javascript'>
+      BLOG_CMT_createIframe('http://www.blogger.com/rpc_relay.html', '17746605049637130733');
+    </script>
+</div>
+</p>
+<div id='backlinks-container'>
+<div id='Blog1_backlinks-container'>
+<a name='links'></a><h4>
+</h4>
+<p class='comment-footer'>
+<a class='comment-link' href='' id='Blog1_backlinks-create-link' target='_blank'>
+</a>
+</p>
+</div>
+</div>
+</div>
+</div>
+
+        </div></div>
+      
+<!-- google_ad_section_end -->
+</div>
+<div class='post-feeds'>
+<div class='feed-links'>
+Subscribe to:
+<a class='feed-link' href='http://ebookmaterials.blogspot.com/feeds/4896624561704043709/comments/default' target='_blank' type='application/atom+xml'>Post Comments (Atom)</a>
+</div>
+</div>
+<script type="text/javascript">window.___gcfg = {'lang': 'en'};window.___gapisync = false;(function() {var po = document.createElement('script');po.type = 'text/javascript';po.async = true;po.src = 'https://apis.google.com/js/plusone.js';var s = document.body.getElementsByTagName('script')[0];s.parentNode.insertBefore(po, s);})();</script>
+</div><div class='widget PopularPosts' id='PopularPosts1'>
+<div class='widget-content popular-posts'>
+<ul>
+<li>
+<a href='http://ebookmaterials.blogspot.co.uk/2012/05/jntu-btech-r09-syllabus-books.html'>jntu btech R09 syllabus books</a>
+</li>
+<li>
+<a href='http://ebookmaterials.blogspot.co.uk/2011/04/linux-programming-viva-questions.html'>Linux programming VIVA QUESTIONS</a>
+</li>
+<li>
+<a href='http://ebookmaterials.blogspot.co.uk/2011/01/mpi-lab-viva-questions.html'>MPI Lab Viva Questions</a>
+</li>
+<li>
+<a href='http://ebookmaterials.blogspot.co.uk/2010/07/jntu-cse-all-materials.html'>jntu cse all materials</a>
+</li>
+<li>
+<a href='http://ebookmaterials.blogspot.co.uk/2010/07/basic-electrical-engineering-by.html'>Basic Electrical Engineering by u.a.Bakshi</a>
+</li>
+<li>
+<a href='http://ebookmaterials.blogspot.co.uk/2010/07/dbms-viva-questions-answers.html'>dbms viva questions & answers</a>
+</li>
+<li>
+<a href='http://ebookmaterials.blogspot.co.uk/2011/04/linux-programming-viva-questions2.html'>Linux programming VIVA QUESTIONS2</a>
+</li>
+<li>
+<a href='http://ebookmaterials.blogspot.co.uk/2012/05/jntu-comprehensive-viva-questions.html'>jntu comprehensive viva questions</a>
+</li>
+<li>
+<a href='http://ebookmaterials.blogspot.co.uk/2012/04/cseit-3-1-text-books.html'>CSE/IT 3-1 Text Books</a>
+</li>
+<li>
+<a href='http://ebookmaterials.blogspot.co.uk/2010/10/software-testing-techniques-second.html'>Software Testing Techniques, Second Edition by Boris Beizer</a>
+</li>
+</ul>
+<div class='clear'></div>
+<span class='widget-item-control'>
+<span class='item-control blog-admin'>
+<a class='quickedit' href='//www.blogger.com/rearrange?blogID=5764591189701154136&widgetType=PopularPosts&widgetId=PopularPosts1&action=editWidget&sectionId=main' onclick='return _WidgetManager._PopupConfig(document.getElementById("PopularPosts1"));' target='configPopularPosts1' title='Edit'>
+<img alt='' height='18' src='http://img1.blogblog.com/img/icon18_wrench_allbkg.png' width='18'/>
+</a>
+</span>
+</span>
+<div class='clear'></div>
+</div>
+</div><div class='widget HTML' id='HTML17'>
+<div class='widget-content'>
+<script>
+var linkwithin_site_id = 270098;
+</script>
+<script src="http://www.linkwithin.com/widget.js"></script>
+<a href="http://www.linkwithin.com/"><img src="http://www.linkwithin.com/pixel.png" alt="Related Posts Plugin for WordPress, Blogger..." style="border: 0" /></a>
+</div>
+<div class='clear'></div>
+<span class='widget-item-control'>
+<span class='item-control blog-admin'>
+<a class='quickedit' href='//www.blogger.com/rearrange?blogID=5764591189701154136&widgetType=HTML&widgetId=HTML17&action=editWidget&sectionId=main' onclick='return _WidgetManager._PopupConfig(document.getElementById("HTML17"));' target='configHTML17' title='Edit'>
+<img alt='' height='18' src='http://img1.blogblog.com/img/icon18_wrench_allbkg.png' width='18'/>
+</a>
+</span>
+</span>
+<div class='clear'></div>
+</div><div class='widget HTML' id='HTML29'>
+<div class='widget-content'>
+<!-- Begin of AdsforIndians AdNetwork -->
+<script language="JavaScript">
+Srcid=13128;Adty=1;Width=468;Height=60;Skin=5;
+</script>
+<script language="JavaScript" src="http://www.adsforindians.com/showbanner.js">
+</script>
+<!-- End of AdsforIndians AdNetwork -->
+<a href='http://ity.im/?ref=55940' target=_blank><img src="http://ity.im/promo/468x60_wordpress.gif" /></a>
+<script type="text/javascript" src="http://adhitzads.com/172721"></script>
+<!-- ity.im Basic Code 468x60 POPUP ENABLED -->
+<script type="text/javascript" src="http://ity.im/adserver_remote/adserver.js"></script>
+<script type="text/javascript">
+var varsarray=[];
+varsarray[0]='55940';
+varsarray[1]='1';
+if(!token) {var token='0'} else {var token=token+1;}
+var loadtype='0';
+var adtype='0';
+var background_color='#F0F0F0';
+var border_color='#000000';
+var text_color='#060606';
+var text_rollcolor='#0033FF';
+var domain_color='#9F9F9F';
+varsarray['interhours']='';
+varsarray['interpages']='';
+adserver_initialize(token,loadtype,adtype,background_color,border_color,text_color,text_rollcolor,domain_color,varsarray);
+</script>
+</div>
+<div class='clear'></div>
+<span class='widget-item-control'>
+<span class='item-control blog-admin'>
+<a class='quickedit' href='//www.blogger.com/rearrange?blogID=5764591189701154136&widgetType=HTML&widgetId=HTML29&action=editWidget&sectionId=main' onclick='return _WidgetManager._PopupConfig(document.getElementById("HTML29"));' target='configHTML29' title='Edit'>
+<img alt='' height='18' src='http://img1.blogblog.com/img/icon18_wrench_allbkg.png' width='18'/>
+</a>
+</span>
+</span>
+<div class='clear'></div>
+</div><div class='widget HTML' id='HTML33'>
+<div class='widget-content'>
+<script src='http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js'></script>
+<script src="https://gj37765.googlecode.com/svn/trunk/html/[www.gj37765.blogspot.com]jquery.colorbox-min.js"></script>
+<link rel="stylesheet" href="https://gj37765.googlecode.com/svn/trunk/html/%5Bwww.gj37765.blogspot.com%5Dfbpopup.css" type="text/css" />
+<script type="text/javascript">
+jQuery(document).ready(function(){
+if (document.cookie.indexOf('visited=flase') == -1) {
+var fifteenDays = 1000*60*60*24*30;
+var expires = new Date((new Date()).valueOf() + fifteenDays);
+document.cookie = "visited=true;expires=" + expires.toUTCString();
+$.colorbox({width:"400px", inline:true, href:"#mdfb"});
+}
+});
+</script>
+<div style='display:none'>
+<div id='mdfb' style='padding:10px; background:#fff;'>
+<h3 class="mdbox-title">Receive all updates via Facebook. Just Click the Like Button Below<center><p style="line-height:3px;" >&#9660;</p></center></h3>
+<center>
+<iframe src="//www.facebook.com/plugins/likebox.php?href=http://www.facebook.com/pages/Ebookmaterialsblogspotcom/225179147498799&amp;width=300&amp;colorscheme=light&amp;show_faces=true&amp;border_color=%23ffffff&amp;stream=false&amp;header=false&amp;height=258" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:300px; height:258px;" allowtransparency="true"></iframe>
+<div id='mbt-sub-box' title='Enter your email address and click submit button to get latest updates'><font color="red" size="4">Subscribe to Get Latest Posts in your Inbox</font><form style="border:1px solid #ccc;padding:3px;text-align:center;" action="http://feedburner.google.com/fb/a/mailverify" method="post" target="popupwindow" onsubmit="window.open('http://feedburner.google.com/fb/a/mailverify?uri=jntuebooksmaterials', 'popupwindow', 'scrollbars=yes,width=550,height=520');return true"><input type="text" style="width:200px" name="email" /><input type="hidden" value="JntuEbooksMaterials" name="uri" /><input type="hidden" name="loc" value="en_US" /><input type="submit" value="Subscribe" /><img src="http://feeds.feedburner.com/~fc/JntuEbooksMaterials?bg=3399FF&amp;fg=444444&amp;anim=0" height="20" width="80" style="border:0" alt="" />
+</form></div>
+</center><p style=" float:right; margin-right:35px; font-size:9px;" >Powered By <a style=" font-size:9px; color:#3B78CD; text-decoration:none;" href="http://www.ebookmaterials.blogspot.com">ebookmaterials</a></p>
+</div></div>
+</div>
+<div class='clear'></div>
+<span class='widget-item-control'>
+<span class='item-control blog-admin'>
+<a class='quickedit' href='//www.blogger.com/rearrange?blogID=5764591189701154136&widgetType=HTML&widgetId=HTML33&action=editWidget&sectionId=main' onclick='return _WidgetManager._PopupConfig(document.getElementById("HTML33"));' target='configHTML33' title='Edit'>
+<img alt='' height='18' src='http://img1.blogblog.com/img/icon18_wrench_allbkg.png' width='18'/>
+</a>
+</span>
+</span>
+<div class='clear'></div>
+</div><div class='widget HTML' id='HTML16'>
+<div class='widget-content'>
+<!-- Begin BidVertiser code -->
+<script language="JavaScript1.1" src="http://bdv.bidvertiser.com/BidVertiser.dbm?pid=201287&bid=645696" type="text/javascript"></script>
+<noscript><a href="http://www.bidvertiser.com">affiliate program</a></noscript>
+<!-- End BidVertiser code -->
+</div>
+<div class='clear'></div>
+<span class='widget-item-control'>
+<span class='item-control blog-admin'>
+<a class='quickedit' href='//www.blogger.com/rearrange?blogID=5764591189701154136&widgetType=HTML&widgetId=HTML16&action=editWidget&sectionId=main' onclick='return _WidgetManager._PopupConfig(document.getElementById("HTML16"));' target='configHTML16' title='Edit'>
+<img alt='' height='18' src='http://img1.blogblog.com/img/icon18_wrench_allbkg.png' width='18'/>
+</a>
+</span>
+</span>
+<div class='clear'></div>
+</div><div class='widget HTML' id='HTML4'>
+<div class='widget-content'>
+<table border="0">
+<tr>
+<td>
+<!-- ity.im Basic Code 300x250 POPUP ENABLED -->
+<script type="text/javascript" src="http://ity.im/adserver_remote/adserver1.js"></script>
+<script type="text/javascript">
+var varsarray=[];
+varsarray[0]='55940';
+varsarray[1]='1';
+if(!token) {var token='0'} else {var token=token+1;}
+var loadtype='0';
+var adtype='1';
+var background_color='#F0F0F0';
+var border_color='#000000';
+var text_color='#060606';
+var text_rollcolor='#0033FF';
+var domain_color='#9F9F9F';
+varsarray['interhours']='';
+varsarray['interpages']='';
+adserver_initialize(token,loadtype,adtype,background_color,border_color,text_color,text_rollcolor,domain_color,varsarray);
+</script>
+</td>
+<td>
+<!--BEGIN ADWAGER ADBLOCK DISPLAY CODE -->
+<script type="text/javascript" src="http://z3834-p3164-n149.pub.pgssl.com/adv/ap/fastjs.asp?m=i&z=3834&p=3164&n=149&s=r"></script>
+<!--END ADWAGER ADBLOCK DISPLAY CODE -->
+
+</td>
+</tr>
+</table>
+</div>
+<div class='clear'></div>
+<span class='widget-item-control'>
+<span class='item-control blog-admin'>
+<a class='quickedit' href='//www.blogger.com/rearrange?blogID=5764591189701154136&widgetType=HTML&widgetId=HTML4&action=editWidget&sectionId=main' onclick='return _WidgetManager._PopupConfig(document.getElementById("HTML4"));' target='configHTML4' title='Edit'>
+<img alt='' height='18' src='http://img1.blogblog.com/img/icon18_wrench_allbkg.png' width='18'/>
+</a>
+</span>
+</span>
+<div class='clear'></div>
+</div></div>
+</div>
+<div id='rsidebar-wrapper'>
+<div class='widget-container'>
+<div class='social-profiles-widget'>
+<h3 class='widgettitle'>Social Profiles</h3>
+<a href='http://twitter.com/sivaramaiah2008' target='_blank'><img alt='Twitter' src='http://2.bp.blogspot.com/-1YNZVl0_sjs/T-MlPTO4h5I/AAAAAAAAAio/Kq58bZmHRlk/s000/twitter.png' title='Twitter'/></a><a href='http://www.facebook.com/pages/Ebookmaterialsblogspotcom/225179147498799' target='_blank'><img alt='Facebook' src='http://3.bp.blogspot.com/-dVSlPMc4KkI/T-MlPlpBm6I/AAAAAAAAAiw/_po56Rx_MIQ/s000/facebook.png' title='Facebook'/></a><a href='https://plus.google.com/' target='_blank'><img alt='Google Plus' src='http://3.bp.blogspot.com/-lrniV_V_Uwg/T-MlPxlhxrI/AAAAAAAAAi4/scm28Xuqil8/s000/gplus.png' title='Google Plus'/></a><a href='http://www.linkedin.com/' target='_blank'><img alt='LinkedIn' src='http://4.bp.blogspot.com/-JYbXQ68EDqs/T-MlQKTrQiI/AAAAAAAAAjA/rQsAzGdGhdo/s000/linkedin.png' title='LinkedIn'/></a><a href='http://ebookmaterials.blogspot.co.uk/feeds/posts/default' target='_blank'><img alt='RSS Feed' src='http://4.bp.blogspot.com/-0eZWKByrF_s/T-MlQfHkA7I/AAAAAAAAAjI/rsvyIK9891w/s000/rss.png' title='RSS Feed'/></a><a href='mailto:ebookmaterials.blogspot.com@gmail.com' target='_blank'><img alt='Email' src='http://4.bp.blogspot.com/-6KeGrnaDgFI/T-MlQnFIwLI/AAAAAAAAAjQ/NXJYjfWbifs/s000/email.png' title='Email'/></a>
+</div>
+</div>
+<div style='clear:both;'></div>
+<div class='widget-container'>
+<div id='search' title='Type and hit enter'>
+<form action='http://ebookmaterials.blogspot.co.uk/search/' id='searchform' method='get'>
+<input id='s' name='q' onblur='if (this.value == "") {this.value = "Search";}' onfocus='if (this.value == "Search") {this.value = "";}' type='text' value='Search'/>
+</form>
+</div>
+</div>
+<div style='clear:both;'></div>
+<div class='tabviewsection'>
+<script type='text/javascript'>
+            jQuery(document).ready(function($){
+                $(".tabs-widget-content-widget-themater_tabs-1432447472-id").hide();
+            	$("ul.tabs-widget-widget-themater_tabs-1432447472-id li:first a").addClass("tabs-widget-current").show();
+            	$(".tabs-widget-content-widget-themater_tabs-1432447472-id:first").show();
+       
+            	$("ul.tabs-widget-widget-themater_tabs-1432447472-id li a").click(function() {
+            		$("ul.tabs-widget-widget-themater_tabs-1432447472-id li a").removeClass("tabs-widget-current a"); 
+            		$(this).addClass("tabs-widget-current"); 
+            		$(".tabs-widget-content-widget-themater_tabs-1432447472-id").hide(); 
+            	    var activeTab = $(this).attr("href"); 
+            	    $(activeTab).fadeIn();
+            		return false;
+            	});
+            });
+        </script>
+<ul class='tabs-widget tabs-widget-widget-themater_tabs-1432447472-id'>
+<li><a href='#widget-themater_tabs-1432447472-id1'>Popular</a></li>
+<li><a href='#widget-themater_tabs-1432447472-id2'>Tags</a></li>
+<li><a href='#widget-themater_tabs-1432447472-id3'>Blog Archives</a></li>
+</ul>
+<div class='tabs-widget-content tabs-widget-content-widget-themater_tabs-1432447472-id' id='widget-themater_tabs-1432447472-id1'>
+<div class='sidebar section' id='sidebartab1'><div class='widget AdSense' id='AdSense1'>
+<div class='widget-content'>
+<script type="text/javascript"><!--
+google_ad_client="pub-8023282607660344";
+google_ad_host="pub-1556223355139109";
+google_ad_width=250;
+google_ad_height=250;
+google_ad_format="250x250_as";
+google_ad_type="text";
+google_ad_host_channel="0001+S0008+L0001";
+google_color_border="FFFFFF";
+google_color_bg="FFFFFF";
+google_color_link="5588AA";
+google_color_url="5588AA";
+google_color_text="666666";
+//--></script>
+<script type="text/javascript"
+  src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+<div class='clear'></div>
+<span class='widget-item-control'>
+<span class='item-control blog-admin'>
+<a class='quickedit' href='//www.blogger.com/rearrange?blogID=5764591189701154136&widgetType=AdSense&widgetId=AdSense1&action=editWidget&sectionId=sidebartab1' onclick='return _WidgetManager._PopupConfig(document.getElementById("AdSense1"));' target='configAdSense1' title='Edit'>
+<img alt='' height='18' src='http://img1.blogblog.com/img/icon18_wrench_allbkg.png' width='18'/>
+</a>
+</span>
+</span>
+<div class='clear'></div>
+</div>
+</div><div class='widget HTML' id='HTML7'>
+<div class='widget-content'>
+<img border="0" src="http://2.bp.blogspot.com/-k8e1vUYAsVc/T5eKyjikoII/AAAAAAAAAR0/dUJx8AIb2ks/s1600/Govent1.gif" />
+<marquee onmouseout="this.start()" direction="up" scrollamount="5" alternate="" onmouseover="this.stop()" scrolldelay="12" >
+<img src="http://i34.tinypic.com/dztlkp.gif" / />
+<a href="http://ebookmaterials.blogspot.com/2012/10/xerago-freshers-off-campus-for-web.html" target="_blank">Xerago Freshers Off-Campus for Web Designers </a>
+<span style="color: red;">Job Last Date:&nbsp;&nbsp;&nbsp; Tuesday, October 30, 2012</span>
+<br/><img src="http://i34.tinypic.com/dztlkp.gif" / />
+<a href="http://ebookmaterials.blogspot.com/2012/10/ahex-technologies-freshers-off-campus.html" target="_blank">Ahex Technologies Freshers Off-Campus for Web Developers </a>
+<span style="color: red;">Job Last Date:&nbsp;&nbsp;&nbsp; Wednesday, October 31, 2012</span>
+<br/><img src="http://i34.tinypic.com/dztlkp.gif" / />
+<a href="http://ebookmaterials.blogspot.com/2012/10/freshers-walk-in-at-east-innovations.html" target="_blank">Freshers Walk-in at East Innovations Software Technologies Pvt. Lt-Trainee Engineers </a>
+<span style="color: red;">Last date: 28/10/12</span>
+<br/><img src="http://i34.tinypic.com/dztlkp.gif" / />
+<a href="http://ebookmaterials.blogspot.com/2012/10/cisco-freshers-job-mela-as-software_22.html" target="_blank">Cisco Freshers JOB MELA as Software Engineer - October 2012 </a>
+<span style="color: red;">Job Last Date:&nbsp;&nbsp;&nbsp; Tuesday, October 30, 2012</span>
+<br/><img src="http://i34.tinypic.com/dztlkp.gif" / />
+<a href="http://ebookmaterials.blogspot.com/2012/10/state-bank-of-india-recruiting.html" target="_blank">State bank of india recruiting Specialist officers jobs</a>
+<span style="color: red;">Last date: 28/10/12</span>
+<br/><img src="http://i34.tinypic.com/dztlkp.gif" / />
+<a href="http://ebookmaterials.blogspot.com/2012/10/income-tax-department-apply-for-various.html">Income Tax Department Apply for Various Vacancies-Inspector, Tax Asst, Stenographer (For Meritorious Sports Persons) for Across India location.</a>
+<span style="color: red;">Last date:25/10/12</span>
+<br/><img src="http://i34.tinypic.com/dztlkp.gif" / />
+<a href="http://ebookmaterials.blogspot.com/2012/10/ibps-conducts-written-exam-cwe-2012-for.html">IBPS conducts Written Exam (CWE) 2012 for Clerical Cadre&nbsp; </a>
+<span style="color: red;">Apply Online at IBS website from 15/10/2012 to 05/11/2012 only</span>
+<br />
+<img src="http://i34.tinypic.com/dztlkp.gif" / />
+<a href="http://ebookmaterials.blogspot.com/2012/08/appsc-apply-for-lecturers-in-govt.html">APPSC-Apply for Lecturers in Govt Polytechnic Colleges &#8211; 869 Posts  </a>
+<div style="color: red;">
+Last date:6/12/12</div>
+</marquee>
+</div>
+<div class='clear'></div>
+<span class='widget-item-control'>
+<span class='item-control blog-admin'>
+<a class='quickedit' href='//www.blogger.com/rearrange?blogID=5764591189701154136&widgetType=HTML&widgetId=HTML7&action=editWidget&sectionId=sidebartab1' onclick='return _WidgetManager._PopupConfig(document.getElementById("HTML7"));' target='configHTML7' title='Edit'>
+<img alt='' height='18' src='http://img1.blogblog.com/img/icon18_wrench_allbkg.png' width='18'/>
+</a>
+</span>
+</span>
+<div class='clear'></div>
+</div><div class='widget AdSense' id='AdSense4'>
+<div class='widget-content'>
+<script type="text/javascript"><!--
+google_ad_client="pub-8023282607660344";
+google_ad_host="pub-1556223355139109";
+google_ad_width=160;
+google_ad_height=90;
+google_ad_format="160x90_0ads_al_s";
+google_ad_host_channel="0001+S0018+L0006";
+google_color_border="FFFFFF";
+google_color_bg="FFFFFF";
+google_color_link="336699";
+google_color_url="336699";
+google_color_text="333333";
+//--></script>
+<script type="text/javascript"
+  src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+<div class='clear'></div>
+<span class='widget-item-control'>
+<span class='item-control blog-admin'>
+<a class='quickedit' href='//www.blogger.com/rearrange?blogID=5764591189701154136&widgetType=AdSense&widgetId=AdSense4&action=editWidget&sectionId=sidebartab1' onclick='return _WidgetManager._PopupConfig(document.getElementById("AdSense4"));' target='configAdSense4' title='Edit'>
+<img alt='' height='18' src='http://img1.blogblog.com/img/icon18_wrench_allbkg.png' width='18'/>
+</a>
+</span>
+</span>
+<div class='clear'></div>
+</div>
+</div><div class='widget HTML' id='HTML10'>
+<div class='widget-content'>
+<img border="0" src="http://1.bp.blogspot.com/-b2BgzGDHkUI/T5eKlMVXSfI/AAAAAAAAARs/dSsXuH4mWnE/s1600/cooltext686237594.gif" />
+<marquee onmouseout="this.start()" direction="up" scrollamount="5" alternate="" onmouseover="this.stop()" scrolldelay="12" >
+<img src="http://i34.tinypic.com/dztlkp.gif" / />
+<a href="http://ebookmaterials.blogspot.com/2012/11/oski-technology-recruiting-freshers.html" target="_blank">Oski Technology recruiting freshers</a>
+<span style="color: red;">Last date:01/12/12</span>
+<br/><img src="http://i34.tinypic.com/dztlkp.gif" / />
+<a href="http://ebookmaterials.blogspot.com/2012/11/ibm-recruiting-freshers-for-software.html" target="_blank">IBM recruiting freshers for Software Engineer</a>
+<span style="color: red;">Last date:21/12/12</span>
+<br/><img src="http://i34.tinypic.com/dztlkp.gif" / />
+<a href="http://ebookmaterials.blogspot.com/2012/11/sap-recruiting-freshers-for-developer.html" target="_blank">SAP recruiting freshers for Developer position</a>
+<span style="color: red;">Last date:01/12/12</span>
+<br/><img src="http://i34.tinypic.com/dztlkp.gif" / />
+<a href="http://ebookmaterials.blogspot.com/2012/11/theorem-clinical-recruiting-freshers.html" target="_blank">Theorem Clinical recruiting freshers</a>
+<span style="color: red;">Last date:30/11/12</span>
+<br/><img src="http://i34.tinypic.com/dztlkp.gif" / />
+<a href="http://ebookmaterials.blogspot.com/2012/11/qualcomm-recruiting-2012-graduates.html" target="_blank">Qualcomm recruiting 2012 graduates</a>
+<span style="color: red;">Last date:21/11/12</span>
+<br/><img src="http://i34.tinypic.com/dztlkp.gif" / />
+<a href="http://ebookmaterials.blogspot.com/2012/11/intel-recruitin-freshers-for-student.html" target="_blank">Intel recruitin freshers for student intern position</a>
+<span style="color: red;">Last date:14/11/12</span>
+<br/><img src="http://i34.tinypic.com/dztlkp.gif" / />
+<a href="http://ebookmaterials.blogspot.com/2012/11/tetcos-recruiting-freshers-for-software.html" target="_blank">Tetcos recruiting freshers for Software Developer</a>
+<span style="color: red;">Last date:29/11/12</span>
+<br/><img src="http://i34.tinypic.com/dztlkp.gif" / />
+<a href="http://ebookmaterials.blogspot.com/2012/11/cypress-recruiting-mca-2012-freshers.html" target="_blank">Cypress recruiting MCA 2012 freshers</a>
+<span style="color: red;">Last date:28/11/12</span>
+<br/><img src="http://i34.tinypic.com/dztlkp.gif" / />
+<span style="color: red;"><a href="http://ebookmaterials.blogspot.com/2012/11/team-lease-recruitng-freshers-for.html" target="_blank">Team Lease recruitng freshers for trainee Software Engineer</a></span>
+<span style="color: red;">Last date:28/11/12</span>
+<br/><img src="http://i34.tinypic.com/dztlkp.gif" / />
+<a href="http://ebookmaterials.blogspot.com/2012/11/samsung-recruiting-freshers.html" target="_blank">Samsung recruiting freshers</a>
+<span style="color: red;">Last date:28/11/12</span>
+<br/><img src="http://i34.tinypic.com/dztlkp.gif" / />
+<a href="http://ebookmaterials.blogspot.com/2012/11/nanostuffs-recruiting-freshers.html" target="_blank">Nanostuffs recruiting freshers</a>
+<span style="color: red;">Last date:28/11/12</span>
+</marquee>
+<p align="right"><a href="http://ebookmaterials.blogspot.in/search/label/Jobs%20Zone"><font color="red" size="3"> MORE jobs...</font></a></p>
+</div>
+<div class='clear'></div>
+<span class='widget-item-control'>
+<span class='item-control blog-admin'>
+<a class='quickedit' href='//www.blogger.com/rearrange?blogID=5764591189701154136&widgetType=HTML&widgetId=HTML10&action=editWidget&sectionId=sidebartab1' onclick='return _WidgetManager._PopupConfig(document.getElementById("HTML10"));' target='configHTML10' title='Edit'>
+<img alt='' height='18' src='http://img1.blogblog.com/img/icon18_wrench_allbkg.png' width='18'/>
+</a>
+</span>
+</span>
+<div class='clear'></div>
+</div><div class='widget HTML' id='HTML13'>
+<h2 class='title'>Free tutorials and materialas,Lecturer notes</h2>
+<div class='widget-content'>
+<table><tr><td>
+<marquee onmouseout="this.start()" direction="up" scrollamount="5" alternate="" onmouseover="this.stop()" scrolldelay="15" >
+<span style="color: red;">Free tutorials </span>
+<ol>
+<li><a href="http://ebookmaterials.blogspot.com/2012/10/cc-programming-tutorials.html">free c/c++ programming tutorials</a></li>
+<li><a href="http://ebookmaterials.blogspot.com/2012/10/free-ajax-tutorials.html" target="_blank">free AJAX tutorials</a></li>
+<li><a href="http://ebookmaterials.blogspot.com/2012/10/free-android-tutorials.html" target="_blank">free Android tutorials</a></li>
+<li><a href="http://ebookmaterials.blogspot.com/2012/10/free-html-tutorials.html" target="_blank">Free HTML tutorials</a></li>
+<li><a href="http://ebookmaterials.blogspot.com/2012/10/free-adobe-air-turorials.html" target="_blank">Free CSS tutorials</a></li>
+<li><a href="http://ebookmaterials.blogspot.com/2012/10/free-adobe-air-turorials.html" target="_blank">Free Adobe AIR tutorials</a></li>
+<li><a href="http://ebookmaterials.blogspot.com/2012/10/free-xml-tutorials.html" target="_blank">free XML tutorials</a></li>
+<li><a href="http://ebookmaterials.blogspot.com/2012/10/free-javascript-tutorials.html" target="_blank">Free JavaScript tutorials</a></li>
+<li><a href="http://ebookmaterials.blogspot.com/2012/10/free-jquery-tutorials.html" target="_blank">free JQuery tutorials</a></li>
+<li><a href="http://ebookmaterials.blogspot.com/2012/10/free-flash-tutorials.html" target="_blank">free Flash tutorials</a></li>
+<li><a href="http://ebookmaterials.blogspot.com/2012/10/free-actionscript-tutorials.html" target="_blank">free ActionScript tutorials</a></li>
+<li><a href="http://ebookmaterials.blogspot.com/2012/10/free-coldfusion-tutorials.html" target="_blank">free ColdFusion tutorials</a></li>
+<li><a href="http://ebookmaterials.blogspot.com/2012/10/free-php-tutorials.html" target="_blank">free PHP tutorials</a></li>
+<li><a href="http://ebookmaterials.blogspot.com/2012/10/free-php-gtk-tutorials.html" target="_blank">free PHP GTK tutorials</a></li>
+<li><a href="http://ebookmaterials.blogspot.com/2012/10/free-joomla-tutorials.html" target="_blank">free Joomla tutorials</a></li>
+<li><a href="http://ebookmaterials.blogspot.com/2012/10/free-drupal-tutorials.html" target="_blank">free Drupal tutorials</a></li>
+<li><a href="http://ebookmaterials.blogspot.com/2012/10/free-ruby-tutorials.html" target="_blank">free Ruby tutorials</a></li>
+<li><a href="http://ebookmaterials.blogspot.com/2012/10/free-python-tutorials.html" target="_blank">free Python tutorials</a></li>
+<li><a href="http://ebookmaterials.blogspot.com/2012/10/free-j2ee-servlets-jsp-tutorials.html" target="_blank">free J2EE servlets jsp tutorials</a></li>
+<li><a href="http://ebookmaterials.blogspot.com/2012/10/free-assembley-programming-tutorials.html" target="_blank">free Assembley programming tutorials</a></li>
+<li><a href="http://ebookmaterials.blogspot.com/2012/10/free-perl-tutorials.html" target="_blank">free PERL tutorials</a></li>
+<li><a href="http://ebookmaterials.blogspot.com/2012/10/free-cobol-tutorials.html" target="_blank">free COBOL tutorials</a></li>
+<li><a href="http://ebookmaterials.blogspot.com/2012/10/free-delphi-programming-tutorials.html" target="_blank">free Delphi programming tutorials</a></li>
+<li><a href="http://ebookmaterials.blogspot.com/2012/10/free-adobe-flex-tutorials.html" target="_blank">free Adobe Flex tutorials</a></li>
+<li><a href="http://ebookmaterials.blogspot.com/2012/10/free-sql-tutorials.html" target="_blank">Free SQL tutorials</a></li>
+<li><a href="http://ebookmaterials.blogspot.com/2012/10/free-oracle-tutorials.html" target="_blank">free Oracle tutorials</a></li>
+<li><a href="http://ebookmaterials.blogspot.com/2012/10/free-asp-tutorials.html" target="_blank">free ASP tutorials</a></li>
+<li><a href="http://ebookmaterials.blogspot.com/2012/10/free-aspnet-tutorials.html" target="_blank">free ASP.NET tutorials</a></li>
+<li><a href="http://ebookmaterials.blogspot.com/2012/10/free-c-tutorials.html" target="_blank">free c# tutorials</a></li>
+<li><a href="http://ebookmaterials.blogspot.com/2012/10/free-vb-tutorials.html" target="_blank">free VB tutorials</a></li>
+<li><a href="http://ebookmaterials.blogspot.com/2012/10/free-vbnet-tutorials.html" target="_blank">free VB.NET tutorials</a></li>
+<li><a href="http://ebookmaterials.blogspot.com/2012/10/free-vbscript-tutorials.html" target="_blank">free VBScript tutorials</a></li>
+<li><a href="http://ebookmaterials.blogspot.com/2012/10/free-microsoft-net-tutorials.html" target="_blank">free Microsoft .NET tutorials</a></li>
+<li><a href="http://ebookmaterials.blogspot.com/2012/10/free-cloud-computing-tutorials.html" target="_blank">free Cloud computing tutorials</a></li>
+<li><a href="http://ebookmaterials.blogspot.com/2012/10/free-silverlight-tutorials.html" target="_blank">free Silverlight tutorials</a></li>
+<li><a href="http://ebookmaterials.blogspot.com/2012/10/free-language-integrated-query-linq.html" target="_blank">free Language Integrated Query (LINQ) Programming Tutorials</a></li>
+<li><a href="http://ebookmaterials.blogspot.com/2012/10/free-azure-platform-tutorials.html" target="_blank">free Azure Platform tutorials</a></li>
+<li><a href="http://ebookmaterials.blogspot.com/2012/10/free-web-services-tutorials.html" target="_blank">free web services tutorials</a></li>
+<li><a href="http://ebookmaterials.blogspot.com/2012/10/free-windows-vista-tutorials.html" target="_blank">free windows vista tutorials</a></li>
+<li><a href="http://ebookmaterials.blogspot.com/2012/10/free-visual-foxpro-tutorials.html" target="_blank">free visual Foxpro tutorials</a></li>
+<li><a href="http://ebookmaterials.blogspot.com/2012/10/free-applescript-tutorials.html" target="_blank">free AppleScript tutorials</a></li>
+</ol>
+
+<span style="color: red;">free Notes and materials,Lecturer notes</span>
+
+<ol>
+<li><a href="http://ebookmaterials.blogspot.com/2011/07/aspnet-materials-and-notes.html">ASP.NET materials and notes</a></li>
+<li><a href="http://ebookmaterials.blogspot.com/2011/07/advance-java-and-web-technology.html">ADVANCE JAVA AND WEB TECHNOLOGY</a></li>
+<li><a href="http://ebookmaterials.blogspot.com/2011/07/advanced-algorithms-lecturer-notes.html">Advanced Algorithms lecturer notes</a></li>
+<li><a href="http://ebookmaterials.blogspot.com/2011/07/advanced-computer-architecture-lecturer.html">Advanced Computer Architecture lecturer notes</a></li>
+<li><a href="http://ebookmaterials.blogspot.com/2011/07/advanced-computer-graphics-lecturer.html">Advanced Computer Graphics Lecturer notes</a></li>
+<li><a href="http://ebookmaterials.blogspot.com/2011/07/data-mining-lecturer-notes.html">Data Mining lecturer notes</a></li>
+<li><a href="http://ebookmaterials.blogspot.com/2011/07/advanced-data-structures-by-satraj.html">Advanced Data Structures by&nbsp; SatRaj Sahani lecturer notes</a></li>
+<li><a href="http://ebookmaterials.blogspot.com/2011/07/advanced-data-structures-lecturer-notes.html">Advanced Data Structures lecturer notes</a></li>
+<li><a href="http://ebookmaterials.blogspot.com/2011/07/advanced-data-structures-ppts.html">Advanced Data Structures ppts</a></li>
+<li><a href="http://ebookmaterials.blogspot.com/2011/07/advanced-operating-systems-lecturer.html">Advanced Operating Systems Lecturer Notes</a></li>
+<li><a href="http://ebookmaterials.blogspot.com/2011/07/advanced-programming-in-java-lecturer.html">Advanced Programming in java lecturer notes</a></li>
+<li><a href="http://ebookmaterials.blogspot.com/2011/07/advanced-programming-languages.html">Advanced Programming Languages materials and lecturer notes</a></li>
+<li><a href="http://ebookmaterials.blogspot.com/2011/07/advanced-topics-in-software-engineering.html">Advanced Topics in Software Engineering</a></li>
+<li><a href="http://ebookmaterials.blogspot.com/2011/07/ajax-materials-and-lecturer-notes.html">AJAX materials and lecturer notes</a></li>
+<li><a href="http://ebookmaterials.blogspot.com/2011/07/introduction-to-algorithms-by-cormen.html">Introduction To Algorithms by Cormen lecturer notes and materials</a></li>
+<li><a href="http://ebookmaterials.blogspot.com/2011/07/data-structures-algorithms-and.html">Data Structures, Algorithms, and Applications in Java by Sartaj Sahni&nbsp; Video Lectures</a></li>
+<li><a href="http://ebookmaterials.blogspot.com/2011/07/algorithm-design-lecturer-notes.html">Algorithm Design lecturer notes</a></li>
+<li><a href="http://ebookmaterials.blogspot.com/2011/07/algorithm-design-analysis-lecturer.html">Algorithm Design &amp; Analysis lecturer notes and materials</a></li>
+<li><a href="http://ebookmaterials.blogspot.com/2011/07/analog-electronics-lecturer-notes.html">Analog Electronics lecturer notes</a></li>
+<li><a href="http://ebookmaterials.blogspot.com/2011/07/artificial-intelligent-programming.html">Artificial Intelligent Programming lecturer notes</a></li>
+<li><a href="http://ebookmaterials.blogspot.com/2011/07/automata-theory-lecturer-notes.html">AUTOMATA THEORY lecturer notes</a></li>
+<li><a href="http://ebookmaterials.blogspot.com/2011/07/automatic-controls-lecturer-notes.html">Automatic Controls lecturer notes</a></li>
+<li><a href="http://ebookmaterials.blogspot.com/2011/07/business-communications-lecturer-notes.html">Business Communications lecturer notes and materials</a></li>
+<li><a href="http://ebookmaterials.blogspot.com/2011/07/c-programming-lecturer-notes.html">C Programming lecturer notes</a></li>
+<li><a href="http://ebookmaterials.blogspot.com/2011/07/circuits-and-electronics-lecturer-notes.html">Circuits and Electronics lecturer notes and materials</a></li>
+<li><a href="http://ebookmaterials.blogspot.com/2011/07/classical-and-modern-physics-ii.html">Classical and Modern Physics II lecturer notes</a></li>
+<li><a href="http://ebookmaterials.blogspot.com/2011/07/automata-theory-materials-and-lecturer.html">AUTOMATA THEORY materials and lecturer notes</a></li>
+<li><a href="http://ebookmaterials.blogspot.com/2011/07/compiler-design-lecturer-notes.html">Compiler Design Lecturer Notes</a></li>
+<li><a href="http://ebookmaterials.blogspot.com/2011/07/advanced-computer-architecture.html">Advanced Computer Architecture materials and lecturer notes</a></li>
+<li><a href="http://ebookmaterials.blogspot.com/2011/07/computer-architecture-and-organization.html">Computer Architecture and Organization lectuer notes and materials</a></li>
+<li><a href="http://ebookmaterials.blogspot.com/2011/07/computer-communications-networks.html">Computer Communications Networks lecture notes and materials</a></li>
+<li><a href="http://ebookmaterials.blogspot.com/2011/07/computer-fundamentals-lecturer-notes.html">Computer fundamentals&nbsp; lecturer notes and materials</a></li>
+<li><a href="http://ebookmaterials.blogspot.com/2011/07/computer-graphics-lectures-notes-pdf.html">Computer Graphics Lectures Notes Pdf</a></li>
+<li><a href="http://ebookmaterials.blogspot.com/2011/07/computer-networking-lecturer-notes-and.html">Computer Networking lecturer notes and materials</a></li>
+<li><a href="http://ebookmaterials.blogspot.com/2011/07/computer-networks-tannenbaum-lecturer.html">Computer Networks - Andrew.S.Tannenbaum lecturer notes and materials</a></li>
+<li><a href="http://ebookmaterials.blogspot.com/2011/07/computer-organization-lecturer-notes.html">Computer Organization lecturer notes and materials</a></li>
+<li> <a href="http://ebookmaterials.blogspot.com/2011/07/computer-systems-architecture-lecturer.html">Computer Systems Architecture lecturer notes and materials</a></li>
+<li> <a href="http://ebookmaterials.blogspot.com/2011/07/cryptography-lecturer-notes-and.html">Cryptography lecturer notes and materials</a></li>
+<li> <a href="http://ebookmaterials.blogspot.com/2011/07/data-communications-lecturer-notes-and.html">Data Communications lecturer notes and materials</a></li>
+<li> <a href="http://ebookmaterials.blogspot.com/2011/07/data-and-computer-communicationswilliam.html">Data and Computer Communications,William Stallings lecturer notes and materials</a></li>
+<li> <a href="http://ebookmaterials.blogspot.com/2011/07/data-mining-lecturer-notes-and.html">DATA MINING lecturer notes and materials</a></li>
+<li> <a href="http://ebookmaterials.blogspot.com/2011/07/data-and-computer-communications.html">Data and Computer Communications 7th Edition lecturer notes and materials</a></li>
+<li> <a href="http://ebookmaterials.blogspot.com/2011/07/data-structure-using-java-lecturer.html">Data Structure using Java lecturer notes and materials</a></li>
+<li> <a href="http://ebookmaterials.blogspot.com/2011/07/data-structures-using-c-lecturer-notes.html">Data Structures Using C++ lecturer notes and materials</a></li>
+<li> <a href="http://ebookmaterials.blogspot.com/2011/07/data-warehousing-lecturer-notes-and.html">DATA WAREHOUSING lecturer notes and materials</a></li>
+<li> <a href="http://ebookmaterials.blogspot.com/2011/07/database-design-with-lab-lecturer-notes.html">Database Design with Lab lecturer notes and materials</a></li>
+<li> <a href="http://ebookmaterials.blogspot.com/2011/07/database-fundamentals-notes-and.html">Database Fundamentals notes and materials</a></li>
+<li> <a href="http://ebookmaterials.blogspot.com/2011/07/database-management-systems-lecturer.html">Database Management Systems lecturer notes and materials</a></li>
+<li> <a href="http://ebookmaterials.blogspot.com/2011/07/database-management-systems-by-raghu.html">Database Management Systems by Raghu Ramakrishnan and Johannes Gehrke lecturer notes and materials</a></li>
+<li> <a href="http://ebookmaterials.blogspot.com/2011/07/design-and-analysis-of-algorithms.html">Design and Analysis of Algorithms lecturer notes and materials</a></li>
+<li> <a href="http://ebookmaterials.blogspot.com/2011/07/digital-communication-systems-using.html">Digital Communication Systems Using MATLAB&#174; and Simulink&#174;</a></li>
+<li> <a href="http://ebookmaterials.blogspot.com/2011/07/digital-communication-systems-using_27.html">Digital Communication Systems Using SystemVue lecturer notes and materials</a></li>
+<li> <a href="http://ebookmaterials.blogspot.com/2011/07/digital-image-processing-lecturer-notes.html">Digital Image Processing lecturer notes and materials</a>&nbsp;</li>
+<li><a href="http://ebookmaterials.blogspot.com/2011/07/digital-informatics-lecturer-notes-and.html">Digital Informatics lecturer notes and materials</a>&nbsp;</li>
+<li><a href="http://ebookmaterials.blogspot.com/2011/07/digital-logic-lecturer-notes-and.html">Digital Logic lecturer notes and materials</a>&nbsp;</li>
+<li><a href="http://ebookmaterials.blogspot.com/2011/07/digital-signal-processing-i-lecturer.html">Digital Signal Processing I lecturer notes and materials</a>&nbsp;</li>
+<li><a href="http://ebookmaterials.blogspot.com/2011/07/digital-systems-design-lectures-notes.html">Digital Systems Design -- Lectures notes and materials</a>&nbsp;</li>
+<li><a href="http://ebookmaterials.blogspot.com/2011/07/distributed-database-lecturer-notes-and.html">DISTRIBUTED DATABASE lecturer notes and materials</a>&nbsp;</li>
+<li><a href="http://ebookmaterials.blogspot.com/2011/07/distributed-systems-lecturer-notes-and.html">Distributed Systems lecturer notes and materials</a>&nbsp;</li>
+<li><a href="http://ebookmaterials.blogspot.com/2011/07/digital-systems-design-lectures-notes.html">Discrete Mathematics Lecture Notes</a>&nbsp;</li>
+<li><a href="http://ebookmaterials.blogspot.com/2011/07/ecommerce-technologies-and.html">eCommerce Technologies and Infrastructures</a>&nbsp;</li>
+<li><a href="http://ebookmaterials.blogspot.com/2011/07/electrical-power-systems-lecturer-notes.html">Electrical Power Systems lecturer notes and materials</a>&nbsp;</li>
+<li><a href="http://ebookmaterials.blogspot.com/2011/07/electronic-instrumentation-lecturer.html">Electronic Instrumentation lecturer notes and materials</a>&nbsp;</li>
+<li><a href="http://ebookmaterials.blogspot.com/2011/07/embedded-system-design-and-practice.html">Embedded System Design and Practice lecturer notes and materials</a>&nbsp;</li>
+<li><a href="http://ebookmaterials.blogspot.com/2011/07/engineering-computation-with-matlab.html">Engineering Computation with MATLAB lecturer notes and materials</a>&nbsp;</li>
+<li><a href="http://ebookmaterials.blogspot.com/2011/07/engineering-problem-solving-using.html">Engineering Problem Solving Using MATLAB</a>&nbsp;</li>
+<li><a href="http://ebookmaterials.blogspot.com/2011/07/file-structures-lecturer-notes-and.html">File Structures lecturer notes and materials</a>&nbsp;</li>
+<li><a href="http://ebookmaterials.blogspot.com/2011/07/fluid-mechanics-pdf-notes.html">Fluid Mechanics pdf notes</a>&nbsp;</li>
+<li><a href="http://ebookmaterials.blogspot.com/2011/07/fluid-mechanics-pdf-book.html">Fluid Mechanics PDF book</a>&nbsp;</li>
+<li><a href="http://ebookmaterials.blogspot.com/2011/07/fundamental-data-structure-and.html">Fundamental Data Structure and Algorithm lecturer notes and materials</a>&nbsp;</li>
+<li><a href="http://ebookmaterials.blogspot.com/2011/07/fundamentals-of-database-systems.html">Fundamentals of Database Systems lecturer notes and materials</a>&nbsp;</li>
+<li><a href="http://ebookmaterials.blogspot.com/2011/07/fundamentals-of-electromagnetic-theory.html">Fundamentals of Electromagnetic Theory lecturer notes and materials</a>&nbsp;</li>
+<li><a href="http://ebookmaterials.blogspot.com/2011/07/general-biochemistry-lecturer-notes-and.html">General Biochemistry lecturer notes and materials</a>&nbsp;</li>
+<li>General Physics lecturer notes and materials&nbsp;</li>
+<li><a href="http://ebookmaterials.blogspot.com/2011/07/haar-transforms-and-wavelets.html">HAAR TRANSFORMS AND WAVELETS</a>&nbsp;</li>
+<li><a href="http://ebookmaterials.blogspot.com/2011/07/human-computer-interaction-lecturer.html">Human Computer Interaction lecturer Notes</a>&nbsp;</li>
+<li><a href="http://ebookmaterials.blogspot.com/2011/07/human-resource-management-lecturer.html">Human Resource Management lecturer notes and materials</a>&nbsp;</li>
+<li><a href="http://ebookmaterials.blogspot.com/2011/07/fundamentals-of-management-notes-and.html">Fundamentals of Management notes and materials</a>&nbsp;</li>
+<li><a href="http://ebookmaterials.blogspot.com/2011/07/hydrology-lecturer-notes-and-materials.html">Hydrology lecturer notes and materials</a>&nbsp;</li>
+<li><a href="http://ebookmaterials.blogspot.com/2011/07/image-processing-notes-and-materials.html">Image Processing notes and materials</a>&nbsp;</li>
+<li><a href="http://ebookmaterials.blogspot.com/2011/07/information-retrieval-system-notes-and.html">Information Retrieval system notes and materials</a>&nbsp;</li>
+<li><a href="http://ebookmaterials.blogspot.com/2011/07/information-system-lecturer-notes-and.html">Information System lecturer notes and materials</a>&nbsp;</li>
+<li><a href="http://ebookmaterials.blogspot.com/2011/07/internet-programming-lecturer-notes-and.html">Internet Programming lecturer notes and materials</a>&nbsp;</li>
+<li><a href="http://ebookmaterials.blogspot.com/2011/07/internet-protocols-notes-and-materials.html">Internet Protocols&nbsp; notes and materials</a>&nbsp;</li>
+<li><a href="http://ebookmaterials.blogspot.com/2011/07/internet-technology-notes.html">Internet Technology notes</a>&nbsp;</li>
+<li><a href="http://ebookmaterials.blogspot.com/2011/07/introduction-to-database-systems-notes.html">Introduction to Database Systems notes and materials</a>&nbsp;</li>
+<li><a href="http://ebookmaterials.blogspot.com/2011/07/introduction-to-algorithms-cormen-notes.html">Introduction To Algorithms Cormen notes and materials</a>&nbsp;</li>
+<li><a href="http://ebookmaterials.blogspot.com/2011/07/introduction-to-artificial-intelligence.html">Introduction to Artificial Intelligence notes and materials</a>&nbsp;</li>
+<li><a href="http://ebookmaterials.blogspot.com/2011/07/introduction-to-c-notes-and-materials.html">Introduction to C++ notes and materials</a>&nbsp;</li>
+<li><a href="http://ebookmaterials.blogspot.com/2011/07/introduction-to-computer-science-notes.html">Introduction to Computer Science notes and materials</a>&nbsp;</li>
+<li><a href="http://ebookmaterials.blogspot.com/2011/08/introduction-to-information.html">Introduction to Information Technologies</a>&nbsp;</li>
+<li><a href="http://ebookmaterials.blogspot.com/2011/08/introduction-to-probability-and.html">Introduction to Probability and Statistics notes and materials</a>&nbsp;</li>
+<li><a href="http://ebookmaterials.blogspot.com/2011/08/introduction-to-vlsi-design-notes-and.html">Introduction to VLSI Design notes and materials</a>&nbsp;</li>
+<li><a href="http://ebookmaterials.blogspot.com/2011/08/introductory-digital-systems-laboratory.html">Introductory Digital Systems Laboratory notes and materials</a>&nbsp;</li>
+<li><a href="http://ebookmaterials.blogspot.com/2011/08/java-lecture-notes-and-materials.html">Java Lecture Notes and materials</a>&nbsp;</li>
+<li><a href="http://ebookmaterials.blogspot.com/2011/08/beginningintermediate-servlet-jsp.html">Beginning/Intermediate Servlet &amp; JSP Tutorial</a>&nbsp;</li>
+<li><a href="http://ebookmaterials.blogspot.com/2011/08/linear-control-systems-lecturer-notes.html">Linear Control Systems lecturer notes and materials</a></li>
+<li>&nbsp;<a href="http://ebookmaterials.blogspot.com/2011/08/linux-lectures-notes-and-materials.html">LINUX LECTURES notes and materials</a>&nbsp;</li>
+<li><a href="http://ebookmaterials.blogspot.com/2011/08/logic-design-notes-and-materials.html">Logic Design notes and materials</a>&nbsp;</li>
+<li><a href="http://ebookmaterials.blogspot.com/2011/08/management-information-system-notes-and.html">Management Information System notes and materials</a>&nbsp;</li>
+<li><a href="http://ebookmaterials.blogspot.com/2011/08/microprocessor-lecturer-notes-and.html">Microprocessor lecturer notes and materials</a>&nbsp;</li>
+<li><a href="http://ebookmaterials.blogspot.com/2011/08/modeling-and-simulation-notes-and.html">Modeling and simulation&nbsp; notes and materials</a>&nbsp;</li>
+<li><a href="http://ebookmaterials.blogspot.com/2011/08/modeling-dynamics-and-control-i-notes.html">Modeling Dynamics and Control I notes and material</a>&nbsp;</li>
+<li><a href="http://ebookmaterials.blogspot.com/2011/08/modern-physics-lecturer-notes-and.html">Modern Physics lecturer notes and materials</a>&nbsp;</li>
+<li><a href="http://ebookmaterials.blogspot.com/2011/08/network-theory-notes-and-materials.html">Network theory notes and materials</a>&nbsp;</li>
+<li><a href="http://ebookmaterials.blogspot.com/2011/08/object-oriented-programming-notes-and.html">Object-Oriented Programming notes and materials</a>&nbsp;</li>
+<li><a href="http://ebookmaterials.blogspot.com/2011/08/operating-system-concepts-notes-and.html">Operating System Concepts notes and materials</a>&nbsp;</li>
+<li><a href="http://ebookmaterials.blogspot.com/2011/08/operating-system-lecture-notes.html">OPERATING SYSTEM LECTURE NOTES</a>&nbsp;</li>
+<li><a href="http://ebookmaterials.blogspot.com/2011/08/operating-systems-lecture-notes-and.html">Operating Systems Lecture Notes and materials</a>&nbsp;</li>
+<li><a href="http://ebookmaterials.blogspot.com/2011/09/physics-lectures-notes-ppts.html">physics-lectures-notes-ppts</a>&nbsp;</li>
+<li><a href="http://ebookmaterials.blogspot.com/2011/09/power-electronics-lecturer-notes.html">Power Electronics lecturer notes</a>&nbsp;</li>
+<li><a href="http://ebookmaterials.blogspot.com/2011/09/programmable-logic-control-lecturer.html%20">Programmable logic control lecturer notes</a></li>
+<li><a href="http://ebookmaterials.blogspot.com/2011/09/radon-transform.html">RADON TRANSFORM</a>&nbsp;</li>
+<li> <a href="http://ebookmaterials.blogspot.com/2011/09/semantic-web-course.html">Semantic Web Course</a>&nbsp;</li>
+<li> <a href="http://ebookmaterials.blogspot.com/2011/09/semiconductor-device-and-process.html">Semiconductor Device and Process Simulation</a>&nbsp;</li>
+<li> <a href="http://ebookmaterials.blogspot.com/2011/09/semiconductor-device-theory-i.html">Semiconductor Device Theory I</a>&nbsp;</li>
+<li> <a href="http://ebookmaterials.blogspot.com/2011/09/semiconductor-device-theory-ii.html">Semiconductor Device Theory II</a>&nbsp;</li>
+<li> <a href="http://ebookmaterials.blogspot.com/2011/09/semiconductor-transport.html">Semiconductor Transport</a>&nbsp;</li>
+<li> <a href="http://ebookmaterials.blogspot.com/2011/09/electronic-marketing.html">Electronic Marketing</a>&nbsp;</li>
+<li> <a href="http://ebookmaterials.blogspot.com/2011/09/signals-and-systems.html">Signals and Systems</a>&nbsp;</li>
+<li> <a href="http://ebookmaterials.blogspot.com/2011/09/software-engineering.html">Software Engineering</a> </li>
+<li> <a href="http://ebookmaterials.blogspot.com/2011/09/solid-state-electronics.html">Solid State Electronics</a></li>
+<li>  <a href="http://ebookmaterials.blogspot.com/2011/09/systems-modelling-and-simulation.html">Systems Modelling and Simulation</a>&nbsp;</li>
+<li> <a href="http://ebookmaterials.blogspot.com/2011/09/tcpip-networking-lecturer-notes.html">TCP/IP Networking lecturer notes</a>&nbsp;</li>
+<li> <a href="http://ebookmaterials.blogspot.com/2011/09/telecommunications-lectuer-notes.html">Telecommunications lectuer notes</a>&nbsp;</li>
+<li> <a href="http://ebookmaterials.blogspot.com/2011/09/theory-of-computation-lectuer-nots-and.html">Theory of Computation lectuer nots and materials</a>&nbsp;</li>
+<li> <a href="http://ebookmaterials.blogspot.com/2011/09/thermal-hydraulics-in-power-technology.html">Thermal Hydraulics in Power Technology</a>&nbsp;</li>
+<li> <a href="http://ebookmaterials.blogspot.com/2011/09/thermodynamics-lecturer-notes.html">Thermodynamics lecturer notes</a>&nbsp;</li>
+<li> <a href="http://ebookmaterials.blogspot.com/2011/09/thermodynamics-kinetics.html">Thermodynamics &amp; Kinetics</a>&nbsp;</li>
+<li> <a href="http://ebookmaterials.blogspot.com/2011/09/unix-and-cc-programming-with-lab.html">Unix and C/C++ Programming with Lab</a>&nbsp;</li>
+<li> <a href="http://ebookmaterials.blogspot.com/2011/09/vlsi-design-automation.html">VLSI Design Automation </a>&nbsp;</li>
+<li> <a href="http://ebookmaterials.blogspot.com/2011/09/wavelet-transforms.html">WAVELET TRANSFORMS</a>&nbsp;</li>
+<li> <a href="http://ebookmaterials.blogspot.com/2011/09/web-programming.html">Web Programming</a>&nbsp;</li>
+<li> <a href="http://ebookmaterials.blogspot.com/2011/09/wireless-networking.html%20">Wireless Networking</a></li>
+</ol>
+<div>
+<div>
+<a href="http://ebookmaterials.blogspot.com/2012/01/jsp-lecturer-notes-and-materials.html">JSP lecturer notes and materials</a></div>
+<div>
+
+</div>
+<div>
+<a href="http://ebookmaterials.blogspot.com/2012/01/java-web-programming-lecturer-notes-and.html">JAVA WEB PROGRAMMING lecturer notes and materials</a></div>
+<div>
+
+</div>
+<div>
+<a href="http://ebookmaterials.blogspot.com/2012/01/java-distributed-computing-lecturer.html">Java Distributed Computing Lecturer notes and materials</a></div>
+<div>
+
+</div>
+<div>
+<a href="http://ebookmaterials.blogspot.com/2012/01/java-server-faces-lecturer-notes-and.html">JAVA SERVER FACES lecturer notes and materials</a></div>
+<div>
+
+</div>
+<div>
+<a href="http://ebookmaterials.blogspot.com/2012/01/ajax-notes-and-materials.html">AJAX &nbsp;NOTES AND MATERIALS</a></div>
+<div>
+
+</div>
+<div>
+<a href="http://ebookmaterials.blogspot.com/2012/01/struts-notes-and-materials.html">STRUTS notes and materials</a></div>
+<div>
+
+</div>
+<div>
+<a href="http://ebookmaterials.blogspot.com/2012/01/perl-ppts.html">perl ppts</a></div>
+<div>
+
+<a href="http://ebookmaterials.blogspot.com/2012/01/design-patterns-ppts.html">DESIGN PATTERNS&nbsp; PPTs</a>
+
+<a href="http://ebookmaterials.blogspot.com/2012/01/power-system-analysis-and-design.html">Power System Analysis and Design, Thomson, Fourth Edition</a>
+
+<a href="http://ebookmaterials.blogspot.com/2012/01/parallel-computer-architecture-ppts-and.html">PARALLEL COMPUTER ARCHITECTURE PPTs and pdf</a>
+
+<a href="http://ebookmaterials.blogspot.com/2012/01/systems-programming-ppt-pdf.html">SYSTEMS PROGRAMMING PPT PDF</a>
+
+<a href="http://ebookmaterials.blogspot.com/2012/01/operating-systems-ppts.html">Operating Systems PPT</a>
+
+<a href="http://ebookmaterials.blogspot.com/2012/01/information-retrieval-and-data-mining.html">INFORMATION RETRIEVAL AND DATA MINING PPT</a>
+
+<a href="http://ebookmaterials.blogspot.com/2012/01/embedded-systems-lecturer-ppts.html">EMBEDDED SYSTEMS lecturer&nbsp; PPTs</a>
+
+<a href="http://ebookmaterials.blogspot.com/2012/01/electronic-devices-and-circuits-ppts.html">ELECTRONIC DEVICES AND CIRCUITS PPTs</a>
+
+<a href="http://ebookmaterials.blogspot.com/2012/01/advanced-data-structures-and-algorithms.html">Advanced data structures and algorithms ppts</a>
+
+<a href="http://ebookmaterials.blogspot.com/2012/01/control-systems-ppts.html">CONTROL SYSTEMS PPTs</a>
+
+<a href="http://ebookmaterials.blogspot.com/2012/01/computer-organization-and-architecture.html">COMPUTER ORGANIZATION AND ARCHITECTURE PPT</a>
+
+<a href="http://ebookmaterials.blogspot.com/2012/01/computer-architecture-and-engineering.html">COMPUTER ARCHITECTURE AND ENGINEERING PPT,PDF</a>
+
+<a href="http://ebookmaterials.blogspot.com/2012/01/artificial-intelligence-ppts.html">ARTIFICIAL INTELLIGENCE PPTs</a>
+
+<a href="http://ebookmaterials.blogspot.com/2012/01/analog-circuits-and-systems-design-ppts.html">ANALOG CIRCUITS AND SYSTEMS DESIGN PPTs</a>
+
+<a href="http://ebookmaterials.blogspot.com/2012/01/business-communications-by-mary-jane.html">Business Communications&nbsp; by Mary Jane MacLennan</a>
+
+
+<a href="http://ebookmaterials.blogspot.com/2012/06/graph-theory-ppt-pdf-lecture-notes.html">Graph Theory PPT PDF Lecture Notes</a>
+
+<a href="http://ebookmaterials.blogspot.com/2012/06/discrete-mathematics-ppt-lecture-notes.html">Discrete Mathematics PPT Lecture Notes</a>
+
+<a href="http://ebookmaterials.blogspot.com/2012/06/bioinformatics-algorithms-lectures-ppts.html">Bioinformatics Algorithms Lectures PPTs</a>
+
+
+</div>
+</div>
+
+</marquee>
+</td></tr>
+<tr>
+<td>
+<font color="Red" size="4"><a href="http://ebookmaterials.blogspot.in/2011/07/all-lecturer-notes-and-materials.html">View Complete page click here</a></font>
+</td>
+</tr>
+</table>
+</div>
+<div class='clear'></div>
+<span class='widget-item-control'>
+<span class='item-control blog-admin'>
+<a class='quickedit' href='//www.blogger.com/rearrange?blogID=5764591189701154136&widgetType=HTML&widgetId=HTML13&action=editWidget&sectionId=sidebartab1' onclick='return _WidgetManager._PopupConfig(document.getElementById("HTML13"));' target='configHTML13' title='Edit'>
+<img alt='' height='18' src='http://img1.blogblog.com/img/icon18_wrench_allbkg.png' width='18'/>
+</a>
+</span>
+</span>
+<div class='clear'></div>
+</div><div class='widget HTML' id='HTML12'>
+<div class='widget-content'>
+<a href="https://accounts.google.com/Login?continue=http://labs.google.co.in/smschannels/channel/ebookmaterials" alt="Free mobile alert"><img src="http://www.fresherscafe.com/images/smsalert.gif" /></a>
+</div>
+<div class='clear'></div>
+<span class='widget-item-control'>
+<span class='item-control blog-admin'>
+<a class='quickedit' href='//www.blogger.com/rearrange?blogID=5764591189701154136&widgetType=HTML&widgetId=HTML12&action=editWidget&sectionId=sidebartab1' onclick='return _WidgetManager._PopupConfig(document.getElementById("HTML12"));' target='configHTML12' title='Edit'>
+<img alt='' height='18' src='http://img1.blogblog.com/img/icon18_wrench_allbkg.png' width='18'/>
+</a>
+</span>
+</span>
+<div class='clear'></div>
+</div><div class='widget HTML' id='HTML14'>
+<div class='widget-content'>
+<!-- Lockerz Share BEGIN -->
+<br/><a class='a2a_dd' href='http://www.addtoany.com/share_save'><img alt='Share/Bookmark' border='0' src='http://static.addtoany.com/buttons/share_save_171_16.png' width='171' height='16'/></a><p class='a2a_linkname_escape' style='display:none'><data:post.title/></data:post.title></p><script type='text/javascript'>var a2a_config = a2a_config || {};a2a_config.linkname_escape=1;a2a_config.linkurl="<data:post.url/>";</script><script src='http://static.addtoany.com/menu/page.js' type='text/javascript'></script>
+<!-- Lockerz Share END -->
+<a href="https://s3.amazonaws.com/com.alexa.toolbar/atbp/8LQ1um/download/index.htm"><img alt="Get our toolbar!" src="http://www.alexa.com/tbplatform/images/promotebuttons/blue/TB-banner3-2.jpg" /></a>
+</div>
+<div class='clear'></div>
+<span class='widget-item-control'>
+<span class='item-control blog-admin'>
+<a class='quickedit' href='//www.blogger.com/rearrange?blogID=5764591189701154136&widgetType=HTML&widgetId=HTML14&action=editWidget&sectionId=sidebartab1' onclick='return _WidgetManager._PopupConfig(document.getElementById("HTML14"));' target='configHTML14' title='Edit'>
+<img alt='' height='18' src='http://img1.blogblog.com/img/icon18_wrench_allbkg.png' width='18'/>
+</a>
+</span>
+</span>
+<div class='clear'></div>
+</div><div class='widget HTML' id='HTML28'>
+<div class='widget-content'>
+<table border="0">
+<tr>
+<td>
+<!-- ity.im Basic Code 120x600 POPUP ENABLED -->
+<script type="text/javascript" src="http://ity.im/adserver_remote/adserver3.js"></script>
+<script type="text/javascript">
+var varsarray=[];
+varsarray[0]='55940';
+varsarray[1]='1';
+if(!token) {var token='0'} else {var token=token+1;}
+var loadtype='0';
+var adtype='3';
+var background_color='#F0F0F0';
+var border_color='#000000';
+var text_color='#060606';
+var text_rollcolor='#0033FF';
+var domain_color='#9F9F9F';
+varsarray['interhours']='';
+varsarray['interpages']='';
+adserver_initialize(token,loadtype,adtype,background_color,border_color,text_color,text_rollcolor,domain_color,varsarray);
+</script>
+</td>
+<td>
+ <!-- Begin BidVertiser code -->
+<script language="JavaScript1.1" src="http://bdv.bidvertiser.com/BidVertiser.dbm?pid=201287&bid=1195666" type="text/javascript"></script>
+<noscript><a href="http://www.bidvertiser.com">affiliate program</a></noscript>
+<!-- End BidVertiser code --> 
+</td>
+</tr>
+</table>
+</div>
+<div class='clear'></div>
+<span class='widget-item-control'>
+<span class='item-control blog-admin'>
+<a class='quickedit' href='//www.blogger.com/rearrange?blogID=5764591189701154136&widgetType=HTML&widgetId=HTML28&action=editWidget&sectionId=sidebartab1' onclick='return _WidgetManager._PopupConfig(document.getElementById("HTML28"));' target='configHTML28' title='Edit'>
+<img alt='' height='18' src='http://img1.blogblog.com/img/icon18_wrench_allbkg.png' width='18'/>
+</a>
+</span>
+</span>
+<div class='clear'></div>
+</div><div class='widget LinkList' id='LinkList1'>
+<h2>My Favorite sites</h2>
+<div class='widget-content'>
+<ul>
+<li><a href='http://health-and-joy.blogspot.com/'>Health For Every one</a></li>
+<li><a href='http://freeonlinelecture.blogspot.in/'>Free video Lecturers</a></li>
+<li><a href='http://sivaramaiah.page.tl/'>sivaramaiah blog</a></li>
+<li><a href='http://topsites100.blogspot.com/'>Best sites 100</a></li>
+</ul>
+<div class='clear'></div>
+<span class='widget-item-control'>
+<span class='item-control blog-admin'>
+<a class='quickedit' href='//www.blogger.com/rearrange?blogID=5764591189701154136&widgetType=LinkList&widgetId=LinkList1&action=editWidget&sectionId=sidebartab1' onclick='return _WidgetManager._PopupConfig(document.getElementById("LinkList1"));' target='configLinkList1' title='Edit'>
+<img alt='' height='18' src='http://img1.blogblog.com/img/icon18_wrench_allbkg.png' width='18'/>
+</a>
+</span>
+</span>
+<div class='clear'></div>
+</div>
+</div></div>
+</div>
+<div class='tabs-widget-content tabs-widget-content-widget-themater_tabs-1432447472-id' id='widget-themater_tabs-1432447472-id2'>
+<div class='sidebar section' id='sidebartab2'></div>
+</div>
+<div class='tabs-widget-content tabs-widget-content-widget-themater_tabs-1432447472-id' id='widget-themater_tabs-1432447472-id3'>
+<div class='sidebar section' id='sidebartab3'></div>
+</div>
+</div>
+<div style='height:5px;clear:both;'></div>
+<div class='sidebar section' id='sidebarright'><div class='widget HTML' id='HTML6'>
+<div class='widget-content'>
+<!--BEGIN ADWAGER ADBLOCK DISPLAY CODE -->
+<script type="text/javascript" src="http://z3815-p3164-n149.pub.pgssl.com/adv/ap/fastjs.asp?m=i&z=3815&p=3164&n=149&s=w"></script>
+<!--END ADWAGER ADBLOCK DISPLAY CODE -->
+</div>
+<div class='clear'></div>
+<span class='widget-item-control'>
+<span class='item-control blog-admin'>
+<a class='quickedit' href='//www.blogger.com/rearrange?blogID=5764591189701154136&widgetType=HTML&widgetId=HTML6&action=editWidget&sectionId=sidebarright' onclick='return _WidgetManager._PopupConfig(document.getElementById("HTML6"));' target='configHTML6' title='Edit'>
+<img alt='' height='18' src='http://img1.blogblog.com/img/icon18_wrench_allbkg.png' width='18'/>
+</a>
+</span>
+</span>
+<div class='clear'></div>
+</div><div class='widget PlusBadge' id='PlusBadge1'>
+<link href='https://plus.google.com/106165714703484612787' rel='publisher'/>
+<script type='text/javascript'>
+  window.___gcfg = {
+    lang: 'en'
+  };
+
+  (function() {
+    var po = document.createElement("script");
+    po.type = "text/javascript";
+    po.async = true;
+    po.src = "https://apis.google.com/js/plusone.js";
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(po, s);
+  })();
+  </script>
+<g:plus height='69' href='https://plus.google.com/106165714703484612787' rel='author' source='blogger:blog:badge' theme='light' width='280'></g:plus>
+</div><div class='widget HTML' id='HTML3'>
+<div class='widget-content'>
+<!-- Histats.com  START  (standard)-->
+<script type="text/javascript">document.write(unescape("%3Cscript src=%27http://s10.histats.com/js15.js%27 type=%27text/javascript%27%3E%3C/script%3E"));</script>
+<a href="http://www.histats.com" target="_blank" title="free web site hit counter" ><script  type="text/javascript" >
+try {Histats.start(1,979575,4,402,118,80,"00011111");
+Histats.track_hits();} catch(err){};
+</script></a>
+<noscript><a href="http://www.histats.com" target="_blank"><img src="http://sstatic1.histats.com/0.gif?979575&amp;101" alt="free web site hit counter" border="0" /></a></noscript>
+<!-- Histats.com  END  -->
+</div>
+<div class='clear'></div>
+<span class='widget-item-control'>
+<span class='item-control blog-admin'>
+<a class='quickedit' href='//www.blogger.com/rearrange?blogID=5764591189701154136&widgetType=HTML&widgetId=HTML3&action=editWidget&sectionId=sidebarright' onclick='return _WidgetManager._PopupConfig(document.getElementById("HTML3"));' target='configHTML3' title='Edit'>
+<img alt='' height='18' src='http://img1.blogblog.com/img/icon18_wrench_allbkg.png' width='18'/>
+</a>
+</span>
+</span>
+<div class='clear'></div>
+</div><div class='widget HTML' id='HTML1'>
+<div class='widget-content'>
+<script language="JavaScript" type="text/javascript">
+var popunder="http://www.ebookmaterials.org/"
+//Pop-under only once per browser session? (0=no, 1=yes)
+//Specifying 0 will cause popunder to load every time page is loaded
+var once_per_session=1
+//No editing beyond here required/////
+function get_cookie(Name) {
+var search = Name + "="
+var returnvalue = "";
+if (document.cookie.length > 0) {
+offset = document.cookie.indexOf(search)
+if (offset != -1) { // if cookie exists
+offset += search.length
+// set index of beginning of value
+end = document.cookie.indexOf(";", offset);
+// set index of end of cookie value
+if (end == -1)
+end = document.cookie.length;
+returnvalue=unescape(document.cookie.substring(offset, end))
+}
+}
+return returnvalue;
+}
+function loadornot(){
+if (get_cookie('popunder')==''){
+loadpopunder()
+document.cookie="popunder=yes"
+}
+}
+function loadpopunder(){
+win2=window.open(popunder)
+win2.blur()
+
+}
+if (once_per_session==0)
+loadpopunder()
+else
+loadornot()
+</script>
+</div>
+<div class='clear'></div>
+<span class='widget-item-control'>
+<span class='item-control blog-admin'>
+<a class='quickedit' href='//www.blogger.com/rearrange?blogID=5764591189701154136&widgetType=HTML&widgetId=HTML1&action=editWidget&sectionId=sidebarright' onclick='return _WidgetManager._PopupConfig(document.getElementById("HTML1"));' target='configHTML1' title='Edit'>
+<img alt='' height='18' src='http://img1.blogblog.com/img/icon18_wrench_allbkg.png' width='18'/>
+</a>
+</span>
+</span>
+<div class='clear'></div>
+</div></div>
+<p></p></div>
+<!-- spacer for skins that want sidebar and main to be the same height-->
+<div class='clear'>&#160;</div>
+</div>
+<!-- end content-wrapper -->
+</div></div></div>
+<!-- end outer-wrapper -->
+<div style='clear:both;'></div>
+<div id='footer-widgets-container'>
+<div class='clearfix' id='footer-widgets'>
+<div class='footer-widget-box'>
+<ul class='widget-container'>
+<li>
+<div class='footersec section' id='footersec1'></div>
+</li>
+</ul>
+</div>
+<div class='footer-widget-box'>
+<ul class='widget-container'>
+<li>
+<div class='footersec section' id='footersec2'></div>
+</li>
+</ul>
+</div>
+<div class='footer-widget-box'>
+<ul class='widget-container'>
+<li>
+<div class='footersec section' id='footersec3'></div>
+</li>
+</ul>
+</div>
+<div class='footer-widget-box footer-widget-box-last'>
+<ul class='widget-container'>
+<li>
+<div class='footersec section' id='footersec4'></div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div style='clear:both;'></div>
+<div id='footer-container'>
+<div id='footer'>
+<div id='copyrights'>
+Copyright &copy; <script type='text/javascript'>var creditsyear = new Date();document.write(creditsyear.getFullYear());</script>
+<a href='http://ebookmaterials.blogspot.co.uk/'>Ebook materials, ECE ,EEE,CSE, IT,MCA,MBA,JNTU books materials,interview questions,jobs</a> | Powered by <a href='http://www.blogger.com/'>Blogger</a>
+</div>
+<div id='credits'>
+<!-- you don't have permission to remove or change these -->
+Design by <a href='http://fthemes.com/' target='_blank'>FThemes</a> | Blogger Theme by <a href='http://www.bloggertipandtrick.net/' target='_blank' title='Best Blogging Tutorials'>Lasantha</a> - <a href='http://www.premiumbloggertemplates.com/' target='_blank' title='Free Blogger Templates'>Premium Blogger Themes</a><br/><a href='http://www.apps4rent.com/hosted-exchange-hosting.html' target='_blank'>Microsoft Exchange Hosting</a>
+</div>
+</div>
+</div>
+<div style='clear:both;'></div>
+<script type="text/javascript">
+if (window.jstiming) window.jstiming.load.tick('widgetJsBefore');
+</script><script type="text/javascript" src="//www.blogger.com/static/v1/widgets/2000000996-widgets.js"></script>
+<script type='text/javascript'>
+if (typeof(BLOG_attachCsiOnload) != 'undefined' && BLOG_attachCsiOnload != null) { window['blogger_templates_experiment_id'] = "templatesV1";window['blogger_blog_id'] = '5764591189701154136';BLOG_attachCsiOnload('item_'); }_WidgetManager._Init('//www.blogger.com/rearrange?blogID\x3d5764591189701154136','//ebookmaterials.blogspot.co.uk/2010/09/computer-networking-chapter-2-ppts.html','5764591189701154136');
+_WidgetManager._SetDataContext([{'name': 'blog', 'data': {'blogId': '5764591189701154136', 'bloggerUrl': 'http://www.blogger.com', 'title': 'Ebook materials, ECE ,EEE,CSE, IT,MCA,MBA,JNTU books materials,interview questions,jobs', 'pageType': 'item', 'url': 'http://ebookmaterials.blogspot.co.uk/2010/09/computer-networking-chapter-2-ppts.html', 'canonicalUrl': 'http://ebookmaterials.blogspot.com/2010/09/computer-networking-chapter-2-ppts.html', 'canonicalHomepageUrl': 'http://ebookmaterials.blogspot.com/', 'homepageUrl': 'http://ebookmaterials.blogspot.co.uk/', 'blogspotFaviconUrl': 'http://ebookmaterials.blogspot.co.uk/favicon.ico', 'enabledCommentProfileImages': true, 'adultContent': false, 'disableAdSenseWidget': false, 'analyticsAccountNumber': '', 'searchLabel': '', 'searchQuery': '', 'pageName': 'computer networking chapter 2 ppts', 'pageTitle': 'Ebook materials, ECE ,EEE,CSE, IT,MCA,MBA,JNTU books materials,interview questions,jobs: computer networking chapter 2 ppts', 'metaDescription': '', 'encoding': 'UTF-8', 'locale': 'en', 'isPrivate': false, 'isMobile': false, 'isMobileRequest': false, 'mobileClass': '', 'isPrivateBlog': false, 'languageDirection': 'ltr', 'feedLinks': '\74link rel\75\42alternate\42 type\75\42application/atom+xml\42 title\75\42Ebook materials, ECE ,EEE,CSE, IT,MCA,MBA,JNTU books materials,interview questions,jobs - Atom\42 href\75\42http://ebookmaterials.blogspot.com/feeds/posts/default\42 /\76\n\74link rel\75\42alternate\42 type\75\42application/rss+xml\42 title\75\42Ebook materials, ECE ,EEE,CSE, IT,MCA,MBA,JNTU books materials,interview questions,jobs - RSS\42 href\75\42http://ebookmaterials.blogspot.com/feeds/posts/default?alt\75rss\42 /\76\n\74link rel\75\42service.post\42 type\75\42application/atom+xml\42 title\75\42Ebook materials, ECE ,EEE,CSE, IT,MCA,MBA,JNTU books materials,interview questions,jobs - Atom\42 href\75\42http://www.blogger.com/feeds/5764591189701154136/posts/default\42 /\76\n\74link rel\75\42EditURI\42 type\75\42application/rsd+xml\42 title\75\42RSD\42 href\75\42http://www.blogger.com/rsd.g?blogID\0755764591189701154136\42 /\76\n\74link rel\75\42alternate\42 type\75\42application/atom+xml\42 title\75\42Ebook materials, ECE ,EEE,CSE, IT,MCA,MBA,JNTU books materials,interview questions,jobs - Atom\42 href\75\42http://ebookmaterials.blogspot.com/feeds/4896624561704043709/comments/default\42 /\76\n', 'meTag': '', 'openIdOpTag': '', 'googleProfileUrl': 'https://plus.google.com/106165714703484612787', 'imageSrcTag': '', 'latencyHeadScript': '\74script type\75\42text/javascript\42\76(function() { var a\75window,b\75\42jstiming\42,d\75\42tick\42;var e\75function(c){this.t\75{};this.tick\75function(c,p,h){h\75void 0!\75h?h:(new Date).getTime();this.t[c]\75[h,p]};this[d](\42start\42,null,c)},f\75new e;a.jstiming\75{Timer:e,load:f};if(a.performance\46\46a.performance.timing){var g\75a.performance.timing,j\75a[b].load,k\75g.navigationStart,l\75g.responseStart;0\74k\46\46l\76\75k\46\46(j[d](\42_wtsrt\42,void 0,k),j[d](\42wtsrt_\42,\42_wtsrt\42,l),j[d](\42tbsd_\42,\42wtsrt_\42))}\ntry{var m\75null;a.chrome\46\46a.chrome.csi\46\46(m\75Math.floor(a.chrome.csi().pageT),j\46\0460\74k\46\46(j[d](\42_tbnd\42,void 0,a.chrome.csi().startE),j[d](\42tbnd_\42,\42_tbnd\42,k)));null\75\75m\46\46a.gtbExternal\46\46(m\75a.gtbExternal.pageT());null\75\75m\46\46a.external\46\46(m\75a.external.pageT,j\46\0460\74k\46\46(j[d](\42_tbnd\42,void 0,a.external.startE),j[d](\42tbnd_\42,\42_tbnd\42,k)));m\46\46(a[b].pt\75m)}catch(n){};a.tickAboveFold\75function(c){var i\0750;if(c.offsetParent){do i+\75c.offsetTop;while(c\75c.offsetParent)}c\75i;750\76\75c\46\46a[b].load[d](\42aft\42)};var q\75!1;function r(){q||(q\75!0,a[b].load[d](\42firstScrollTime\42))}a.addEventListener?a.addEventListener(\42scroll\42,r,!1):a.attachEvent(\42onscroll\42,r);\n })();\74/script\076', 'mobileHeadScript': '', 'adsenseClientId': 'pub-8023282607660344', 'view': '', 'dynamicViewsCommentsSrc': '//www.blogblog.com/dynamicviews/4224c15c4e7c9321/js/comments.js', 'dynamicViewsScriptSrc': '//www.blogblog.com/dynamicviews/7728d91bbda5af3c'}}, {'name': 'skin', 'data': {'vars': {'sidebartextcolor': '#666666', 'linkcolor': '#5588aa', 'visitedlinkcolor': '#999999', 'textcolor': '#333333', 'headerfont': 'normal normal 78% \47Trebuchet MS\47,Trebuchet,Arial,Verdana,Sans-serif', 'pagetitlefont': 'normal normal 200% Georgia, Serif', 'bgcolor': '#ffffff', 'descriptioncolor': '#999999', 'titlecolor': '#cc6600', 'bordercolor': '#cccccc', 'postfooterfont': 'normal normal 78% \47Trebuchet MS\47, Trebuchet, Arial, Verdana, Sans-serif', 'pagetitlecolor': '#666666', 'bodyfont': 'normal normal 100% Georgia, Serif', 'endSide': 'right', 'startSide': 'left', 'descriptionfont': 'normal normal 78% \47Trebuchet MS\47, Trebuchet, Arial, Verdana, Sans-serif', 'sidebarcolor': '#999999'}, 'override': ''}}, {'name': 'view', 'data': {'classic': {'name': 'classic', 'url': '/?view\75classic'}, 'flipcard': {'name': 'flipcard', 'url': '/?view\75flipcard'}, 'magazine': {'name': 'magazine', 'url': '/?view\75magazine'}, 'mosaic': {'name': 'mosaic', 'url': '/?view\75mosaic'}, 'sidebar': {'name': 'sidebar', 'url': '/?view\75sidebar'}, 'snapshot': {'name': 'snapshot', 'url': '/?view\75snapshot'}, 'timeslide': {'name': 'timeslide', 'url': '/?view\75timeslide'}}}]);
+_WidgetManager._RegisterWidget('_AdSenseView', new _WidgetInfo('AdSense1', 'sidebartab1', null, document.getElementById('AdSense1'), {}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_HTMLView', new _WidgetInfo('HTML7', 'sidebartab1', null, document.getElementById('HTML7'), {}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_AdSenseView', new _WidgetInfo('AdSense4', 'sidebartab1', null, document.getElementById('AdSense4'), {}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_HTMLView', new _WidgetInfo('HTML10', 'sidebartab1', null, document.getElementById('HTML10'), {}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_HTMLView', new _WidgetInfo('HTML13', 'sidebartab1', null, document.getElementById('HTML13'), {}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_HTMLView', new _WidgetInfo('HTML12', 'sidebartab1', null, document.getElementById('HTML12'), {}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_HTMLView', new _WidgetInfo('HTML14', 'sidebartab1', null, document.getElementById('HTML14'), {}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_HTMLView', new _WidgetInfo('HTML28', 'sidebartab1', null, document.getElementById('HTML28'), {}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_LinkListView', new _WidgetInfo('LinkList1', 'sidebartab1', null, document.getElementById('LinkList1'), {}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_AdSenseView', new _WidgetInfo('AdSense2', 'sidebarleft', null, document.getElementById('AdSense2'), {}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_LabelView', new _WidgetInfo('Label1', 'sidebarleft', null, document.getElementById('Label1'), {}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_AdSenseView', new _WidgetInfo('AdSense5', 'sidebarleft', null, document.getElementById('AdSense5'), {}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_BlogArchiveView', new _WidgetInfo('BlogArchive1', 'sidebarleft', null, document.getElementById('BlogArchive1'), {'languageDirection': 'ltr'}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_AttributionView', new _WidgetInfo('Attribution1', 'sidebarleft', null, document.getElementById('Attribution1'), {'attribution': 'Copy right to ebookmaterials. Powered by \74a href\75\47http://www.blogger.com\47 target\75\47_blank\47\76Blogger\74/a\76.'}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_HTMLView', new _WidgetInfo('HTML5', 'sidebarleft', null, document.getElementById('HTML5'), {}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_HeaderView', new _WidgetInfo('Header1', 'header', null, document.getElementById('Header1'), {}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_AdSenseView', new _WidgetInfo('AdSense6', 'header2', null, document.getElementById('AdSense6'), {}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_HTMLView', new _WidgetInfo('HTML6', 'sidebarright', null, document.getElementById('HTML6'), {}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_PlusBadgeView', new _WidgetInfo('PlusBadge1', 'sidebarright', null, document.getElementById('PlusBadge1'), {}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_HTMLView', new _WidgetInfo('HTML3', 'sidebarright', null, document.getElementById('HTML3'), {}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_HTMLView', new _WidgetInfo('HTML1', 'sidebarright', null, document.getElementById('HTML1'), {}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_HTMLView', new _WidgetInfo('HTML26', 'main', null, document.getElementById('HTML26'), {}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_HTMLView', new _WidgetInfo('HTML8', 'main', null, document.getElementById('HTML8'), {}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_HTMLView', new _WidgetInfo('HTML25', 'main', null, document.getElementById('HTML25'), {}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_BlogView', new _WidgetInfo('Blog1', 'main', null, document.getElementById('Blog1'), {'cmtInteractionsEnabled': false, 'showBacklinks': true, 'postId': '4896624561704043709', 'lightboxEnabled': true, 'lightboxModuleUrl': '//www.blogger.com/static/v1/jsbin/3339358681-lbx.js', 'lightboxCssUrl': '//www.blogger.com/static/v1/v-css/228702327-lightbox_bundle.css'}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_PopularPostsView', new _WidgetInfo('PopularPosts1', 'main', null, document.getElementById('PopularPosts1'), {}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_HTMLView', new _WidgetInfo('HTML17', 'main', null, document.getElementById('HTML17'), {}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_HTMLView', new _WidgetInfo('HTML29', 'main', null, document.getElementById('HTML29'), {}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_HTMLView', new _WidgetInfo('HTML33', 'main', null, document.getElementById('HTML33'), {}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_HTMLView', new _WidgetInfo('HTML16', 'main', null, document.getElementById('HTML16'), {}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_HTMLView', new _WidgetInfo('HTML4', 'main', null, document.getElementById('HTML4'), {}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_HTMLView', new _WidgetInfo('HTML2', 'pagelistmenusblog', null, document.getElementById('HTML2'), {}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_AdSenseView', new _WidgetInfo('AdSense3', 'pagelistmenusblog', null, document.getElementById('AdSense3'), {}, 'displayModeFull'));
+</script>
+</body>
+</html>

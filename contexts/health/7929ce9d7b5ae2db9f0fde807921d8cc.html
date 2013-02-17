@@ -1,0 +1,2969 @@
+
+
+<!-- 
+Build Date: 10/5/2011 3:52:20 PM
+SiteMaker Release:SM7.2.9
+
+Medseek, Inc.
+2028 Village Lane
+Solvang, CA. 93463
+Phone 1-888 MEDSEEK
+email info@medseek.com
+http://www.medseek.com
+
+(c) 1999-2011 Medseek, Inc. All rights reserved.
+ -->
+ 
+
+
+
+
+
+		
+	
+	<html>
+	<head>
+	<title>Heartland Health</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+	<link href="heartland.css" rel="stylesheet" type="text/css">
+	<script language="JavaScript">
+	<!--
+	function GoToSite()
+	{
+		var xxx;
+		var zzz;
+		zzz=document.hotlink.SiteURL;
+		xxx=document.hotlink.SiteURL.selectedIndex;
+		//alert(zzz[xxx].value);
+		//xxx=hotlink.SiteURL.value;
+		location.href=zzz[xxx].value;
+		return true;
+	}		
+	//-->
+	</script>
+	
+	
+				
+<!-- Begin NavBar CSS Output... -->
+<style type="text/css">
+all.NavBarNum1 {  font-family: verdana; font-weight: bold; font-size: 10px; text-decoration: none; color: #0074B3; text-decoration:none;  }
+all.NavBarNum1CurrentGroupTD {  font-family: verdana; font-weight: bold; font-size: 10px; text-decoration: underline; color: #55a2cc; text-decoration:none; }		
+all.NavBarNum1CurrentGroup {  font-family: verdana; font-weight: bold; font-size: 10px; text-decoration: underline; color: #55a2cc; text-decoration:none;  }
+all.NavBarNum1CurrentGrouphover {  font-family: verdana; font-weight: bold; font-size: 10px; text-decoration: underline; color: #55a2cc; text-decoration:none;  }
+all.NavBarNum1Hover {  font-family: verdana; font-weight: bold; font-size: 10px; text-decoration: underline; color: #55a2cc; text-decoration:none;  }
+.NavBarNum1 {  font-family: verdana; font-weight: bold; font-size: 10px; text-decoration: none; color: #0074B3; text-decoration:none;  }				
+.NavBarNum1CurrentGroupTD {  font-family: verdana; font-weight: bold; font-size: 10px; text-decoration: underline; color: #55a2cc; text-decoration:none; }				
+.NavBarNum1CurrentGroup {  font-family: verdana; font-weight: bold; font-size: 10px; text-decoration: underline; color: #55a2cc; text-decoration:none; }				
+.NavBarNum1Layer {  font-family: verdana; font-weight: bold; font-size: 10px; text-decoration: none; color: 000000;   }
+.NavBarNum1SubMenu {  font-family: verdana; font-weight: bold; font-size: 10px; text-decoration: none; color: #0074B3; text-decoration:none;  }
+.NavBarNum1SubMenu:hover {  font-family: verdana; font-weight: bold; font-size: 10px; text-decoration: underline; color: #55a2cc; text-decoration:none;  }	
+.NavBarNum1CurrentGrouphover {  font-family: verdana; font-weight: bold; font-size: 10px; text-decoration: underline; color: #55a2cc; text-decoration:none;  }
+		
+A.NavBarNum1:link	{  font-family: verdana; font-weight: bold; font-size: 10px; text-decoration: none; color: #0074B3; text-decoration:none;  }
+A.NavBarNum1:visited {  font-family: verdana; font-weight: bold; font-size: 10px; text-decoration: none; color: #0074B3; text-decoration:none;  }
+A.NavBarNum1:hover  {  font-family: verdana; font-weight: bold; font-size: 10px; text-decoration: underline; color: #55a2cc; text-decoration:none;  }
+A.NavBarNum1:active  {  font-family: verdana; font-weight: bold; font-size: 10px; text-decoration: none; color: #0074B3; text-decoration:none;  }
+A.NavBarNum1CurrentGroup:link	{  font-family: verdana; font-weight: bold; font-size: 10px; text-decoration: underline; color: #55a2cc; text-decoration:none;  }
+A.NavBarNum1CurrentGroup:visited {  font-family: verdana; font-weight: bold; font-size: 10px; text-decoration: underline; color: #55a2cc; text-decoration:none;  }
+A.NavBarNum1CurrentGroup:hover  {  font-family: verdana; font-weight: bold; font-size: 10px; text-decoration: underline; color: #55a2cc; text-decoration:none;  }
+A.NavBarNum1CurrentGroup:active  {  font-family: verdana; font-weight: bold; font-size: 10px; text-decoration: underline; color: #55a2cc; text-decoration:none;  }
+.NavBarNum1ErrorTxt { font-family:verdana,helvetica,sans-serif; color:#FF0000; }
+</style>
+
+			
+				
+<script type="text/javascript">
+//<!--
+var ns4 = (document.layers);
+var ie  = (document.all);
+var ie4 = (ie && !document.getElementById);
+var ie5 = (ie && document.getElementById);
+var ns6 = (!ie && document.getElementById);
+
+var aryMoused = new Array();
+var aryLayerMoused = new Array();
+var aryMoImages = new Array();
+var imageList = new Array();
+var runMouseOvers = true;
+var TimerID = null;
+var iLimit = 25;
+var itmp = 0;
+
+var nbTime = 100;
+var nbTimes = 2;
+var nbThisLoc = 325;
+var aryLayerNames = new Array();
+var aryNavBarLayerInfo = new Array();
+var aryNavBarLayers = new Array();
+
+var registeredObjects = new Array();
+var viz = "hide";
+
+function MOImage() {
+	var arg = MOImage.arguments;
+	this.ptrImage = BillzNavBarMM_findObj(arg[0]);
+	this.imageMO = new Image();
+	this.imageMO.src = arg[1];
+	this.HTMLname = arg[0];
+	this.Moused = false;
+	this.OriginalSrc = '';
+	return true;
+}
+
+function BillzImagePreload() {
+	// 0) html image name 1) mo image src 2)image Name for rollover key (rollover may have multiple mos for one html Image) 
+	var arg = BillzImagePreload.arguments;
+	nbImagePreload(arg[0], arg[1], arg[2]);
+}
+
+function nbImagePreload(img_name, mo_img_src, rollover_key_img_name) {
+	var imageKey = (rollover_key_img_name.length > 0) ? rollover_key_img_name : img_name;
+	imageList[imageList.length] = imageKey;
+	if (!(aryMoImages[imageKey])) aryMoImages[imageKey] = new MOImage(img_name, mo_img_src);
+}
+
+function BillzMouseover() {
+	var arg = null;
+	if (runMouseOvers) {		
+		arg = BillzMouseover.arguments; //args 0)ImageName 1)OriginalSrc 2)array index (caller imagename)		
+		nbMouseover(arg[0], arg[1], arg[2]);
+	}
+	return true;
+}
+// args 1) ImageName 2) OriginalSrc 3) array index (caller imagename)
+function nbMouseover(img_name, orig_src, img_key) {
+	var imageKey = null;
+	var o = null;
+	if (runMouseOvers) 
+	{				
+		imageKey = (img_key.length > 0) ? img_key : img_name;
+		if (!(aryMoImages[imageKey].ptrImage)) aryMoImages[imageKey].ptrImage = BillzNavBarMM_findObj(img_name);		
+		if (aryMoImages[imageKey] && (o = aryMoImages[imageKey].ptrImage)) {
+			aryMoImages[imageKey].OriginalSrc = orig_src;
+			aryMoImages[imageKey].Moused = true;
+			o.src = aryMoImages[imageKey].imageMO.src;
+		}
+	}
+	return true;
+}
+
+function navbarMouseover(bar,linkId,row){
+	var ListElement = document.getElementById('Link1_' + bar);
+	var ItemElement = document.getElementById('Link2_' + bar + '_' + linkId);
+	var LinkElement = document.getElementById('Link3_' + bar + '_' + linkId);
+	var theClass = ' hover';	
+	if(ListElement){
+		ListElement.className = ListElement.className + theClass;
+	}
+	if(ItemElement){
+		ItemElement.className = ItemElement.className + theClass;
+	}
+	if(LinkElement){
+		LinkElement.className = LinkElement.className + theClass;
+	}
+}
+function navbarMouseout(bar,linkId,row){
+	var ListElement = document.getElementById('Link1_' + bar + '_' + row);
+	var ItemElement = document.getElementById('Link2_' + bar + '_' + linkId);
+	var LinkElement = document.getElementById('Link3_' + bar + '_' + linkId);
+	var theClass = ' hover';	
+	if(ListElement){
+		ListElement.className = ListElement.className.replace(theClass,"");		
+	}
+	if(ItemElement){
+		ItemElement.className = ItemElement.className.replace(theClass,"");
+	}
+	if(LinkElement){
+		LinkElement.className = LinkElement.className.replace(theClass,"");
+	}
+}
+
+var NavBarTempOnload = null;
+if (window.onload && window.onload != null) NavBarTempOnload = window.onload;
+
+function FullyLoaded() {
+	if (NavBarTempOnload != null) NavBarTempOnload();
+	runMouseOvers = true;
+	return true;
+}
+
+function BillzMouseOutTimer() {
+	return nbMouseOutTimer();
+}
+
+function nbMouseOutTimer() {
+	if (TimerID) clearTimeout(TimerID);
+	TimerID = setTimeout("nbLayerRestore()",5000);
+	return true;
+}
+
+function RestoreAll() {
+	nbMouseoverRestore();
+	nbLayerRestore();
+	return true;
+}
+
+function BillzMouseoverRestore() {
+	return nbMouseoverRestore();
+}
+
+function nbMouseoverRestore() {
+	var i = 0;
+	var o = null;
+	if (runMouseOvers) {
+		for (i = 0; i < imageList.length; i++) {
+			if (aryMoImages[imageList[i]].Moused && (o = aryMoImages[imageList[i]].ptrImage)) {
+				o.src = aryMoImages[imageList[i]].OriginalSrc;
+				aryMoImages[imageList[i]].Moused = false;
+			}
+		}
+	}
+	return true;
+}
+
+function BillzLayerRestore() {
+	return nbLayerRestore();
+}
+
+function nbLayerRestore() {
+	var i = 0;
+	for (i = 0; i < aryLayerNames.length; i++) {
+		if (!aryNavBarLayerInfo[aryLayerNames[i]].isDefault) BillzNavBarRestoreLayers(aryLayerNames[i]);	
+	}
+	return true;
+}
+
+function BillzArrayPushUnique(aryArray, varNewElement) { //only pushes if unique value
+	var pushIt = true;
+	var i = 0;
+	for (i = 0; i < aryArray.length && pushIt; i++) {
+		pushIt = (varNewElement != aryArray[i]);
+	}
+	if (pushIt) BillzArrayPush(aryArray, varNewElement);
+	return pushIt;
+}
+
+function BillzArrayPush(aryArray, varNewElement) { //Implement Array Push 'cause IE cant handle it
+	aryArray[aryArray.length] = varNewElement;
+	return true;
+}
+function BillzArrayPop(aryArray) { //Implement Array Pop 'cause IE cant handle it before 5.5
+	var varItemToPop = null;
+	if (aryArray[aryArray.length - 1]) {
+		varItemToPop = aryArray[aryArray.length - 1];
+		aryArray[aryArray.length] = null;
+	}
+	return varItemToPop;
+}
+
+function getDivRef(id) {
+	var divref;
+	if(ns4) divref = document.layers[id];
+	else if(ie4) divref = document.all[id];
+	else if(ie5 || ns6) divref = document.getElementById(id);	
+	return divref;
+}
+
+//v3.0 name changed to avoid clash with possible other JS in content, this function complements of MM Dreamweaver
+function NavBarSwapRollover(swapimage,defaultimage,imageID) {
+	if(imageID.length > 0 && document.getElementById(imageID))
+	{
+		if(swapimage.length > 0) 
+			document.getElementById(imageID).src = "images/" + swapimage;
+		else
+			document.getElementById(imageID).src = "images/" + defaultimage;		
+	}
+}
+function BillzNavBarMM_findObj(n, d) {
+	var p,i,x;
+	if (ns6) x = document.getElementById(n);
+	else {		
+		if (registeredObjects[n]) return registeredObjects[n];
+		if (!(d)) d = document;
+		try {
+			p = n.indexOf("?");
+		}
+		catch(e) {
+			p = 0;
+		}
+		if (p > 0 && parent.frames.length) {
+			d = parent.frames[n.substring(p+1)].document;
+			n = n.substring(0,p);
+		}
+		if (!(x = d[n]) && d.all) x = d.all[n];	
+		for (i = 0; !x && i < d.forms.length; i++) {
+			x = d.forms[i][n];
+		}
+		for (i=0; !x && d.layers && i < d.layers.length; i++) {
+			if (d.layers[i].id.indexOf("external_") == -1) x = BillzNavBarMM_findObj(n, d.layers[i].document);	
+		}
+		registeredObjects[n] = x;
+	}				
+	return x;
+}
+
+function BillzArrayContains() {
+	var arg = BillzArrayContains.arguments;
+	var foundit = false;
+	var i = 0;
+	for (i = 0; i < arg[0].length && !foundit; i++) {
+		foundit = (arg[1] == arg[0][i]);
+	}
+	return foundit;
+}
+
+function NavBarRegisterLayer() {
+	var arg = NavBarRegisterLayer.arguments;
+	var n = arg[0];
+	var d = arg[1];
+	var mo = false;
+	var o = null;
+	if (arg[2] && arg[2] == 'MOutLayer') mo = true;
+	else mo = false;
+	
+	if (!(BillzArrayContains(aryLayerNames, n))) {
+		if (o = BillzNavBarMM_findObj(n)) {
+			aryNavBarLayers[n] = o;
+			BillzArrayPushUnique(aryLayerNames, n);
+			aryNavBarLayerInfo[n] = new NavBarLayer(n, d, mo);
+		}
+	}
+	return true;
+}
+
+function BillzNavBarMM_showHideLayers() {
+	//v3.0 name changed, this function complements of MM Dreamweaver with customizations by Bill Heller
+	var i = 0;
+	var x = "";
+	var obj = null;
+	var v = null;
+	var p = null;
+	var args = BillzNavBarMM_showHideLayers.arguments;
+	
+	if (args[args.length - 1] != "menu") nbMouseOutTimer();
+	for (i = 0; i < (args.length - 2); i += 3) {
+		if (!aryNavBarLayers[args[i]]) {
+			x = (args[i + 2] == 'show') ? 'hide' : 'show';
+			NavBarRegisterLayer(args[i], x);
+		}
+		if ((obj = aryNavBarLayers[args[i]]) != null) {
+			v = args[i + 2];
+			aryNavBarLayerInfo[args[i]].isDefault = false;
+			if (args[args.length - 1] == "restore") v = (v == 'show') ? 'hide' : 'show';
+			
+			if (obj.style) obj.style.visibility = (v == 'show') ? 'visible' : ((v == 'hide') ? 'hidden' : v);
+			else obj.visibility = v;
+		}
+	}
+	return true;
+}
+
+function BillzNavBarRestoreLayers() {
+	var i = 0;
+	var x = "";
+	var obj = null;
+	var v = null;
+	var p = null;
+	var args = BillzNavBarRestoreLayers.arguments;
+	for (i = 0; i < (args.length); i++) {
+		if (obj = aryNavBarLayers[args[i]]) {
+			v = aryNavBarLayerInfo[args[i]].defaultVisibility;
+			if (obj.style) {
+				obj = obj.style;
+				v = (v == 'show' ) ? 'visible' : ((v == 'hide') ? 'hidden' : v);
+			}
+			obj.visibility = v;
+			if (!aryNavBarLayerInfo[args[i]].MOutLayer) aryNavBarLayerInfo[args[i]].isDefault = true;			
+		}
+	}
+	return true;
+}
+
+function NavBarLayer() {
+	var arg = NavBarLayer.arguments;
+	this.defaultVisibility = arg[1];
+	this.isDefault = true;
+	this.MOutLayer = arg[2];
+	return true;
+}
+
+function BillzNavMove() {
+	return nbNavMove();
+}
+
+function nbNavMove() {
+	var thisl = null;
+	var otherl = null;
+	if (thisl = BillzNavBarMM_findObj("nbScrollLayer")) {
+		if (thisl.style) {
+			thisl = thisl.style;
+			viz = "hidden";
+		} 
+		thisl.top = nbThisLoc -= 3;
+		if (nbThisLoc < -750) {
+			nbThisLoc = 325;
+			nbTimes--;
+		}
+	}
+	if (nbTimes <= 0) {
+		otherl = BillzNavBarMM_findObj("BillzLayer");
+		otherl.visibility = viz;
+	} else {
+		setTimeout("nbNavMove()", nbTime);
+	}	
+	return true;
+}
+
+function NavBar_openadmin() {
+	window.open('admin/','SiteAdmin','height=screen.availheight,width=screen.availwidth,scrollbars=1,toolbar=0,directories=0,status=0,menubar=0,resizable=1');
+	return true;
+}
+
+window.onload = FullyLoaded;
+//-->
+</script>
+						
+<script type="text/javascript">
+//<!--
+function NavBar_setCookie(cookievalue,navVersion,linkID) 
+{	
+	var cookiename = "SLIDINGTABLE_NAVBAR" + navVersion;
+	var cookieVersionname = "SLIDINGTBL_NAVBAR_VERSION";
+	var cookieClear = "SLIDINGTBL_NAVBAR_CLEARCOOKIES";	
+	document.cookie = cookieClear.toUpperCase() + "=false";
+	if(cookievalue.length > 0)
+		document.cookie = cookiename.toUpperCase() + "=" + escape(cookievalue);
+	if(navVersion.length > 0)	
+		document.cookie = cookieVersionname.toUpperCase() + "=" + navVersion;	
+	if(linkID.length > 0)
+		NavBar_setPLinkIDCookie(linkID,navVersion);		
+}
+function NavBar_setoLevelIDCookie(cookievalue,linkID,navVersion) 
+{
+	var name = "SLIDINGTBL_NAVBAR_OLEVELID";		
+	if(cookievalue.length > 0)
+		document.cookie = name.toUpperCase() + "=" + escape(cookievalue);	
+	if(linkID.length > 0)
+		NavBar_setPLinkIDCookie(linkID,navVersion);	
+	if(navVersion.length > 0)	
+		document.cookie = "SLIDINGTBL_NAVBAR_VERSION=" + navVersion;		
+}
+function NavBar_setPLinkIDCookie(linkID,navVersion)
+{	
+	document.cookie = "SLIDINGTBL_NAVBAR_PLINKID=" + linkID;	
+	if(navVersion.length > 0)	
+		document.cookie = "SLIDINGTBL_NAVBAR_VERSION=" + navVersion;
+}
+function NavBar_deleteCookie() 
+{
+	// first we'll split this cookie up into name/value pairs
+	// note: document.cookie only returns name=value, not the other components
+	var check_name = "SLIDINGTABLE_NAVBAR";	
+	var a_all_cookies = document.cookie.split( ';' );
+	var a_temp_cookie = '';
+	var cookie_name = '';
+	var cookie_value = '';
+	var b_cookie_found = false; // set boolean t/f default f	
+
+	document.cookie = "SLIDINGTBL_NAVBAR_VERSION=0";	
+	document.cookie = "SLIDINGTBL_NAVBAR_OLEVELID=";	
+	for (i = 0; i < a_all_cookies.length; i++)
+	{		
+		a_temp_cookie = a_all_cookies[i].split( '=' );			
+		cookie_name = a_temp_cookie[0].replace(/^\s+|\s+$/g, '');
+		
+		//expire all cookies for every slidingTable_navbar intances.			
+		if (cookie_name.toUpperCase().indexOf(check_name) == 0)		
+			document.cookie = cookie_name.toUpperCase() + "=";			 	
+	}	
+}
+		
+//-->
+</script>
+			
+		
+	<style type="text/css">		
+		td.search 
+		{
+			background-color: FFFFFF;
+		background-image: URL(images/clear.gif);
+		font-family: verdana,arial;
+		font-weight: 700;
+		color: 000000;
+
+		}	
+		table.search
+		{
+			padding: 0px;
+		border-width: 0px;
+
+		}
+		input.search
+	{		color: ffffff;
+		font-weight: 700;
+		font-size: 7pt;
+		background-color: E3E3E3;
+		height: 22px;
+		width: 25px;
+	}		
+	</style>
+		
+	
+<script src="dynamicfiles/smt_hotlink2126_default99D2B839A8AC94B5045FF719CA9ACB88.JS" type="text/javascript"></script>
+<link rel="stylesheet" type="text/css" href="dynamicfiles/smt_hotlink2126_default14BDD62EAD7954C6E20B1E1EF51F6F8C.CSS" />
+				
+<!-- Begin NavBar CSS Output... -->
+<style type="text/css">
+all.NavBarNum2 {  font-family: arial; font-weight: normal; font-size: 11px; text-decoration: none; color: #185486; text-decoration:none;  }
+all.NavBarNum2CurrentGroupTD {  font-family: arial; font-weight: normal; font-size: 11px; text-decoration: underline; color: #55a2cc; text-decoration:none; }		
+all.NavBarNum2CurrentGroup {  font-family: arial; font-weight: normal; font-size: 11px; text-decoration: underline; color: #55a2cc; text-decoration:none;  }
+all.NavBarNum2CurrentGrouphover {  font-family: arial; font-weight: normal; font-size: 11px; text-decoration: underline; color: #55a2cc; text-decoration:none;  }
+all.NavBarNum2Hover {  font-family: arial; font-weight: normal; font-size: 11px; text-decoration: underline; color: #55a2cc; text-decoration:none;  }
+.NavBarNum2 {  font-family: arial; font-weight: normal; font-size: 11px; text-decoration: none; color: #185486; text-decoration:none;  }				
+.NavBarNum2CurrentGroupTD {  font-family: arial; font-weight: normal; font-size: 11px; text-decoration: underline; color: #55a2cc; text-decoration:none; }				
+.NavBarNum2CurrentGroup {  font-family: arial; font-weight: normal; font-size: 11px; text-decoration: underline; color: #55a2cc; text-decoration:none; }				
+.NavBarNum2Layer {  font-family: arial; font-weight: normal; font-size: 11px; text-decoration: none; color: 000000;   }
+.NavBarNum2SubMenu {  font-family: arial; font-weight: normal; font-size: 11px; text-decoration: none; color: #185486; text-decoration:none;  }
+.NavBarNum2SubMenu:hover {  font-family: arial; font-weight: normal; font-size: 11px; text-decoration: underline; color: #55a2cc; text-decoration:none;  }	
+.NavBarNum2CurrentGrouphover {  font-family: arial; font-weight: normal; font-size: 11px; text-decoration: underline; color: #55a2cc; text-decoration:none;  }
+		
+A.NavBarNum2:link	{  font-family: arial; font-weight: normal; font-size: 11px; text-decoration: none; color: #185486; text-decoration:none;  }
+A.NavBarNum2:visited {  font-family: arial; font-weight: normal; font-size: 11px; text-decoration: none; color: #185486; text-decoration:none;  }
+A.NavBarNum2:hover  {  font-family: arial; font-weight: normal; font-size: 11px; text-decoration: underline; color: #55a2cc; text-decoration:none;  }
+A.NavBarNum2:active  {  font-family: arial; font-weight: normal; font-size: 11px; text-decoration: none; color: #185486; text-decoration:none;  }
+A.NavBarNum2CurrentGroup:link	{  font-family: arial; font-weight: normal; font-size: 11px; text-decoration: underline; color: #55a2cc; text-decoration:none;  }
+A.NavBarNum2CurrentGroup:visited {  font-family: arial; font-weight: normal; font-size: 11px; text-decoration: underline; color: #55a2cc; text-decoration:none;  }
+A.NavBarNum2CurrentGroup:hover  {  font-family: arial; font-weight: normal; font-size: 11px; text-decoration: underline; color: #55a2cc; text-decoration:none;  }
+A.NavBarNum2CurrentGroup:active  {  font-family: arial; font-weight: normal; font-size: 11px; text-decoration: underline; color: #55a2cc; text-decoration:none;  }
+.NavBarNum2ErrorTxt { font-family:verdana,helvetica,sans-serif; color:#FF0000; }
+</style>
+
+			
+				
+<script type="text/javascript">
+//<!--
+				
+nbImagePreload('Nav_Bullet_2_1','images/arrow_blue_on.gif', '');
+nbImagePreload('Nav_Bullet_2_2','images/arrow_blue_on.gif', '');
+nbImagePreload('Nav_Bullet_2_3','images/arrow_blue_on.gif', '');
+nbImagePreload('Nav_Bullet_2_4','images/arrow_blue_on.gif', '');
+nbImagePreload('Nav_Bullet_2_5','images/arrow_blue_on.gif', '');
+nbImagePreload('Nav_Bullet_2_6','images/arrow_blue_on.gif', '');
+nbImagePreload('Nav_Bullet_2_7','images/arrow_blue_on.gif', '');
+
+//-->
+</script>
+<script type="text/javascript">
+//<!--
+function NavBar_setCookie(cookievalue,navVersion,linkID) 
+{	
+	var cookiename = "SLIDINGTABLE_NAVBAR" + navVersion;
+	var cookieVersionname = "SLIDINGTBL_NAVBAR_VERSION";
+	var cookieClear = "SLIDINGTBL_NAVBAR_CLEARCOOKIES";	
+	document.cookie = cookieClear.toUpperCase() + "=false";
+	if(cookievalue.length > 0)
+		document.cookie = cookiename.toUpperCase() + "=" + escape(cookievalue);
+	if(navVersion.length > 0)	
+		document.cookie = cookieVersionname.toUpperCase() + "=" + navVersion;	
+	if(linkID.length > 0)
+		NavBar_setPLinkIDCookie(linkID,navVersion);		
+}
+function NavBar_setoLevelIDCookie(cookievalue,linkID,navVersion) 
+{
+	var name = "SLIDINGTBL_NAVBAR_OLEVELID";		
+	if(cookievalue.length > 0)
+		document.cookie = name.toUpperCase() + "=" + escape(cookievalue);	
+	if(linkID.length > 0)
+		NavBar_setPLinkIDCookie(linkID,navVersion);	
+	if(navVersion.length > 0)	
+		document.cookie = "SLIDINGTBL_NAVBAR_VERSION=" + navVersion;		
+}
+function NavBar_setPLinkIDCookie(linkID,navVersion)
+{	
+	document.cookie = "SLIDINGTBL_NAVBAR_PLINKID=" + linkID;	
+	if(navVersion.length > 0)	
+		document.cookie = "SLIDINGTBL_NAVBAR_VERSION=" + navVersion;
+}
+function NavBar_deleteCookie() 
+{
+	// first we'll split this cookie up into name/value pairs
+	// note: document.cookie only returns name=value, not the other components
+	var check_name = "SLIDINGTABLE_NAVBAR";	
+	var a_all_cookies = document.cookie.split( ';' );
+	var a_temp_cookie = '';
+	var cookie_name = '';
+	var cookie_value = '';
+	var b_cookie_found = false; // set boolean t/f default f	
+
+	document.cookie = "SLIDINGTBL_NAVBAR_VERSION=0";	
+	document.cookie = "SLIDINGTBL_NAVBAR_OLEVELID=";	
+	for (i = 0; i < a_all_cookies.length; i++)
+	{		
+		a_temp_cookie = a_all_cookies[i].split( '=' );			
+		cookie_name = a_temp_cookie[0].replace(/^\s+|\s+$/g, '');
+		
+		//expire all cookies for every slidingTable_navbar intances.			
+		if (cookie_name.toUpperCase().indexOf(check_name) == 0)		
+			document.cookie = cookie_name.toUpperCase() + "=";			 	
+	}	
+}
+		
+//-->
+</script>
+			
+				
+<!-- Begin NavBar CSS Output... -->
+<style type="text/css">
+all.NavBarNum3 {  font-family: arial; font-weight: normal; font-size: 11px; text-decoration: none; color: #185486; text-decoration:none;  }
+all.NavBarNum3CurrentGroupTD {  font-family: arial; font-weight: normal; font-size: 11px; text-decoration: underline; color: #55a2cc; text-decoration:none; }		
+all.NavBarNum3CurrentGroup {  font-family: arial; font-weight: normal; font-size: 11px; text-decoration: underline; color: #55a2cc; text-decoration:none;  }
+all.NavBarNum3CurrentGrouphover {  font-family: arial; font-weight: normal; font-size: 11px; text-decoration: underline; color: #55a2cc; text-decoration:none;  }
+all.NavBarNum3Hover {  font-family: arial; font-weight: normal; font-size: 11px; text-decoration: underline; color: #55a2cc; text-decoration:none;  }
+.NavBarNum3 {  font-family: arial; font-weight: normal; font-size: 11px; text-decoration: none; color: #185486; text-decoration:none;  }				
+.NavBarNum3CurrentGroupTD {  font-family: arial; font-weight: normal; font-size: 11px; text-decoration: underline; color: #55a2cc; text-decoration:none; }				
+.NavBarNum3CurrentGroup {  font-family: arial; font-weight: normal; font-size: 11px; text-decoration: underline; color: #55a2cc; text-decoration:none; }				
+.NavBarNum3Layer {  font-family: arial; font-weight: normal; font-size: 11px; text-decoration: none; color: 000000;   }
+.NavBarNum3SubMenu {  font-family: arial; font-weight: normal; font-size: 11px; text-decoration: none; color: #185486; text-decoration:none;  }
+.NavBarNum3SubMenu:hover {  font-family: arial; font-weight: normal; font-size: 11px; text-decoration: underline; color: #55a2cc; text-decoration:none;  }	
+.NavBarNum3CurrentGrouphover {  font-family: arial; font-weight: normal; font-size: 11px; text-decoration: underline; color: #55a2cc; text-decoration:none;  }
+		
+A.NavBarNum3:link	{  font-family: arial; font-weight: normal; font-size: 11px; text-decoration: none; color: #185486; text-decoration:none;  }
+A.NavBarNum3:visited {  font-family: arial; font-weight: normal; font-size: 11px; text-decoration: none; color: #185486; text-decoration:none;  }
+A.NavBarNum3:hover  {  font-family: arial; font-weight: normal; font-size: 11px; text-decoration: underline; color: #55a2cc; text-decoration:none;  }
+A.NavBarNum3:active  {  font-family: arial; font-weight: normal; font-size: 11px; text-decoration: none; color: #185486; text-decoration:none;  }
+A.NavBarNum3CurrentGroup:link	{  font-family: arial; font-weight: normal; font-size: 11px; text-decoration: underline; color: #55a2cc; text-decoration:none;  }
+A.NavBarNum3CurrentGroup:visited {  font-family: arial; font-weight: normal; font-size: 11px; text-decoration: underline; color: #55a2cc; text-decoration:none;  }
+A.NavBarNum3CurrentGroup:hover  {  font-family: arial; font-weight: normal; font-size: 11px; text-decoration: underline; color: #55a2cc; text-decoration:none;  }
+A.NavBarNum3CurrentGroup:active  {  font-family: arial; font-weight: normal; font-size: 11px; text-decoration: underline; color: #55a2cc; text-decoration:none;  }
+.NavBarNum3ErrorTxt { font-family:verdana,helvetica,sans-serif; color:#FF0000; }
+</style>
+
+			
+				
+<script type="text/javascript">
+//<!--
+				
+nbImagePreload('Nav_Bullet_3_1','images/arrow_blue_on.gif', '');
+nbImagePreload('Nav_Bullet_3_2','images/arrow_blue_on.gif', '');
+nbImagePreload('Nav_Bullet_3_3','images/arrow_blue_on.gif', '');
+nbImagePreload('Nav_Bullet_3_4','images/arrow_blue_on.gif', '');
+nbImagePreload('Nav_Bullet_3_5','images/arrow_blue_on.gif', '');
+
+//-->
+</script>
+<script type="text/javascript">
+//<!--
+function NavBar_setCookie(cookievalue,navVersion,linkID) 
+{	
+	var cookiename = "SLIDINGTABLE_NAVBAR" + navVersion;
+	var cookieVersionname = "SLIDINGTBL_NAVBAR_VERSION";
+	var cookieClear = "SLIDINGTBL_NAVBAR_CLEARCOOKIES";	
+	document.cookie = cookieClear.toUpperCase() + "=false";
+	if(cookievalue.length > 0)
+		document.cookie = cookiename.toUpperCase() + "=" + escape(cookievalue);
+	if(navVersion.length > 0)	
+		document.cookie = cookieVersionname.toUpperCase() + "=" + navVersion;	
+	if(linkID.length > 0)
+		NavBar_setPLinkIDCookie(linkID,navVersion);		
+}
+function NavBar_setoLevelIDCookie(cookievalue,linkID,navVersion) 
+{
+	var name = "SLIDINGTBL_NAVBAR_OLEVELID";		
+	if(cookievalue.length > 0)
+		document.cookie = name.toUpperCase() + "=" + escape(cookievalue);	
+	if(linkID.length > 0)
+		NavBar_setPLinkIDCookie(linkID,navVersion);	
+	if(navVersion.length > 0)	
+		document.cookie = "SLIDINGTBL_NAVBAR_VERSION=" + navVersion;		
+}
+function NavBar_setPLinkIDCookie(linkID,navVersion)
+{	
+	document.cookie = "SLIDINGTBL_NAVBAR_PLINKID=" + linkID;	
+	if(navVersion.length > 0)	
+		document.cookie = "SLIDINGTBL_NAVBAR_VERSION=" + navVersion;
+}
+function NavBar_deleteCookie() 
+{
+	// first we'll split this cookie up into name/value pairs
+	// note: document.cookie only returns name=value, not the other components
+	var check_name = "SLIDINGTABLE_NAVBAR";	
+	var a_all_cookies = document.cookie.split( ';' );
+	var a_temp_cookie = '';
+	var cookie_name = '';
+	var cookie_value = '';
+	var b_cookie_found = false; // set boolean t/f default f	
+
+	document.cookie = "SLIDINGTBL_NAVBAR_VERSION=0";	
+	document.cookie = "SLIDINGTBL_NAVBAR_OLEVELID=";	
+	for (i = 0; i < a_all_cookies.length; i++)
+	{		
+		a_temp_cookie = a_all_cookies[i].split( '=' );			
+		cookie_name = a_temp_cookie[0].replace(/^\s+|\s+$/g, '');
+		
+		//expire all cookies for every slidingTable_navbar intances.			
+		if (cookie_name.toUpperCase().indexOf(check_name) == 0)		
+			document.cookie = cookie_name.toUpperCase() + "=";			 	
+	}	
+}
+		
+//-->
+</script>
+			
+				
+<!-- Begin NavBar CSS Output... -->
+<style type="text/css">
+all.NavBarNum4 {  font-family: verdana; font-weight: bold; font-size: 10px; text-decoration: none; color: #FFFFFF; text-decoration:none;  }
+all.NavBarNum4CurrentGroupTD {  font-family: verdana; font-weight: bold; font-size: 10px; text-decoration: underline; color: #55a2cc; text-decoration:none; }		
+all.NavBarNum4CurrentGroup {  font-family: verdana; font-weight: bold; font-size: 10px; text-decoration: underline; color: #55a2cc; text-decoration:none;  }
+all.NavBarNum4CurrentGrouphover {  font-family: verdana; font-weight: bold; font-size: 10px; text-decoration: underline; color: #55a2cc; text-decoration:none;  }
+all.NavBarNum4Hover {  font-family: verdana; font-weight: bold; font-size: 10px; text-decoration: underline; color: #55a2cc; text-decoration:none;  }
+.NavBarNum4 {  font-family: verdana; font-weight: bold; font-size: 10px; text-decoration: none; color: #FFFFFF; text-decoration:none;  }				
+.NavBarNum4CurrentGroupTD {  font-family: verdana; font-weight: bold; font-size: 10px; text-decoration: underline; color: #55a2cc; text-decoration:none; }				
+.NavBarNum4CurrentGroup {  font-family: verdana; font-weight: bold; font-size: 10px; text-decoration: underline; color: #55a2cc; text-decoration:none; }				
+.NavBarNum4Layer {  font-family: verdana; font-weight: bold; font-size: 10px; text-decoration: none; color: 000000;   }
+.NavBarNum4SubMenu {  font-family: verdana; font-weight: bold; font-size: 10px; text-decoration: none; color: #FFFFFF; text-decoration:none;  }
+.NavBarNum4SubMenu:hover {  font-family: verdana; font-weight: bold; font-size: 10px; text-decoration: underline; color: #55a2cc; text-decoration:none;  }	
+.NavBarNum4CurrentGrouphover {  font-family: verdana; font-weight: bold; font-size: 10px; text-decoration: underline; color: #55a2cc; text-decoration:none;  }
+		
+A.NavBarNum4:link	{  font-family: verdana; font-weight: bold; font-size: 10px; text-decoration: none; color: #FFFFFF; text-decoration:none;  }
+A.NavBarNum4:visited {  font-family: verdana; font-weight: bold; font-size: 10px; text-decoration: none; color: #FFFFFF; text-decoration:none;  }
+A.NavBarNum4:hover  {  font-family: verdana; font-weight: bold; font-size: 10px; text-decoration: underline; color: #55a2cc; text-decoration:none;  }
+A.NavBarNum4:active  {  font-family: verdana; font-weight: bold; font-size: 10px; text-decoration: none; color: #FFFFFF; text-decoration:none;  }
+A.NavBarNum4CurrentGroup:link	{  font-family: verdana; font-weight: bold; font-size: 10px; text-decoration: underline; color: #55a2cc; text-decoration:none;  }
+A.NavBarNum4CurrentGroup:visited {  font-family: verdana; font-weight: bold; font-size: 10px; text-decoration: underline; color: #55a2cc; text-decoration:none;  }
+A.NavBarNum4CurrentGroup:hover  {  font-family: verdana; font-weight: bold; font-size: 10px; text-decoration: underline; color: #55a2cc; text-decoration:none;  }
+A.NavBarNum4CurrentGroup:active  {  font-family: verdana; font-weight: bold; font-size: 10px; text-decoration: underline; color: #55a2cc; text-decoration:none;  }
+.NavBarNum4ErrorTxt { font-family:verdana,helvetica,sans-serif; color:#FF0000; }
+</style>
+
+			
+				
+<script type="text/javascript">
+//<!--
+function NavBar_setCookie(cookievalue,navVersion,linkID) 
+{	
+	var cookiename = "SLIDINGTABLE_NAVBAR" + navVersion;
+	var cookieVersionname = "SLIDINGTBL_NAVBAR_VERSION";
+	var cookieClear = "SLIDINGTBL_NAVBAR_CLEARCOOKIES";	
+	document.cookie = cookieClear.toUpperCase() + "=false";
+	if(cookievalue.length > 0)
+		document.cookie = cookiename.toUpperCase() + "=" + escape(cookievalue);
+	if(navVersion.length > 0)	
+		document.cookie = cookieVersionname.toUpperCase() + "=" + navVersion;	
+	if(linkID.length > 0)
+		NavBar_setPLinkIDCookie(linkID,navVersion);		
+}
+function NavBar_setoLevelIDCookie(cookievalue,linkID,navVersion) 
+{
+	var name = "SLIDINGTBL_NAVBAR_OLEVELID";		
+	if(cookievalue.length > 0)
+		document.cookie = name.toUpperCase() + "=" + escape(cookievalue);	
+	if(linkID.length > 0)
+		NavBar_setPLinkIDCookie(linkID,navVersion);	
+	if(navVersion.length > 0)	
+		document.cookie = "SLIDINGTBL_NAVBAR_VERSION=" + navVersion;		
+}
+function NavBar_setPLinkIDCookie(linkID,navVersion)
+{	
+	document.cookie = "SLIDINGTBL_NAVBAR_PLINKID=" + linkID;	
+	if(navVersion.length > 0)	
+		document.cookie = "SLIDINGTBL_NAVBAR_VERSION=" + navVersion;
+}
+function NavBar_deleteCookie() 
+{
+	// first we'll split this cookie up into name/value pairs
+	// note: document.cookie only returns name=value, not the other components
+	var check_name = "SLIDINGTABLE_NAVBAR";	
+	var a_all_cookies = document.cookie.split( ';' );
+	var a_temp_cookie = '';
+	var cookie_name = '';
+	var cookie_value = '';
+	var b_cookie_found = false; // set boolean t/f default f	
+
+	document.cookie = "SLIDINGTBL_NAVBAR_VERSION=0";	
+	document.cookie = "SLIDINGTBL_NAVBAR_OLEVELID=";	
+	for (i = 0; i < a_all_cookies.length; i++)
+	{		
+		a_temp_cookie = a_all_cookies[i].split( '=' );			
+		cookie_name = a_temp_cookie[0].replace(/^\s+|\s+$/g, '');
+		
+		//expire all cookies for every slidingTable_navbar intances.			
+		if (cookie_name.toUpperCase().indexOf(check_name) == 0)		
+			document.cookie = cookie_name.toUpperCase() + "=";			 	
+	}	
+}
+		
+//-->
+</script>
+			</head>
+	<body text="#000000" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0" style="scrollbar-face-color: #215e92; scrollbar-arrow-color: #FFFFFF; background-image:url(images/bkgrd_tile.jpg); background-repeat: repeat-x; background-position: top left; background-color: #002B4F;">
+	
+	<table width="1%" border="0" align="center" cellpadding="0" cellspacing="0">
+	  <tr>
+	    <td width="1%" align="left" valign="top"><img src="images/top_left.jpg"></td>
+	    <td width="99%" align="left" valign="top" background="images/top_middle.jpg"><img src="images/top_middle.jpg" width="745" height="26"></td>
+	    <td width="1%" align="left" valign="top"><img src="images/top_right.jpg"></td>
+	  </tr>
+	  <tr>
+	    <td align="left" valign="top"><img src="images/header_left.jpg" width="28" height="106"></td>
+	    <td align="left" valign="top" bgcolor="#FFFFFF"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+	      <tr>
+	        <td align="right" valign="top" style="background-image:url(images/header_top.gif); background-repeat:no-repeat; background-position: top left; height:24px;padding-right:12px;padding-top:4px;">
+			
+<!-- Begin NavBar Bar #1 Content Output... -->
+
+			<table  border="0" cellspacing="0" cellpadding="0" onclick="NavBar_deleteCookie();">
+	<tr class="NavBarNum1">
+		<td class="NavBarNum1" valign="middle" align="right" title=""><a href="notitle.cfm?id=2064"  onClick="NavBar_setPLinkIDCookie('2064','');" class="NavBarNum1">Team Heartland Login</a></td>
+		<td class="NavBarNum1" valign="middle" align="right" title="">&nbsp;|&nbsp;</td>
+		<td class="NavBarNum1" valign="middle" align="right" title=""><a href="https://heartland.iqhealth.com/iqh3/context/hart_mo/"  target="_blank" onClick="NavBar_setPLinkIDCookie('3096','');" class="NavBarNum1">IQHealth Login</a></td>
+		<td class="NavBarNum1" valign="middle" align="right" title="">&nbsp;|&nbsp;</td>
+		<td class="NavBarNum1" valign="middle" align="right" title=""><a href="body.cfm?id=471"  onClick="NavBar_setPLinkIDCookie('471','');" class="NavBarNum1">Find a Provider</a></td>
+		<td class="NavBarNum1" valign="middle" align="right" title="">&nbsp;|&nbsp;</td>
+		<td class="NavBarNum1" valign="middle" align="right" title=""><a href="body.cfm?id=106"  onClick="NavBar_setPLinkIDCookie('106','');" class="NavBarNum1">Find a Career</a></td>
+		<td class="NavBarNum1" valign="middle" align="right" title="">&nbsp;|&nbsp;</td>
+		<td class="NavBarNum1" valign="middle" align="right" title=""><a href="body.cfm?id=20"  onClick="NavBar_setPLinkIDCookie('20','');" class="NavBarNum1">Maps &amp; Directions</a></td>
+	</tr>
+</table>		
+				
+			
+<!-- End NavBar Output -->
+		</td>
+	      </tr>
+	      <tr>
+	        <td align="right" valign="bottom" style="background-image:url(images/header_middle.gif); background-repeat:no-repeat; background-position: top left; height:70px;padding-right:12px;"><table border="0" cellpadding="0" cellspacing="0">
+	          <tr>
+	            <td valign="bottom" align="right">
+
+
+
+
+
+
+
+	
+
+
+
+
+
+
+
+	
+
+
+
+
+
+	
+
+
+
+
+
+
+	
+
+
+
+	
+
+
+
+
+
+
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+		
+	
+	
+		
+	
+	
+		
+	
+	
+		
+	
+	
+		
+	
+	
+	
+	
+		
+		
+			
+		
+		
+			
+		
+		
+			
+		
+		
+			
+		
+		
+			
+		
+		
+			
+		
+		
+	
+	
+	
+	
+		
+	
+	
+		
+	
+	
+	
+		
+
+	
+	
+	
+		
+			
+			
+	
+
+
+	
+
+	
+	
+	
+	
+	
+	
+
+
+
+
+
+		
+ 			
+	
+		
+			<form action="body.cfm?id=7" method="POST" id="frmSiteSearchTeaser" name="frmSiteSearchTeaser" onSubmit="return checkform(this,'keywords',true);" style="padding-bottom:0px;padding-top:0px;margin-top:0px;margin-bottom:0px;">		
+			<input type="hidden" name="action" value="list">	
+			<input type="hidden" name="search_areas_id" value="">	
+			<input type="hidden" name="includewhat" value="">		
+			<input type="hidden" name="limit_pagetemplate" value="">
+			
+			<table cellspacing="0" align="left" class="search">		
+				<tr class="search">							
+					
+						<td class="search">&nbsp;&nbsp;</td>
+									
+					<td class="search"><input type="text" name="keywords" style="width:125px"></td>					
+					
+						<td class="search"><input type="submit" value="go!" class="search"></td>
+					
+				</tr>		
+			</table>
+			</form>
+		
+	
+
+
+ 
+</td>
+	            <td valign="bottom" align="right"><img src="images/clear.gif" width="8" border="0" alt="Search"><a href="body.cfm?id=1151"><img src="images/advanced_search.gif" border="0" alt="Advanced Search"></a></td>
+	          </tr>
+	        </table></td>
+	      </tr>
+	      <tr>
+	        <td align="left" valign="top" style="background-image:url(images/header_bottom.gif); background-repeat:no-repeat; background-position: top left; height:12px; line-height:12px;">&nbsp;</td>
+	      </tr>
+	    </table></td>
+	    <td align="left" valign="top"><img src="images/header_right.jpg" width="27" height="106"></td>
+	  </tr>
+	  <tr>
+	    <td align="left" valign="top" style="background-image:url(images/left_tile.gif); background-repeat: repeat-y; background-position: top right;"><img src="images/leftside.jpg" width="28" height="462"></td>
+	    <td align="left" valign="top" bgcolor="#FFFFFF"><table width="100%" border="0" cellpadding="0" cellspacing="0">
+	      <tr>
+		  	<td width="1%" align="left" valign="top" style="background-color:#C4F298;">
+				<table width="100%" border="0" cellpadding="0" cellspacing="0" bgcolor="008b5a">
+					<tr>
+						<td valign="top" width="156" style="padding: 3px 0px 0px 0px;"><img src="images/left_nav_green.gif" alt="Navigation"><br>
+
+
+
+	
+	
+			
+		
+		
+				
+	
+			
+		
+	
+	
+	
+					
+			
+			
+	<style type="text/css">
+		
+			
+			
+	table.mainCont1 
+	{
+		padding:0px;
+	}	
+			
+			
+			
+	th.clTop1 
+	{
+		vertical-align:top;
+		 width: 1%;	
+	}	
+			
+			
+	td.clTop1 
+	{
+		text-align:left;
+		 padding:0px;
+	}
+			
+			
+	table.clSub1 
+	{
+		width:120px;
+		 padding:0px;
+	}
+			
+			
+			
+	th.clSub1 
+	{
+		text-align:left;
+		width:1%;
+	}
+			
+			
+	td.clSub1 
+	{
+		text-align:left;
+		 padding:0px;
+	}
+					
+			
+	table.glSub1 
+	{
+		width:80%;
+		padding:2px;
+	}
+			
+			
+			
+			
+	td.glSub1 
+	{
+		text-align:left;
+		 padding:0px;
+	}
+					
+			
+			
+	td.pclTop1 
+	{
+		text-align:right;	
+	}
+			
+			
+			
+	td.cglTop1 
+	{
+		text-align:right;	
+	}
+			
+			
+	A.clMain1:link 
+	{
+		font-family:verdana;
+		 font-size:11px;
+		 text-decoration:none;
+		 font-weight:bold;
+		 color:#FFFFFF;
+		 text-align:left;
+	}
+			
+			
+	A.clMain1:visited 
+	{
+		font-family:verdana;
+		 font-size:11px;
+		 text-decoration:none;
+		 font-weight:bold;
+		 color:#FFFFFF;
+		 text-align:left;
+	}
+			
+			
+	A.clMain1:hover 
+	{
+		background-color:transparent;
+		 font-family:verdana;
+		 text-decoration:none;
+		 font-size:11px;
+		 font-weight:bold;
+		 color:#c4f298;
+		 text-align:left;
+	}
+			
+			
+	A.clMain1:active 
+	{
+		font-family:verdana;
+		 font-size:11px;
+		 text-decoration:none;
+		 font-weight:bold;
+		 color:#FFFFFF;
+		 text-align:left;	
+	}
+			
+			
+	A.clSubb1:link 
+	{
+		font-family:verdana;
+		 font-size:10px;
+		 text-decoration:none;
+		 font-weight:bold;
+		 color:#FFFFFF;
+		 text-align:left;
+	}
+			
+			
+	A.clSubb1:visited 
+	{
+		font-family:verdana;
+		 font-size:10px;
+		 text-decoration:none;
+		 font-weight:bold;
+		 color:#FFFFFF;
+		 text-align:left;	
+	}
+			
+			
+	A.clSubb1:hover 
+	{
+		font-family:verdana;
+		 font-size:10px;
+		 font-weight:bold;
+		 text-decoration:none;
+		 color:#c4f298;
+		 text-align:left;	
+	}
+			
+			
+	A.clSubb1:active 
+	{
+		font-family:verdana;
+		 font-size:10px;
+		 text-decoration:none;
+		 font-weight:bold;
+		 color:#FFFFFF;
+		 text-align:left;	
+	}
+					
+			
+	A.glSubb1:link 
+	{
+		font-family:verdana;
+		 font-size:10px;
+		 text-decoration:none;
+		 font-weight:bold;
+		 color:#FFFFFF;
+		 text-align:left;
+	}
+			
+			
+	A.glSubb1:visited 
+	{
+		font-family:verdana;
+		 font-size:10px;
+		 text-decoration:none;
+		 font-weight:bold;
+		 color:#FFFFFF;
+		 text-align:left;	
+	}
+			
+			
+	A.glSubb1:hover 
+	{
+		font-family:verdana;
+		 font-size:10px;
+		 font-weight:bold;
+		 text-decoration:none;
+		 color:#c4f298;
+		 text-align:left;	
+	}
+			
+			
+	A.glSubb1:active 
+	{
+		font-family:verdana;
+		 font-size:10px;
+		 text-decoration:none;
+		 font-weight:bold;
+		 color:#FFFFFF;
+		 text-align:left;	
+	}
+					
+			
+	td.pHTMLbetween1 
+	{
+		padding:0px;	
+	}
+			
+			
+	td.cHTMLbetween1 
+	{
+		padding:0px;	
+	}
+			
+			
+	td.gHTMLbetween1 
+	{
+		padding:0px;	
+	}
+			
+			
+	td.pHTMLbefore1 
+	{
+		padding:0px;
+	}
+			
+			
+	td.cHTMLbefore1 
+	{
+		padding:0px;
+	}
+			
+			
+	td.gHTMLbefore1 
+	{
+		padding:0px;
+	}
+			
+			
+	td.pHTMLafter1 
+	{
+		padding:0px;
+	}
+			
+			
+	td.cHTMLafter1 
+	{
+		padding:0px;
+	}
+				
+			
+	td.gHTMLafter1 
+	{
+		padding:0px;
+	}
+				
+		
+		
+	</style>
+			
+		
+			
+			
+				
+			
+<script type="text/javascript">
+<!--
+				
+			
+			
+//Begin: Graphic Mouseover functions
+function slidingTbl_preloadImages()
+{
+	var d=document;
+ 	if(d.images)
+	{
+		if(!d.slidingTbl_p)
+			d.slidingTbl_p=new Array();		
+	}
+    var i,j=d.slidingTbl_p.length,a=slidingTbl_preloadImages.arguments;
+	for(i=0; i<a.length; i++)
+	{
+   		if (a[i].indexOf("#")!=0)
+		{
+			d.slidingTbl_p[j]=new Image;
+			d.slidingTbl_p[j++].src=a[i];
+		}
+	}
+}
+function slidingTbl_swapImgRestore()
+{
+	var i,x,a=document.slidingTbl_sr;
+	for(i=0; a && i<a.length && (x=a[i]) && x.oSrc; i++)
+	{
+		x.src = x.oSrc;
+	}
+}
+function slidingTbl_findObj(n, d)
+{
+	var p,i,x;
+	if(!d) d = document;
+	p = n.indexOf("?");	
+	x = d[n];
+	if(p > 0 && parent.frames.length)	
+	{
+  		d = parent.frames[n.substring(p+1)].document; 
+		n = n.substring(0,p);	
+	}	
+	if(!(x) && d.all) x = d.all[n];
+	for (i=0;!x && i < d.forms.length;i++)
+	{
+		x = d.forms[i][n];
+	}
+	for(i=0;!x && d.layers && i<d.layers.length;i++)
+	{
+		x = slidingTbl_findObj(n,d.layers[i].document);
+	}
+  if(!x && d.getElementById) x = d.getElementById(n); 
+  return x;
+}
+function slidingTbl_swapImage()
+{
+	var i,j=0,x,a=slidingTbl_swapImage.arguments;
+	document.slidingTbl_sr = new Array;
+	for(i=0;i<(a.length-2);i+=3)
+	{		
+		x = slidingTbl_findObj(a[i]);			
+	   	if (x != null)
+	   	{
+			document.slidingTbl_sr[j++] = x;			
+			if(!x.oSrc) x.oSrc = x.src;			
+			x.src = a[i+2];			
+		}
+	}
+}
+//End: Graphic Mouseover functions
+
+function SlidingMouseover(bar,linkId,tier){
+	var ListElement = document.getElementById(tier + 'Link1_' + bar);
+	var ItemElement = document.getElementById(tier + 'Link2_' + bar + '_' + linkId);
+	var LinkElement = document.getElementById(tier + 'Link3_' + bar + '_' + linkId);
+	var theClass = ' hover-parent';
+	if(tier == 'c') theClass = ' hover-child';
+	if(tier == 'g') theClass = ' hover-grandchild';
+	if(ListElement){
+		ListElement.className = ListElement.className + theClass;
+	}
+	if(ItemElement){
+		ItemElement.className = ItemElement.className + theClass;
+	}
+	if(LinkElement){
+		LinkElement.className = LinkElement.className + theClass;
+	}
+}
+function SlidingMouseout(bar,linkId,tier){
+	var ListElement = document.getElementById(tier + 'Link1_' + bar);
+	var ItemElement = document.getElementById(tier + 'Link2_' + bar + '_' + linkId);
+	var LinkElement = document.getElementById(tier + 'Link3_' + bar + '_' + linkId);
+	var theClass = ' hover-parent';
+	if(tier == 'c') theClass = ' hover-child';
+	if(tier == 'g') theClass = ' hover-grandchild';
+	if(ListElement){
+		ListElement.className = ListElement.className.replace(theClass,"");		
+	}
+	if(ItemElement){
+		ItemElement.className = ItemElement.className.replace(theClass,"");
+	}
+	if(LinkElement){
+		LinkElement.className = LinkElement.className.replace(theClass,"");
+	}
+}
+				
+			
+			
+					
+						
+function slidingTbl_SetCookie1(cookievalue) 
+{		
+	document.cookie = "SLIDINGTABLE_NAVBAR1=" + escape(cookievalue);	
+	document.cookie = "SLIDINGTBL_NAVBAR_VERSION=1";
+	document.cookie = "SLIDINGTBL_NAVBAR_OLEVELID=";
+}
+function slidingTbl_SetoLevelIDCookie1(cookievalue)
+{
+	document.cookie = "SLIDINGTBL_NAVBAR_OLEVELID=" + escape(cookievalue);	
+	document.cookie = "SLIDINGTBL_NAVBAR_VERSION=1";
+	document.cookie = "SLIDINGTABLE_NAVBAR1=";
+}
+function slidingTbl_ClearCookie1() 
+{			
+	var check_name = "SLIDINGTABLE_NAVBAR";
+	var a_all_cookies = document.cookie.split( ';' );
+	var a_temp_cookie = '';
+	var cookie_name = '';
+	for (i = 0; i < a_all_cookies.length; i++)
+	{		
+		a_temp_cookie = a_all_cookies[i].split( '=' );		
+		cookie_name = a_temp_cookie[0].replace(/^\s+|\s+$/g, '');		
+		
+		//expire all cookies for every slidingTable_navbar intances.
+		if (cookie_name.toUpperCase().indexOf(check_name) == 0) 	
+			document.cookie = cookie_name.toUpperCase() + "=";					 	
+	}			
+}
+var SlidingTableTempOnload1 = null;
+if(window.onload && window.onload != null)
+{
+	SlidingTableTempOnload1 = window.onload;
+}
+function initsliding1()
+{
+	if(SlidingTableTempOnload1 != null)	
+		SlidingTableTempOnload1();
+	
+	document.cookie = "SLIDINGTBL_NAVBAR_VERSION=";
+	slidingTbl_ClearCookie1();
+		
+			
+				
+			
+slidingTbl_preloadImages('images/arrow_green.gif','images/arrow_green_on.gif','images/c_arrow.gif');
+					
+					
+	return true;
+}
+
+window.onload = initsliding1;
+		
+//-->
+</script>
+							 
+		
+			
+		
+	
+		
+				
+		
+		
+	
+		
+<table class="mainCont1" cellspacing="0" onclick="JavaScript: document.cookie='SLIDINGTBL_NAVBAR_VERSION=1';">
+	<tr class="clTop1" id="pLinkTR_2143_1" onmouseover="slidingTbl_swapImage('pBullet_2143_1','','images/arrow_green_on.gif',1);" onmouseout="slidingTbl_swapImgRestore();">
+		<th class="clTop1" id="pBulletTH_2143_1"><img src="images/arrow_green.gif" alt="Home" border="0" name="pBullet_2143_1" id="pBullet_2143_1" onMouseOver="slidingTbl_swapImage('pBullet_2143_1','','images/arrow_green_on.gif',1)" onMouseOut="slidingTbl_swapImgRestore()"></th>
+		<td class="clTop1" id="pLinkTD_2143_1" onclick="slidingTbl_SetoLevelIDCookie1('2143^2143');"><a href="http://www.heartland-health.com" class="clMain1">Home</a></td>
+	</tr>
+	<tr class="pHTMLbetween1" id="pBetweenTR_2143_1">
+		<td class="pHTMLbetween1" id="pBetweenTD_2143_1" colspan="2"><img src='images/html_btwn.gif'></td>
+	</tr>
+	<tr class="clTop1" id="pLinkTR_11_1" onmouseover="slidingTbl_swapImage('pBullet_11_1','','images/arrow_green_on.gif',1);" onmouseout="slidingTbl_swapImgRestore();">
+		<th class="clTop1" id="pBulletTH_11_1"><img src="images/arrow_green.gif" alt="About Us" border="0" name="pBullet_11_1" id="pBullet_11_1" onMouseOver="slidingTbl_swapImage('pBullet_11_1','','images/arrow_green_on.gif',1)" onMouseOut="slidingTbl_swapImgRestore()"></th>
+		<td class="clTop1" id="pLinkTD_11_1" onclick="slidingTbl_SetCookie1('11^11');"><a href="body.cfm?id=11" class="clMain1">About Us</a></td>
+	</tr>
+	<tr class="pHTMLbetween1" id="pBetweenTR_11_1">
+		<td class="pHTMLbetween1" id="pBetweenTD_11_1" colspan="2"><img src='images/html_btwn.gif'></td>
+	</tr>
+	<tr class="clTop1" id="pLinkTR_106_1" onmouseover="slidingTbl_swapImage('pBullet_106_1','','images/arrow_green_on.gif',1);" onmouseout="slidingTbl_swapImgRestore();">
+		<th class="clTop1" id="pBulletTH_106_1"><img src="images/arrow_green.gif" alt="Find a Career" border="0" name="pBullet_106_1" id="pBullet_106_1" onMouseOver="slidingTbl_swapImage('pBullet_106_1','','images/arrow_green_on.gif',1)" onMouseOut="slidingTbl_swapImgRestore()"></th>
+		<td class="clTop1" id="pLinkTD_106_1" onclick="slidingTbl_SetoLevelIDCookie1('2148^106');"><a href="body.cfm?id=106" class="clMain1">Find a Career</a></td>
+	</tr>
+	<tr class="pHTMLbetween1" id="pBetweenTR_106_1">
+		<td class="pHTMLbetween1" id="pBetweenTD_106_1" colspan="2"><img src='images/html_btwn.gif'></td>
+	</tr>
+	<tr class="clTop1" id="pLinkTR_145_1" onmouseover="slidingTbl_swapImage('pBullet_145_1','','images/arrow_green_on.gif',1);" onmouseout="slidingTbl_swapImgRestore();">
+		<th class="clTop1" id="pBulletTH_145_1"><img src="images/arrow_green.gif" alt="Physician Practice Opportunities" border="0" name="pBullet_145_1" id="pBullet_145_1" onMouseOver="slidingTbl_swapImage('pBullet_145_1','','images/arrow_green_on.gif',1)" onMouseOut="slidingTbl_swapImgRestore()"></th>
+		<td class="clTop1" id="pLinkTD_145_1" onclick="slidingTbl_SetoLevelIDCookie1('2606^145');"><a href="body.cfm?id=145" class="clMain1">Physician Practice Opportunities</a></td>
+	</tr>
+	<tr class="pHTMLbetween1" id="pBetweenTR_145_1">
+		<td class="pHTMLbetween1" id="pBetweenTD_145_1" colspan="2"><img src='images/html_btwn.gif'></td>
+	</tr>
+	<tr class="clTop1" id="pLinkTR_471_1" onmouseover="slidingTbl_swapImage('pBullet_471_1','','images/arrow_green_on.gif',1);" onmouseout="slidingTbl_swapImgRestore();">
+		<th class="clTop1" id="pBulletTH_471_1"><img src="images/arrow_green.gif" alt="Find a Provider" border="0" name="pBullet_471_1" id="pBullet_471_1" onMouseOver="slidingTbl_swapImage('pBullet_471_1','','images/arrow_green_on.gif',1)" onMouseOut="slidingTbl_swapImgRestore()"></th>
+		<td class="clTop1" id="pLinkTD_471_1" onclick="slidingTbl_SetoLevelIDCookie1('2145^471');"><a href="body.cfm?id=471" class="clMain1">Find a Provider</a></td>
+	</tr>
+	<tr class="pHTMLbetween1" id="pBetweenTR_471_1">
+		<td class="pHTMLbetween1" id="pBetweenTD_471_1" colspan="2"><img src='images/html_btwn.gif'></td>
+	</tr>
+	<tr class="clTop1" id="pLinkTR_2540_1" onmouseover="slidingTbl_swapImage('pBullet_2540_1','','images/arrow_green_on.gif',1);" onmouseout="slidingTbl_swapImgRestore();">
+		<th class="clTop1" id="pBulletTH_2540_1"><img src="images/arrow_green.gif" alt="Heartland Clinic" border="0" name="pBullet_2540_1" id="pBullet_2540_1" onMouseOver="slidingTbl_swapImage('pBullet_2540_1','','images/arrow_green_on.gif',1)" onMouseOut="slidingTbl_swapImgRestore()"></th>
+		<td class="clTop1" id="pLinkTD_2540_1" onclick="slidingTbl_SetoLevelIDCookie1('2540^2540');"><a href="http://www.heartlandclinic.org" class="clMain1">Heartland Clinic</a></td>
+	</tr>
+	<tr class="pHTMLbetween1" id="pBetweenTR_2540_1">
+		<td class="pHTMLbetween1" id="pBetweenTD_2540_1" colspan="2"><img src='images/html_btwn.gif'></td>
+	</tr>
+	<tr class="clTop1" id="pLinkTR_20_1" onmouseover="slidingTbl_swapImage('pBullet_20_1','','images/arrow_green_on.gif',1);" onmouseout="slidingTbl_swapImgRestore();">
+		<th class="clTop1" id="pBulletTH_20_1"><img src="images/arrow_green.gif" alt="Maps & Directions" border="0" name="pBullet_20_1" id="pBullet_20_1" onMouseOver="slidingTbl_swapImage('pBullet_20_1','','images/arrow_green_on.gif',1)" onMouseOut="slidingTbl_swapImgRestore()"></th>
+		<td class="clTop1" id="pLinkTD_20_1" onclick="slidingTbl_SetoLevelIDCookie1('2856^20');"><a href="body.cfm?id=20" class="clMain1">Maps & Directions</a></td>
+	</tr>
+	<tr class="pHTMLbetween1" id="pBetweenTR_20_1">
+		<td class="pHTMLbetween1" id="pBetweenTD_20_1" colspan="2"><img src='images/html_btwn.gif'></td>
+	</tr>
+	<tr class="clTop1" id="pLinkTR_12_1" onmouseover="slidingTbl_swapImage('pBullet_12_1','','images/arrow_green_on.gif',1);" onmouseout="slidingTbl_swapImgRestore();">
+		<th class="clTop1" id="pBulletTH_12_1"><img src="images/arrow_green.gif" alt="Patients/Visitors/ Billing Information" border="0" name="pBullet_12_1" id="pBullet_12_1" onMouseOver="slidingTbl_swapImage('pBullet_12_1','','images/arrow_green_on.gif',1)" onMouseOut="slidingTbl_swapImgRestore()"></th>
+		<td class="clTop1" id="pLinkTD_12_1" onclick="slidingTbl_SetCookie1('12^12');"><a href="body.cfm?id=12" class="clMain1">Patients/Visitors/ Billing Information</a></td>
+	</tr>
+	<tr class="pHTMLbetween1" id="pBetweenTR_12_1">
+		<td class="pHTMLbetween1" id="pBetweenTD_12_1" colspan="2"><img src='images/html_btwn.gif'></td>
+	</tr>
+	<tr class="clTop1" id="pLinkTR_2383_1" onmouseover="slidingTbl_swapImage('pBullet_2383_1','','images/arrow_green_on.gif',1);" onmouseout="slidingTbl_swapImgRestore();">
+		<th class="clTop1" id="pBulletTH_2383_1"><img src="images/arrow_green.gif" alt="Heartland LTACH" border="0" name="pBullet_2383_1" id="pBullet_2383_1" onMouseOver="slidingTbl_swapImage('pBullet_2383_1','','images/arrow_green_on.gif',1)" onMouseOut="slidingTbl_swapImgRestore()"></th>
+		<td class="clTop1" id="pLinkTD_2383_1" onclick="slidingTbl_SetoLevelIDCookie1('2492^2383');"><a href="body.cfm?id=2383" class="clMain1">Heartland LTACH</a></td>
+	</tr>
+	<tr class="pHTMLbetween1" id="pBetweenTR_2383_1">
+		<td class="pHTMLbetween1" id="pBetweenTD_2383_1" colspan="2"><img src='images/html_btwn.gif'></td>
+	</tr>
+	<tr class="clTop1" id="pLinkTR_189_1" onmouseover="slidingTbl_swapImage('pBullet_189_1','','images/arrow_green_on.gif',1);" onmouseout="slidingTbl_swapImgRestore();">
+		<th class="clTop1" id="pBulletTH_189_1"><img src="images/arrow_green.gif" alt="Departments and Services" border="0" name="pBullet_189_1" id="pBullet_189_1" onMouseOver="slidingTbl_swapImage('pBullet_189_1','','images/arrow_green_on.gif',1)" onMouseOut="slidingTbl_swapImgRestore()"></th>
+		<td class="clTop1" id="pLinkTD_189_1" onclick="slidingTbl_SetCookie1('189^189');"><a href="body.cfm?id=189" class="clMain1">Departments and Services</a></td>
+	</tr>
+	<tr class="pHTMLbetween1" id="pBetweenTR_189_1">
+		<td class="pHTMLbetween1" id="pBetweenTD_189_1" colspan="2"><img src='images/html_btwn.gif'></td>
+	</tr>
+	<tr class="clTop1" id="pLinkTR_1502_1" onmouseover="slidingTbl_swapImage('pBullet_1502_1','','images/arrow_green_on.gif',1);" onmouseout="slidingTbl_swapImgRestore();">
+		<th class="clTop1" id="pBulletTH_1502_1"><img src="images/arrow_green.gif" alt="Media/Public Relations" border="0" name="pBullet_1502_1" id="pBullet_1502_1" onMouseOver="slidingTbl_swapImage('pBullet_1502_1','','images/arrow_green_on.gif',1)" onMouseOut="slidingTbl_swapImgRestore()"></th>
+		<td class="clTop1" id="pLinkTD_1502_1" onclick="slidingTbl_SetoLevelIDCookie1('2146^1502');"><a href="body.cfm?id=1502" class="clMain1">Media/Public Relations</a></td>
+	</tr>
+	<tr class="pHTMLbetween1" id="pBetweenTR_1502_1">
+		<td class="pHTMLbetween1" id="pBetweenTD_1502_1" colspan="2"><img src='images/html_btwn.gif'></td>
+	</tr>
+	<tr class="clTop1" id="pLinkTR_15_1" onmouseover="slidingTbl_swapImage('pBullet_15_1','','images/arrow_green_on.gif',1);" onmouseout="slidingTbl_swapImgRestore();">
+		<th class="clTop1" id="pBulletTH_15_1"><img src="images/arrow_green.gif" alt="Heartland Gift Shops" border="0" name="pBullet_15_1" id="pBullet_15_1" onMouseOver="slidingTbl_swapImage('pBullet_15_1','','images/arrow_green_on.gif',1)" onMouseOut="slidingTbl_swapImgRestore()"></th>
+		<td class="clTop1" id="pLinkTD_15_1" onclick="slidingTbl_SetCookie1('15^15');"><a href="body.cfm?id=15" class="clMain1">Heartland Gift Shops</a></td>
+	</tr>
+	<tr class="pHTMLbetween1" id="pBetweenTR_15_1">
+		<td class="pHTMLbetween1" id="pBetweenTD_15_1" colspan="2"><img src='images/html_btwn.gif'></td>
+	</tr>
+	<tr class="clTop1" id="pLinkTR_2464_1" onmouseover="slidingTbl_swapImage('pBullet_2464_1','','images/arrow_green_on.gif',1);" onmouseout="slidingTbl_swapImgRestore();">
+		<th class="clTop1" id="pBulletTH_2464_1"><img src="images/arrow_green.gif" alt="Heartland Foundation" border="0" name="pBullet_2464_1" id="pBullet_2464_1" onMouseOver="slidingTbl_swapImage('pBullet_2464_1','','images/arrow_green_on.gif',1)" onMouseOut="slidingTbl_swapImgRestore()"></th>
+		<td class="clTop1" id="pLinkTD_2464_1" onclick="slidingTbl_SetoLevelIDCookie1('2464^2464');"><a href="http://www.heartlandfoundation.org" class="clMain1" target="_blank">Heartland Foundation</a></td>
+	</tr>
+	<tr class="pHTMLbetween1" id="pBetweenTR_2464_1">
+		<td class="pHTMLbetween1" id="pBetweenTD_2464_1" colspan="2"><img src='images/html_btwn.gif'></td>
+	</tr>
+	<tr class="clTop1" id="pLinkTR_2465_1" onmouseover="slidingTbl_swapImage('pBullet_2465_1','','images/arrow_green_on.gif',1);" onmouseout="slidingTbl_swapImgRestore();">
+		<th class="clTop1" id="pBulletTH_2465_1"><img src="images/arrow_green.gif" alt="NWMO AHEC" border="0" name="pBullet_2465_1" id="pBullet_2465_1" onMouseOver="slidingTbl_swapImage('pBullet_2465_1','','images/arrow_green_on.gif',1)" onMouseOut="slidingTbl_swapImgRestore()"></th>
+		<td class="clTop1" id="pLinkTD_2465_1" onclick="slidingTbl_SetoLevelIDCookie1('2465^1257');"><a href="body.cfm?id=1257" class="clMain1">NWMO AHEC</a></td>
+	</tr>
+	<tr class="pHTMLbetween1" id="pBetweenTR_2465_1">
+		<td class="pHTMLbetween1" id="pBetweenTD_2465_1" colspan="2"><img src='images/html_btwn.gif'></td>
+	</tr>
+	<tr class="clTop1" id="pLinkTR_2543_1" onmouseover="slidingTbl_swapImage('pBullet_2543_1','','images/arrow_green_on.gif',1);" onmouseout="slidingTbl_swapImgRestore();">
+		<th class="clTop1" id="pBulletTH_2543_1"><img src="images/arrow_green.gif" alt="Regional Development" border="0" name="pBullet_2543_1" id="pBullet_2543_1" onMouseOver="slidingTbl_swapImage('pBullet_2543_1','','images/arrow_green_on.gif',1)" onMouseOut="slidingTbl_swapImgRestore()"></th>
+		<td class="clTop1" id="pLinkTD_2543_1" onclick="slidingTbl_SetoLevelIDCookie1('2543^189');"><a href="http://www.heartland-health.com/body.cfm?id=189&amp;action=detail&amp;ref=29" class="clMain1">Regional Development</a></td>
+	</tr>
+	<tr class="pHTMLbetween1" id="pBetweenTR_2543_1">
+		<td class="pHTMLbetween1" id="pBetweenTD_2543_1" colspan="2"><img src='images/html_btwn.gif'></td>
+	</tr>
+	<tr class="clTop1" id="pLinkTR_96_1" onmouseover="slidingTbl_swapImage('pBullet_96_1','','images/arrow_green_on.gif',1);" onmouseout="slidingTbl_swapImgRestore();">
+		<th class="clTop1" id="pBulletTH_96_1"><img src="images/arrow_green.gif" alt="Partnerships" border="0" name="pBullet_96_1" id="pBullet_96_1" onMouseOver="slidingTbl_swapImage('pBullet_96_1','','images/arrow_green_on.gif',1)" onMouseOut="slidingTbl_swapImgRestore()"></th>
+		<td class="clTop1" id="pLinkTD_96_1" onclick="slidingTbl_SetCookie1('96^96');"><a href="body.cfm?id=96" class="clMain1">Partnerships</a></td>
+	</tr>
+</table>
+				
+
+<img src="images/left_nav_green2.gif" alt="Choose an option"></td>
+					</tr>
+					      <tr>
+	        <td align="center" valign="top" style="background-color:#C4F298; padding-top:15px; padding-bottom:10px;">
+			  
+ 
+
+
+		<a href="#" onclick="SM1_BannerClick(); return false;" onmouseover="return SM1_BannerWindowStatus();" onmouseout="window.status='';SM1_MO=false;"><img src="images/bnr_youtube.jpg" name="banner_left_top" width="148" height="78" border="0" alt="" title=""><br></a>
+		<script type="text/javascript"><!--
+	SM1_MO=false;
+	SM1_Timer = null;
+	SM1_ThisBanner = 0;
+	SM1_BannerItems = new Array();
+
+
+
+	
+	
+	
+		
+	
+	
+	
+		
+		
+		
+			
+		
+	
+	
+	SM1_BannerItems[0] = new Array();
+	SM1_BannerItems[0][0]=new Image();
+	SM1_BannerItems[0][0].src='images/bnr_youtube.jpg';
+	SM1_BannerItems[0][0].alt='bnr_youtube.jpg';
+	SM1_BannerItems[0][0].title='bnr_youtube.jpg';
+	SM1_BannerItems[0][1]='http://www.youtube.com/heartlandhealth';
+	SM1_BannerItems[0][2]='parent._blank.';
+	
+	
+
+	
+	
+	
+		
+	
+	
+	
+		
+		
+		
+			
+		
+	
+	
+	SM1_BannerItems[1] = new Array();
+	SM1_BannerItems[1][0]=new Image();
+	SM1_BannerItems[1][0].src='images/bnr_socialmedia_FB.jpg';
+	SM1_BannerItems[1][0].alt='bnr_socialmedia_FB.jpg';
+	SM1_BannerItems[1][0].title='bnr_socialmedia_FB.jpg';
+	SM1_BannerItems[1][1]='http://www.facebook.com/heartlandhealth';
+	SM1_BannerItems[1][2]='parent._blank.';
+	
+	
+
+	
+	
+	
+		
+	
+	
+	
+		
+		
+		
+			
+		
+	
+	
+	SM1_BannerItems[2] = new Array();
+	SM1_BannerItems[2][0]=new Image();
+	SM1_BannerItems[2][0].src='images/bnr_socialmedia_twitter.jpg';
+	SM1_BannerItems[2][0].alt='bnr_socialmedia_twitter.jpg';
+	SM1_BannerItems[2][0].title='bnr_socialmedia_twitter.jpg';
+	SM1_BannerItems[2][1]='http://www.twitter.com/hi_stjoe';
+	SM1_BannerItems[2][2]='parent._blank.';
+	
+	
+
+
+	function SM1_BannerClick(){SM1_BannerWindowStatus();
+		if (SM1_BannerItems[SM1_ThisBanner][2]=="parent._blank."){
+			window.open(SM1_BannerItems[SM1_ThisBanner][1]);
+		}else{
+			eval(SM1_BannerItems[SM1_ThisBanner][2] + "location.href=SM1_BannerItems[SM1_ThisBanner][1]");
+		}
+	}
+	function SM1_BannerWindowStatus(){SM1_MO=true;window.status=SM1_BannerItems[SM1_ThisBanner][1]; return true}
+
+
+
+	function SM1_SwapBanner(){
+		iNum=SM1_ThisBanner+1;
+		if(iNum >= SM1_BannerItems.length) iNum=0;
+		document.banner_left_top.src=SM1_BannerItems[iNum][0].src; 
+		document.banner_left_top.alt=SM1_BannerItems[iNum][0].alt;
+		document.banner_left_top.title=SM1_BannerItems[iNum][0].title;
+		SM1_ThisBanner=iNum;
+		SM1_Timer=setTimeout('SM1_SwapBanner()',4000);
+		if(SM1_MO){SM1_BannerWindowStatus();} else {window.status='';}
+	}
+		
+	document.banner_left_top.alt=SM1_BannerItems[0][0].alt;
+	document.banner_left_top.title=SM1_BannerItems[0][0].title;
+	SM1_Timer=setTimeout('SM1_SwapBanner()',4000);
+//-->
+</script>
+
+<br>
+			  <br>
+ 
+
+
+		<a href="#" onclick="SM2_BannerClick(); return false;" onmouseover="return SM2_BannerWindowStatus();" onmouseout="window.status='';SM2_MO=false;"><img src="images/bnr_baldrige.jpg" name="banner_left_mid" width="138" height="109" border="0" alt="" title=""><br></a>
+		<script type="text/javascript"><!--
+	SM2_MO=false;
+	SM2_Timer = null;
+	SM2_ThisBanner = 0;
+	SM2_BannerItems = new Array();
+
+
+
+	
+	
+	
+		
+	
+	
+	
+		
+		
+		
+	
+	
+	SM2_BannerItems[0] = new Array();
+	SM2_BannerItems[0][0]=new Image();
+	SM2_BannerItems[0][0].src='images/bnr_baldrige.jpg';
+	SM2_BannerItems[0][0].alt='bnr_baldrige.jpg';
+	SM2_BannerItems[0][0].title='bnr_baldrige.jpg';
+	SM2_BannerItems[0][1]='http://www.heartland-health.com/baldrige';
+	SM2_BannerItems[0][2]='';
+	
+	
+
+
+	function SM2_BannerClick(){SM2_BannerWindowStatus();
+		if (SM2_BannerItems[SM2_ThisBanner][2]=="parent._blank."){
+			window.open(SM2_BannerItems[SM2_ThisBanner][1]);
+		}else{
+			eval(SM2_BannerItems[SM2_ThisBanner][2] + "location.href=SM2_BannerItems[SM2_ThisBanner][1]");
+		}
+	}
+	function SM2_BannerWindowStatus(){SM2_MO=true;window.status=SM2_BannerItems[SM2_ThisBanner][1]; return true}
+
+
+
+	function SM2_SwapBanner(){
+		iNum=SM2_ThisBanner+1;
+		if(iNum >= SM2_BannerItems.length) iNum=0;
+		document.banner_left_mid.src=SM2_BannerItems[iNum][0].src; 
+		document.banner_left_mid.alt=SM2_BannerItems[iNum][0].alt;
+		document.banner_left_mid.title=SM2_BannerItems[iNum][0].title;
+		SM2_ThisBanner=iNum;
+		SM2_Timer=setTimeout('SM2_SwapBanner()',5000);
+		if(SM2_MO){SM2_BannerWindowStatus();} else {window.status='';}
+	}
+		
+	document.banner_left_mid.alt=SM2_BannerItems[0][0].alt;
+	document.banner_left_mid.title=SM2_BannerItems[0][0].title;
+	SM2_Timer=setTimeout('SM2_SwapBanner()',5000);
+//-->
+</script>
+
+<br><br>
+			  
+ 
+
+
+
+</td>
+	        </tr>
+				</table>		</td>
+	        <td width="99%" rowspan="2" align="left" valign="top"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+	          <tr>
+	            <td align="left" valign="top">
+ 
+
+
+		<a href="#" onclick="SM10_BannerClick(); return false;" onmouseover="return SM10_BannerWindowStatus();" onmouseout="window.status='';SM10_MO=false;"><img src="images/header_home_baldrige.jpg" name="banner_home_top" width="589" height="119" border="0" alt="" title=""><br></a>
+		<script type="text/javascript"><!--
+	SM10_MO=false;
+	SM10_Timer = null;
+	SM10_ThisBanner = 0;
+	SM10_BannerItems = new Array();
+
+
+
+	
+	
+	
+		
+	
+	
+		
+
+
+
+
+	
+	
+	
+	
+	
+	
+	
+	
+				
+				
+				
+		
+		
+				
+		
+				
+		
+		
+		
+		
+		
+		
+		
+			
+			
+			
+						
+			
+						
+			
+			
+		
+	
+
+
+	
+
+	
+	
+	
+		
+		
+		
+			
+		
+		
+		
+	
+		
+		
+		
+	
+		
+		
+		
+
+		
+		
+		
+	
+		
+		
+		
+	
+		
+		
+		
+	
+		
+		
+		
+	
+		
+		
+		
+	
+		
+		
+		
+	
+		
+		
+		
+	
+		
+		
+		
+	
+		
+		
+		
+	
+		
+		
+		
+	
+		
+		
+		
+	
+		
+		
+		
+		
+		
+		
+		
+	
+		
+		
+			
+			
+			
+				
+				
+			
+			
+			
+			
+			
+				
+				
+			
+			
+			
+			
+						
+			
+			
+			
+			
+			
+		
+		
+	
+		
+		
+		
+	
+		
+		
+		
+	
+		
+		
+		
+	
+		
+		
+		
+		
+		
+		
+			
+	
+	
+
+
+
+
+
+	
+		
+			
+		
+	
+	
+		
+		
+		
+	
+	
+	SM10_BannerItems[0] = new Array();
+	SM10_BannerItems[0][0]=new Image();
+	SM10_BannerItems[0][0].src='images/header_home_baldrige.jpg';
+	SM10_BannerItems[0][0].alt='header_home_baldrige.jpg';
+	SM10_BannerItems[0][0].title='header_home_baldrige.jpg';
+	SM10_BannerItems[0][1]='body.cfm?id=2472';
+	SM10_BannerItems[0][2]='';
+	
+	
+
+	
+	
+	
+		
+	
+	
+		
+
+
+
+
+	
+	
+	
+	
+	
+	
+	
+	
+				
+				
+				
+		
+		
+				
+		
+				
+		
+		
+		
+		
+		
+		
+		
+			
+			
+			
+						
+			
+						
+			
+			
+		
+	
+
+
+	
+
+	
+	
+	
+		
+		
+		
+			
+		
+		
+		
+	
+		
+		
+		
+	
+		
+		
+		
+
+		
+		
+		
+	
+		
+		
+		
+	
+		
+		
+		
+	
+		
+		
+		
+	
+		
+		
+		
+	
+		
+		
+		
+	
+		
+		
+		
+	
+		
+		
+		
+	
+		
+		
+		
+	
+		
+		
+		
+	
+		
+		
+		
+	
+		
+		
+		
+		
+		
+		
+		
+	
+		
+		
+			
+			
+			
+				
+				
+			
+			
+			
+			
+			
+				
+				
+			
+			
+			
+			
+						
+			
+			
+			
+			
+			
+		
+		
+	
+		
+		
+		
+	
+		
+		
+		
+	
+		
+		
+		
+	
+		
+		
+		
+		
+		
+		
+			
+	
+	
+
+
+
+
+
+	
+		
+			
+		
+	
+	
+		
+		
+		
+	
+	
+	SM10_BannerItems[1] = new Array();
+	SM10_BannerItems[1][0]=new Image();
+	SM10_BannerItems[1][0].src='images/header_home_mayo1.jpg';
+	SM10_BannerItems[1][0].alt='Mayo Clinic Care Network';
+	SM10_BannerItems[1][0].title='Mayo Clinic Care Network';
+	SM10_BannerItems[1][1]='body.cfm?id=3009';
+	SM10_BannerItems[1][2]='';
+	
+	
+
+
+	function SM10_BannerClick(){SM10_BannerWindowStatus();
+		if (SM10_BannerItems[SM10_ThisBanner][2]=="parent._blank."){
+			window.open(SM10_BannerItems[SM10_ThisBanner][1]);
+		}else{
+			eval(SM10_BannerItems[SM10_ThisBanner][2] + "location.href=SM10_BannerItems[SM10_ThisBanner][1]");
+		}
+	}
+	function SM10_BannerWindowStatus(){SM10_MO=true;window.status=SM10_BannerItems[SM10_ThisBanner][1]; return true}
+
+
+
+	function SM10_SwapBanner(){
+		iNum=SM10_ThisBanner+1;
+		if(iNum >= SM10_BannerItems.length) iNum=0;
+		document.banner_home_top.src=SM10_BannerItems[iNum][0].src; 
+		document.banner_home_top.alt=SM10_BannerItems[iNum][0].alt;
+		document.banner_home_top.title=SM10_BannerItems[iNum][0].title;
+		SM10_ThisBanner=iNum;
+		SM10_Timer=setTimeout('SM10_SwapBanner()',6000);
+		if(SM10_MO){SM10_BannerWindowStatus();} else {window.status='';}
+	}
+		
+	document.banner_home_top.alt=SM10_BannerItems[0][0].alt;
+	document.banner_home_top.title=SM10_BannerItems[0][0].title;
+	SM10_Timer=setTimeout('SM10_SwapBanner()',6000);
+//-->
+</script>
+
+</td>
+	          </tr>
+						
+	          <tr>
+	            <td align="left" valign="top">
+					<table border="0" cellpadding="0" cellspacing="0" style="background-image:url(images/dropdown_bkgrd.gif);" width="100%">
+						<tr>
+						<td valign="top" align="left" width="40%" style="background-image:url(images/green_bar_left.gif); background-repeat: no-repeat; background-position: top left;" height="32">
+ 
+
+
+		<a href="#" onclick="SM4_BannerClick(); return false;" onmouseover="return SM4_BannerWindowStatus();" onmouseout="window.status='';SM4_MO=false;"><img src="images/banner_top_bar.gif" name="banner_top" width="175" height="28" border="0" alt="" title=""><br></a>
+		<script type="text/javascript"><!--
+	SM4_MO=false;
+	SM4_Timer = null;
+	SM4_ThisBanner = 0;
+	SM4_BannerItems = new Array();
+
+
+
+	
+	
+	
+		
+	
+	
+	
+	
+	SM4_BannerItems[0] = new Array();
+	SM4_BannerItems[0][0]=new Image();
+	SM4_BannerItems[0][0].src='images/banner_top_bar.gif';
+	SM4_BannerItems[0][0].alt='banner_top_bar.gif';
+	SM4_BannerItems[0][0].title='banner_top_bar.gif';
+	SM4_BannerItems[0][1]='';
+	SM4_BannerItems[0][2]='';
+	
+	
+
+
+	function SM4_BannerClick(){SM4_BannerWindowStatus();
+		if (SM4_BannerItems[SM4_ThisBanner][2]=="parent._blank."){
+			window.open(SM4_BannerItems[SM4_ThisBanner][1]);
+		}else{
+			eval(SM4_BannerItems[SM4_ThisBanner][2] + "location.href=SM4_BannerItems[SM4_ThisBanner][1]");
+		}
+	}
+	function SM4_BannerWindowStatus(){SM4_MO=true;window.status=SM4_BannerItems[SM4_ThisBanner][1]; return true}
+
+
+
+	function SM4_SwapBanner(){
+		iNum=SM4_ThisBanner+1;
+		if(iNum >= SM4_BannerItems.length) iNum=0;
+		document.banner_top.src=SM4_BannerItems[iNum][0].src; 
+		document.banner_top.alt=SM4_BannerItems[iNum][0].alt;
+		document.banner_top.title=SM4_BannerItems[iNum][0].title;
+		SM4_ThisBanner=iNum;
+		SM4_Timer=setTimeout('SM4_SwapBanner()',6000);
+		if(SM4_MO){SM4_BannerWindowStatus();} else {window.status='';}
+	}
+		
+	document.banner_top.alt=SM4_BannerItems[0][0].alt;
+	document.banner_top.title=SM4_BannerItems[0][0].title;
+	SM4_Timer=setTimeout('SM4_SwapBanner()',6000);
+//-->
+</script>
+
+</td>
+	<td valign="middle" width="1%" align="right" style="padding: 0px 4px 2px 10px;">
+
+
+
+	
+	
+	
+	
+		
+			
+				
+		
+		
+		
+		
+	
+		
+			
+				
+		
+		
+		
+		
+	
+		
+			
+				
+		
+		
+		
+		
+	
+		
+			
+				
+		
+		
+		
+		
+	
+		
+			
+				
+		
+		
+		
+		
+	
+		
+			
+				
+		
+		
+		
+		
+	
+		
+			
+				
+		
+		
+		
+		
+	
+		
+			
+				
+		
+		
+		
+		
+	
+		
+			
+				
+		
+		
+		
+		
+	
+		
+			
+				
+		
+		
+		
+		
+	
+		
+			
+				
+		
+		
+		
+		
+	
+		
+			
+				
+		
+		
+		
+		
+	
+		
+			
+				
+		
+		
+		
+		
+	
+		
+			
+				
+		
+		
+		
+		
+	
+		
+			
+				
+		
+		
+		
+		
+	
+		
+			
+				
+		
+		
+		
+		
+	
+	
+	
+	
+	
+	
+	
+
+	
+	
+	
+		
+		
+
+
+
+
+
+
+
+
+		
+
+	
+
+	
+
+
+
+	
+	
+
+		
+	
+
+
+
+
+
+
+
+	
+
+		
+
+
+	
+		
+	
+			
+				
+	
+					
+						
+		
+		
+		
+										
+			
+									
+														
+					
+		
+		
+					
+			
+			
+				
+							
+				
+								
+			
+			
+				
+					
+				
+												
+			
+			
+					
+				
+				
+							
+						
+				
+					
+									
+					
+						
+														
+				
+										
+																
+						
+					 						
+																												
+											
+									 
+												
+												
+				
+									
+						
+				
+				
+										
+																								
+					
+															
+							
+					
+			
+			
+				
+							
+				
+								
+			
+			
+				
+					
+				
+												
+			
+			
+					
+				
+				
+							
+						
+				
+					
+									
+					
+						
+														
+				
+										
+																
+						
+					 						
+																												
+											
+									 
+												
+												
+				
+									
+						
+				
+				
+										
+																								
+					
+															
+							
+		
+			
+		
+
+
+
+
+
+		
+			
+	
+	
+	
+	<form id="hotlink1" name="hotlink1" method="post" action="" style="margin:0px;">
+		<table cellspacing="0" class="HotLink">
+		
+		
+			<tr class="HotLink">
+				<td valign="top" class="HotLink">
+				<select id="SiteURL1" name="SiteURL1" onChange="GoToSite1();" class="HotLink">
+					<option value="">I would like to...</option>
+				</select>
+				
+				
+				</td>
+			</tr>
+			
+		
+		
+		</table>	
+	</form>
+
+</td>
+						</tr>
+					</table>
+				</td>
+	          </tr>
+	          <tr>
+	            <td align="left" valign="top" bgcolor="#FFFFFF" style="background-image:url(images/shadow_tile.gif); background-repeat: repeat-y; background-position: top left;"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+	                <tr>
+	                  <td width="99%" align="left" valign="top">
+					  <table width="100%" border="0" cellpadding="10" cellspacing="0">
+								<td valign="top" height="100%">
+							    <!-- <a href="body.cfm?id=2476" _mce_href="body.cfm?id=2476"><img src="images/home_banner_safest.jpg" _mce_src="images/home_banner_safest.jpg" border="0" class="sm6generalwizard" style="border: 0;" _mce_style="border: 0;" /></a>&nbsp;<a href="body.cfm?id=2475" _mce_href="body.cfm?id=2475"><img src="images/home_banner_health.jpg" _mce_src="images/home_banner_health.jpg" border="0" class="sm6generalwizard" style="border: 0;" _mce_style="border: 0;" /></a><br /><a href="body.cfm?id=2474" _mce_href="body.cfm?id=2474"><img src="images/home_banner_community.jpg" _mce_src="images/home_banner_community.jpg" border="0" class="sm6generalwizard" style="border: 0;" _mce_style="border: 0;" /></a>&nbsp;<a href="body.cfm?id=11" _mce_href="body.cfm?id=11"><img src="images/home_banner_staff.jpg" _mce_src="images/home_banner_staff.jpg" border="0" class="sm6generalwizard" style="border: 0;" _mce_style="border: 0;" /></a><br /> -->
+<p><!-- <a href="documents/mammothon_2012.pdf" _mce_href="documents/mammothon_2012.pdf"><img height="219" width="370" src="images/bnr_mammothon2012_web.jpg" _mce_src="images/bnr_mammothon2012_web.jpg" class="sm6generalwizard" style="border: 0px;" _mce_style="border: 0px;" /></a> <br /> --><!-- <a href="body.cfm?id=2559" _mce_href="body.cfm?id=2559"><img height="200" width="370" src="images/web_HI_actfast.jpg" _mce_src="images/web_HI_actfast.jpg" class="sm6generalwizard" style="border: 0px;" _mce_style="border: 0px;" /></a></p>
+--><!--
+<p><iframe width="370" frameborder="0" src="http://www.youtube.com/embed/k91Jk2HbQLY?rel=0" _mce_src="http://www.youtube.com/embed/k91Jk2HbQLY?rel=0" height="218"></iframe></p>
+--></p>
+<p><iframe width="370" frameborder="0" src="http://www.youtube.com/embed/2APOGN0rcfs?rel=0" height="218"></iframe></p>
+<p><a href="http://www.heartland-health.com/body.cfm?id=2639"><img src="images/hospice_banner_final.jpg" border="0" class="sm6generalwizard" id="thisIcon" /></a></p></td>
+							<tr>
+								<td valign="top" height="100%"><img src="images/title_news.gif"><br>
+								
+
+
+
+
+
+
+
+
+
+	
+			
+		
+
+
+
+	Find out the latest news at Heartland Health.<br><br>
+
+
+
+								
+
+
+
+
+
+
+
+
+	
+
+	
+	
+	
+		
+			
+				<a href="body.cfm?id=16&action=detail&ref=335" style="text-decoration:none;"><a href="http://www.heartland-health.com/spirit" style="text-decoration:none;">Ð Register for Spirit of Women</a></a><br>
+			
+				<a href="body.cfm?id=16&action=detail&ref=334" style="text-decoration:none;">Ð New virus discovered in northwest Missouri</a><br>
+			
+				<a href="body.cfm?id=16&action=detail&ref=333" style="text-decoration:none;"><a href="http://www.heartland-health.com/vein" style="text-decoration:none;">Ð Is it time to rethink varicose veins?</a></a><br>
+			
+				<a href="body.cfm?id=16&action=detail&ref=332" style="text-decoration:none;">Ð AmericaÕs Healthcare Advocate Show podcast</a><br>
+			
+				<a href="body.cfm?id=16&action=detail&ref=329" style="text-decoration:none;">Ð Heartland Health named 100 Great Community Hospitals</a><br>
+			
+				<a href="body.cfm?id=16&action=detail&ref=328" style="text-decoration:none;">Ð Heartland develops an Accountable Care Organization</a><br>
+			
+				<a href="body.cfm?id=16&action=detail&ref=325" style="text-decoration:none;"><a href="http://www.mayoclinic.org/news2012-rst/6898.html" target==_blank style="text-decoration:none;">Ð Heartland Health Joins Mayo Clinic Care Network</a></a><br>
+			
+				<a href="body.cfm?id=16&action=detail&ref=323" style="text-decoration:none;">Ð Nurse Excellence recipient announced...</a><br>
+			
+				<a href="body.cfm?id=16&action=detail&ref=317" style="text-decoration:none;"><a href="body.cfm?id=2972" style="text-decoration:none;">Ð Bariatric Surgery Center of Excellence</a></a><br>
+			
+				<a href="body.cfm?id=16&action=detail&ref=314" style="text-decoration:none;">Ð HRMC "Best Place to Work in Healthcare"? Yes!</a><br>
+				
+			<br>
+			<a href="body.cfm?id=16" style="text-decoration:none;"><img src="images/button_articles.gif" border="0" alt="More Articles"></a>		
+		
+		
+<br> 
+	                                   <br><br><img src="images/title_calendar.gif"><br>
+									   
+
+
+
+
+
+
+
+
+
+	
+			
+		
+
+
+
+	Heartland Health offers a large selection of health-related events to help you learn how to best care for your health.<br><br>
+
+<b>Dates:</b><br>
+
+
+ 
+	                                    
+
+
+
+
+
+
+
+
+	
+	
+	
+	
+			
+		
+			
+				<a href="body.cfm?id=17&action=detail&ref=3519" style="text-decoration:none;">Tai Chi for Health - 11/6</a><br>
+			
+				<a href="body.cfm?id=17&action=detail&ref=3570" style="text-decoration:none;">Breast Friends Forever - 11/6</a><br>
+			
+				<a href="body.cfm?id=17&action=detail&ref=3562" style="text-decoration:none;">Restorative Yoga - 11/7</a><br>
+			
+				<a href="body.cfm?id=17&action=detail&ref=3520" style="text-decoration:none;">Tai Chi for Health - 11/13</a><br>
+			
+				<a href="body.cfm?id=17&action=detail&ref=3563" style="text-decoration:none;">Restorative Yoga - 11/14</a><br>
+			
+			<br><a href="body.cfm?id=17" style="text-decoration:none;"><img src="images/button_dates.gif" border="0" alt="More Dates"><br></a>	
+		
+	
+<br></td>
+							</tr>
+						</table>				  </td>
+	                  <td width="1%" align="left" valign="top" style="padding-right:5px; padding-top:10px; padding-bottom:10px;"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+	                    <tr>
+	                      <td align="left" valign="top"><table border="0" cellpadding="0" cellspacing="0" align="center">
+	                          <tr>
+	                            <td valign="top" align="center"><img src="images/module_top_centers.gif" alt="Centers of Excellence"></td>
+	                          </tr>
+	                          <tr>
+	                            <td width="194" valign="top" style="background-image: url(images/module_tile.gif); background-position: top left;"><table border="0" cellpadding="8" cellspacing="0">
+	                                <tr>
+	                                  <td align="left" valign="top">
+			
+<!-- Begin NavBar Bar #2 Content Output... -->
+
+			<table  border="0" cellspacing="0" cellpadding="0" onclick="NavBar_deleteCookie();">
+	<tr>
+		<td width="1%" class="NavBarNum2"  valign="top" align="left" title=""><img src="images/arrow_blue.gif" border="0" alt="Heartland Weight Management Center" id="Nav_Bullet_2_1" name="Nav_Bullet_2_1"></td>
+		<td class="NavBarNum2" valign="top" align="left"><a href="body.cfm?id=2686"  onMouseOver="RestoreAll();nbMouseover('Nav_Bullet_2_1','images/arrow_blue.gif','');" onMouseOut="nbMouseoverRestore();" onClick="NavBar_setPLinkIDCookie('2686','');" class="NavBarNum2">Heartland Weight Management Center</a></td>
+	</tr>
+	<tr class="NavBarNum2">
+		<td class="NavBarNum2" colspan="2" valign="top" align="left" title=""><img src="images/module_spacer.gif" alt=""></td>
+	</tr>
+	<tr>
+		<td width="1%" class="NavBarNum2"  valign="top" align="left" title=""><img src="images/arrow_blue.gif" border="0" alt="Heartland Breast Center" id="Nav_Bullet_2_2" name="Nav_Bullet_2_2"></td>
+		<td class="NavBarNum2" valign="top" align="left"><a href="body.cfm?id=2304"  onMouseOver="RestoreAll();nbMouseover('Nav_Bullet_2_2','images/arrow_blue.gif','');" onMouseOut="nbMouseoverRestore();" onClick="NavBar_setPLinkIDCookie('2304','');" class="NavBarNum2">Heartland Breast Center</a></td>
+	</tr>
+	<tr class="NavBarNum2">
+		<td class="NavBarNum2" colspan="2" valign="top" align="left" title=""><img src="images/module_spacer.gif" alt=""></td>
+	</tr>
+	<tr>
+		<td width="1%" class="NavBarNum2"  valign="top" align="left" title=""><img src="images/arrow_blue.gif" border="0" alt="Human Motion Institute (HMI)" id="Nav_Bullet_2_3" name="Nav_Bullet_2_3"></td>
+		<td class="NavBarNum2" valign="top" align="left"><a href="body.cfm?id=2306"  onMouseOver="RestoreAll();nbMouseover('Nav_Bullet_2_3','images/arrow_blue.gif','');" onMouseOut="nbMouseoverRestore();" onClick="NavBar_setPLinkIDCookie('2306','');" class="NavBarNum2">Human Motion Institute (HMI)</a></td>
+	</tr>
+	<tr class="NavBarNum2">
+		<td class="NavBarNum2" colspan="2" valign="top" align="left" title=""><img src="images/module_spacer.gif" alt=""></td>
+	</tr>
+	<tr>
+		<td width="1%" class="NavBarNum2"  valign="top" align="left" title=""><img src="images/arrow_blue.gif" border="0" alt="Maternity/Nursery" id="Nav_Bullet_2_4" name="Nav_Bullet_2_4"></td>
+		<td class="NavBarNum2" valign="top" align="left"><a href="body.cfm?id=1041"  onMouseOver="RestoreAll();nbMouseover('Nav_Bullet_2_4','images/arrow_blue.gif','');" onMouseOut="nbMouseoverRestore();" onClick="NavBar_setPLinkIDCookie('1041','');" class="NavBarNum2">Maternity/Nursery</a></td>
+	</tr>
+	<tr class="NavBarNum2">
+		<td class="NavBarNum2" colspan="2" valign="top" align="left" title=""><img src="images/module_spacer.gif" alt=""></td>
+	</tr>
+	<tr>
+		<td width="1%" class="NavBarNum2"  valign="top" align="left" title=""><img src="images/arrow_blue.gif" border="0" alt="Heartland Cancer Center" id="Nav_Bullet_2_5" name="Nav_Bullet_2_5"></td>
+		<td class="NavBarNum2" valign="top" align="left"><a href="body.cfm?id=1018"  onMouseOver="RestoreAll();nbMouseover('Nav_Bullet_2_5','images/arrow_blue.gif','');" onMouseOut="nbMouseoverRestore();" onClick="NavBar_setPLinkIDCookie('1018','');" class="NavBarNum2">Heartland Cancer Center</a></td>
+	</tr>
+	<tr class="NavBarNum2">
+		<td class="NavBarNum2" colspan="2" valign="top" align="left" title=""><img src="images/module_spacer.gif" alt=""></td>
+	</tr>
+	<tr>
+		<td width="1%" class="NavBarNum2"  valign="top" align="left" title=""><img src="images/arrow_blue.gif" border="0" alt="The Heart Center" id="Nav_Bullet_2_6" name="Nav_Bullet_2_6"></td>
+		<td class="NavBarNum2" valign="top" align="left"><a href="body.cfm?id=1040"  onMouseOver="RestoreAll();nbMouseover('Nav_Bullet_2_6','images/arrow_blue.gif','');" onMouseOut="nbMouseoverRestore();" onClick="NavBar_setPLinkIDCookie('1040','');" class="NavBarNum2">The Heart Center</a></td>
+	</tr>
+	<tr class="NavBarNum2">
+		<td class="NavBarNum2" colspan="2" valign="top" align="left" title=""><img src="images/module_spacer.gif" alt=""></td>
+	</tr>
+	<tr>
+		<td width="1%" class="NavBarNum2"  valign="top" align="left" title=""><img src="images/arrow_blue.gif" border="0" alt="Neurosurgery" id="Nav_Bullet_2_7" name="Nav_Bullet_2_7"></td>
+		<td class="NavBarNum2" valign="top" align="left"><a href="body.cfm?id=1042"  onMouseOver="RestoreAll();nbMouseover('Nav_Bullet_2_7','images/arrow_blue.gif','');" onMouseOut="nbMouseoverRestore();" onClick="NavBar_setPLinkIDCookie('1042','');" class="NavBarNum2">Neurosurgery</a></td>
+	</tr>
+</table>		
+				
+			
+<!-- End NavBar Output -->
+		</td>
+	                                </tr>
+	                              </table>
+	                                <table border="0" cellpadding="0" cellspacing="0">
+	                                  <tr>
+	                                    <td valign="top"><img src="images/module_bottom.gif" alt="Centers of Excellence"></td>
+	                                  </tr>
+	                              </table></td>
+	                          </tr>
+	                      </table></td>
+	                    </tr>
+	                    <tr>
+	                      <td align="left" valign="top">&nbsp;</td>
+	                    </tr>
+	                    <tr>
+	                      <td align="left" valign="top"><table border="0" cellpadding="0" cellspacing="0" align="center">
+	                          <tr>
+	                            <td valign="top" align="center"><img src="images/module_top_health.gif" alt="Health Tools"></td>
+	                          </tr>
+	                          <tr>
+	                            <td width="194" valign="top" style="background-image: url(images/module_tile.gif); background-position: top left;"><table border="0" cellpadding="8" cellspacing="0">
+	                                <tr>
+	                                  <td align="left" valign="top">
+			
+<!-- Begin NavBar Bar #3 Content Output... -->
+
+			<table  border="0" cellspacing="0" cellpadding="0" onclick="NavBar_deleteCookie();">
+	<tr>
+		<td width="1%" class="NavBarNum3"  valign="top" align="left" title=""><img src="images/arrow_blue.gif" border="0" alt="IQHealth Login" id="Nav_Bullet_3_1" name="Nav_Bullet_3_1"></td>
+		<td class="NavBarNum3" valign="top" align="left"><a href="https://heartland.iqhealth.com/iqh3/context/hart_mo/"  target="_blank" onMouseOver="RestoreAll();nbMouseover('Nav_Bullet_3_1','images/arrow_blue.gif','');" onMouseOut="nbMouseoverRestore();" onClick="NavBar_setPLinkIDCookie('3097','');" class="NavBarNum3">IQHealth Login</a></td>
+	</tr>
+	<tr class="NavBarNum3">
+		<td class="NavBarNum3" colspan="2" valign="top" align="left" title=""><img src="images/module_spacer.gif" alt=""></td>
+	</tr>
+	<tr>
+		<td width="1%" class="NavBarNum3"  valign="top" align="left" title=""><img src="images/arrow_blue.gif" border="0" alt="For Your Business" id="Nav_Bullet_3_2" name="Nav_Bullet_3_2"></td>
+		<td class="NavBarNum3" valign="top" align="left"><a href="http://www.healthychoiceshealthylives.com/hi_business.html"  target="_blank" onMouseOver="RestoreAll();nbMouseover('Nav_Bullet_3_2','images/arrow_blue.gif','');" onMouseOut="nbMouseoverRestore();" onClick="NavBar_setPLinkIDCookie('2975','');" class="NavBarNum3">For Your Business</a></td>
+	</tr>
+	<tr class="NavBarNum3">
+		<td class="NavBarNum3" colspan="2" valign="top" align="left" title=""><img src="images/module_spacer.gif" alt=""></td>
+	</tr>
+	<tr>
+		<td width="1%" class="NavBarNum3"  valign="top" align="left" title=""><img src="images/arrow_blue.gif" border="0" alt="Cancer Risk Assessment" id="Nav_Bullet_3_3" name="Nav_Bullet_3_3"></td>
+		<td class="NavBarNum3" valign="top" align="left"><a href="http://www.heartland-health.com/body.cfm?id=2834&fr=true"  onMouseOver="RestoreAll();nbMouseover('Nav_Bullet_3_3','images/arrow_blue.gif','');" onMouseOut="nbMouseoverRestore();" onClick="NavBar_setPLinkIDCookie('2865','');" class="NavBarNum3">Cancer Risk Assessment</a></td>
+	</tr>
+	<tr class="NavBarNum3">
+		<td class="NavBarNum3" colspan="2" valign="top" align="left" title=""><img src="images/module_spacer.gif" alt=""></td>
+	</tr>
+	<tr>
+		<td width="1%" class="NavBarNum3"  valign="top" align="left" title=""><img src="images/arrow_blue.gif" border="0" alt="KQ2 Healthy Recipes" id="Nav_Bullet_3_4" name="Nav_Bullet_3_4"></td>
+		<td class="NavBarNum3" valign="top" align="left"><a href="http://www.heartland-health.com/body.cfm?id=16&action=detail&ref=133"  onMouseOver="RestoreAll();nbMouseover('Nav_Bullet_3_4','images/arrow_blue.gif','');" onMouseOut="nbMouseoverRestore();" onClick="NavBar_setPLinkIDCookie('2141','');" class="NavBarNum3">KQ2 Healthy Recipes</a></td>
+	</tr>
+	<tr class="NavBarNum3">
+		<td class="NavBarNum3" colspan="2" valign="top" align="left" title=""><img src="images/module_spacer.gif" alt=""></td>
+	</tr>
+	<tr>
+		<td width="1%" class="NavBarNum3"  valign="top" align="left" title=""><img src="images/arrow_blue.gif" border="0" alt="Universal Medication Form" id="Nav_Bullet_3_5" name="Nav_Bullet_3_5"></td>
+		<td class="NavBarNum3" valign="top" align="left"><a href="body.cfm?id=1989"  onMouseOver="RestoreAll();nbMouseover('Nav_Bullet_3_5','images/arrow_blue.gif','');" onMouseOut="nbMouseoverRestore();" onClick="NavBar_setPLinkIDCookie('1989','');" class="NavBarNum3">Universal Medication Form</a></td>
+	</tr>
+</table>		
+				
+			
+<!-- End NavBar Output -->
+		</td>
+	                                </tr>
+	                              </table>
+	                                <table border="0" cellpadding="0" cellspacing="0">
+	                                  <tr>
+	                                    <td valign="top"><img src="images/module_bottom.gif" alt="Health Tools"></td>
+	                                  </tr>
+	                              </table></td>
+	                          </tr>
+	                      </table></td>
+	                    </tr>
+	                    <tr>
+	                      <td align="left" valign="top">&nbsp;</td>
+	                    </tr>
+	                    <tr>
+	                      <td align="left" valign="top"><table border="0" cellpadding="0" cellspacing="0" align="center">
+	                        <tr>
+ 		                      <td valign="top" align="center"><img src="images/module_top_serving.gif" alt="Serving the Community"></td>
+	                        </tr>
+	                        <tr>
+	                          <td width="194" valign="top" style="background-image: url(images/module_tile.gif); background-position: top left;"><table border="0" cellpadding="8" cellspacing="0">
+	                              <tr>
+	                                <td valign="top" height="100">
+																		
+																		
+																			<p><img src="images/mayo_logo_small_web.jpg" border="0" class="sm6generalwizard" id="thisIcon" /></p>
+<p>Heartland Health is helping to bring Mayo Clinic&rsquo;s knowledge and expertise to our region so you&rsquo;re assured of the finest care.&nbsp;</p>
+<p><a href="body.cfm?id=3009">Read more about this collaboration!</a></p>
+<!--
+<p>The Kansas City Chiefs return to Missouri Western State University in St. Joseph, Mo. for the second-straight summer as the 2011 Kansas City Chiefs Training Camp presented by Heartland Health.</p>
+<p>Unless otherwise announced, all outdoor training camp practices, including this Friday's, will be open to the public and free of charge. MWSU will charge a daily $5 parking fee. Please visit <a href="http://www.kcchiefs.com/news/article-3/DETAILS-AND-SCHEDULE-SET-FOR-2011-KANSAS-CITY-CHIEFS TRAINING-CAMP-PRESENTED-BY-HEARTLAND-HEALTH/410deb4a-ad41-44d4-9e70-df01d046aa95 " _mce_href="http://www.kcchiefs.com/news/article-3/DETAILS-AND-SCHEDULE-SET-FOR-2011-KANSAS-CITY-CHIEFS TRAINING-CAMP-PRESENTED-BY-HEARTLAND-HEALTH/410deb4a-ad41-44d4-9e70-df01d046aa95 " mce_href="http://www.kcchiefs.com/news/article-3/DETAILS-AND-SCHEDULE-SET-FOR-2011-KANSAS-CITY-CHIEFS TRAINING-CAMP-PRESENTED-BY-HEARTLAND-HEALTH/410deb4a-ad41-44d4-9e70-df01d046aa95 " target="_blank">www.kcchiefs.com</a> for a complete training camp schedule, as well as additional camp information.</p>
+<p>All training camp dates, times and practices are subject to change due to weather conditions and other factors. Practices conducted indoors at Missouri Western State University are not open to the public. Fans are strongly encouraged to consult <a href="http://www.kcchiefs.com/news/article-3/DETAILS-AND-SCHEDULE-SET-FOR-2011-KANSAS-CITY-CHIEFS TRAINING-CAMP-PRESENTED-BY-HEARTLAND-HEALTH/410deb4a-ad41-44d4-9e70-df01d046aa95 " _mce_href="http://www.kcchiefs.com/news/article-3/DETAILS-AND-SCHEDULE-SET-FOR-2011-KANSAS-CITY-CHIEFS TRAINING-CAMP-PRESENTED-BY-HEARTLAND-HEALTH/410deb4a-ad41-44d4-9e70-df01d046aa95 " mce_href="http://www.kcchiefs.com/news/article-3/DETAILS-AND-SCHEDULE-SET-FOR-2011-KANSAS-CITY-CHIEFS TRAINING-CAMP-PRESENTED-BY-HEARTLAND-HEALTH/410deb4a-ad41-44d4-9e70-df01d046aa95 " target="_blank">www.kcchiefs.com</a> before making travel plans.</p>
+--><!--
+<p>See how Heartland caregivers are working hard to provide the best and safest medical care to area residents through health improvement events and patient experiences.</p>
+<p><img src="images/blue_arrow.gif" _mce_src="images/blue_arrow.gif" border="0" class="sm6generalwizard" />&nbsp;<a href="body.cfm?id=2881" _mce_href="body.cfm?id=2881" style="text-decoration: none;" _mce_style="text-decoration: none;">Taking care of the Mustangs</a><br /><img src="images/blue_arrow.gif" _mce_src="images/blue_arrow.gif" border="0" class="sm6generalwizard" />&nbsp;<a href="body.cfm?id=2855" _mce_href="body.cfm?id=2855" style="text-decoration: none;" _mce_style="text-decoration: none;">Treating the whole person</a><br /><img src="images/blue_arrow.gif" _mce_src="images/blue_arrow.gif" border="0" class="sm6generalwizard" />&nbsp;<a href="body.cfm?id=2788" _mce_href="body.cfm?id=2788" style="text-decoration: none;" _mce_style="text-decoration: none;">Right on track - Radiology</a> <br /><img src="images/blue_arrow.gif" _mce_src="images/blue_arrow.gif" border="0" class="sm6generalwizard" />&nbsp;<a href="http://www.heartland-health.com/body.cfm?id=2730" _mce_href="http://www.heartland-health.com/body.cfm?id=2730" style="text-decoration: none;" _mce_style="text-decoration: none;">Sidelining discomfort </a><br /><img src="images/blue_arrow.gif" _mce_src="images/blue_arrow.gif" border="0" class="sm6generalwizard" />&nbsp;<a href="http://www.heartland-health.com/body.cfm?id=2655" _mce_href="http://www.heartland-health.com/body.cfm?id=2655" style="text-decoration: none;" _mce_style="text-decoration: none;">Hospice care at Heartland</a><br /><a href="http://www.heartland-health.com/body.cfm?id=2643" _mce_href="http://www.heartland-health.com/body.cfm?id=2643" style="text-decoration: none;" _mce_style="text-decoration: none;"><img src="images/blue_arrow.gif" _mce_src="images/blue_arrow.gif" border="0" class="sm6generalwizard" />&nbsp;The Pound Plunge!</a><br /><a href="http://www.heartland-health.com/body.cfm?id=2626" _mce_href="http://www.heartland-health.com/body.cfm?id=2626" style="text-decoration: none;" _mce_style="text-decoration: none;"><img src="images/blue_arrow.gif" _mce_src="images/blue_arrow.gif" border="0" class="sm6generalwizard" />&nbsp;Right place at the right time</a><br /><a href="http://www.heartland-health.com/body.cfm?id=2608" _mce_href="http://www.heartland-health.com/body.cfm?id=2608" style="text-decoration: none;" _mce_style="text-decoration: none;"><img src="images/blue_arrow.gif" _mce_src="images/blue_arrow.gif" border="0" class="sm6generalwizard" />&nbsp;A Reason to Dance!</a><br /><a href="http://www.heartland-health.com/body.cfm?id=2599" _mce_href="http://www.heartland-health.com/body.cfm?id=2599" style="text-decoration: none;" _mce_style="text-decoration: none;"><img src="images/blue_arrow.gif" _mce_src="images/blue_arrow.gif" border="0" class="sm6generalwizard" />&nbsp;Inspiring Diabetes Story</a><br /><a href="http://www.heartland-health.com/body.cfm?id=2589" _mce_href="http://www.heartland-health.com/body.cfm?id=2589" style="text-decoration: none;" _mce_style="text-decoration: none;"><img src="images/blue_arrow.gif" _mce_src="images/blue_arrow.gif" border="0" class="sm6generalwizard" />&nbsp;Excellence in Health Care at Heartland</a><br /><a href="http://www.heartland-health.com/body.cfm?id=2559" _mce_href="http://www.heartland-health.com/body.cfm?id=2559" style="text-decoration: none;" _mce_style="text-decoration: none;"><img src="images/blue_arrow.gif" _mce_src="images/blue_arrow.gif" border="0" class="sm6generalwizard" />&nbsp;Act FAST - Stroke is an Emergency</a></p>
+-->
+																		
+																		</td>
+	                              </tr>
+	                            </table>
+	                              <table border="0" cellpadding="0" cellspacing="0">
+	                                <tr>
+	                                  <td valign="top"><img src="images/module_bottom.gif" alt="Health Tools"></td>
+	                                </tr>
+	                            </table></td>
+	                        </tr>
+	                      </table></td>
+	                    </tr>
+	                  </table></td>
+	                </tr>
+	              </table>
+				 </td>
+	          </tr>
+	        </table></td>
+	      </tr>
+	    </table></td>
+	    <td align="left" valign="top" style="background-image:url(images/right_tile.gif); background-repeat: repeat-y; background-position: top left;"><img src="images/rightside.jpg" width="27" height="462"></td>
+	  </tr>
+	  <tr>
+	    <td align="left" valign="top"><img src="images/bottom_left.jpg" width="28" height="46"></td>
+	    <td align="center" valign="top" style="background-image:url(images/bottom_middle.jpg); background-repeat:no-repeat; background-position: top left;"><img src="images/module_spacer.gif" width="740" height="6" alt="graphic"><br>
+	    
+			
+<!-- Begin NavBar Bar #4 Content Output... -->
+
+			<table  border="0" cellspacing="0" cellpadding="0" onclick="NavBar_deleteCookie();">
+	<tr class="NavBarNum4">
+		<td class="NavBarNum4" valign="middle" align="center" title=""><a href="http://www.heartland-health.com/vendor"  target="_blank" onClick="NavBar_setPLinkIDCookie('2731','');" class="NavBarNum4">For Vendors</a></td>
+		<td class="NavBarNum4" valign="middle" align="center" title=""><img src="images/footermark.gif" alt=""></td>
+		<td class="NavBarNum4" valign="middle" align="center" title=""><a href="body.cfm?id=1070"  onClick="NavBar_setPLinkIDCookie('1070','');" class="NavBarNum4">EOE</a></td>
+		<td class="NavBarNum4" valign="middle" align="center" title=""><img src="images/footermark.gif" alt=""></td>
+		<td class="NavBarNum4" valign="middle" align="center" title=""><a href="body.cfm?id=1071"  onClick="NavBar_setPLinkIDCookie('1071','');" class="NavBarNum4">Terms of Use</a></td>
+		<td class="NavBarNum4" valign="middle" align="center" title=""><img src="images/footermark.gif" alt=""></td>
+		<td class="NavBarNum4" valign="middle" align="center" title=""><a href="body.cfm?id=1072"  onClick="NavBar_setPLinkIDCookie('1072','');" class="NavBarNum4">Privacy Policy</a></td>
+		<td class="NavBarNum4" valign="middle" align="center" title=""><img src="images/footermark.gif" alt=""></td>
+		<td class="NavBarNum4" valign="middle" align="center" title=""><a href="body.cfm?id=1073"  onClick="NavBar_setPLinkIDCookie('1073','');" class="NavBarNum4">Contact Us</a></td>
+		<td class="NavBarNum4" valign="middle" align="center" title=""><img src="images/footermark.gif" alt=""></td>
+		<td class="NavBarNum4" valign="middle" align="center" title=""><a href="body.cfm?id=96"  onClick="NavBar_setPLinkIDCookie('96','');" class="NavBarNum4">Affiliations</a></td>
+		<td class="NavBarNum4" valign="middle" align="center" title=""><img src="images/footermark.gif" alt=""></td>
+		<td class="NavBarNum4" valign="middle" align="center" title=""><a href="body.cfm?id=2152"  onClick="NavBar_setPLinkIDCookie('2152','');" class="NavBarNum4">Site Index</a></td>
+	</tr>
+</table>		
+				
+			
+<!-- End NavBar Output -->
+		</td>
+	    <td align="left" valign="top"><img src="images/bottom_right.jpg" width="27" height="46"></td>
+	  </tr>
+	</table>
+	<style>
+		table.mainCont1 {padding:0px; width:156px;}
+		th.clTop1 {vertical-align:top; width: 17px;}
+		td.clTop1 {text-align:left; padding:0px; width: 139px;}
+	</style>
+	</body>
+	</html>
+	
+
+ 

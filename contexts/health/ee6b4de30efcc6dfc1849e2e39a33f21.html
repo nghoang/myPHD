@@ -1,0 +1,2216 @@
+<!doctype html>
+<!--[if lt IE 7 ]> <html class="no-js ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]> <html class="no-js ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]> <html class="no-js ie8" lang="en"> <![endif]-->
+<!--[if IE 9 ]> <html class="no-js ie9" lang="en"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+  <head>
+    <title>CVG UK Blog: THQ in grave health - can it survive? - CVG UK</title>
+    <meta charset="iso-8859-1">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width">
+
+<!-- Stylesheets -->
+<link rel="stylesheet" href="http://cdn.static.computerandvideogames.com/css/style.css">
+
+
+
+<!--<link href="http://assets.futurecdn.net/css/future_footer.min.css" rel="stylesheet" type="text/css" >-->
+
+<!-- Modernizr, jQuery + plugins & our own scripts -->
+<script src="http://cdn.static.computerandvideogames.com/scripts/single-min.js"></script>
+
+
+
+<!-- Inskin Media: Ticket EDN-1737 -->
+<script type="text/javascript" src="http://cdn.inskinmedia.com/isfe/publishercode/future/cvgtablet.js"></script>
+
+<script>
+  /** Main nav - defined here instead of .ready so that it
+      becomes usable sooner, instead of waiting for things 
+      like third-party scripts to load... **/    
+  $("header nav li:not(nav .submenu li, nav .sponsored-nav)").live('mouseenter',
+    function () {
+      $("nav ul li.channel-active ul").hide();     
+      $("ul", this).show();
+      $(this).addClass("active");
+    }).live('mouseleave', 
+    function () {
+      $("ul", this).hide();			
+      $(this).removeClass("active");
+      $("nav ul li.channel-active ul").show();
+    }
+  );
+</script>
+
+<!-- Discoverable search widget -->
+<link rel="search" href="/search.xml" type="application/opensearchdescription+xml" title="CVG Game Search">
+
+<!-- Google account association -->
+<meta name="verify-v1" content="o+ppO0eWH1Lai6MCUT47EV89lxehy4+OuKmx7OSFP6Q=">
+
+<!-- Favicon & iOS icon --> 
+<link rel="shortcut icon" href="http://cdn.static.computerandvideogames.com/images/favicons/uk-favicon.gif" />
+<link rel="apple-touch-icon" href="http://cdn.static.computerandvideogames.com/images/favicons/uk-apple-touch-icon.png">
+
+
+
+  <!-- Sets random number for DoubleClick tags -->
+  <script language="JavaScript" type="text/javascript">  
+    ord = Math.round(Math.random() * 1352224195, 0);
+  </script>
+  
+  <!-- Revenue Science tags --> 
+  <script src="http://js.revsci.net/gateway/gw.js?csid=A08721"></script> 
+  <script> 
+    DM_addEncToLoc("channel","all"); 
+    DM_addEncToLoc("section","blog"); 
+    DM_addEncToLoc("genre","Action"); 
+    DM_addEncToLoc("game","Darksiders 2"); 
+    DM_addEncToLoc("publisher","THQ"); 
+    DM_tag(); 
+  </script> 
+  <script type="text/javascript"> 
+    var rsi_segs = []; 
+    var segs_beg = document.cookie.indexOf('rsi_segs='); 
+    if (segs_beg >= 0) { 
+      segs_beg = document.cookie.indexOf('=',segs_beg) + 1; 
+      if (segs_beg > 0) { 
+        var segs_end = document.cookie.indexOf(';',segs_beg); 
+        if (segs_end == -1) { 
+          segs_end = document.cookie.length;
+        } 
+        rsi_segs = document.cookie.substring(segs_beg,segs_end).split('|'); 
+      }
+    } 
+    var segLen = 20;
+    var segQS = ""; 
+    if (rsi_segs.length < segLen) {
+      segLen = rsi_segs.length;
+    } 
+    for (var i=0; i < segLen; i++) { 
+      segQS += ("rsi" + "=" + rsi_segs[i] + ";");
+    } 
+  </script> 
+  
+
+
+
+<script language='JavaScript1.1' type='text/javascript'>
+  function sitestat(ns_l) { 
+    var ns_type = '';
+    var r = ''; 
+    var t = '?'; 
+    var p = new Array();
+    var w = '';
+    var l = '';
+    var d = document;
+    var n = navigator;
+    var ns_0 = '';
+    if (top != self) {
+      if ('\u0041' == 'A') {
+        var u = n.userAgent;
+        if (u.indexOf('Safari') == -1) {
+          var b = u.indexOf('Opera');
+          if (b == -1 || (u.charAt(b + 6) + 0) > 5) {
+            b = u.indexOf('Mozilla');
+            var xb = b != -1 ? u.charAt(b + 8) > 4 : 1;
+            if (u.indexOf('compatible') != -1 || xb) {
+              var c = 'try{ns_0=top.document.referrer}catch(e){}';
+              eval(c);
+              c = 'try{l=top.document.location.href}catch(e){}';
+              eval(c);
+            }
+          }
+        }
+      }
+    } else {
+      ns_0 = d.referrer;
+      l = d.location.href;
+    }
+    if (ns_0.lastIndexOf('/') == ns_0.length - 1) {
+      ns_0 = ns_0.substring(ns_0.lastIndexOf('/'), 0);
+    }
+    var f = ns_l.indexOf('?');
+    if (f != -1) {
+      var q = ns_l.substring(f + 1);
+      ns_l = ns_l.substring(0, f);
+      if (q) {
+        var m = q.indexOf('&');
+        w = q.substring(0, m == -1 ? q.length : m);
+        if (w.indexOf('=') != -1) {
+          w = '';
+        }
+        if (w) {
+          q = q.substring(m == -1 ? q.length : m + 1);
+          q += (q ? '&' : '') + 'ns_name=' + w;
+        }
+        if (ns_0.length > 0) {
+          q += (q ? '&' : '') + 'ns_referrer=' + escape(ns_0);
+        }
+        var s = 0;
+        var e = 0;
+        while (q.length) {
+          e = q.indexOf('&');
+          if (e == -1) {
+            e = q.length;
+          }
+          var o = q.substring(s, e);
+          if (o.substring(0, 4) == 'amp;') {
+            o = o.substring(4);
+          }
+          if (o) p[p.length] = o;
+          q = q.substring(e + 1);
+        }
+      }
+    }
+    var a = l.indexOf(t);
+    a = a == -1 ? 0 : l.substring(a + 1);
+    var j;
+    if (r == 'yes') j = ns_0.length;
+    else if (r == 'no') j = !ns_0.length;
+    else if (r == '') j = 1;
+    if (a && j) {
+      while (a.length) {
+        var e = a.indexOf('&');
+        if (e == -1) {
+          e = a.length;
+        }
+        var k = a.substring(0, a.substring(0, e).indexOf('='));
+        var v = a.substring(a.substring(0, e).indexOf('=') + 1, e);
+        if (
+        k.substring(0, 4) == 'amp;') {
+          k = k.substring(4);
+        }
+        while (v.substring(0, 1) == '=') {
+          v = v.substring(1);
+        }
+        if (k == 'ns_name') {
+          w = v;
+        } else if (k == 'ns_or') {
+          var g = 'ns_referrer=';
+          for (var z = 0; z < p.length; z++) {
+            if (p[z].substring(0, g.length) == g) {
+              p[z] = 'ns_referrer=' + v;
+            }
+          }
+        } else {
+          if (k.substring(0, 3) == 'ns_' && v && k) {
+            var h = 0;
+            for (var x = 0; x < p.length; x++) {
+              if (p[x].substring(0, p[x].indexOf('=')) == k) {
+                p[x] = k + "=" + v;
+                h = 1
+              }
+            }
+            if (!h) {
+              p[p.length] = k + "=" + v;
+            }
+          }
+        }
+        a = a.substring(e + 1);
+      }
+    }
+    if (!w) {
+      return;
+    }
+    var s = '';
+    var y = '';
+    for (var i = 0; i < p.length; i++) if (p[i].substring(0, 8) != 'ns_name=') {
+      if (p[i].substring(0, 12) != 'ns_referrer=') {
+        s += '&' + p[i];
+      } else {
+        y = '&' + p[i];
+      }
+    }
+    s += ns_type ? '&ns_type=' + ns_type + '&ns_action=view' : '';
+    ns_pixelUrl = ns_l + '?' + w + "&ns__t=" + (
+    new Date()).getTime();
+    ns_l = ns_pixelUrl + s + y;
+    if (d.images) {
+      ns_1 = new Image();
+      ns_1.src = ns_l;
+    } else {
+      d.write('<img src=' + ns_l + ' width="1" height="1">');
+    }
+  }
+  sitestat("http://uk.sitestat.com/future/cvg/s?uk.all.all.blog.article.thq-in-grave-health-can-it-survive-.06-11-2012.page&amp;fp_outbrain=true&amp;fp_article_id=377000&amp;fp_postdate=06-11-2012&amp;fp_author=rob-crossley&amp;category=Blog&amp;fp_game_names=Darksiders-2&amp;fp_game_platform=Xbox-360&amp;fp_game_publisher=THQ&amp;fp_game_genre=Action&amp;fp_li=false");
+//  alert("Sitestat Tracking Data\n\ntag: uk.all.all.blog.article.thq-in-grave-health-can-it-survive-.06-11-2012.page&amp;fp_outbrain=true&amp;fp_article_id=377000&amp;fp_postdate=06-11-2012&amp;fp_author=rob-crossley&amp;category=Blog&amp;fp_game_names=Darksiders-2&amp;fp_game_platform=Xbox-360&amp;fp_game_publisher=THQ&amp;fp_game_genre=Action&amp;fp_li=false");
+</script>
+
+
+
+
+<!-- Rendered on: 1352224195 -->    
+    
+<link rel="canonical" href="http://www.computerandvideogames.com/377000/blog/thq-in-grave-health-can-it-survive/" />
+
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://www.computerandvideogames.com/377000/blog/thq-in-grave-health-can-it-survive/" />
+<meta property="og:title" content="THQ in grave health - can it survive?" />
+<meta property="og:description" content="BLOG: The crestfallen publisher has little room to manoeuvre, writes CVG&#039;s Rob Crossley" />
+<meta property="og:image" content="http://cdn.medialib.computerandvideogames.com/screens/screenshot_288032_thumb_wide300.jpg" />
+
+<meta name="description" content="CVG UK blog: THQ in grave health - can it survive?" />
+
+<script>
+  var res_shots = new Array();
+  var res_ids = new Array();                
+  var takeover_style = 'article';
+</script>
+    
+    
+  </head>
+  <body id="uk">
+    
+<noscript>
+  <img style="display: none;" src="http://uk.sitestat.com/future/cvg/s?uk.all.all.blog.article.thq-in-grave-health-can-it-survive-.06-11-2012.page&amp;fp_outbrain=true&amp;fp_article_id=377000&amp;fp_postdate=06-11-2012&amp;fp_author=rob-crossley&amp;category=Blog&amp;fp_game_names=Darksiders-2&amp;fp_game_platform=Xbox-360&amp;fp_game_publisher=THQ&amp;fp_game_genre=Action&amp;fp_li=false" width="1" height="1" alt="">
+</noscript>
+
+    
+    <a name="top"></a>    
+    
+    <div id="bg" onClick="handle_background_click();"></div>
+
+    <div id="region_popup" class="modal" style="display:none;">
+
+    <a href="#" class="close"><span>Close</span></a>
+  
+    <h2>Welcome to CVG UK!</h2>
+    <p>We've automatically given you this version of CVG based on your network location. If you'd prefer to read a different version of CVG instead, please pick one below:</p>
+
+    <ul class="region-switch region-switch-alt group">
+      
+      <li id="cvg" class=""><a href="/cvg/377000/blog/thq-in-grave-health-can-it-survive/" title="View CVG International"><span></span>CVG International</a></li>
+      
+      <li id="aus" class=""><a href="/aus/377000/blog/thq-in-grave-health-can-it-survive/" title="View CVG Australia"><span></span>CVG Australia</a></li>
+         
+    </ul>
+    
+    <p><em>You can always change your location at a later date using the icons in the top left corner.</em></p>
+    
+</div>
+
+    
+    <!-- _CONTAINER START_ -->
+    <div id="container">
+
+      <!-- _HEADER START_ -->
+      <header class="main-bg-grad group">
+              
+        
+
+
+
+
+
+
+
+
+
+
+
+
+<a href="/uk/" class="logo" id="logo-uk">CVG UK</a>
+
+              
+        <div id="userbar">
+
+  
+  <div id="userbar-default" class="group">
+    <ul class="region-switcher region-switch group">
+
+    <li id="mobile" class=""><a href="http://m.computerandvideogames.com/377000/blog/thq-in-grave-health-can-it-survive/" title="View CVG on your mobile device"><span>Mobile</span></a></li>
+
+    <li id="cvg" class=""><a href="/cvg/377000/blog/thq-in-grave-health-can-it-survive/" title="View CVG International"><span>International</span></a></li>
+
+    <li id="uk" class="region-switch-selected"><a href="/uk/377000/blog/thq-in-grave-health-can-it-survive/" title="View CVG United Kingdom"><span>UK</span></a></li>
+
+    <li id="aus" class=""><a href="/aus/377000/blog/thq-in-grave-health-can-it-survive/" title="View CVG Australia"><span>AUS</span></a></li>
+ 
+</ul>
+  
+    <p id="userbar-welcome">Sign up to access exclusive gaming content, win prizes and post on our forums.</p>
+    <p id="userbar-options">      
+      <a href="https://www.computerandvideogames.com/user/login?r=/377000/blog/thq-in-grave-health-can-it-survive/" href-ajax="http://www.computerandvideogames.com/user/login?" r-ajax="/377000/blog/thq-in-grave-health-can-it-survive/" id="login_ajax_trigger" class="community" rel="#user-login">Log in</a> or
+      <a href="https://www.computerandvideogames.com/user/register?r=/377000/blog/thq-in-grave-health-can-it-survive/" href-ajax="http://www.computerandvideogames.com/user/register?" r-ajax="/377000/blog/thq-in-grave-health-can-it-survive/" id="register_ajax_trigger" class="community" rel="#user-register">Join</a>
+    </p>
+    
+  </div>
+  
+
+  
+
+</div>
+      
+        <nav class="alt-bg-grad">
+  <ul class="group">
+    
+    <li             
+      
+       id="selected-all" class="channel-active first-nav-item"
+      
+      
+      
+      
+              
+      >
+        
+        <a href="/homepage.php?" class="toplevel alt-bg-grad"  >All</a>
+        
+        
+        
+        <ul class="submenu">
+          
+          <li 
+                        
+            
+            >
+            <a href="/news.php?"  >News</a>
+          </li>
+          
+          <li 
+                        
+            
+            >
+            <a href="/reviews.php?"  >Reviews</a>
+          </li>
+          
+          <li 
+                        
+            
+            >
+            <a href="/previews.php?"  >Previews</a>
+          </li>
+          
+          <li 
+                        
+            
+            >
+            <a href="/features.php?"  >Features</a>
+          </li>
+          
+          <li 
+                        
+            
+            >
+            <a href="/interviews.php?"  >Interviews</a>
+          </li>
+          
+          <li 
+                        
+            
+            >
+            <a href="/blog?"  >Blog</a>
+          </li>
+          
+          <li 
+                        
+            
+            >
+            <a href="/competitions.php?"  >Competitions</a>
+          </li>
+          
+          <li 
+                        
+            
+            >
+            <a href="/game_archive.php?"  >Game A to Z</a>
+          </li>
+          
+          <li 
+                        
+            
+            >
+            <a href="/feeds/"  >Feeds</a>
+          </li>
+                      
+        </ul>
+          
+    </li>
+    
+    <li             
+      
+      
+      
+      
+      
+      
+              
+      >
+        
+        <a href="/videos/?side=latest" class="toplevel alt-bg-grad"  >Video</a>
+        
+        
+        
+        <ul class="submenu">
+          
+          <li 
+                        
+            
+            >
+            <a href="/videos/?side=latest"  >Latest video</a>
+          </li>
+          
+          <li 
+                        
+            
+            >
+            <a href="/videos/?side=related"  >Related video</a>
+          </li>
+          
+          <li 
+                        
+            
+            >
+            <a href="/videos/?side=choice"  >Featured video</a>
+          </li>
+          
+          <li 
+                        
+            
+            >
+            <a href="/videos/?side=views"  >Popular</a>
+          </li>
+          
+          <li 
+                        
+            
+            >
+            <a href="/videos/all/trailer"  >Game trailers</a>
+          </li>
+          
+          <li 
+                        
+            
+            >
+            <a href="/videos/all/gameplay"  >Gameplay footage</a>
+          </li>
+          
+          <li 
+                        
+            
+            >
+            <a href="/videos/all/interviews"  >Video interviews</a>
+          </li>
+          
+          <li 
+                        
+            
+            >
+            <a href="/videos/all/cinematic"  >Cinematics</a>
+          </li>
+                      
+        </ul>
+          
+    </li>
+    
+    <li             
+      
+      
+      
+      
+      
+      
+              
+      >
+        
+        <a href="/channel.php?channel=xbox" class="toplevel alt-bg-grad"  >Xbox</a>
+        
+        
+        
+        <ul class="submenu">
+          
+          <li 
+                        
+            
+            >
+            <a href="/news.php?channel=xbox"  >Xbox News</a>
+          </li>
+          
+          <li 
+                        
+            
+            >
+            <a href="/reviews.php?channel=xbox"  >Xbox Reviews</a>
+          </li>
+          
+          <li 
+                        
+            
+            >
+            <a href="/previews.php?channel=xbox"  >Xbox Previews</a>
+          </li>
+          
+          <li 
+                        
+            
+            >
+            <a href="/features.php?channel=xbox"  >Xbox Features</a>
+          </li>
+          
+          <li 
+                        
+            
+            >
+            <a href="/interviews.php?channel=xbox"  >Xbox Interviews</a>
+          </li>
+          
+          <li id="menu-link-oxm"
+                        
+            
+            xbox class="divider"
+            
+            >
+            <a href="http://www.oxm.co.uk" target="_blank" title="Official Xbox Magazine">OXM</a>
+          </li>
+          
+          <li id="menu-link-xbw"
+                        
+            
+            xbox class="divider"
+            
+            >
+            <a href="/sites/xboxworld/" target="_blank" title="Xbox World Magazine">Xbox World Magazine</a>
+          </li>
+                      
+        </ul>
+          
+    </li>
+    
+    <li             
+      
+      
+      
+      
+      
+      
+              
+      >
+        
+        <a href="/channel.php?channel=playstation" class="toplevel alt-bg-grad"  >PlayStation</a>
+        
+        
+        
+        <ul class="submenu">
+          
+          <li 
+                        
+            
+            >
+            <a href="/news.php?channel=playstation"  >PlayStation News</a>
+          </li>
+          
+          <li 
+                        
+            
+            >
+            <a href="/reviews.php?channel=playstation"  >PlayStation Reviews</a>
+          </li>
+          
+          <li 
+                        
+            
+            >
+            <a href="/previews.php?channel=playstation"  >PlayStation Previews</a>
+          </li>
+          
+          <li 
+                        
+            
+            >
+            <a href="/features.php?channel=playstation"  >PlayStation Features</a>
+          </li>
+          
+          <li 
+                        
+            
+            >
+            <a href="/interviews.php?channel=playstation"  >PlayStation Interviews</a>
+          </li>
+          
+          <li 
+                        
+            
+            >
+            <a href="/playstation-3/games/9780/playstation-network/"  >PSN</a>
+          </li>
+          
+          <li id="menu-link-psm"
+                        
+            
+            playstation class="divider"
+            
+            >
+            <a href="/sites/psm/" target="_blank" >PSM3</a>
+          </li>
+                      
+        </ul>
+          
+    </li>
+    
+    <li             
+      
+      
+      
+      
+      
+      
+              
+      >
+        
+        <a href="/channel.php?channel=nintendo" class="toplevel alt-bg-grad"  >Nintendo</a>
+        
+        
+        
+        <ul class="submenu">
+          
+          <li 
+                        
+            
+            >
+            <a href="/news.php?channel=nintendo"  >Nintendo News</a>
+          </li>
+          
+          <li 
+                        
+            
+            >
+            <a href="/reviews.php?channel=nintendo"  >Nintendo Reviews</a>
+          </li>
+          
+          <li 
+                        
+            
+            >
+            <a href="/previews.php?channel=nintendo"  >Nintendo Previews</a>
+          </li>
+          
+          <li 
+                        
+            
+            >
+            <a href="/features.php?channel=nintendo"  >Nintendo Features</a>
+          </li>
+          
+          <li 
+                        
+            
+            >
+            <a href="/interviews.php?channel=nintendo"  >Nintendo Interviews</a>
+          </li>
+          
+          <li id="menu-link-onm"
+                        
+            
+            nintendo class="divider"
+            
+            >
+            <a href="http://www.officialnintendomagazine.co.uk" target="_blank" >ONM</a>
+          </li>
+          
+          <li id="menu-link-ngm"
+                        
+            
+            nintendo class="divider"
+            
+            >
+            <a href="http://www.nintendo-gamer.net" target="_blank" >NGamer</a>
+          </li>
+                      
+        </ul>
+          
+    </li>
+    
+    <li             
+      
+      
+      
+      
+      
+      
+              
+      >
+        
+        <a href="/channel.php?channel=pc" class="toplevel alt-bg-grad"  >PC</a>
+        
+        
+        
+        <ul class="submenu">
+          
+          <li 
+                        
+            
+            >
+            <a href="/news.php?channel=pc"  >PC News</a>
+          </li>
+          
+          <li 
+                        
+            
+            >
+            <a href="/reviews.php?channel=pc"  >PC Reviews</a>
+          </li>
+          
+          <li 
+                        
+            
+            >
+            <a href="/previews.php?channel=pc"  >PC Previews</a>
+          </li>
+          
+          <li 
+                        
+            
+            >
+            <a href="/features.php?channel=pc"  >PC Features</a>
+          </li>
+          
+          <li 
+                        
+            
+            >
+            <a href="/interviews.php?channel=pc"  >PC Interviews</a>
+          </li>
+          
+          <li id="menu-link-pcg"
+                        
+            
+            pc class="divider"
+            
+            >
+            <a href="http://www.pcgamer.com" target="_blank" >PC Gamer</a>
+          </li>
+                      
+        </ul>
+          
+    </li>
+    
+    <li             
+      
+      
+      
+      
+      
+      
+              
+      >
+        
+        <a href="http://forums.computerandvideogames.com/" class="toplevel alt-bg-grad"  >Forums</a>
+        
+        
+        
+        <ul class="submenu">
+          
+          <li 
+                        
+            
+            >
+            <a href="http://forums.computerandvideogames.com/viewforum.php?f=4"  >Xbox forums</a>
+          </li>
+          
+          <li 
+                        
+            
+            >
+            <a href="http://forums.computerandvideogames.com/viewforum.php?f=2"  >PlayStation forums</a>
+          </li>
+          
+          <li 
+                        
+            
+            >
+            <a href="http://forums.computerandvideogames.com/viewforum.php?f=3"  >Nintendo forums</a>
+          </li>
+          
+          <li 
+                        
+            
+            >
+            <a href="http://forums.computerandvideogames.com/viewforum.php?f=1"  >PC forums</a>
+          </li>
+          
+          <li 
+                        
+            
+            >
+            <a href="http://forums.computerandvideogames.com/viewforum.php?f=13"  >Off Topic forum</a>
+          </li>
+                      
+        </ul>
+          
+    </li>
+    
+    <li             
+      
+      
+      
+      
+      
+      >
+      <a href="http://computerandvideogames.pricerunner.com/"   class="toplevel alt-bg-grad">Store</a>
+      
+      
+          
+    </li>
+    
+    <li             
+      
+      
+       class="last-nav-item"
+      
+      
+      >
+      <a href="http://www.computerandvideogames.com/games/?ns_campaign=Other_bigpoint-cvg&ns_mchannel=ref&ns_source=cvg&ns_linkname=nav&ns_fee=0"   class="toplevel alt-bg-grad">Free Games</a>
+      
+      
+          
+    </li>
+    
+    <!--<li class="sponsored-nav"><a href="TARGET URL" target="_blank" title="TITLE"><img src="IMAGE SRC" alt="IMAGE DESC" width="80" height="30" /></a></li>-->
+  </ul>
+</nav>
+<script>
+  $("header nav ul li.channel-active ul").show();
+</script>
+      
+        <div id="search-plus-news" class="group">
+        
+          <form id="search" method="get" action="/search.php?">
+            <input type="text" id="search-query" name="query" class="text" placeholder="Search for a game" /> <input type="submit" id="button-search" class="button alt-bg-grad" value="Search" />
+          </form>
+          
+          <div id="trending-bar" class="group">
+  <span>Trending now</span>
+  
+  <a href="/xbox-360/action/11195/grand-theft-auto-v/">Grand Theft Auto V</a>
+  
+  <a href="/xbox-360/action/11653/halo-4/">Halo 4</a>
+  
+  <a href="/apple-ios/games/12889/curiosity/">Curiosity</a>
+  
+  <a href="/xbox-360/rpg/11917/elder-scrolls-v-skyrim/">Elder Scrolls V: Skyrim</a>
+  
+  <a href="/xbox-360/fps/12566/call-of-duty-black-ops-2/">Call of Duty: Black Ops 2</a>
+  
+  <a href="/nintendo-wii-u/games/12079/wii-u/">Wii U</a>
+  
+  <a href="/xbox-360/action/11406/httpwwwcomputerandvideogamescom338316assassins-creed-3-first-details-new-hero-is-connor-not-all-english-are-evil/">Assassin's Creed 3</a>
+  
+  <a href="/playstation-3/survival-horror/12764/dead-island-riptide/">Dead Island: Riptide</a>
+  
+</div>
+          
+          
+        </div>
+         
+      </header>
+      <!-- _HEADER END_ -->
+      
+
+      <!-- _BANNER START_ -->
+      <div id="promo-h" class="group">
+        <div id="promo-h-wrapper">
+          <a name="top_banner"></a>
+          <div id="promo-h-clickable" onClick="handle_background_click();"></div>
+          <div id="promo-h-content">
+
+            
+
+
+<script language="JavaScript" type="text/javascript">
+  document.write('<script language="JavaScript" src="http://ad.doubleclick.net/adj/fut.gb.cvg/xbox.blog;article=377000;product=12265;publisher=107;genre=18;format=66;format=3;format=45;format=46;mag=uk;tile=1;sz=728x90;' + segQS + ';ord=' + ord + '?" type="text/javascript"><\/script>');
+</script><noscript><a href="http://ad.doubleclick.net/jump/fut.gb.cvg/xbox.blog;article=377000;product=12265;publisher=107;genre=18;format=66;format=3;format=45;format=46;mag=uk;tile=1;sz=728x90;ord=123456789?" target="_blank"><img src="http://ad.doubleclick.net/ad/fut.gb.cvg/xbox.blog;article=377000;product=12265;publisher=107;genre=18;format=66;format=3;format=45;format=46;mag=uk;tile=1;sz=728x90;ord=123456789?" width="728" height="90" border="0" alt=""></a></noscript>
+
+
+
+
+
+
+
+
+
+
+
+
+          </div>        
+        </div>
+      </div>
+      <!-- _BANNER END_ -->
+      
+      <!-- _WRAPPER START_ -->
+      <div id="wrapper" class="group">
+        
+        <div id="channel-branding"></div>
+        
+        <!--[if lt IE 7]>
+          <div id="ie6-alert" class="group">
+          
+            <div class="ie6-alert-message">
+              <span class="icon-alert"></span>
+              <h6>You are using an outdated browser!</h6>
+              <p>For a better experience using this site, please upgrade to a modern web browser.</p>
+            </div>
+            
+            <div class="ie6-alert-browsers">
+              <a class="icon-browser b-ff" href="http://getfirefox.com" target="_blank">Firefox</a>
+              <a class="icon-browser b-ch" href="http://www.google.com/chrome" target="_blank">Chrome</a>
+              <a class="icon-browser b-op" href="http://www.opera.com" target="_blank">Opera</a>
+              <a class="icon-browser b-sf" href="http://www.apple.com/safari/" target="_blank">Safari</a>
+            </div>
+            
+          </div>
+        <![endif]-->
+        
+            
+
+<!-- _MAIN PAGE START_ -->
+<section id="main" class="group" role="main" >
+  
+  <meta itemprop="url" content="http://www.computerandvideogames.com/377000/blog/thq-in-grave-health-can-it-survive/">
+  <meta itemprop="name" content="Darksiders 2">
+  
+  <!-- Content Strip starts -->
+  
+  
+  <nav class="breadcrumbs">
+  <ul class="group">
+
+    
+    <li><a href="/uk/">CVG UK Home</a>
+     / 
+    </li>
+    
+    <li><a href="/blog.php?">Blog</a>
+    
+    </li>
+    
+
+  </ul>
+</nav>
+  
+
+  
+
+<article class="single ">      
+  
+  
+  
+         
+
+  <span class="datestamp">Posted on 6-Nov-2012 2:25 PM GMT</span>
+
+  
+  <hgroup style="">
+    <h1 class="instapaper_title">THQ in grave health - can it survive?</h1>
+    
+  </hgroup>
+  
+  
+  
+  <aside class="sharing group">
+  
+    <h6>Share</h6>
+  
+    <div class="share-facebook">
+      <iframe src="http://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fwww.computerandvideogames.com%2F377000%2Fblog%2Fthq-in-grave-health-can-it-survive%2F&amp;layout=button_count&amp;show_faces=false&amp;width=100&amp;action=like&amp;colorscheme=light&amp;height=24" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:100px; height:24px;" allowTransparency="true"></iframe>
+    </div>
+    
+    <div class="share-twitter">
+      <a href="http://twitter.com/share" class="twitter-share-button" data-count="horizontal" data-related="CVG_UK" data-text="THQ in grave health - can it survive?">Tweet</a>
+      <script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>      
+    </div>
+    
+    <div class="share-plus1">
+      <div class="g-plusone" data-size="medium"></div>
+    </div>
+    
+    <div class="share-reddit">
+      <script type="text/javascript">
+      reddit_url="http://www.computerandvideogames.com/377000/blog/thq-in-grave-health-can-it-survive/";
+      reddit_title="THQ in grave health - can it survive?";
+      reddit_target="gaming";
+      </script>
+      <script type="text/javascript" src="http://www.reddit.com/static/button/button1.js"></script>
+    </div>
+    
+    <div class="share-misc">
+
+      <a href="#" title="More sharing options" class="share-misc-extras-toggle button button-minor button-minor-alt button-community community-bg-grad">+</a>
+    
+      <div class="share-misc-extras">
+
+        <a class="share-site share-n4g" target="_blank" href="http://n4g.com/tips?url=http%3A%2F%2Fwww.computerandvideogames.com%2F377000%2Fblog%2Fthq-in-grave-health-can-it-survive%2F&title=THQ+in+grave+health+-+can+it+survive%3F">Submit Article To N4G</a>
+        <!--<a class="share-site share-reddit" target="_blank" href="http://reddit.com/submit?url=http%3A%2F%2Fwww.computerandvideogames.com%2F377000%2Fblog%2Fthq-in-grave-health-can-it-survive%2F&title=THQ+in+grave+health+-+can+it+survive%3F">Submit Article To Reddit</a>-->
+        <a class="share-site share-delicious" target="_blank" href="http://del.icio.us/post?v=4&amp;noui&amp;jump=close&amp;url=http%3A%2F%2Fwww.computerandvideogames.com%2F377000%2Fblog%2Fthq-in-grave-health-can-it-survive%2F">Submit Article To del.icio.us</a>
+        <a class="share-site share-digg" target="_blank" href="http://digg.com/submit?phase=2&amp;url=http%3A%2F%2Fwww.computerandvideogames.com%2F377000%2Fblog%2Fthq-in-grave-health-can-it-survive%2F&title=THQ+in+grave+health+-+can+it+survive%3F">Submit Article To Digg</a>
+        <a class="share-site share-su" target="_blank" href="http://www.stumbleupon.com/submit?url=http%3A%2F%2Fwww.computerandvideogames.com%2F377000%2Fblog%2Fthq-in-grave-health-can-it-survive%2F&title=THQ+in+grave+health+-+can+it+survive%3F">Submit Article To StumbleUpon</a>
+        
+        <a href="#" class="share-site share-misc-extras-toggle">Close</a>
+      
+      </div>
+
+    </div>
+    
+    
+    <div class="share-comments"> <a href="#comments" title="comments" class="comments-micro community-bg-grad"><span></span>Comments <b>6</b></a> </div>
+    
+    
+    
+  </aside>
+   
+  
+  
+  
+  
+  
+  <div class="article-content instapaper_body group">
+
+    
+    <div itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <p class="byline byline-alt">By <span itemprop="name">Rob Crossley</span> for <span class="byline-alt-source"><a href="/uk/" class="base-uk" target="">CVG UK</a> <span class="byline-source-subscribe"></span></span></p>
+      <meta itemprop="url" content="http://www.computerandvideogames.com/by/335/rob-crossley/">
+    </div>
+      
+    
+    
+    
+    <div itemprop="articleBody">
+      <p class="article-intro">BLOG: The crestfallen publisher has little room to manoeuvre, writes CVG's Rob Crossley</p>
+<p><figure class="article-image article-image-alt article-image-300"><a href="/viewer.php?mode=article&id=288032"><img src="http://cdn.medialib.computerandvideogames.com/screens/screenshot_288032_thumb_wide300.jpg" alt="Darksiders 2 Screenshot" title="Darksiders 2 Screenshot" /></a></figure> Skies have darkened above THQ once again. Its financial call last night began on a positive note but it took less than five minutes for the mask to slip.</p>
+<p>Investors were warned that the company was not in a position to predict its financial future (as is customary in financial calls), while executives decided against taking questions from the press. It was a disastrous decision at a time when THQ itself has admitted it has no room for mistakes.</p>
+<p>There is no disputing that the publisher is now in desperate need for cash to avoid a renewed threat of bankruptcy. With just $36 million remaining in its cash reserves, coupled with difficulties in securing significant credit, one suspects that the priority option is a buyout from a bigger company. I don't personally believe this will happen.</p>
+<p>THQ's market value is down to $20.69 million, yet the bargain-bin price is only half the story. A genuine question is whether another company would even take on THQ for free.</p>
+<p>Consider that THQ is still straddled with huge debts despite undergoing a very painful cost-cutting operation. Consider that anyone who would buy the firm would have to deal with the restructuring, the debts, the burden of managing new development and publishing teams, as well as all the risk packaged with that.</p>
+<p>And the timing couldn't be worse; the entire games publishing sector has never been more afraid to take risks. THQ has the unenviable task of displaying itself in the shop window during a time of corporate austerity and end-of-cycle declines.</p>
+<p>More common in the games business is for companies to wait for rivals to collapse before stripping them of their assets at a huge discount. THQ has the IP to make this strategy attractive.</p>
+<p>We all know of the embarrassing stories associated with THQ in recent years: The wild investments in exorbitant projects that barely entered production, the cold and empty office space it bought in Canada, the Herculean failure of uDraw.</p>
+<p>But there's nothing so amusing about THQ's more recent failures. The sound strategy of producing a quality game (Darksiders 2) and marketing it fairly well has not paid off this time - the game has shipped 1.4 million units into retail and is not expected to turn a profit. Perhaps the desirability of the IP was weaker than some had hoped.</p>
+<p>With cash reserves of just $36 million and the intensifying difficulties finding credit, THQ finds itself in a catch-22 situation. It must either spend money it doesn't have right now for next-gen triple-A projects, or otherwise enter the new cycle without a competitive line-up of software.</p>
+<p>The commercial response to its next three games - all of which have been delayed -could be vital in determining whether the crestfallen company can inspire confidence once again.</p>
+ 
+    </div>
+    
+    
+    
+  </div>
+
+  
+    
+  
+  
+  
+  
+
+    
+  
+  
+  <div class="byline" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+  
+    <div class="byline-source">
+      <a href="/uk/" class="base-uk" target="" >CVG UK</a>
+    </div>
+    <div class="byline-author has-image group">
+      <a href='/by/335/rob-crossley/' title='Read more articles by Rob Crossley'><img itemprop='image' src='http://cdn.medialib.computerandvideogames.com/author_pics/rob_crossley_new.jpg' width='40' height='40' alt='Rob Crossley' /></a>
+      <h5><a href="/by/335/rob-crossley/" title="Read more articles by Rob Crossley" itemprop="name">Rob Crossley</a></h5>
+      <h6>Associate Editor</h6>
+      <meta itemprop="url" content="http://www.computerandvideogames.com/by/335/rob-crossley/">
+      <div class="byline-author-bio" itemprop="description"><p>Rob has worked in journalism since 2006 across a range of newspapers, magazines and websites. He joined CVG as Associate Editor in May 2012.<a href='/by/335/rob-crossley/'>Read more</a></p></div>
+    </div>
+  
+  </div>  
+  
+  
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+<div id="outbrain-container">
+  <h6>Recommended Links</h6>
+  <script type="text/javascript">
+    var OB_Template='computerandvideogames';
+    var OB_widgetId= 'AR_1';
+    var OB_permalink= 'OUTBRAIN_ARTICLE_URL';
+    if ( typeof(OB_Script)!='undefined' )
+    OutbrainStart();
+    else
+    {
+    var OB_Script = true;
+    document.write(unescape("%3Cscript src=\'http://widgets.outbrain.com/outbrainWidget.js\' type=\'text/javascript\'%3E%3C/script%3E"));
+    }
+  </script>
+  <h6>From The Web</h6>
+  <script type="text/javascript">
+    var OB_Template='computerandvideogames';
+    var OB_widgetId= 'AR_2';
+    var OB_permalink= 'OUTBRAIN_ARTICLE_URL';
+    if ( typeof(OB_Script)!='undefined' )
+    OutbrainStart();
+    else
+    {
+    var OB_Script = true;
+    document.write(unescape("%3Cscript src=\'http://widgets.outbrain.com/outbrainWidget.js\' type=\'text/javascript\'%3E%3C/script%3E"));
+    }
+  </script> 
+</div>
+
+
+
+  
+</article>
+
+<!-- Hidden -->
+<div style="display: none;">
+
+    
+  
+</div>
+<!-- Hidden -->
+
+
+
+
+
+
+    
+          <a name="comments"></a>
+        <div id="comments">
+        
+          <h4 class="topper community-bg-grad">Comments</h4>
+          
+          <p class="comment-totals">
+          6 comments so far...
+          
+          </p>
+          
+          <ul class="comment-options group">
+            <li><a href="http://forums.computerandvideogames.com/posting.php?mode=reply&f=21&t=143803" class="button button-more button-more-alt button-community community-bg-grad">Post a comment <span></span></a></li>            
+          </ul>
+         
+          
+          <div id="comments-paginate">
+         
+            <div class="pagination"></div>
+           
+            <ol id="comments-list">
+            
+              
+              <li class="group ">
+              
+                <div class="user-icon">
+                  
+                </div>
+                
+                
+                
+                
+                <div class="comment-options">
+                  <a class="comment-report" href="http://forums.computerandvideogames.com/report.php?mode=quote&f=21&p=2216852" title="Report this post">Report this post</a>
+                  <a class="comment-quote" href="http://forums.computerandvideogames.com/posting.php?mode=quote&f=21&p=2216852" title="Reply with quote">Reply with quote</a>
+                </div>
+                
+                
+                
+                <h6><a href="http://forums.computerandvideogames.com/memberlist.php?mode=viewprofile&u=204459" class="community">adgr19</a> on 6 Nov '12 said:</h6>
+                <p>they have a few pretty strong games coming so i think they'll be fine.  I just hope someone larger doesn't swallow them up in the mean time.</p>
+              </li>
+              
+              <li class="group ">
+              
+                <div class="user-icon">
+                  
+                </div>
+                
+                
+                
+                
+                <div class="comment-options">
+                  <a class="comment-report" href="http://forums.computerandvideogames.com/report.php?mode=quote&f=21&p=2216855" title="Report this post">Report this post</a>
+                  <a class="comment-quote" href="http://forums.computerandvideogames.com/posting.php?mode=quote&f=21&p=2216855" title="Reply with quote">Reply with quote</a>
+                </div>
+                
+                
+                
+                <h6><a href="http://forums.computerandvideogames.com/memberlist.php?mode=viewprofile&u=306395" class="community">frazzerr</a> on 6 Nov '12 said:</h6>
+                <p>For the good of the industry, it is better that they manage to pull themselves out of this hole. Less competition leads to an industry being in a choke hold by a couple of massive companies, this is evident within other industries and it leads to less innovation and stifles creativity etc. More importantly thousands of people could lose they're jobs, but some moronic people on here would love that because they don't like THQ products  <!-- s:roll: --><img src="http://cdn.static.computerandvideogames.com/forums/images/smilies/icon_rolleyes.gif" alt=":roll:" title="Rolling Eyes" /><!-- s:roll: --> ...</p>
+              </li>
+              
+              <li class="group ">
+              
+                <div class="user-icon">
+                  
+                  <div class="user-icon-wrap"><img src="http://cm.evri-img.com/feeds/tJea18731_usZtyF13MIHs36oHFtVA/th.jpg" width="60" height="60" alt="" /></div>
+                  
+                </div>
+                
+                
+                
+                
+                <div class="comment-options">
+                  <a class="comment-report" href="http://forums.computerandvideogames.com/report.php?mode=quote&f=21&p=2216862" title="Report this post">Report this post</a>
+                  <a class="comment-quote" href="http://forums.computerandvideogames.com/posting.php?mode=quote&f=21&p=2216862" title="Reply with quote">Reply with quote</a>
+                </div>
+                
+                
+                
+                <h6><a href="http://forums.computerandvideogames.com/memberlist.php?mode=viewprofile&u=412809" class="community">FishyGinger</a> on 6 Nov '12 said:</h6>
+                <blockquote><p>they have a few pretty strong games coming so i think they'll be fine.  I just hope someone larger doesn't swallow them up in the mean time.</p></blockquote><p>Problem is they aren't coming for a few months yet are they, they need to survive until then before they make any money off them. Even then I didn't think they had anything guaranteed. </p><p>Most of their games I'm not that interested in, save for Metro which is one of my most highly anticipated games by some margin as I loved the original, but I hope they can sort themselves out.</p>
+              </li>
+              
+              <li class="group ">
+              
+                <div class="user-icon">
+                  
+                </div>
+                
+                
+                
+                
+                <div class="comment-options">
+                  <a class="comment-report" href="http://forums.computerandvideogames.com/report.php?mode=quote&f=21&p=2216868" title="Report this post">Report this post</a>
+                  <a class="comment-quote" href="http://forums.computerandvideogames.com/posting.php?mode=quote&f=21&p=2216868" title="Reply with quote">Reply with quote</a>
+                </div>
+                
+                
+                
+                <h6><a href="http://forums.computerandvideogames.com/memberlist.php?mode=viewprofile&u=363405" class="community">delmariachi</a> on 6 Nov '12 said:</h6>
+                <p>Not exactly a surprise...</p><p>If you look at the last 2 years of releases through THQ, there's been Saints Row 3 and Darksiders 2 that have been somewhat successful... previous to that Red Faction and Metro 2033 were highlights from a relative dull release schedule (admittedly only in my opinion)</p><p>They are what they've always been, a middling company that release a decent game every now and then, it'll be a shame if they do go to the wall, especially for those who lose jobs, but to be honest, I have not not experienced enough good titles from them to miss them.</p>
+              </li>
+              
+              <li class="group ">
+              
+                <div class="user-icon">
+                  
+                </div>
+                
+                
+                
+                
+                <div class="comment-options">
+                  <a class="comment-report" href="http://forums.computerandvideogames.com/report.php?mode=quote&f=21&p=2216884" title="Report this post">Report this post</a>
+                  <a class="comment-quote" href="http://forums.computerandvideogames.com/posting.php?mode=quote&f=21&p=2216884" title="Reply with quote">Reply with quote</a>
+                </div>
+                
+                
+                
+                <h6><a href="http://forums.computerandvideogames.com/memberlist.php?mode=viewprofile&u=5404" class="community">SavageEvil</a> on 6 Nov '12 said:</h6>
+                <p>THQ, first they screw up SR series with that complete retardation of the the third game, release Darksiders at a pretty bad time economically and they continue to make craptastic WWE games. They are treading in deep waters, could have sworn the came from a delisting last year and looks like they are about to head back there again.  <br />First of all the WWE games are trash, have been trash for this entire generation of consoles actually, the last good game was DoR series on GC those games we actually about skill instead of weird ass control schemes and gimmicky auto magic moves. Get back to No Mercy type of gameplay, I wonder what engine they use on these consoles it's really garbage to say it politely, look at how ugly the character models are and there is barely anything on screen in those games.  Darksiders was a great game, haven't played the second game as I didn't see it as a compelling purchase. SR, ha ha, what ever, that stayed in the store after watching my buddy play, I was like this screwed up SR. I would rather play SR2 any day over that trash.</p>
+              </li>
+              
+              <li class="group ">
+              
+                <div class="user-icon">
+                  
+                </div>
+                
+                
+                
+                
+                <div class="comment-options">
+                  <a class="comment-report" href="http://forums.computerandvideogames.com/report.php?mode=quote&f=21&p=2216892" title="Report this post">Report this post</a>
+                  <a class="comment-quote" href="http://forums.computerandvideogames.com/posting.php?mode=quote&f=21&p=2216892" title="Reply with quote">Reply with quote</a>
+                </div>
+                
+                
+                
+                <h6><a href="http://forums.computerandvideogames.com/memberlist.php?mode=viewprofile&u=388028" class="community">Bambis Dad</a> on 6 Nov '12 said:</h6>
+                <p>SE You are lucky to avoided DS2, it was not awful, but it was nowhere near as interesting as it thought it was.</p>
+              </li>
+              
+            
+            </ol>
+
+            <div class="pagination"></div>
+              
+          </div>
+          
+          
+          
+          <ul class="comment-options group">
+            <li><a href="http://forums.computerandvideogames.com/posting.php?mode=reply&f=21&t=143803" class="button button-more button-more-alt button-community community-bg-grad">Post a comment <span></span></a></li>
+            <!--<li><a href="" class="button button-alt">View all comments</a></li>-->
+          </ul>
+          
+          
+        </div>
+  
+                            
+
+<!-- Hidden -->
+<div style="display: none;">
+
+  
+
+</div>
+<!-- Hidden -->
+                   
+<!-- Content Strip finishes -->
+
+</section>
+<!-- _MAIN PAGE END_ -->
+
+<!-- _SIDEBAR START_ -->
+<aside id="sidebar" class=" group">
+
+  <section class="generic-box">
+  <h4 class="topper main-bg-grad">Related content</h4>
+  
+  <div class="int group">
+  
+  <div class="related-game group "> <!-- add .related-game-no-affiliate if pricerunner doesn't exist  -->
+  
+    <div class="related-game-info">
+    
+      <ul class="top-items top-games">
+        <li class="top-item-has-image group">
+                    
+          <a href="/xbox-360/action/12265/darksiders-2/"><img width="50" height="65" alt="Darksiders 2" src="http://cdn.medialib.computerandvideogames.com/covers/xbox/small/darksiders-2-w100.jpg" /></a>
+            
+               
+          <h5><a href="/xbox-360/action/12265/darksiders-2/">Darksiders 2</a></h5>
+          <p class="meta">
+            
+              
+              <a href="/xbox-360/action/12265/darksiders-2/">360</a>
+            
+               &middot; 
+              <a href="/nintendo-wii-u/action/12452/darksiders-2/">WiiU</a>
+            
+          
+          &middot; Action</p>
+          
+          <p class="meta">THQ</p>
+          
+        </li>        
+      </ul>
+      
+    </div>
+  
+    
+    
+    <div class="related-game-prices">
+      
+    <h5>Buy from ?17.99</h5>
+    <ul>
+      
+      <li><a href="http://www.pricerunner.co.uk/ref-site=PRSP_UK_CVG/track/scripts/redir.php?bt=b2ZmZXI&ch=10&oi=2892940&mc=2&dp=1&du=&if=1&fi=1319&mi=2137&su=QjAwN0hMTkk4UQ==" target="_blank">Amazon.co.uk</a></li>
+      
+      <li><a href="http://www.pricerunner.co.uk/ref-site=PRSP_UK_CVG/track/scripts/redir.php?bt=b2ZmZXI&ch=10&oi=2853187&mc=2&dp=2&du=&if=1&fi=1319&mi=27816&su=QjAwN0hMTkk4UQ==" target="_blank">Amazon Marketplace UK</a></li>
+      
+    </ul>
+  
+    </div>
+      
+    
+    
+  </div>
+  
+  
+  <div class="related-section">
+      
+    <h5>Reviews</h5>
+         
+    <h6><a href="/362673/reviews/darksiders-2-review-epic-brutal-ambitious-but-still-comes-up-short-review/">Darksiders 2 review: Epic, brutal, ambitious - but still comes up short Review</a></h6>
+    <p>Better combat, varied platforming but spreads itself too thin...</p>  
+    
+  </div>
+  
+  
+  
+  
+  
+  <div class="related-section">
+    
+    <span class="more-related">
+      <a href="/xbox-360/action/12265/darksiders-2/#news">4 more</a>
+    </span>
+    
+    <h5>Latest News</h5>
+    <ul class="related-news group">
+      
+      <li>
+        <a href="/374053/darksiders-creative-director-joe-mad-leaves-vigil-games/">Darksiders creative director Joe Mad leaves Vigil Games</a>
+      </li>
+      
+      <li>
+        <a href="/362542/darksiders-2-insider-video-talks-you-through-loot/">Darksiders 2 insider video talks you through loot</a>
+      </li>
+      
+      <li>
+        <a href="/354201/darksiders-2-trailer-death-awaits-us-all/">Darksiders 2 trailer: Death awaits us all</a>
+      </li>
+      
+    </ul>  
+  </div>
+  
+  
+  
+  
+  </div>
+  
+</section><section class="generic-box">
+  <h4 class="topper main-bg-grad">Popular Now</h4>  
+  <div class="int group">
+    
+    <ul class="popular">    
+    
+      <li class="popular-article popular-article1 group">
+        <div class="popular-article-bar" style="width:100%;"><span>1</span></div>
+        <h4><a href="/376949/blog/curiosity-uncovered-we-discover-whats-in-the-cube/">Curiosity Uncovered: We discover what's in the cube</a></h4>
+      </li>
+    
+      <li class="popular-article popular-article2 group">
+        <div class="popular-article-bar" style="width:66.7253521127%;"><span>2</span></div>
+        <h4><a href="/377039/black-ops-2-videos-all-multiplayer-maps-leaked-on-youtube/">Black Ops 2 videos: All multiplayer maps leaked on YouTube</a></h4>
+      </li>
+    
+      <li class="popular-article popular-article3 group">
+        <div class="popular-article-bar" style="width:59.5070422535%;"><span>3</span></div>
+        <h4><a href="/377044/microsoft-working-on-xbox-gaming-tablet-report/">Microsoft working on 'Xbox gaming tablet' - report</a></h4>
+      </li>
+    
+    </ul>
+    
+  </div>
+</section>  
+
+  
+  
+  <section>
+
+
+
+
+<script>
+  function show_filler() {
+    document.getElementById('supersky').style.width = '160px';
+    document.getElementById('filler').style.width = '130px';
+    document.getElementById('filler_controls').style.display = 'block';
+  }
+  function hide_filler() {
+    document.getElementById('supersky').style.width = '300px';
+    document.getElementById('filler').style.width = '0px';
+    document.getElementById('filler_controls').style.display = 'none';
+  }
+  function sky_to_mpu() {
+    document.getElementById('skyslot').style.height = '250px';    
+  }
+</script>
+<div id="skyslot" style="width: 300px; height: 600px; overflow: hidden;">
+  <div id="filler" style="float: left; width: 0px; height: 600px; overflow: hidden;">
+    
+    <style type="text/css">
+      #filler_container { width: 130px; height: 600px; }
+      #filler_controls { 
+        display: block; 
+        position: absolute; 
+        top: 576px; 
+        left: 90px; 
+        z-index: 1000; 
+        width: auto; 
+      }
+      #filler_slides { position: relative; overflow: hidden; } 
+      img.filler { border: none; width: 130px; height: 600px; }
+      a.filler_prev1 { 
+        width: 10px;
+        height: 14px;
+        background-position: 11px 0px;
+        background-image:url('http://cdn.medialib.computerandvideogames.com/misc/sprite_filler.png');
+        display: block;
+        float: left;
+      }
+      a.filler_prev1:hover {
+        width: 10px;
+        height: 14px;
+        background-position: 11px 16px;
+        background-image:url('http://cdn.medialib.computerandvideogames.com/misc/sprite_filler.png');
+        display: block;
+      
+      }
+      a.filler_next1 { 
+        width: 10px;
+        height: 14px;
+        background-position: 0px 0px;
+        background-image:url('http://cdn.medialib.computerandvideogames.com/misc/sprite_filler.png');
+        display: block;
+        float: right;
+      }
+      a.filler_next1:hover { 
+        width: 10px;
+        height: 16px;
+        background-position: 0px 16px;
+        background-image:url('http://cdn.medialib.computerandvideogames.com/misc/sprite_filler.png');
+        display: block;
+      }
+      div.filler_control-buttons {
+        width: 30px; 
+        height: 16px; 
+      }
+    </style>
+    
+    <div id="filler_container">
+
+      <div id="filler_controls" style="display: none;">
+        <div class="filler_control-buttons group">
+          <a class="filler_prev1" id="filler_prev1" href="#"></a> 
+          <a class="filler_next1" id="filler_next1" href="#"></a>
+        </div>
+      </div>
+
+      <div id="filler_slides">
+        <div style="background:#fff; border:1px solid #ccc; width:128px; height:598px; position:relative; overflow:hidden;"><aside class="content-simple simple-listing group">
+  <h4 class="topper main-bg-grad">Recommended</h4>
+
+  <div class="fallthrough-listing">
+  
+    
+    <article class="group">
+      <figure><a href="/376784/interviews/dmc-interview-we-knew-we-could-turn-the-tables-on-fan-outcry/"><img width="110" height="62" alt="" src="http://cdn.medialib.computerandvideogames.com/screens/screenshot_290732_thumb_wide140.jpg"></a></figure>
+      <h2><a title="DmC interview: 'We knew we could turn the tables on fan outcry'" href="/376784/interviews/dmc-interview-we-knew-we-could-turn-the-tables-on-fan-outcry/">DmC interview: 'We knew we could turn the tables on fan outcry'</a><a href='http://forums.computerandvideogames.com/viewtopic.php?t=143769' class='comments-this comments-this-alt community'><span></span> 9</a></h2>
+    </article>
+    
+    <article class="group">
+      <figure><a href="/376770/skyrim-dragonborn-dlc-officially-revealed-dated-trailer/"><img width="110" height="62" alt="" src="http://cdn.medialib.computerandvideogames.com/screens/screenshot_292908_thumb_wide140.jpg"></a></figure>
+      <h2><a title="Skyrim Dragonborn DLC officially revealed, dated - trailer" href="/376770/skyrim-dragonborn-dlc-officially-revealed-dated-trailer/">Skyrim Dragonborn DLC officially revealed, dated - trailer</a><a href='http://forums.computerandvideogames.com/viewtopic.php?t=143763' class='comments-this comments-this-alt community'><span></span> 22</a></h2>
+    </article>
+    
+    <article class="group">
+      <figure><a href="/376667/new-gta-5-art-features-a-quad-bike/"><img width="110" height="62" alt="" src="http://cdn.medialib.computerandvideogames.com/screens/screenshot_292915_thumb_wide140.jpg"></a></figure>
+      <h2><a title="New GTA 5 art features a quad bike" href="/376667/new-gta-5-art-features-a-quad-bike/">New GTA 5 art features a quad bike</a><a href='http://forums.computerandvideogames.com/viewtopic.php?t=143754' class='comments-this comments-this-alt community'><span></span> 7</a></h2>
+    </article>
+    
+    <article class="group">
+      <figure><a href="/375948/assassins-creed-3-ending-explained-what-does-it-all-mean/"><img width="110" height="62" alt="" src="http://cdn.medialib.computerandvideogames.com/screens/screenshot_290315_thumb_wide140.jpg"></a></figure>
+      <h2><a title="Assassin's Creed 3 ending analysis: What does it all mean?" href="/375948/assassins-creed-3-ending-explained-what-does-it-all-mean/">Assassin's Creed 3 ending analysis: What does it all mean?</a><a href='http://forums.computerandvideogames.com/viewtopic.php?t=143689' class='comments-this comments-this-alt community'><span></span> 23</a></h2>
+    </article>
+    
+    <article class="group">
+      <figure><a href="/375963/blog/blog-disneys-disturbance-at-lucasarts/"><img width="110" height="62" alt="" src="http://cdn.medialib.computerandvideogames.com/screens/screenshot_283713_thumb_wide140.jpg"></a></figure>
+      <h2><a title="Blog: Disney's Disturbance at LucasArts" href="/375963/blog/blog-disneys-disturbance-at-lucasarts/">Blog: Disney's Disturbance at LucasArts</a><a href='http://forums.computerandvideogames.com/viewtopic.php?t=143657' class='comments-this comments-this-alt community'><span></span> 22</a></h2>
+    </article>
+    
+     
+  </div>
+  
+  <div style="position:absolute; bottom:0; left:0; background:#d00; height:35px; width:100%;"></div>
+  
+</aside></div>
+        <div><a target="_blank" href="http://www.computerandvideogames.com/forums.php?"><img class="filler" src="http://cdn.medialib.computerandvideogames.com/placeholders/cvg_filler_130x600.gif" width="130" height="600" /></a></div>
+        <!--<div><a target="_blank" href="http://computerandvideogames.tumblr.com/"><img class="filler" src="http://cdn.medialib.computerandvideogames.com/placeholders/cvg_filler_130x600_tumblr.jpg" width="130" height="600" /></a></div>-->
+      </div>
+    </div>
+    
+  </div>
+  <div id="supersky" style="float: right; width: 300px; height: 600px; overflow: hidden;">
+    <script language="JavaScript" type="text/javascript">
+      document.write('<script language="JavaScript" src="http://ad.doubleclick.net/adj/fut.gb.cvg/xbox.blog;article=377000;product=12265;publisher=107;genre=18;format=66;format=3;format=45;format=46;mag=uk;tile=2;dcopt=ist;sz=300x600;' + segQS + ';ord=' + ord + '?" type="text/javascript"><\/script>');
+    </script><noscript><a href="http://ad.doubleclick.net/jump/fut.gb.cvg/xbox.blog;article=377000;product=12265;publisher=107;genre=18;format=66;format=3;format=45;format=46;mag=uk;tile=2;dcopt=ist;sz=300x600;ord=123456789?" target="_blank"><img src="http://ad.doubleclick.net/ad/fut.gb.cvg/xbox.blog;article=377000;product=12265;publisher=107;genre=18;format=66;format=3;format=45;format=46;mag=uk;tile=2;sz=300x600;ord=123456789?" width="300" height="600" border="0" alt=""></a></noscript>
+  </div>
+</div>
+<!--
+<br>
+filler debug: 
+<a href="javascript: show_filler();">show</a> -
+<a href="javascript: hide_filler();">hide</a> <br>
+-->
+
+
+
+
+
+
+
+
+</section>
+
+                               
+
+  
+    <section class="generic-box social-bar">
+<h4 class="topper main-bg-grad">Keep in touch with CVG</h4>
+<div class="int">
+  <ul class="group">
+
+    <li class="social social-facebook">
+      <a href="/redirect.php?social_facebook_sidebar;http://fb.com/ComputerAndVideoGames" class="social-bar-item" title="Like CVG on Facebook">
+        <div class="icon">Facebook</div>
+        <span><b>Like us</b> on Facebook</span>
+        <span class="minor">Discuss and share with 45,000+ fans</span>
+      </a>
+    </li>
+
+    <li class="social social-youtube">
+      <a href="/redirect.php?social_youtube_sidebar;http://www.youtube.com/cvg" class="social-bar-item" title="Subscribe to CVG on YouTube">
+        <div class="icon">YouTube</div>
+        <span><b>Subscribe</b> to YouTube</span>
+        <span class="minor">1,000+ videos, 25 million views</span>
+      </a>
+    </li>
+    
+    <li class="social social-twitter last-child">
+      <a href="/redirect.php?social_twitter_sidebar;https://twitter.com/intent/user?screen_name=CVG_UK" class="social-bar-item" title="Follow CVG on Twitter">
+        <div class="icon">Twitter</div>
+        <span><b>Follow</b> @CVG_UK on Twitter</span>
+        <span class="minor">Instant updates, 22,000+ followers</span>
+      </a>
+    </li>
+    <!--
+    <li class="social social-cvg last-child">
+      <a href="/user/login?" title="Register or Log in" class="social-bar-item rel-overlay" rel="#user-login">
+        <div class="icon">CVG</div>
+        <span><b>Register</b> or <b>Log in</b></span>
+        <span class="minor">Exclusive content, prizes and forums</span>
+      </a>
+    </li>
+    -->
+    
+  </ul>
+</div>
+
+</section>
+    
+  
+  <section>
+
+
+
+
+
+
+<script language="JavaScript" type="text/javascript">
+  document.write('<script language="JavaScript" src="http://ad.doubleclick.net/adj/fut.gb.cvg/xbox.blog;article=377000;product=12265;publisher=107;genre=18;format=66;format=3;format=45;format=46;mag=uk;tile=3;sz=300x250;' + segQS + ';ord=' + ord + '?" type="text/javascript"><\/script>');
+</script><noscript><a href="http://ad.doubleclick.net/jump/fut.gb.cvg/xbox.blog;article=377000;product=12265;publisher=107;genre=18;format=66;format=3;format=45;format=46;mag=uk;tile=3;sz=300x250;ord=123456789?" target="_blank"><img src="http://ad.doubleclick.net/ad/fut.gb.cvg/xbox.blog;article=377000;product=12265;publisher=107;genre=18;format=66;format=3;format=45;format=46;mag=uk;tile=3;sz=300x250;ord=123456789?" width="300" height="250" border="0" alt=""></a></noscript>
+
+
+
+
+
+
+</section>
+
+  <section class="tumblr">
+  <h4 class="topper main-bg-grad">Vote now!</h4>
+  <div class="overlay-holder">
+    <a href="/article_index.php?type=17 "><img src="http://cdn.medialib.computerandvideogames.com/ads/promo_rate.jpg" width="300" height="150" alt="Vote now!" /></a>
+    <h6 class="overlay overlay-small"><a href="/article_index.php?type=17 ">CVG wants your opinion!</a></h6>
+  </div>
+</section>
+  
+  
+
+
+
+
+
+
+
+
+<!--uk-->
+<div id="google-container">
+  <script type="text/javascript" language="JavaScript">
+  <!--
+  function google_ad_request_done(google_ads) {
+  /*
+  * This function is required and is used to display
+  * the ads that are returned from the JavaScript
+  * request. You should modify the document.write
+  * commands so that the HTML they write out fits
+  * with your desired ad layout.
+  */
+  var s = '';
+  var i;
+
+  /*
+  * Verify that there are actually ads to display.
+  */
+  if (google_ads.length == 0) {
+  return;
+  }
+
+  /*
+  * If an image or flash ad is returned, display that ad.
+  * Otherwise, build a string containing all of the ads and
+  * then use a document.write() command to print that string.
+  */
+
+  if (google_ads[0].type == "flash") {
+
+  s += '<a href=\"' +
+  google_info.feedback_url + '\" style="color:000000">Ads by Google</a><br>' +
+  '<object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000"' +
+  ' codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,0,0" WIDTH="' +
+  google_ad.image_width + '" HEIGHT="' +
+  google_ad.image_height + '"> <PARAM NAME="movie" VALUE="' +
+  google_ad.image_url + '">' +
+  '<PARAM NAME="quality" VALUE="high">' +
+  '<PARAM NAME="AllowScriptAccess" VALUE="never">' +
+  '<EMBED src="' +
+  google_ad.image_url + '" WIDTH="' +
+  google_ad.image_width + '" HEIGHT="' +
+  google_ad.image_height +
+  '" TYPE="application/x-shockwave-flash"' +
+  ' AllowScriptAccess="never" ' +
+  ' PLUGINSPAGE="http://www.macromedia.com/go/getflashplayer"></EMBED></OBJECT>';
+
+  } else if (google_ads[0].type == "image") {
+
+  s += '<a href=\"' +
+  google_info.feedback_url + '\" style="color:000000">Ads by Google</a><br> <a href="' +
+  google_ads[0].url + '" target="_top" title="go to ' +
+  google_ads[0].visible_url + '" onmouseout="window.status=\'\'" onmouseover="window.status=\'go to ' +
+  google_ads[0].visible_url + '\';return true"><img border="0" src="' +
+  google_ads[0].image_url + '"width="' +
+  google_ads[0].image_width + '"height="' +
+  google_ads[0].image_height + '"></a>';
+
+  } else if (google_ads[0].type == "html") {
+
+  s += google_ads[0].snippet;
+
+  } else {
+
+  if (google_ads.length == 1) {
+  /*
+  * Partners should adjust text sizes
+  * so ads occupy the majority of ad space.
+  */
+  s += '<a href=\"' +
+  google_info.feedback_url + '\" style="color:000000">Ads by Google</a><br>' +
+  '<p><a style="text-decoration:none" href="' +
+  google_ads[0].url + '" onmouseout="window.status=\'\'" onmouseover="window.status=\'go to ' +
+  google_ads[0].visible_url + '\';return true"> <span style="text-decoration:underline;"> <b>' +
+  google_ads[0].line1 + '</b><br /></span></a> <span style="color:#000000;">' +
+  google_ads[0].line2 + '&nbsp;' +
+  google_ads[0].line3 + '<br /></span> <span><a style="color:#CC0000;text-decoration:none" href="' +
+  google_ads[0].url + '" onmouseout="window.status=\'\'" onmouseover="window.status=\'go to ' +
+  google_ads[0].visible_url + '\';return true">' +
+  google_ads[0].visible_url + '</span></a></p>';
+
+  } else if (google_ads.length > 1) {
+
+  s += '<a href=\"' + google_info.feedback_url + '\" style="color:000000">Ads by Google</a><br>'
+
+  /*
+  * For text ads, append each ad to the string.
+  */
+
+  for(i = 0; i < google_ads.length; ++i) {
+
+  s += '<p><a style="text-decoration:none" href="' +
+  google_ads[i].url + '" onmouseout="window.status=\'\'" onmouseover="window.status=\'go to ' +
+  google_ads[i].visible_url + '\';return true"> <span style="text-decoration:underline"> <b>' +
+  google_ads[i].line1 + '</b><br /></span></a> <span style="color:#000000">' +
+  google_ads[i].line2 + ' ' +
+  google_ads[i].line3 + '<br /></span> <span><a style="color:#CC0000;text-decoration:none" href="' +
+  google_ads[i].url + '" onmouseout="window.status=\'\'" onmouseover="window.status=\'go to ' +
+  google_ads[i].visible_url + '\';return true">' +
+  google_ads[i].visible_url + '</span></a></p>';
+  }
+  }
+  }
+
+  document.write(s);
+  return;
+  }
+
+  google_ad_client = 'pub-1417235232628100'; // substitute your client_id (pub-#)
+  google_ad_channel = '5018147427'
+  google_ad_output = 'js';
+  google_max_num_ads = '3';
+  google_ad_type = 'text_html';
+  // google_image_size = '620x280';
+  google_feedback = 'on';
+  // -->
+  </script>
+
+  <!--
+  /*
+  * The JavaScript returned from the following page uses
+  * the parameter values assigned above to populate an array
+  * of ad objects. Once that array has been populated,
+  * the JavaScript will call the google_ad_request_done
+  * function to display the ads.
+  */
+  -->
+
+  <script type="text/javascript" language="JavaScript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+  </script> 
+</div>
+
+
+
+
+
+  
+  <!-- Promo Strip finishes -->
+
+</aside>
+<!-- _SIDEBAR END_ --> 
+
+      </div>
+      <!-- _WRAPPER END_ -->
+    
+      <footer class="group">
+
+  <div id="footer-branding" class="main-bg-grad group">
+  
+    <span id="logo-small-wo"><a href="/" title="CVG UK">CVG UK</a> Gaming since 1981</span>
+    <a href="#top" id="toppage"><span></span>Top of page</a>
+  
+  </div>
+
+  <div id="footer-nav" class="group">
+    
+    <section class="sitelinks sitelinks-narrow">
+      <h6>Navigation</h6>
+      <ul class="group">
+        
+        <li><a href="/xbox/"  >Xbox</a></li>
+        
+        <li><a href="/playstation/"  >PlayStation</a></li>
+        
+        <li><a href="/nintendo/"  >Nintendo</a></li>
+        
+        <li><a href="/pc/"  >PC</a></li>
+        
+        <li><a href="http://forums.computerandvideogames.com/"  >Forums</a></li>
+        
+        <li><a href="/news.php"  >News</a></li>
+        
+        <li><a href="/reviews.php"  >Reviews</a></li>
+        
+        <li><a href="/previews.php"  >Previews</a></li>
+        
+        <li><a href="/features.php"  >Features</a></li>
+        
+        <li><a href="/interviews.php"  >Interviews</a></li>
+        
+        <li><a href="/competitions.php"  >Competitions</a></li>
+        
+        <li><a href="/game_archive.php"  >Game A to Z</a></li>
+        
+        <li><a href="/contacts/"  >Contact us</a></li>
+        
+        <li><a href="/sitemap/"  >Sitemap</a></li>
+                
+      </ul>
+    </section>
+    
+    
+    <section class="sitelinks sitelinks-wide">
+    
+      <h6>In Your region</h6>
+      <ul class="region-switch region-switch-alt group">
+
+    <li id="mobile" class=""><span></span> <a href="http://m.computerandvideogames.com/377000/blog/thq-in-grave-health-can-it-survive/" title="View CVG on your mobile device">CVG Mobile</a></li>
+
+    <li id="cvg" class=""><span></span> <a href="/cvg/377000/blog/thq-in-grave-health-can-it-survive/" title="View CVG International">CVG International</a></li>
+
+    <li id="uk" class="region-switch-selected"><span></span> <a href="/uk/377000/blog/thq-in-grave-health-can-it-survive/" title="View CVG United Kingdom">CVG United Kingdom</a></li>
+
+    <li id="aus" class=""><span></span> <a href="/aus/377000/blog/thq-in-grave-health-can-it-survive/" title="View CVG Australia">CVG Australia</a></li>
+ 
+</ul>
+    
+      <h6>Find us online</h6>
+      <ul class="group">
+        
+        <li class="social social-twitter">
+          <a href="http://www.twitter.com/CVG_UK" class="icon">Twitter</a>
+          <span>Follow us on Twitter</span>
+          <a href="http://www.twitter.com/CVG_UK" title="Follow CVG on Twitter">@CVG_UK</a>
+        </li>
+        <li class="social social-facebook">
+          <a href="http://fb.com/ComputerAndVideoGames" class="icon">Facebook</a>
+          <span>Join us on Facebook</span>
+          <a href="http://fb.com/ComputerAndVideoGames" title="Join CVG on Facebook">fb.com/ComputerandVideoGames</a>
+        </li>
+        <li class="social social-youtube">
+          <a href="http://youtube.com/user/cvg" class="icon">YouTube</a>
+          <span>Watch us on YouTube</span>
+          <a href="http://youtube.com/user/cvg" title="Watch CVG on YouTube">youtube.com/user/cvg</a>
+        </li>
+        <li class="social social-rss">
+          <a href="/feeds/" class="icon">RSS</a>
+          <span>Keep up to date</span>
+          <a href="/feeds/" title="RSS Feeds">RSS Feed</a>
+        </li>
+        
+        
+      </ul>
+    </section>
+    
+    
+    
+    
+    
+    
+    
+   
+    <section class="sitelinks">
+      <h6>Top games</h6>
+      <ul class="group">
+        
+          <li><a href="/playstation-3/fps/12348/dishonored/">Dishonored</a></li>
+        
+          <li><a href="/playstation-3/survival-horror/12015/resident-evil-6/">Resident Evil 6</a></li>
+        
+          <li><a href="/xbox-360/fps/12566/call-of-duty-black-ops-2/">Call of Duty: Black Ops 2</a></li>
+        
+          <li><a href="/pc/games/7829/diablo-3/">Diablo 3</a></li>
+        
+          <li><a href="/xbox-360/action/10507/max-payne-3/">Max Payne 3</a></li>
+        
+          <li><a href="/xbox-360/games/11341/mass-effect-3/">Mass Effect 3</a></li>
+        
+          <li><a href="/playstation-vita/games/11904/ps-vita/">PS Vita</a></li>
+        
+          <li><a href="/xbox-360/rpg/11917/elder-scrolls-v-skyrim/">Elder Scrolls V: Skyrim</a></li>
+        
+          <li><a href="/nintendo-3ds/racing-driving/11606/mario-kart-7/">Mario Kart 7</a></li>
+        
+          <li><a href="/pc/mmo/10596/star-wars-the-old-republic/">Star Wars: The Old Republic</a></li>
+        
+          <li><a href="/pc/fps/9892/battlefield-3/">Battlefield 3</a></li>
+        
+          <li><a href="/nintendo-wii/action/11029/zelda-skyward-sword/">Zelda: Skyward Sword</a></li>
+        
+      </ul>
+    </section>
+    
+    <section class="sitelinks sitelinks-wide">
+      <h6>Top reviews</h6>
+      <ul class="group">
+        
+          <li><a href="/374442/reviews/halo-4-review-a-visually-stunning-reprise-of-classic-halo-moments-review/">Halo 4 review: A visually-stunning reprise of classic Halo moments</a></li>
+        
+          <li><a href="/375926/reviews/assassins-creed-3-liberation-review-console-calibre-adventuring-review/">Assassin's Creed 3 Liberation review: Console-calibre adventuring</a></li>
+        
+          <li><a href="/375703/reviews/wwe-13-review-the-return-to-the-attitude-era-leaves-us-stone-cold-review/">WWE '13 Review: The return to the Attitude Era leaves us Stone Cold</a></li>
+        
+          <li><a href="/374491/reviews/assassins-creed-3-review-the-birth-of-a-nation-the-end-of-a-trilogy-review/">Assassin's Creed 3 review: The birth of a nation, the end of a trilogy</a></li>
+        
+          <li><a href="/374205/reviews/need-for-speed-most-wanted-review-ambitious-beautiful-frustrating-review/">Need for Speed: Most Wanted review: Ambitious, beautiful, frustrating</a></li>
+        
+          <li><a href="/374850/reviews/medal-of-honor-warfighter-review-does-exactly-what-it-says-on-the-tnt-review/">Medal of Honor Warfighter review: Does exactly what it says on the TNT</a></li>
+        
+      </ul>      
+    </section>
+
+    <section class="sitelinks sitelinks-wide last-child">
+      <h6>Popular Guides and Tips</h6>
+      <ul class="group">
+        
+        <li><a href="http://www.computerandvideogames.com/371241/dishonored-guide-12-tips-to-conquer-dunwall/" title="Dishonored">Dishonored</a></li>
+        <li><a href="http://www.computerandvideogames.com/372627/borderlands-2-mechromancer-guide-5-essential-tips-for-mastering-the-new-class/" title="Borderlands 2 Mechromancer guide">Borderlands 2 Mechromancer guide</a></li>
+        <li><a href="http://www.computerandvideogames.com/371114/features/resident-evil-6-guide-ten-essential-tips-for-surviving-the-c-virus/" title="Resident Evil 6">Resident Evil 6</a></li>
+        <li><a href="http://www.computerandvideogames.com/368916/borderlands-2-ten-essential-tips-walkthrough-guide-for-dominating-pandora/" title="Borderlands 2">Borderlands 2</a></li>
+        <li><a href="http://www.computerandvideogames.com/363982/features/sleeping-dogs-5-tips-to-play-like-a-triad-warlord/" title="Sleeping Dogs">Sleeping Dogs</a></li>
+        <li><a href="http://www.computerandvideogames.com/326628/skyrim-guide-15-essential-tips-and-cheats/" title="Skyrim: 15 Essential Tips">Skyrim: 15 Essential Tips</a></li>
+        <li><a href="http://www.computerandvideogames.com/339171/mass-effect-3-complete-scanning-guide-and-how-to-get-the-best-possible-ending/" title="Mass Effect 3: Scanning Guide">Mass Effect 3: Scanning Guide</a></li>       
+        <li><a href="http://www.computerandvideogames.com/348431/diablo-3-guide-30-essential-tips-cheats-and-tricks-every-dungeon-crawler-should-know/" title="Diablo III: 30 Essential tips">Diablo III: 30 Essential tips</a></li>
+        <li><a href="http://www.computerandvideogames.com/366905/features/skyrim-hearthfire-guide-7-essential-tips-and-secrets/" title="Skyrim Hearthfire DLC">Skyrim Hearthfire DLC</a></li>
+        
+      </ul>
+    </section>
+
+    <!-- _FRIENDS & RELATIONS_ -->
+    <div class="future-network-friends">
+    
+      <ul class="group">
+        <li><a target="_blank" href="/sites/xboxworld/" title="Xbox World Magazine" class="cvg-network cvg-network-x360w">Xbox World</a></li>
+        <li><a target="_blank" href="/sites/psm/" title="PSM3 Magazine" class="cvg-network cvg-network-psm3">PSM3</a></li>
+        <li><a target="_blank" href="http://www.edge-online.com/" title="EDGE" class="cvg-network cvg-network-edge">EDGE</a></li>
+        <li><a target="_blank" href="http://www.gamesradar.com" title="GamesRadar" class="cvg-network cvg-network-gar">GamesRadar</a></li>
+        <li><a target="_blank" href="http://www.nintendo-gamer.net" target="_blank" title="Nintendo Gamer" class="cvg-network cvg-network-ngm">Nintendo Gamer</a></li>
+        <li><a target="_blank" href="http://www.officialnintendomagazine.co.uk" title="Official Nintendo Magazine UK" class="cvg-network cvg-network-onm">ONM</a></li>
+        <li><a target="_blank" href="http://www.officialplaystationmagazine.co.uk" title="Official PlayStation Magazine" class="cvg-network cvg-network-opm">Official PlayStation Magazine</a></li>
+        <li><a target="_blank" href="http://www.oxm.co.uk" title="Official Xbox Magazine UK" class="cvg-network cvg-network-oxm">OXM</a></li>
+        <li><a target="_blank" href="http://www.pcgamer.com" title="PCGamer" class="cvg-network cvg-network-pcg">PC Gamer</a></li>
+      </ul>
+    
+    </div>
+    <!-- _FRIENDS & RELATIONS_ -->
+    
+  </div>
+  
+</footer>
+      
+    </div>
+    <!-- _CONTAINER END_ -->    
+
+    <!-- _Future footer_ -->
+<div id="future_company_footer"><div><ul class="foot_sites"><li class="footer_logo" title="Future Publishing"><a href="http://www.futureplc.com/" ><img title="Future Publishing" alt="Future Publishing" src="http://assets.futurecdn.net/img/future-logo.png"></a></li><li class="footer_logo" title="AOP Winner 2012"><img title="AOP Winner 2012" alt="AOP Winner 2012" src="http://assets.futurecdn.net/img/aop-awards-2012.png"></li><li title="TechRadar"><a href="http://www.techradar.com/" title="Tech news">TechRadar</a></li><li title="GamesRadar"><a href="http://www.gamesradar.com/" title="Game cheats and news">GamesRadar</a></li><li title="PC Gamer"><a href="http://www.pcgamer.com/" title="PC games">PC Gamer</a></li><li title="BikeRadar"><a href="http://www.bikeradar.com/" title="Bikes and bike reviews">BikeRadar</a></li><li title="Cyclingnews"><a href="http://www.cyclingnews.com/" title="Pro cycling news and reviews">Cyclingnews</a></li><li title="T3"><a href="http://www.t3.com/" title="Technology news and gadget reviews">T3</a></li><li title="Total Film"><a href="http://www.totalfilm.com/" title="Movie news">Total Film</a></li><li title="MusicRadar"><a href="http://www.musicradar.com/" title="Music news">MusicRadar</a></li><li title="Edge"><a href="http://www.edge-online.com/" title="Videogames culture">Edge</a></li><li title="Metal Hammer"><a href="http://www.metalhammer.co.uk/" title="Heavy metal news">Metal Hammer</a></li><li title="Creative Bloq"><a href="http://www.creativebloq.com/" title="Daily design tips &amp; inspiration">Creative Bloq</a></li><li title="SFX"><a href="http://www.sfx.co.uk/" title="Sci fi news and reviews">SFX</a></li><li title="Classic Rock"><a href="http://www.classicrockmagazine.com/" title="Classic Rock">Classic Rock</a></li><li title="Fast Car"><a href="http://www.fastcar.co.uk/" title="Modified and drift cars">Fast Car</a></li><li title="Mollie Makes"><a href="http://www.molliemakes.com/" title="Making, collecting, thrifting, crafting">Mollie Makes</a></li><li title="Gizmodo UK"><a href="http://www.gizmodo.co.uk/" title="Tech news, from off the beaten track">Gizmodo UK</a></li></ul><hr><ul class="foot_legals"><li title="Jobs"><a href="http://www.yourfuturejob.com/" title="Jobs in media" rel="nofollow">Jobs</a></li><li title="Press"><a href="http://www.futureplc.com/news/" title="Press" rel="nofollow">Press</a></li><li title="Advertising"><a href="http://www.futureplc.com/what-we-do/advertising-solutions/" title="Advertising" rel="nofollow">Advertising</a></li><li title="Privacy Policy"><a href="http://www.futureplc.com/privacy-policy/" title="Privacy Policy" rel="nofollow">Privacy Policy</a></li><li title="Cookies Policy"><a href="http://www.futureplc.com/cookies-policy/" title="Cookies Policy" rel="nofollow">Cookies Policy</a></li><li title="Terms &amp; Conditions"><a href="http://www.futureplc.com/terms-and-conditions/" title="Terms and Conditions" rel="nofollow">Terms &amp; Conditions</a></li><li title="International"><a href="http://www.futureplc.com/what-we-do/international-licensing/" title="International" rel="nofollow">International</a></li><li title="DigitalFuture"><a href="http://advertising.digitalfuture.com/" title="Digital Future" rel="nofollow">DigitalFuture</a></li><li title="Magazine Subscriptions"><a href="http://www.myfavouritemagazines.co.uk/" title="Buy magazines online">Magazine Subscriptions</a></li><li title="Future MediaStore"><a href="http://www.futuremediastore.com/" title="Exclusive special interest images">Future MediaStore</a></li></ul><p class="foot_copyright">&copy; Future Publishing Limited, Beauford Court, 30 Monmouth Street, Bath BA1 2BW. All rights reserved. England and Wales company registration number 2008885.</p></div></div><script type="text/javascript" src="http://assets.futurecdn.net/js/fp_cookie.min.js" async defer></script>
+<!-- _Future footer_ -->
+
+<!-- Login / Register modals -->
+<script defer type="text/javascript" src="http://www.google.com/recaptcha/api/js/recaptcha_ajax.js"></script>
+
+<div id="user-login" class="modal group" style="display: none;">
+  <a href="#" class="close"><span>Close</span></a>
+
+  <div id="login_ajax_container">
+    <span class="loading">Loading...</span>
+  </div>      
+</div>
+
+<div id="user-register" class="modal modal-large group" style="display: none;">
+  <a href="#" class="close"><span>Close</span></a>  
+  
+  <div id="register_ajax_container">
+    <span class="loading">Loading...</span>
+  </div>
+</div>
+ 
+
+  
+  <!-- ComSCORE Beacon -->
+  <script>
+    try {
+      var csJsHost = (("https:" == document.location.protocol) ? "https://sb." : "http://b.");    
+      document.write(unescape("%3Cscript src='" + csJsHost + "scorecardresearch.com/beacon.js' %3E%3C/script%3E"));
+    } catch(e) {}
+  </script>
+  <script>
+    try {
+      COMSCORE.beacon({
+        c1:"2",
+        c2:"6035218",
+        c3:"",
+        c4:"",
+        c5:"",
+        c6:""
+      });
+    } catch(e) {}
+  </script>
+
+  <!-- Google Analytics -->
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-3874126-4']);
+    _gaq.push(['_trackPageview']);
+    _gaq.push(['_setCustomVar', 1, 'user', 'guest', 1]);
+    _gaq.push(['_setCustomVar', 2, 'site', 'uk', 1]);
+    _gaq.push(['_setCustomVar', 3, 'variant', 'article_default', 1]);
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+  
+  <!-- Google +1 -->
+  <script type="text/javascript" src="https://apis.google.com/js/plusone.js">
+    {lang: 'en-GB'}
+  </script>
+
+  
+  
+  <!-- AdBlock Detector -->
+  <script type="text/javascript">
+    var _abdTimeout = setTimeout("_abdStatus(true);", 10000);
+    function _abdStatus(state) {
+      clearTimeout(_abdTimeout);
+      if (state == true) {
+        setSegment('abd_true');
+      } else {
+        setSegment('abd_false');
+      }
+    }
+    var _abdStatusFnc = '_abdStatus';
+    eval(function(p,a,c,k,e,d){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a)>35?String.fromCharCode(c+29):c.toString(36))};if(!''.replace(/^/,String)){while(c--){d[e(c)]=k[c]||e(c)}k=[function(e){return d[e]}];e=function(){return'\\w+'};c=1};while(c--){if(k[c]){p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c])}}return p}('(g(){a 5=z;a 2=8;a 4=8;g A(){2=6.u("I");4=6.u("H");2.l=\'b\';2.n=\'/o/\';2.3.v=\'G\';2.3.F=\'C\';4.l=\'s\';4.n=\'/o/E-N.P\';4.3.p=2.3.p=\'m\';4.3.q=2.3.q=\'m\';4.3.r=2.3.r=\'-h\';4.3.t=2.3.t=\'-h\';6.j.i(2);6.j.i(4);Q(k,O)};g k(){7(6.c(\'s\').3.v.J(\'C\')>-1)5=9;f 7(6.c(\'b\').3.K==\'L\')5=9;f 7(6.c(\'b\').M==0)5=9;2.x.D(2);4.x.D(4);7(d(w)!=\'8\')e(w+\'(\'+5+\');\');f{7((5==9)&&(d(y)!=\'8\'))e(y+\'();\');7((5==z)&&(d(B)!=\'8\'))e(B+\'();\')}};A()})();',53,53,'||_af|style|_am|_ab|document|if|undefined|true|var|_afd|getElementById|typeof|eval|else|function|1000px|appendChild|body|_ss|id|1px|src|adimages|width|height|top|_amd|left|createElement|display|_abdStatusFnc|parentNode|_abdDetectedFnc|false|detect_ab|_abdNotDetectedFnc|none|removeChild|textlink|border|block|IMG|IFRAME|indexOf|visibility|hidden|clientHeight|ads|100|jpg|setTimeout'.split('|'),0,{})); 
+    function setSegment(state){ 
+      function readCookie(name) {
+        var nameEQ = name + "=";
+        var ca = document.cookie.split(';');
+        for(var i=0;i < ca.length;i++) {
+          var c = ca[i];
+          while (c.charAt(0)==' ') c = c.substring(1,c.length);
+          if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+        }
+        return null;
+      }
+      var current_cookie = readCookie('__utmv');
+      if ( (current_cookie==null) || (current_cookie.indexOf(encodeURIComponent(state)) == -1) ){
+        try {          
+          _gaq.push(['_setVar', state]); 
+        } catch(e) {}
+      }
+    }    
+  </script>
+
+  
+  <!-- BlueKai Data Mining -->
+  <iframe name="__bkframe" height="0" width="0" frameborder="0" src="javascript:void(0)"></iframe>
+  <script type="text/javascript" src="http://tags.bkrtx.com/js/bk-coretag.js"></script>
+  <script type="text/javascript">
+    try {
+      
+      bk_addPageCtx("section", "blog");
+      
+      bk_addPageCtx("platform", "all");
+      
+      bk_addPageCtx("genre", "Action");
+      
+      bk_addPageCtx("game", "Darksiders 2");
+      
+      bk_addPageCtx("publisher", "THQ");
+      
+      bk_doJSTag(5966, 4);
+    } catch(e) {}
+  </script>  
+  
+  
+  
+  
+    
+  <!-- Vibrant Media IntelliTXT -->
+  <script type="text/javascript" src="http://futurepublications.uk.intellitxt.com/intellitxt/front.asp?ipid=43821"></script>
+  
+  
+
+    
+<script>
+  function show_takeover() {
+    // called on initial page load
+    try {
+      enable_takeover();
+    } catch(e) {
+      // takeover failed (maybe waiting for tag load) so try again 
+      setTimeout("show_takeover()", 5000);
+    }
+  }
+  function disable_takeover() {
+  }    
+</script> 
+<script language="JavaScript" type="text/javascript">
+  document.write('<script language="JavaScript" src="http://ad.doubleclick.net/adj/fut.gb.cvg/xbox.blog;article=377000;product=12265;publisher=107;genre=18;format=66;format=3;format=45;format=46;mag=uk;tile=4;sz=22x22;' + segQS + ';ord=' + ord + '?" type="text/javascript"><\/script>');
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+        
+  </body>
+</html>

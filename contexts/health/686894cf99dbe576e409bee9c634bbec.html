@@ -1,0 +1,2514 @@
+<!doctype html>
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head lang="en" prefix="og: http://ogp.me/ns#">
+    
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Cache-Control" content="no-store, must-revalidate, no-cache, private, max-age=0, post-check=0, pre-check=0" />
+    <meta http-equiv="X-Xss-Protection" content="0" />
+    <meta name="robots" content="nofollow" />
+
+    
+    <meta name="description" content="Keep, share, and discover the best of the Web using Delicious, the world&#039;s leading social bookmarking service." />
+    
+
+    <meta name="keywords" content="del.icio.us, delicious, bookmarks, bookmark, social bookmarking, links, link, stacks, stack" />
+    <meta name="alexaVerifyID" content="Fdu_0zuYnhHPNIQzxqi4n3jY_Ag" />
+    <meta name="language" content="en" />
+
+    
+
+    
+    <script type="text/javascript">
+        var D = {};
+    </script>
+
+    
+
+    <link rel="stylesheet" type="text/css" media="screen" href="/static/css/flick/jquery-ui-1.8.13.custom.css?v=1045" />
+    
+      <link rel="stylesheet" type="text/css" media="screen" href="http://delicious.com/static/css/main.p.css?v=1045" />
+    
+
+    
+      <script type="text/javascript" src="http://delicious.com/static/js/main.p.js?v=1045"></script>
+    
+	<!--[if lt IE 9]>
+        <link rel="stylesheet" type="text/css" href="/static/css/ie.css?v=1045" />
+	<![endif]-->
+
+    <script type="text/javascript">
+        $('document').ready(function() { del.init();});
+    </script>
+
+    
+        <title>Delicious</title>
+    
+
+    <script type="text/html" id="actionTempl">
+	    <a class="btn <%= (t.cls || '') %>" a="<%= t.action || '' %>"><%= t.text %></a> 
+    </script>
+    <script type="text/html" id="inputTempl">
+        <% if(t.label){ %>
+            <label for="<%= t.field %>" title="<%= t.title || '' %>"><%= t.label %></label>
+        <% } %>
+        <input name="<%= t.field %>" value="<%= t.value || '' %>" title="<%= t.title || '' %>" type="text" a="<%= t.action || '' %>" placeholder="<%= t.placeholder || '' %>"></input>
+    </script>
+    <script type="text/html" id="textTempl">
+        <p class="<%= t.cls || '' %>">
+        <% if(t.faviconHost){ %>
+        <img class="favicon" src="http://www.google.com/s2/favicons?domain=<%= t.faviconHost %>" alt="favicon from <%= t.faviconHost %>" />
+        <% } %>
+        <%= t.text %></p>
+    </script>
+    <script type="text/html" id="textareaTempl">
+        <% if(t.label){ %>
+            <label for="<%= t.field %>"><%= t.label %></label>
+        <% } %>
+        <textarea name="<%= t.field %>" a="<%= t.action || '' %>" placeholder="<%= t.placeholder || '' %>"></textarea>
+    </script>
+    <script type="text/html" id="selectTempl">
+        <% if(t.label){ %>
+            <label for="<%= t.field %>"><%= t.label %></label>
+        <% } %>
+        <select name="<%= t.field %>" a="<%= t.action || '' %>">
+        <% for(var i in t.options){ %>
+            <option <% if(t.options[i].disabled){ %> disabled="disabled"<% } %><% if(t.options[i].selected){ %> selected="selected"<% } %>><%= t.options[i].text %></option>
+        <% } %>
+        </select>
+    </script>
+    <script type="text/html" id="dateMarkerTempl">
+        <h4 class="dateMarker"><%= t %></h4>
+    </script>
+    
+    <script type="text/html" id="tagTempl">
+      <% t.removable = t.removable || 'False'; %>
+      <div class="tag <%= t.cls || '' %><% if(t.removable != 'False') { %> x<% } %>" title="<%= t.name %>" rem="<%= t.removable %>" wt="tag" a="<%= t.action || '' %>">
+          <div class="ar" a='rem'></div>
+          <div class="co">
+          <span class="name"><%= t.name %></span><% if(t.count) { %><div class="d"></div><span class="count"><%= count %></span><% } %>
+          </div>
+      </div>
+    </script>
+    <script type="text/html" id="hiddenTempl">
+      <input type="hidden" name="<%= t.field || '' %>" value="<%= t.value || '' %>" />
+    </script>
+    
+    <script type="text/javascript">    
+        $(function() {
+            D.modal._init('#modal');
+            $('[wt=tag]').tag();
+            $('.link').link('insertDates');
+            $('.link .note').moreless(75);
+            $('[createStack]').live('click', function() {
+              del.showCreateStack();
+            });
+            $('[saveLink]').live('click', del.showSaveLink);
+            $('[shareLink]').live('click', del.showShareModal);
+            $('[editLink]').live('click', function(evt) {
+              evt.stopPropagation();
+              var url = $(this).attr('href');
+              del.showEditModal(url);
+              return false;
+            });
+        });
+    </script>
+    
+    
+    <script type="text/javascript">var _sf_startpt=(new Date()).getTime();</script>
+</head>
+
+
+
+
+
+
+
+
+<body id="user_profile" class="fullpage list userposts" username="fozbaca">
+    <div id="header">
+      <div class="content">
+         <div id="banner">
+  <h1 id="logobox"><a class="logo" href="/"><span>Delicious</span></a></h1>
+  <form id="global-searchform" class="searchForm" action="/search" method="get">
+    <div class="search-box">
+        <input autocomplete="off" name="p" id="global-searchinput" class="searchInput" size="30" maxlength="255" placeholder="Search" type="text"/>
+        <input id="global-searchsubmit" class="searchsubmit" style="visibility:hidden;" type="submit"/>
+        
+        <div class="searchIcon"></div>
+    </div>
+</form>
+
+
+  <ul id="userNav" class="dropdown"></ul>
+    <div class="headerbtns">
+      <a class="pr" href="/login">Sign In </a>
+      <a class="pl" href="/register">Join</a>
+    </div></div>
+
+
+<div class="saveDialog" id="saveDialog0">
+  <div class="saveBody"></div>
+  <div class="clear"></div>
+</div>
+
+
+
+
+<!-- Read-only downtime message <div class="message-box" ><p style="margin-top:8px;"><b>Delicious will be under limited maintenance from 11 PM to 2 AM PST.</b></p></div> -->
+
+
+     <!-- <div class="message-box" ><p style="margin-top:8px;"><b>Delicious will be under limited maintenance from 11 PM to 1 AM PST.</b></p></div> -->
+
+      </div>
+    </div>
+    <div id="main">
+        <div class="content">
+          <div class="leftColumn tabsPage">
+	          <div class="tabs">
+    	
+        	<a class="active"  href="/fozbaca">fozbaca</a>
+        	<a href="/feed/fozbaca">Feed</a>
+        
+        <div class="clear"></div>
+    </div>
+		          
+		                  
+				               <div class="introMessage withTabs">
+				                  <div class="innerContent">
+				                    
+				                        <h2 class="last">fozbaca has no links with the tags: health.</h2>
+				                    
+				                  </div>
+				                </div>
+				              <div class="clear"></div>
+		                  
+		          
+		
+		            
+		                <!-- Promo for view all tags page -->
+		                    <div style="margin-top:10px;width:760px;position:relative;">
+		                    	<div style="text-align:center;"><a href="/tag/health">See all links tagged health</a></div>
+		                    </div>
+		            
+		
+		            	
+	        </div>
+            <div class="sidebar">
+                
+                    
+                
+                
+    
+    	<ul id="followShare">
+            
+                <li id="actionAddToMyNetwork">
+                    <a class="btn green followUserBtn" rel="nofollow" href="#" title"follow">Follow</a>
+                </li>
+            
+    	</ul>
+       
+    
+    <!-- hidden field used for followUser -->
+    <h3 class="username" style="display:hidden;">fozbaca</h3>
+    <h3>Brian Lauer</h3>
+    <ul class="sidebarStats">
+          <li>Joined some time ago</li>
+          
+          
+          
+          	<li style="word-wrap:break-word;"><a target="_blank" href="http://fozbaca.org/" title="http://fozbaca.org/">http://fozbaca.org/</a></li>
+          
+          <li>RSS: <a href="/v2/rss/fozbaca">Public</a></li>
+    	  <li>Following: <a href="/feed/fozbaca">
+    	    
+    	      50 Users
+    	    </a>
+    	  </li>
+    	  	
+    </ul>
+	<ul class="sidebarStats">
+    	<li><span class="linkIcon"></span><a href="/fozbaca">475 Links</a></li>
+    </ul>
+    <ul class="sidebarStats">
+       
+    </ul>
+                          
+              
+
+        
+                       
+
+	    
+
+        
+
+        <div class="header">TAGS
+            
+            <div class="dd" dropdown="true">
+                <div class="icon"></div>
+                <a href="?sort=count" value="count" class="selected">By Count</a>
+                <a href="?sort=alpha" value="alpha">By Alpha</a>
+            </div>
+            
+        </div>
+        
+        <ul id="tagList">
+            
+              
+                <li>
+                    
+    <div class="tag  align_count" title="from twitter" rem="False" wt="tag" a="goToUserTag">
+        <div class="ar" a='rem'></div>
+        <div class="co">
+        <span class="name">from twitter</span><div class="d"></div><span class="count">476</span>
+        </div>
+    </div>
+  
+                </li>
+              
+            
+              
+                <li>
+                    
+    <div class="tag  align_count" title="photography" rem="False" wt="tag" a="goToUserTag">
+        <div class="ar" a='rem'></div>
+        <div class="co">
+        <span class="name">photography</span><div class="d"></div><span class="count">14</span>
+        </div>
+    </div>
+  
+                </li>
+              
+            
+              
+                <li>
+                    
+    <div class="tag  align_count" title="list" rem="False" wt="tag" a="goToUserTag">
+        <div class="ar" a='rem'></div>
+        <div class="co">
+        <span class="name">list</span><div class="d"></div><span class="count">6</span>
+        </div>
+    </div>
+  
+                </li>
+              
+            
+              
+                <li>
+                    
+    <div class="tag  align_count" title="tutorial" rem="False" wt="tag" a="goToUserTag">
+        <div class="ar" a='rem'></div>
+        <div class="co">
+        <span class="name">tutorial</span><div class="d"></div><span class="count">6</span>
+        </div>
+    </div>
+  
+                </li>
+              
+            
+              
+                <li>
+                    
+    <div class="tag  align_count" title="recap" rem="False" wt="tag" a="goToUserTag">
+        <div class="ar" a='rem'></div>
+        <div class="co">
+        <span class="name">recap</span><div class="d"></div><span class="count">5</span>
+        </div>
+    </div>
+  
+                </li>
+              
+            
+              
+                <li>
+                    
+    <div class="tag  align_count" title="diy" rem="False" wt="tag" a="goToUserTag">
+        <div class="ar" a='rem'></div>
+        <div class="co">
+        <span class="name">diy</span><div class="d"></div><span class="count">5</span>
+        </div>
+    </div>
+  
+                </li>
+              
+            
+              
+                <li>
+                    
+    <div class="tag  align_count" title="JavaScript" rem="False" wt="tag" a="goToUserTag">
+        <div class="ar" a='rem'></div>
+        <div class="co">
+        <span class="name">JavaScript</span><div class="d"></div><span class="count">5</span>
+        </div>
+    </div>
+  
+                </li>
+              
+            
+              
+                <li>
+                    
+    <div class="tag  align_count" title="design" rem="False" wt="tag" a="goToUserTag">
+        <div class="ar" a='rem'></div>
+        <div class="co">
+        <span class="name">design</span><div class="d"></div><span class="count">4</span>
+        </div>
+    </div>
+  
+                </li>
+              
+            
+              
+                <li>
+                    
+    <div class="tag  align_count" title="perl" rem="False" wt="tag" a="goToUserTag">
+        <div class="ar" a='rem'></div>
+        <div class="co">
+        <span class="name">perl</span><div class="d"></div><span class="count">4</span>
+        </div>
+    </div>
+  
+                </li>
+              
+            
+              
+                <li>
+                    
+    <div class="tag  align_count" title="Windows" rem="False" wt="tag" a="goToUserTag">
+        <div class="ar" a='rem'></div>
+        <div class="co">
+        <span class="name">Windows</span><div class="d"></div><span class="count">4</span>
+        </div>
+    </div>
+  
+                </li>
+              
+            
+              
+                <li>
+                    
+    <div class="tag  align_count" title="Photoshop" rem="False" wt="tag" a="goToUserTag">
+        <div class="ar" a='rem'></div>
+        <div class="co">
+        <span class="name">Photoshop</span><div class="d"></div><span class="count">4</span>
+        </div>
+    </div>
+  
+                </li>
+              
+            
+              
+                <li>
+                    
+    <div class="tag  align_count" title="gui" rem="False" wt="tag" a="goToUserTag">
+        <div class="ar" a='rem'></div>
+        <div class="co">
+        <span class="name">gui</span><div class="d"></div><span class="count">3</span>
+        </div>
+    </div>
+  
+                </li>
+              
+            
+              
+                <li>
+                    
+    <div class="tag  align_count" title="camera" rem="False" wt="tag" a="goToUserTag">
+        <div class="ar" a='rem'></div>
+        <div class="co">
+        <span class="name">camera</span><div class="d"></div><span class="count">3</span>
+        </div>
+    </div>
+  
+                </li>
+              
+            
+              
+                <li>
+                    
+    <div class="tag  align_count" title="ruby" rem="False" wt="tag" a="goToUserTag">
+        <div class="ar" a='rem'></div>
+        <div class="co">
+        <span class="name">ruby</span><div class="d"></div><span class="count">3</span>
+        </div>
+    </div>
+  
+                </li>
+              
+            
+              
+                <li>
+                    
+    <div class="tag  align_count" title="development" rem="False" wt="tag" a="goToUserTag">
+        <div class="ar" a='rem'></div>
+        <div class="co">
+        <span class="name">development</span><div class="d"></div><span class="count">3</span>
+        </div>
+    </div>
+  
+                </li>
+              
+            
+              
+                <li>
+                    
+    <div class="tag  align_count" title="Apple" rem="False" wt="tag" a="goToUserTag">
+        <div class="ar" a='rem'></div>
+        <div class="co">
+        <span class="name">Apple</span><div class="d"></div><span class="count">3</span>
+        </div>
+    </div>
+  
+                </li>
+              
+            
+              
+                <li>
+                    
+    <div class="tag  align_count" title="Web" rem="False" wt="tag" a="goToUserTag">
+        <div class="ar" a='rem'></div>
+        <div class="co">
+        <span class="name">Web</span><div class="d"></div><span class="count">2</span>
+        </div>
+    </div>
+  
+                </li>
+              
+            
+              
+                <li>
+                    
+    <div class="tag  align_count" title="Rails" rem="False" wt="tag" a="goToUserTag">
+        <div class="ar" a='rem'></div>
+        <div class="co">
+        <span class="name">Rails</span><div class="d"></div><span class="count">2</span>
+        </div>
+    </div>
+  
+                </li>
+              
+            
+              
+                <li>
+                    
+    <div class="tag  align_count" title="via:packrati.us" rem="False" wt="tag" a="goToUserTag">
+        <div class="ar" a='rem'></div>
+        <div class="co">
+        <span class="name">via:packrati.us</span><div class="d"></div><span class="count">2</span>
+        </div>
+    </div>
+  
+                </li>
+              
+            
+              
+                <li>
+                    
+    <div class="tag  align_count" title="python" rem="False" wt="tag" a="goToUserTag">
+        <div class="ar" a='rem'></div>
+        <div class="co">
+        <span class="name">python</span><div class="d"></div><span class="count">2</span>
+        </div>
+    </div>
+  
+                </li>
+              
+            
+              
+                <li>
+                    
+    <div class="tag  align_count" title="howto" rem="False" wt="tag" a="goToUserTag">
+        <div class="ar" a='rem'></div>
+        <div class="co">
+        <span class="name">howto</span><div class="d"></div><span class="count">2</span>
+        </div>
+    </div>
+  
+                </li>
+              
+            
+              
+                <li>
+                    
+    <div class="tag  align_count" title="iPhone" rem="False" wt="tag" a="goToUserTag">
+        <div class="ar" a='rem'></div>
+        <div class="co">
+        <span class="name">iPhone</span><div class="d"></div><span class="count">2</span>
+        </div>
+    </div>
+  
+                </li>
+              
+            
+              
+                <li>
+                    
+    <div class="tag  align_count" title="has:via" rem="False" wt="tag" a="goToUserTag">
+        <div class="ar" a='rem'></div>
+        <div class="co">
+        <span class="name">has:via</span><div class="d"></div><span class="count">2</span>
+        </div>
+    </div>
+  
+                </li>
+              
+            
+              
+                <li>
+                    
+    <div class="tag  align_count" title="fonts" rem="False" wt="tag" a="goToUserTag">
+        <div class="ar" a='rem'></div>
+        <div class="co">
+        <span class="name">fonts</span><div class="d"></div><span class="count">2</span>
+        </div>
+    </div>
+  
+                </li>
+              
+            
+              
+                <li>
+                    
+    <div class="tag  align_count" title="iPad" rem="False" wt="tag" a="goToUserTag">
+        <div class="ar" a='rem'></div>
+        <div class="co">
+        <span class="name">iPad</span><div class="d"></div><span class="count">2</span>
+        </div>
+    </div>
+  
+                </li>
+              
+            
+              
+                <li>
+                    
+    <div class="tag  align_count" title="twitter" rem="False" wt="tag" a="goToUserTag">
+        <div class="ar" a='rem'></div>
+        <div class="co">
+        <span class="name">twitter</span><div class="d"></div><span class="count">2</span>
+        </div>
+    </div>
+  
+                </li>
+              
+            
+              
+                <li>
+                    
+    <div class="tag  align_count" title="tips" rem="False" wt="tag" a="goToUserTag">
+        <div class="ar" a='rem'></div>
+        <div class="co">
+        <span class="name">tips</span><div class="d"></div><span class="count">2</span>
+        </div>
+    </div>
+  
+                </li>
+              
+            
+              
+                <li>
+                    
+    <div class="tag  align_count" title="CSS" rem="False" wt="tag" a="goToUserTag">
+        <div class="ar" a='rem'></div>
+        <div class="co">
+        <span class="name">CSS</span><div class="d"></div><span class="count">2</span>
+        </div>
+    </div>
+  
+                </li>
+              
+            
+              
+                <li>
+                    
+    <div class="tag  align_count" title="economics" rem="False" wt="tag" a="goToUserTag">
+        <div class="ar" a='rem'></div>
+        <div class="co">
+        <span class="name">economics</span><div class="d"></div><span class="count">2</span>
+        </div>
+    </div>
+  
+                </li>
+              
+            
+              
+                <li>
+                    
+    <div class="tag  align_count" title="packaging" rem="False" wt="tag" a="goToUserTag">
+        <div class="ar" a='rem'></div>
+        <div class="co">
+        <span class="name">packaging</span><div class="d"></div><span class="count">2</span>
+        </div>
+    </div>
+  
+                </li>
+              
+            
+              
+                <li>
+                    
+    <div class="tag  align_count" title="Statistics" rem="False" wt="tag" a="goToUserTag">
+        <div class="ar" a='rem'></div>
+        <div class="co">
+        <span class="name">Statistics</span><div class="d"></div><span class="count">2</span>
+        </div>
+    </div>
+  
+                </li>
+              
+            
+              
+                <li>
+                    
+    <div class="tag  align_count" title="pod" rem="False" wt="tag" a="goToUserTag">
+        <div class="ar" a='rem'></div>
+        <div class="co">
+        <span class="name">pod</span><div class="d"></div><span class="count">2</span>
+        </div>
+    </div>
+  
+                </li>
+              
+            
+              
+                <li>
+                    
+    <div class="tag  align_count" title="gear" rem="False" wt="tag" a="goToUserTag">
+        <div class="ar" a='rem'></div>
+        <div class="co">
+        <span class="name">gear</span><div class="d"></div><span class="count">2</span>
+        </div>
+    </div>
+  
+                </li>
+              
+            
+              
+                <li>
+                    
+    <div class="tag  align_count" title="Science" rem="False" wt="tag" a="goToUserTag">
+        <div class="ar" a='rem'></div>
+        <div class="co">
+        <span class="name">Science</span><div class="d"></div><span class="count">2</span>
+        </div>
+    </div>
+  
+                </li>
+              
+            
+              
+                <li>
+                    
+    <div class="tag  align_count" title="lighttpd" rem="False" wt="tag" a="goToUserTag">
+        <div class="ar" a='rem'></div>
+        <div class="co">
+        <span class="name">lighttpd</span><div class="d"></div><span class="count">2</span>
+        </div>
+    </div>
+  
+                </li>
+              
+            
+              
+                <li>
+                    
+    <div class="tag  align_count" title="typography" rem="False" wt="tag" a="goToUserTag">
+        <div class="ar" a='rem'></div>
+        <div class="co">
+        <span class="name">typography</span><div class="d"></div><span class="count">2</span>
+        </div>
+    </div>
+  
+                </li>
+              
+            
+              
+                <li>
+                    
+    <div class="tag  align_count" title="video" rem="False" wt="tag" a="goToUserTag">
+        <div class="ar" a='rem'></div>
+        <div class="co">
+        <span class="name">video</span><div class="d"></div><span class="count">2</span>
+        </div>
+    </div>
+  
+                </li>
+              
+            
+              
+                <li>
+                    
+    <div class="tag  align_count" title="usability" rem="False" wt="tag" a="goToUserTag">
+        <div class="ar" a='rem'></div>
+        <div class="co">
+        <span class="name">usability</span><div class="d"></div><span class="count">2</span>
+        </div>
+    </div>
+  
+                </li>
+              
+            
+              
+                <li>
+                    
+    <div class="tag  align_count" title="housemilk" rem="False" wt="tag" a="goToUserTag">
+        <div class="ar" a='rem'></div>
+        <div class="co">
+        <span class="name">housemilk</span><div class="d"></div><span class="count">2</span>
+        </div>
+    </div>
+  
+                </li>
+              
+            
+              
+                <li>
+                    
+    <div class="tag  align_count" title="book" rem="False" wt="tag" a="goToUserTag">
+        <div class="ar" a='rem'></div>
+        <div class="co">
+        <span class="name">book</span><div class="d"></div><span class="count">2</span>
+        </div>
+    </div>
+  
+                </li>
+              
+            
+              
+                <li>
+                    
+    <div class="tag  align_count" title="ios" rem="False" wt="tag" a="goToUserTag">
+        <div class="ar" a='rem'></div>
+        <div class="co">
+        <span class="name">ios</span><div class="d"></div><span class="count">2</span>
+        </div>
+    </div>
+  
+                </li>
+              
+            
+              
+                <li>
+                    
+    <div class="tag  align_count" title="HTML5" rem="False" wt="tag" a="goToUserTag">
+        <div class="ar" a='rem'></div>
+        <div class="co">
+        <span class="name">HTML5</span><div class="d"></div><span class="count">2</span>
+        </div>
+    </div>
+  
+                </li>
+              
+            
+              
+                <li>
+                    
+    <div class="tag  align_count" title="text" rem="False" wt="tag" a="goToUserTag">
+        <div class="ar" a='rem'></div>
+        <div class="co">
+        <span class="name">text</span><div class="d"></div><span class="count">1</span>
+        </div>
+    </div>
+  
+                </li>
+              
+            
+              
+                <li>
+                    
+    <div class="tag  align_count" title="recipe" rem="False" wt="tag" a="goToUserTag">
+        <div class="ar" a='rem'></div>
+        <div class="co">
+        <span class="name">recipe</span><div class="d"></div><span class="count">1</span>
+        </div>
+    </div>
+  
+                </li>
+              
+            
+              
+                <li>
+                    
+    <div class="tag  align_count" title="webdesign" rem="False" wt="tag" a="goToUserTag">
+        <div class="ar" a='rem'></div>
+        <div class="co">
+        <span class="name">webdesign</span><div class="d"></div><span class="count">1</span>
+        </div>
+    </div>
+  
+                </li>
+              
+            
+              
+                <li>
+                    
+    <div class="tag  align_count" title="120mm" rem="False" wt="tag" a="goToUserTag">
+        <div class="ar" a='rem'></div>
+        <div class="co">
+        <span class="name">120mm</span><div class="d"></div><span class="count">1</span>
+        </div>
+    </div>
+  
+                </li>
+              
+            
+              
+                <li>
+                    
+    <div class="tag  align_count" title="filetype:mov" rem="False" wt="tag" a="goToUserTag">
+        <div class="ar" a='rem'></div>
+        <div class="co">
+        <span class="name">filetype:mov</span><div class="d"></div><span class="count">1</span>
+        </div>
+    </div>
+  
+                </li>
+              
+            
+              
+                <li>
+                    
+    <div class="tag  align_count" title="chicken" rem="False" wt="tag" a="goToUserTag">
+        <div class="ar" a='rem'></div>
+        <div class="co">
+        <span class="name">chicken</span><div class="d"></div><span class="count">1</span>
+        </div>
+    </div>
+  
+                </li>
+              
+            
+              
+                <li>
+                    
+    <div class="tag  align_count" title="font" rem="False" wt="tag" a="goToUserTag">
+        <div class="ar" a='rem'></div>
+        <div class="co">
+        <span class="name">font</span><div class="d"></div><span class="count">1</span>
+        </div>
+    </div>
+  
+                </li>
+              
+            
+              
+                <li>
+                    
+    <div class="tag  align_count" title="weekly" rem="False" wt="tag" a="goToUserTag">
+        <div class="ar" a='rem'></div>
+        <div class="co">
+        <span class="name">weekly</span><div class="d"></div><span class="count">1</span>
+        </div>
+    </div>
+  
+                </li>
+              
+            
+              
+                <li>
+                    
+    <div class="tag  align_count" title="icons" rem="False" wt="tag" a="goToUserTag">
+        <div class="ar" a='rem'></div>
+        <div class="co">
+        <span class="name">icons</span><div class="d"></div><span class="count">1</span>
+        </div>
+    </div>
+  
+                </li>
+              
+            
+              
+                <li>
+                    
+    <div class="tag  align_count" title="menu" rem="False" wt="tag" a="goToUserTag">
+        <div class="ar" a='rem'></div>
+        <div class="co">
+        <span class="name">menu</span><div class="d"></div><span class="count">1</span>
+        </div>
+    </div>
+  
+                </li>
+              
+            
+              
+                <li>
+                    
+    <div class="tag  align_count" title="forms" rem="False" wt="tag" a="goToUserTag">
+        <div class="ar" a='rem'></div>
+        <div class="co">
+        <span class="name">forms</span><div class="d"></div><span class="count">1</span>
+        </div>
+    </div>
+  
+                </li>
+              
+            
+              
+                <li>
+                    
+    <div class="tag  align_count" title="shoppingcart" rem="False" wt="tag" a="goToUserTag">
+        <div class="ar" a='rem'></div>
+        <div class="co">
+        <span class="name">shoppingcart</span><div class="d"></div><span class="count">1</span>
+        </div>
+    </div>
+  
+                </li>
+              
+            
+              
+                <li>
+                    
+    <div class="tag  align_count" title="opensource" rem="False" wt="tag" a="goToUserTag">
+        <div class="ar" a='rem'></div>
+        <div class="co">
+        <span class="name">opensource</span><div class="d"></div><span class="count">1</span>
+        </div>
+    </div>
+  
+                </li>
+              
+            
+              
+                <li>
+                    
+    <div class="tag  align_count" title="Facebook" rem="False" wt="tag" a="goToUserTag">
+        <div class="ar" a='rem'></div>
+        <div class="co">
+        <span class="name">Facebook</span><div class="d"></div><span class="count">1</span>
+        </div>
+    </div>
+  
+                </li>
+              
+            
+              
+                <li>
+                    
+    <div class="tag  align_count" title="Software" rem="False" wt="tag" a="goToUserTag">
+        <div class="ar" a='rem'></div>
+        <div class="co">
+        <span class="name">Software</span><div class="d"></div><span class="count">1</span>
+        </div>
+    </div>
+  
+                </li>
+              
+            
+              
+                <li>
+                    
+    <div class="tag  align_count" title="Support" rem="False" wt="tag" a="goToUserTag">
+        <div class="ar" a='rem'></div>
+        <div class="co">
+        <span class="name">Support</span><div class="d"></div><span class="count">1</span>
+        </div>
+    </div>
+  
+                </li>
+              
+            
+              
+                <li>
+                    
+    <div class="tag  align_count" title="Rumor" rem="False" wt="tag" a="goToUserTag">
+        <div class="ar" a='rem'></div>
+        <div class="co">
+        <span class="name">Rumor</span><div class="d"></div><span class="count">1</span>
+        </div>
+    </div>
+  
+                </li>
+              
+            
+              
+                <li>
+                    
+    <div class="tag  align_count" title="Evolution" rem="False" wt="tag" a="goToUserTag">
+        <div class="ar" a='rem'></div>
+        <div class="co">
+        <span class="name">Evolution</span><div class="d"></div><span class="count">1</span>
+        </div>
+    </div>
+  
+                </li>
+              
+            
+              
+                <li>
+                    
+    <div class="tag  align_count" title="finance" rem="False" wt="tag" a="goToUserTag">
+        <div class="ar" a='rem'></div>
+        <div class="co">
+        <span class="name">finance</span><div class="d"></div><span class="count">1</span>
+        </div>
+    </div>
+  
+                </li>
+              
+            
+              
+                <li>
+                    
+    <div class="tag  align_count" title="government" rem="False" wt="tag" a="goToUserTag">
+        <div class="ar" a='rem'></div>
+        <div class="co">
+        <span class="name">government</span><div class="d"></div><span class="count">1</span>
+        </div>
+    </div>
+  
+                </li>
+              
+            
+              
+                <li>
+                    
+    <div class="tag  align_count" title="ReturnOfTheJedi" rem="False" wt="tag" a="goToUserTag">
+        <div class="ar" a='rem'></div>
+        <div class="co">
+        <span class="name">ReturnOfTheJedi</span><div class="d"></div><span class="count">1</span>
+        </div>
+    </div>
+  
+                </li>
+              
+            
+              
+                <li>
+                    
+    <div class="tag  align_count" title="framework" rem="False" wt="tag" a="goToUserTag">
+        <div class="ar" a='rem'></div>
+        <div class="co">
+        <span class="name">framework</span><div class="d"></div><span class="count">1</span>
+        </div>
+    </div>
+  
+                </li>
+              
+            
+              
+                <li>
+                    
+    <div class="tag  align_count" title="ds640" rem="False" wt="tag" a="goToUserTag">
+        <div class="ar" a='rem'></div>
+        <div class="co">
+        <span class="name">ds640</span><div class="d"></div><span class="count">1</span>
+        </div>
+    </div>
+  
+                </li>
+              
+            
+              
+                <li>
+                    
+    <div class="tag  align_count" title="Accessibility" rem="False" wt="tag" a="goToUserTag">
+        <div class="ar" a='rem'></div>
+        <div class="co">
+        <span class="name">Accessibility</span><div class="d"></div><span class="count">1</span>
+        </div>
+    </div>
+  
+                </li>
+              
+            
+              
+                <li>
+                    
+    <div class="tag  align_count" title="KenBurns" rem="False" wt="tag" a="goToUserTag">
+        <div class="ar" a='rem'></div>
+        <div class="co">
+        <span class="name">KenBurns</span><div class="d"></div><span class="count">1</span>
+        </div>
+    </div>
+  
+                </li>
+              
+            
+              
+                <li>
+                    
+    <div class="tag  align_count" title="minimalism" rem="False" wt="tag" a="goToUserTag">
+        <div class="ar" a='rem'></div>
+        <div class="co">
+        <span class="name">minimalism</span><div class="d"></div><span class="count">1</span>
+        </div>
+    </div>
+  
+                </li>
+              
+            
+              
+                <li>
+                    
+    <div class="tag  align_count" title="cross-processing" rem="False" wt="tag" a="goToUserTag">
+        <div class="ar" a='rem'></div>
+        <div class="co">
+        <span class="name">cross-processing</span><div class="d"></div><span class="count">1</span>
+        </div>
+    </div>
+  
+                </li>
+              
+            
+              
+                <li>
+                    
+    <div class="tag  align_count" title="StarWars" rem="False" wt="tag" a="goToUserTag">
+        <div class="ar" a='rem'></div>
+        <div class="co">
+        <span class="name">StarWars</span><div class="d"></div><span class="count">1</span>
+        </div>
+    </div>
+  
+                </li>
+              
+            
+              
+                <li>
+                    
+    <div class="tag  align_count" title="bestof11" rem="False" wt="tag" a="goToUserTag">
+        <div class="ar" a='rem'></div>
+        <div class="co">
+        <span class="name">bestof11</span><div class="d"></div><span class="count">1</span>
+        </div>
+    </div>
+  
+                </li>
+              
+            
+              
+                <li>
+                    
+    <div class="tag  align_count" title="HTTP" rem="False" wt="tag" a="goToUserTag">
+        <div class="ar" a='rem'></div>
+        <div class="co">
+        <span class="name">HTTP</span><div class="d"></div><span class="count">1</span>
+        </div>
+    </div>
+  
+                </li>
+              
+            
+              
+                <li>
+                    
+    <div class="tag  align_count" title="rpg" rem="False" wt="tag" a="goToUserTag">
+        <div class="ar" a='rem'></div>
+        <div class="co">
+        <span class="name">rpg</span><div class="d"></div><span class="count">1</span>
+        </div>
+    </div>
+  
+                </li>
+              
+            
+              
+                <li>
+                    
+    <div class="tag  align_count" title="Tablet" rem="False" wt="tag" a="goToUserTag">
+        <div class="ar" a='rem'></div>
+        <div class="co">
+        <span class="name">Tablet</span><div class="d"></div><span class="count">1</span>
+        </div>
+    </div>
+  
+                </li>
+              
+            
+              
+                <li>
+                    
+    <div class="tag  align_count" title="books" rem="False" wt="tag" a="goToUserTag">
+        <div class="ar" a='rem'></div>
+        <div class="co">
+        <span class="name">books</span><div class="d"></div><span class="count">1</span>
+        </div>
+    </div>
+  
+                </li>
+              
+            
+              
+                <li>
+                    
+    <div class="tag  align_count" title="Editor" rem="False" wt="tag" a="goToUserTag">
+        <div class="ar" a='rem'></div>
+        <div class="co">
+        <span class="name">Editor</span><div class="d"></div><span class="count">1</span>
+        </div>
+    </div>
+  
+                </li>
+              
+            
+              
+                <li>
+                    
+    <div class="tag  align_count" title="home" rem="False" wt="tag" a="goToUserTag">
+        <div class="ar" a='rem'></div>
+        <div class="co">
+        <span class="name">home</span><div class="d"></div><span class="count">1</span>
+        </div>
+    </div>
+  
+                </li>
+              
+            
+              
+                <li>
+                    
+    <div class="tag  align_count" title="newsletter" rem="False" wt="tag" a="goToUserTag">
+        <div class="ar" a='rem'></div>
+        <div class="co">
+        <span class="name">newsletter</span><div class="d"></div><span class="count">1</span>
+        </div>
+    </div>
+  
+                </li>
+              
+            
+              
+                <li>
+                    
+    <div class="tag  align_count" title="readability" rem="False" wt="tag" a="goToUserTag">
+        <div class="ar" a='rem'></div>
+        <div class="co">
+        <span class="name">readability</span><div class="d"></div><span class="count">1</span>
+        </div>
+    </div>
+  
+                </li>
+              
+            
+              
+                <li>
+                    
+    <div class="tag  align_count" title="sociology" rem="False" wt="tag" a="goToUserTag">
+        <div class="ar" a='rem'></div>
+        <div class="co">
+        <span class="name">sociology</span><div class="d"></div><span class="count">1</span>
+        </div>
+    </div>
+  
+                </li>
+              
+            
+              
+                <li>
+                    
+    <div class="tag  align_count" title="Template" rem="False" wt="tag" a="goToUserTag">
+        <div class="ar" a='rem'></div>
+        <div class="co">
+        <span class="name">Template</span><div class="d"></div><span class="count">1</span>
+        </div>
+    </div>
+  
+                </li>
+              
+            
+              
+                <li>
+                    
+    <div class="tag  align_count" title="DHTML" rem="False" wt="tag" a="goToUserTag">
+        <div class="ar" a='rem'></div>
+        <div class="co">
+        <span class="name">DHTML</span><div class="d"></div><span class="count">1</span>
+        </div>
+    </div>
+  
+                </li>
+              
+            
+              
+                <li>
+                    
+    <div class="tag  align_count" title="mortgage" rem="False" wt="tag" a="goToUserTag">
+        <div class="ar" a='rem'></div>
+        <div class="co">
+        <span class="name">mortgage</span><div class="d"></div><span class="count">1</span>
+        </div>
+    </div>
+  
+                </li>
+              
+            
+              
+                <li>
+                    
+    <div class="tag  align_count" title="review" rem="False" wt="tag" a="goToUserTag">
+        <div class="ar" a='rem'></div>
+        <div class="co">
+        <span class="name">review</span><div class="d"></div><span class="count">1</span>
+        </div>
+    </div>
+  
+                </li>
+              
+            
+              
+                <li>
+                    
+    <div class="tag  align_count" title="vaccines" rem="False" wt="tag" a="goToUserTag">
+        <div class="ar" a='rem'></div>
+        <div class="co">
+        <span class="name">vaccines</span><div class="d"></div><span class="count">1</span>
+        </div>
+    </div>
+  
+                </li>
+              
+            
+              
+                <li>
+                    
+    <div class="tag  align_count" title="HTML" rem="False" wt="tag" a="goToUserTag">
+        <div class="ar" a='rem'></div>
+        <div class="co">
+        <span class="name">HTML</span><div class="d"></div><span class="count">1</span>
+        </div>
+    </div>
+  
+                </li>
+              
+            
+              
+                <li>
+                    
+    <div class="tag  align_count" title="Grid" rem="False" wt="tag" a="goToUserTag">
+        <div class="ar" a='rem'></div>
+        <div class="co">
+        <span class="name">Grid</span><div class="d"></div><span class="count">1</span>
+        </div>
+    </div>
+  
+                </li>
+              
+            
+              
+                <li>
+                    
+    <div class="tag  align_count" title="capatalism" rem="False" wt="tag" a="goToUserTag">
+        <div class="ar" a='rem'></div>
+        <div class="co">
+        <span class="name">capatalism</span><div class="d"></div><span class="count">1</span>
+        </div>
+    </div>
+  
+                </li>
+              
+            
+              
+                <li>
+                    
+    <div class="tag  align_count" title="Cool" rem="False" wt="tag" a="goToUserTag">
+        <div class="ar" a='rem'></div>
+        <div class="co">
+        <span class="name">Cool</span><div class="d"></div><span class="count">1</span>
+        </div>
+    </div>
+  
+                </li>
+              
+            
+              
+                <li>
+                    
+    <div class="tag  align_count" title="biology" rem="False" wt="tag" a="goToUserTag">
+        <div class="ar" a='rem'></div>
+        <div class="co">
+        <span class="name">biology</span><div class="d"></div><span class="count">1</span>
+        </div>
+    </div>
+  
+                </li>
+              
+            
+              
+                <li>
+                    
+    <div class="tag  align_count" title="Google+" rem="False" wt="tag" a="goToUserTag">
+        <div class="ar" a='rem'></div>
+        <div class="co">
+        <span class="name">Google+</span><div class="d"></div><span class="count">1</span>
+        </div>
+    </div>
+  
+                </li>
+              
+            
+              
+                <li>
+                    
+    <div class="tag  align_count" title="business" rem="False" wt="tag" a="goToUserTag">
+        <div class="ar" a='rem'></div>
+        <div class="co">
+        <span class="name">business</span><div class="d"></div><span class="count">1</span>
+        </div>
+    </div>
+  
+                </li>
+              
+            
+              
+                <li>
+                    
+    <div class="tag  align_count" title="marketing" rem="False" wt="tag" a="goToUserTag">
+        <div class="ar" a='rem'></div>
+        <div class="co">
+        <span class="name">marketing</span><div class="d"></div><span class="count">1</span>
+        </div>
+    </div>
+  
+                </li>
+              
+            
+              
+                <li>
+                    
+    <div class="tag  align_count" title="free" rem="False" wt="tag" a="goToUserTag">
+        <div class="ar" a='rem'></div>
+        <div class="co">
+        <span class="name">free</span><div class="d"></div><span class="count">1</span>
+        </div>
+    </div>
+  
+                </li>
+              
+            
+              
+                <li>
+                    
+    <div class="tag  align_count" title="iphoneography" rem="False" wt="tag" a="goToUserTag">
+        <div class="ar" a='rem'></div>
+        <div class="co">
+        <span class="name">iphoneography</span><div class="d"></div><span class="count">1</span>
+        </div>
+    </div>
+  
+                </li>
+              
+            
+              
+                <li>
+                    
+    <div class="tag  align_count" title="debt" rem="False" wt="tag" a="goToUserTag">
+        <div class="ar" a='rem'></div>
+        <div class="co">
+        <span class="name">debt</span><div class="d"></div><span class="count">1</span>
+        </div>
+    </div>
+  
+                </li>
+              
+            
+              
+                <li>
+                    
+    <div class="tag  align_count" title="c-41" rem="False" wt="tag" a="goToUserTag">
+        <div class="ar" a='rem'></div>
+        <div class="co">
+        <span class="name">c-41</span><div class="d"></div><span class="count">1</span>
+        </div>
+    </div>
+  
+                </li>
+              
+            
+              
+                <li>
+                    
+    <div class="tag  align_count" title="media:video" rem="False" wt="tag" a="goToUserTag">
+        <div class="ar" a='rem'></div>
+        <div class="co">
+        <span class="name">media:video</span><div class="d"></div><span class="count">1</span>
+        </div>
+    </div>
+  
+                </li>
+              
+            
+              
+                <li>
+                    
+    <div class="tag  align_count" title="Rants" rem="False" wt="tag" a="goToUserTag">
+        <div class="ar" a='rem'></div>
+        <div class="co">
+        <span class="name">Rants</span><div class="d"></div><span class="count">1</span>
+        </div>
+    </div>
+  
+                </li>
+              
+            
+              
+                <li>
+                    
+    <div class="tag  align_count" title="Image" rem="False" wt="tag" a="goToUserTag">
+        <div class="ar" a='rem'></div>
+        <div class="co">
+        <span class="name">Image</span><div class="d"></div><span class="count">1</span>
+        </div>
+    </div>
+  
+                </li>
+              
+            
+              
+                <li>
+                    
+    <div class="tag  align_count" title="programming" rem="False" wt="tag" a="goToUserTag">
+        <div class="ar" a='rem'></div>
+        <div class="co">
+        <span class="name">programming</span><div class="d"></div><span class="count">1</span>
+        </div>
+    </div>
+  
+                </li>
+              
+            
+              
+                <li>
+                    
+    <div class="tag  align_count" title="PSD" rem="False" wt="tag" a="goToUserTag">
+        <div class="ar" a='rem'></div>
+        <div class="co">
+        <span class="name">PSD</span><div class="d"></div><span class="count">1</span>
+        </div>
+    </div>
+  
+                </li>
+              
+            
+              
+                <li>
+                    
+    <div class="tag  align_count" title="credit" rem="False" wt="tag" a="goToUserTag">
+        <div class="ar" a='rem'></div>
+        <div class="co">
+        <span class="name">credit</span><div class="d"></div><span class="count">1</span>
+        </div>
+    </div>
+  
+                </li>
+              
+            
+              
+                <li>
+                    
+    <div class="tag  align_count" title="e-6" rem="False" wt="tag" a="goToUserTag">
+        <div class="ar" a='rem'></div>
+        <div class="co">
+        <span class="name">e-6</span><div class="d"></div><span class="count">1</span>
+        </div>
+    </div>
+  
+                </li>
+              
+            
+              
+                <li>
+                    
+    <div class="tag  align_count" title="SSI" rem="False" wt="tag" a="goToUserTag">
+        <div class="ar" a='rem'></div>
+        <div class="co">
+        <span class="name">SSI</span><div class="d"></div><span class="count">1</span>
+        </div>
+    </div>
+  
+                </li>
+              
+            
+              
+                <li>
+                    
+    <div class="tag  align_count" title="social" rem="False" wt="tag" a="goToUserTag">
+        <div class="ar" a='rem'></div>
+        <div class="co">
+        <span class="name">social</span><div class="d"></div><span class="count">1</span>
+        </div>
+    </div>
+  
+                </li>
+              
+            
+              
+                <li>
+                    
+    <div class="tag  align_count" title="Images" rem="False" wt="tag" a="goToUserTag">
+        <div class="ar" a='rem'></div>
+        <div class="co">
+        <span class="name">Images</span><div class="d"></div><span class="count">1</span>
+        </div>
+    </div>
+  
+                </li>
+              
+            
+              
+                <li>
+                    
+    <div class="tag  align_count" title="iphone4s" rem="False" wt="tag" a="goToUserTag">
+        <div class="ar" a='rem'></div>
+        <div class="co">
+        <span class="name">iphone4s</span><div class="d"></div><span class="count">1</span>
+        </div>
+    </div>
+  
+                </li>
+              
+            
+              
+                <li>
+                    
+    <div class="tag  align_count" title="Psychology" rem="False" wt="tag" a="goToUserTag">
+        <div class="ar" a='rem'></div>
+        <div class="co">
+        <span class="name">Psychology</span><div class="d"></div><span class="count">1</span>
+        </div>
+    </div>
+  
+                </li>
+              
+            
+              
+                <li>
+                    
+    <div class="tag  align_count" title="simple" rem="False" wt="tag" a="goToUserTag">
+        <div class="ar" a='rem'></div>
+        <div class="co">
+        <span class="name">simple</span><div class="d"></div><span class="count">1</span>
+        </div>
+    </div>
+  
+                </li>
+              
+            
+              
+                <li>
+                    
+    <div class="tag  align_count" title="60minphotochallenge" rem="False" wt="tag" a="goToUserTag">
+        <div class="ar" a='rem'></div>
+        <div class="co">
+        <span class="name">60minphotochallenge</span><div class="d"></div><span class="count">1</span>
+        </div>
+    </div>
+  
+                </li>
+              
+            
+              
+                <li>
+                    
+    <div class="tag  align_count" title="lucas" rem="False" wt="tag" a="goToUserTag">
+        <div class="ar" a='rem'></div>
+        <div class="co">
+        <span class="name">lucas</span><div class="d"></div><span class="count">1</span>
+        </div>
+    </div>
+  
+                </li>
+              
+            
+              
+                <li>
+                    
+    <div class="tag  align_count" title="community" rem="False" wt="tag" a="goToUserTag">
+        <div class="ar" a='rem'></div>
+        <div class="co">
+        <span class="name">community</span><div class="d"></div><span class="count">1</span>
+        </div>
+    </div>
+  
+                </li>
+              
+            
+              
+                <li>
+                    
+    <div class="tag  align_count" title="WebServer" rem="False" wt="tag" a="goToUserTag">
+        <div class="ar" a='rem'></div>
+        <div class="co">
+        <span class="name">WebServer</span><div class="d"></div><span class="count">1</span>
+        </div>
+    </div>
+  
+                </li>
+              
+            
+              
+                <li>
+                    
+    <div class="tag  align_count" title="Wordpress" rem="False" wt="tag" a="goToUserTag">
+        <div class="ar" a='rem'></div>
+        <div class="co">
+        <span class="name">Wordpress</span><div class="d"></div><span class="count">1</span>
+        </div>
+    </div>
+  
+                </li>
+              
+            
+              
+                <li>
+                    
+    <div class="tag  align_count" title="learning" rem="False" wt="tag" a="goToUserTag">
+        <div class="ar" a='rem'></div>
+        <div class="co">
+        <span class="name">learning</span><div class="d"></div><span class="count">1</span>
+        </div>
+    </div>
+  
+                </li>
+              
+            
+              
+                <li>
+                    
+    <div class="tag  align_count" title="pudding_to" rem="False" wt="tag" a="goToUserTag">
+        <div class="ar" a='rem'></div>
+        <div class="co">
+        <span class="name">pudding_to</span><div class="d"></div><span class="count">1</span>
+        </div>
+    </div>
+  
+                </li>
+              
+            
+              
+                <li>
+                    
+    <div class="tag  align_count" title="ecommerce" rem="False" wt="tag" a="goToUserTag">
+        <div class="ar" a='rem'></div>
+        <div class="co">
+        <span class="name">ecommerce</span><div class="d"></div><span class="count">1</span>
+        </div>
+    </div>
+  
+                </li>
+              
+            
+              
+                <li>
+                    
+    <div class="tag  align_count" title="Network" rem="False" wt="tag" a="goToUserTag">
+        <div class="ar" a='rem'></div>
+        <div class="co">
+        <span class="name">Network</span><div class="d"></div><span class="count">1</span>
+        </div>
+    </div>
+  
+                </li>
+              
+            
+              
+                <li>
+                    
+    <div class="tag  align_count" title="management" rem="False" wt="tag" a="goToUserTag">
+        <div class="ar" a='rem'></div>
+        <div class="co">
+        <span class="name">management</span><div class="d"></div><span class="count">1</span>
+        </div>
+    </div>
+  
+                </li>
+              
+            
+              
+                <li>
+                    
+    <div class="tag  align_count" title="networking" rem="False" wt="tag" a="goToUserTag">
+        <div class="ar" a='rem'></div>
+        <div class="co">
+        <span class="name">networking</span><div class="d"></div><span class="count">1</span>
+        </div>
+    </div>
+  
+                </li>
+              
+            
+              
+                <li>
+                    
+    <div class="tag  align_count" title="publishing" rem="False" wt="tag" a="goToUserTag">
+        <div class="ar" a='rem'></div>
+        <div class="co">
+        <span class="name">publishing</span><div class="d"></div><span class="count">1</span>
+        </div>
+    </div>
+  
+                </li>
+              
+            
+              
+                <li>
+                    
+    <div class="tag  align_count" title="housing" rem="False" wt="tag" a="goToUserTag">
+        <div class="ar" a='rem'></div>
+        <div class="co">
+        <span class="name">housing</span><div class="d"></div><span class="count">1</span>
+        </div>
+    </div>
+  
+                </li>
+              
+            
+              
+                <li>
+                    
+    <div class="tag  align_count" title="Zombie" rem="False" wt="tag" a="goToUserTag">
+        <div class="ar" a='rem'></div>
+        <div class="co">
+        <span class="name">Zombie</span><div class="d"></div><span class="count">1</span>
+        </div>
+    </div>
+  
+                </li>
+              
+            
+              
+                <li>
+                    
+    <div class="tag  align_count" title="buisness" rem="False" wt="tag" a="goToUserTag">
+        <div class="ar" a='rem'></div>
+        <div class="co">
+        <span class="name">buisness</span><div class="d"></div><span class="count">1</span>
+        </div>
+    </div>
+  
+                </li>
+              
+            
+              
+                <li>
+                    
+    <div class="tag  align_count" title="longreads" rem="False" wt="tag" a="goToUserTag">
+        <div class="ar" a='rem'></div>
+        <div class="co">
+        <span class="name">longreads</span><div class="d"></div><span class="count">1</span>
+        </div>
+    </div>
+  
+                </li>
+              
+            
+              
+                <li>
+                    
+    <div class="tag  align_count" title="Search" rem="False" wt="tag" a="goToUserTag">
+        <div class="ar" a='rem'></div>
+        <div class="co">
+        <span class="name">Search</span><div class="d"></div><span class="count">1</span>
+        </div>
+    </div>
+  
+                </li>
+              
+            
+              
+                <li>
+                    
+    <div class="tag  align_count" title="Database" rem="False" wt="tag" a="goToUserTag">
+        <div class="ar" a='rem'></div>
+        <div class="co">
+        <span class="name">Database</span><div class="d"></div><span class="count">1</span>
+        </div>
+    </div>
+  
+                </li>
+              
+            
+              
+                <li>
+                    
+    <div class="tag  align_count" title="35mm" rem="False" wt="tag" a="goToUserTag">
+        <div class="ar" a='rem'></div>
+        <div class="co">
+        <span class="name">35mm</span><div class="d"></div><span class="count">1</span>
+        </div>
+    </div>
+  
+                </li>
+              
+            
+              
+                <li>
+                    
+    <div class="tag  align_count" title="streetphotography" rem="False" wt="tag" a="goToUserTag">
+        <div class="ar" a='rem'></div>
+        <div class="co">
+        <span class="name">streetphotography</span><div class="d"></div><span class="count">1</span>
+        </div>
+    </div>
+  
+                </li>
+              
+            
+              
+                <li>
+                    
+    <div class="tag  align_count" title="graphics" rem="False" wt="tag" a="goToUserTag">
+        <div class="ar" a='rem'></div>
+        <div class="co">
+        <span class="name">graphics</span><div class="d"></div><span class="count">1</span>
+        </div>
+    </div>
+  
+                </li>
+              
+            
+              
+                <li>
+                    
+    <div class="tag  align_count" title="Browser" rem="False" wt="tag" a="goToUserTag">
+        <div class="ar" a='rem'></div>
+        <div class="co">
+        <span class="name">Browser</span><div class="d"></div><span class="count">1</span>
+        </div>
+    </div>
+  
+                </li>
+              
+            
+              
+                <li>
+                    
+    <div class="tag  align_count" title="jquery" rem="False" wt="tag" a="goToUserTag">
+        <div class="ar" a='rem'></div>
+        <div class="co">
+        <span class="name">jquery</span><div class="d"></div><span class="count">1</span>
+        </div>
+    </div>
+  
+                </li>
+              
+            
+              
+                <li>
+                    
+    <div class="tag  align_count" title="type" rem="False" wt="tag" a="goToUserTag">
+        <div class="ar" a='rem'></div>
+        <div class="co">
+        <span class="name">type</span><div class="d"></div><span class="count">1</span>
+        </div>
+    </div>
+  
+                </li>
+              
+            
+              
+                <li>
+                    
+    <div class="tag  align_count" title="Library" rem="False" wt="tag" a="goToUserTag">
+        <div class="ar" a='rem'></div>
+        <div class="co">
+        <span class="name">Library</span><div class="d"></div><span class="count">1</span>
+        </div>
+    </div>
+  
+                </li>
+              
+            
+              
+                <li>
+                    
+    <div class="tag  align_count" title="Analytics" rem="False" wt="tag" a="goToUserTag">
+        <div class="ar" a='rem'></div>
+        <div class="co">
+        <span class="name">Analytics</span><div class="d"></div><span class="count">1</span>
+        </div>
+    </div>
+  
+                </li>
+              
+            
+              
+                <li>
+                    
+    <div class="tag  align_count" title="future" rem="False" wt="tag" a="goToUserTag">
+        <div class="ar" a='rem'></div>
+        <div class="co">
+        <span class="name">future</span><div class="d"></div><span class="count">1</span>
+        </div>
+    </div>
+  
+                </li>
+              
+            
+              
+                <li>
+                    
+    <div class="tag  align_count" title="InternetExplorer" rem="False" wt="tag" a="goToUserTag">
+        <div class="ar" a='rem'></div>
+        <div class="co">
+        <span class="name">InternetExplorer</span><div class="d"></div><span class="count">1</span>
+        </div>
+    </div>
+  
+                </li>
+              
+            
+              
+                <li>
+                    
+    <div class="tag  align_count" title="Photo" rem="False" wt="tag" a="goToUserTag">
+        <div class="ar" a='rem'></div>
+        <div class="co">
+        <span class="name">Photo</span><div class="d"></div><span class="count">1</span>
+        </div>
+    </div>
+  
+                </li>
+              
+            
+              
+                <li>
+                    
+    <div class="tag  align_count" title="bookmarklet" rem="False" wt="tag" a="goToUserTag">
+        <div class="ar" a='rem'></div>
+        <div class="co">
+        <span class="name">bookmarklet</span><div class="d"></div><span class="count">1</span>
+        </div>
+    </div>
+  
+                </li>
+              
+            
+              
+                <li>
+                    
+    <div class="tag  align_count" title="History" rem="False" wt="tag" a="goToUserTag">
+        <div class="ar" a='rem'></div>
+        <div class="co">
+        <span class="name">History</span><div class="d"></div><span class="count">1</span>
+        </div>
+    </div>
+  
+                </li>
+              
+            
+              
+                <li>
+                    
+    <div class="tag  align_count" title="Movie" rem="False" wt="tag" a="goToUserTag">
+        <div class="ar" a='rem'></div>
+        <div class="co">
+        <span class="name">Movie</span><div class="d"></div><span class="count">1</span>
+        </div>
+    </div>
+  
+                </li>
+              
+            
+              
+                <li>
+                    
+    <div class="tag  align_count" title="lytro" rem="False" wt="tag" a="goToUserTag">
+        <div class="ar" a='rem'></div>
+        <div class="co">
+        <span class="name">lytro</span><div class="d"></div><span class="count">1</span>
+        </div>
+    </div>
+  
+                </li>
+              
+            
+              
+                <li>
+                    
+    <div class="tag  align_count" title="politics" rem="False" wt="tag" a="goToUserTag">
+        <div class="ar" a='rem'></div>
+        <div class="co">
+        <span class="name">politics</span><div class="d"></div><span class="count">1</span>
+        </div>
+    </div>
+  
+                </li>
+              
+            
+              
+                <li>
+                    
+    <div class="tag  align_count" title="Presentation" rem="False" wt="tag" a="goToUserTag">
+        <div class="ar" a='rem'></div>
+        <div class="co">
+        <span class="name">Presentation</span><div class="d"></div><span class="count">1</span>
+        </div>
+    </div>
+  
+                </li>
+              
+            
+              
+                <li>
+                    
+    <div class="tag  align_count" title="film" rem="False" wt="tag" a="goToUserTag">
+        <div class="ar" a='rem'></div>
+        <div class="co">
+        <span class="name">film</span><div class="d"></div><span class="count">1</span>
+        </div>
+    </div>
+  
+                </li>
+              
+            
+              
+                <li>
+                    
+    <div class="tag  align_count" title="EmpireStrikesBack" rem="False" wt="tag" a="goToUserTag">
+        <div class="ar" a='rem'></div>
+        <div class="co">
+        <span class="name">EmpireStrikesBack</span><div class="d"></div><span class="count">1</span>
+        </div>
+    </div>
+  
+                </li>
+              
+            
+              
+                <li>
+                    
+    <div class="tag  align_count" title="pda12" rem="False" wt="tag" a="goToUserTag">
+        <div class="ar" a='rem'></div>
+        <div class="co">
+        <span class="name">pda12</span><div class="d"></div><span class="count">1</span>
+        </div>
+    </div>
+  
+                </li>
+              
+            
+              
+                <li>
+                    
+    <div class="tag  align_count" title="media" rem="False" wt="tag" a="goToUserTag">
+        <div class="ar" a='rem'></div>
+        <div class="co">
+        <span class="name">media</span><div class="d"></div><span class="count">1</span>
+        </div>
+    </div>
+  
+                </li>
+              
+            
+              
+                <li>
+                    
+    <div class="tag  align_count" title="Survival" rem="False" wt="tag" a="goToUserTag">
+        <div class="ar" a='rem'></div>
+        <div class="co">
+        <span class="name">Survival</span><div class="d"></div><span class="count">1</span>
+        </div>
+    </div>
+  
+                </li>
+              
+            
+              
+                <li>
+                    
+    <div class="tag  align_count" title="polaroid" rem="False" wt="tag" a="goToUserTag">
+        <div class="ar" a='rem'></div>
+        <div class="co">
+        <span class="name">polaroid</span><div class="d"></div><span class="count">1</span>
+        </div>
+    </div>
+  
+                </li>
+              
+            
+              
+                <li>
+                    
+    <div class="tag  align_count" title="Algorithm" rem="False" wt="tag" a="goToUserTag">
+        <div class="ar" a='rem'></div>
+        <div class="co">
+        <span class="name">Algorithm</span><div class="d"></div><span class="count">1</span>
+        </div>
+    </div>
+  
+                </li>
+              
+            
+              
+                <li>
+                    
+    <div class="tag  align_count" title="coffeescript" rem="False" wt="tag" a="goToUserTag">
+        <div class="ar" a='rem'></div>
+        <div class="co">
+        <span class="name">coffeescript</span><div class="d"></div><span class="count">1</span>
+        </div>
+    </div>
+  
+                </li>
+              
+            
+              
+                <li>
+                    
+    <div class="tag  align_count" title="cheatsheet" rem="False" wt="tag" a="goToUserTag">
+        <div class="ar" a='rem'></div>
+        <div class="co">
+        <span class="name">cheatsheet</span><div class="d"></div><span class="count">1</span>
+        </div>
+    </div>
+  
+                </li>
+              
+            
+              
+                <li>
+                    
+    <div class="tag  align_count" title="scifi" rem="False" wt="tag" a="goToUserTag">
+        <div class="ar" a='rem'></div>
+        <div class="co">
+        <span class="name">scifi</span><div class="d"></div><span class="count">1</span>
+        </div>
+    </div>
+  
+                </li>
+              
+            
+              
+                <li>
+                    
+    <div class="tag  align_count" title="mathematics" rem="False" wt="tag" a="goToUserTag">
+        <div class="ar" a='rem'></div>
+        <div class="co">
+        <span class="name">mathematics</span><div class="d"></div><span class="count">1</span>
+        </div>
+    </div>
+  
+                </li>
+              
+            
+              
+                <li>
+                    
+    <div class="tag  align_count" title="awesomized" rem="False" wt="tag" a="goToUserTag">
+        <div class="ar" a='rem'></div>
+        <div class="co">
+        <span class="name">awesomized</span><div class="d"></div><span class="count">1</span>
+        </div>
+    </div>
+  
+                </li>
+              
+            
+              
+                <li>
+                    
+    <div class="tag  align_count" title="bags" rem="False" wt="tag" a="goToUserTag">
+        <div class="ar" a='rem'></div>
+        <div class="co">
+        <span class="name">bags</span><div class="d"></div><span class="count">1</span>
+        </div>
+    </div>
+  
+                </li>
+              
+            
+              
+                <li>
+                    
+    <div class="tag  align_count" title="SteveJobs" rem="False" wt="tag" a="goToUserTag">
+        <div class="ar" a='rem'></div>
+        <div class="co">
+        <span class="name">SteveJobs</span><div class="d"></div><span class="count">1</span>
+        </div>
+    </div>
+  
+                </li>
+              
+            
+              
+                <li>
+                    
+    <div class="tag  align_count" title="ebook" rem="False" wt="tag" a="goToUserTag">
+        <div class="ar" a='rem'></div>
+        <div class="co">
+        <span class="name">ebook</span><div class="d"></div><span class="count">1</span>
+        </div>
+    </div>
+  
+                </li>
+              
+            
+              
+                <li>
+                    
+    <div class="tag  align_count" title="Realestate" rem="False" wt="tag" a="goToUserTag">
+        <div class="ar" a='rem'></div>
+        <div class="co">
+        <span class="name">Realestate</span><div class="d"></div><span class="count">1</span>
+        </div>
+    </div>
+  
+                </li>
+              
+            
+              
+                <li>
+                    
+    <div class="tag  align_count" title="Google" rem="False" wt="tag" a="goToUserTag">
+        <div class="ar" a='rem'></div>
+        <div class="co">
+        <span class="name">Google</span><div class="d"></div><span class="count">1</span>
+        </div>
+    </div>
+  
+                </li>
+              
+            
+              
+                <li>
+                    
+    <div class="tag  align_count" title="Technology" rem="False" wt="tag" a="goToUserTag">
+        <div class="ar" a='rem'></div>
+        <div class="co">
+        <span class="name">Technology</span><div class="d"></div><span class="count">1</span>
+        </div>
+    </div>
+  
+                </li>
+              
+            
+              
+                <li>
+                    
+    <div class="tag  align_count" title="tutroial" rem="False" wt="tag" a="goToUserTag">
+        <div class="ar" a='rem'></div>
+        <div class="co">
+        <span class="name">tutroial</span><div class="d"></div><span class="count">1</span>
+        </div>
+    </div>
+  
+                </li>
+              
+            
+              
+                <li>
+                    
+    <div class="tag  align_count" title="Likes" rem="False" wt="tag" a="goToUserTag">
+        <div class="ar" a='rem'></div>
+        <div class="co">
+        <span class="name">Likes</span><div class="d"></div><span class="count">1</span>
+        </div>
+    </div>
+  
+                </li>
+              
+            
+              
+                <li>
+                    
+    <div class="tag  align_count" title="ds598" rem="False" wt="tag" a="goToUserTag">
+        <div class="ar" a='rem'></div>
+        <div class="co">
+        <span class="name">ds598</span><div class="d"></div><span class="count">1</span>
+        </div>
+    </div>
+  
+                </li>
+              
+            
+        </ul>
+        <div class="clear"></div>
+        <a href="/fozbaca/tags">View All</a>
+    
+              
+            </div>
+        <div class="clear"></div>
+    </div>
+</div>
+
+<script type="text/javascript">
+    $('document').ready(function() {
+        del.initUserProfile();
+    });
+</script>
+
+
+<div id="footer">
+    <ul class="first">
+        <li><a href="http://www.avos.com/jobs">Jobs</a></li>
+        <li><a href="/about">About</a></li>
+        <li><a href="http://blog.delicious.com/" target="_blank" id="blog">Blog</a></li>
+        <li><a href="/help">Help</a></li>
+        <li><a href="/tools">Tools</a></li>
+        <li><a href="/developers">Developers</a></li>
+    </ul>
+    <ul class="second">
+        <li><a href="/terms">Terms</a></li>
+        <li><a href="/privacy">Privacy</a></li>
+        <li><a href="/copyright">Copyright</a></li>
+    </ul>
+</div>
+
+<!-- modal container -->
+<div id="modal">
+    <div ap="overlay" class="overlay"></div>
+    <div class="modal" ap="modalNode">
+        <div class="m_titlebar">
+            <a class="close" a="hide"></a>
+            <div ap="iconNode" class="icon"></div>
+            <h4 ap="titleNode"></h4>
+        </div>
+        <div class="m_content" ap="contentNode"></div>
+        <div class="m_actions" ap="actionsNode"></div>
+    </div>
+</div>
+    
+
+
+
+<script type="text/javascript">
+var _sf_async_config={uid:29415,domain:"delicious.com"};
+(function(){
+  function loadChartbeat() {
+    window._sf_endpt=(new Date()).getTime();
+    var e = document.createElement('script');
+    e.setAttribute('language', 'javascript');
+    e.setAttribute('type', 'text/javascript');
+    e.setAttribute('src',
+       (("https:" == document.location.protocol) ? "https://a248.e.akamai.net/chartbeat.download.akamai.com/102508/" : "http://static.chartbeat.com/") +
+       "js/chartbeat.js");
+    document.body.appendChild(e);
+  }
+  var oldonload = window.onload;
+  window.onload = (typeof window.onload != 'function') ?
+     loadChartbeat : function() { oldonload(); loadChartbeat(); };
+})();
+
+_sf_async_config.path = "/profile_tags"
+_sf_async_config.title = "/profile_tags"
+
+
+
+</script>
+
+
+
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-26285904-1']);
+  _gaq.push(['_setDomainName', 'delicious.com']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,1035 @@
+
+
+<script language="JavaScript1.2" type="text/javascript">
+<!--
+function antispammail(user,domain,sujet) {
+	status="mailto:" + user + "@" + domain;
+	locationstring = "mailto:" + user + "@" + domain;
+	if (sujet != '') locationstring = locationstring + "?subject=" + sujet;
+	window.location = locationstring;
+}
+-->
+</script>
+
+
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:og="http://ogp.me/ns#"
+      xmlns:fb="http://www.facebook.com/2008/fbml">
+  <head>
+    <title>OLD-COMPUTERS.COM musem ~ Acorn Computer                                     BBC Model A / B / B+</title>
+    <meta property="og:title" content="Acorn Computer                                     BBC Model A / B / B+"/>
+    <meta property="og:type" content="oldcomputers:model"/>
+    <meta property="og:url" content="http://www.old-computers.com/museum/computer.asp?st=1&c=29"/>
+    <meta property="og:image" content="http://www.old-computers.com/museum/photos/Acorn_BBCb_System_s1.jpg"/>
+    <meta property="og:site_name" content="OLD-COMPUTERS.COM"/>
+    <meta property="fb:admins" content="oboisseau"/>
+    <meta property="og:description" content="The Acorn BBC model A was the successor of the <80>Acorn Atom</a> and its first name was Acorn Proton. It was a very popular computer in the UK and was widely used in schools, but it didn?t have great success elsewhere (even though it did have great features, it was too expensive). 
+<br><br>
+The <b>Model A</b> lacked some of the connectors of the <b>Model B/B+</b> (User port, Tube, ...) on the underside.
+<br><br>
+This computer got its name because in 1980, the BBC decided to start a computer literacy television series. The network realized that, with more powerful and increasingly inexpensive microcomputers, it would soon be possible to create them with enough computing power to offer their owners personal hands-on experience with microcomputers at an affordable price. <br>
+The BBC considered the <176>NewBrain</a> computer and rejected it. Acorn and Sinclair Research, along with other companies, then submitted designs, and Acorn won. The BBC model B was then used almost universally in British schools from its birth into the 90?s. 
+<br><br>
+It was followed in 1982 by the Acorn <b>BBC model B</b>. The Model B had the same features but had 32 KB RAM (expandable to 64K).
+<br><br>
+The ?Tube? was an expansion port which was designed to connect other processors to the BBC (6502, Z80, 68000 or ARM 1 RISC). An interface card was specially designed for the tube. It used another 6502 and a Z80.
+<br><br>
+One of its most popular peripherals was the ?Torch? floppy disk unit, a 5.25? floppy disk drive with a Z80 which allowed the BBC to use CP/M software. 
+<br><br>
+Acorn also made a ?cheap? version of the BBC (fewer connectors & video modes) called <121>Acorn Electron</a>.
+<br><br>
+In 1985, the Acorn <b>BBC Model B+</b> was released. The Model B+ had new features : 64K of RAM instead of 32 KB and internal circuitry for the Econet and Disk Drive as standard (both available as an upgrade in the models A and B). The later models included disk support as standard, using either an 8271 or a 1770 disk controller. There was also a B+ 128KB model (with and extra 4x16KB banks of ?sideways RAM?). The B+ models had 48KB of ROM because they had an extra 16KB with the DFS. They used a MOS 6512A processor, but at the same 2MHz that the A and B models used.
+<br><br>
+It was then followed by the BBC Master.
+<br><br>
+_________
+<br><br>
+<font color=?#666666?><b>Contributors:</b> Gabriel Gra?a</font>"/>
+		  
+<link rel="stylesheet" href="../css/bubbles.css" type="text/css" media="screen" charset="utf-8" />
+<script type="text/JavaScript" src="../css/rounded_corners.inc.js"></script>
+<!-- SHARETHIS code-->
+<script type="text/javascript" src="http://w.sharethis.com/button/sharethis.js#publisher=b8d60141-2754-4207-bc2f-7672a03dcff3&amp;type=website&amp;post_services=email%2Cfacebook%2Ctwitter%2Cgbuzz%2Cmyspace%2Cdigg%2Csms%2Cwindows_live%2Cdelicious%2Cstumbleupon%2Creddit%2Cgoogle_bmarks%2Clinkedin%2Cbebo%2Cybuzz%2Cblogger%2Cyahoo_bmarks%2Cmixx%2Ctechnorati%2Cfriendfeed%2Cpropeller%2Cwordpress%2Cnewsvine&amp;button=false"></script>
+<style type="text/css">
+a.stbar.chicklet img {border:0;height:16px;width:16px;margin-right:3px;vertical-align:middle;}
+a.stbar.chicklet {height:16px;line-height:16px;}
+</style>
+<!-- fin du SHARETHIS code-->
+</head>
+
+<script language="javascript" src="icons.js">
+</script>
+
+<title>OLD-COMPUTERS.COM : The Museum</title>
+<body onLoad="images()" bottommargin=0 topmargin=0 rightmargin=0 leftmargin=0 bgcolor=White>
+
+
+
+<a name="haut"></a>
+
+<script language="javascript">
+
+function printer_view()
+	{
+    window.open('printer_view.asp?c=29&pxz=1','printer_view','toolbar=yes,location=no,directories=no,status=no,menubar=no,scrollbars=yes,resizable=yes,width=700,height=580');  
+	}
+
+</script>
+
+
+
+<!-- DEBUT PARTIE POUR GERER LA RECERCHE EN AJAX -->
+
+<script type="text/javascript" src="http://www.old-computers.com/js/jquery-1.2.6.pack.js"></script>
+<script>
+	function lookup(inputString) {
+		if(inputString.length == 0) {
+			// Hide the suggestion box.
+			$('#suggestions').hide();
+		} else { 
+			$.post('http://www.old-computers.com/site/header/autocomplete.asp', {queryString: ""+inputString+""}, function(data){
+					if(data.length >0) {
+					$('#suggestions').show();
+					$('#autoSuggestionsList').html(data);
+				}
+			});
+		}
+	} // lookup
+	
+	function fill(sname) {
+		$('#search').val(sname);
+		setTimeout("$('#suggestions').hide();", 200);
+	}
+</script>
+
+<style type="text/css">
+	body {
+		font-family: Verdana;
+		font-size: 11px;
+		color: #000;
+	}
+	
+	h3 {
+		margin: 0px;
+		padding: 0px;	
+	}
+		
+	.suggestionsBox {
+		position: relative;
+		z-index: 1;
+		left: 0px;
+		top: 0px;
+		margin: 10px 0px 0px 0px;
+		width: 200px;
+		background-color: #d5d5d5;
+		-moz-border-radius: 7px;
+		-webkit-border-radius: 7px;
+		border: 2px solid #666666;	
+		color: #000;
+		 filter: Alpha(opacity=80);
+	   -moz-opacity: .80;
+	   -khtml-opacity: 0.80;
+	   opacity: .80;  
+	}
+	
+	.suggestionList {
+		margin: 0px;
+		padding: 0px;
+	}
+	
+	.suggestionList li {
+		
+		margin: 0px 0px 3px 0px;
+		padding: 3px;
+		cursor: pointer;
+		color: #000;
+		font-family: Verdana;
+		font-size: 10px;
+	}
+	
+	.suggestionList li:hover {
+		background-color: #fff;
+	}
+</style>
+
+<!-- FIN PARTIE POUR GERER LA RECERCHE EN AJAX -->
+
+<script language="javascript">
+
+Tab_img = new Array(16);
+Tab_nom = new Array("news","museum","history","collection","forums","collectors","fun","store");
+Tab_icn = new Array(8);
+fini=false;
+screen_vide = new Image(50,50);
+screen_vide.src = "/site/header/graphs/mid_ready.gif";
+
+
+// --- Function used to display info about the Terminal ---
+
+function terminal()
+	{
+	window.open('/site/header/terminal.asp','terminal','toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=yes,resizable=no,width=440,height=478');  
+	}
+	
+
+// --- Load images ---
+
+function chargement()
+   {
+   var i,j;
+
+	for (i=0;i<8;i++)
+		{
+		Tab_icn[i]=new Image(50,50);
+		Tab_icn[i].src="/site/header/graphs/screen_"+Tab_nom[i]+".gif";
+		}
+
+
+	for (i=0,j=0;i<=15;i+=2,j++)
+		{
+		Tab_img[i]=new Image(90,30);
+		Tab_img[i+1]=new Image(90,30);
+		Tab_img[i].src="/site/header/graphs/"+Tab_nom[j]+"_d.gif";
+		Tab_img[i+1].src="/site/header/graphs/"+Tab_nom[j]+"_on.gif";
+		}
+	//document.cherche.search.focus();	
+	fini=true;
+	}
+
+// --- Switch tab on/off ---
+
+function s_on(s)
+	{
+	if (!fini) return;
+	eval("document.i"+s+".src=Tab_img[(s-1)*2+1].src");  // it's that I call tortured code (like the Netscape-burn-in-hell browser one)
+	document.ecran.src=Tab_icn[s-1].src;
+	}
+
+function s_off(s)
+	{
+	if (!fini) return;
+	eval("document.i"+s+".src=Tab_img[(s-1)*2].src");
+	document.ecran.src=screen_vide.src;
+	}
+
+// --- Check search criterias ---
+
+function verif_b(f)
+	{
+	if	(f.value == "") 
+		{
+		alert("You must enter search criterias.");
+		f.focus();
+		return false;
+		}
+	return true;
+	}
+
+function login_popup()
+	{
+    window.open('/site/header/login.asp','login','toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=no,resizable=no,width=430,height=210');  
+  	}
+
+
+// --- Open "tell a friend" window ---
+
+function tell_friend()
+	{
+    window.open('/site/header/tell_friend.asp?page=http%3A%2F%2Fwww%2Eold%2Dcomputers%2Ecom%2Fmuseum%2Fcomputer%2Easp%3Fc%3D29','tell_friend','toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=no,resizable=no,width=430,height=420');  
+  	}
+
+
+
+// --- Open "rate this page" window ---
+
+function rate_page()
+	{
+	
+	// --- Encode URL for Netscapezzz-burn-in-hell browser ---
+	
+	n = '';
+	l = document.title;
+	for (i=0;i<l.length;i++)
+		{
+		if	(l.charAt(i)==' ') n = n + '+';
+		else n = n + l.charAt(i);
+		}
+		
+	// ---- Open window
+		
+	window.open('/site/header/rate_page.asp?page=http%3A%2F%2Fwww%2Eold%2Dcomputers%2Ecom%2Fmuseum%2Fcomputer%2Easp%3Fc%3D29&title='+n,'rate_page','toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=no,resizable=no,width=425,height=470');  
+	}
+
+
+
+// --- Open "add info" window ---
+
+function add_link()
+	{
+	window.open('/site/header/add_link.asp','add_link','toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=no,resizable=no,width=425,height=478');
+	}
+
+function add_info()
+	{
+	window.open('/site/header/add_info.asp?page=http%3A%2F%2Fwww%2Eold%2Dcomputers%2Ecom%2Fmuseum%2Fcomputer%2Easp%3Fc%3D29','add_info','toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=no,resizable=no,width=425,height=478');  
+	}
+
+
+	
+</script>
+
+<LINK href="/site/ie.css" rel=stylesheet>
+<LINK href="/site/forms.css" rel=stylesheet>
+<SCRIPT language="JavaScript" src="/site/fade.js"></SCRIPT>
+
+
+
+
+<table border="0" width="100%" cellspacing="0" cellpadding="0" background="/site/header/graphs/mid_bando.gif">
+  <tr>
+    <td><img src="/site/header/graphs/left_bando.jpg"></td>
+    <td width="100%">&nbsp;</td>
+    <td><img src="/site/header/graphs/right_bando.jpg"></td>
+  </tr>
+</table>
+
+
+<DIV id="pub" style="position: absolute; top: 11; left: 290; width:750 ; height: 60; z-index: 4; visibility: visible">
+<!--<a href="http://www.nyi.net" target="glop"><img src="http://ads.nyi.net/ads/ad.pl?client=oldcomputers" width="468" height="60" border="0" alt="Click Here to visit our Sponsor"></a>-->
+<a href="http://www.facebook.com/pages/Old-Computerscom/138645462866451" target="_blank"><img src="http://www.old-computers.com/site/header/graphs/bandeau_facebook.jpg" border="0" alt="Click Here to become a fan"></a>
+&nbsp;&nbsp;&nbsp;<iframe src="http://www.facebook.com/plugins/likebox.php?href=http%3A%2F%2Fwww.facebook.com%2Fpages%2FOld-Computerscom%2F138645462866451&amp;width=250&amp;colorscheme=light&amp;show_faces=false&amp;stream=false&amp;header=true&amp;height=62" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:250px; height:62px;" allowTransparency="true"></iframe>
+</DIV>
+
+<DIV id="toto" style="position: absolute; top: -6; left: 0; width: 100%; height: 40; z-index: 1; visibility: visible">
+<table border="0" width="100%" cellpadding=0 cellspacing=0>
+  <tr>
+     <td valign=bottom width="194">
+     <table cellpadding=0 cellspacing=0 border=0>
+     <tr><td colspan="3"><img src="/site/header/graphs/up_ong.gif"></td></tr>
+     <tr>
+            <td><a href="javascript:terminal()"><img src="/site/header/graphs/left_ong.gif" border="0"></a></td>
+            <td><a href="javascript:terminal()"><img src="/site/header/graphs/mid_ready.gif" name="ecran" border="0" id="ecran"></a></td>
+            <td><a href="javascript:terminal()"><img src="/site/header/graphs/right_ong.gif" border="0"></a></td>
+     </table>
+     </td>
+  </tr>
+  <tr>
+      <td><a href="javascript:terminal()"><img src="/site/header/graphs/onglets.gif" border="0"></a></td>
+    <td background="/site/header/graphs/right_onglet2.gif" colspan="9" valign="middle"> 
+    </td>
+  </tr>
+</table>
+</DIV>
+
+<DIV id="toto2" style="position: absolute; top: 82; left: 130; width: 500; height: 30; z-index: 1; visibility: visible">
+  <table border="0" width="500" cellpadding=0 cellspacing=0>
+    <tr>
+    <td valign=bottom width="81"><a href="/news/default.asp" target="_top" onmouseover="s_on(1)" onmouseout="s_off(1)"><img src="/site/header/graphs/news_d.gif" border="0" name="i1" alt="The Latest News !"></a></td>
+	<td valign=bottom width="80"><a href="/museum/default.asp"  target="_top"><img src="/site/header/graphs/museum_off.gif" border="0"></a></td>
+	<td valign=bottom width="80"><a href="/history/timeline.asp"  target="_top" onmouseover="s_on(3)" onmouseout="s_off(3)"><img src="/site/header/graphs/history_d.gif" border="0" name="i3" alt="The History of Computing"></a></td>
+	<!--<td valign=bottom width="80"><img src="/site/header/graphs/history_d.gif" border="0" name="i3" alt="The History of Computing"></td>-->
+	<td valign=bottom width="80"><a href="/magazine/default.asp" target="_top"  onmouseover="s_on(4)" onmouseout="s_off(4)"><img src="/site/header/graphs/collection_d.gif" border="0" name="i4" alt="The Magazine"></a></td>
+	<td valign=bottom width="80"><a href="/forum/frameset.asp" target="_top"  onmouseover="s_on(5)" onmouseout="s_off(5)"><img src="/site/header/graphs/forums_d.gif" border="0" name="i5" alt="Forums"></a></td>
+	<td valign=bottom width="80"><a href="/club/collectors/default.asp" target="_top"  onmouseover="s_on(6)" onmouseout="s_off(6)"><img src="/site/header/graphs/collectors_d.gif" border="0" name="i6" alt="Collectors corner"></a></td>
+	<td valign=bottom width="80"><a href="/fun/default.asp" target="_top"  onmouseover="s_on(7)" onmouseout="s_off(7)"><img src="/site/header/graphs/fun_d.gif" border="0" name="i7" alt="Have Fun there !"></a></td>
+	<td valign=bottom width="80"><a href="/store/goodies/default.asp" target="_top"  onmouseover="s_on(8)" onmouseout="s_off(8)"><img src="/site/header/graphs/store_d.gif" border="0" name="i8" alt="Buy books and goodies"></a></td>
+	</tr>
+   </table>
+</DIV>
+
+<DIV id="toto3" style="position: absolute; top: 107; left: 0; width: 100%; height: 34; z-index: 3; visibility: visible">
+
+   <form name="cherche" method="POST" action="/search/default.asp" onsubmit="return verif_b(document.cherche.search)"><input type="hidden" name="nrz" value="2"> 
+    <table width="100%" border="0" cellpadding=0 cellspacing=0>
+	  <tr>
+    <td width="200"><img src="/site/graphs/vide.gif" width="200">&nbsp;</td>
+    <td width="30" valign=middle><a href="javascript:login_popup()"><img src="/site/header/graphs/login.png" border="0" alt="Click here to login" hspace="5"></a></td><td valign=middle width="70"><a href="javascript:login_popup()" class="noir2" title="Click here to login">Login</a>&nbsp;</td><td width="30" valign=middle><a href="javascript:printer_view()"><img src="/site/header/graphs/printer.gif" border="0" alt="Click here to print the page"></a></td><td valign=middle width="70"><a href="javascript:printer_view()" class="noir2" title="Click here to print the page">Printer&nbsp;View</a></td><td width="25" valign=middle><a href="javascript:tell_friend()"><img src="/site/header/graphs/tell.gif" hspace="10" border="0" alt="Click here to send a link to this page to a friend"></a></td><td valign=middle width=70><a href="javascript:tell_friend()" class="noir2" title="Click here to send a link to this page to a friend">Tell&nbsp;a&nbsp;Friend</a></td><td width="25" valign=middle><a href="javascript:rate_page()"><img src="/site/header/graphs/rate.gif" hspace="10" border="0" alt="Tell us what you think about this page"></a></td><td valign=middle width=70><a href="javascript:rate_page()" class="noir2" title="Tell us what you think about this page">Rate&nbsp;this&nbsp;Page</a></td><td width="25" valign=middle><a href="javascript:add_info()"><img src="/site/header/graphs/plus.gif" hspace="10" border="0" alt="Mistake ? You have mr info ? Click here !"></a></td><td valign=middle width=70><a href="javascript:add_info()" class="noir2" title="Mistake ? You have mr info ? Click here !">Add&nbsp;Info</a></td>
+
+    <td width="100%">&nbsp;</td>
+	<td valign=middle align="right" class="noir2">&nbsp;&nbsp<b>Search&nbsp;</b></td>
+	<td align=right valign="middle">
+		<nobr>&nbsp;<INPUT type="text" size=14 name="search" id="search" onkeyup="lookup(this.value);" onblur="fill();" class="champ">&nbsp;</nobr>
+		<div class="suggestionsBox" id="suggestions"  style="display: none;"> 
+            <img src="http://www.old-computers.com/site/header/graphs/up-arrow.png" style="position: relative; top: -14px; left: -30px;" alt="upArrow" width="18" height="14" /> 
+            <div class="suggestionList" id="autoSuggestionsList"> </div>
+          </div>
+	</td>
+	  <td width="45" valign="middle"> 
+		<INPUT type="submit" value=" ok " style="FONT-FAMILY: Arial; FONT-SIZE:8pt; border: solid 2px #39B54A; background-color: #FFFFFF;"></td>
+	<td>
+		<!-- ADVANCED SEARCH -->
+		<a href="/search/search2.asp?st=1"><img src="/site/header/graphs/advanced-search.gif" alt="Click here use the advanced search engine" hspace="5" border=0></a>
+	</td>
+      
+    </tr>
+    </table>
+</form>
+</DIV>
+
+
+
+<img src="/site/graphs/vide.gif" height="30">
+
+
+<table border="0" width="100%" cellpadding="0" cellspacing="0" class="petitnoir2" align="middle">
+<tr>
+
+
+
+<td width="180" valign="top" BGCOLOR="#F9F3E3">
+   
+	<img src="/museum/graphs/cday_ordi.gif">
+
+<center>
+<TABLE BORDER=0 HEIGHT="127">
+	<TR>
+		<TD>
+			<table cellpadding=0 cellspacing=4 border=0 HEIGHT="134" >
+				<tr>
+					<td background="/news/todays_computer/tempimg_1_11-6-2012.jpg" align="center" VALIGN="MIDDLE">
+						<img src="/site/graphs/vide.gif" height="1" width="165"><br>
+						<b><a href="/museum/computer.asp?st=1&c=217" class="ombre noir3"><font color="#FFFFFF">
+						Sord
+						<br><br>
+						M 5
+						</font></a></b>
+					</td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr>
+	<td><a href="http://www.old-computers.com/news/random.asp" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('random','','http://www.old-computers.com/news/graphs/random_on.gif',1)"><img src="http://www.old-computers.com/news/graphs/random_off.gif" name="random" width="181" height="26" border="0"></a></td>
+  </tr>
+</table>
+
+	
+	<table  border=0 cellpadding=0 cellspacing=0 bgcolor="#F0F0A0"><tr><td>
+	<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+//-->
+</script>
+
+<!--<body onLoad="MM_preloadImages('graphs/onglets_museum_console_over.gif','graphs/onglets_museum_pong_over.gif','graphs/onglets_museum_ordi_over.gif')">-->
+
+
+  <img src="graphs/onglets_museum_ordi_on.gif" width="60" height="32"><img src="graphs/onglets_museum_barre_on.gif" width="1" height="32"><a href="default.asp?st=2" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('consoles','','graphs/onglets_museum_console_over.gif',1)"><img src="graphs/onglets_museum_console_off.gif" alt="Browse console museum" name="consoles" width="60" height="32" border="0"></a><img src="graphs/onglets_museum_barre_off.gif" width="1" height="32"><a href="default.asp?st=3" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('pongs','','graphs/onglets_museum_pong_over.gif',1)"><img src="graphs/onglets_museum_pong_off.gif" alt="Browse pong museum" name="pongs" width="59" height="32" border="0"></a> 
+  
+	</td></tr></table>
+
+	<img src="graphs/browse_ordi.gif"><br>
+	
+	
+<!-- DEBUT CODES POUR LE SHOP CAROUSEL -->
+
+<script type="text/javascript" src="../js/jquery-1.2.6.pack.js"></script>
+<script type="text/javascript" src="../js/stepcarousel.js">
+
+/***********************************************
+* Step Carousel Viewer script- (c) Dynamic Drive DHTML code library (www.dynamicdrive.com)
+* Visit http://www.dynamicDrive.com for hundreds of DHTML scripts
+* This notice must stay intact for legal use
+***********************************************/
+
+</script>
+
+<script type="text/javascript">
+
+stepcarousel.setup({
+	galleryid: 'myshops', //id of carousel DIV
+	beltclass: 'belt', //class of inner "belt" DIV containing all the panel DIVs
+	panelclass: 'panel', //class of panel DIVs each holding content
+	autostep: {enable:true, moveby:1, pause:5000},
+	panelbehavior: {speed:500, wraparound:false, persist:true},
+	defaultbuttons: {enable: true, moveby: 1, leftnav: ['http://www.old-computers.com/museum/graphs/nav-left.png', 0, 80], rightnav: ['http://www.old-computers.com/museum/graphs/nav-right.png', -24, 80]},
+	statusvars: ['statusA', 'statusB', 'statusC'], //register 3 variables that contain current panel (start), current panel (last), and total panels
+	contenttype: ['inline'] //content setting ['inline'] or ['external', 'path_to_external_file']
+})
+
+</script>
+
+<style type="text/css">
+
+.stepcarousel{
+position: relative; /*leave this value alone*/
+border: 2px solid #f0f0a0;
+overflow: scroll; /*leave this value alone*/
+width: 180px; /*Width of Carousel Viewer itself*/
+height: 200px; /*Height should enough to fit largest content's height*/
+background-color: #ffffff;
+}
+
+.stepcarousel .belt{
+position: absolute; /*leave this value alone*/
+left: 0;
+top: 0;
+}
+
+.stepcarousel .panel{
+float: left; /*leave this value alone*/
+overflow: hidden; /*clip content that go outside dimensions of holding panel DIV*/
+margin: 10px; /*margin around each panel*/
+width: 165px; /*Width of each panel holding each content. If removed, widths should be individually defined on each content DIV then. */
+}
+
+</style>
+
+<!-- FIN CODES POUR LE SHOP CAROUSEL -->
+
+<map name="map_name"><area href="name.asp?st=1&l=1" shape="rect" coords="12,0,25,14"><area href="name.asp?st=1&l=2" shape="rect" coords="27,0,40,14"><area href="name.asp?st=1&l=3" shape="rect" coords="42,0,55,14"><area href="name.asp?st=1&l=4" shape="rect" coords="57,0,70,14"><area href="name.asp?st=1&l=5" shape="rect" coords="72,0,85,14"><area href="name.asp?st=1&l=6" shape="rect" coords="87,0,100,14"><area href="name.asp?st=1&l=7" shape="rect" coords="102,0,115,14"><area href="name.asp?st=1&l=8" shape="rect" coords="117,0,130,14"><area href="name.asp?st=1&l=9" shape="rect" coords="132,0,145,14"><area href="name.asp?st=1&l=Q" shape="rect" coords="20,16,33,30"><area href="name.asp?st=1&l=W" shape="rect" coords="35,16,48,30"><area href="name.asp?st=1&l=E" shape="rect" coords="50,16,63,30"><area href="name.asp?st=1&l=R" shape="rect" coords="65,16,78,30"><area href="name.asp?st=1&l=T" shape="rect" coords="80,16,93,30"><area href="name.asp?st=1&l=Y" shape="rect" coords="95,16,108,30"><area href="name.asp?st=1&l=U" shape="rect" coords="110,16,123,30"><area href="name.asp?st=1&l=I" shape="rect" coords="125,16,138,30"><area href="name.asp?st=1&l=O" shape="rect" coords="140,16,153,30"><area href="name.asp?st=1&l=P" shape="rect" coords="155,16,168,30"><area href="name.asp?st=1&l=A" shape="rect" coords="28,32,41,46"><area href="name.asp?st=1&l=S" shape="rect" coords="43,32,56,46"><area href="name.asp?st=1&l=D" shape="rect" coords="58,32,71,46"><area href="name.asp?st=1&l=F" shape="rect" coords="73,32,86,46"><area href="name.asp?st=1&l=G" shape="rect" coords="88,32,101,46"><area href="name.asp?st=1&l=H" shape="rect" coords="103,32,116,46"><area href="name.asp?st=1&l=J" shape="rect" coords="118,32,131,46"><area href="name.asp?st=1&l=K" shape="rect" coords="133,32,146,46"><area href="name.asp?st=1&l=L" shape="rect" coords="148,32,161,46"><area href="name.asp?st=1&l=Z" shape="rect" coords="36,48,49,62"><area href="name.asp?st=1&l=X" shape="rect" coords="51,48,64,62"><area href="name.asp?st=1&l=C" shape="rect" coords="66,48,79,62"><area href="name.asp?st=1&l=V" shape="rect" coords="81,48,94,62"><area href="name.asp?st=1&l=B" shape="rect" coords="96,48,109,62"><area href="name.asp?st=1&l=N" shape="rect" coords="111,48,124,62"><area href="name.asp?st=1&l=M" shape="rect" coords="126,48,139,62"></map><table border=0 cellpadding=0 cellspacing=0 bgcolor="#F9F3E3"><tr><td align="center"><img src="graphs/fond_name_ordi.gif"><br><img src="graphs/keyboard_names_ordi.gif" border="0" usemap="#map_name"><br><br><img src="graphs/fond_company_ordi.gif"><br><map name="map_company"><area href="company.asp?st=1&l=Q" shape="rect" coords="20,16,33,30"><area href="company.asp?st=1&l=W" shape="rect" coords="35,16,48,30"><area href="company.asp?st=1&l=E" shape="rect" coords="50,16,63,30"><area href="company.asp?st=1&l=R" shape="rect" coords="65,16,78,30"><area href="company.asp?st=1&l=T" shape="rect" coords="80,16,93,30"><area href="company.asp?st=1&l=Y" shape="rect" coords="95,16,108,30"><area href="company.asp?st=1&l=U" shape="rect" coords="110,16,123,30"><area href="company.asp?st=1&l=I" shape="rect" coords="125,16,138,30"><area href="company.asp?st=1&l=O" shape="rect" coords="140,16,153,30"><area href="company.asp?st=1&l=P" shape="rect" coords="155,16,168,30"><area href="company.asp?st=1&l=A" shape="rect" coords="28,32,41,46"><area href="company.asp?st=1&l=S" shape="rect" coords="43,32,56,46"><area href="company.asp?st=1&l=D" shape="rect" coords="58,32,71,46"><area href="company.asp?st=1&l=F" shape="rect" coords="73,32,86,46"><area href="company.asp?st=1&l=G" shape="rect" coords="88,32,101,46"><area href="company.asp?st=1&l=H" shape="rect" coords="103,32,116,46"><area href="company.asp?st=1&l=J" shape="rect" coords="118,32,131,46"><area href="company.asp?st=1&l=K" shape="rect" coords="133,32,146,46"><area href="company.asp?st=1&l=L" shape="rect" coords="148,32,161,46"><area href="company.asp?st=1&l=Z" shape="rect" coords="36,48,49,62"><area href="company.asp?st=1&l=X" shape="rect" coords="51,48,64,62"><area href="company.asp?st=1&l=C" shape="rect" coords="66,48,79,62"><area href="company.asp?st=1&l=V" shape="rect" coords="81,48,94,62"><area href="company.asp?st=1&l=B" shape="rect" coords="96,48,109,62"><area href="company.asp?st=1&l=N" shape="rect" coords="111,48,124,62"><area href="company.asp?st=1&l=M" shape="rect" coords="126,48,139,62"></map><img src="graphs/keyboard_companies_ordi.gif" border="0" usemap="#map_company"><br><br><img src="graphs/fond_year_ordi.gif"><br><map name="map_year"><area href="year.asp?st=1&y=1951" shape="rect" coords="32,0,47,14"><area href="year.asp?st=1&y=1955" shape="rect" coords="96,0,111,14"><area href="year.asp?st=1&y=1958" shape="rect" coords="144,0,159,14"><area href="year.asp?st=1&y=1960" shape="rect" coords="4,16,32,30"><area href="year.asp?st=1&y=1961" shape="rect" coords="32,16,47,30"><area href="year.asp?st=1&y=1963" shape="rect" coords="64,16,79,30"><area href="year.asp?st=1&y=1965" shape="rect" coords="96,16,111,30"><area href="year.asp?st=1&y=1966" shape="rect" coords="112,16,127,30"><area href="year.asp?st=1&y=1969" shape="rect" coords="160,16,175,30"><area href="year.asp?st=1&y=1971" shape="rect" coords="32,32,47,46"><area href="year.asp?st=1&y=1972" shape="rect" coords="48,32,63,46"><area href="year.asp?st=1&y=1973" shape="rect" coords="64,32,79,46"><area href="year.asp?st=1&y=1974" shape="rect" coords="80,32,95,46"><area href="year.asp?st=1&y=1975" shape="rect" coords="96,32,111,46"><area href="year.asp?st=1&y=1976" shape="rect" coords="112,32,127,46"><area href="year.asp?st=1&y=1977" shape="rect" coords="128,32,143,46"><area href="year.asp?st=1&y=1978" shape="rect" coords="144,32,159,46"><area href="year.asp?st=1&y=1979" shape="rect" coords="160,32,175,46"><area href="year.asp?st=1&y=1980" shape="rect" coords="4,48,32,62"><area href="year.asp?st=1&y=1981" shape="rect" coords="32,48,47,62"><area href="year.asp?st=1&y=1982" shape="rect" coords="48,48,63,62"><area href="year.asp?st=1&y=1983" shape="rect" coords="64,48,79,62"><area href="year.asp?st=1&y=1984" shape="rect" coords="80,48,95,62"><area href="year.asp?st=1&y=1985" shape="rect" coords="96,48,111,62"><area href="year.asp?st=1&y=1986" shape="rect" coords="112,48,127,62"><area href="year.asp?st=1&y=1987" shape="rect" coords="128,48,143,62"><area href="year.asp?st=1&y=1988" shape="rect" coords="144,48,159,62"><area href="year.asp?st=1&y=1989" shape="rect" coords="160,48,175,62"><area href="year.asp?st=1&y=1990" shape="rect" coords="4,64,32,78"><area href="year.asp?st=1&y=1991" shape="rect" coords="32,64,47,78"><area href="year.asp?st=1&y=1992" shape="rect" coords="48,64,63,78"><area href="year.asp?st=1&y=1993" shape="rect" coords="64,64,79,78"><area href="year.asp?st=1&y=1994" shape="rect" coords="80,64,95,78"><area href="year.asp?st=1&y=1995" shape="rect" coords="96,64,111,78"></map><img src="graphs/keyboard_years_ordi.gif" border="0" usemap="#map_year"><br>&nbsp;</td></tr></table>
+
+<img src="graphs/shop-carousel-title.gif"><br>
+<div id="myshops" class="stepcarousel"> 
+<div class="belt"> 
+
+
+    <div class="panel"><b>MZ-700</b> goodies !<br><br>
+      <a href="http://www.cafepress.com/mz700" target="_blank"><img src="../store/goodies/graphs/news_mz700.gif" border=0 alt="see details"></a> 
+    </div>
+    
+    <div class="panel"><b>Pixel adventurer</b> goodies !<br><br>
+      <a href="http://www.cafepress.com/adventurer" target="_blank"><img src="../store/goodies/graphs/news_adventurer.gif" border=0 alt="see details"></a> 
+    </div>
+    
+    <div class="panel"><b>Commodore 64</b> goodies !<br><br>
+      <a href="http://www.cafepress.com/commodore_64" target="_blank"><img src="../store/goodies/graphs/news_commodore_64.gif" border=0 alt="see details"></a> 
+    </div>
+    
+    <div class="panel"><b>Back to the roots</b> goodies !<br><br>
+      <a href="http://www.cafepress.com/wimbledon75" target="_blank"><img src="../store/goodies/graphs/news_wimbledon75.gif" border=0 alt="see details"></a> 
+    </div>
+    
+    <div class="panel"><b>I love my Oric-1</b> goodies !<br><br>
+      <a href="http://www.cafepress.com/oric1" target="_blank"><img src="../store/goodies/graphs/news_oric1.gif" border=0 alt="see details"></a> 
+    </div>
+    
+    <div class="panel"><b>Apple II</b> goodies !<br><br>
+      <a href="http://www.cafepress.com/apple2" target="_blank"><img src="../store/goodies/graphs/news_apple2.gif" border=0 alt="see details"></a> 
+    </div>
+    
+    <div class="panel"><b>Horace is not dead</b> goodies !<br><br>
+      <a href="http://www.cafepress.com/horace" target="_blank"><img src="../store/goodies/graphs/news_horace.gif" border=0 alt="see details"></a> 
+    </div>
+    
+    <div class="panel"><b>Amiga Workbench</b> goodies !<br><br>
+      <a href="http://www.cafepress.com/a_workbench" target="_blank"><img src="../store/goodies/graphs/news_a_workbench.gif" border=0 alt="see details"></a> 
+    </div>
+    
+    <div class="panel"><b>Atari ST bee icon</b> goodies !<br><br>
+      <a href="http://www.cafepress.com/atari_st_bee" target="_blank"><img src="../store/goodies/graphs/news_atari_st_bee.gif" border=0 alt="see details"></a> 
+    </div>
+    
+    <div class="panel"><b>Commodore 64 boot screen</b> goodies !<br><br>
+      <a href="http://www.cafepress.com/boot1" target="_blank"><img src="../store/goodies/graphs/news_boot1.gif" border=0 alt="see details"></a> 
+    </div>
+    
+    <div class="panel"><b>www.old-computers.com logo</b> goodies !<br><br>
+      <a href="http://www.cafepress.com/oldcomp_logo" target="_blank"><img src="../store/goodies/graphs/news_oldcomp_logo.gif" border=0 alt="see details"></a> 
+    </div>
+    
+    <div class="panel"><b>Odyssey 2 / Videopac sprites</b> goodies !<br><br>
+      <a href="http://www.cafepress.com/vpac_sprite" target="_blank"><img src="../store/goodies/graphs/news_vpac_sprite.gif" border=0 alt="see details"></a> 
+    </div>
+    
+    <div class="panel"><b>Destroy all humanoids !</b> goodies !<br><br>
+      <a href="http://www.cafepress.com/berzerk_robot" target="_blank"><img src="../store/goodies/graphs/news_berzerk_robot.gif" border=0 alt="see details"></a> 
+    </div>
+    
+    <div class="panel"><b>1kb memory only...sorry</b> goodies !<br><br>
+      <a href="http://www.cafepress.com/1kb" target="_blank"><img src="../store/goodies/graphs/news_1kb.gif" border=0 alt="see details"></a> 
+    </div>
+    
+    <div class="panel"><b>ZX Spectrum</b> goodies !<br><br>
+      <a href="http://www.cafepress.com/zx_spectrum" target="_blank"><img src="../store/goodies/graphs/news_zx_spectrum.gif" border=0 alt="see details"></a> 
+    </div>
+    
+    <div class="panel"><b>Oric Atmos</b> goodies !<br><br>
+      <a href="http://www.cafepress.com/oric_atmos" target="_blank"><img src="../store/goodies/graphs/news_oric_atmos.gif" border=0 alt="see details"></a> 
+    </div>
+    
+    <div class="panel"><b>Amstrad CPC-464</b> goodies !<br><br>
+      <a href="http://www.cafepress.com/cpc464" target="_blank"><img src="../store/goodies/graphs/news_cpc464.gif" border=0 alt="see details"></a> 
+    </div>
+    
+    <div class="panel"><b>MSX Retro Gamer</b> goodies !<br><br>
+      <a href="http://www.cafepress.com/logojap" target="_blank"><img src="../store/goodies/graphs/news_logojap.gif" border=0 alt="see details"></a> 
+    </div>
+    
+    <div class="panel"><b>Odyssey 2 / Videopac Select Game prompt</b> goodies !<br><br>
+      <a href="http://www.cafepress.com/select_game" target="_blank"><img src="../store/goodies/graphs/news_select_game.gif" border=0 alt="see details"></a> 
+    </div>
+    
+    <div class="panel"><b>Atari ST bomb icons</b> goodies !<br><br>
+      <a href="http://www.cafepress.com/atari_st_bombs" target="_blank"><img src="../store/goodies/graphs/news_atari_st_bombs.gif" border=0 alt="see details"></a> 
+    </div>
+    
+    <div class="panel"><b>H.E.R.O.</b> goodies !<br><br>
+      <a href="http://www.cafepress.com/hero_fondblanc" target="_blank"><img src="../store/goodies/graphs/news_hero_fondblanc.gif" border=0 alt="see details"></a> 
+    </div>
+    
+    <div class="panel"><b>Commodore VIC-20</b> goodies !<br><br>
+      <a href="http://www.cafepress.com/vic20" target="_blank"><img src="../store/goodies/graphs/news_vic20.gif" border=0 alt="see details"></a> 
+    </div>
+    
+    <div class="panel"><b>READY prompt</b> goodies !<br><br>
+      <a href="http://www.cafepress.com/readyprompt" target="_blank"><img src="../store/goodies/graphs/news_readyprompt.gif" border=0 alt="see details"></a> 
+    </div>
+    
+    <div class="panel"><b>Camputers Lynx logo</b> goodies !<br><br>
+      <a href="http://www.cafepress.com/camputers_lynx" target="_blank"><img src="../store/goodies/graphs/news_camputers_lynx.gif" border=0 alt="see details"></a> 
+    </div>
+    
+  </div>
+</div>
+<a href="../store/goodies/default.asp"><img src="graphs/shop-carousel-bottom.gif" border="0"></a> 
+<br>
+<br>	
+
+
+<br>
+<!-- DEBUT PUBS GOOGLE ADSENS -->
+<script type="text/javascript"><!--
+google_ad_client = "pub-1841187370908568";
+//160x600, pub computer.asp
+google_ad_slot = "2150280162";
+google_ad_width = 160;
+google_ad_height = 600;
+//--></script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+<!-- FIN PUBS GOOGLE ADSENS -->
+ <br><br>
+ <!-- Beginning of meebo me widget code.
+Want to talk with visitors on your page?  
+Go to http://www.meebome.com/ and get your widget! -->
+<!--<embed src="http://widget.meebo.com/mm.swf?wCvRlPzTmK" type="application/x-shockwave-flash" wmode="transparent" width="170" height="300"></embed>-->
+</td>
+    
+
+    
+<td width="5"  background="/site/graphs/pv2.gif" valign=top>
+<img src="graphs/blns.gif">
+</td>
+<td width="100%" valign="top">
+
+
+
+<table width="100%" border=0 cellpadding=0 cellspacing=0>
+
+<td bgcolor=LightGrey>
+<p class="grandblanc"><a href="company.asp?st=1&l=A" class="grandblanc"><b>A</b></a>&nbsp;&gt;&nbsp;<a href="company.asp?st=1&m=3" class="grandblanc"><b>ACORN COMPUTER                                    </b></a>&nbsp;&gt;&nbsp;<a href="computer.asp?st=1&c=29" class="grandblanc">BBC Model A / B / B+</a>
+
+
+
+&nbsp;&nbsp;<a href="#ebay"><img src="images/button_ebay.png" border="0" align="absmiddle"></a>
+&nbsp;<a href="#amazon"><img src="images/button_amazon.png" border="0" align="absmiddle"></a>
+
+</td><td bgcolor=LightGrey height="20" align="right"><img src="graphs/summary_page.gif" vspace="2"></td></tr>
+<tr><td height="1" bgcolor=Gray><img src="/site/graphs/vide.gif" height="1" width="1"></td>
+<td height="1" bgcolor=Gray><img src="/site/graphs/vide.gif" height="1" width="1"></td></tr></table>
+
+<br>
+
+<table width=100%><tr><td width=100%>
+
+<img src="photos/Acorn_BBCb_System_s1.jpg" align="right" hspace="10" vspace="10">
+<table>
+	<tr>
+    	<td>
+        <!--  DEBUT TABLEAU POUR MARQUE ET MODELE -->
+        <table cellpadding="4" bgcolor="#FFFFFF" class="tableau-marque">
+          <tr>
+            <td align="center" class="ligne-pointille"><span class="marque"><font color="#000000">
+                <img src="logos/acorn_logo.gif" hspace=5 alt="Acorn Computer" align="middle" border="0">
+                </font></span>
+            </td>
+          </tr>
+          <tr>
+            <td align="center" class="grandnoir"><span class="marque">
+                <img src="logos/Acorn_BBCb_Logo.gif" hspace=5 alt="BBC Model A / B / B+" align="middle">
+                </span></td>
+          </tr>
+        </table>
+        <!--  FIN TABLEAU POUR MARQUE ET MODELE -->
+		</td>
+        <td valign="middle">
+        </td>
+    </tr>
+</table>
+      
+
+<p class="petitnoir">
+The Acorn BBC model A was the successor of the <a href="computer.asp?c=80">Acorn Atom</a> and its first name was Acorn Proton. It was a very popular computer in the UK and was widely used in schools, but it didn't have great success elsewhere (even though it did have great features, it was too expensive). 
+<br><br>
+The <b>Model A</b> lacked some of the connectors of the <b>Model B/B+</b> (User port, Tube, ...) on the underside.
+<br><br>
+This computer got its name because in 1980, the BBC decided to start a computer literacy television series. The network realized that, with more powerful and increasingly inexpensive microcomputers, it would soon be possible to create them with enough computing power to offer their owners personal hands-on experience with microcomputers at an affordable price. <br>
+The BBC considered the <a href="computer.asp?c=176">NewBrain</a> computer and rejected it. Acorn and Sinclair Research, along with other companies, then submitted designs, and Acorn won. The BBC model B was then used almost universally in British schools from its birth into the 90's. 
+<br><br>
+It was followed in 1982 by the Acorn <b>BBC model B</b>. The Model B had the same features but had 32 KB RAM (expandable to 64K).
+<br><br>
+The "Tube" was an expansion port which was designed to connect other processors to the BBC (6502, Z80, 68000 or ARM 1 RISC). An interface card was specially designed for the tube. It used another 6502 and a Z80.
+<br><br>
+One of its most popular peripherals was the "Torch" floppy disk unit, a 5.25" floppy disk drive with a Z80 which allowed the BBC to use CP/M software. 
+<br><br>
+Acorn also made a "cheap" version of the BBC (fewer connectors & video modes) called <a href="computer.asp?c=121">Acorn Electron</a>.
+<br><br>
+In 1985, the Acorn <b>BBC Model B+</b> was released. The Model B+ had new features : 64K of RAM instead of 32 KB and internal circuitry for the Econet and Disk Drive as standard (both available as an upgrade in the models A and B). The later models included disk support as standard, using either an 8271 or a 1770 disk controller. There was also a B+ 128KB model (with and extra 4x16KB banks of "sideways RAM"). The B+ models had 48KB of ROM because they had an extra 16KB with the DFS. They used a MOS 6512A processor, but at the same 2MHz that the A and B models used.
+<br><br>
+It was then followed by the BBC Master.
+<br><br>
+_________
+<br><br>
+<font color="#666666"><b>Contributors:</b> Gabriel Gra?a</font><br><br><a href='doc.asp?c=29'><img src='graphs/readmore.gif' border=0 vspace=4></a>
+	<br><br>
+
+
+</td></tr></table>
+
+	
+	<table><tr><td height="3"></td></tr></table>
+	
+
+<!-- debut SHARETHIS button -->
+<a id="ck_email" class="stbar chicklet" href="javascript:void(0);"><img src="http://w.sharethis.com/chicklets/email.gif" /></a>
+<a id="ck_facebook" class="stbar chicklet" href="javascript:void(0);"><img src="http://w.sharethis.com/chicklets/facebook.gif" /></a>
+<a id="ck_twitter" class="stbar chicklet" href="javascript:void(0);"><img src="http://w.sharethis.com/chicklets/twitter.gif" /></a>
+<a id="ck_sharethis" class="stbar chicklet" href="javascript:void(0);"><img src="http://w.sharethis.com/chicklets/sharethis.gif" />ShareThis</a>
+<script type="text/javascript">
+	var shared_object = SHARETHIS.addEntry({
+	title: document.title,
+	url: document.location.href
+});
+
+shared_object.attachButton(document.getElementById("ck_sharethis"));
+shared_object.attachChicklet("email", document.getElementById("ck_email"));
+shared_object.attachChicklet("facebook", document.getElementById("ck_facebook"));
+shared_object.attachChicklet("twitter", document.getElementById("ck_twitter"));
+</script>
+<p></p>
+<!-- fin SHARETHIS button -->
+<!-- FACEBOOK LIKE-->
+<iframe src="http://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fwww.old-computers.com%2Fmuseum%2Fcomputer.asp%3Fst%3D1%26c%3D29&amp;layout=standard&amp;show_faces=true&amp;width=450&amp;action=like&amp;font=arial&amp;colorscheme=light&amp;height=80" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:450px; height:80px; vertical-align:middle;" allowTransparency="true"></iframe>
+
+<!-------------------------------------->
+<!-- DEBUT AFFICHAGE DES COMMENTAIRES -->
+<!-------------------------------------->
+
+<br>&nbsp;<br>
+	<div class="bubble" style="width: 660;">
+		<div class="rounded">
+			<blockquote>
+				<p class="petitnoir3">I couldn''t resist a trip down memory lane. First, a long overdue "Thank you" to Mr Hume.<br><br>His whole Math''s class was caught up in his enthusiasm, excitedly awaiting the day when his Micro Computer would arrive. It was late.<br><br>When it did, a small cadre of boys and girls gathered around the keyboard and monitor to watch as he loaded a few worthy but dull games. I seem to recall, only one or two got hands-on because they took so long to load.<br><br>The following week, everyone else was rehearsing for the school play. That evening, he changed the course of my life.<br><br>All I''d ever seen a computer do was play a few simple games. When asked what I wanted to do, I was too naive to know better.<br><br>I asked if we could "type-in a game". And to my amazement, he did just that. For years after, "typing-in a game" meant copying from a magazine. I knew differently.<br><br>Writing BBC BASIC in real time, Mr Hume crafted one of the few games I''d seen before ... "Bomber". Life. As I watched. We didn''t finish it in one night, nor ever as I recall. but I''d seen enough. I was hooked. I was consumed with the desire to do the same. I had to speak "fluent computer".<br><br>Within 6 months, I''d able to do the game. Taking a simple idea and turning it into code. <br><br>Within a year, I was coding in fluent machine code (hex, not assembler). Within a year, I was in high school and coding passionately. Along with a couple of mates, we wrote most of the senior schools'' computing assignments during our first term. LOL. Stopped us being bullied, oddly enough. Being able to write games made us geeks tolerable, even useful. We were awarded special privileges by the tougher kids and the teachers. It could have been so much worse.<br><br>My own first computer was a VIC-20. An amazing gift, that my single mum couldn''t really afford. Later on, I managed to snag my BBC (an old model A) ... and loved it with a passion. Then the ST, my beloved Amiga and then the wilderness of MS-DOS until Linux and for the last decade, my Mac''s. <br><br>It''s 30 years since the ZX Spectrum was released. A machine that I loved and loathed (fan-bois are not new). Nothing will ever compare to the BBC. (Arch, if you ever read this ... the Z80 was definitely better :-)<br><br>How good was BBC Basic? And lightening fast. Procedures, wow. And the assembler. Econet. And of course, Elite. <br><br>Thank you to Acorn, the BBC, Mr Hume. Arch and Beef. It''s 29 years later, I''m awake at 3am still coding furiously. Good night.<br></p>
+			</blockquote>
+		</div>
+		<cite class="rounded">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</cite>
+    <table border=0><tr><td valign="top"><table cellpadding="0" cellspacing="0" height="62" background="graphs/fond_avatar_g.png"><tr><td><img src="robots/103.jpg" width="50" height="50" hspace="6" vspace="6" border="0"></td></tr></table></td><td><table border=0><tr><td class="petitgris" style="FONT-SIZE: 11px">Monday&nbsp;23rd&nbsp;April&nbsp;2012</td></tr><td class="grandvert">Dox&nbsp;(Australia)</td></tr><tr><td><table cellspacing=0 cellpadding=0 border=0></table></td></tr><tr><td><p></td></tr></table></td><td><img src="graphs/top_comment.png"></td></tr></table>
+	</div>
+    
+	<div class="bubble" style="width: 660;">
+		<div class="rounded">
+			<blockquote>
+				<p class="petitnoir3">I was responsible for equiping a teaching lab. at Newcastle Polytechnic, and natrually I chose the BBC micro (a controversial decision when everyone else was buying original IBM PC's). 16 model B (suitable for a class of 32), networked together with ECONET to a server with a 20MB hard disk. I was given a free hand to buy 'demonstrative' hardware to show what computers could do. We ended up with robotic arms, 2 different speach synths, graphic tablets, 2 different camera systems, a speach recognition system, a BITSTICK (great for playing Elite), touch sensitive screens, light pens, pen plotter, Teletext adapter, 6502 second processor. The systems were used for Basic and Pascal programming, word processing (view), spreadsheets (viewsheet). With all of the 'toys' out, it really was something to see. All this connected to the 'standard' ports of the BBC. What a wonderful machine. I know from experience that it was a great system for teaching. I still have two running today!</p>
+			</blockquote>
+		</div>
+		<cite class="rounded">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</cite>
+    <table border=0><tr><td valign="top"><table cellpadding="0" cellspacing="0" height="62" background="graphs/fond_avatar_g.png"><tr><td><img src="robots/93.jpg" width="50" height="50" hspace="6" vspace="6" border="0"></td></tr></table></td><td><table border=0><tr><td class="petitgris" style="FONT-SIZE: 11px">Sunday&nbsp;7th&nbsp;May&nbsp;2006</td></tr><td class="grandvert">Peter Gathercole&nbsp;(Somerset, United Kingdom)</td></tr><tr><td><table cellspacing=0 cellpadding=0 border=0></table></td></tr><tr><td><p></td></tr></table></td><td><img src="graphs/top_comment.png"></td></tr></table>
+	</div>
+    
+	<div class="bubble" style="width: 660;">
+		<div class="rounded">
+			<blockquote>
+				<p class="petitnoir3">Let's face it; everyone has used a BBC.  Schools loved 'em...and rightly so.  The real draw, though, was seeing "Elite" running on it.  I started coding 3d vector routines as a result, whilst I got my 'o' level in computer studies with three programs I made for fun (a crude music sequencer, a bug-ridden 3d graphical adventure game and a simple word processor).  Biggest surprise the old girl gave me was when I slammed in my new copy of Superior Software's "Citadel" and she started TALKING to me!  "Whatch owt for speeeech!", she said, "Ower new program, coming soooon!".<br><br>I dropped my sandwich!</p>
+			</blockquote>
+		</div>
+		<cite class="rounded">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</cite>
+    <table border=0><tr><td valign="top"><table cellpadding="0" cellspacing="0" height="62" background="graphs/fond_avatar_g.png"><tr><td><img src="robots/97.jpg" width="50" height="50" hspace="6" vspace="6" border="0"></td></tr></table></td><td><table border=0><tr><td class="petitgris" style="FONT-SIZE: 11px">Wednesday&nbsp;8th&nbsp;September&nbsp;2004</td></tr><td class="grandvert">Alan Goodwin&nbsp;(UK)</td></tr><tr><td><table cellspacing=0 cellpadding=0 border=0></table></td></tr><tr><td><p></td></tr></table></td><td><img src="graphs/top_comment.png"></td></tr></table>
+	</div>
+    
+    <a href="forum.asp?c=29&st=1"><img src="graphs/viewcomments.jpg" border="0" /></a>
+    
+<a href="forum.asp?c=29&st=1"><img src="graphs/postacomment.jpg" border="0" hspace="10"/></a>
+<p>&nbsp;</p>
+
+
+<!----------------------------------->
+<!-- FIN AFICHAGE DES COMMENTAIRES -->
+<!----------------------------------->
+
+<table width="100%" cellpadding=0 cellspacing=0 border=0>
+<tr>
+<!--<td width="20">&nbsp;</td>-->
+<td width="100%">
+	
+		<table width="100%" border="0" cellspacing="0" cellpadding="0">
+		  <tr>
+			<td width="5"><img src="graphs/bandeau_info-techniques-ordis_g.gif" width="6" height="29"></td>
+			<td background="graphs/bandeau_info-techniques-ordis_fond.gif"><img src="graphs/bandeau_info-techniques-ordis_txt.gif" width="187" height="29"></td>
+			<td width="5"><img src="graphs/bandeau_info-techniques-ordis_d.gif" width="6" height="29"></td>
+		  </tr>
+		</table>
+		
+	<table width="100%" cellpadding=2 cellspacing=0 border=0><tr><td bgcolor="#BCF9CF" class="petitnoir2" valign="top"><b>NAME&nbsp;&nbsp;</td><td bgcolor="#BCF9CF" width="100%" class="petitnoir2">BBC Model A / B / B+</td></tr><tr><td bgcolor="#7AD396" class="petitnoir2" valign="top"><b>MANUFACTURER&nbsp;&nbsp;</td><td bgcolor="#7AD396" width="100%" class="petitnoir2">Acorn Computer</td></tr><tr><td bgcolor="#BCF9CF" class="petitnoir2" valign="top"><b>TYPE&nbsp;&nbsp;</td><td bgcolor="#BCF9CF" width="100%" class="petitnoir2">Home Computer</td></tr><tr><td bgcolor="#7AD396" class="petitnoir2" valign="top"><b>ORIGIN&nbsp;&nbsp;</td><td bgcolor="#7AD396" width="100%" class="petitnoir2">United Kingdom</td></tr><tr><td bgcolor="#BCF9CF" class="petitnoir2" valign="top"><b>YEAR&nbsp;&nbsp;</td><td bgcolor="#BCF9CF" width="100%" class="petitnoir2">1981</td></tr><tr><td bgcolor="#7AD396" class="petitnoir2" valign="top"><b>END&nbsp;OF&nbsp;PRODUCTION&nbsp;&nbsp;</td><td bgcolor="#7AD396" width="100%" class="petitnoir2">Unknown</td></tr><tr><td bgcolor="#BCF9CF" class="petitnoir2" valign="top"><b>BUILT&nbsp;IN&nbsp;LANGUAGE&nbsp;&nbsp;</td><td bgcolor="#BCF9CF" width="100%" class="petitnoir2">BBC Basic</td></tr><tr><td bgcolor="#7AD396" class="petitnoir2" valign="top"><b>KEYBOARD&nbsp;&nbsp;</td><td bgcolor="#7AD396" width="100%" class="petitnoir2">Full-stroke QWERTY keyboard, 64 keys, 10 function keys, arrow keys</td></tr><tr><td bgcolor="#BCF9CF" class="petitnoir2" valign="top"><b>CPU&nbsp;&nbsp;</td><td bgcolor="#BCF9CF" width="100%" class="petitnoir2">MOS 6502</td></tr><tr><td bgcolor="#7AD396" class="petitnoir2" valign="top"><b>SPEED&nbsp;&nbsp;</td><td bgcolor="#7AD396" width="100%" class="petitnoir2">1.8 MHz</td></tr><tr><td bgcolor="#BCF9CF" class="petitnoir2" valign="top"><b>RAM&nbsp;&nbsp;</td><td bgcolor="#BCF9CF" width="100%" class="petitnoir2">Model 1 : 16 kb<br>Model B :  32 kb<br>Model B+ :  64 kb</td></tr><tr><td bgcolor="#7AD396" class="petitnoir2" valign="top"><b>ROM&nbsp;&nbsp;</td><td bgcolor="#7AD396" width="100%" class="petitnoir2">32 kb</td></tr><tr><td bgcolor="#BCF9CF" class="petitnoir2" valign="top"><b>TEXT&nbsp;MODES&nbsp;&nbsp;</td><td bgcolor="#BCF9CF" width="100%" class="petitnoir2">80 x 32/25 (2 colors) / 40 x 32/25 (2 or 4 colors) / 20 x 32 (16 colors) / 40 x 25 (Teletext display)</td></tr><tr><td bgcolor="#7AD396" class="petitnoir2" valign="top"><b>GRAPHIC&nbsp;MODES&nbsp;&nbsp;</td><td bgcolor="#7AD396" width="100%" class="petitnoir2">640 x 256 (2 colors) / 320 x 256 (4 colors) / 160 x 256 (16 colors)</td></tr><tr><td bgcolor="#BCF9CF" class="petitnoir2" valign="top"><b>COLOrsc&nbsp;&nbsp;</td><td bgcolor="#BCF9CF" width="100%" class="petitnoir2">16 (8 colors + flashing option)</td></tr><tr><td bgcolor="#7AD396" class="petitnoir2" valign="top"><b>SOUND&nbsp;&nbsp;</td><td bgcolor="#7AD396" width="100%" class="petitnoir2">3 channels + 1 noise channel, 7 octaves</td></tr><tr><td bgcolor="#BCF9CF" class="petitnoir2" valign="top"><b>SIZE&nbsp;/&nbsp;WEIGHT&nbsp;&nbsp;</td><td bgcolor="#BCF9CF" width="100%" class="petitnoir2">41 (W) x 34.5 (D) x 6.5 (H) cm / 3700 g</td></tr><tr><td bgcolor="#7AD396" class="petitnoir2" valign="top"><b>I/O&nbsp;PORTS&nbsp;&nbsp;</td><td bgcolor="#7AD396" width="100%" class="petitnoir2">UHF TV out, BNC video out, RGB vide out, RS423, Cassette, Analogue In (DB15), Econet port, TUBE interface, 1Mhz BUS, User port, Printer port, Disk-drive connector</td></tr><tr><td bgcolor="#BCF9CF" class="petitnoir2" valign="top"><b>POWER&nbsp;SUPPLY&nbsp;&nbsp;</td><td bgcolor="#BCF9CF" width="100%" class="petitnoir2">Built-in switching PSU</td></tr><tr><td bgcolor="#7AD396" class="petitnoir2" valign="top"><b>PERIPHERALS&nbsp;&nbsp;</td><td bgcolor="#7AD396" width="100%" class="petitnoir2">Controler card for 1 to 4 5''1/4 F.D. drives (1 400 F.F)<br>Floppy disk unit 5''1/4 250 Ko. (3 900 F.F.)<br>Numerical cassette recorder 100 Ko. (3 000 F.F.)<br>Second  6502 microprocessor with card (3</td></tr><tr><td bgcolor="#BCF9CF" class="petitnoir2" valign="top"><b>PRICE&nbsp;&nbsp;</td><td bgcolor="#BCF9CF" width="100%" class="petitnoir2">?399 (UK 1983) - 1181 <img src="/site/graphs/euro.gif" align="bottom"> (France, February 1984)</td></tr></table>	
+	<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  		<tr>
+			<td width="5"><img src="graphs/bandeau_info-techniques-ordis_b-g.gif" width="5" height="17"></td>
+			<td background="graphs/bandeau_info-techniques-ordis_fond-b.gif"><img src="graphs/bandeau_info-techniques-ordis_fond-b.gif" width="2" height="17"></td>
+			<td width="5"><img src="graphs/bandeau_info-techniques-ordis_b-d.gif" width="5" height="17"></td>
+ 		 </tr>
+	</table>
+	<br><table align="center" width="580"></table>
+	
+	<br>
+
+<!-- d?but Ebay auctions -->
+	<a name="ebay"></a>
+	
+<div align="center">
+	
+	<script language="JavaScript" src="http://lapi.ebay.com/ws/eBayISAPI.dll?EKServer&ai=tkxk%27lx&bdrcolor=FFCC00&catid=4193+11988&cid=0&eksize=1&encode=UTF-8&endcolor=FF0000&endtime=y&fbgcolor=FFFFFF&fntcolor=000000&fs=3&hdrcolor=FFFFCC&hdrimage=1&hdrscrch=y&img=y&lnkcolor=0000FF&logo=1&num=10&numbid=y&paypal=n&popup=y&prvd=9&query=bbc&r0=4&sacategoryin=4193+11988&shipcost=n&sid=system+page+uk&siteid=3&sort=MetaEndSort&sortby=endtime&sortdir=asc&srchdesc=n&tbgcolor=FFFFFF&tlecolor=FFCE63&tlefs=1&tlfcolor=000000&track=5336029858&width=560&toolid=10004&watchcat=4193"></script>
+	
+</div>
+<!-- categories
+	vintage computersc = 4193
+	vintage apples = 51045
+	vintage games =  4315
+	videogames = 1249
+	Arcade, Jukeboxes & Pinball (#66502) 
+	-->
+<!-- fin Ebay auctions -->
+<br><br>
+<!-- debut Books Amazon -->
+<a name="amazon"></a>
+<div align="center">
+<table>
+	<!--<tr>
+		<td align="center" bgcolor="#acaa8f" height="30"><strong><font color="#FFFFFF">OUR BOOKS SELECTION WITH&nbsp;&nbsp;<img src="graphs/amazon_logo.png" align="absmiddle"></font></strong></td>
+	</tr>-->
+	<tr>
+		<td>
+		<SCRIPT charscet="utf-8" type="text/javascript" src="http://ws.amazon.com/widgets/q?ServiceVerscion=20070822&MarketPlace=US&ID=V20070822/US/oldcomputerscc-20/8001/4c3d136c-9e8c-4416-899b-f39355568536"> </SCRIPT> <NOSCRIPT><A HREF="http://ws.amazon.com/widgets/q?ServiceVerscion=20070822&MarketPlace=US&ID=V20070822%2FUS%2Foldcomputerscc-20%2F8001%2F4c3d136c-9e8c-4416-899b-f39355568536&Operation=NoScript">Amazon.com Widgets</A></NOSCRIPT>
+		<!-- PUB POUR NOTRE ASTORE
+		<script type="text/javascript"><!--
+amazon_ad_tag="oldcomputerscc-20"; 
+amazon_ad_width="600"; 
+amazon_ad_height="520"; 
+amazon_color_border="118F2D"; 
+amazon_color_logo="FFFFFF"; 
+amazon_color_link="131BF7"; 
+amazon_ad_link_target="new"; //-->
+<!--</script>
+<script type="text/javascript" src="http://www.assoc-amazon.com/s/asw.js"></script>
+		FIN PUB POUR NOTRE ASTORE-->
+		<!-- OKABASE TRUC
+		<script type="text/javascript"><!--
+  amazon_ad_tag = "oldcomputerscc-20";  amazon_ad_width = "600";  amazon_ad_height = "520";  amazon_ad_exclude = "garden";  amazon_ad_include = "atari;computer+history;video+game;Acorn Computer                                    ";  amazon_ad_categories = "adef";//--><!--</script>
+<script type="text/javascript" src="http://www.assoc-amazon.com/s/ads.js"></script>
+		FIN OKABASE TRUC-->
+		<!--<iframe src="http://rcm.amazon.com/e/cm?t=oldcomputerscc-20 &o=1&p=16&l=st1&mode=books&search=computer%20videogame%20history&fc1=000000&lt1=&lc1=3366FF&bg1=FFFFFF&f=ifr" marginwidth="0" marginheight="0" width="468" height="336" border="0" frameborder="0" style="border:none;" scrolling="no"></iframe>-->
+		</td>
+	</tr>
+</table>
+<br>
+<a href="../store/library/default.asp"><img src="images/bookstore_advert.png" border="0"></a> 
+</div>
+
+      <!-- fin Books Amazon -->
+      <br>
+<!-- SiteSearch Google -->
+<table align="center">
+	<tr><td>
+<form method="get" action="http://www.google.com/custom" target="google_window">
+<table border="0" bgcolor="#ffffff">
+<tr><td nowrap="nowrap" valign="top" align="left" height="32">
+<a href="http://www.google.com/">
+<img src="http://www.google.com/logos/Logo_25wht.gif"
+border="0" alt="Google"></a>
+</td>
+<td nowrap="nowrap">
+<input type="hidden" name="domains" value="www.old-computersc.com">
+<input type="text" name="q" size="31" maxlength="255" value="Acorn Computer&nbsp;BBC Model A / B / B+">
+<input type="submit" name="sa" value="Search">
+</td></tr>
+<tr>
+<td>&nbsp;</td>
+<td nowrap="nowrap">
+<table>
+<tr>
+<td>
+<input type="radio" name="sitesearch" value="" checked="checked">
+<font size="-1" color="#000000">Web</font>
+</td>
+<td>
+<input type="radio" name="sitesearch" value="www.old-computersc.com">
+<font size="-1" color="#000000">www.old-computersc.com</font>
+</td>
+</tr>
+</table>
+<input type="hidden" name="client" value="pub-1841187370908568">
+<input type="hidden" name="forid" value="1">
+<input type="hidden" name="channel" value="8801736319">
+<input type="hidden" name="ie" value="ISO-8859-1">
+<input type="hidden" name="oe" value="ISO-8859-1">
+<input type="hidden" name="cof" value="GALT:#008000;GL:1;DIV:#009900;VLC:663399;AH:center;BGC:FFFFFF;LBGC:FFF8AD;ALC:0000FF;LC:0000FF;T:000000;GFNT:0000FF;GIMP:0000FF;LH:33;LW:183;L:http://www.old-computersc.com/news/graphs/bandeau_google.gif;S:http://;FORID:1;">
+<input type="hidden" name="hl" value="en">
+
+</td></tr></table>
+</form>
+
+</td></tr></table>
+<!-- fin SiteSearch Google -->
+</td>
+<!--<td width="20">&nbsp;</td>-->
+</table><br><br>&nbsp;
+
+
+
+<td width="2" background="/site/graphs/pv.gif"  valign=top>
+<table border=0 cellpadding=0 cellspacing=0 width="2"><tr><td><img src="graphs/blns.gif"></td></tr>
+	
+
+
+<tr><td><img src="graphs/tv.gif" height="356" width="16"></td></tr>
+</table>
+</td>
+
+<td width="151" valign="top">
+
+<img src="graphs/summary_sel.gif"><br>
+<a href="doc.asp?c=29&st=1" onmouseover="sm_on(3,1)" onmouseout="sm_on(3,0)"><img src="graphs/doc_off.gif" name="m3" alt="More Info" border="0"></a><br><a href="photos.asp?t=1&c=29&st=1" onmouseover="sm_on(2,1)" onmouseout="sm_on(2,0)"><img src="graphs/pictures_off.gif" name="m2" alt="More pictures" border="0"></a><br><a href="photos.asp?t=2&c=29&st=1" onmouseover="sm_on(11,1)" onmouseout="sm_on(11,0)"><img src="graphs/advert_off.gif" name="m11" alt="Adverts" border="0"></a><br><a href="hardware.asp?t=1&c=29&st=1" onmouseover="sm_on(4,1)" onmouseout="sm_on(4,0)"><img src="graphs/hardware_off.gif" name="m4" alt="Hardware Info" border="0"></a><br><a href="hardware.asp?t=2&c=29&st=1" onmouseover="sm_on(10,1)" onmouseout="sm_on(10,0)"><img src="graphs/connectors_off.gif" name="m10" alt="Connectors" border="0"></a><br><a href="software.asp?c=29&st=1" onmouseover="sm_on(5,1)" onmouseout="sm_on(5,0)"><img src="graphs/screenshot_off.gif" name="m5" alt="Software & screenshots" border="0"></a><br><a href="emulator.asp?c=29&st=1" onmouseover="sm_on(6,1)" onmouseout="sm_on(6,0)"><img src="graphs/emulator_off.gif" name="m6" alt="Emulators" border="0"></a><br><a href="links.asp?c=29&st=1" onmouseover="sm_on(7,1)" onmouseout="sm_on(7,0)"><img src="graphs/links_off.gif" name="m7" alt="Internet Links" border="0"></a><br><a href="docs.asp?c=29&st=1" onmouseover="sm_on(12,1)" onmouseout="sm_on(12,0)"><img src="graphs/docs_off.gif" name="m12" alt="Documentations" border="0"></a><br><a href="forum.asp?c=29&st=1" onmouseover="sm_on(9,1)" onmouseout="sm_on(9,0)"><img src="graphs/forum_off.gif" name="m9" alt="Mini-Forum" border="0"></a><br>
+<img src="graphs/th.gif" align=top>
+
+<br>
+<object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,29,0" width="39" height="380">
+  <param name="movie" value="graphs/museum_clickhere.swf">
+  <param name="quality" value="high">
+  <embed src="graphs/museum_clickhere.swf" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" width="39" height="380"></embed></object>
+	
+</td>
+
+
+</tr>
+
+<tr>
+<td BGCOLOR="#F9F3E3" align="center"><a href="#haut"><img src="/site/graphs/up.gif"  alt="Click here to go to the top of the page" border="0"></a>
+</td>
+<td width="2" background="/site/graphs/pv2.gif">&nbsp;&nbsp;</td>
+<td>	<script language="javascript">
+	function open_mail()
+		{
+		window.open('/corporate/contact.htm','contact_us','toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=yes,resizable=no,width=520,height=550');  
+  		}
+	function open_who_we_are()
+		{
+		window.open('/corporate/who_we_are.htm','wo_we_are','toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=yes,resizable=no,width=520,height=550');  
+  		}
+	function open_members()
+		{
+		window.open('/corporate/members.htm','members','toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=yes,resizable=no,width=520,height=550');  
+  		}
+	function open_donate()
+		{
+		window.open('/corporate/donate.htm','donate','toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=yes,resizable=no,width=525,height=550');  
+  		}
+	function open_donate_pp()
+		{
+		window.open('/corporate/donate_pp.htm','donate','toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=yes,resizable=no,width=525,height=550');  
+  		}
+	function open_faq()
+		{
+		window.open('/corporate/faq.htm','faq','toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=yes,resizable=no,width=520,height=550');  
+  		}
+	</script>
+	<center>
+	<table cellspacing="5" cellpadding="0" border="0">
+	<tr>
+	<td align="center" class="petitgris">
+	<a href="javascript:open_mail()" class="petitgris" title="Send us a Mail">Contact us</a> | 
+	<a href="javascript:open_members()" class="petitgris" title="Members">members</a> |
+	<a href="javascript:open_who_we_are()" class="petitgris" title="Who are we ?">about old-computers.com</a> |
+	<a href="javascript:open_donate()"  class="petitgris" title="Don't throw them away !">donate old-systems</a> | 
+	<a href="javascript:open_faq()"  class="petitgris" title="Frequently Asked Questions">FAQ</a>
+	</td>
+	</tr>
+	<tr>
+	<td align="center" class="petitgris">
+	OLD-COMPUTERS.COM is hosted by - <a href="http://www.nyi.net" target="glop" class="petitgris">NYI (New York Internet)</a> -
+	</td>
+	</tr>
+	</table>
+	
+    
+    <!-- CODE GOOGLE ANALYTICS -->
+    
+	<!--<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+	</script>
+	<script type="text/javascript">
+	_uacct = "UA-158369-4";
+	urchinTracker();
+	</script>-->
+    
+    <script type="text/javascript">
+	var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+	document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+	</script>
+	
+	
+	<script type="text/javascript">
+	var pageTracker = _gat._getTracker("UA-158369-4");
+	pageTracker._trackPageview();
+	</script>
+
+    
+    <!-- FIN CODE GOOGLE ANALYTICS --></td>
+<td width="2" background="/site/graphs/pv.gif"  valign=top>
+<td></td>
+</tr>
+
+
+
+</table>
+
+<script type="text/JavaScript">
+  window.onload = function() {
+      settings = {
+          tl: { radius: 10 },
+          tr: { radius: 10 },
+          bl: { radius: 10 },
+          br: { radius: 10 },
+          antiAlias: true,
+          autoPad: true
+      }
+      var myBoxObject = new curvyCorners(settings, "rounded");
+      myBoxObject.applyCornersToAll();
+  }
+</script>
+
+</body>
+</html>
+<script>document.title='OLD-COMPUTERS.COM Museum ~ Acorn Computer                                     BBC Model A / B / B+'</script>

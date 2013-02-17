@@ -1,0 +1,570 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://www.facebook.com/2008/fbml" xmlns:og="http://opengraphprotocol.org/schema/" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>The Medic Droid Tickets : Compare The Medic Droid Concert Tickets!</title>
+<meta name="description" content="Compare The Medic Droid tickets at Ticketwood.com, your The Medic Droid concert tour ticket broker. The Medic Droid concert tickets are on sale now." />
+<meta name="keywords" content="The Medic Droid, concert, The Medic Droid tickets, live, The Medic Droid concert tickets, music, Tickets, The Medic Droid tour tickets, The Medic Droid ticket broker, Tickets for The Medic Droid"/>
+<meta name="rating" content="General" />
+<meta http-equiv="Content-Language" content="en-us" />
+<meta name="robots" content="INDEX,FOLLOW" />
+<meta name="author" content="www.ticketwood.com" />
+<meta name="publisher" content="Ticketwood Tickets" />
+<meta name="copyright" content="Copyright &copy;  2005-2012 - Ticketwood Tickets" />
+<meta property="og:title" content="Ticketwood, a Real Time Price Comparison Ticket Site"/>
+<meta property="og:type" content="company"/>
+<meta property="og:url" content="/concerts/The-Medic-Droid-Tickets/index.php"/>
+<meta property="og:image" content="http://www.ticketwood.com/images/ticketwood_facebook.jpg"/>
+<meta property="og:site_name" content="TicketWood.com"/>
+<meta property="og:description" content="Find and share tickets for Concerts, Sports, Theater, NBA, MLB, NFL and More"/>
+<meta property="fb:app_id" content="150251344987211"/>
+<link href="/css/wood.css" rel="stylesheet" type="text/css" />
+<!--[if IE 7]><link href="/css/ie7.css" rel="stylesheet" type="text/css" /> <![endif]-->
+<!--[if IE 6]><link href="/css/ie6.css" rel="stylesheet" type="text/css" /> <![endif]-->
+<link href="/images/favicon.ico" rel="shortcut icon" />
+<script	type="text/javascript" src="/js/jquery-1.3.2.js"></script>
+<script	type="text/javascript" src="/js/all_pages.js"></script>
+<script	type="text/javascript" src="/js/scripts.js"></script>
+<!--[if IE 6]><script type="text/javascript" src="/js/supersleight-jq.js"></script><script type="text/javascript" src="/js/ie6.js"></script><![endif]-->
+<script	type="text/javascript">
+	function submit_newsletter(name_enc,sssid){
+	var em = document.getElementById('chnews').value.replace(/^\s+|\s+$/, '');	
+	var emailRegEx = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i;
+	
+	if(em!=""){
+    if (em.search(emailRegEx) == -1){
+	$("#error_news").css('padding','12px 0');
+	document.getElementById("error_news").innerHTML = 'Please enter a valid e-mail';
+	return 0
+	}else{
+		ajax_news("/includes/send_news.php","name_enc="+name_enc+"&ssid="+sssid+"&"+name_enc+"="+em,"newsdiv");
+		document.getElementById("error_news").innerHTML = '&nbsp;';
+		}
+	}
+		}
+	function Disp_Alphabet(name_category,id_category,num_le,let) {
+		var xhr_object = null;
+		if(window.XMLHttpRequest)
+			xhr_object = new XMLHttpRequest();// Firefox
+		else if(window.ActiveXObject)
+			xhr_object = new ActiveXObject("Microsoft.XMLHTTP");// Internet Explorer 
+		else { // XMLHttpRequest non support&eacute; par le navigateur 
+			alert("Your browser don\'t support XMLHTTPRequest objects...");
+			return;
+		} 
+	
+		xhr_object.open("POST", "/ajax/alphabet.php", true);
+		xhr_object.onreadystatechange = function() {
+		document.getElementById('more_alphabet').innerHTML = '<br /><br /><table width="100%" height="100%"  border="0" cellspacing="0" cellpadding="0"><tr><td align="center" valign="middle"><img src="/images/loading.gif"></td></tr></table>';
+			if(xhr_object.readyState == 4){
+					document.getElementById('more_alphabet').innerHTML = "";
+					document.getElementById('more_alphabet').innerHTML = xhr_object.responseText;
+			}
+		}
+	
+		xhr_object.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+		xhr_object.send("name_category="+name_category+"&id_category="+id_category+"&num_le="+num_le+"&let="+let+"&curr_page=event");
+	}
+	function ajax_news(page, data, contener) {
+		var xhr_object = null; 
+		if(window.XMLHttpRequest)
+			xhr_object = new XMLHttpRequest();// Firefox
+		else if(window.ActiveXObject)
+			xhr_object = new ActiveXObject("Microsoft.XMLHTTP");// Internet Explorer 
+		else { // XMLHttpRequest non support? par le navigateur 
+			alert("Your browser don\'t support XMLHTTPRequest objects...");
+		return;
+		} 
+		
+		xhr_object.open("POST", page, true); 
+		xhr_object.onreadystatechange = function() { 
+			//$(function() { $("#"+contener).html('<br /><br /><br /><br /><br /><center>Loading<br /><img src="/images/loading.gif" border=0 width="160" height="24" /></center>'); });
+			if(xhr_object.readyState == 4){
+				var obje  = xhr_object.responseText;
+				if(obje != '') {
+				//$.getScript("http://www.ticketwood.com/js/scripts.js"); 
+				$(function() { 
+						   $("#"+contener).html(obje); 
+				   });
+				}
+			}
+		} 
+		xhr_object.setRequestHeader("Content-type", "application/x-www-form-urlencoded"); 
+		xhr_object.send( data );
+	}
+	function verif_login(form) {
+		var msgfalse = "";
+		var email = form.email.value;
+		var passwd = form.password.value;
+		
+		//verifier Email
+		if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email)){
+		}else{
+			if(msgfalse=="") form.email.focus();
+			msgfalse+='Enter Valid E-mail Adress.\n';
+		}
+
+		//verifier Email
+		if(email==""){
+			if(msgfalse=="") form.email.focus();
+			msgfalse+="Enter email.\n";
+		}
+	
+		//verifier Password
+		if(passwd==""){
+			if(msgfalse=="") form.password.focus();
+			msgfalse+="Enter your Password.\n";
+		}
+		
+		if(msgfalse!=""){
+			alert(msgfalse);
+			return false;
+		} else {
+			verif_passwd(email,passwd);
+			return false;
+		}
+	}
+	function verif_passwd(email,passwd) {
+		$.ajax({
+			type: "POST",
+			url : "/signin.php",
+			data: "email=" + email + "&password=" + passwd,
+			success:function(data) {
+				if (data==0) {
+					alert('Something is wrong. Make sure you Email or Password it correctly');
+					document.getElementById("password").value = "";
+				} else {
+					document.location.href='/concerts/The-Medic-Droid-Tickets/index.php';
+					//alert(data);
+				}
+			}
+		});
+	}
+	function merging(compte) {
+		var msg="";
+		if (compte=="tw") msg="you want to merge this account with the TicketWood account ?";
+		else msg="you want to merge this account with the facebook account ?"; 
+		if (confirm(msg)) {
+			$.ajax({
+				type: "POST",
+				url : "/merge.php",
+				success:function(data) {
+					alert("success");
+					alert(data);
+					document.location.href="/concerts/The-Medic-Droid-Tickets/index.php";
+					
+				}
+			});
+		}
+	}
+	function link_trac(lien) {
+		window.open(lien, '_blank');
+	}
+
+</script>
+
+<script type="text/javascript" src="/includes/search/ajax.js"></script>
+<script type="text/javascript" src="/includes/search/ajax-dynamic-list.js"></script>
+</head>
+<body onload="" >
+<div id="website" align="center">
+    	<div class="w" align="left">
+            <div id="header">
+            	<div id="logo" class="left">
+                	<a href="http://www.ticketwood.com" title="Ticketwood.com"><img src="/images/ticketwood_logo.png" alt="Ticketwood.com" width="261" height="64" border="0" title="Ticketwood.com" /></a></div>
+       	    <!-- ID@logo -->
+                            <form id="formSearchEvent" onSubmit="return send_search_form(this);" name="formSearchEvent" method="post" class="left">
+                	<div id="b_insearch" class="left"><input type="text" value="Type a team, artist or venue" onClick="if(document.getElementById('Eventsearch').value=='Type a team, artist or venue') document.getElementById('Eventsearch').value=''" id="Eventsearch" name="Eventsearch" /></div>
+                    <div id="find_search" class="left"><input type="image" src="/images/btn_find_tickets.png" /></div>
+                    <div class="clear"></div>
+                </form><!-- ID@searchwood -->
+                             <div class="right"><img src="/images/search_compare_buy_s.png" alt="Search, Compare &amp; Buy" title="Search, Compare &amp; Buy" width="242" height="57" /></div>
+            	<div class="clear"></div>
+            </div><!-- ID@header -->
+            
+            <div id="locnav" align="left">
+            	<ul id="nav">
+                	<li><a href="http://www.ticketwood.com" id="home">Home</a></li>
+                    <li><a class="cher" href="http://www.ticketwood.com/concerts/" id="concerts">Concerts</a></li>
+                    <li><a  href="http://www.ticketwood.com/sports/" id="sports">Sports</a></li>
+                    <li><a  href="http://www.ticketwood.com/theater/" id="arts_theater">Arts &amp; Theater</a></li>
+                </ul><!-- ID@nav -->
+                <div id="change_location" align="right" class="right">
+                    <ul>
+                                                <span id="signin_user"><li class="arealocation sign avatar_fb">
+                            <a href="#" class="btnlo blue">Sign in</a>
+                                <table class="lo270" width="270" border="0" cellspacing="0" cellpadding="0">
+                                  <tr><td width="270" height="24" colspan="3" class="rowareas"></td></tr>
+                                  <tr>
+                                    <td width="15" class="leftvalue"></td>
+                                    <td>
+                                        <table width="240" border="0" cellspacing="0" cellpadding="0" style="background-color:#fff">
+                                          <tr>
+                                            <td align="left" valign="top">
+                                                <h4 class="left">Login TicketWood</h4><a class="right closearea" href="javascript:void()">Close</a>
+                                                <form id="frm_signin" name="frm_signin" method="post" action="" onsubmit="return verif_login(this);">
+                                                    <div class="clear"><label for="email">Email:</label><br /><input id="email" class="inbull" name="email" type="text" value="" autocomplete="off" /></div>
+                                                    <div><label for="password">Password:</label> <input id="password" class="inbull" name="password" type="password" value="" autocomplete="off" /></div>
+                                                    <input id="signin" name="signin" type="image" src="/images/btn_signin.png" value="Sign In" />
+                                                    <div class="clear"></div><hr/><div class="clear"></div>
+                                                    Not a member? <a href="http://www.ticketwood.com/signup.php">Join</a>
+                                                </form>
+                                            </td>
+                                          </tr>
+                                        </table>
+                                    </td>
+                                    <td width="15" class="rightvalue"></td>
+                                    </tr>
+                                    <tr><td width="270" colspan="3" height="14" class="rareas"></td></tr>
+                                </table>
+                        </li></span>
+                                            <li><a href="http://www.ticketwood.com/faq.php" class="blue">FAQ</a></li>
+                        <li class="arealocation">
+                            <span>Set loaction:</span> <a href="#" id="location" class="btnlo">Arlington, VA</a>
+                                <table class="lo270" width="270" border="0" cellspacing="0" cellpadding="0">
+                                  <tr><td width="270" height="24" colspan="3" class="rowareas2"></td></tr>
+                                  <tr>
+                                    <td width="15" class="leftvalue"></td>
+                                    <td>
+                                        <table width="240" border="0" cellspacing="0" cellpadding="0" style="background-color:#fff">
+                                          <tr>
+                                            <td>
+                                                <h4 class="left">Pick a new location</h4><a class="right closearea" href="javascript:void()">Close</a>
+                                                <form id="changelocation" name="changelocation" method="post">
+                                                    <input id="change_ur_location" class="inbull" name="change_ur_location" type="text" value="Zip code or city, state or country" onfocus="if(this.value=='Zip code or city, state or country') this.value='';" autocomplete="off" onkeyup="ajax_showOptions(this,'getEventByLetters',event);" />
+                                                    <input id="golocation" type="image" src="/images/btn_golocation.png" value="Go" />
+                                                </form>
+                                            </td>
+                                          </tr>
+                                        </table>
+                                    </td>
+                                    <td width="15" class="rightvalue"></td>
+                                    </tr>
+                                    <tr><td width="270" colspan="3" height="14" class="rareas"></td></tr>
+                                </table>
+                           </li>
+                   	</ul>
+              </div>
+                <div class="clear"></div>
+            </div><!-- ID@locnav -->
+                        <div id="breadcrumbs" align="left">
+                <ul class="left">
+                    <li><a href="http://www.ticketwood.com">Tickets</a> &gt;</li>
+                    <li><a href="/concerts/" title="Concerts Tickets">Concerts Tickets</a> &gt;</li><li class='current_event'>The Medic Droid Tickets</li>                </ul>
+                
+                <div class="right">
+                	              </div>
+                <div class="clear"></div>
+            </div><!-- ID@breadcrumbs -->
+                                     
+            <div id="body" align="center">
+            	            	<div class="p14" align="left">
+					<div id="content" class="right">
+<script type="text/javascript" src="/js/events.js"></script>
+
+<h1 class="left">The Medic Droid Tickets</h1>
+&nbsp;<a class="left rss" href="/concerts/the-medic-droid-Tickets/the-medic-droid.xml" title="The Medic Droid RSS Feed"><img src="/images/ico_rss.png" alt="The Medic Droid Feed RSS" width="16" height="16" border="0" title="The Medic Droid Feed RSS" /></a><div class="clear"><em>We found 0 events sets found available in this time for 'The Medic Droid Tickets'</em></div>
+
+            <div id="infoevent">
+                <img src="/images/performers/concerts/the-medic-droid-tickets.jpg" alt="The Medic Droid tickets" width="199" height="85" class="photo" align="left" />
+                <p>Be on time to attend The Medic Droid since it's live. The Medic Droid is going to take place in many cities. Purchase top The Medic Droid tickets and enjoy that pleasure of attending a live concert with The Medic Droid at very interesting prices.</p>
+            </div><!-- ID@infoevent -->
+		
+<div id="event_listning">
+                <div style="float:left; padding-top: 10px; width: 440px">
+                <div id="head_of_list_broker">
+                    <ul>
+                        <li class="broker_image left">Broker</li>
+                        <li class="rating left">Rating</li>
+                    </ul>
+                    <div class="clear"></div>
+                </div><!-- ID@head_of_list_broker -->
+                
+                <div id="body_of_list" class="bloc" align="left">
+                    <div class="b8" align="left">
+                        <table width="100%" border="0" cellpadding="0" cellspacing="0">
+                                                            <tr class="broker">
+                                    <td width="238" align="center" valign="middle"><img src="/images/brokers_list/ticketsinventory.png" width="112" height="50" alt="Ticketsinventory" /></td>
+                                    <td width="346" align="center" valign="middle" class="vcard"><img src="/images/ico_starfull.gif" width="16" height="16" alt="" />&nbsp;<img src="/images/ico_starfull.gif" width="16" height="16" alt="" />&nbsp;<img src="/images/ico_starfull.gif" width="16" height="16" alt="" />&nbsp;<img src="/images/ico_starfull.gif" width="16" height="16" alt="" />&nbsp;<img src="/images/ico_starempty.gif" width="16" height="16" alt="" /></td>
+                                    <td width="99" align="left" valign="middle"><a target="_blank" href="http://www.ticketsinventory.com/concert/the-medic-droid-tickets/" title="Ticketsinventory"><img src="/images/btn_visitit.png" alt="Visit it &gt;" width="62" height="32" border="0" title="Visit it &gt;" /></a></td>
+                                </tr>
+                                                                                    <tr class="broker">
+                                <td width="238" align="center" valign="middle"><img src="/images/brokers_list/ticketsnow.png" width="112" height="50" alt="Ticketsinventory" /></td>
+                                <td width="346" align="center" valign="middle" class="vcard"><img src="/images/ico_starfull.gif" width="16" height="16" alt="" />&nbsp;<img src="/images/ico_starfull.gif" width="16" height="16" alt="" />&nbsp;<img src="/images/ico_starfull.gif" width="16" height="16" alt="" />&nbsp;<img src="/images/ico_starfull.gif" width="16" height="16" alt="" />&nbsp;<img src="/images/ico_starempty.gif" width="16" height="16" alt="" /></td>
+                                <td width="99" align="left" valign="middle">
+                                    <form name='myform1' target='_blank' action='http://www.ticketwood.com/outlink.php' method=post><input type=hidden id='link' name='link' value="aHR0cDovL3d3dy5hd2luMS5jb20vY3JlYWQucGhwP2F3aW5taWQ9NDI5MiZhd2luYWZmaWQ9MTQyOTk4JmNsaWNrcmVmPWJsYWg/cD1odHRwJTNBJTJGJTJGd3d3LnRpY2tldHNub3cuY29tJTJGVGhlLU1lZGljLURyb2lkLXRpY2tldHMlMkY=" /></form>
+                                    <a target="_blank" href="javascript:void(0)" onclick="document.myform1.submit();return false;" title="Ticketsnow"><img src="/images/btn_visitit.png" alt="Visit it &gt;" width="62" height="32" border="0" title="Visit it &gt;" /></a>
+                                </td>
+                            </tr>
+                                                                                    <tr class="broker">
+                                <td width="238" align="center" valign="middle"><img src="/images/brokers_list/razorgator.png" width="112" height="50" alt="Ticketsinventory" /></td>
+                                <td width="346" align="center" valign="middle" class="vcard"><img src="/images/ico_starfull.gif" width="16" height="16" alt="" />&nbsp;<img src="/images/ico_starfull.gif" width="16" height="16" alt="" />&nbsp;<img src="/images/ico_starfull.gif" width="16" height="16" alt="" />&nbsp;<img src="/images/ico_starfull.gif" width="16" height="16" alt="" />&nbsp;<img src="/images/ico_starempty.gif" width="16" height="16" alt="" /></td>
+                                <td width="99" align="left" valign="middle">
+                                    <form name='myform2' target='_blank' action='http://www.ticketwood.com/outlink.php' method=post><input type=hidden id='link' name='link' value="aHR0cDovL3d3dy5rcXp5ZmouY29tL2NsaWNrLTE2OTEwNjYtMTAzOTE2MjY/dXJsPWh0dHAlM0ElMkYlMkZ3d3cucmF6b3JnYXRvci5jb20lMkZ0aWNrZXRzJTJGY29uY2VydHMlMkZ0aGUtbWVkaWMtZHJvaWQtdGlja2V0cyUyRg==" /></form>
+                                    <a target="_blank" href="javascript:void(0)" onclick="document.myform2.submit();return false;" title="Razorgator"><img src="/images/btn_visitit.png" alt="Visit it &gt;" width="62" height="32" border="0" title="Visit it &gt;" /></a>
+                                </td>
+                            </tr>
+                                                                                                                <tr class="broker">
+                                <td width="238" align="center" valign="middle"><img src="/images/brokers_list/ticketsreview.png" width="112" height="50" alt="Ticketsinventory" /></td>
+                                <td width="346" align="center" valign="middle" class="vcard"><img src="/images/ico_starfull.gif" width="16" height="16" alt="" />&nbsp;<img src="/images/ico_starfull.gif" width="16" height="16" alt="" />&nbsp;<img src="/images/ico_starfull.gif" width="16" height="16" alt="" />&nbsp;<img src="/images/ico_starfull.gif" width="16" height="16" alt="" />&nbsp;<img src="/images/ico_starempty.gif" width="16" height="16" alt="" /></td>
+                                <td width="99" align="left" valign="middle"><a target="_blank" href="http://www.ticketsreview.com/concerts/the_medic_droid_tickets/" title="Ticketsreview"><img src="/images/btn_visitit.png" alt="Visit it &gt;" width="62" height="32" border="0" title="Visit it &gt;" /></a></td>
+                            </tr>
+                                                    </table>
+                  </div><!-- CLASS@b8 -->
+            </div><!-- ID@body_of_list -->
+            </div>
+            <div style="float:right; padding-top: 22px; width:250px">
+                <script type="text/javascript"><!--
+                    google_ad_client = "ca-pub-9719812937776669";
+                    /* Ticketwood */
+                    google_ad_slot = "8173711728";
+                    google_ad_width = 250;
+                    google_ad_height = 250;
+                    google_color_border = "ffffff";
+                       google_color_bg = "FFFFFF";
+                       google_color_link = "009cf6";
+                       google_color_text = "333333";
+                       google_color_url = "579d05";
+                    //-->
+                    </script>
+                    <script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js"></script>
+            </div>
+            <div class="clear"></div>
+      <!-- ID@body_of_list -->
+    
+</div><!-- ID@event_listning -->
+		<div id="src_cnt_div1"><h2>The Medic Droid -  An Exceptional show!</h2><p>Among the performers whose tickets sold out early, The Medic Droid, mainly when coming to Smith Center For Performing Arts - Reynolds Hall or some main venues around Clearwater, Nashville and Detroit; though starting from this moment, this site has the solution for your concerns. To benefit of huge reductions on The Medic Droid tickets and also have the chance to book Concert Passes for Jamn 94.5 Monster Jam, Anthony Bourdain - Guts and Glory and CMA Awards, you should access this site. The concerns you could come across as a concert supporter, is to come across The Medic Droid tickets at reasonable prices, but on Ticketwood you could order even front row seats for Barrymore Theatre NY, Bass Concert Hall and BB King Blues Club and Grill NY and all basic venues.</p></div>
+		<div id="src_cnt_div2"><h2>The Medic Droid concert tickets- Don't miss it!</h2><p>Whatever city you live, you may profit of big discounts on The Medic Droid tickets that this website provides; furthermore, if you live in Windsor and Las Vegas, you may also book Scotiabank Place Luxury Suite seating at cheapest prices. As you ended here, maybe you have been seeking The Medic Droid tickets but unable to find discount prices; however, from now on, even Jackie Evancho, Joaquin Sabina and Joan Manual Serrat and Mimosa tickets are on hand either you are in Las Vegas or any location around the country. When you decide to purchase The Medic Droid tickets on this website, bear in mind that you are taking advantage of fair prices; moreover, even front row seating for Ambassador Theatre, Anderson Theater and Aragon Ballroom are available as well at fair prices.</p></div>
+		<div id="src_cnt_div3"><h2>The Medic Droid - About the Artist!</h2><p>Seeking low cost The Medic Droid tickets has mostly created concerns for concert enthusiasts around the country considering in Omaha, Phoenix and San Francisco; nevertheless, starting from this moment, you will have the possibility to reserve even Last Minute Tix for Honda Center and all big arenas. Our duty is to assist you find discounted The Medic Droid tickets in addition to tickets for Tame Impala, Bill Engvall and Henry Rollins most important concerts, you just browse calendar and order front row seating. Most of concerts lovers in New Brunswick can't purchase cheap tickets for The Medic Droid events that appear in Target Center, Tarkington Theatre- Center for the Performing Arts and TD Garden, however with this website you'll order even best seats.</p></div>
+</div><!-- ID@content --><div id="sidebar" class="left">
+    <div id="filters">
+                  <div class="bloc">
+            <div class="b8">
+                                
+                                        
+                                        <input type="hidden" id="side_bars_used" value="" />
+                              <script type="text/javascript">
+					//city,Venue,Date filters
+					function display_checked_filters(val){
+						var plus_url = venues = cities = "";
+						var side_bars_used = document.getElementById("side_bars_used").value;
+						
+						//Date
+						if( side_bars_used.indexOf("Date;",0)!=-1 && val=="date" ){
+							plus_url+= "&date_debut="+ document.getElementById("fromdatestart").value +"&date_fin="+ document.getElementById("fromdateend").value;
+						}else{
+							//CITIES
+							if( side_bars_used.indexOf("City;",0)!=-1 ){
+								var elements = document.city_filter.elements;
+								count_ids = elements.length;
+								for( var i=0;i<count_ids;i++ ){
+									var check = elements[i];//getElementById(champ).checked;
+									if( check.checked ) cities+=check.value + ";";
+								}
+								if( cities!="" ) plus_url+="&Cities=" + cities;
+							}
+							
+							//VENUES
+							if( side_bars_used.indexOf("Venue;",0)!=-1 ){
+								var elements2 = document.venue_filter.elements;
+								count_ids2 = elements2.length;
+								for( var i=0;i<count_ids2;i++ ){
+									var check2 = elements2[i];
+									if( check2.checked ) venues+=check2.value + ";";
+								}
+								if( venues!="" ) plus_url+="&Venues=" + venues;
+							}
+						}
+						
+						//ENVOI DU TOUT
+						link_to_send = "Event=The Medic Droid&Category=concerts&plus=AND+l.CategoryID+%3D+%2726%27+" + plus_url;
+						//alert(link_to_send);
+						goAjax("/events_page.php", link_to_send, "div_events");
+					}
+					function chang_sel_filtre_venues(nb,check_val){
+						for(i=0;i<nb;i++){
+							document.getElementById("Venue"+i).checked=check_val;
+						}
+						display_checked_filters('venue');
+					}
+					
+					function chang_sel_filtre_cities(nb,check_val){
+						for(i=0;i<nb;i++){
+							document.getElementById("City"+i).checked=check_val;
+						}
+						display_checked_filters('city');
+					}
+					function initialize_date_filter(){
+						//document.getElementById("side_bars_used").value='City;Venue;';
+						display_checked_filters("");
+					}
+                </script>
+                
+                            </div><!-- CLASS@b8 -->
+        </div><!-- CLASS@bloc -->
+        
+        <div><img src="/images/top_headerfeatured.png" width="138" height="46" alt="Featured Ticket Broker"></div>
+<div id="abin">
+<div id="mygallery" class="bloc stepcarousel">
+    <div id="a" class="b8 belt">
+                <div class="panel" align="center">
+        <strong><form target='_blank' name='form_outlink2' action='/outlink.php' method='post'><input type='hidden' name='link' value='aHR0cDovL3d3dy50a3FsaGNlLmNvbS9jbGljay0xNjkxMDY2LTEwMjg0MDUxP3VybD1odHRwJTNBJTJGJTJGd3d3LnRpY2tldHNub3cuY29tJTJGVGhlLU1lZGljLURyb2lkLXRpY2tldHMlMkY=' /></form><a href='javascript:void()' onclick='form_outlink2.submit();return false;' >Cheap The Medic Droid tickets</a></strong>
+        Find Cheap The Medic Droid tickets online at Ticketsnow.com!<br />
+        <a target="_blank" href="javascript:void()" onClick="form_outlink2.submit();return false;"><img alt="Ticketsnow" width="92" height="42" src="/images/brokers/ticketsnow.gif" /></a></div>
+        
+        <div class="panel" align="center">
+        <strong><form target='_blank' name='form_outlink3' action='/outlink.php' method='post'><input type='hidden' name='link' value='aHR0cDovL3d3dy5rcXp5ZmouY29tL2NsaWNrLTE2OTEwNjYtMTAzOTE2MjY/dXJsPWh0dHAlM0ElMkYlMkZ3d3cucmF6b3JnYXRvci5jb20lMkZ0aWNrZXRzJTJGY29uY2VydHMlMkZ0aGUtbWVkaWMtZHJvaWQtdGlja2V0cyUyRg==' /></form><a href='javascript:void()' onclick='form_outlink3.submit();return false;' >Premium The Medic Droid tickets</a></strong>
+        Find premium The Medic Droid tickets at Razorgator.com!<br />
+         <a target="_blank" href="javascript:void()" onClick="form_outlink3.submit();return false;"><img alt="Razorgator" width="92" height="42" src="/images/brokers/razorgator.gif" /></a></div>
+        
+        <div class="panel" align="center">
+        <strong><a target='_blank' href='http://www.ticketsinventory.com/concert/the-medic-droid-tickets/' title="The Medic Droid tickets">The Medic Droid tickets</a></strong>
+        Get your The Medic Droid tickets now at Ticketsinventory.com!<br />
+        <form target='_blank' name='form_outlink4' action='/outlink.php' method='post'><input type='hidden' name='link' value="aHR0cDovL3d3dy50aWNrZXRzaW52ZW50b3J5LmNvbS9jb25jZXJ0L3RoZS1tZWRpYy1kcm9pZC10aWNrZXRzLw==" /></form><a href='javascript:void()' onclick='form_outlink4.submit();return false;'><img alt="Ticketsinventory" width="92" height="42" src="/images/brokers/ticketsinventory.gif" /></a></div>
+    </div>
+</div>
+</div>
+<script type="text/javascript" src="/js/cycle.js"></script>
+<script type="text/javascript">
+$(function() {
+    var $arr = new Array();
+    var $hei =0;
+    $(".belt").each(function(i) { 
+        $hei = $(".panel:eq("+i+")", this).innerHeight();
+        $arr.push($hei);
+    });
+        $arr.sort();
+        var $he = $arr[0] + 15;
+    $("#a").css({ height: $he+'px' });
+    
+    $('#a').cycle({ 
+        fx: 'scrollRight'
+    });
+});
+</script>
+        
+        <div id="newsletter" class="normalbloc" align="center">
+<div><img src="/images/newsletter_newhead.png" width="246" height="125" alt="Join Our Newsletter" /></div>
+    <div id="newsdiv">
+        <div id="dvnew"><input name="" id="chnews" value="Enter an email adress" onfocus="javascript:if(this.value == 'Enter an email adress'){this.value='';}" onblur="javascript:if(this.value == ''){this.value = 'Enter an email adress';}" /></div>                
+        <img src="/images/btn_join_now.png" width="113" height="38" onclick="submit_newsletter('','');" />
+    </div>
+    <div id="error_news">&nbsp;</div>
+</div><!-- ID@newsletter --><div id="testimonials">
+    <div><img src="/images/top_whatsay.png" width="248" height="52" alt="What They Say About us?" title="What They Say About us?" /></div>
+    <div id="st">
+        <div id="testis">
+            <img src="/images/testi_1.gif" width="230" height="150" alt="Testimonials" />
+            <img src="/images/testi_2.gif" width="230" height="150" alt="Testimonials" />
+            <img src="/images/testi_3.gif" width="230" height="150" alt="Testimonials" />
+        </div>
+    </div>
+    <div><img src="/images/bot_footerfeatured.png" width="248" height="16" alt=""></div>
+</div><!-- ID@testimonials -->
+
+<script type="text/javascript" src="/js/jquery.cycle.all.min.js"></script>
+<script type="text/javascript">
+	$(function() { $('#testis').cycle({ fx: 'scrollRight' }); });
+</script>    </div><!-- ID@filters -->
+</div><!-- ID@sidebar -->    <div class="clear"></div>
+                <div id="for_more_info" class="infotext">
+        <strong>More about The Medic Droid</strong>
+        <div class="bloc">
+            <div class="b8">
+    <img src="/images/performers/concerts/the-medic-droid.jpg" alt="The Medic Droid" width="340" height="227" align="right" class="img_text" />                    <div id="tg_cnt_div1"></div>
+                    <script type="text/javascript">chpos("src_cnt_div1","tg_cnt_div1");</script>
+                                    <div id="tg_cnt_div2"></div>
+                    <script type="text/javascript">chpos("src_cnt_div2","tg_cnt_div2");</script>
+                                    <div id="tg_cnt_div3"></div>
+                    <script type="text/javascript">chpos("src_cnt_div3","tg_cnt_div3");</script>
+                                <div class="clear"></div>
+            </div><!-- CLASS@b8 -->
+        </div><!-- CLASS@bloc -->
+    </div><!-- CLASS@for_more_info -->
+
+</div><!-- CLASS@p14 -->
+
+</div><!-- ID@body -->
+
+<div id="footer">
+    <h4>Top Categories</h4>
+    <ul>
+    	                <li><a href="http://www.ticketwood.com/concerts/" title="Concerts">Concerts</a></li>	 	
+                <li><a href="http://www.ticketwood.com/theater/" title="Arts &amp; Theater">Arts &amp; Theater</a></li>
+                <li><a href="http://www.ticketwood.com/sports/" title="Sports">Sports</a></li>
+                <li><a href="http://www.ticketwood.com/nfl/" title="NFL">NFL</a></li>
+                <li><a href="http://www.ticketwood.com/nba/" title="NBA">NBA</a></li>
+                <li><a href="http://www.ticketwood.com/mlb/" title="MLB">MLB</a></li>
+                <li><a href="http://www.ticketwood.com/nhl/" title="NHL">NHL</a></li>
+                <li><a href="http://www.ticketwood.com/mls/" title="MLS">MLS</a></li>
+                <li><a href="http://www.ticketwood.com/concert-tickets/" title="Concert Ticket">Concert Tickets</a></li>
+                <li><a href="http://www.ticketwood.com/cities/" title="Cities">Cities</a></li>	
+                <li><a href="http://www.ticketwood.com/venues/" title="Venues">Venues</a></li>
+            </ul>
+    <br />
+    <h4>Sports Categories</h4>
+    <ul>
+    	                <li><a href="http://www.ticketwood.com/nascar/" title="NASCAR">NASCAR</a></li>
+                <li><a href="http://www.ticketwood.com/tennis/" title="Tennis">Tennis</a></li>
+                <li><a href="http://www.ticketwood.com/wwe-wrestling/" title="WWE">WWE</a></li>
+                <li><a href="http://www.ticketwood.com/rodeo/" title="Rodeo">Rodeo</a></li>
+                <li><a href="http://www.ticketwood.com/pga/" title="Golf">Golf</a></li>
+                <li><a href="http://www.ticketwood.com/ncaa/" title="NCAA">NCAA</a></li>
+                <li><a href="http://www.ticketwood.com/college-football/" title="College football">College football</a></li>
+                <li><a href="http://www.ticketwood.com/college-basketball/" title="College baseketball">College baseketball</a></li>
+                <li><a href="http://www.ticketwood.com/college-baseball/" title="College Baseball">College Baseball</a></li>
+                <li><a href="http://www.ticketwood.com/college-hockey/" title="College Hockey">College Hockey</a></li>
+                <li><a href="http://www.ticketwood.com/olympic-sports/" title="Olympics">Olympics</a></li>
+                <li><a href="http://www.ticketwood.com/wnba/" title="WNBA">WNBA</a></li>
+                <li><a href="http://www.ticketwood.com/ahl/" title="AHL">AHL</a></li>
+                <li><a href="http://www.ticketwood.com/arena-football/" title="Arena Football">Arena Football</a></li>
+            </ul>
+    <br />
+    <h4>User Info  /  Help &amp; Support</h4>
+    <ul>
+		                <li><a href="http://www.ticketwood.com/" title="Home">Home</a></li>
+                <li><a href="http://www.ticketwood.com/aboutus.php" title="About us">About us</a></li>
+                <li><a href="http://www.ticketwood.com/blog/" title="Ticketwood Blog">Ticketwood Blog</a></li>
+                <li><a href="http://www.ticketwood.com/feedback.php" title="Feedback">Feedback</a></li>
+                <li><a href="http://www.ticketwood.com/privacy.php" title="Privacy">Privacy</a></li>
+                <li><a href="http://www.ticketwood.com/help.php" title="Help">Help</a></li>
+                <li><a href="http://www.ticketwood.com/advertise.php" title="Advertise">Advertise</a></li>
+                <li><a href="http://www.ticketwood.com/affiliates.php" title="Affiliates">Affiliates</a></li>
+                <li><a href="http://www.ticketwood.com/brokers/" title="Brokers">Brokers</a></li>
+                <li><a href="http://www.ticketwood.com/sitemap1.php" title="Sitemap1">Sitemap1</a></li>
+                <li><a href="http://www.ticketwood.com/sitemap1.php" title="Sitemap2">Sitemap2</a></li>
+                <li><a href="http://www.ticketwood.com/technology.php" title="Technology &amp; security">Technology &amp; security</a></li>
+                <li><a href="http://www.ticketwood.com/link-to-us.php" title="Link-to-us">Link-to-us</a></li>
+                <li><a href="http://www.ticketwood.com/faq.php" title="Faq">Faq</a></li>
+                <li class="last"><a href="http://www.ticketwood.com/jobs.php" title="Jobs &amp; careers">Jobs &amp; careers</a></li> 
+		    </ul>
+</div><!-- ID@footer -->
+<div class="rndfoo" align="left"><img src="/images/rnd_foo_left.gif" alt="" width="6" height="5" /></div>
+<div id="copyright" align="left">
+    <img src="/images/ticketwood_logo_white.png" alt="Ticketwood" title="Ticketwood" width="143" height="40" class="right" />
+    <p class="left">&copy; 2012 Ticketwood.com All rights reserved.<br /> Ticketwood.com is powered by Ticketwood technology, which is owned and operated by Ticketwood.
+    <div class="clear"></div>
+</div>
+
+</div><!-- CLASS@w -->
+</div><!-- ID@website -->
+<script type="text/javascript">
+    $(function() {
+        var b = $("#body").innerHeight();
+        $("#abso").css({ height: b+"px" });
+        $("#all_reviews").click(function() { $("#abso").css({ 'height': "100%", 'background-color': "transparent" }); });
+    });
+    
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-94018-2']);
+    _gaq.push(['_trackPageview']);
+    
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+    
+</script>
+</body>
+</html>

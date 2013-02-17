@@ -1,0 +1,986 @@
+
+<!-- Using Beliefnet.Web.UI.Site.Layouts.Main -->
+<!-- Browser= IE -->
+<!-- MajorVersion= 9 -->
+<!-- Beliefnet.Web.UI.Site.Layouts.Main= Setting mobile visibility -->
+<!-- layout= layoutf -->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US" xmlns:og="http://ogp.me/ns#"
+xmlns:fb="http://www.facebook.com/2008/fbml">
+<head>   
+
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    
+    <!--Begin OAS Setup -->
+<script type="text/javascript">
+    if (typeof console == "undefined" || !console) {
+	    console = {};
+	    console.log = function (obj) {}
+    } 
+    if (typeof console.warn == "undefined" || !console.warn) {
+	    console.warn = console.log;
+    }
+    if (typeof console.debug == "undefined" || !console.debug) {
+	    console.debug = console.log;
+    }
+</script>
+<script type="text/javascript" src="http://oascentral.beliefnet.com/Scripts/oas_analytics.js"></script>
+<script type="text/javascript">
+    if (typeof OAS == 'undefined' || !OAS) var OAS = {}; 
+    (function() {
+	    OAS.adstack = [];
+
+        OAS.config = {
+    	    url: 	  "http://oascentral.beliefnet.com/RealMedia/ads/",
+            sitepage: "beliefnet.com/Health/index",
+            listpos:  "Top,Left1,Left2,Middle1,Middle2,Right,Right2,Right2,x01,Bottom",
+            rns: 	  (Math.random() + "").substring(2, 11),
+            target:   "",
+   		    taxonomy: "tags=health&tags=home&tags=b9e77eea",
+    	    query:    ""
+        }
+
+        // add taxonomy to query string for search targeting
+        OAS.config.query == '' ? OAS.config.query += OAS.config.taxonomy : OAS.config.query += "&" + OAS.config.taxonomy;
+
+        // update query string
+        OAS.config.query == '' ? OAS.config.query += 'XE' + '&' + OAS.config.taxonomy + OAS_rdl + "&if_nt_CookieAccept=" + OAS_CA + "&XE" : OAS.config.query += '&XE' + '&' + OAS.config.taxonomy + OAS_rdl + "&if_nt_CookieAccept=" + OAS_CA + '&XE';
+
+        var scripttag = "<scr" + "ipt type=\"text/javascript\" src=\x22" + OAS.config.url + 'adstream_mjx.ads/' + OAS.config.sitepage + '/1' + OAS.config.rns + '@' + OAS.config.listpos + '?' + OAS.config.query + "\x22><\/scri" + "pt>"
+		document.write(scripttag);
+
+        OAS.Ad = function(pos) {
+            if (typeof OAS_RICH == "undefined" || !OAS_RICH) {
+                var atag = "&lt;a href=\x22" + OAS.config.url + 'click_nx.ads/' + OAS.config.sitepage + '/1' + OAS.config.rns + '@' + OAS.config.listpos + '!' + pos + '?' + OAS.config.query + "\x22 target=" + OAS.config.target + ">"
+    		    var imgtag = "&lt;img src=\x22" + OAS.config.url 
+    		                + 'adstream_nx.ads/' + OAS.config.sitepage 
+    		                + '/1' + OAS.config.rns 
+    		                + '@' + OAS.config.listpos 
+    		                + '!' + pos 
+    		                + '?' + OAS.config.query 
+    		                + "\x22 border=\"0\" />&lt;/a>"
+    		    document.write(atag);
+    		    document.write(imgtag);
+            } else {
+        	    OAS_RICH(pos);
+            }
+    		
+		    OAS.adstack.push(pos);
+	    }
+    	
+	    console.log(OAS);
+    })();
+</script>
+<!-- End OAS Setup -->
+    
+    <!-- Begin comScore Tag -->
+    <script type="text/javascript">
+      var _comscore = _comscore || [];
+      _comscore.push({ c1: "2", c2: "8428430" });
+      (function() {
+        var s = document.createElement("script"), el = document.getElementsByTagName("script")[0]; s.async = true;
+        s.src = (document.location.protocol == "https:" ? "https://sb" : "http://b") + ".scorecardresearch.com/beacon.js";
+        el.parentNode.insertBefore(s, el);
+      })();
+    </script>    
+    <!-- End comScore Tag -->
+
+    <script type="text/javascript">
+    var Carousels = {
+        carouselsCollection : new Array(),
+        carouselsDisplayCollection : new Array(),
+
+        Add : function(carouselContainerId, itemsToDisplay){
+            Carousels.carouselsCollection[Carousels.carouselsCollection.length] = carouselContainerId;
+            Carousels.carouselsDisplayCollection[Carousels.carouselsDisplayCollection.length] = itemsToDisplay;
+        },
+        
+        GetAllContainersIds : function(){
+            return Carousels.carouselsCollection;
+        },
+        
+        GetAllDisplays : function(){
+            return Carousels.carouselsDisplayCollection;
+        }
+    };
+
+    iFrameSource ="";
+    var shareURL = "http%3a%2f%2fwww.beliefnet.com%2fHealth%2findex.aspx";
+	var shareTitle = "";
+	itemId = "b9e77eea-6492-43bb-a70b-5fcb3261ebeb";
+	TheFooterIsGoingToBeShown = false;	
+	NewsletterModalOverlayOfferTable = null;
+    
+    function EmailTextBoxClick()
+    {
+        var email= document.getElementsByName("email");       
+        if(email[0].value=="enter email address *")
+        {
+            email[0].value="";
+        }       
+    }
+    
+    Function.prototype.defaults = function()
+    {
+        var _f = this;
+        var _a = Array(_f.length-arguments.length).concat(Array.prototype.slice.apply(arguments));
+        return function()
+        {
+            return _f.apply(_f, Array.prototype.slice.apply(arguments).concat(
+                _a.slice(arguments.length, _a.length)));
+        }
+    }
+    </script>
+
+    <!-- is using Sitemain -->
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="Copyright" content="" />
+    <!--// See implementation in /controls/Modules/Reading.ascx.cs //-->
+    <meta name="description" content="Get healthy now! Beliefnet provides the latest in health news and tips to inspire healthy living. Start searching now for the latest on diet, exercise and more!" /><meta name="sailthru.date" content="Tue, 23 Oct 2012 18:50:23 -0400" /><meta name="sailthru.title" content=" " /><meta name="sailthru.tags" content=" " /><meta name="sailthru.image.full" content="http://www.beliefnet.com/~/media/5F9A77E1AAC041CAB77AB9111ABD426A.ashx?h=400&amp;w=300&amp;format=png&amp;bg=00000000" /><meta name="sailthru.image.thumb" content="http://www.beliefnet.com/~/media/5F9A77E1AAC041CAB77AB9111ABD426A.ashx?h=50&amp;w=50&amp;format=png&amp;bg=00000000" />
+
+    <meta name="keywords" content="" />
+    
+    <meta name="robots" content="noodp,noydir" />
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=7" />
+    <meta http-equiv="imagetoolbar" content="false" />
+    <meta name="MSSmartTagsPreventParsing" content="true" />
+    <title>
+        Health| Women's Health| Emotional Health | Physical Health | Diet and Weight Loss Tips - Beliefnet.com</title>
+    <link rel="stylesheet" type="text/css" href="/Includes/CssBin/NewsletterFooter.css?_r=129961066209406473"
+        media="all" />
+    <link rel="stylesheet" type="text/css" href="/Includes/CssBin/SiteMain.css?_r=129961066255812129"
+        media="all" />
+    <link rel="stylesheet" type="text/css" href="/Includes/CssBin/SiteMainRedesign.css?_r=129961066267061985"
+        media="all" />    
+        
+    <link href='http://fonts.googleapis.com/css?family=Overlock:400,700italic,400italic,700' rel='stylesheet' type='text/css'>
+    
+    <!-- begin css includes -->            
+    
+    <!--  end css includes  -->
+    <!-- begin css inline code -->
+    <style type="text/css"></style>
+    <!--  end css inline code  -->
+    <!-- Scripts go down here -->
+    <link rel="canonical" href="http://www.beliefnet.com/Health/index.aspx" />
+    <meta name="aol-te-auth" content="6e5c698f-be93-4d0d-ba67-6d5ea379cfac" />
+    <!--// modal OverLay css //-->
+    <link type="text/css" rel="stylesheet" href="/Includes/CssBin/newsletterMO.css?_r=129961066215343897" />
+    
+
+    
+    
+    <!-- begin javascript includes -->
+    
+    <!--  end javascript includes  -->
+</head>
+<body class="layoutF">
+    <!-- begin tracking pixel for comscore -->
+    <noscript>
+        <img src="http://b.scorecardresearch.com/p?c1=2&c2=8428430&cv=2.0&cj=1" alt="" />
+    </noscript>
+    <!-- end tracking pixel for comscore -->
+    <div id="fb-root"></div>
+    
+    <!-- Begin: PushDownAd-->
+    <div id="ctl00_pushDownAd" style="width: 970px; margin-left: auto; margin-right: auto;
+        display: none; padding-top: 10px;">
+        
+    </div>
+    <!-- End: PushDownAd-->
+
+    <script type="text/javascript">
+        (function(d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+            js.type = "text/javascript";
+            fjs.parentNode.insertBefore(js, fjs);
+        } (document, 'script', 'facebook-jssdk'));
+    </script>
+
+    <div id="SiteHeader" style="background-color: White; background-position: 0 124px;">
+        <!-- Begin: Header Top -->
+        <div id="HeaderTop" >
+            <a id="siteLogo"
+                href="/" title="Beliefnet">Beliefnet</a>
+                <div id="headerTopExtra">
+                    <p>
+                        Advertisement</p>
+                    <script type="text/javascript" language='javascript'>OAS.Ad('Top');</script>
+                </div>
+            
+            
+        </div>
+        <!-- End: Header Top -->
+        <!-- Begin: Header Bottom -->
+        <div id="HeaderBottom">
+            <div class="tabNav">
+                <ul>
+                    <li><a href="http://community.beliefnet.com">community</a></li>
+                    <li><a href="/Blogs/index.aspx">blogs</a></li>
+                    <li><a href="/Video/Index.aspx">video</a></li>
+                    <li><a href="/Newsletter/Signup.aspx">newsletters</a></li>
+                    <li><a href="http://store.inspiredfaith.com">shopping</a></li>
+                    <li><a href="http://www.beliefnet.com/espanol/inicio.aspx">dios es bueno</a></li>
+                    <li><a href="http://www.beliefnetgreetings.com/">send eCards</a></li>
+                </ul>
+                <table id="LoginAndSignUpContainer" border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                        <td width="15" valign="top">
+                            <img src="/Media/redesign/login-left.png" width="15" height="24" alt="" />
+                        </td>
+                        <td class="login">
+                            <span class="loggedInState"><span class="headerTabInfo loggedInState user" id="headerUserInfo"
+                                style="display: none"></span></span><span class="loggedOutState"><a href="https://auth.beliefnet.com/Users/Login">
+                                    <em>Log in</em></a> <span class="lightVerticalBar">| </span><a href="https://auth.beliefnet.com/Users/Registration">
+                                        <em>Sign up</em></a> </span>
+                        </td>
+                        <td width="15" valign="top">
+                            <img src="/Media/redesign/login-right.png" width="15" height="24" alt="" />
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="mainNav">
+                <div class="navContainer">
+                    <ul>
+                        
+<li><a href="/">Home</a>
+
+    
+    
+</li>
+<li><a href="/Faiths/index.aspx">Faiths &amp; Prayer</a>
+
+    <ul class="subnav"><li class="first"><a href="/iLoveJesus/index.aspx" title="I Love Jesus Online" target="_self">I Love Jesus Online</a></li><li><a href="/Entertainment/Quizzes/BeliefOMatic.aspx" title="Belief-o-Matic" target="_self">Belief-o-Matic</a></li><li><a href="/Faiths/Faith-and-Inspiration-Leaders/index.aspx" title="Faith Leaders" target="_self">Faith Leaders</a></li><li><a href="/Faiths/Prayer/index.aspx" title="Prayer" target="_self">Prayer</a></li><li><a href="/Faiths/Christianity/index.aspx" title="Christianity" target="_self">Christianity</a></li><li><a href="/Faiths/Catholic/Index.aspx" title="Catholic" target="_self">Catholic</a></li><li><a href="/Prayables/index.aspx" title="Prayables" target="_self">Prayables</a></li><li><a href="/Faiths/Buddhism/index.aspx" title="Buddhism" target="_self">Buddhism</a></li><li><a href="/Faiths/Judaism/index.aspx" title="Judaism" target="_self">Judaism</a></li><li><a href="/Faiths/Islam/index.aspx" title="Islam" target="_self">Islam</a></li><li><a href="/Faiths/Hinduism/index.aspx" title="Hinduism" target="_self">Hinduism</a></li><li><a href="/Faiths/index_old.aspx" title="More Faiths" target="_self">More Faiths</a></li></ul>
+    
+</li>
+<li><a href="/Inspiration/index.aspx">Inspiration</a>
+
+    <ul class="subnav"><li class="first"><a href="/Inspiration/Angels/index.aspx" title="Angels" target="_self">Angels</a></li><li><a href="/Inspiration/Quote-Search.aspx" title="Inspirational Quotes Search" target="_self">Inspirational Quotes Search</a></li><li><a href="/Inspiration/MIOM/index.aspx" title="Most Inspiring of the Month" target="_self">Most Inspiring of the Month</a></li><li><a href="/Entertainment/Books/Top-100-Most-Inspirational-Books/Top-100-Inspirational-Books-100-81.aspx" title="Inspirational Books" target="_self">Inspirational Books</a></li><li><a href="/Inspiration/Cause-of-the-Month/index.aspx" title="Cause of the Month" target="_self">Cause of the Month</a></li></ul>
+    
+</li>
+<li class="activeNav"><a href="/Health.aspx">Health</a>
+
+    <ul class="subnav"><li class="first"><a href="/Health/Healthy-Living/index.aspx" title="Healthy Living" target="_self">Healthy Living</a></li><li><a href="/Health/Emotional-Health/index.aspx" title="Emotional Health" target="_self">Emotional Health</a></li><li><a href="/Health/Physical-Health/index.aspx" title="Physical Health" target="_self">Physical Health</a></li><li><a href="/Health/Womens-Health/index.aspx" title="Health Support for Women" target="_self">Health Support for Women</a></li><li><a href="/Video/Health-Videos.aspx" title="Health Videos" target="_self">Health Videos</a></li><li><a href="/Health/Weight-Loss/index.aspx" title="Weight Loss" target="_self">Weight Loss</a></li><li><a href="/Health/Health-Support/index.aspx" title="Health Support" target="_self">Health Support</a></li></ul>
+    
+</li>
+<li><a href="/Entertainment/index.aspx">Entertainment</a>
+
+    <ul class="subnav"><li class="first"><a href="/Celebrity-Faith-Database/index.aspx" title="Celebrity Faith Database" target="_self">Celebrity Faith Database</a></li><li><a href="/Entertainment/Book-Corner/index.aspx" title="Book Corner" target="_self">Book Corner</a></li><li><a href="/Entertainment/Movie-Corner/index.aspx" title="Movie Corner" target="_self">Movie Corner</a></li><li><a href="/Entertainment/Music/index.aspx" title="Music" target="_self">Music</a></li><li><a href="/Entertainment/Movies/index.aspx" title="Movies and TV" target="_self">Movies and TV</a></li><li><a href="/Entertainment/Quizzes/index.aspx" title="Quizzes" target="_self">Quizzes</a></li><li><a href="/Entertainment/Travel/index.aspx" title="Travel" target="_self">Travel</a></li><li><a href="/Entertainment/Sports.aspx" title="Sports" target="_self">Sports</a></li><li><a href="/Entertainment/Joke-of-the-Day/Daily-Joke.aspx" title="Jokes" target="_self">Jokes</a></li><li><a href="/Entertainment/Daily-Horoscope.aspx" title="Daily Horoscope" target="_self">Daily Horoscope</a></li></ul>
+    
+</li>
+<li><a href="/Wellness/Index.aspx">Wellness</a>
+
+    <ul class="subnav"><li class="first"><a href="/Wellness/Meditation/index.aspx" title="Meditation" target="_self">Meditation</a></li><li><a href="/Wellness/Yoga/index.aspx" title="Yoga" target="_self">Yoga</a></li><li><a href="/Wellness/Environment/index.aspx" title="Environment" target="_self">Environment</a></li><li><a href="/Wellness/Personal-Growth/index.aspx" title="Personal Growth" target="_self">Personal Growth</a></li></ul>
+    
+</li>
+<li><a href="/Love-Family/index.aspx">Love &amp; Family</a>
+
+    <ul class="subnav"><li class="first"><a href="/Love-Family/Relationships/index.aspx" title="Relationships" target="_self">Relationships</a></li><li><a href="/Love-Family/Parenting/index.aspx" title="Parenting" target="_self">Parenting</a></li><li><a href="/Love-Family/Teens/index.aspx" title="Teens" target="_self">Teens</a></li><li><a href="/Love-Family/Caregiving/index.aspx" title="Caregiving" target="_self">Caregiving</a></li><li><a href="http://features.beliefnet.com/heloisehints/" title="Heloise Hints" target="_self">Heloise Hints</a></li><li><a href="/Love-Family/Recipes/index.aspx" title="Recipes" target="_self">Recipes</a></li><li><a href="/Love-Family/Pets/index.aspx" title="Pets" target="_self">Pets</a></li><li><a href="/Love-Family/Holidays/index.aspx" title="Holidays" target="_self">Holidays</a></li><li><a href="/Love-Family/Life-Events/index.aspx" title="Life Events" target="_self">Life Events</a></li></ul>
+    
+</li>
+<li><a href="/News/index.aspx">News</a>
+
+    <ul class="subnav"><li class="first"><a href="/News/ElectionCenter/index.aspx" title="Election Center" target="_self">Election Center</a></li><li><a href="/News/ElectionCenter/PoliticOMatic.aspx" title="Politic-o-Matic" target="_self">Politic-o-Matic</a></li></ul>
+    
+</li>
+                    </ul>
+                    <div id="searchwrapper">
+                        <form name="searchForm" method="get" action="/search/site.aspx">
+                        <input type="text" id="headerSearchField" class="searchbox" name="q" value="Search Beliefnet"
+                            onclick="this.value=''" size="30" />
+                        <input type="image" src="/Media/redesign/search-btn-clear.png" class="searchbox_submit"
+                            value="" />
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End: Header Bottom-->
+    </div>
+    
+    <!--  Begin: Push Links -->
+    
+    <!--  End: Push Links -->
+    
+    
+    <!-- Begin Beliefnet.Web.UI.Site.Layouts.Main -->
+    
+    <style type="text/css">
+    
+        .MainLayoutBannerHeader
+        {
+            background: url() repeat-x;
+            height: 135px;
+            width: 100%;
+        }
+    
+        .MainLayoutBannerFooter
+        {
+            background: url() repeat-x;
+            height: 135px;
+            width: 100%;
+        }
+    </style>
+    
+    
+    
+    <div id="wrapper" class="clear wrapper-main">
+        
+<div id="breadcrumbs">
+	<div class="home">
+		<div class="leftimg"></div>
+		<a href="/">Home</a>
+		<div class="rightimg"></div>
+	</div>
+	
+	<div class='active'>
+	<div class='leftimg'></div>
+	<span>Health</span>
+	<div class='rightimg'></div>
+</div>
+
+</div>
+
+        <div id="navAdCol">
+            
+
+<div id="subNavModule">
+    <div class="clean">
+        <h2>
+	Health
+</h2>
+        
+        <ul class="subNavLevel1">
+            <li><a href="/Health/Womens-Health/index.aspx" title="Womens Health">Womens Health</a></li>
+<li class="hasSub"><a href="/Health/Emotional-Health/index.aspx" title="Emotional Health">Emotional Health</a></li>
+<li class="hasSub"><a href="/Health/Health-Support/index.aspx" title="Health Support">Health Support</a></li>
+<li class="hasSub"><a href="/Health/Physical-Health/index.aspx" title="Physical Health">Physical Health</a></li>
+<li class="hasSub"><a href="/Health/Weight-Loss/index.aspx" title="Weight Loss">Weight Loss</a></li>
+
+        </ul>
+    </div>
+</div>
+<div class="OASAdModule"><p style='text-align:right;font-size:11px;color:#CCC;margin-bottom:0;'>Advertisement</p><script type="text/javascript" language='javascript'>OAS.Ad('Left1');</script></div>
+
+<div id="sponsor_googlead_1" style=" padding-top:15px; width:120px;height:240px;"> 
+              </div>
+<div class="OASAdModule"><p style='text-align:right;font-size:11px;color:#CCC;margin-bottom:0;'>Advertisement</p><script type="text/javascript" language='javascript'>OAS.Ad('Left2');</script></div>
+
+        </div>
+        <div id="mainContentColWrap">
+            <h1 class="genericPageTitle"></h1>
+            <div id="mainContentColExtra" class="Rail2">
+                
+                
+
+
+
+<!-- begin Beliefnet.Web.UI.Site.Controls.Heads.Feature.MediumHtmlLeadModule -->
+<div id="lead-medium">
+    <div id="medium-slider-wrapper">   
+        <div id="medium-slider" class="nivoSlider">
+            
+                    <a href="/Health/Physical-Health/Breast-Cancer/Quotes-to-Overcome-Lifes-Struggles.aspx"><img src="/~/media/C5B04F77BD29462E8A288A7A253B1E01.ashx" alt="Quotes Life Struggles" border="0" width="490" height="250" title="#htmlcaption1" class="bn-lazy-load" /></a>
+                
+                    <a href="/Health/Womens-Health/Galleries/Ways-To-Support-Breast-Cancer-Awareness.aspx"><img src="/~/media/605473A0308D41B0B045A692F2C66DD0.ashx" alt="Breast Cancer" border="0" width="490" height="250" title="#htmlcaption2" class="bn-lazy-load" /></a>
+                
+                    <a href="/Health/Emotional-Health/Steps-to-Finally-Stop-Procrastinating.aspx"><img src="/~/media/1C14F1180B6D42E39A46D0E76D983A4B.ashx" alt="Tips to Stop Procrastinating" border="0" width="490" height="250" title="#htmlcaption3" class="bn-lazy-load" /></a>
+                
+                    <a href="/Health/Healthy-Living/5-Healthy-Recipes-Using-Pumpkins.aspx"><img src="/~/media/7685103C1F434BB185EF514758D950D9.ashx" alt="Pumpkin recipes" border="0" width="490" height="250" title="#htmlcaption4" class="bn-lazy-load" /></a>
+                  
+        </div>
+    </div>
+    
+            <div class="nivo-html-caption" id="htmlcaption1">   
+                <div class="title"><a href="/Health/Physical-Health/Breast-Cancer/Quotes-to-Overcome-Lifes-Struggles.aspx">Quotes to Overcome Life Struggles</a></div>
+                <div class="content">Powerful words to help people overcome hard times.&nbsp;<a href="/Health/Physical-Health/Breast-Cancer/Quotes-to-Overcome-Lifes-Struggles.aspx">read more</a>&nbsp;<span class="chevron">»</span></div>
+            </div>
+        
+            <div class="nivo-html-caption" id="htmlcaption2">   
+                <div class="title"><a href="/Health/Womens-Health/Galleries/Ways-To-Support-Breast-Cancer-Awareness.aspx">Ways to Support Breast Cancer</a></div>
+                <div class="content">There are several ways that everyone can bring awareness to breast cancer.&nbsp;<a href="/Health/Womens-Health/Galleries/Ways-To-Support-Breast-Cancer-Awareness.aspx">read more</a>&nbsp;<span class="chevron">»</span></div>
+            </div>
+        
+            <div class="nivo-html-caption" id="htmlcaption3">   
+                <div class="title"><a href="/Health/Emotional-Health/Steps-to-Finally-Stop-Procrastinating.aspx">Tips to Stop Procrastinating</a></div>
+                <div class="content">At some point in their lives, everyone puts off doing something. Fortunately, you can overcome your procrastinating ways and finally get things done. Here are eight suggestions.&nbsp;<a href="/Health/Emotional-Health/Steps-to-Finally-Stop-Procrastinating.aspx">read more</a>&nbsp;<span class="chevron">»</span></div>
+            </div>
+        
+            <div class="nivo-html-caption" id="htmlcaption4">   
+                <div class="title"><a href="/Health/Healthy-Living/5-Healthy-Recipes-Using-Pumpkins.aspx">5 Healthy Pumpkin Recipes</a></div>
+                <div class="content">Get into the fall spirit and check out these recipes that include pumpkin as their main ingredient.&nbsp;<a href="/Health/Healthy-Living/5-Healthy-Recipes-Using-Pumpkins.aspx">read more</a>&nbsp;<span class="chevron">»</span></div>
+            </div>
+           
+</div>
+<hr class="dotted" />
+<!-- end Beliefnet.Web.UI.Site.Controls.Heads.Feature.MediumHtmlLeadModule -->
+   
+   
+
+
+
+
+<div class="blueBar-12">
+    <div class="blueBar-12-Fill">Quizzes For Your Health</div>
+</div>
+
+<!-- start image text vert manual module -->
+<div class="moduleWrap clear">
+    
+    <div class="moduleContentOuter">
+        <div class="moduleContentInner">
+            <ul class="horizContainer">
+			
+			    
+
+<div class="horizItem ">
+	<div><a href="http://www.beliefnet.com/Health/Quiz/Famous-Health-Quotes.aspx" target="_self"><img src="/~/media/0F9884B810C64AF6AA84012D0A607EBC.ashx?w=93&h=70" width="93" height="70" alt="" /></a></div>
+    <div><a href="http://www.beliefnet.com/Health/Quiz/Famous-Health-Quotes.aspx" target="_self">Famous Health Quotes</a></div>
+	<div><p>Test your knowledge of who said the world’s best-known nuggets of health wisdom.</p></div>
+</div>
+
+<div class="horizItem ">
+	<div><a href="http://www.beliefnet.com/Health/Quiz/Is-Your-Heart-at-Risk.aspx" target="_self"><img src="/~/media/2328293A28A543138F46109193226F4D.ashx?w=93&h=70" width="93" height="70" alt="" /></a></div>
+    <div><a href="http://www.beliefnet.com/Health/Quiz/Is-Your-Heart-at-Risk.aspx" target="_self">Is Your Heart At Risk?</a></div>
+	<div><p>Gauge whether your level of cynicism puts you at risk.</p></div>
+</div>
+
+<div class="horizItem ">
+	<div><a href="http://www.beliefnet.com/Inspiration/Quiz/How-Fearless-Are-You.aspx" target="_self"><img src="/~/media/A801EA9590274FF5923415960E8468B4.ashx?w=93&h=70" width="93" height="70" alt="" /></a></div>
+    <div><a href="http://www.beliefnet.com/Inspiration/Quiz/How-Fearless-Are-You.aspx" target="_self">How Fearless Are You? </a></div>
+	<div><p>Do you make choices to do what's right even though the choice may cost you?</p></div>
+</div>
+
+<div class="horizItem ">
+	<div><a href="http://www.beliefnet.com/Wellness/Quiz/How-In-the-Moment-Are-You.aspx" target="_self"><img src="/~/media/0F9884B810C64AF6AA84012D0A607EBC.ashx?w=93&h=70" width="93" height="70" alt="" /></a></div>
+    <div><a href="http://www.beliefnet.com/Wellness/Quiz/How-In-the-Moment-Are-You.aspx" target="_self">How In the Moment Are You?</a></div>
+	<div><p>How "here, now" are you? Take the quiz to find out.</p></div>
+</div>
+
+			</ul>
+            
+              
+                
+        </div>
+    </div>
+</div>
+<!-- end image text vert manual module --><div class="OASAdModule"><p style='text-align:right;font-size:11px;color:#CCC;margin-bottom:0;'>Advertisement</p><script type="text/javascript" language='javascript'>OAS.Ad('Middle1');</script></div>
+		<hr class="dotted" />
+
+<!-- Begin Beliefnet.Web.UI.Site.Controls.Modules.ImageLinkRepeater -->
+
+<!-- <span id="ctl00_cphMain_phExtra_ctl01_ctl05_lblDebugComments"></span> -->
+
+<span id="ctl00_cphMain_phExtra_ctl01_ctl05_lblOutput"><?xml version="1.0" encoding="utf-16"?><style type="text/css">
+      .grey12-sans  {
+      font-family:Arial, Helvetica, sans-serif;
+      font-size:12px;
+      color:#666666;
+      padding-bottom: 0px;
+      padding-left: 2px;
+      padding-right: 2px;
+      padding-top: 0px;
+      }
+      .grey12-sans a:link  {
+      color:#666666;
+      text-decoration:none;
+      }
+      .grey12-sans a:visited  {
+      color:#666666;
+      text-decoration:none;
+      }
+      .grey12-sans a:hover  {
+      color:#FF9933;
+      text-decoration:none;
+      }
+      .grey12-sans a:active  {
+      color:#023D89;
+      }
+
+      .blue18-serif  {
+      font-family: Georgia, "Times New Roman", Times, serif;
+      font-size:18px;
+      color:#023D89;
+
+      .hdivDotted {
+      background:url(/media/h-div-dotted.gif) repeat-x;
+      height:5px;
+      margin:3px 0 3px 0;      
+      }
+    </style><table width="100%" border="0" cellspacing="0" cellpadding="2" class="grey12-sans"><tr><td width="50%" valign="top"><a href="/Inspiration/Galleries/Unsinkable-Re-Create-Your-Reality.aspx"><div><div style="width:90%; margin:0px auto !important; text-align:left;"><img style="margin-left: auto; margin-right: auto; display: block;" src="/~/media/C0407F0EE15A45C295400A0C3A9E88CE.ashx" width="212" height="160" border="0" alt="How to Be Unsinkable: Re-Create Your Reality" /><span class="blue18-serif" style="display:block;"><strong>How to Be Unsinkable: Re-Create Your Reality</strong></span>When you change your perception, you can change your life. In this excerpt from the book "Unsinkable",  a...</div></div></a></td><td width="50%" valign="top"><a href="/Inspiration/Galleries/Mustaches-for-Movember.aspx"><div><div style="width:90%; margin:0px auto !important; text-align:left;"><img style="margin-left: auto; margin-right: auto; display: block;" src="/~/media/D239872A0ABC41FD90D0E622A39C5257.ashx" width="212" height="160" border="0" alt="Mustaches for Movember" /><span class="blue18-serif" style="display:block;"><strong>Mustaches for Movember</strong></span>The men of Beliefnet grow mustaches to raise money for cancer research.</div></div></a></td></tr> <tr><td colspan="2"><br /><div class="hdivDotted"></div><br /> </td></tr> <tr><td width="50%" valign="top"><a href="/Inspiration/Galleries/5-Minute-Tips-That-Will-Change-Your-Life.aspx"><div><div style="width:90%; margin:0px auto !important; text-align:left;"><img style="margin-left: auto; margin-right: auto; display: block;" src="/~/media/51E486CAED1B4275868BAC2F71FA3C34.ashx" width="212" height="160" border="0" alt="5 Minute Tips That Will Change Your Life" /><span class="blue18-serif" style="display:block;"><strong>5 Minute Tips That Will Change Your Life</strong></span>Got 5 minutes? Read this. These days we’re all typing away on our laptops and smart phones too busy to no...</div></div></a></td><td width="50%" valign="top"><a href="/Inspiration/Galleries/7-Fun-Ways-to-Welcome-Fall.aspx"><div><div style="width:90%; margin:0px auto !important; text-align:left;"><img style="margin-left: auto; margin-right: auto; display: block;" src="/~/media/24F91772D685409588CFFFB882D65939.ashx" width="212" height="160" border="0" alt="7 Fun Ways to Welcome Fall" /><span class="blue18-serif" style="display:block;"><strong>7 Fun Ways to Welcome Fall</strong></span>Whether you love fall or you’re already missing summer, here are seven ways to enjoy yourself.   </div></div></a></td></tr> <tr><td colspan="2"><br /><div class="hdivDotted"></div><br /> </td></tr> <tr></tr></table></span>
+
+<!-- End Beliefnet.Web.UI.Site.Controls.Modules.ImageLinkRepeater -->
+
+
+<!-- Begin Beliefnet.Web.UI.Site.Controls.Modules.BlogByTagRoundedWide -->
+
+
+<div class="blueBar-12">
+    <div class="blueBar-12-Fill">Meet Our Health Experts</div>
+</div> 
+<div class="moduleLayoutA externalLinksTableModule clear BlogByTag">
+    <div>
+    	<div class="moduleContentInner">
+
+            <div id="BlogByTag">
+              <table border="0" cellpadding="0" cellspacing="0" class="bbt-rounded-module-content-box">
+<tr>
+<td><a href="http://blog.beliefnet.com/beyondblue/2012/11/on-all-saints-day-7-patron-saints-for-healing-and-comfort.html" class="bbt-rounded-blue12-serif"><div class="bbt-rounded-grey19-serif">Beyond Blue<br/></div>
+<span class="bbt-rounded-chevron">» </span>On All Saints Day: 7 Patron Saints for Healing and Comfort</a>
+<div class="bbt-rounded-hdiv"></div>
+</td>
+</tr>
+</table>
+
+            </div>
+            
+            
+            
+                <hr class='dotted' style='margin-bottom:0;'/>
+                <div class="bbt-rounded-readAll-fluid"><a href="/Blogs/indexOld.aspx">see all bloggers</a><span class="bbt-rounded-chevron">»</span></div>
+                <hr class='dotted' style='margin-top:0;'/>
+            
+        </div>
+    </div>
+</div>
+<!-- End Beliefnet.Web.UI.Site.Controls.Modules.BlogByTagRoundedWide --><div class="OASAdModule"><p style='text-align:right;font-size:11px;color:#CCC;margin-bottom:0;'>Advertisement</p><script type="text/javascript" language='javascript'>OAS.Ad('Middle2');</script></div>
+		<div id="conditionCenter">
+<p><span class="title">Diabetes</span><br />Learn how to cope with <span class="title">Diabetes with these tools!</span>&nbsp;</p>
+<p>&nbsp;</p>
+<p><a href="http://www.beliefnet.com/Health/Physical-Health/Diabetes-Management-Center.aspx">read more about diabetes </a><span class="chevron">»</span></p></div>
+
+
+            </div>
+            <div id="mainTripleColWrap">
+                <div id="mainContentCol1" class="Rail1">
+                    <div class="OASAdModule"><p style='text-align:right;font-size:11px;color:#CCC;margin-bottom:0;'>Advertisement</p><script type="text/javascript" language='javascript'>OAS.Ad('Right');</script></div>
+
+<script type="text/javascript" language="javascript">
+    function checkEmail(myForm) {
+        if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(frmNlSignup.newsletter_searchbox.value)) {
+            return (true)
+        }
+        alert("Invalid E-mail Address! Please re-enter.")
+        return (false)
+    }
+</script>
+<form id="frmNlSignup" action="/Handlers/NewsletterSignupModule.aspx" onsubmit="return checkEmail(this);" method="post">
+<input type="hidden" name="MPnewslett44" value="on" />
+<input type="hidden" name="LandingPage" value="/Newsletter/Confirmation/Health-and-Happiness-Confirmation.aspx" />
+<input type="hidden" name="SourceDesc" value="651" />
+
+<table width="306" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td><table width="306" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td><img src="/Media/modules/Newsletter/free-newsletter.png" width="174" height="59" alt="Our Free Newsletter" /></td>
+        <td><img src="/~/media/0104155B53364E318DD10044CDB04790.ashx" alt="" border="0" width="133" height="59" class="bn-lazy-load" /></td>
+      </tr>
+    </table></td>
+  </tr>
+  <tr>
+    <td class="newsletter-mod-body" valign="top">
+        <div id="newsletter-signup-wrapper">
+           
+            <input type="text" id="newsletter_searchbox" name="newsletter_searchbox" value="Enter your email address here" onclick="this.value=''" maxlength="50" />
+            <input type="submit" name="Submit" id="newsletter_searchbox_submit" value="" />  
+           
+        </div>
+    </td>
+  </tr>
+  <tr>
+    <td align="center">
+        <input name="partners" type="hidden" value="on" id="partners"/>
+        <label for="partners" class="partner-mail">Click Sign Up above to start receiving our newsletters, updates and special offers from Beliefnet right away.</label>
+    </td>
+    
+    
+  
+    </tr>
+  <tr>
+    <td align="center"><a href="http://www.beliefnet.com/Newsletter/Signup.aspx">click here to see all of our uplifting newsletters</a> <span class="chevron">»</span></td>
+  </tr>
+</table>
+<p>&nbsp;</p>
+</form>
+<!-- start aggregate most rounded module -->
+<div class="moduleWrap clear" style="border:0">
+    <div class="aggregateRoundedTitleBar">Top Health Features</div>
+    <div class="moduleContentOuter">
+        <div class="moduleContentInner tabModuleGenericRound">
+            <ul class="roundedTabs">
+                <li class="active"><a rel="moduleTabContent1" href="#">Most Emailed</a></li>
+                <li><a rel="moduleTabContent2" href="#">Most Popular</a></li>
+                <li><a rel="moduleTabContent3" href="#">Most Recent</a></li>
+            </ul>
+            <div class="moduleTabContent moduleTabContent1" style="display: inline;">
+                <ul class="bNetModuleList">
+                    
+<li><a href="/Inspiration/Galleries/Unsinkable-Re-Create-Your-Reality.aspx">How to Be Unsinkable: Re-Create Your Reality</a></li>
+
+<li><a href="/Inspiration/Galleries/Top-5-Qualities-of-Good-Political-Leaders.aspx">Top 5 Qualities of Good Political Leaders</a></li>
+
+<li><a href="/Inspiration/Galleries/Mustaches-for-Movember.aspx">Mustaches for Movember</a></li>
+
+<li><a href="/Inspiration/Galleries/5-Minute-Tips-That-Will-Change-Your-Life.aspx">5 Minute Tips That Will Change Your Life</a></li>
+
+<li><a href="/Inspiration/Galleries/5-Bible-Verses-for-Healing.aspx">5 Bible Verses for Healing</a></li>
+
+<li><a href="/Inspiration/Galleries/7-Fun-Ways-to-Welcome-Fall.aspx">7 Fun Ways to Welcome Fall</a></li>
+
+                </ul>
+            </div>
+            <div class="moduleTabContent moduleTabContent2">
+                <ul class="bNetModuleList">
+                    
+<li><a href="/Inspiration/Galleries/5-Bible-Verses-for-Healing.aspx">5 Bible Verses for Healing</a></li>
+
+<li><a href="/Inspiration/Galleries/5-Minute-Tips-That-Will-Change-Your-Life.aspx">5 Minute Tips That Will Change Your Life</a></li>
+
+<li><a href="/Inspiration/Galleries/Unsinkable-Re-Create-Your-Reality.aspx">How to Be Unsinkable: Re-Create Your Reality</a></li>
+
+<li><a href="/Faiths/Christianity/Articles/Daniel-Fast.aspx">The Daniel Fast</a></li>
+
+<li><a href="/Inspiration/Galleries/Top-5-Qualities-of-Good-Political-Leaders.aspx">Top 5 Qualities of Good Political Leaders</a></li>
+
+<li><a href="/Inspiration/Galleries/7-Fun-Ways-to-Welcome-Fall.aspx">7 Fun Ways to Welcome Fall</a></li>
+
+                </ul>
+            </div>
+            <div class="moduleTabContent moduleTabContent3">
+                <ul class="bNetModuleList">
+                    
+<li><a href="/Inspiration/Galleries/Unsinkable-Re-Create-Your-Reality.aspx">How to Be Unsinkable: Re-Create Your Reality</a></li>
+
+<li><a href="/Inspiration/Galleries/Top-5-Qualities-of-Good-Political-Leaders.aspx">Top 5 Qualities of Good Political Leaders</a></li>
+
+<li><a href="/Inspiration/Galleries/Mustaches-for-Movember.aspx">Mustaches for Movember</a></li>
+
+<li><a href="/Inspiration/Galleries/5-Minute-Tips-That-Will-Change-Your-Life.aspx">5 Minute Tips That Will Change Your Life</a></li>
+
+<li><a href="/Inspiration/Galleries/5-Bible-Verses-for-Healing.aspx">5 Bible Verses for Healing</a></li>
+
+<li><a href="/Inspiration/Galleries/7-Fun-Ways-to-Welcome-Fall.aspx">7 Fun Ways to Welcome Fall</a></li>
+
+                </ul>
+            </div>
+            
+            
+            
+        </div>
+    </div>
+</div>
+<!-- end aggregate most rounded module -->
+<div class="OASAdModule"><p style='text-align:right;font-size:11px;color:#CCC;margin-bottom:0;'>Advertisement</p><script type="text/javascript" language='javascript'>OAS.Ad('Right2');</script></div><div class="OASAdModule"><p style='text-align:right;font-size:11px;color:#CCC;margin-bottom:0;'>Advertisement</p><script type="text/javascript" language='javascript'>OAS.Ad('Right2');</script></div><div class="OASAdModule"><script type="text/javascript" language='javascript'>OAS.Ad('x01');</script></div>
+
+                </div>
+                <div id="mainContentCol2" class="HiddenRail">
+                    
+
+                </div>
+                <div id="mainContentCol3" class="HiddenRail">
+                    
+
+                </div>
+                <div id="mainContentCol4" class="HiddenRail">
+                    
+
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    
+    <!-- End Beliefnet.Web.UI.Site.Layouts.Main -->
+
+    <!--  Begin: Rss Feed -->
+    
+    <!--  End: Rss Feed -->
+    <div id="MainFooter">
+        <table width="990" border="0" align="center" cellpadding="0" cellspacing="0" class="content">
+            <tr>
+                
+
+    <td valign="top" class="content" width="210">
+        <p class="title">About Beliefnet</p>
+        <p>Our mission is to help people like you find, and walk, a spiritual path that will bring comfort, hope, clarity, strength, and happiness. <a href="/About-Us/About-Beliefnet.aspx">More about Beliefnet</a>.</p>
+        	  
+    <td valign="top" width="2px" background="/media/redesign/footer/footer-div.gif" style="background-repeat: repeat-x;"></td>
+	
+
+
+     <td valign="top" class="content" width="210">
+        <p class="title">Help</p>
+        <ul class="content">
+	        
+
+
+<li><a href="/Site-Map/Site-Map.aspx">Site Map</a></li>
+
+
+
+<li><a href="/About-Us/Contact-Us.aspx">Contact Us &amp; Feedback</a></li>
+
+
+
+<li><a href="http://dailydeal.beliefnet.com/how">Help with Daily Deal</a></li>
+
+        </ul>
+    <td valign="top" width="2px" background="/media/redesign/footer/footer-div.gif" style="background-repeat: repeat-x;"></td>
+
+
+     <td valign="top" class="content" width="210">
+        <p class="title">Media Kit</p>
+        <ul class="content">
+	        
+
+
+<li><a href="/Online-Media-Kit/Company-Profile.aspx">Home</a></li>
+
+
+
+<li><a href="/Online-Media-Kit/Ad-Specs/index.aspx">Ad Specs</a></li>
+
+
+
+<li><a href="/Online-Media-Kit/Advertising.aspx">Request Advertising Info</a></li>
+
+        </ul>
+    <td valign="top" width="2px" background="/media/redesign/footer/footer-div.gif" style="background-repeat: repeat-x;"></td>
+
+
+     <td valign="top" class="content" width="210">
+        <p class="title">Subscribe</p>
+        <ul class="content">
+	        
+
+
+<li><a href="/Newsletter/Signup.aspx">Newsletters</a></li>
+
+
+
+<li><a href="/Feeds/index.aspx">RSS Feeds*</a></li>
+
+
+
+<li><a href="/About-Us/Facebook.aspx">Facebook</a></li>
+
+
+
+<li><a href="/About-Us/Twitter.aspx">Twitter</a></li>
+
+        </ul>
+    <td valign="top" width="2px" background="/media/redesign/footer/footer-div.gif" style="background-repeat: repeat-x;"></td>
+
+    <td valign="top" class="content" width="210">
+        <p class="title">Legal</p>
+        <p>Copyright © Beliefnet, Inc. and/or its licensors. All rights reserved. Use of this site is subject to <a href="/About-Us/Terms-of-Service.aspx">Terms of Service </a>and to our <a href="/About-Us/Privacy-Policy.aspx">Privacy Policy</a>. Constructed by Beliefnet.</p>
+        	  
+    <td valign="top" width="2px" background="/media/redesign/footer/footer-div.gif" style="background-repeat: repeat-x;"></td>
+	
+            </tr>
+        </table>
+        <table width="728" border="0" align="center" cellpadding="0" cellspacing="0" class="footerAd">
+            <tr>
+                <td>
+                    <div class="footerAd" align="right">
+                        Advertisement<script type="text/javascript" language='javascript'>OAS.Ad('Bottom');</script>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <a id="FooterLogo" href="http://www.beliefnet.com/" title="beliefnet"><span>beliefnet</span></a>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <!-- Begin: Share Box -->
+    <div id="shareBox">
+        <a target="_blank" href="http://digg.com/submit?phase=2&url=http%3a%2f%2fwww.beliefnet.com%2fHealth%2findex.aspx&title=" id="diggLink"><img width="21" height="22" alt="Digg" src="/media/icons/digg_icon.gif"/></a><a target="_blank" href="http://del.icio.us/post?url=http%3a%2f%2fwww.beliefnet.com%2fHealth%2findex.aspx&title=" id="deliciousLink"><img width="22" height="22" alt="Delicious" src="/media/icons/delicious_icon.gif"/></a><a target="_blank" href="http://www.newsvine.com/_wine/save?u=http%3a%2f%2fwww.beliefnet.com%2fHealth%2findex.aspx&h=" id="newsvineLink"><img width="21" height="22" alt="Newsvine" src="/media/icons/newsvine_icon.gif"/></a><a target="_blank" href="http://reddit.com/submit?url=http%3a%2f%2fwww.beliefnet.com%2fHealth%2findex.aspx&title=" id="redditLink"><img width="21" height="22" alt="Reddit" src="/media/icons/reddit_icon.gif"/></a><a target="_blank" href="http://www.stumbleupon.com/submit?url=http%3a%2f%2fwww.beliefnet.com%2fHealth%2findex.aspx&title=" id="stumbleLink"><img width="21" height="22" alt="Stumble" src="/media/icons/stumble_icon.gif"/></a><a target="_blank" href="http://www.technorati.com/faves?add=http%3a%2f%2fwww.beliefnet.com%2fHealth%2findex.aspx" id="technoratiLink"><img width="21" height="22" alt="Technorati" src="/media/icons/technorati_icon.gif"/></a><a target="_blank" href="http://www.facebook.com/sharer.php?u=http%3a%2f%2fwww.beliefnet.com%2fHealth%2findex.aspx&t=" id="facebookLink"><img width="19" height="22" alt="Facebook" src="/media/icons/facebook_icon.gif"/></a>
+    </div>
+    <!-- End: Share Box -->
+    <!-- End: Footer -->
+    <div id="basicModalContent" class="basicModalContent" width="100%" height="100%">
+        <div id="modalOverlayiFrame">
+        </div>
+
+        <script type="text/javascript">
+
+            function addLoadEvent(func) {
+                var oldonload = window.onload;
+                if (typeof window.onload != 'function') {
+                    window.onload = func;
+                } else {
+                    window.onload = function() {
+                        if (oldonload) {
+                            oldonload();
+                        }
+                        func();
+                    }
+                }
+            }
+
+            function closeModalOverlay() {
+                $("#modalOverlay").click();
+                killTheModalOverlay();
+            }
+					
+        </script>
+
+    </div>
+
+    <script type="text/javascript">
+    document.write(unescape("%3Cscript src='/Includes/JsBin/external/ExternalLibraries.js?_r=129961066498621521' type='text/javascript'%3E%3C/script%3E"));
+    </script>
+
+    
+    
+
+    <script type="text/javascript" src="/Includes/JsBin/external/RedesignJs.js?_r=129961066508152649"></script>
+
+    <script type="text/javascript" language="javascript">
+
+    
+    $('#sponsor_googlead_1').html('<iframe src="/doubleclick/IFrameAdSenseWrapper.html?s=4361464877&w=120&h=240" width="120px" height="240px"  allowtransparency="true"  leftmargin="0" topmargin="0" scrolling="no" frameborder="0" marginwidth="0" marginheight="0" hspace="0" vspace="0" border="0" style="margin:0px; padding:0px"></iframe>');
+
+    
+    </script>
+
+    <script type="text/javascript">        
+        document.write(unescape("%3Cscript src='/Includes/JsBin/internal/Internal.js?_r=129961066540808481' type='text/javascript'%3E%3C/script%3E"));
+    </script>
+
+    <script type="text/javascript" src="https://auth.beliefnet.com/Content/authCore.js"></script>
+
+    <script type="text/javascript" src="/Includes/JsBin/advancedSearchTools.js?_r=129961066420341273"></script>
+
+    <script type="text/javascript" src="http://cdn.sailthru.com/scout/v1.js"></script>
+
+    <!-- Begin GetInlineScriptBody() -->
+    <script type="text/javascript" language="javascript">
+        
+    </script>
+    <!--  End GetInlineScriptBody()  -->
+
+    
+    <!-- Tracking Code -->
+
+    <script type="text/javascript">
+
+        var _gaq = _gaq || [];        	
+		_gaq.push(['_setAccount', 'UA-5274219-1']); 	
+		_gaq.push(['_setDomainName', '.beliefnet.com']);
+		_gaq.push(['_trackPageview']); 
+		
+		
+
+		(function() { 
+		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true; 
+		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js'; 
+		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s); 
+		})(); 
+        
+        var contentType = "";
+        
+        // pass in custom variable for Content Type
+        _gaq.push(['_setCustomVar',
+            1,
+            "Content Type",
+            contentType,
+            3
+        ]);
+            
+    </script>
+
+    
+    
+    <!-- Mindset Media Code Starts -->
+    <script type="text/javascript">
+        document.write(unescape("%3Cscript src='http://syndication.mmismm.com/mmtnt.php?mm_pub=7323&mm_channel=' type='text/javascript'%3E%3C/script%3E"));
+    </script>
+    <!-- Mindset Media Code Ends -->
+
+    <!-- ShareThis Button Script Begins-->
+    <script type="text/javascript" src="http://w.sharethis.com/button/sharethis.js#publisher=158ad243-1395-4ad7-911f-f71afc372a6a&amp;type=website&amp;tracking=google&amp;post_services=email%2Cfacebook%2Ctwitter%2Cgbuzz%2Cmyspace%2Cdigg%2Csms%2Cwindows_live%2Cdelicious%2Cstumbleupon%2Creddit%2Cgoogle_bmarks%2Clinkedin%2Cbebo%2Cybuzz%2Cblogger%2Cyahoo_bmarks%2Cmixx%2Ctechnorati%2Cfriendfeed%2Cpropeller%2Cwordpress%2Cnewsvine"></script>
+    <!-- ShareThis Button Script Ends -->
+
+    <script src="/Includes/JsBin/jquery.nivo.slider.pack.js?_r=129961066609245105"
+        type="text/javascript"></script>
+
+    <!-- Extraneous Module Scripts Included Here -->
+
+    <script src="/Includes/JsBin/ExtraneousModuleScripts.js?_r=129887459902261270"
+        type="text/javascript"></script>
+        
+         <!-- pirobox Picture display used in the comics section -->
+    <!-- http://piroblog.pirolab.it/blog/2011/02/17/pirobox_extended/ -->
+    <script src="/Includes/JsBin/pirobox_extended_feb_2011.js?_r=129820844076501310"
+        type="text/javascript"></script>
+        
+        
+        <script type="text/javascript">
+            $(document).ready(function() {
+                $.piroBox_ext({
+                    piro_speed: 700,
+                    bg_alpha: 0.5,
+                    piro_scroll: true,
+                    piro_drag: false,
+                    piro_nav_pos: 'bottom'
+                });
+            });
+</script>
+    <!-- End pirobox Picture display -->
+
+    
+    
+    <!-- Sailthru Horizon --> 
+    
+    <script type="text/javascript">
+        (function() {
+            function loadHorizon() { 
+                var s = document.createElement('script'); 
+                s.type = 'text/javascript'; 
+                s.async = true;
+                s.src = location.protocol + '//ak.sail-horizon.com/horizon/v1.js';
+                var x = document.getElementsByTagName('script')[0]; 
+                x.parentNode.insertBefore(s, x);
+            }
+            loadHorizon();
+            var oldOnLoad = window.onload;
+            window.onload = function() {
+                if (typeof oldOnLoad === 'function') {
+                    oldOnLoad();
+                }
+                Sailthru.setup({
+                    domain: 'horizon.beliefnet.com'
+                    
+                    , concierge: { 
+                        from: 'top' 
+                        ,threshold: 400  
+                        
+                        
+                        }
+                });
+            };
+        })();
+    </script>
+    
+    
+    
+    <!-- Sitepage: beliefnet.com/Health/index -->
+   
+
+    <div class="OUTBRAIN" data-src="http://www.beliefnet.com/Health/index.aspx" data-widget-id="TR_1" data-ob-template="BeliefNet">
+
+</div>
+    <script type="text/javascript" src="http://widgets.outbrain.com/outbrain.js"></script>
+
+</body>
+</html>

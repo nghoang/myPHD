@@ -1,0 +1,201 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Medic One Ambulance</title>
+<style type="text/css">
+<!--
+body {
+	background-color: #551b1b;
+	background-image: url(images/back.jpg);
+	background-repeat: repeat-x;
+}
+#Layer1 {
+	position:absolute;
+	width:800px;
+	height:115px;
+	z-index:1;
+	background-color: #FCFDFF;
+	left: 10px;
+}
+#Layer2 {
+	position:absolute;
+	width:800px;
+	height:803px;
+	z-index:2;
+	top: 160px;
+	background-color: #FCFDFF;
+	background-repeat: no-repeat;
+	background-position: left top;
+	background-image: url(images/cross.png);
+	left: 10px;
+}
+#Layer3 {
+	position:absolute;
+	width:104px;
+	height:797px;
+	z-index:1;
+	left: 695px;
+	top: 0px;
+}
+#Layer4 {
+	position:absolute;
+	width:804px;
+	height:60px;
+	z-index:3;
+	left: 10px;
+	top: 963px;
+}
+#Layer5 {
+	position:absolute;
+	width:324px;
+	height:520px;
+	z-index:2;
+	top: 129px;
+	background-image: url(images/cross.png);
+	background-position: left center;
+	background-repeat: no-repeat;
+}
+#Layer6 {
+	position:absolute;
+	width:592px;
+	height:694px;
+	z-index:4;
+	left: 101px;
+	top: 46px;
+}
+#Layer7 {
+	position:absolute;
+	width:203px;
+	height:136px;
+	z-index:1;
+	left: -7px;
+	top: 81px;
+}
+#Layer8 {
+	position:absolute;
+	width:200px;
+	height:115px;
+	z-index:2;
+	left: 311px;
+	top: 149px;
+}
+.style1 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: bold;
+}
+-->
+</style>
+<script type="text/JavaScript">
+<!--
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_nbGroup(event, grpName) { //v6.0
+  var i,img,nbArr,args=MM_nbGroup.arguments;
+  if (event == "init" && args.length > 2) {
+    if ((img = MM_findObj(args[2])) != null && !img.MM_init) {
+      img.MM_init = true; img.MM_up = args[3]; img.MM_dn = img.src;
+      if ((nbArr = document[grpName]) == null) nbArr = document[grpName] = new Array();
+      nbArr[nbArr.length] = img;
+      for (i=4; i < args.length-1; i+=2) if ((img = MM_findObj(args[i])) != null) {
+        if (!img.MM_up) img.MM_up = img.src;
+        img.src = img.MM_dn = args[i+1];
+        nbArr[nbArr.length] = img;
+    } }
+  } else if (event == "over") {
+    document.MM_nbOver = nbArr = new Array();
+    for (i=1; i < args.length-1; i+=3) if ((img = MM_findObj(args[i])) != null) {
+      if (!img.MM_up) img.MM_up = img.src;
+      img.src = (img.MM_dn && args[i+2]) ? args[i+2] : ((args[i+1])? args[i+1] : img.MM_up);
+      nbArr[nbArr.length] = img;
+    }
+  } else if (event == "out" ) {
+    for (i=0; i < document.MM_nbOver.length; i++) {
+      img = document.MM_nbOver[i]; img.src = (img.MM_dn) ? img.MM_dn : img.MM_up; }
+  } else if (event == "down") {
+    nbArr = document[grpName];
+    if (nbArr)
+      for (i=0; i < nbArr.length; i++) { img=nbArr[i]; img.src = img.MM_up; img.MM_dn = 0; }
+    document[grpName] = nbArr = new Array();
+    for (i=2; i < args.length-1; i+=2) if ((img = MM_findObj(args[i])) != null) {
+      if (!img.MM_up) img.MM_up = img.src;
+      img.src = img.MM_dn = (args[i+1])? args[i+1] : img.MM_up;
+      nbArr[nbArr.length] = img;
+  } }
+}
+//-->
+</script>
+</head>
+
+<body onload="MM_preloadImages('images/Navi/Privacy2.png','images/Navi/About2.png','images/Navi/Locate2.png','images/Navi/Edu2.png','images/Navi/Comm2.png','images/Navi/Cal2.png','images/Navi/Awards2.png','images/Navi/Contact2.png')">
+<div id="Layer2">
+  <div id="Layer3">
+    <div align="right"><img src="images/ambulance_text.jpg" width="93" height="790" /></div>
+  </div>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <div id="Layer6">
+    <table width="100%" border="0" cellpadding="0">
+      <tr>
+        <td colspan="2"><center><img src="images/About_Us.png" width="343" height="76" align="middle" /></center></td>
+      </tr>
+      <tr>
+        <td width="48%">&nbsp;</td>
+        <td width="52%">&nbsp;</td>
+      </tr>
+    </table>
+    <p><center><img src="images/About.gif" width="549" height="271" />
+    </center></p>
+    <p align="justify" class="style1">Medic One emergency personnel are standing by 24 hours a day, 365 days a year to respond to your medical emergency.</p>
+    <p align="justify" class="style1"><br />
+      A direct call to Medic One can save time, when seconds count in your emergency you can rely on Medic One to get you the help and treatment you need fast. Medic One provides Advanced Life Support (ALS) crews, working 24 hours a day, seven days a week responding to your emergency needs. Using the latest in life saving equipment, we will respond on a moments notice.</p>
+    <p align="justify" class="style1"><br />
+    If you need an ambulance, dialing direct can save precious time&mdash;as much as 4 minutes. In an emergency, minutes saved can make all the difference. And Medic One has more bases and more ambulances to reach more people faster. Our crews are trained in the latest life saving techniques insuring that our patients receive the best care possible. </p>
+  </div>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <table border="0" cellpadding="0" cellspacing="0">
+    <tr>
+      <td><a href="About.html" target="_top" onclick="MM_nbGroup('down','group1','About','images/Navi/About2.png',1)" onmouseover="MM_nbGroup('over','About','images/Navi/About2.png','',1)" onmouseout="MM_nbGroup('out')"><img src="images/Navi/About.png" alt="About Us" name="About" width="99" height="33" border="0" id="About" onload="" /></a></td>
+    </tr>
+    <tr>
+      <td><a href="Locate.html" target="_top" onclick="MM_nbGroup('down','group1','Location','images/Navi/Locate2.png',1)" onmouseover="MM_nbGroup('over','Location','images/Navi/Locate2.png','',1)" onmouseout="MM_nbGroup('out')"><img src="images/Navi/Locate.png" alt="Out Locations" name="Location" width="99" height="33" border="0" id="Location" onload="" /></a></td>
+    </tr>
+    <tr>
+      <td><a href="Edu.html" target="_top" onclick="MM_nbGroup('down','group1','Education','images/Navi/Edu2.png',1)" onmouseover="MM_nbGroup('over','Education','images/Navi/Edu2.png','',1)" onmouseout="MM_nbGroup('out')"><img src="images/Navi/Edu.png" alt="Education" name="Education" width="99" height="33" border="0" id="Education" onload="" /></a></td>
+    </tr>
+    <tr>
+      <td><a href="Comm.html" target="_top" onclick="MM_nbGroup('down','group1','Community','images/Navi/Comm2.png',1)" onmouseover="MM_nbGroup('over','Community','images/Navi/Comm2.png','',1)" onmouseout="MM_nbGroup('out')"><img src="images/Navi/Comm.png" alt="Community Involvement" name="Community" width="99" height="33" border="0" id="Community" onload="" /></a></td>
+    </tr>
+    <tr>
+      <td><a href="Cal.html" target="_top" onclick="MM_nbGroup('down','group1','Calendar','images/Navi/Cal2.png',1)" onmouseover="MM_nbGroup('over','Calendar','images/Navi/Cal2.png','',1)" onmouseout="MM_nbGroup('out')"><img src="images/Navi/Cal.png" alt="Calendar Of Events" name="Calendar" width="99" height="33" border="0" id="Calendar" onload="" /></a></td>
+    </tr>
+    <tr>
+      <td><a href="Awards.html" target="_top" onclick="MM_nbGroup('down','group1','Awards','images/Navi/Awards2.png',1)" onmouseover="MM_nbGroup('over','Awards','images/Navi/Awards2.png','',1)" onmouseout="MM_nbGroup('out')"><img src="images/Navi/Awards.png" alt="Awards" name="Awards" width="99" height="33" border="0" id="Awards" onload="" /></a></td>
+    </tr>
+    <tr>
+      <td><a href="Contact.html" target="_top" onclick="MM_nbGroup('down','group1','Contact','images/Navi/Contact2.png',1)" onmouseover="MM_nbGroup('over','Contact','images/Navi/Contact2.png','',1)" onmouseout="MM_nbGroup('out')"><img src="images/Navi/Contact.png" alt="Contact Us" name="Contact" width="99" height="33" border="0" id="Contact" onload="" /></a></td>
+    </tr>
+	<tr>
+      <td><a href="privacy_notice.pdf" target="_top" onclick="MM_nbGroup('down','group1','Contact','images/Navi/Privacy2.png',1)" onmouseover="MM_nbGroup('over','Privacy','images/Navi/Privacy2.png','',1)" onmouseout="MM_nbGroup('out')"><img src="images/Navi/Privacy.png" alt="Privacy Notice" name="Privacy" width="99" height="33" border="0" id="Privacy" onload="" /></a></td>
+    </tr>
+  </table>
+</div>
+<div id="Layer1"><img src="images/HeaderS.jpg" width="800" height="152" /></div>
+<div id="Layer4"><img src="images/Footer.jpg" width="800" height="50" /></div>
+</body>
+</html>

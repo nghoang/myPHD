@@ -1,0 +1,3051 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<title> CS-TR-339 Computer Go Tech Report </title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<meta name="title" content="The University of Queensland" />
+<meta name="description" content="The School of Information Technology and Electrical Engineering -  CS-TR-339 Computer Go Tech Report " />
+<meta name="keyword" content="study, engineering, information technology, computer science, computer engineering, computer degree, electrical engineering, computers, University of Queensland, UQ, Queensland university, Australian universities, Queensland universities, Brisbane, Australia" />
+
+<link rel='stylesheet' href='/_templates/itee-v4/css/tab.css' type='text/css' />
+<link rel='stylesheet' href='/_templates/itee-v4/css/subpage.css' type='text/css' />
+<link rel='stylesheet' href='/_templates/itee-v4/css/template.css' type='text/css' />
+<link rel="icon" href="http://www.uq.edu.au/images/home/favicon.ico" type="image/x-icon" />
+<link rel="shortcut icon" href="http://www.uq.edu.au/images/home/favicon.ico" type="image/x-icon" />
+<script type="text/javascript" src="/_templates/itee-v4/js/template.js"></script>
+<script type="text/javascript">
+  function goto_url(form)
+	{
+		if (form.search_text.value == "")
+		{
+			alert("Please enter a search term");
+			return false;
+		}
+		var url = form.search_select[form.search_select.selectedIndex].value + escape(form.search_text.value);
+		document.location = url;
+		return false;
+	}
+</script>
+</head>
+<body><!--START: Header -->
+<form name="search_form" onsubmit="return goto_url(this)" action="" style="margin: 0px;">
+<table width="100%" border="0" cellspacing="0" cellpadding="0" class="table-header" summary="UQ Header">
+<tr>
+<td width="10%" rowspan="2"><a href="http://www.uq.edu.au/"><img src="/_templates/itee-v4/images/uq-logo.gif" width="200" height="72" alt="The University of Queensland Homepage" border="0" /></a></td>
+<td width="90%" colspan="2" class="toplinks">
+
+<!-- Start: Top Bar -->
+<table border="0" cellspacing="0" cellpadding="0" width="100%"><tr><td width="70%" class="toplinks" align="left"><img src="/_templates/itee-v4/images/top-links.gif" width="392" height="17" usemap="#Map" border="0" alt="" /><map name="Map" id="Map"><area shape="rect" coords="23,3,76,15" href="http://www.uq.edu.au/" alt="UQ Homepage" title="UQ Homepage" /><area shape="rect" coords="82,3,129,15" href="http://www.uq.edu.au/search" alt="Search UQ" title="Search UQ" /><area shape="rect" coords="137,3,196,15" href="http://www.uq.edu.au/contacts" alt="Find all Contacts at UQ" title="Find all Contacts at UQ" /><area shape="rect" coords="202,3,241,15" href="http://www.uq.edu.au/study" alt="Study Options at UQ" title="Study Options at UQ" /><area shape="rect" coords="249,3,295,15" href="http://www.uq.edu.au/events" alt="Events at UQ" title="Events at UQ" /><area shape="rect" coords="300,3,334,15" href="http://www.uq.edu.au/maps" alt="UQ Maps" title="UQ Maps" /><area shape="rect" coords="344,3,391,15" href="http://www.uq.edu.au/library" alt="UQ Library" title="UQ Library" /></map></td><td width="30%" align="right"><a href="http://www.my.uq.edu.au"><img src="/_templates/itee-v4/images/my-uq.gif" width="69" height="17" alt="Link to my.UQ" border="0" /></a></td></tr></table>
+<!-- End: Top Bar -->
+
+</td>
+</tr>
+<tr>
+<td width="70%" class="header" align="left"><a href="http://www.itee.uq.edu.au/"><img src="/_templates/itee-v4/images/header.gif" width="379" height="55" alt="School of ITEE" border="0" /></a></td>
+<td width="30%" class="header" align="right"><a href="http://www.itee.uq.edu.au/"><img src="/_templates/itee-v4/images/top-right.gif" width="190" height="55"  border="0" alt="ITEE Main Website"/></a></td>
+</tr>
+<tr>
+<td height="21" class="searchbar" align="right" colspan="3">
+
+<!-- Start: Search Form -->
+<table border="0" cellspacing="0" cellpadding="0" align="right" summary="Search Box">
+<tr>
+<td>
+<select name="search_select">
+<option value="http://www.google.com/u/itee?q=" selected="selected">Public ITEE</option>
+<option value="http://www.uq.edu.au/search/index.asp?q1=">All UQ</option>
+<option value="http://www.uq.edu.au/search?site=default_collection&output=xml_no_dtd&client=ws&proxystylesheet=ws&q=site:itee.uq.edu.au+">ITEE via UQ</option>
+</select>&nbsp;
+<input class="formfield-search" type="text" name="search_text" id="SearchUQ" size="18" maxlength="100" />&nbsp;
+</td>
+<td>
+<input type="image" name="submit" value="search" src="/_templates/itee-v4/images/search_button.gif" alt="Search" class="searchbutton" />&nbsp;&nbsp;
+</td>
+</tr>
+</table>
+<!-- End: Search Form -->
+
+</td>
+</tr>
+</table>
+</form>
+<!-- END: Header -->
+
+<!-- START: Main Content -->
+<table border="0" cellspacing="0" cellpadding="0" summary="Content Table" class="mainblockpart">
+<tr>
+
+
+<!-- Start: Left Column -->
+<td width="200" class="menu" valign="top">
+
+
+<img src="/~janetw/images/top-left-headshot-193x200.jpg" width="193" height="200" alt="" class="content-image" /><br />
+
+
+<div id="menu-header">IN THIS SECTION</div>
+<img src="/_templates/itee-v4/images/transparent.gif" width="1" height="1" alt="" /><br />
+
+<!-- Navigation Menu Starts - Modify according to the links required. Do not remove '&#187;' -->
+<div id="button">
+<table class="navtable"><tr><td>
+<ul>
+
+
+<li class="unselected"><a href="CS-TR-339.html">&#187;  CS-TR-339 Computer Go Tech Report </a></li>
+
+
+</ul>
+</td></tr></table>
+</div>
+
+
+<br />
+<div id="quick-links">
+<table border="0" cellpadding="0" cellspacing="0">
+<tr><th colspan="3">QUICK LINKS</th></tr>
+
+
+<tr><td class="ql-l">
+<img src="/_templates/itee-v4/images/quick-links-arrow.gif" width="9" height="9" alt="" /></td>
+<td class="ql-m"><a href="http://www.itee.uq.edu.au/">ITEE Public Web</a></td><td class="ql-r">&nbsp;</td></tr>
+<tr><td class="ql-l">
+<img src="/_templates/itee-v4/images/quick-links-arrow.gif" width="9" height="9" alt="" /></td>
+<td width="150"><a href="http://studenthelp.itee.uq.edu.au/">Student IT Help</a></td><td class="ql-r">&nbsp;</td></tr>
+<tr><td class="ql-l">
+<img src="/_templates/itee-v4/images/quick-links-arrow.gif" width="9" height="9" alt="" /></td>
+<td class="ql-m"><a href="http://internal.itee.uq.edu.au/">ITEE Internal Web</a></td><td class="ql-r">&nbsp;</td></tr>
+<tr><td class="ql-l">
+<img src="/_templates/itee-v4/images/quick-links-arrow.gif" width="9" height="9" alt="" /></td>
+<td class="ql-m"><a href="http://help.itee.uq.edu.au/">Staff IT Help</a></td><td class="ql-r">&nbsp;</td></tr>
+
+
+
+<tr><td class="ql-b" colspan="3">&nbsp;</td></tr>
+</table>
+</div>
+<br />
+
+
+</td>
+<!--End: Left Column -->
+
+
+<!-- Start: Middle Column -->
+
+<td valign="top" width="95%"><br />
+
+
+<!-- START: Breadcrumb Trail -->
+<div id="breadcrumb">
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr><td width="100%">
+<a href="http://www.itee.uq.edu.au/">ITEE Home</a> &#187; <a href="./../">Janet Wiles</a> &#187; <a href="./">Computer Go</a> &#187;  CS-TR-339 Computer Go Tech Report </td><td width="110" align="right" nowrap="nowrap">
+<!-- Start: Print Icon -->
+
+
+<div align="right">
+<a href="/~janetw/Computer Go/CS-TR-339.html?print=1">
+<img src="/_templates/itee-v4/images/icon-print.gif" width="16" height="14" border="0" alt="Printer Friendly Version" />
+</a>
+<a href="/~janetw/Computer Go/CS-TR-339.html?print=1" title="Printer Friendly Version">Print version</a>&nbsp;&nbsp;</div>
+
+
+<!-- End: Print Icon -->
+</td></tr>
+</table>
+</div>
+<!-- END: Breadcrumb Trail -->
+
+
+<!-- Start: Content Heading Table -->
+<table width="97%" cellpadding="0" cellspacing="2" border="0" align="center">
+<tr>
+<td class="contentheader" width="28"><img src="/_templates/itee-v4/images/level2-arrow.gif" width="28" height="28" alt="" /></td>
+<td class="contentheader" width="100%" align="left">&nbsp; CS-TR-339 Computer Go Tech Report </td>
+</tr>
+<tr>
+<td colspan="2"><img src="/_templates/itee-v4/images/level2-underline.gif" width="395" height="1" alt="" /></td>
+</tr>
+</table>
+<!-- END: Content Heading Table -->
+
+<div id="content">
+
+
+<div class=WordSection1>
+
+<div>
+
+<p align=center style='text-align:center'>Jay <span class=spelle>Burmeister</span>
+<br>
+Janet Wiles </p>
+
+<u1:p></u1:p>
+
+<p align=center style='text-align:center'>Departments of Computer Science and
+Psychology <br>
+<span class=grame>The</span> University of Queensland, QLD 4072, <st1:place u2:st="on"><st1:country-region u2:st="on">Australia</st1:country-region></st1:place>
+</p>
+
+<p align=center style='text-align:center'><span style='font-size:9.5pt'>Technical
+Report 339, Department of Computer Science, The University of Queensland, 1995</span><i><br>
+(This document is - permanently - under construction). <br>
+</i><a href="http://www.itee.uq.edu.au/~janetw/Computer%20Go/PhD_thesis.pdf">See
+also: Jay Burmeister?s PhD Thesis (2000</a>)<i><o:p></o:p></i></p>
+
+<div class=MsoNormal align=center style='text-align:center'><span
+style='mso-fareast-font-family:"Times New Roman"'>
+
+<hr size=2 width="100%" align=center>
+
+</span></div>
+
+<h1 style='margin:0cm;margin-bottom:.0001pt'><span style='mso-fareast-font-family:
+"Times New Roman"'>Table of Contents <o:p></o:p></span></h1>
+
+<p class=MsoNormal><b>1.0 </b><a href="#1.0">Introduction</a> </p>
+
+<p class=MsoNormal><b>2.0 </b><a href="#2.0">The Game of Go</a> </p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><b>2.1 </b><a href="#2.1">Liberties
+and Capture</a> </p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><b>2.1.1 </b><a href="#2.1.1">Suicide</a>
+</p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><b>2.2 </b><a href="#2.2">Strings</a>
+</p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><b>2.3 </b><a href="#2.3">Eyes</a>
+</p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><b>2.3.1 </b><a href="#2.3.1">Dead
+or Alive</a> </p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><b>2.3.2 </b>False Eyes </p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><b>2.3.3 </b>Seki </p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><b>2.4 </b><a href="#2.4">Repetition
+of Board Positions - <span class=grame>Ko</span></a> </p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><b>2.5 </b><a href="#2.5"><span
+class=spelle>Sente</span> and <span class=spelle>Gote</span></a> </p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><b>2.6 </b><a href="#2.6">Ladders</a>
+</p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><b>2.6.1 </b>Snapbacks </p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><b>2.7 </b><a href="#2.7">Links</a>
+</p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><b>2.8 </b><a href="#2.8">Groups</a>
+</p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><b>2.9 </b><a href="#2.9">Armies</a>
+</p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><b>2.10 </b><a href="#2.10">Winning
+the Game</a> </p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><b>2.11 </b><a href="#2.11">The
+Go Handicap and Ranking System</a> </p>
+
+<p class=MsoNormal><b>3.0 </b><a href="#3.0">The Challenge of Programming Go</a>
+</p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><b>3.1 </b><a href="#3.1">A
+Comparison of Chess and Go</a> </p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><b>3.2 </b><a href="#3.2">The
+Complexity of Go</a> </p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><b>3.3 </b><a href="#3.3">Why Go
+Cannot be Programmed <span class=grame>Like</span> Chess</a> </p>
+
+<p class=MsoNormal><b>4.0 </b><a href="#4.0">History of the Computer Go Field</a>
+</p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><b>4.1 </b>Academic Work </p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><b>4.1.1 </b><a href="#4.1.1"><span
+class=spelle>Zobrist</span></a> </p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><b>4.1.2 </b><a href="#4.1.2">Ryder</a>
+</p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><b>4.1.3 </b><a href="#4.1.3"><span
+class=spelle>Reitman</span> and Wilcox</a> </p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><b>4.1.4 </b><a href="#4.1.4">Other
+Academic Work</a> </p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><b>4.2 </b><a href="#4.2">Programs</a>
+</p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><b>4.2.1 </b><a href="#4.2.1">The
+Many Faces of Go</a> </p>
+
+<p class=MsoNormal style='margin-left:108.0pt'><b>4.2.1.1 </b><a href="#4.2.1.1">G2</a>
+</p>
+
+<p class=MsoNormal style='margin-left:108.0pt'><b>4.2.1.2 </b><a href="#4.2.1.2">Cosmos</a>
+</p>
+
+<p class=MsoNormal style='margin-left:108.0pt'><b>4.2.1.3 </b><a href="#4.2.1.3">Many
+Faces of Go</a> </p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><b>4.2.2 </b><a href="#4.2.2">Go4++</a>
+</p>
+
+<p class=MsoNormal style='margin-left:108.0pt'><b>4.2.2.1 </b><a href="#4.2.2.1">Candidate
+Move Generation</a> </p>
+
+<p class=MsoNormal style='margin-left:108.0pt'><b>4.2.2.2 </b><a href="#4.2.2.2">Evaluation
+Function</a> </p>
+
+<p class=MsoNormal style='margin-left:108.0pt'><b>4.2.2.3 </b><a href="#4.2.2.3">Performance
+and Timeline</a> </p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><b>4.2.3 </b><a href="#4.2.3"><span
+class=spelle>Handtalk</span></a> </p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><b>4.3 </b><a href="#4.3">Computer
+Go Competitions</a> </p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><b>4.3.1 </b><a href="#4.3.1">The
+<span class=spelle>Ing</span> Prize</a> </p>
+
+<p class=MsoNormal><b>5.0 </b>What's in a Go Program? </p>
+
+<p class=MsoNormal><b>6.0 </b>Performance of Current Programs </p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><b>6.1 </b>Program versus Program
+Performance </p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><b>6.2 </b><a href="#6.2">Program
+versus Human Performance</a> </p>
+
+<p class=MsoNormal><b>7.0 </b>Future Improvements in Performance </p>
+
+<p class=MsoNormal><b>8.0 </b><a href="#8.0">Go and Computer Go Resources on
+the Internet</a> </p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><b>8.1 </b>Computer Go related
+Internet Resources </p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><b>8.1.1 </b><a href="#8.1.1">Anonymous
+FTP Archive and Mirror Sites</a> </p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><b>8.1.2 </b><a href="#8.1.2">The
+Internet Go Server (IGS)</a> </p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><b>8.1.3 </b><a href="#8.1.3">Game
+Record Formats</a> </p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><b>8.1.4 </b><a href="#8.1.4">The
+Computer-Go Mailing List</a> </p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><b>8.1.5 </b><a href="#8.1.5">The
+Computer Go Ladder</a> </p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><b>8.1.6 </b><a href="#8.1.6">Computer
+Go Competitions/Tournaments and Results</a></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><b>8.1.7 </b><a href="#8.1.7">Computer
+Go Bibliographies</a></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><b>8.1.8 </b><a href="#8.1.8">Game
+Databases</a></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><b>8.2 </b>Go Related Internet
+Resources </p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><b>8.2.1 </b><a href="#8.2.1">Go
+Rules and Learning to Play</a> </p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><b>8.2.2 </b><a href="#8.2.2">Go
+Learning Aids and Tutorials</a> </p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><b>8.2.3 </b><a href="#8.2.3">The
+Go News Group</a> </p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><b>8.2.4 </b><a href="#8.2.4">The
+Go Frequently Asked Questions (FAQ)</a> </p>
+
+<p class=MsoNormal><b>9.0 </b>Conclusions </p>
+
+<p style='margin:0cm;margin-bottom:.0001pt'><b>Appendix <span class=grame>A</span>
+</b><a href="#A">Common Go Terms and Their English Equivalents</a> </p>
+
+<p style='margin:0cm;margin-bottom:.0001pt'><b><a href="#REFS">References</a> </b></p>
+
+<div class=MsoNormal align=center style='text-align:center'><span
+style='mso-fareast-font-family:"Times New Roman"'>
+
+<hr size=2 width="100%" align=center>
+
+</span></div>
+
+<h1><a name=1.0><span style='mso-fareast-font-family:"Times New Roman"'>1.0
+Introduction </span></a><span style='mso-fareast-font-family:"Times New Roman"'><o:p></o:p></span></h1>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'>This
+document introduces the reader to the computer Go field and Internet resources
+pertaining to <span class=grame>Go</span> and Computer Go. </p>
+
+<p>For readers unfamiliar with <span class=grame>Go</span>, <a href="#2.0">section
+2</a> describes the rules and common concepts of the game. Readers comfortable
+with their knowledge of Go may skip section 2, reading it only if the use of
+terms in this document needs clarification. </p>
+
+<p><a href="#6.0">Section 6</a> describes the current state-of-the-art in Go
+programs which is far behind that of Chess programs even allowing for the
+comparative disparity in the amount of effort expended on developing programs
+for each game. Theoretical and practical reasons are given in <a href="#3.0">section
+3</a> for this disparity as well as reasons why Go cannot be programmed in a
+similar fashion to Chess (see <a href="#3.1">Table 1</a> for a brief
+comparison). </p>
+
+<p>The history of the computer Go field is briefly outlined in <a href="#4.0">section
+4</a>. Included in this outline are descriptions of some of the academic work that
+has used Go as a vehicle to pursue research, computer Go competitions and
+results, and programs. </p>
+
+<p>Internet resources pertaining to <span class=grame>Go</span> and computer Go
+are described in <a href="#8.0">section 8</a>. The resources listed include a
+server for playing a game of Go, an FTP archive site and a mailing list which
+provides a forum for discussing aspects of programming Go. <o:p></o:p></p>
+
+<p style='margin-bottom:12.0pt'><a name=2.0><u1:p>&nbsp;</u1:p></a></p>
+
+<h1><span style='mso-fareast-font-family:"Times New Roman"'>2.0 The Game of Go <o:p></o:p></span></h1>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'>Go
+is a two player board game in which chance plays no part. It is an Oriental
+game which originated between 2500 and 4000 years ago and enjoys a similar
+status in <st1:country-region u2:st="on">Japan</st1:country-region>, <st1:country-region u2:st="on">China</st1:country-region>,
+<st1:country-region u2:st="on">Taiwan</st1:country-region> and <st1:country-region u2:st="on"><st1:place u2:st="on">Korea</st1:place></st1:country-region>
+as Chess does in Western countries. </p>
+
+<p>Go is played on a board which consists of a grid made by the intersection of
+horizontal and vertical lines. The size of the board is generally 19 x <span
+class=grame>19,</span> however, 9 x 9 and 13 x 13 sized boards are also used
+for playing quicker games. Intersection points are connected along the
+horizontal and vertical lines such that the <span class=spelle>neighbours</span>
+of any given point are the intersection points that are horizontally and
+vertically adjacent to it. Two players alternate in placing black and white
+stones on the intersection points of the board (including edges and corners of
+the board) with the black player moving first. The aim of Go is to capture more
+territory and prisoners than your opponent. <o:p></o:p></p>
+
+<p><a name=2.1><u1:p>&nbsp;</u1:p></a></p>
+
+<h2><span style='mso-fareast-font-family:"Times New Roman"'>2.1 Liberties and
+Capture <o:p></o:p></span></h2>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'>Empty
+points that <span class=spelle>neighbour</span> a stone are called its
+liberties (points marked L in Figure 1). Any stone which has no liberties is
+captured and removed from the board (white stone in Figure 2). This is the only
+instance in which stones, once placed, are moved. </p>
+
+<p><span style='mso-no-proof:yes'><img border=0 width=452 height=179
+id="_x0000_i1038" src="CS-TR-339_files/figs1-2.gif"></span><a name=2.1.1></a></p>
+
+<h2 style='page-break-after:avoid'><span style='mso-fareast-font-family:"Times New Roman"'>2.1.1
+Suicide <o:p></o:p></span></h2>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'>A
+player cannot commit suicide by placing a stone in a position which leads to
+its immediate capture (points marked X in Figure 3). <br>
+<span style='mso-no-proof:yes'><img border=0 width=463 height=179
+id="_x0000_i1037" src="CS-TR-339_files/fig3.gif"></span><a name=2.2></a></p>
+
+<h2><span style='mso-fareast-font-family:"Times New Roman"'>2.2 Strings <o:p></o:p></span></h2>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'>Stones
+of the same <span class=spelle>colour</span> can be joined into strings by
+being horizontally or vertically connected to each other (Figure 4). Single
+stones can also be described as strings which we will refer to as unitary
+strings. Instead of the stones in a string having individual liberties, the
+liberties of the constituent stones of the string become the liberties of the
+string (points marked L in Figure 5). To be captured, a string must be surrounded
+by opponent stones such that no stone in the string has any liberties (black
+stones in Figure 6). When a player fills the penultimate liberty of a stone or
+string, it is courtesy to declare &quot;Atari!&quot; which alerts the owner of
+the stone or string of its impending capture. </p>
+
+<p><span style='mso-no-proof:yes'><img border=0 width=450 height=396
+id="_x0000_i1036" src="CS-TR-339_files/figs4-6.gif"></span><a name=2.3></a></p>
+
+<h2><span style='mso-fareast-font-family:"Times New Roman"'>2.3 Eyes <o:p></o:p></span></h2>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'>Eyes
+are formed when a string surrounds one or more empty intersection points (point
+marked E in Figure 7). Strings which contain a single eye can be captured by
+first being surrounded and then the eye being filled (Figure 8). Filling the
+eye does not violate the suicide rule since the opponents captured stones are
+first removed, creating liberties for the last stone played. A string that has
+two eyes (points marked E in Figure 9) is safe from capture since there is no
+way for an opponent to capture such a string. The reason for the inability to
+capture a string with two eyes is that the stone played in the first eye will
+be subject to the suicide rule. </p>
+
+<p><span style='mso-no-proof:yes'><img border=0 width=495 height=630
+id="_x0000_i1035" src="CS-TR-339_files/figs7-9.gif"></span><a name=2.3.1></a></p>
+
+<h2 style='page-break-after:avoid'><span style='mso-fareast-font-family:"Times New Roman"'>Dead
+or Alive <o:p></o:p></span></h2>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'>Strings
+which have two eyes are said to be alive. In general, a string is alive if it
+cannot be captured even if the opponent moves first. A string is considered to
+be dead if there is no way to stop it from being captured even if its owner
+moves first. <o:p></o:p></p>
+
+<p><a name=2.3.2><u1:p>&nbsp;</u1:p></a></p>
+
+<h2><span style='mso-fareast-font-family:"Times New Roman"'>2.3.2 False Eyes <o:p></o:p></span></h2>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><a
+name=2.3.3><u1:p>&nbsp;</u1:p></a></p>
+
+<h2><span style='mso-fareast-font-family:"Times New Roman"'>2.3.3 Seki <o:p></o:p></span></h2>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;margin-bottom:12.0pt'><a
+name=2.4><u1:p>&nbsp;</u1:p></a></p>
+
+<h2><span style='mso-fareast-font-family:"Times New Roman"'>2.4 Repetition of
+Board Positions - <span class=grame>Ko</span> <o:p></o:p></span></h2>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'>To
+stop endless cycles occurring, a player cannot play a stone which causes a
+previous board position to be repeated. In general, the only situation in which
+a cycle can arise is called a <span class=grame>ko</span>. In Figure 10, a
+white stone at 1 is captured by a black stone at 2 which could itself be
+captured by a white stone being played at 1 again. Such a situation is
+prohibited by the rule against repetition. A <span class=spelle>ko</span>
+situation can lead to a <span class=spelle>ko</span> fight (Figure 11) in which
+the player which loses a stone in the <span class=spelle>ko</span> (white stone
+at 4 captured by black at 1) threatens an opponent stone elsewhere (at 2) and
+then recaptures the opponent stone in the <span class=spelle>ko</span> (at 4)
+after the opponent responds to the threat (at 3). </p>
+
+<p><span style='mso-no-proof:yes'><img border=0 width=455 height=235
+id="_x0000_i1034" src="CS-TR-339_files/figs10-11.gif"></span><a name=2.5></a></p>
+
+<h2><span style='mso-fareast-font-family:"Times New Roman"'>2.5 <span
+class=spelle>Sente</span> and <span class=spelle>Gote</span> <o:p></o:p></span></h2>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'>Skilful
+players can engineer the game so that they gain the initiative for a number of
+moves and dictate the response of their opponent. In such a case, a player is
+said to have <span class=spelle>sente</span> and the opponent to have <span
+class=spelle>gote</span>. <span class=spelle>Sente</span> usually occurs when
+players place their opponent in a situation of having to save stones and only
+having one option available to do so. <span class=spelle>Sente</span> allows a
+player to control the course of the game so as to execute a plan of several
+moves without the opponent being able to frustrate the plan in midstream. <o:p></o:p></p>
+
+<p><a name=2.6><u1:p>&nbsp;</u1:p></a></p>
+
+<h2><span style='mso-fareast-font-family:"Times New Roman"'>2.6 Ladders <o:p></o:p></span></h2>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'>Ladders
+are a capturing race between a group that is almost enclosed, and a surrounding
+group. Consider the initial stones in Figure 12 (the stones without numbers).
+The black stone is doomed to be captured no matter what the Black player does.
+When White plays at 1, the black stone is threatened with capture. To defend
+this stone, Black plays at 2. White once again threatens capture by playing at
+3. This process continues and results in a ladder being formed. White
+eventually wins the ladder when the board edge is encountered. </p>
+
+<p><span style='mso-no-proof:yes'><img border=0 width=454 height=252
+id="_x0000_i1033" src="CS-TR-339_files/fig12.gif"></span><a name=2.7></a></p>
+
+<h2><span style='mso-fareast-font-family:"Times New Roman"'>2.7 Links <o:p></o:p></span></h2>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'>The
+only links between stones which is recognized in the rules of Go is between
+horizontally and vertically adjacent stones (called <span class=spelle>nobi</span>).
+In practice however, there are several links which are recognized by
+experienced Go players (Figure 13). The <span class=spelle>ikken</span> <span
+class=spelle>tobi</span> link can be physically connected as long as black
+plays next. The <span class=spelle>kosumi</span> link can be made as long as
+black plays next or each of the connecting points <span class=grame>are</span>
+empty if white plays first. Of the other links, physical connection depends on
+the context of the surrounding stones. If two strings are denied a physical
+connection they are said to be cut (Figure 14). </p>
+
+<p style='margin-bottom:12.0pt'><span style='mso-no-proof:yes'><img border=0
+width=466 height=500 id="_x0000_i1032" src="CS-TR-339_files/figs13-14.gif"></span><a
+name=2.8></a></p>
+
+<h2><span style='mso-fareast-font-family:"Times New Roman"'>2.8 Groups <o:p></o:p></span></h2>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'>A
+group is composed of strings of one <span class=spelle>colour</span> that are
+in close proximity to each other such as A and B, and C1, C2, C3 and C4 in
+Figure 15. <span class=grame>Being in close proximity means that they can be
+securely linked by one of the links in Figure 13 (other than </span><span
+class=spelle>nobi</span><span class=grame> of course).</span> For the C group,
+C1 is linked to C2 by an <span class=spelle>ogeima</span> link; C2 is linked to
+C3 by an <span class=spelle>ikken</span> <span class=spelle>tobi</span> link;
+and C3 is linked to C4 by a <span class=spelle>kogeima</span> link. Groups are
+the main perceptual units concerning the player throughout the game. The most
+important attributes of a group is whether it is alive, and whether it can
+create two eyes or connect to a group with two eyes to ensure survival. <o:p></o:p></p>
+
+<p><a name=2.9><u1:p>&nbsp;</u1:p></a></p>
+
+<h2><span style='mso-fareast-font-family:"Times New Roman"'>2.9 Armies <o:p></o:p></span></h2>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'>An
+army is a loose federation of groups of one <span class=spelle>colour</span>
+that are in close proximity to each other. In Figure 15, the two groups (A and
+B, and C1, C2, C3 and C4) form one army. <span class=grame>Being in close
+proximity means that there are no intervening enemy stings between the groups.</span>
+Although armies cover a large territory, they are not as secure for defending
+territory as groups. Thus it is important <span class=grame>for a players</span>
+to convert armies into groups whilst stopping their opponents from doing the
+same. Converting an army into groups implies playing stones in between strings
+of separate groups such that they can be linked together as described above
+(e.g. by playing at one of the points enclosed by the dashed line in Figure
+15). </p>
+
+<p style='margin-bottom:12.0pt'><span style='mso-no-proof:yes'><img border=0
+width=454 height=264 id="_x0000_i1031" src="CS-TR-339_files/fig15.gif"></span><a
+name=2.10></a></p>
+
+<h2><span style='mso-fareast-font-family:"Times New Roman"'>2.10 Winning the
+Game <o:p></o:p></span></h2>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'>A
+player may pass at any time and the game is over when both players pass
+consecutively. A determination of territory begins by removing the stones in
+black strings and white strings which are dead. Each player then adds the
+number of opponent stones they have captured and the number of empty
+intersection points which are surrounded by their stones i.e. points that
+cannot trace a path to an opponent's stone along the horizontal and vertical
+grid lines (points marked B in Figure 16). The player with the largest
+territory wins. </p>
+
+<p><span style='mso-no-proof:yes'><img border=0 width=454 height=212
+id="_x0000_i1030" src="CS-TR-339_files/fig16.gif"></span><a name=2.11></a></p>
+
+<h2><span style='mso-fareast-font-family:"Times New Roman"'>2.11 The Go
+Handicap and Ranking Systems <o:p></o:p></span></h2>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'>Go
+has a sophisticated handicap and ranking system. Players are ranked according
+to their ability with a complete novice being ranked at 30 <span class=spelle>kyu</span>
+(pronounced &quot;cue&quot;). After playing between 10 and 15 games, a player's
+rank would likely be around 20 <span class=spelle>kyu</span>. After reaching 1 <span
+class=spelle>kyu</span>, further improvement would result in a rank of 1 <span
+class=spelle>dan</span> or first-degree master. Amateur ranks continue <span
+class=grame>up to 6 </span><span class=spelle>dan</span>. Professional ranks start
+at what would be <span class=grame>7 </span><span class=spelle>dan</span><span
+class=grame> amateur</span> and extend from 1 <span class=spelle>dan</span> to
+9 <span class=spelle>dan</span>. </p>
+
+<p>The amount of effort required to increase to the next best rank becomes
+harder as a player moves up in ranks. For instance, to rise from 20 <span
+class=spelle>kyu</span> to 10 <span class=spelle>kyu</span> would require
+playing 1 or 2 games a week for around a year and possibly reading a few books
+on Go tactics and strategy. [The differentiation between professional ranks is
+also smaller than between amateur ranks. The difference between a 1 <span
+class=spelle>dan</span> professional and a 9 <span class=spelle>dan</span>
+professional is approximately equivalent to the relative difference of 2
+amateur <span class=grame>ranks,</span> say 4 <span class=spelle>dan</span> to
+6 <span class=spelle>dan</span>.] Many years of full-time play is required to
+reach professional ranking. </p>
+
+<p>To provide balance for both weak and strong players, the weak player is
+given handicap stones at the start of the game. In the Chinese rules, the
+handicap stones are placed at the weaker player's discretion whereas in the
+Japanese rules, the handicap stones are placed on set points called <span
+class=spelle>hoshi</span> points. The weaker player is given as many handicap
+stones as the difference between the <span class=grame>players</span> rankings.
+For instance, a 10 <span class=spelle>kyu</span> player would give 5 handicap
+stones to a 15 <span class=spelle>kyu</span> player. Ranks are usually
+determined in one of two ways. The first is by finding the number of handicap
+stones a player needs to win about half the games played against a stronger
+player on a 19x19 board. The other is by giving 1 handicap stone for each 10
+stones that a player is beaten by. The relative <span class=grame>value of
+handicap stones diminish</span> as the board size increases. One handicap stone
+on a 9x9 board is worth two on a 13x13 board and four on a 19x19 board. </p>
+
+<p>Playing first without handicap is equivalent to a 5 point advantage. It is
+customary for the weaker player to play first using black stones. If both
+players are ranked equally, the White player is given a 5 point bonus or <span
+class=spelle>komi</span> (pronounced &quot;<span class=spelle>ko-mee</span>&quot;).
+In tournaments the <span class=spelle>komi</span> is usually 5 1/2 points so as
+to avoid ties. <o:p></o:p></p>
+
+<p style='margin-bottom:12.0pt'><a name=3.0><u1:p>&nbsp;</u1:p></a></p>
+
+<h1><span style='mso-fareast-font-family:"Times New Roman"'>3.0 The Challenge
+of Programming Go <o:p></o:p></span></h1>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'>Compared
+to the Chess programming field, the Go programming field is not well developed.
+A strong commitment to research on programming Chess in the 1960's and 70's has
+not been replicated in the Go field. There are fundamental differences between
+Chess and Go which have contributed to making Chess a more attractive research
+domain so far. However, even allowing for the smaller amount of work done on
+programming Go, the performance of Go programs have not kept pace with the
+performance of Chess programs. There are several reasons for this disparity,
+which is in part due to the complexity of Go and also the unsuitability of the
+programming techniques used in Chess as described below. <o:p></o:p></p>
+
+<p><a name=3.1><u1:p>&nbsp;</u1:p></a></p>
+
+<h2 style='page-break-after:avoid'><span style='mso-fareast-font-family:"Times New Roman"'>3.1
+A Comparison of Chess and Go <o:p></o:p></span></h2>
+
+<h2><span style='mso-fareast-font-family:"Times New Roman";mso-no-proof:yes'><!--[if gte vml 1]><v:shapetype
+ id="_x0000_t75" coordsize="21600,21600" o:spt="75" o:preferrelative="t"
+ path="m@4@5l@4@11@9@11@9@5xe" filled="f" stroked="f">
+ <v:stroke joinstyle="miter"/>
+ <v:formulas>
+  <v:f eqn="if lineDrawn pixelLineWidth 0"/>
+  <v:f eqn="sum @0 1 0"/>
+  <v:f eqn="sum 0 0 @1"/>
+  <v:f eqn="prod @2 1 2"/>
+  <v:f eqn="prod @3 21600 pixelWidth"/>
+  <v:f eqn="prod @3 21600 pixelHeight"/>
+  <v:f eqn="sum @0 0 1"/>
+  <v:f eqn="prod @6 1 2"/>
+  <v:f eqn="prod @7 21600 pixelWidth"/>
+  <v:f eqn="sum @8 21600 0"/>
+  <v:f eqn="prod @7 21600 pixelHeight"/>
+  <v:f eqn="sum @10 21600 0"/>
+ </v:formulas>
+ <v:path o:extrusionok="f" gradientshapeok="t" o:connecttype="rect"/>
+ <o:lock v:ext="edit" aspectratio="t"/>
+</v:shapetype><v:shape id="Picture_x0020_0" o:spid="_x0000_i1029" type="#_x0000_t75"
+ alt="comparison_table.gif" style='width:278.4pt;height:313.2pt;visibility:visible;
+ mso-wrap-style:square'>
+ <v:imagedata src="CS-TR-339_files/image001.gif" o:title="comparison_table"/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=371 height=418
+src="CS-TR-339_files/image002.gif" alt="comparison_table.gif" v:shapes="Picture_x0020_0"><![endif]></span><span
+style='mso-fareast-font-family:"Times New Roman"'><o:p></o:p></span></h2>
+
+<p><b>1. </b>There are fewer types of pieces in Go than chess (in chess there
+are 6 types of pieces, whereas in Go each player has only one type, called a
+stone). However, the board size is much greater in Go (8x8 squares in chess <span
+class=spelle>vs</span> 19x19 grid in Go). </p>
+
+<p><b>2. </b>The size of the board, and the relative freedom in the placement
+of stones mean that there are also many more moves made in a typical Go game
+(about 80 moves in chess vs. about 300 moves300 moves in Go). </p>
+
+<p><b>3. </b>Stones can be placed anywhere on the board, making for a very
+large branching factor in the selection of each move (estimated at ~200),
+whereas pieces in chess are constrained to a much smaller set of legal moves
+(branch factor of ~ 40). The diversity of chess pieces is exploited to reduce
+the branching factor in chess programs in a way that is not possible in Go (see
+discussion of evaluation functions in 7. below). The branching factor also
+plays a role in the different stages of both games (beginning, middle and end).
+In the opening stage of chess, there are many well-known openings, and these
+are often followed for up to 10 moves. In Go, the number of sensible openings
+is much larger, and set openings are rarely followed for more than about 3
+moves. However, there are sequences of moves in local skirmishes, known as <span
+class=spelle>joseki</span>, that reflect optimal play (for both sides) in
+tactical battles in the corners. Skill in the use of <span class=spelle>joseki</span>
+libraries lies in selecting the right <span class=spelle>joseki</span> to <span
+class=spelle>optimise</span> interactions with stones outside the region of
+interest or diverge from the known sequence to serve other interests. </p>
+
+<p><b>4. </b>Both games can be won by resignation of the opponent, or by an
+outright win - check-mate in chess, or surrounding more territory and taking
+more prisoners in Go. In chess, the end of a game is easy to determine:
+checkmate is simply defined in terms of the position and threats to the King.
+In Go, a game is finished when both players pass, but it is frequently
+difficult for beginners to know when the end of a game has been reached.
+Beginners typically prolong play beyond the point where experts would stop, and
+their difficulties are echoed by Go programs, which also have difficulty estimating
+when to end a game. The natural end of the game occurs when playing additional
+stones reduces the player's score, either by filling in their own territory, or
+giving unnecessary prisoners to the opponent. Go programs are often inefficient
+in both these ways. There are several different rule systems for scoring in Go:
+they are all similar, based on calculating the sum of territory surrounded plus
+prisoners taken during the game for each player, and taking the difference
+between these scores (a typical margin in a professional game would be less
+than five points). </p>
+
+<p><b>5. </b>In both chess and Go, pieces can have long range effects. In chess
+the effect is directly a result of some pieces' ability to move many squares (<span
+class=spelle>e.g</span>, queens, rooks, bishops). In Go, a stone once placed on
+a grid point does not move (although it can be captured and removed from the
+board). However, a group (or pattern of stones) does have long range effects in
+that it can play a role in a capturing race, or can affect the life and death
+struggle of another group. For example, a stone played in the path of a ladder
+(a group of stones involved in a certain type of capturing race) can change the
+potential to link two stones later in the game - even though the stones are on
+the other side of the board. </p>
+
+<p><b>6. </b>The state of the board changes rapidly in chess, as pieces move
+positions. In Go, the board is only gradually changing, as stones are added to
+the existing configurations. This gradual change compensates significantly for
+the greater memory load imposed by the larger board. It also allows accurate
+&quot;read-out&quot; of board positions later in the game - even beginners can
+read out ladders up to 60 moves ahead (a deep but narrow search). The only time
+the physical state of the board changes significantly is when a group is
+captured, and the stones are removed from the board. Groups worth as much as 30
+points are often won or lost in a game as trade-offs for other groups, even
+though the final difference in scores may be just 2 points. </p>
+
+<p><b>7. </b>Evaluation of board positions (in expert human play) typically
+reflects both tactical and strategic factors in both chess and Go. However, in
+chess, there is a good correlation between the likelihood of winning (from any
+stage of the game) and the number and quality of pieces on each side. Thus in
+computer chess programs, strategic factors have not been essential in
+evaluating board position. In Go, there is no strong correlation between
+winning a tactical struggle over a group, and winning the game, as each
+tactical struggle over a group requires moves that are not contributing to
+another group. Early in the game, players strive to achieve influence on the
+board, rather than directly taking territory. In fact, taking territory at the
+start of the game can indicate an over-concentrated <span class=grame>position,
+that</span> will not be effective in containing the opponent's territorial
+moves much later in the game. Algorithmic approaches to measuring the influence
+of a position are a standard part of most Go programs but there are no methods
+to confirm their efficacy, except for the strength of the program itself which
+is usually very weak. </p>
+
+<p><b>8. </b>For all the reasons discussed above, programming approaches to
+chess are amenable to tree searches, with good evaluation criteria. Such
+approaches have not succeeded in Go, because the branching factor is too large
+for brute force search techniques, and pruning is not a viable option without
+good evaluation measures. </p>
+
+<p><b>9. </b>Human <span class=spelle>lookahead</span> in chess and Go is very
+different. Beginners of both games might start by only looking ahead a few
+moves, but in Go, patterns such as ladders can be read out with very little
+effort, and beginners are soon able to trace the path of a ladder across the
+board (which can require up to 60 moves). However, in these read-out sequences,
+there is only one sensible move at each stage, <span class=spelle>i.e</span>, a
+series of forcing moves, so there are no alternative paths to follow (see the
+horizon effect below). In a typical chess game, expert players may search
+alternative possible moves many steps ahead (although typically about 10), but
+for each move there are several alternatives. In Go, there are too many
+alternatives that are reasonable to search far ahead in most moves, although
+for any move, there are likely to be some sequences that can be very deep (e.g.,
+ladders). This combination of factors is not captured well by either
+breadth-first or depth-first search techniques. </p>
+
+<p><b>10. </b>The horizon effect in chess is where a search to a specific depth
+(such as 12 moves ahead) elicits an evaluation that would be radically altered
+if a few more moves had been studied. This effect is often seen in sacrifice
+moves. The horizon effect begins to be a problem at the Grandmaster level in
+chess. In Go, the horizon effect is seen in assessment of even beginner level
+play (e.g., ladders). </p>
+
+<p><b>11. </b>Chess was used in the early 1970s to study human grouping
+processes, and Chase and Simon (1973) showed that expert chess players view the
+board in terms of hierarchical groups of stones. In trying to replicate the
+results with Go players, <span class=spelle>Reitman</span> (1976) found a
+completely different structure, in which stones are seen as part of many
+intersecting groups. Identifying the eventual group to which stones belong is
+critical in determining their safety, however, from <span class=spelle>Reitman's</span>
+<span class=grame>research,</span> it appears that no clean assignments can be
+made until the end stage of the game. Such results indicate sources of
+potential problems for computer go programs that assign stones into
+hierarchical groups in order to estimate features such as influence. </p>
+
+<p><b>12. </b>One major difference in the actual playing of chess and Go lies
+in the standards of the opponents. In chess, a similar standard is required for
+an even game. In Go, there is a very effective handicap system, in which a
+weaker player starts with a predefined number of stones (usually 2-9) placed at
+influential points on the board. Thus the greater skill of one player is offset
+by the material advantage of the weaker one. In such contests (and most Go
+games are of this type) neither player can assume an infallible opponent, for
+the weaker player tries to simplify the game, and play safely, whereas the
+stronger player must take more risks, and exploit the weakness of the other
+player. Although the final score of a Go game is often used as an indication of
+the relative strengths of the players, the important factor is winning, by
+however small a margin, rather than taking chances that may increase the
+margin, but are not as safe. Thus, estimating the other player's level of skill
+is a critical aspect of many Go games. It is also the case that a Go player
+needs to be skilled at all facets of the game, rather than having great
+strength in just one area. This requirement is because players exploit the
+weaknesses of their opponents. It is common to rank the strength of computer Go
+programs according to their first game against a human of a given level. In
+subsequent games, the same human player will often overwhelm the same program
+that had won previously, because the human will learn the program's weaknesses,
+but the program does not change. <o:p></o:p></p>
+
+<p><a name=3.2><u1:p>&nbsp;</u1:p></a></p>
+
+<h2 style='page-break-after:avoid'><span style='mso-fareast-font-family:"Times New Roman"'>3.2
+The Complexity of Go <o:p></o:p></span></h2>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'>An
+algorithm which can be solved in polynomial time can be practically implemented
+to solve &quot;real-world&quot; problems. Algorithms which cannot be solved in
+polynomial time are described as exponential-time algorithms. Except for very
+small problem spaces, these algorithms are impractical. Problems that can be
+solved by a computer with a polynomial amount of memory space are said to be
+solvable in P-space. </p>
+
+<p>It has been shown that, given an arbitrary Go position on an n x n board,
+determining the winner is P-space hard (Lichtenstein and <span class=spelle>Sipser</span>,
+1980). This result used together with situations arising from <span
+class=spelle>ko</span> positions have been used to show that for an arbitrary
+Go position on an n x n board, deciding whether Black can force a win or
+deciding on Black's best move is exponential-time complete (Robson, 1983).
+These results indicate that the use of approximation algorithms which return
+near-optimal solutions are necessary to solve some aspects of Go and that
+brute-force search methods will quickly run into difficulties. </p>
+
+<p>A comparison of the complexity of Go to the complexity of other games is
+provided in Allis <i>et al.</i> (1991). They defined the terms cracked and
+solved, and illustrated the difference between search-space complexity and
+decision complexity. A game is said to be cracked if a program is capable of
+achieving the best possible theoretical results regardless of its opposition.
+To be solved, the best move must be explicable in human terms. The difference
+between search-space complexity and decision complexity is illustrated by a
+variant of Go. The variant consists of players alternatively placing stones on
+unoccupied points of the board or passing. The first player to place 181 stones
+wins. This variant has the same search-space complexity as <span class=grame>Go</span>,
+however, since if the player moving first does not pass is bound to win, the
+decision complexity is trivial. </p>
+
+<p>Allis <i>et al.</i> graphed log <span class=spelle>log</span> search-space
+complexity versus log decision complexity, dividing the graph into solvable and
+unsolvable space for 16 games. Go was shown to be the most complex in both log <span
+class=spelle>log</span> search-space complexity and log decision complexity and
+to be in the unsolvable area. A comparison of Go and Chess shows that 9x9 Go is
+around about the same complexity as Chess (35 versus 50 in 10 log search space)
+and that 19x19 Go is a vastly more complex game than Chess and may well be
+unsolvable as defined above (Allis <i>et al.</i> (1991). <o:p></o:p></p>
+
+<p style='margin-bottom:12.0pt'><a name=3.3><u1:p>&nbsp;</u1:p></a></p>
+
+<h2><span style='mso-fareast-font-family:"Times New Roman"'>3.3 Why Go <span
+class=grame>Cannot</span> be Programmed Like Chess <o:p></o:p></span></h2>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'>Chess
+programs typically use a heuristic search and evaluation technique. Search
+trees of board positions are generated to a fixed depth and are heuristically
+pruned according to an evaluation of the merit of the board positions. This
+approach works well in Chess because the board size is sufficiently small and
+the nature of Chess is more tactical than strategic. </p>
+
+<p>Evaluation of a board position in Go presents problems not encountered in
+Chess. Go is a much more strategic game in comparison to Chess. Unlike Chess,
+Go does not focus around the capture of a single piece. Positional advantages
+are slowly built up in achieving the long term goal of acquiring more territory
+than the opponent. There are many direct and indirect ways to achieve this goal
+such as making territory, building influence, attacking weak enemy groups,
+securing friendly groups, destroying enemy territory etc. Due to the large size
+of the board, a Go game is comprised of many small local skirmishes. If a game
+of Chess were described as a battle, a game of Go could be described as a war.
+Many good tactical moves at the local level must all compete for selection in
+the context of strategic global considerations. Thus a player must balance
+resources to achieve local goals at many locations whilst trying to pursue an
+overall global objective. </p>
+
+<p>Due to the problems associated with evaluation, the brute force methods
+employed in AI to program Chess will not work for Go. As a domain, Go is rich
+for research in AI and cognitive science. Hans Berliner, a former Correspondence
+Chess World Champion, a top-ranked <st1:country-region u2:st="on"><st1:place u2:st="on">U.S.</st1:place></st1:country-region>
+over-the-board player and a well-known Chess programmer referring to Go as
+saying &quot;... this game may have to replace Chess as the `task par
+excellence' for AI&quot; (Berliner, 1978). <o:p></o:p></p>
+
+<p style='margin-bottom:12.0pt'><a name=4.0><u1:p>&nbsp;</u1:p></a></p>
+
+<h1><span style='mso-fareast-font-family:"Times New Roman"'>4.0 History of the
+Computer Go Field <o:p></o:p></span></h1>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'>Early
+work in programming Go began in the late sixties and was primarily academic in
+nature. Academic programs are not generally intended to contribute to a general
+programmable theory of Go, rather they use Go to further other research aims. <span
+class=grame>Serious attempts to develop commercial Go programs was</span>
+advanced by the spread of personal computers in the home and the financial
+inducement of the <span class=spelle>Ing</span> prize. <o:p></o:p></p>
+
+<p style='margin-bottom:12.0pt'><a name=4.1><u1:p>&nbsp;</u1:p></a></p>
+
+<h2><span style='mso-fareast-font-family:"Times New Roman"'>4.1 Academic Work <o:p></o:p></span></h2>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;margin-bottom:12.0pt'><a
+name=4.1.1><u1:p>&nbsp;</u1:p></a></p>
+
+<h2><span style='mso-fareast-font-family:"Times New Roman"'>4.1.1 <span
+class=spelle>Zobrist</span> <o:p></o:p></span></h2>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'>The
+earliest Go program was written by Albert <span class=spelle>Zobrist</span> as
+part of a PhD thesis on pattern recognition (<span class=spelle>Zobrist</span>,
+1970). The present description of <span class=spelle>Zobrist's</span> program
+will concentrate on those aspects that are relevant to computer Go
+considerations. </p>
+
+<h3><span style='mso-fareast-font-family:"Times New Roman"'>Influence Function <o:p></o:p></span></h3>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><span
+class=spelle>Zobrist</span> introduced the idea of using an influence function
+to segment the board into black and white territories. The influence function
+computed a numeric value for every point on the board. Black stones were given
+a value of +50 and white stones a value of -50 and empty points were given a
+value of 0. The <span class=spelle>neighbours</span> of every point that had a
+positive influence value had +1 added to their influence value and similarly
+the <span class=spelle>neighbours</span> of points with negative influence
+values had -1 added to their influence values. This process was repeated
+another three times (for a total of four times). This influence function spread
+black and white influence numerically and <span class=spelle>Zobrist</span>
+then segmented the board into areas of contiguous positive and negative numeric
+values (Figure 17). <br>
+<span style='mso-no-proof:yes'><img border=0 width=448 height=239
+id="_x0000_i1028" src="CS-TR-339_files/fig17.gif"></span></p>
+
+<p>The program constructed an internal representation of the board which was
+stored as numeric values in various 19x19 arrays. The representation included
+arrays containing information such as: </p>
+
+<ul type=disc>
+ <li class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+     mso-list:l0 level1 lfo1;tab-stops:list 36.0pt'><span style='mso-fareast-font-family:
+     "Times New Roman"'>the occupation of a point (black, white, empty), <o:p></o:p></span></li>
+ <li class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+     mso-list:l0 level1 lfo1;tab-stops:list 36.0pt'><span style='mso-fareast-font-family:
+     "Times New Roman"'>number of white and black <span class=spelle>neighbours</span>,
+     both horizontally, vertically and diagonally, <o:p></o:p></span></li>
+ <li class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+     mso-list:l0 level1 lfo1;tab-stops:list 36.0pt'><span style='mso-fareast-font-family:
+     "Times New Roman"'>the number of stones and liberties for each string, <o:p></o:p></span></li>
+ <li class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+     mso-list:l0 level1 lfo1;tab-stops:list 36.0pt'><span style='mso-fareast-font-family:
+     "Times New Roman"'>the number of empty points adjacent to each empty
+     point, and <o:p></o:p></span></li>
+ <li class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+     mso-list:l0 level1 lfo1;tab-stops:list 36.0pt'><span class=grame><span
+     style='mso-fareast-font-family:"Times New Roman"'>size</span></span><span
+     style='mso-fareast-font-family:"Times New Roman"'> (including empty
+     points) and number of stones in each segment. <o:p></o:p></span></li>
+</ul>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'>The
+program also used a second influence function to store an internal
+representation which measured the influence of stones. It was similar to the
+influence described above except that occupied points were initially given
+values of +100 and positive points radiated +3 to their <span class=spelle>neighbours</span>
+whilst negative points radiated -4 to their <span class=spelle>neighbours</span>.
+Since the computer played black (positive values), this influence function
+overstated the opponent's influence value so that the program would play
+cautiously. </p>
+
+<h3><span style='mso-fareast-font-family:"Times New Roman"'>Selecting a Move <o:p></o:p></span></h3>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'>Having
+constructed an internal representation, the program performed pattern
+recognition over the entire board which amounted to searching for certain
+numeric patterns contained in the program's various arrays. Along with each
+pattern would be stored an associated move and a numeric value reflecting the
+priority of the move. When a pattern match was made, the numeric value would be
+added to the point corresponding to the associated move. An attempt was made to
+match each pattern &quot;known&quot; to the program across the entire board, rotating
+and reflecting the patterns as necessary. At the end of this process, the point
+with the highest value became the program's next move. Thus <span class=spelle>Zobrist's</span>
+program used summed feature evaluation to choose its next move. </p>
+
+<p>The program exhibited weaknesses in its play which <span class=spelle>Zobrist</span>
+wished to overcome. He divided the game into four phases: corner and edge play
+at the beginning, extension into the centre of the board, <span class=spelle>defence</span>
+and attack of loosely staked out territories, and stabilizing surrounded
+territories. To enable the program to play appropriate moves during the various
+phases, only appropriate patterns (along with patterns which were relevant
+throughout the entire game) were allowed to be matched during those phases. </p>
+
+<h3><span style='mso-fareast-font-family:"Times New Roman"'>Results and
+Improvements <o:p></o:p></span></h3>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'>Another
+addition to the program was limited <span class=spelle>lookahead</span> or
+heuristic search. During the pattern recognition process, local areas would be
+suggested for further examination by <span class=spelle>lookahead</span> which
+was carried out to a depth of three moves. The program handled saving/capturing
+strings, connecting/cutting strings, ladders, and the formation of eyes using <span
+class=spelle>lookahead</span>. </p>
+
+<p>The performance of <span class=spelle>Zobrist's</span> program was modest,
+beating two novices but performing poorly against experienced players. <o:p></o:p></p>
+
+<p><a name=4.1.2><u1:p>&nbsp;</u1:p></a></p>
+
+<h2><span style='mso-fareast-font-family:"Times New Roman"'>4.1.2 Ryder <o:p></o:p></span></h2>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'>Jon
+Ryder's program (Ryder, 1971) can be seen as an extension of <span
+class=spelle>Zobrist's</span> approach in as much as it used an influence
+function and move selection was based on summed feature evaluation. However,
+Ryder added both strategic and tactical considerations and also used <span
+class=spelle>lookahead</span> extensively. The distinction drawn by Ryder
+between tactics and strategy was that tactical considerations dealt with
+short-term objectives whilst strategic considerations dealt with long-term
+objectives </p>
+
+<p>Due to the intractability of using game trees in Go, a suitable replacement
+had to be found. Ryder's program used the combined analyses of many local
+tactical problems performed by <span class=spelle>lookahead</span> together
+with other analyses as a replacement for the game tree. </p>
+
+<p>Ryder saw Go as a game which required a balance between acquiring actual or
+potential territory and avoiding the loss of important stones to the opponent.
+He formulated three areas of interest which were designed to help maintain this
+balance: board organization showing degree of control of each side over various
+regions; identification of areas of best play for both sides; and analysis of
+strings to determine whether they are safe or endangered. </p>
+
+<h3><span style='mso-fareast-font-family:"Times New Roman"'>Selecting a Move <o:p></o:p></span></h3>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'>Move
+generation was accomplished in two passes. In the first pass, the tactical <span
+class=grame>status of all strings were</span> determined. Armies, walls and
+groups were identified and a process of developmental analysis was performed on
+each which resulted in determining areas and endangered groups for each player.
+Each legal move was then examined in an attempt to eliminate as many as
+possible from future consideration with the fifteen best moves being further <span
+class=spelle>analysed</span> in the second pass. </p>
+
+<p>The second pass began with an analysis of the best fifteen moves from the
+first pass with respect to tactical and naive strategic theories. The score
+obtained by a move from these analyses were added to the score obtained in the
+developmental analysis. The move with the highest combined score after the
+first and second passes was then recommended as the next move. Second pass
+analysis would stop before all fifteen moves were <span class=spelle>analysed</span>
+if an &quot;obviously&quot; best move was identified. </p>
+
+<p>Ryder's program used a forward-pruning method to search the game trees that
+resulted during <span class=spelle>lookahead</span>. In forward pruning, a
+decision based on various criteria is made regarding the desirability of
+pursuing a given branch in a <span class=spelle>lookahead</span> tree i.e.
+whether the future <span class=grame>implications of a particular move is</span>
+worth examining. The criteria for terminating a particular search tree included
+whether a target string had two eyes, whether a saving move resulted in more
+than five liberties, or it was unlikely that the target would be captured. The
+danger in forward pruning is that the best move may be discarded before it has
+been examined. </p>
+
+<h3><span style='mso-fareast-font-family:"Times New Roman"'>Influence Function <o:p></o:p></span></h3>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'>Like
+<span class=spelle>Zobrist</span>, Ryder also used an influence function to
+provide a numeric number to indicate the degree of tactical control each stone
+exerted over its <span class=spelle>neighbours</span>. His influence function
+was similar to <span class=spelle>Zobrist's</span> in that black influence was
+positive and white influence was negative and the influence value at each point
+was the sum of the influence values propagated by its nearby <span
+class=spelle>neighbours</span>. Ryder's influence function was simpler than <span
+class=spelle>Zobrist's</span> in that each stone contributed an influence value
+to its nearby <span class=spelle>neighbours</span> according to a table of
+values (Figure 18). </p>
+
+<p><span style='mso-no-proof:yes'><img border=0 width=447 height=212
+id="_x0000_i1027" src="CS-TR-339_files/fig18.gif"></span></p>
+
+<h3><span class=grame><span style='mso-fareast-font-family:"Times New Roman"'>Ryder's
+influence function.</span></span><span style='mso-fareast-font-family:"Times New Roman"'>
+<o:p></o:p></span></h3>
+
+<p>Both too much and too little influence at a point indicated a problem with
+playing at that point. Too much influence indicated that there was an
+over-concentration to the detriment of the global situation whereas too little
+influence indicated that there was the possibility of capture by the opponent.
+Optimal moves were those that were close to the peak of the value/influence
+curve. Influence was regarded by Ryder to be a local property of a stone
+although he admitted that there were cases (such as ladder-breakers), in which
+stones exerted control on distant parts of the board. In such situation where
+the influence value was not a reliable measure, tactical evaluation was used to
+overcome the short-comings of the influence function. </p>
+
+<p>One situation in which the influence function was not a good measure was
+that of connectivity. Ryder defined two terms: connectedness and strongly
+related. The definition for connectedness was that a point was connected to <span
+class=spelle>colour</span> X if it was occupied by a non-dead stone of <span
+class=spelle>colour</span> X, or if it was empty, it was adjacent to at least
+one stone of <span class=spelle>colour</span> X and none of the opposite <span
+class=spelle>colour</span>. An extension to connectedness was
+half-connectedness. An empty point was half-connected to <span class=spelle>colour</span>
+X if it was adjacent to at least two stones of <span class=spelle>colour</span>
+X and one or more stones of the opposite <span class=spelle>colour</span>. The
+definition of strongly related was that a point was strongly related to <span
+class=spelle>colour</span> X if it was occupied by or adjacent to a stone of <span
+class=spelle>colour</span> X. A point could also be strongly related to <span
+class=spelle>colour</span> X if it was diagonally adjacent to a stone of <span
+class=spelle>colour</span> X with at least one empty point (<span class=spelle>kosumi</span>
+link) or no more than one empty point away (<span class=spelle>ikken-tobi</span>
+link). Groups were defined as sets of points which were connected or half-connected.
+</p>
+
+<p>The influence function was particularly suited to determining walls and
+armies. Walls were defined as a connected set of points in which the influence
+values were equal to or larger than a predefined wall threshold. Similarly,
+armies were defined as a set of points including empty points in which the
+influence <span class=grame>value were</span> equal to or larger than a
+predefined army threshold. </p>
+
+<p>The tactical concepts employed in Ryder's program included liberty
+estimation, <span class=grame>ko</span>, ladders and snapbacks, and eyes and
+false eyes. Ryder admitted that improvement was needed in the program's
+tactical ability which he described as &quot;blunder avoidance&quot;. </p>
+
+<h3><span style='mso-fareast-font-family:"Times New Roman"'>Representation <o:p></o:p></span></h3>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'>Information
+was included in the representation if it satisfied any of the following
+criteria: it was basic and was needed in many calculations; it took a
+significant effort to re-calculate and was used more than once; or it was
+accessed many times and was constant through many if not all of those accesses.
+</p>
+
+<p>Groups and armies were represented in a pointer-based manner. There was a
+pointer from each point in a group or an army to the entity descriptor of the
+group or army it belonged to. Each entity had a pointer to one of the points
+that comprised it which was the base point for that entity. Searches for points
+near entities were initiated from the base point. </p>
+
+<p>The global representation of the board was contained in a 21x21 array (19x19
+with an empty point border around the outside). By using various bits in the
+memory location of each point in the array, the following information/pointers
+were able to be stored: area number; army number; wall number; group number;
+string number; and current state (black, white or empty). </p>
+
+<h3><span style='mso-fareast-font-family:"Times New Roman"'>Results and
+Improvements <o:p></o:p></span></h3>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'>Ryder
+reported the results of only one game which was lost to a novice which had just
+learned the rules and had been given some rudimentary tips on the tactics and
+strategies of Go. With regard to Ryder's main interest, he reported that the
+tactical analysis was quite an efficient searching mechanism which provided valuable
+information for move generation and compared <span class=spelle>favourably</span>
+to the powers of analysis exhibited by human beginners. He was also of the
+opinion that only a small effort would be required to improve the program's
+tactical strength. </p>
+
+<p>Future improvements suggested by Ryder included re-using previously
+calculated information in searching, the incorporation of distant
+ladder-breakers into tactical analysis and improving the definition of
+endangered groups. Ryder identified the developmental analysis stage which consumed
+around 10% of the processing time as needing attention. One possible reason for
+the poor performance of Ryder's program was that it made no distinction between
+the opening, mid and end games and was therefore playing inappropriate tactical
+moves in the end game in particular. The addition of such distinction was
+recognized to be of importance in future improvements by Ryder. <o:p></o:p></p>
+
+<p><a name=4.1.3><u1:p>&nbsp;</u1:p></a></p>
+
+<h2><span style='mso-fareast-font-family:"Times New Roman"'>4.1.3 <span
+class=spelle>Reitman</span> and Wilcox <o:p></o:p></span></h2>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'>Walter
+<span class=spelle>Reitman</span> and Bruce Wilcox began using Go to conduct
+research in 1972. The program that resulted from that research has been
+described both as the <span class=spelle>Reitman</span>-Wilcox Go program and
+to the INTERIM.2 Go program. After the research project was discontinued,
+Wilcox rewrote the INTERIM.2 program to produce NEMESIS, a commercial Go
+program. </p>
+
+<p>The research conducted by <span class=spelle>Reitman</span> and Wilcox using
+Go was predominately in the Artificial Intelligence area and included pattern
+recognition (<span class=spelle>Reitman</span> et al., 1978; <span
+class=spelle>Reitman</span> and Wilcox, 1975,1978), planning (<span
+class=spelle>Reitman</span> and Wilcox, 1974) and replication of human
+perceptual and cognitive abilities in Go. Indeed, the objective of program was
+to model human go play and to this end, they videotaped protocols and post-game
+analyses of a strong Go player to try to ascertain how humans play Go. </p>
+
+<p>According to <span class=spelle>Reitman</span> and Wilcox, the three
+essential ingredients to a Go program are perception, knowledge and
+coordination (Wilcox, 1988). They tried to incorporate into their programs
+representation as many of the perceptions of a skilled Go player as they could.
+They identified and stored two types of Go knowledge: process knowledge which
+included how to kill a group, how to make territory, etc, and evaluation
+knowledge which enabled the stability of groups etc. to be judged, the
+estimation of relative values, etc. Coordination of the program's perceptions
+and knowledge was achieved through appropriate control structures which allowed
+it to choose the next move. </p>
+
+<p>The INTERIM.2 program created and maintained a representation that was a
+selectively updated, multilevel network which <span class=spelle>Reitman</span>
+and Wilcox said was analogous to the type of perceptual and cognitive
+representation a skilled Go player would create. There was a hierarchy of
+experts and critics which operated on the network which chose the next move. <span
+class=spelle>Lookahead</span> was not full-<span class=grame>board,</span>
+rather it was a selective, goal-driven process. </p>
+
+<h3><span style='mso-fareast-font-family:"Times New Roman"'>The INTERIM.2
+Program <o:p></o:p></span></h3>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'>INTERIM.2
+summarized information up and filtered decisions down (Wilcox, 1988).
+Information contained in low-level representations e.g. strings, were
+summarized and used in high-level representations e.g. groups. The program made
+decisions at a high-level about what to &quot;focus on&quot;. These decisions
+were filtered down to lower levels and influenced decisions made at those
+levels. </p>
+
+<h3><span style='mso-fareast-font-family:"Times New Roman"'>Flow of Control <o:p></o:p></span></h3>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'>The
+program stored its representation in a structure called GAMEMAP which was
+indexed through a set of interrelated arrays called GAMEBOARDS. In each
+GAMEBOARD array there were pointers that pointed to every instance of a
+particular data structure e.g. STRING-BOARD contained pointers to every string on
+the board. The GAMEBOARDS progressed from simple to complex: TYPEBOARD,
+STRINGBOARD, <span class=grame>LINKBOARD</span>. Special GAME-BOARDS such as
+LENSBOARD, WEBBOARD, SECTORBOARD and TACTICSBOARD were designed to contain
+representations which corresponded <span class=grame>to a skilled human players
+perceptual and cognitive representations</span>. </p>
+
+<p>The flow of control in the INTERIM.2 program oscillated between MOVE and
+REFLEX. MOVE selectively updated the components of GAMEMAP that were affected
+when stones, black or white, were placed on the board. REFLEX was responsible
+for choosing the program's next move which was achieved by stepping through an
+ordered list of functions and accepting the first move returned by them. </p>
+
+<h3><span style='mso-fareast-font-family:"Times New Roman"'>The Tactician
+(PROBE) <o:p></o:p></span></h3>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'>The
+program's tactician, PROBE, was used to answer specific questions and therefore
+performed narrow, goal-driven <span class=spelle>lookahead</span> instead of
+general purpose, full-board <span class=spelle>lookahead</span> that is common
+in Chess programs. The basic assumption behind PROBE was that if the results of
+a small number of intelligently chosen lines were the same for a given
+question, then those results would most likely be the answer to that question.
+Such an assumption is not always valid, however, <span class=spelle>Reitman</span>
+and Wilcox felt it was a small price to pay for a quick searching and was not
+dissimilar to the penalties experienced when human searches failed for similar
+reasons. PROBE was designed to model how skilled human Go players performed
+tactical problem solving by selective <span class=spelle>lookahead</span> (<span
+class=spelle>Reitman</span> and Wilcox, 1979). </p>
+
+<p>PROBE would be employed to answer a specific question and would propose a
+reasonable initial <span class=spelle>move.The</span> initial move would be
+hypothetically played and a new hypothetical board position would result. PROBE
+would then propose another reasonable move based on the hypothetical board
+position. This would continue until a position was reached which could be
+judged as either a success or a failure with respect to the specific question
+that PROBE was trying to answer. If the position was a success, PROBE returned
+the initial move as the result. If the position was a failure, the hypothetical
+moves were retracted until there was a position in which a reasonable
+alternative move could be made and the process was repeated. In unrestricted <span
+class=spelle>lookahead</span>, all moves were examined in this fashion so that
+the best move could be discovered. In PROBE, not even all reasonable moves were
+examined. Each side was limited to two or three failed variations before the
+search was terminated and a failure result was returned. </p>
+
+<p>The selection and examination of reasonable moves was conducted by a
+hierarchy of experts which formed, evaluated and implemented goal-directed
+&quot;chains of thought&quot; (Wilcox, 1988). There were a variety of experts
+including experts that generated goals and <span class=spelle>subgoals</span>,
+experts that proposed moves to realize goals, experts that used exclusively the
+current board position and current goals, and experts that used all goals and <span
+class=spelle>subgoals</span>. The experts contained a large amount of specific
+Go knowledge. The control structures implemented by <span class=spelle>Reitman</span>
+and Wilcox in PROBE allowed the knowledge contained in the various experts to
+be organized, easily debugged, and readily extended (Wilcox, 1988). The
+goal-directed <span class=spelle>behaviour</span> of PROBE resulted in very
+restrictive searching which typically resulted in around 60 - 80 hypothetical
+moves per <span class=spelle>lookahead</span> (Wilcox, 1988). </p>
+
+<h3><span style='mso-fareast-font-family:"Times New Roman"'>Perceptions and
+Representations <o:p></o:p></span></h3>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'>INTERIM.2
+maintained many different data structures in its representation. Point
+occupancy (black, white, empty) was used to determine strings. A basic property
+of each string was whether it could be captured or saved. The links recognized
+by INTERIM.2 were <span class=spelle>kosumi</span>, <span class=spelle>ikken-tobi</span>,
+<span class=spelle>nikken-tobi</span>, <span class=spelle>kogeima</span> and <span
+class=spelle>ogeima</span>. Links were classified as normal (connectable), dead
+(<span class=spelle>unconnectable</span> but potentially useful) or string capture
+(linkages between strings capturing an opponent string). Basic properties of
+linkages included whether they could be joined or cut, whether they crossed
+opponent links, and why they were created. Special edge linkages which were
+links from strings up to the fourth line to the edge of the board were also
+recognized. Sector lines were long range links and were used in stability
+assessment and move generation. Virtual strings were strings connected by
+unbreakable links. Groups were sets of strings joined together by links.
+Enclosed territory was a set of empty points or dead stones that were enclosed
+by strings, linkages and edge <span class=spelle>linkages.The</span> motivation
+for moves e.g. why a link was created, was explicitly tracked to facilitate
+move selection and to ease debugging. </p>
+
+<p>Influence was radiated using Ryder's algorithm. <span class=spelle>Reitman</span>
+and Wilcox saw influence as misleading in certain situations and therefore
+developed the notion of influence blocks. Areas of empty, contiguous,
+same-signed influence points that did not include linkage points were collected
+into a structure. The perimeter of these structures were located and then
+iteratively &quot;shrunk&quot; to provide nested loops. Since shrinking did not
+take place across stones or linkage points, it was possible that the loops
+created in the shrinking process would become arc segments or strips.
+Eventually individual structures emerged which were called influence blocks.
+Points contained in an influence block were considered more likely to be turned
+into territory the further they were away from the perimeter of the block. </p>
+
+<p>Creating and maintaining INTERIM.2's representation was described by <span
+class=spelle>Reitman</span> and Wilcox as perception and the data structures
+used were also sometimes referred to as perceptual <span class=spelle>representations.Two</span>
+components of the perception system employed by the INTERIM.2 program are
+particularly interesting. Webs were used to determine what regions could be
+&quot;seen&quot; from a stone and lenses were used to monitor actual patterns
+of stones in a game using the program's knowledge of Go patterns. </p>
+
+<p>A web was constructed around a group as concentric &quot;circles&quot; of
+liberty points (circumferential strands) to a maximum depth of nine levels.
+Radial strands emanated from the groups. The web did not continue behind other
+stones, either friendly or unfriendly. Links between stones and between stones
+and the edge of the board (up to three moves away) also stopped a web. The
+continuous loop of the outermost points of a web comprised its perimeter. The
+points between the group and the perimeter were considered to be transparent.
+The perimeter of a web was useful information for a group in deciding where
+potential threats might come from, where it could run to avoid those threats,
+the location of nearby friendly groups, where linkages might be attacked etc. </p>
+
+<p>To <span class=spelle>Reitman</span> and Wilcox, local stone configurations
+and their transformation by sequences of moves is a fundamental aspect of Go.
+Sequences of moves associated with standard configurations e.g. attacking or
+defending a <span class=spelle>kogeima</span> link, are recognized by competent
+Go players. Lenses were designed to monitor such configurations and suggest
+moves that were known pattern continuations. </p>
+
+<p>A lens was comprised of a set of fields. Each field consists of a set of
+points and watches for the development of a sequence of moves. The lens in turn
+supplied information about the suggested moves and global status information to
+the tactician. When a field recognized a configuration, it supplied suggested
+moves and other associated information to the lens. When fields no longer
+recognized patterns they were discarded which caused a lens to get smaller over
+time. This in effect amounted to the &quot;focus&quot; of a lens becoming more
+concentrated over time. </p>
+
+<h3><span style='mso-fareast-font-family:"Times New Roman"'>Performance <o:p></o:p></span></h3>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'>The
+results of three games played by the INTERIM.2 program are reported in <span
+class=spelle>Reitman</span> &amp; Wilcox (1978). Two were won against players
+ranked 22 and 34 <span class=spelle>kyu</span> and one was lost against a
+player ranked 4 <span class=spelle>kyu</span>. The computed ranking of the
+INTERIM.2 program from these games was 27 <span class=spelle>kyu</span>. </p>
+
+<p><span class=spelle>Reitman</span> and Wilcox were pleased with the
+performance of the INTERIM.2 program in regard to their initial objectives of <span
+class=spelle>modelling</span> human play. It played conservatively, choosing to
+defend endangered groups in preference to attacking opponent groups. It
+defended well; the only cases in which it lost groups (other than due to bugs)
+were when several groups were simultaneously endangered. <o:p></o:p></p>
+
+<p><a name=4.1.4><u1:p>&nbsp;</u1:p></a></p>
+
+<h2><span style='mso-fareast-font-family:"Times New Roman"'>4.1.4 Other
+Academic Work <o:p></o:p></span></h2>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'>Some
+of the academic work that has used <span class=grame>Go</span> as a domain is
+presented below. The various papers are described at a high level <span
+class=grame>since,</span> in general, they do not provide specific details that
+would be of use in developing a Go program. </p>
+
+<h3><span class=spelle><span style='mso-fareast-font-family:"Times New Roman"'>Lehner</span></span><span
+style='mso-fareast-font-family:"Times New Roman"'> <o:p></o:p></span></h3>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'>Paul
+<span class=spelle>Lehner</span>, a student of Wilcox, produced a PhD on
+strategic planning in Go (<span class=spelle>Lehner</span>, 1981) which is also
+described in <span class=spelle>Lehner</span> (1981). His work was based on
+representative search which Wilcox found to be frequently exhibited by Go
+players (<span class=spelle>Kerwin</span> and Wilcox, 1973). </p>
+
+<p>A representative search provides information about many potential move
+sequences that satisfy a strategic plan by examining only one of those sequences.
+<span class=spelle>Lehner's</span> results suggested that representative <span
+class=spelle>lookahead</span> was not alone sufficient to evaluate strategic <span
+class=grame>plans,</span> however, it could quickly reject strategically
+unsatisfactory plans. He saw the use of representative search as providing a
+means to reduce the number of moves that would be passed on to a more precise
+tactical <span class=spelle>lookahead</span> mechanism. </p>
+
+<h3><span class=spelle><span style='mso-fareast-font-family:"Times New Roman"'>Stoutamire</span></span><span
+style='mso-fareast-font-family:"Times New Roman"'> <o:p></o:p></span></h3>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'>Go
+was used as a domain for researching machine learning by David <span
+class=spelle>Stoutamire</span> (1991). A simple error function was developed
+which, rather than incorporating tactical or strategic Go knowledge, was
+derived from a database of expert games. <span class=spelle>Stoutamire</span>
+then developed a classification technique called pattern preference which
+automated the process of deriving patterns that were representative of good
+moves. Due to exponential growth of the pattern database, a hashing function
+was developed which had the nice property of graceful degradation as memory
+requirements increased. </p>
+
+<h3><span style='mso-fareast-font-family:"Times New Roman"'>Sander <o:p></o:p></span></h3>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'>To
+avoid the combinatorial explosion that results from using tree search to
+evaluate and select moves, Peter Sander (1979) devised a program with a
+top-down or goal directed organization that used strategies to generate
+possible moves. Sander's program (called <span class=spelle>Kyu</span>) generated
+bottom-up hierarchically structured descriptions of board positions which were
+incrementally updated after every move. It progressively refined its strategies
+into goals and then selected moves. <span class=spelle>Kyu</span> only played
+the opening game to move 25 and an intended look-ahead mechanism was also not
+implemented. </p>
+
+<p><span class=spelle>Kyu's</span> data structures were based on linked records
+which represented strings, groups and armies of both <span class=spelle>colours</span>.
+From any point on the board, it was possible to access the <span class=grame>string,</span>
+group and army that the point belonged to if occupied, or had influence over it
+if unoccupied, by following pointers. After each move, the data structures were
+incrementally updated to reflect the changes caused by a move. The update was
+from low-level to high-level: from points to strings, from strings to groups,
+and from groups to armies. </p>
+
+<p>The architecture which was instantiated in <span class=spelle>Kyu</span> was
+summarized by Sander as being comprised of a multi-level structured data
+representation, and a hierarchically organized planning system which explicitly
+encoded strategies and goals. He also believed that such <span class=grame>an
+architecture</span> had applications in different domains other than Go. </p>
+
+<h3><span class=spelle><span style='mso-fareast-font-family:"Times New Roman"'>Friedenbach</span></span><span
+style='mso-fareast-font-family:"Times New Roman"'> <o:p></o:p></span></h3>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'>Kenneth
+<span class=spelle>Friedenbach</span> studied the interaction of perception and
+cognition in the solution of complex problems by using Go as a domain (<span
+class=spelle>Friedenbach</span>, 1988). He formalized the notion of abstraction
+hierarchies which are based on graph theory and then applied them to <span
+class=grame>Go</span>. The use of Go as a domain was because, according to <span
+class=spelle>Friedenbach</span>, concepts in the Go literature are related in a
+multi-level hierarchy. </p>
+
+<p><span class=spelle>Friedenbach's</span> model of perception and cognition
+involved three components. The first was a hierarchy of static objects which
+consisted of five levels: the points of the board, strings of similar points,
+groups of related strings, loose federations of groups or potential groups
+(armies), and a summary of the properties of the federations in a global level.
+The second was an analytic component concerned with changes in structures as a
+result of sequences of moves or transformations that are considered. The third
+was an integration component concerned with the retention and application of
+information from one analyses to another. </p>
+
+<p>Four types of analysis were carried out. Tactical Safety analysis was
+carried out at the string level and was concerned with capturing and protecting
+strings. Strategic Safety analysis was concerned with killing and defending
+groups and involved <span class=spelle>analysing</span> eyes and connections.
+Strategic Development analysis was carried out at the group level and was
+concerned with open areas, balance measures, the growth of new groups, and the
+interactions of emerging groups. Global Balance analysis was the highest level
+of analysis and was concerned with initiative and the overall strategy of the game.
+</p>
+
+<p><span class=spelle>Friedenbach</span> characterizes an analysis by three
+conditions: the condition under which it is performed, the conditions under
+which it is terminated, causing its evaluation, and the conditions under which
+continuations are chosen. <span class=spelle>Friedenbach</span> uses tactical
+analysis as an example. Tactical analysis is invoked whenever there is a string
+that has less than three liberties and is terminated when all strings have
+three or more liberties. Continuation involves considering <span class=spelle>atari</span>
+moves and captures by the attacker, and captures or liberty increasing moves by
+the defender. A reanalysis would result if a move was made which affected the
+number of liberties of a key string during the analysis. <o:p></o:p></p>
+
+<p style='margin-bottom:12.0pt'><a name=4.2><u1:p>&nbsp;</u1:p></a></p>
+
+<h2><span style='mso-fareast-font-family:"Times New Roman"'>4.2 Programs <o:p></o:p></span></h2>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><span
+class=grame>A description of past and present Go programs are</span> given for
+those programs that such details could be obtained. Other programs are listed
+together with their programmer(s) without description in the results in section
+6. <o:p></o:p></p>
+
+<p><a name=MFG></a><a name=4.2.1></a><u1:p>&nbsp;</p>
+
+</u1:p>
+
+<h2><span style='mso-fareast-font-family:"Times New Roman"'>4.2.1 The Many
+Faces of Go <o:p></o:p></span></h2>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'>The
+Many Faces of Go (MFG) is one of the best commercial Go programs currently
+available. David <span class=spelle>Fotland</span> has been writing Go programs
+on a part time basis since 1981 and released MFG in 1990. <span class=spelle>Fotland</span>
+has continued to enhance MFG since then and has contributed regularly to
+discussions on the computer-go mailing list concerning computer go programming
+in general and MFG in particular. MFG evolved from two other significant
+programs: G2 and Cosmos. <o:p></o:p></p>
+
+<p><a name=4.2.1.1><u1:p>&nbsp;</u1:p></a></p>
+
+<h2><span style='mso-fareast-font-family:"Times New Roman"'>4.2.1.1 G2 <o:p></o:p></span></h2>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><span
+class=spelle>Fotland's</span> first Go program determined territory by
+radiating influence. Unfortunately, it could be beaten by a simple liberty
+filling algorithm so he discarded it and wrote G2. The internal structure of G2
+was described by <span class=spelle>Fotland</span> in terms of its data
+structures, its tactical <span class=spelle>analyser</span>, and its move
+selector (<span class=spelle>Fotland</span>, 1986). G2 used full board reading
+and evaluated all legal moves with an emphasis on strategic moves. After the
+full board evaluation of all moves, the move that received the highest score
+was played. </p>
+
+<h3><span style='mso-fareast-font-family:"Times New Roman"'>The Data Structures
+<o:p></o:p></span></h3>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'>Most
+of G2's code was devoted to updating the data structures. Stones occupied
+points (referred to as squares) and were organized into strings (referred to as
+groups) and then into groups (referred to as armies). Data was associated with
+each point on the board and included the distance to the nearest and second
+nearest edge, a list of adjacent and diagonal <span class=spelle>neighbours</span>,
+string number of the stone occupying the point, the number and a list of
+liberties, <span class=spelle>colour</span> of stones on <span class=spelle>neighbouring</span>
+points (white, black, or mixed), an influence function, and the nearest
+occupied point in each direction. </p>
+
+<p>Horizontally or vertically adjacent points containing like-<span
+class=spelle>coloured</span> stones were <span class=spelle>organised</span>
+into strings. String data included <span class=spelle>colour</span>, number and
+list of liberties, a list of its connections, a list of <span class=spelle>neighbouring</span>
+enemy strings, the army it was part of, and an aliveness value (described
+below). </p>
+
+<p>The types of connections recognized by G2 included one and two point jumps,
+diagonal connection and knight's move. Connection data included the strings it
+joined, its type, the points involved, and its status. </p>
+
+<p>Groups were comprised of strings which were connected by unbreakable
+connections or were both adjacent to a dead enemy string. Group data included a
+list of its constituent strings and dead enemy strings used as connections, the
+number of stones and liberties, the number of eyes, and an aliveness value. </p>
+
+<h3><span style='mso-fareast-font-family:"Times New Roman"'>The Tactical <span
+class=spelle>Analyser</span> <o:p></o:p></span></h3>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'>The
+tactical <span class=spelle>analyser</span> was used to evaluate board
+positions so that a move could be selected. Each group was assigned an
+aliveness value which was also inherited by its constituent strings. The
+strength of G2 was primarily determined by the tactical <span class=spelle>analyser</span>
+and consumed the largest portion of <span class=spelle>Fotland's</span> effort
+(<span class=spelle>Fotland</span> 1986). Since most of the program's time was
+spent in the tactical <span class=spelle>analyser</span>, it had to be both
+fast and efficient in its pruning of search trees. </p>
+
+<p>Aliveness values resulted from a multi-stage process: strings which could be
+captured were identified as dead; eyes were found by the eye evaluator;
+unbreakable connection were identified; connected strings were identified as groups;
+territory was determined by the territory evaluator; and the life and death
+evaluator assigned an aliveness value to each group which was then assigned to
+its constituent strings. </p>
+
+<p>The tactical <span class=spelle>analyser</span> examined every string with
+less than five liberties to determine whether it was dead i.e., whether it
+could be captured; strings which could obtain at least five liberties were
+assumed to avoid capture. Interesting moves were suggested during <span
+class=spelle>lookahead</span> to determine the status of a string. Interesting
+attacking moves included <span class=spelle>geta</span> moves for groups with
+two liberties, liberty filling moves, moves adjacent to an enemy string's
+liberties, and liberty gaining moves for friendly strings. Interesting
+defensive moves included diagonal moves into unoccupied territory, one point
+jumps, extensions, connections, and liberty filling moves (for adjacent enemy
+strings). </p>
+
+<p>The interesting moves were heuristically evaluated and the best were
+selected for further analysis. The best of these moves was hypothetically
+played and the resulting situation <span class=spelle>analysed</span> from the <span
+class=grame>opponents</span> point of view. Once again, the best moves were
+chosen and the best one was hypothetically played. Normal backtracking was used
+at each stage as well as alpha-beta pruning. Thus, a depth-first tree was
+generated until the string being examined was captured or gained sufficient
+liberties to live. The search tree was generated to a maximum of 80 moves which
+still enabled ladders to be accurately read. The number of &quot;best
+moves&quot; considered (between 1 and 3) depended on the depth of the current
+move in the search tree: more moves were considered near the root and less near
+the leaves. Since the value of the terminal node had only two values (i.e., captured
+or escaped), alpha-beta pruning was very efficient (<span class=spelle>Fotland</span>,
+1996). </p>
+
+<p>An eye evaluator was used to maintain information about eyes, half eyes
+(eyes made in <span class=spelle>gote</span>) and quarter eyes (eyes needing
+two moves to be made) by evaluating small enclosed <span class=spelle>eyespace</span>.
+G2 <span class=spelle>recognised</span> some basic dead shapes and various
+types of eyes including three in a row, four in a square, bulky five, pyramid,
+and cross. </p>
+
+<p>Groups were determined by finding strings that were connected by unbreakable
+connections. The tactical <span class=spelle>analyser</span> tried to cut connections
+to test their strength. Dead opponent strings could also be used as connections
+between live friendly strings. </p>
+
+<p>Territory was determined by the territory evaluator. As well as completely
+enclosed territory, G2 also evaluated territory near the board edge which did
+not need to be completely enclosed. Territory could be made near the edge by
+being between a stone and the edge or a connection and the edge. However, such
+territory could be challenged by a stone within four lines along the edge, and closer
+to the edge (undercutting the edge). </p>
+
+<p>The life and death evaluator <span class=spelle>analysed</span> every group.
+An aliveness value was assigned to each group by considering the number of
+liberties it had, its <span class=spelle>eyespace</span>, the amount of
+territory it controlled, whether it could extend along the edge, its size,
+whether it was in contact with an enemy string, and whether it was completely
+surrounded. The aliveness value rating itself had 20 different values including
+&quot;has two eyes&quot;, &quot;has enough space to make two eyes&quot;,
+&quot;unsettled&quot;, &quot;not enough <span class=spelle>eyespace</span>&quot;,
+and &quot;can't possibly make two eyes&quot;. </p>
+
+<h3><span style='mso-fareast-font-family:"Times New Roman"'>The Move Selector <o:p></o:p></span></h3>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'>A
+rule-based strategic evaluator with 65 rules was used to select moves by
+choosing the highest scoring move using a two step process. In the first step,
+strategic moves were evaluated and in the second step, all legal moves were
+evaluated. Information from the data structures and the tactical <span
+class=spelle>analyser</span> was used to evaluate board positions resulting
+from moves in both step one and two. <span class=spelle>Fotland</span> felt
+that this was the weakest component of G2 due to the weakness of the data
+structures (<span class=spelle>Fotland</span>, 1986). </p>
+
+<p>The rules suggested strategic moves to evaluate such as playing in an empty
+corner, make <span class=spelle>shimari</span> or <span class=spelle>kakari</span>,
+a move from the <span class=spelle>joseki</span> dictionary, extending along an
+edge, invasions, contact fights, blocking, cutting, connecting, blocking an
+invasion on a wall, or making a <span class=grame>ko</span> threat. </p>
+
+<p>In the first step, all the suggested strategic moves were evaluated. A
+particular strategic move was hypothetically played and the resulting board
+position was evaluated. The evaluation process consisted of assigning values to
+the board points and then summing them together to return an overall score. The
+value for a given board point was determined by the aliveness value of the
+string that controlled it. If the board position resulting from a strategic
+move did not satisfy the strategic goals associated with the rule that
+suggested it, the evaluation of the move was ignored. </p>
+
+<p>In the second step, all legal moves (including the strategic moves
+considered in the first step) were evaluated. The value assigned to a board
+position resulting from hypothetically playing a move was based on the
+aliveness, size, and amount of territory controlled by each string on the
+board. </p>
+
+<p>The values that resulted for each move from step two were summed with the
+value they obtained if they were considered in step one. The move with the
+overall highest score was then chosen as G2's next move. </p>
+
+<h3><span style='mso-fareast-font-family:"Times New Roman"'>Size, Performance
+and Timeline <o:p></o:p></span></h3>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'>Between
+1981 and 1988, <span class=spelle>Fotland</span> spent around four <span
+class=grame>years</span> part time writing G2. He stopped work on G2 for
+several years because the available computers were not fast enough for the
+development of strong Go programs (<span class=spelle>Fotland</span>, 1996). G2
+was around 11000 lines of C code and used around 700k for the code and data.
+During that time, <span class=spelle>Fotland's</span> Go skill advanced from 15
+<span class=spelle>kyu</span> to 1 <span class=spelle>dan</span>. G2 played at
+about the 25 - 20 <span class=spelle>kyu</span> level and could beat beginners
+without much trouble (<span class=spelle>Fotland</span>, 1986). <span
+class=spelle>Fotland</span> had some success at computer Go competitions with
+G2 coming 4th in the world computer Go competition in <st1:country-region u2:st="on">Taiwan</st1:country-region>
+and 1st in the <st1:country-region u2:st="on"><st1:place u2:st="on">US</st1:place></st1:country-region>
+computer Go championship in 1987. <o:p></o:p></p>
+
+<p><a name=4.2.1.2><u1:p>&nbsp;</u1:p></a></p>
+
+<h2><span style='mso-fareast-font-family:"Times New Roman"'>4.2.1.2 Cosmos <o:p></o:p></span></h2>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><span
+class=spelle>Fotland</span> converted G2 into Cosmos in 1988. The main
+difference between Cosmos and G2 was that instead of evaluating all legal
+moves, only suggested moves were evaluated. This transition was achieved by
+increasing the number of move <span class=spelle>suggestors</span> to over 250.
+Quiescent search was added and the connection, eye, and territory evaluations
+were made more accurate (<span class=spelle>Fotland</span>, 1996). </p>
+
+<h3><span style='mso-fareast-font-family:"Times New Roman"'>Data Structures <o:p></o:p></span></h3>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'>The
+data structures used in <span class=spelle>Comos</span> were basically the same
+as those used in G2. The eye information included the number of eyes achievable
+in <span class=spelle>gote</span>, the number of eyes achievable in <span
+class=spelle>sente</span>, the number of eyes achievable if the opponent moved
+twice, a list of vital points, and eye type. The information contained in the
+data structures was updated either incrementally (e.g., lists of liberties) or
+after every move (e.g., influence). </p>
+
+<h3><span style='mso-fareast-font-family:"Times New Roman"'>Tactician <o:p></o:p></span></h3>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'>Essentially,
+Cosmos had the same tactician as G2 but better move generation and sorting. In
+Cosmos, the tactician was only used to determine dead and threatened strings by
+trying to capture them. Its parameters were maximum liberty count, maximum,
+depth, and maximum search size. The maximum liberty count was 4, and therefore
+as for G2, strings with more than 4 liberties were assumed to avoid <span
+class=spelle>capture.The</span> maximum depth allowed was 100. The search size
+determined the playing level (<span class=spelle>Stoutamire</span>, 1991) and
+since forcing moves were not counted, ladders could be accurately read even at
+low playing levels. </p>
+
+<h3><span style='mso-fareast-font-family:"Times New Roman"'>Influence Function <o:p></o:p></span></h3>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'>Territory
+was determined by radiating positive influence from <span class=grame>alive</span>
+groups and negative influence from dead groups. Radiated influence did not pass
+through stones or connections and was inversely proportional to distance. </p>
+
+<h3><span style='mso-fareast-font-family:"Times New Roman"'>Board Evaluation <o:p></o:p></span></h3>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'>Life
+and death of groups was the primary concern dealt with by the evaluation
+process. Board positions were evaluated by a similar process to that used in G2
+with the addition of quiescent search. </p>
+
+<p>The tactician was used to determine dead and threatened strings (those that
+could be captured if they moved second) and whether the stones at the diagonal
+of eyes could be captured. This information was useful in identifying
+unbreakable connections and forming strings into groups. </p>
+
+<p>Eyes were <span class=spelle>analysed</span> to determine their potential
+and then allocated to groups. False eyes were identified by checking the
+diagonals of eyes and some dead shapes were also known by Cosmos. Any group
+with enough <span class=spelle>eyespace</span> to make two eyes was considered
+to be alive. Potential eye space could be gained by extensions along the edge,
+possible connections, being adjacent to a threatened enemy group, and by
+controlling territory which was not already considered to be an eye. </p>
+
+<p>There were 25 values that described a <span class=grame>groups</span>
+strength in terms of its life and death status. The values were divided into
+five main categories which included very alive, alive, unsettled, weak and
+dead. Determining the strength of a group included considering potential
+connections, potential eyes, and potential extensions along the edge. Positive
+influence was radiated from <span class=grame>alive</span> groups and negative
+influence was radiated from dead groups with black and white influence being
+maintained separately. </p>
+
+<p>Weak groups which were contacted by the influence from friendly alive groups
+were considered not to be surrounded. Weak groups were further divided into
+those that could run and fight and those which would almost certainly die. </p>
+
+<p>In general, board points were scored according to the radiated influence
+values. However, occupied board points, board points adjacent to a stone and
+board points between a stone and an edge were scored differently. Unsettled
+groups were scored according to <span class=grame>who</span> as to play next. </p>
+
+<h3><span style='mso-fareast-font-family:"Times New Roman"'>Move Selection <o:p></o:p></span></h3>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'>Cosmos
+had over 250 rules that suggested moves which included <span class=spelle>fuseki</span>
+moves (including <span class=spelle>shimari</span>, <span class=spelle>kakari</span>
+and <span class=spelle>joseki</span> moves), edge moves, playing in the centre,
+playing safe when ahead of opponent, &quot;squirming&quot; around when behind
+opponent, pattern matching, saving weak friendly groups (including making eyes,
+running, or fighting <span class=spelle>semeais</span>), killing weak enemy
+groups, cutting, connecting, contact fights, <span class=spelle>ko</span>
+threats, and filling dame. Cosmos had a <span class=spelle>joseki</span>
+library which contained around 5000 suggested <span class=spelle>joseki</span>
+moves and a pattern database which had 60 patterns which were 5 x 5 in size.
+Whenever a match was made, the rule (code) associated with the pattern was
+applied (executed) and would then suggest a move. The addition of extra moves
+to be suggested could easily be accomplished by the addition of new move <span
+class=spelle>suggestor</span> rules or the addition of patterns. </p>
+
+<p>The rules would supply a guess value (probable evaluation of the move),
+bonus value, minimum aliveness value, and would indicate which groups were
+being attacked or defended if any. The moves were sorted by their guess values
+and, depending on playing level, a certain number were &quot;played&quot;.
+Moves could be rejected before being evaluated if they did not
+&quot;apply&quot;. A move applied if it accomplished what it was intended to
+do: if a move was intended to defend a group and the group ended up weaker than
+it started the move was rejected. Surviving moves were awarded a <span
+class=spelle>sente</span> bonus if they achieved <span class=spelle>sente</span>.
+The position resulting from the move was then evaluated. The evaluation score,
+the <span class=spelle>sente</span> bonus and the rule bonus were summed
+together and the highest scoring move was selected as the next move. </p>
+
+<h3 style='page-break-after:avoid'><span style='mso-fareast-font-family:"Times New Roman"'>Size,
+Performance and Timeline <o:p></o:p></span></h3>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'>It
+took <span class=spelle>Fotland</span> nine months to compress G2 down to 512 k
+and add a new user interface. In 1988 Cosmos was released by <span
+class=spelle>Ishi</span> Press for IBM-PC as Cosmos, The Computer Go Partner
+and was released a second time in 1989. Due to the amount of time spent on the
+user interface, <span class=spelle>Fotland</span> was unable to devote
+sufficient time to improving Cosmos' playing level and its performance in
+various world computer Go championships was modest coming 8th in 1988 and 7th
+in 1989 (<span class=spelle>Fotland</span>, 1996). <o:p></o:p></p>
+
+<p><a name=4.2.1.3><u1:p>&nbsp;</u1:p></a></p>
+
+<h2><span style='mso-fareast-font-family:"Times New Roman"'>4.2.1.3 Many Faces
+of Go <o:p></o:p></span></h2>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'>After
+a rewrite of the user interface and addition of professional graphics and new
+features, Cosmos was released as The Many Faces of Go in 1990. Additions to MFG
+included a limited full board <span class=spelle>lookahead</span> capability,
+consideration of the value of <span class=spelle>sente</span>, and a strategy
+function which is used to focus attention on the important areas of the board and
+to identify urgent moves. The <span class=grame>number of patterns in both the </span><span
+class=spelle>joseki</span><span class=grame> and pattern databases were</span>
+increased. The pattern database was also improved by increasing the pattern
+size from 5x5 to 8x8, by storing many suggested moves for each pattern in a
+move tree (rather than just one per pattern as for Cosmos), and by a complete
+rewrite which encompassed algorithms, code, and data structures and lead to an
+increase in speed (<span class=spelle>Fotland</span>, 1996). </p>
+
+<h3><span style='mso-fareast-font-family:"Times New Roman"'>Data Structures <o:p></o:p></span></h3>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'>The
+dynamic data describing a board position is stored in three classes of data
+structures: incremental, locally recalculated, and globally recalculated. The
+data in the incremental data structures is updated upon addition or removal of
+a stone and includes low level information such as lists of empty points,
+number of liberties etc. Locally recalculated data is updated as it is needed
+i.e., it is only updated for regions of the board which have been affected by a
+particular move or move sequence, and includes connection strength, and eyes.
+Globally recalculated data is updated for the whole board and includes group
+strength and influence. The locally and globally recalculated data structures
+are maintained by the evaluation function. </p>
+
+<p>The dynamic data is stored globally and is generated progressively in several
+passes of increasing abstraction. The dynamic data used in MFG includes point
+environment, string data, connection data, eye data, potential eye data, group
+data, territory, and score. </p>
+
+<p>An instance of the connection data structure stores information pertaining
+to connectivity between two strings. Each connection has a list connection
+points i.e., a liberty of one string which is no more than three points away
+from the other string. Thus, the connection <span class=spelle>recognised</span>
+by MFG include <span class=spelle>hane</span>, one point jump (<span
+class=spelle>ikken</span> <span class=spelle>tobi</span>), knights move (<span
+class=spelle>kogeima</span>), two point jump (<span class=spelle>nikken</span> <span
+class=spelle>tobi</span>), large knights move (<span class=spelle>ogeima</span>),
+three point jump, and bent three point. Other special connections near the
+board edge are handled through the pattern database. The data stored in the
+connection data structure includes the strings involved in the connection(s),
+the number of and lists of one, two and three point connections (i.e., as
+measured from the connection points), the type of each connection, and the
+strength of each connection (e.g., already cut, <span class=spelle>cuttable</span>,
+shared connection, connected with <span class=spelle>aji</span>, connected
+solidly). Other than the type and strength data which is stored in a locally
+recalculated data structure, the connection data is stored in an incremental
+data structure. </p>
+
+<p>The eye data structure records information pertaining to either a block of
+empty point or dead enemy strings which are partially or completely enclosed by
+friendly stones. Data stored in the eye data structure includes <span
+class=spelle>colour</span>, a list of the points in the eye, vital points, and
+eye type (e.g., one point, two <span class=grame>point</span>, line eye, big
+eye, and dead group eye). The number of eyes (to a resolution of 1/8 of an eye)
+achievable under various conditions were recorded including the number of eyes
+if opponent moves twice, number of eyes if opponent moves next, and number of
+eyes if program moves next. A board point can only be recorded as belonging to
+one eye. The eye data structure is a locally recalculated data structure since
+eye data does not lend itself to incremental update. In hindsight, <span
+class=spelle>Fotland</span> says that a pattern based approach to recognizing
+eyes would be preferable (<span class=spelle>Fotland</span>, 1993). </p>
+
+<p>The evaluation of group strength and the generation of attacking and
+defending moves <span class=grame>involves</span> identifying potential eye
+space and running points. The potential eye data structure contains type, value
+and location data for potential eyes. <span class=grame>An examples</span> of
+data stored in the potential eye data structure is &quot;extend along
+edge&quot; (type), value is number of new points of eye space, and location is
+the liberty to extend from. Running points are stored by type (e.g., running
+towards friendly/unfriendly stones) in several different lists. Potential eyes
+and running points are stored in a globally recalculated data structure. </p>
+
+<h3><span style='mso-fareast-font-family:"Times New Roman"'>Tactician <o:p></o:p></span></h3>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'>Every
+string with three or less liberties and many strings with four liberties are
+read by the tactician. Each string is read twice, once with White moving first
+and once with Black moving first. The tactician determines whether a string is
+captured (i.e., can not live even if it moves first), threatened (i.e., it
+lives if it moves first and dies if it moves second), or stable (i.e., lives
+regardless of who moves next). The tactician relies on simple heuristics
+concerned with the number of liberties and connectivity; pattern matching is
+not used in the tactician. </p>
+
+<p>The tactician has two separate move generators; one to generate attacking
+moves and one to generate defensive moves. The moves suggested by the move
+generators are sorted according to criteria which include second order liberties,
+cut points, and simple eye shapes. Once sorted, an alpha-beta depth-first
+search is employed with the performance of the search depending on the quality
+of the move sorting (<span class=spelle>Fotland</span>, cgm1 5 Mar. 1993). </p>
+
+<p>Tactical searches are goal directed and are limited to a maximum number of
+nodes. For string captures this is around 100, however, when only one move is
+suggested, it is not counted towards the node limit. In this way, ladders can
+be read without problems (<span class=spelle>Fotland</span>, cgm1 14 Oct.
+1993). The <span class=grame>number of nodes for a search are</span> allocated
+to the branches according to the value given to the moves by the first ply move
+generator and thus different branches may end at different depths. The
+branching factor at each successive ply is progressively constrained by the
+tactician. The branching factor falls from five at the first ply to one or two
+by the fifth ply. </p>
+
+<p>Since the data structures in MFG are separated into incremental, locally
+recalculated and globally recalculated, low level local tactical searches can
+be executed quickly by only updating the incremental data structures. However,
+the possible goals of such a search are limited since the high level data
+structures are not recalculated. It is not possible, for example, for MFG to
+search for <i>x</i> liberties and two eyes (<span class=spelle>Fotland</span>,
+cgm1 3 Nov. 1993). </p>
+
+<p>The tactician is used to read connections and eyes. A cutting stone can be
+examined by the tactician to determine whether or not it will be captured.
+Stones on the diagonal of eyes can be examined to determine whether they can be
+captured. These types of search do not exceed around 12 ply since the program
+actually plays worse if more plies are considered (<span class=spelle>Fotland</span>,
+1996). </p>
+
+<p>MFG uses caching to reduce the amount of time spent reading. Since strings
+are read twice, tactical results related to eyes, capture or threat, and cuts
+are cached rather than re-evaluated. Life and death analysis are cached as
+trees since they are smaller than the trees which would result from tactical
+searches (<span class=spelle>Fotland</span>, cgm4 16 Aug. 1994). </p>
+
+<h3><span style='mso-fareast-font-family:"Times New Roman"'>Influence Function <o:p></o:p></span></h3>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'>The
+influence function radiates influence which is inversely proportional to
+distance. Influence is radiated to a fixed maximum distance of nine although
+when lower playing levels are chosen, the distance is smaller. Stones and
+connection impede the radiation of influence. Black and White influence are
+radiated separately (<span class=spelle>i.e</span>, they are not summed
+together to give a single value for each board point) so that their relative
+values can be compared. Dead stones radiate negative influence and thus, since
+Black and White influence is maintained separately, dead stones reduce their
+own influence rather than increase their opponents influence. The initial
+influence value radiated from a stone depends on its strength. </p>
+
+<p>Influence is not used to determine group connectivity. The use of influence
+in MFG includes determining thickness and territory, identifying surrounded
+groups, and generating <span class=spelle>moyo</span> building or reducing
+moves. Another way in which influence is used is to determine a group's running
+ability. A group's ability to run towards a liberty depends on the relative
+values of friendly and unfriendly influence nearby. The sum of a group's
+ability to run toward each of its liberties determines its running ability
+whilst the gradient of the influence determines the direction in which it
+should run. </p>
+
+<h3><span style='mso-fareast-font-family:"Times New Roman"'>Evaluation <o:p></o:p></span></h3>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'>Board
+positions are evaluated in a multiple pass process. The evaluation function
+consists of many components which include the tactical <span class=spelle>analyser</span>
+and evaluators for connections, eyes, group strength, and territory. A score
+for the position being evaluated is achieved by assigning a value between -50
+and +50 to each board point to indicate the level of Black or White control
+exerted on them. The overall score for the board position is the sum of these
+values for each board point. </p>
+
+<p>In order to try and overcome the difficulties associated with the horizon
+effect, <span class=spelle>Fotland</span> chose to use quiescent search rather
+than modify the evaluation function. In quiescent search, positions are
+evaluated when they become quiet rather than when they are in a state of flux
+(e.g., such as in the middle of a piece exchange in chess). Positions which are
+not quiet are <span class=spelle>characterised</span> by oscillations in the
+evaluation values returned for successive moves which makes it difficult to make
+good decisions based on the evaluations. MFG uses quiescent search as part of
+the evaluation function for full board evaluation to overcome this problem by
+either calling itself recursively (i.e., generating further moves) until a
+position becomes quiet or by using patterns suggested as obvious local answers
+to make the position quiet. MFG will generate up to six plies of moves in a
+quiescent search which improves its performance by up to four stones (<span
+class=spelle>Fotland</span>, cgm1 30 Sep. 1993). </p>
+
+<h3><span style='mso-fareast-font-family:"Times New Roman"'>Move Suggestion <o:p></o:p></span></h3>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'>Moves
+are suggested by a rule-based expert system and include <span class=spelle>fuseki</span>
+(e.g. <span class=spelle>shimari</span>, <span class=spelle>kakari</span>, and <span
+class=spelle>joseki</span> moves), moves on the edge (e.g., invasions and
+extensions), playing in the centre, conservative play when ahead, risky play
+when behind, pattern matching (e.g., cutting and connecting, surrounding and
+escaping, invasion and <span class=spelle>defence</span>, endgame, killing and
+saving groups, and shape-based moves), group defensive moves (e.g., making
+eyes, running, and fighting <span class=spelle>semeais</span>), contact fights
+(e.g., blocking, extending for liberties, and <span class=spelle>hane</span>), <span
+class=spelle>ko</span> threats, and dame. </p>
+
+<p>A limited form of full board <span class=spelle>lookahead</span> is achieved
+by storing move sequences in the pattern and <span class=spelle>joseki</span>
+databases. Move sequences attached to patterns in the pattern and <span
+class=spelle>joseki</span> databases are played onto the board and evaluated at
+their endpoints. <span class=grame>Thus if a particular </span><span
+class=spelle>joseki</span><span class=grame> is suggested as appropriate, the
+stones in that sequence are played and the resulting board position is
+evaluated.</span> This enables MFG to &quot;play&quot; to the end of a <span
+class=spelle>lookahead</span> sequence and <span class=spelle>minimax</span>
+the score returned by the evaluation function for the resulting board position.
+</p>
+
+<h3><span style='mso-fareast-font-family:"Times New Roman"'>Pattern Database <o:p></o:p></span></h3>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'>Each
+pattern in the pattern database has <span class=grame>a</span> <span
+class=spelle>a</span> move tree associated with it. The pattern database
+contains around 1200 patterns of size 8x8 and around 6900 suggested moves with
+the average number of moves stored for each pattern being about 5. </p>
+
+<p>Each point in a pattern is marked as black, white, empty, white or empty,
+black or empty, black or white, or anything (i.e., do not care). Patterns are <span
+class=spelle>categorised</span> according to whether they are in the middle of
+the board or whether they contain edges and/or corners. </p>
+
+<p>A successful match of a pattern depends on both matching the stones in the
+pattern with those on the board and matching any attributes associated with the
+pattern. Each pattern has as many as 10 attributes which pertain to stones and
+include whether they were dead or alive, minimum number of liberties, and
+connectivity between stones. </p>
+
+<p>To match over a 1000 patterns on a 19x19 board in 16 different orientations
+requires around 3 million primitive operations. Since performance is a big
+issue, the patterns are compiled into a bit array which facilitates fast
+bit-parallel comparisons. By using an 8-bit hash function and bit-wise
+operations, the number of primitive operations is reduced to around 350000.
+This number of operations still takes enough time to make it too expensive to
+match all patterns more than once per move. </p>
+
+<p>Patterns from the pattern database are evaluated after being played on the
+board in their entirety i.e., they are evaluated at the endpoints of their move
+trees. A small subset of patterns are used to read local sequences based on
+shape. <span class=spelle>Fotland</span> has recently begun evaluating the
+strength of one point jump connection using patterns (<span class=spelle>Fotland</span>,
+1996). </p>
+
+<p>A fast pattern matcher is necessary for a strong Go program according to <span
+class=spelle>Fotland</span>. Pattern matching can be used to suggest and sort
+moves, and to classify connections and eyes. <st1:city u2:st="on"><st1:place u2:st="on">Reading</st1:place></st1:city>
+is employed to determine whether eyes are false. Pattern matching on its own is
+not adequate for life and death and group strength determination (<span
+class=spelle>Fotland</span>, cgm1 8 Apr. 1993). The eye and connection patterns
+are hand coded decision trees. </p>
+
+<p>One method that <span class=spelle>Fotland</span> tried to increase the
+number of patterns in the pattern database was to take them from professional <span
+class=spelle>games.When</span> replaying a professional game, if MFG didn't
+consider the move played by a professional or the move played was low on the
+suggestion list, <span class=spelle>Fotland</span> would manually cut-and-paste
+an 8x8 section from the game into the pattern database using a self-written
+graphics pattern database editor. <span class=spelle>Fotland</span>
+discontinued this method since most of the missed moves were tactical (i.e.,
+based on read-out not shape) or depended on a larger context than the 8x8 section
+that was placed in the pattern database. <span class=spelle>Fotland</span>
+found that the cut-and-paste approach to patterns was more profitable from even
+games played on the IGS (<span class=spelle>Fotland</span>, cgm1 13 Jan. 1994).
+</p>
+
+<h3><span class=spelle><span style='mso-fareast-font-family:"Times New Roman"'>Joseki</span></span><span
+style='mso-fareast-font-family:"Times New Roman"'> Database <o:p></o:p></span></h3>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'>The
+<span class=spelle>joseki</span> database contains around 45000 moves. <span
+class=spelle>Joseki</span> sequences are stored as directed acyclic graphs
+(i.e., they contain no loops) having empty corners at their roots. Moves in a <span
+class=spelle>joseki</span> sequence can be one of several types including
+urgent, complex, trick, and bad. The urgent <span class=grame>move have</span>
+priority whilst the complex and trick moves are only played if MFG is behind.
+The bad moves are not for the program to <span class=grame>play,</span> rather
+they are used by the program to know how to respond to bad moves played by its
+opponent. </p>
+
+<p><span class=spelle>Joseki</span> patterns are evaluated by being played on
+the board in their entirety and evaluating the resulting board position. MFG
+selects <span class=spelle>joseki</span> sequences that are appropriate given
+the status of the other corners (<span class=spelle>Fotland</span>, 1993). </p>
+
+<h3><span style='mso-fareast-font-family:"Times New Roman"'>Strategy <o:p></o:p></span></h3>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'>A
+strategy function is used to focus attention on important areas of the board
+before each move (<span class=spelle>Fotland</span>, 1993). The dynamic data is
+examined to determine what phase the game is in, the relative score, the value
+of taking <span class=spelle>sente</span>, and whether there are any urgent
+offensive or defensive moves that need to be made. </p>
+
+<p>Urgent offensive and defensive moves are examined initially and if
+sufficiently urgent are played without any further considerations. Urgent moves
+can be suggested by the pattern matcher or by examination of groups which are
+determined to need urgent attention. Friendly groups which need urgent <span
+class=spelle>defence</span> include big groups and cutting groups. Opposition
+groups which need urgent attack include big groups, cutting groups, and groups
+adjacent to friendly groups needing urgent <span class=spelle>defence</span>. </p>
+
+<p>Move suggestion is affected by the phase that the game is in. Certain rules
+will only fire in certain phases of the game. The <span class=spelle>fuseki</span>
+phase lasts until <span class=spelle>joseki</span> sequences have been pursued
+in all the corners. The middle game lasts until at least move 120 and MFG
+enters the end game when there are no unsettled groups on the board. Transition
+between middle game and end game phases may occur many times during a game. </p>
+
+<p>The types of moves suggested are also affected by the relative score. MFG
+plays more conservatively when it is far ahead of its opponent and makes
+unsound invasions when it is far behind its opponent. The relative score is
+classified into many states including &quot;way ahead&quot; (over 40 points),
+&quot;ahead (20 - 40 points), &quot;about even&quot;, &quot;behind&quot; (over
+10 points), and &quot;way behind&quot; (over 20 points). </p>
+
+<h3><span style='mso-fareast-font-family:"Times New Roman"'>Move Selection <o:p></o:p></span></h3>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'>Since
+the evaluation function is very slow (<span class=spelle>Fotland</span>, cgm4
+16 Aug. 1994), a limit is placed on the number of full board evaluations which
+can be performed each move depending on the playing level. MFG can only look at
+5 to 10 moves in detail (depending on playing level) before selecting the move
+it finally plays. A safeguard against errors in the evaluation function is that
+only reasonable moves are suggested for full board evaluation (<span
+class=spelle>Fotland</span>, 1993). </p>
+
+<p>By employing the strategy function, the move suggestion expert system, and
+the <span class=spelle>joseki</span> and pattern databases, MFG fully examines
+a small number of moves, playing the one which receives the highest score from
+the evaluation function. </p>
+
+<p>The score returned from a full board evaluation is also modified by the
+addition of <span class=spelle>sente</span> if applicable. Thus if MFG plays a <span
+class=spelle>sente</span> move, the value of <span class=spelle>sente</span> is
+added to the evaluation for the resulting position. The value of <span
+class=spelle>sente</span> varies from 7 points during the <span class=spelle>fuseki</span>
+to 1 or 2 points in the endgame and is determined by the strategy function. </p>
+
+<h3><span style='mso-fareast-font-family:"Times New Roman"'>Size, Performance
+and Timeline <o:p></o:p></span></h3>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'>With
+some help from <span class=spelle>Ishi</span> Press and a professional artist, <span
+class=spelle>Fotland</span> rewrote Cosmos' user interface and released it as
+MFG in 1990. Until the present time (July 1996), MFG has had 3 releases with
+various improvements. MFG contains around 40000 lines of C code with around
+another 20000 lines of user interface code. </p>
+
+<p>MFG has performed well in various world computer Go championships including
+4th in 1993, 2nd in 1994, and 3rd in 1995. According to <span class=spelle>Fotland</span>,
+MFG gains about one stone in strength each year (<span class=spelle>Fotland</span>,
+1996). MFG plays on both the IGS and the NNGS as <span class=spelle>ManyFaces</span>.
+MFG participates in the NNGS rating scheme and was rated 9 <span class=spelle>kyu</span>
+(as at July 1996). It was also awarded an 8 <span class=spelle>kyu</span> diploma
+from the Nihon <span class=spelle>Ki</span>-in in <st1:country-region u2:st="on"><st1:place u2:st="on">Japan</st1:place></st1:country-region>
+based on its performance against a 1 <span class=spelle>dan</span> amateur at 9
+stones and a sample play against a professional in September 1995 (<span
+class=spelle>Fotland</span>, 1996). <o:p></o:p></p>
+
+<p><a name="GO4++"></a><a name=4.2.2></a><u1:p>&nbsp;</p>
+
+</u1:p>
+
+<h2><span style='mso-fareast-font-family:"Times New Roman"'>4.2.2 Go4++ <o:p></o:p></span></h2>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><span
+class=spelle>Micheal</span> Reiss started writing Go programs in 1983 and his
+current program, Go4++, has evolved from various predecessors over that time.
+Reiss has met with some success in computer Go competitions and Go4++ came 2nd
+in both the 1st and 2nd FOST cups. </p>
+
+<p>Reiss' programming philosophy is to use simple algorithms on a large amount
+of data rather than complex algorithms on a small amount of data. Go4++
+calculates everything from first principles; complex concepts are calculated
+from simpler concepts which are in turn functions of even simpler concepts.
+Thus, Go4++ does not have an elaborate rule-based expert system at its core. A
+positive consequence of this approach is that Reiss' relatively weak ranking (2
+<span class=spelle>kyu</span>) compared to other top Go programmers is not a
+deficit. It also means that Go4++ usually responds well to the strange moves
+(by human standards) that are quite often played by computer Go programs and
+which are difficult to foresee when designing a rule-based system. The major
+drawback of this approach is that it is computation intensive and requires a
+powerful computer. </p>
+
+<p>At the foundation of Go4++ is a massive amount of connectivity data from
+which almost everything else is eventually derived. Go4++ selects a move by
+first generating about 50 candidate moves that are analyzed by an evaluation
+function which estimates territory. The move scoring the highest evaluation is
+played as the next move. Thus, Go4++ uses 1 ply global <span class=spelle>lookahead</span>
+although tactical <span class=spelle>lookahead</span> and search is used in
+evaluating each move. </p>
+
+<h2><a name=4.2.2.1><span style='mso-fareast-font-family:"Times New Roman"'>4.2.2.1
+Candidate Move Generation </span></a><span style='mso-fareast-font-family:"Times New Roman"'><o:p></o:p></span></h2>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'>Candidate
+moves are generated by a process of pattern matching to determine the best 50
+moves to examine in depth. Go4++ has around 15 high level patterns which
+include terms for the probability of an eye, safety, and territorial value.
+Whenever a match is made, the board point(s) suggested as good places to play
+have an appropriate value added to them. The 50 highest scoring board points
+are then examined by the evaluation function. The board point which receives
+the highest score from the evaluation function is played as the next move. </p>
+
+<p>In some circumstances, Go4++ effectively evaluates more than 50 candidate
+moves per turn. Pattern matching is not applied to regions of the board where
+the stone safety (see Stone Safety in section 4.2.2.2) and territory (see
+Territory in section 4.2.2.2) do not differ from those of the previous move.
+Thus after evaluating the 50 highest scoring board points after pattern
+matching, the next move is selected from the combined set of evaluation scores
+of the 50 board points just considered and the evaluation scores of any board
+points in the undisturbed regions which were considered during the selection of
+the previous move. </p>
+
+<h2><a name=4.2.2.2><span style='mso-fareast-font-family:"Times New Roman"'>4.2.2.2
+Evaluation Function </span></a><span style='mso-fareast-font-family:"Times New Roman"'><o:p></o:p></span></h2>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'>The
+evaluation function is a six step process: 1. a connectivity probability map is
+generated, 2. groups are determined, 3. eye space is determined from which
+individual eyes are identified, 4. the safety of each stone is determined, 5. a
+radiation function combines the stone safety data and connectivity probability
+map to radiate safety to empty points, and 6. territory is determined. Reiss
+describes the evaluation function as pessimistic since whenever it is <span
+class=grame>applicable,</span> the evaluation function considers that the
+opponent is the next to move. </p>
+
+<h3><span style='mso-fareast-font-family:"Times New Roman"'>Connectivity
+Probability Map <o:p></o:p></span></h3>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'>Each
+time a hypothetical move is played on the board, a connectivity probability map
+for all friendly and opponent stones (including the hypothetical stone) is
+generated and stored. The connectivity probability map for a stone contains the
+probability of connecting to nearby friendly stones already on the board or to
+an empty point if it was occupied by a friendly stone. Stones and empty points
+which can be reached directly (<span class=spelle>nobi</span>), by a diagonal
+move (<span class=spelle>kosumi</span> link), a one point jump (<span
+class=spelle>ikken-tobi</span> link), a two point jump (<span class=spelle>nikken-tobi</span>
+link), a small knight's move (<span class=spelle>kogeima</span> link), or a
+large knight's move (<span class=spelle>ogeima</span> link) are examined (total
+of 32 possible points). </p>
+
+<p>The probability of connecting two stones is calculated empirically by
+playing out the sequences of moves needed to determine whether the stones can
+be connected or whether the opponent can cut them. This process requires the
+use of <span class=spelle>lookahead</span>, particularly when ladders are
+generated by cutting moves (e.g., cutting a <span class=spelle>kogeima</span>
+link generates two ladders, one for each cutting point). If all possible
+cutting stones are captured, then the probability of connection is 100%.
+However, if the cutting stones can not be captured, a hand-tuned algorithm
+estimates the connection probability. </p>
+
+<p>A massive amount of data is generated in calculating the probability map for
+each stone on the board for every hypothetical stone being evaluated. The
+process is very computationally expensive and requires a powerful computer
+(Go4++ currently runs on a Pentium-Pro 200). </p>
+
+<h3><span style='mso-fareast-font-family:"Times New Roman"'>Group Determination
+<o:p></o:p></span></h3>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'>Stones
+and strings are catalogued into groups: any stones which are 100% connected are
+considered groups. A tactical search on all strings with less than 4 liberties
+is used to determine which strings are definitely dead. Dead strings are not
+included as part of any group. </p>
+
+<h3><span style='mso-fareast-font-family:"Times New Roman"'>Eye Identification <o:p></o:p></span></h3>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'>Identifying
+eyes is achieved in a two step process: 1. eye space is determined, and 2.
+individual eyes are identified from the eye space. </p>
+
+<p>A <span class=spelle>floodfill</span> type algorithm is used to identify
+contiguous regions in which opponent connectivity probability is low. Points in
+those regions whose 8 <span class=spelle>neighbouring</span> points are mostly
+clear of opponent connectivity probability are considered to be eye space. </p>
+
+<p>Individual eyes within a <span class=grame>groups</span> eye space are
+identified by shape. There are several grades of eyes with the grade being a
+function of the opponent's connectivity map. Eyes with a grade above a certain
+level (see Stone Safety below) are considered to be true eyes. </p>
+
+<h3><span style='mso-fareast-font-family:"Times New Roman"'>Stone Safety <o:p></o:p></span></h3>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'>The
+safety of each group is determined by the number of true eyes it has. The
+safety process is repeated 5 times; each successive pass is more pessimistic
+about which points will eventually become true eyes (i.e., the threshold is
+raised for selecting which grade of eyes will eventually become true eyes). The
+final safety value for a group is the average of its safety scores on each of
+the 5 passes. </p>
+
+<h3><span style='mso-fareast-font-family:"Times New Roman"'>Radiation Function <o:p></o:p></span></h3>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'>The
+safety value for each stone is radiated to the nearby empty points in
+proportion to the connectivity probability map for that stone. The inverse of a
+stones safety (100% - safety) is radiated in the same manner and contributes to
+the opponents radiated value i.e., dead stones radiated full opponent safety.
+Black and white radiation (including inverse radiation) is summed at each empty
+point. </p>
+
+<h3 style='page-break-after:avoid'><span style='mso-fareast-font-family:"Times New Roman"'>Territory
+<o:p></o:p></span></h3>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'>Black
+and white territory is estimated from the radiation values of the empty points.
+The difference between black and white <span class=grame>territory</span> is
+returned as the evaluation of the hypothetical move for which it was generated.
+</p>
+
+<h2><a name=4.2.2.3><span style='mso-fareast-font-family:"Times New Roman"'>4.2.2.3
+Performance and Timeline </span></a><span style='mso-fareast-font-family:"Times New Roman"'><o:p></o:p></span></h2>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'>Reiss'
+Go skill has progressed from 10kyu in 1987 to 4 <span class=spelle>kyu</span>
+in 1992 to 2 <span class=spelle>kyu</span> in 1996. Reiss has programmed
+full-time on Go4++ for about the last year (1996) and also programmed full-time
+for one and a half years around 1986. Other than for these two periods since
+starting Go programming in 1983, Reiss has programmed part-time with the most
+effort usually expended in the two months leading up to a competition. </p>
+
+<p>There have been many commercial releases of Reiss' programs by Oxford <span
+class=spelle>Softworks</span> with another soon to follow. Notable releases
+have been Go Player Professional and an updated windows version, Go
+Professional II, released in <st1:country-region u2:st="on"><st1:place u2:st="on">Japan</st1:place></st1:country-region>.
+</p>
+
+<p>Reiss characterized Go4++ as the weakest of the current strong programs at
+tactical situations requiring life and death analysis although it is good at
+creating <span class=spelle>moyos</span> and gaining territory in the middle
+and endgame. Since Go4++ tends to play well in the centre of the board, Prof.
+Chen played 200 games against Go4++ in an attempt to test modifications to <span
+class=spelle>Handtalk</span> which were designed at playing better in the
+centre. </p>
+
+<p>According to Reiss, other weaknesses are the absence of global <span
+class=spelle>lookahead</span>, lack of a concept of &quot;shape&quot;, and the
+reluctance of Go4++ to invade. Since the evaluation function pessimistically
+considers that the opponent moves next during tactical searches, Go4++ does not
+usually evaluate the likelihood of invading stones forming eyes as being <span
+class=spelle>favourable</span>. To compensate for not invading well, Go4++
+always plays it first move at the 3<span class=grame>,3</span> point and also
+tries to live in as many places as possible to stop its opponent creating <span
+class=spelle>moyos</span> early. </p>
+
+<p>Reiss uses many empirically hand-tuned algorithms within Go4++ although no
+learning algorithms are used. Carefully crafted changes to these algorithms can
+improve the strength of Go4++ e.g., by making the connection algorithm more
+accurate, eye and territory evaluation also become more accurate, resulting in
+an increase in playing strength. Before the 2nd FOST Cup in 1996, Reiss tuned
+the performance of Go4++ by playing 700 test games against <span class=spelle>Handtalk</span>,
+resulting in <span class=spelle>Handtalk's</span> only defeat during that
+competition. <o:p></o:p></p>
+
+<p><a name=HT></a><a name=4.2.3></a><u1:p>&nbsp;</p>
+
+</u1:p>
+
+<h2><span style='mso-fareast-font-family:"Times New Roman"'>4.2.3 <span
+class=spelle>Handtalk</span> <o:p></o:p></span></h2>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><span
+class=spelle>Handtalk</span> has been one of the strongest programs in recent
+years and is written by <span class=spelle>Zhixing</span> Chen, a Chinese
+professor from the <st1:place u2:st="on"><st1:placetype u2:st="on">University</st1:placetype>
+of <st1:placename u2:st="on">Guangzhou</st1:placename></st1:place>. Although <span
+class=spelle>Handtalk</span> becomes stronger each year and was awarded a 4 <span
+class=spelle>kyu</span> diploma by the Nihon <span class=spelle>Kiin</span> in
+1996, Prof. Chen does not believe that Go programs will reach <span
+class=spelle>shodan</span> by 2000 if <span class=spelle>shodan</span> is taken
+at its international level (2 - 3 <span class=spelle>dan</span> Japanese). </p>
+
+<p>Details of the architecture and algorithms used by Prof. Chen are not
+abundantly available. Some of the details which have emerged from discussions
+that various people have had with <span class=spelle>Prof.Chen</span> at
+various competitions are provided below. </p>
+
+<p><span class=spelle>Handtalk</span> is written completely in IBM-PC assembly
+language and is very small (around 250k) and very fast. Only a very small
+number (around 4) candidate moves are evaluated using a static evaluation
+function which seems to be accurate and stable. <span class=spelle>Handtalk</span>
+also uses an influence function whose influence decreases as 1/2^distance. </p>
+
+<p><span class=spelle>Handtalk</span> does not use very much global search.
+Pattern matching is used to some extent although it is unclear whether the
+patterns are contained in a database or if the pattern matching is rule-based. <span
+class=spelle>Handtalk</span> does not use <span class=spelle>joseki</span> much
+and has only about 10% as many <span class=spelle>josekis</span> as MFG. </p>
+
+<p style='margin-bottom:12.0pt'>According to Prof. Chen, <span class=spelle>Handtalk's</span>
+strong points are its fighting, group safety estimation, ability to recognize
+life and death, the end game, and board evaluation. Other people have also
+commented on its strength at estimating a group's running ability, sense of
+shape, the middle game, and winning <span class=spelle>semeais</span>. Prof.
+Chen characterizes its weaknesses as surrounding, <span class=grame>ko</span>,
+and attacking territory. Recent changes include fighting less often than in
+previous versions and an improvement in gaining territory in the centre which
+was achieved by testing alterations in around 200 games played against Go4++. <a
+name=4.3></a></p>
+
+<h2><span style='mso-fareast-font-family:"Times New Roman"'>4.3 Computer Go
+Competitions <o:p></o:p></span></h2>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'>There
+are various computer Go competitions throughout the world including the United
+States Computer Go Championship, the North American Computer Go Championship,
+the Computer Go European Championship, and the International Go Contest. There
+is also a computer Go competition conducted as a part of the Computer Olympiads
+held in <st1:country-region u2:st="on"><st1:place u2:st="on">England</st1:place></st1:country-region>.
+</p>
+
+<p>%<span class=grame>A</span> cash prize of around $6000 is offered to the
+winning program in the World Computer Go Congress as well as the chance of
+challenging <span class=spelle>dan</span> ranked junior opponents to win the <span
+class=spelle>Ing</span> prize. The challenging program plays 3 junior players
+(ages 11 - 13) which are ranked around 3 to 6 <span class=spelle>dan</span>. <o:p></o:p></p>
+
+<p style='margin-bottom:12.0pt'><a name=4.3.1><u1:p>&nbsp;</u1:p></a></p>
+
+<h2><span style='mso-fareast-font-family:"Times New Roman"'>4.3.1 The <span
+class=spelle>Ing</span> Prize <o:p></o:p></span></h2>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'>%Acer
+Incorporated and the <span class=spelle>Ing</span> Chang-<span class=spelle>Ki</span>
+<span class=spelle>Wei</span>-Chi (Go) Educational Foundation have been joint
+sponsors of the International Computer Go Congress since 1985 (Shih, 1989) and
+also sponsored the First Computer Olympiad in 1989. The three top contestants
+from the North American; European; and <st1:country-region u2:st="on"><st1:place u2:st="on">Japan</st1:place></st1:country-region>
+and Asia-Pacific region are invited to the International Go Congress in <span
+class=spelle>Tapei</span>. A prize of approximately $1.5 million US will be won
+by the programmer(s) of the first program to beat a nominated human competitor
+without handicap on a 19x19 board. This prize is known as the <span
+class=spelle>Ing</span> prize. <o:p></o:p></p>
+
+<p style='margin-bottom:12.0pt'><a name=5.0><u1:p>&nbsp;</u1:p></a></p>
+
+<h1><span style='mso-fareast-font-family:"Times New Roman"'>5.0 What's in a Go
+Program <o:p></o:p></span></h1>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;margin-bottom:12.0pt'><a
+name=6.0><u1:p>&nbsp;</u1:p></a></p>
+
+<h1 style='page-break-after:avoid'><span style='mso-fareast-font-family:"Times New Roman"'>6.0
+Performance of Current Programs <o:p></o:p></span></h1>
+
+<p><a name=6.1><u1:p>&nbsp;</u1:p></a></p>
+
+<h2><span style='mso-fareast-font-family:"Times New Roman"'>6.1 Program versus
+Program Performance <o:p></o:p></span></h2>
+
+<p><a name=6.2><u1:p>&nbsp;</u1:p></a></p>
+
+<h2><span style='mso-fareast-font-family:"Times New Roman"'>6.2 Program versus
+Human Performance <o:p></o:p></span></h2>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'>The
+strongest Go programs currently play at around 8 - 13 <span class=spelle>kyu</span>
+against human opponents. Ranking a program can be difficult due to the fact
+that human players can modify their playing style to take advantage of the
+weaknesses of a program. Thus it is possible for a program to play an even game
+with a 5 stone handicap against a 5 <span class=spelle>kyu</span> at first and
+then need 8 or 9 handicap stones after a few games. </p>
+
+<p>The winning program in the 1994 World Computer Go Championship, Go
+Intellect, lost all 3 games against the youth players on a 15 play handicap. As
+explained in section p.1, the Chinese rules allow the handicap stones to be
+placed at the <span class=grame>players</span> discretion. <span class=grame>Thus
+a 15 play handicap means that Black (the program) places 15 stones and then
+plays first, in effect giving Black 16 stones before White plays.</span> In the
+1991 World Computer Go Championship, Goliath, beat all 3 of its 5 <span
+class=spelle>dan</span> opponents at 16 play <span class=grame>handicap</span>
+and then lost to all 3 of its opponents on 14 play handicap. <o:p></o:p></p>
+
+<p style='margin-bottom:12.0pt'><a name=7.0><u1:p>&nbsp;</u1:p></a></p>
+
+<h2><span style='mso-fareast-font-family:"Times New Roman"'>7.0 Future
+Improvements in Performance <o:p></o:p></span></h2>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;margin-bottom:12.0pt'><a
+name=8.0><u1:p>&nbsp;</u1:p></a></p>
+
+<h1><span style='mso-fareast-font-family:"Times New Roman"'>8.0 Go and Computer
+Go Resources on the Internet <o:p></o:p></span></h1>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><i>(This
+section has been adapted from <a
+href="http://www.itee.uq.edu.au/%7Ejanetw/papers/comp-go.internet.ps.Z">Accessing
+Go and Computer Go Resources on the Internet</a> which will be published in the
+proceedings of the Second Games Programming Workshop in <st1:place u2:st="on"><st1:country-region u2:st="on">Japan</st1:country-region></st1:place>.
+Various paragraphs in this section have been adapted and modified from the
+README file at bsdserver.ucsf.edu/Go and from the Go FAQ. Due to the nature of
+Internet resources, the availability of any given resource listed in this
+section cannot be guaranteed.) </i></p>
+
+<p>Researchers in the computer Go field as well as individuals involved in
+implementing Go programs for recreation or profit can benefit from resources
+available on the Internet. This section provides a guide to accessing the
+resources that may benefit those in the computer Go field. </p>
+
+<h2><a name=8.1><span style='mso-fareast-font-family:"Times New Roman"'>8.1
+Computer Go Related Internet Resources </span></a><span style='mso-fareast-font-family:
+"Times New Roman"'><o:p></o:p></span></h2>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;margin-bottom:12.0pt'><a
+name=8.1.1><u1:p>&nbsp;</u1:p></a></p>
+
+<h2><span style='mso-fareast-font-family:"Times New Roman"'>8.1.1 Anonymous FTP
+Archive and Mirror Sites <o:p></o:p></span></h2>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'>The
+main Go FTP archive site and its mirror sites contain a comprehensive archive
+of Go and computer Go material which is freely available by anonymous FTP. The
+README file in the Go directory contains a comprehensive listing of the files
+in the Go directory and its sub-directories as well as a brief description of
+each file. Below is a list of the subdirectories of the Go directory along with
+a brief description of their contents which has been adapted from the README
+file: <o:p></o:p></p>
+
+<pre><u1:p>&nbsp;</pre></u1:p><pre><span class=grame><span style='font-family:
+"Courier New"'>aga</span></span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; American Go Association Files. </pre><pre><span
+class=grame><span style='font-family:"Courier New"'>clients</span></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Clients for the Internet Go Server. </pre><pre><span
+class=grame><span style='font-family:"Courier New"'>comp</span></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Information about programming computers to play go, and</pre><pre> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span
+class=grame><span style='font-family:"Courier New"'>various</span></span> attempts to do so</pre><pre><span
+class=grame><span style='font-family:"Courier New"'>games</span></span>&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Commented games, and other specially formatted material. </pre><pre><span
+class=grame><span style='font-family:"Courier New"'>igs</span></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Games from the IGS, in Postscript or Smart-Go. </pre><pre><span
+class=grame><span style='font-family:"Courier New"'>info</span></span>&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Informational files in plain text format. </pre><pre><span
+class=grame><span style='font-family:"Courier New"'>mgt</span></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Versions of MGT, a program for reading and writing </pre><pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Smart-Go files.</pre><pre><span
+class=grame><span style='font-family:"Courier New"'>printing</span></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Programs and files related to printing out go boards </pre><pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span
+class=grame><span style='font-family:"Courier New"'>and</span></span> diagrams. </pre><pre><span
+class=grame><span style='font-family:"Courier New"'>pro</span></span>&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Uncommented professional games. </pre><pre><span
+class=grame><span style='font-family:"Courier New"'>problems</span></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Go problems, mostly in Smart-Go format. </pre><pre><span
+class=grame><span style='font-family:"Courier New"'>prog</span></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Programs related to go but which don't attempt to play the game.</pre>
+
+<p>The contents of the comp directory include: <o:p></o:p></p>
+
+<pre><u1:p>&nbsp;</pre></u1:p><pre>Public domain games for the Amiga, Macintosh, IBM PC (DOS and Windows), </pre><pre>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span
+class=grame><span style='font-family:"Courier New"'>Linux, and X windows.</span></span></pre><pre><span
+class=grame><span style='font-family:"Courier New"'>Archives of the computer-go mailing list.</span></span></pre><pre><span
+class=grame><span style='font-family:"Courier New"'>Computer Go bibliography.</span></span></pre><pre>People and programs in computer <span
+class=grame><span style='font-family:"Courier New"'>Go</span></span>.</pre><pre><span
+class=grame><span style='font-family:"Courier New"'>Various reports, papers and theses on Go programs or computer Go issues.</span></span></pre>
+
+<p>Main FTP Site: <br>
+<a href="ftp://bsdserver.ucsf.edu/Go/">bsdserver.ucsf.edu/Go</a> </p>
+
+<p>Mirror Sites: <br>
+<a href="ftp://ftp.pasteur.fr/pub/Go">ftp.pasteur.fr/pub/Go</a> <br>
+<a href="ftp://rzis1.rz.tu-bs.de/pub/go">rzis1.rz.tu-bs.de/pub/go</a> <br>
+<a href="ftp://igs.nuri.net/Go">igs.nuri.net/Go</a> <o:p></o:p></p>
+
+<p><a name=8.1.2><u1:p>&nbsp;</u1:p></a></p>
+
+<h2><span style='mso-fareast-font-family:"Times New Roman"'>8.1.2 The Internet
+Go Server (IGS) <o:p></o:p></span></h2>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'>The
+Internet Go Server (IGS) provides a means for people to play real-time
+interactive games of Go against other people or against Go programs over the
+internet. The IGS serves as a virtual Go club which is particularly useful for
+players who do not have local access to other Go players or a Go club. </p>
+
+<p>First time users can login as &quot;guest&quot;. Full access can be gained
+by registering for an account. Information about registering can be obtained by
+typing &quot;help register&quot;. The help command provides information on how
+to use the interface. Once logged on to the IGS, you can play a game against
+another player, watch games in progress, or even comment on games in progress. </p>
+
+<p>Interfacing to the IGS can be difficult and as a result, client programs
+have been written for various platforms e.g. <st1:street u2:st="on"><st1:address u2:st="on">Atari
+ST</st1:address></st1:street>, Amiga, <span class=grame>Macintosh</span>, NeXT,
+MS Windows, IBM PC, Unix (ASCII) and X11. </p>
+
+<p>Client programs available in the <span class=grame><i>clients</i></span>
+directory: <br>
+<a href="ftp://bsdserver.ucsf.edu/Go/clients/">bsdserver.ucsf.edu/Go/clients/</a>
+</p>
+
+<p>Help on client programs: <br>
+<a href="http://www.well.com/user/mmcadams/igs.howto.html">www.well.com/user/mmcadams/igs.howto.html</a>
+(follow the &quot;getting software&quot; link)</p>
+
+<p>Help files on using the IGS: <br>
+<a href="ftp://bsdserver.ucsf.edu/Go/igs/igs_ug.ps.Z">bsdserver.ucsf.edu/Go/igs/igs_ug.ps.Z</a>
+<br>
+<a href="ftp://bsdserver.ucsf.edu/Go/igs/igs_ug.txt.Z">bsdserver.ucsf.edu/Go/igs/igs_ug.txt.Z</a>
+<br>
+<a href="ftp://bsdserver.ucsf.edu/Go/igs/igshelp.Z">bsdserver.ucsf.edu/Go/igs/igshelp.Z</a>
+<br>
+<a href="http://www.well.com/user/mmcadams/igs.howto.html">www.well.com/user/mmcadams/igs.howto.html</a>
+<br>
+<a href="http://ltiwww.epfl.ch/%7Ewarkent/go/etiquette/et.html">ltiwww.epfl.ch/~warkent/go/etiquette/et.html</a>
+</p>
+
+<p>Telnet connection to the IGS: <br>
+<a href="telnet://igs.nuri.net:6969">igs.nuri.net:6969</a> <br>
+<a href="telnet://hellspark.wharton.upenn.edu:6969">hellspark.wharton.upenn.edu:6969</a>
+<o:p></o:p></p>
+
+<p><a name=8.1.3><u1:p>&nbsp;</u1:p></a></p>
+
+<h2><span style='mso-fareast-font-family:"Times New Roman"'>8.1.3 Game Record
+Formats <o:p></o:p></span></h2>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'>Several
+game record formats exist although currently the two most commonly used are
+Smart Go Format (SGF) and <span class=spelle>Ishi</span> &quot;Standard&quot;
+Format. Information, executables, converters etc. related to game record
+formats can be found in the info, mgt and <span class=spelle>prog</span>
+directories of the FTP archive sites. </p>
+
+<p><a href="ftp://bsdserver.ucsf.edu/Go/info/">bsdserver.ucsf.edu/Go/info/</a> <br>
+<a href="ftp://bsdserver.ucsf.edu/Go/mgt/">bsdserver.ucsf.edu/Go/mgt/</a> <br>
+<a href="ftp://bsdserver.ucsf.edu/Go/prog/">bsdserver.ucsf.edu/Go/prog/</a> <br>
+<a href="http://www.cwi.nl/%7Ejansteen/go/games/SGF/sgf.html">www.cwi.nl/~jansteen/go/games/SGF/sgf.html</a>
+<o:p></o:p></p>
+
+<p><a name=8.1.4><u1:p>&nbsp;</u1:p></a></p>
+
+<h2><span style='mso-fareast-font-family:"Times New Roman"'>8.1.4 The Computer-Go
+Mailing List <o:p></o:p></span></h2>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'>The
+computer-go mailing list is specifically designed as a forum for discussion
+about programming Go and related issues. E-mail messages sent to the list are
+distributed to members of the mailing list. </p>
+
+<p>Many individuals involved in the computer <span class=grame>Go</span> field
+either for recreation, profit or research converse with each other via the
+mailing list. The types of discussions vary from abstract to implementation
+related. The mailing list is a good source for inspiration and new ideas,
+information about approaches to programming Go that have been tried and have
+failed, constructive criticism on ideas by others involved in programming Go,
+information about tournaments and results, and much more. Archives of old and
+current messages are also available. </p>
+
+<p>The computer-go mailing list can be joined by sending <span class=grame>an</span>
+subscribe message by e-mail to: <br>
+<a href="mailto:computer-go-request@comlab.oxford.ac.uk">computer-go-request@comlab.oxford.ac.uk</a>
+</p>
+
+<p>Past messages archive: <br>
+<a href="ftp://bsdserver.ucsf.edu/Go/comp/">bsdserver.ucsf.edu:/Go/comp/</a> (<span
+class=spelle>compgo</span>-mail-*.Z) </p>
+
+<p>Current messages archive: <br>
+<a href="ftp://ftp.comlab.ox.ac.uk/pub/Documents/computer-go/mail-archive">ftp.comlab.ox.ac.uk:/pub/Documents/computer-go/mail-archive</a>
+<o:p></o:p></p>
+
+<p><a name=8.1.5><u1:p>&nbsp;</u1:p></a></p>
+
+<h2><span style='mso-fareast-font-family:"Times New Roman"'>8.1.5 The Computer
+Go Ladder <o:p></o:p></span></h2>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'>Discussions
+on the computer-go mailing list resulted in the establishment of an informal
+competition between computer Go programs called the Computer Go Ladder. The
+primary purpose of the ladder is for the enjoyment of the participants with the
+secondary purposes of stimulating both interest and work on computer Go
+programs and providing a way of measuring the state-of-the-art of current
+programs. </p>
+
+<p>There are HTTP links from the Computer Go Ladder page to pages related to
+some of the programmers and some of the programs involved in the Computer Go
+Ladder, world computer Go competition results, the IGS and various other
+associated pages on the Internet. The Computer Go Ladder is maintained by Eric <span
+class=spelle>Pettersen</span> (pett@cgl.ucsf.edu). </p>
+
+<p><a href="http://cgl.ucsf.edu/go/ladder.html">cgl.ucsf.edu/go/ladder.html</a>
+<o:p></o:p></p>
+
+<p><a name=8.1.6><u1:p>&nbsp;</u1:p></a></p>
+
+<h2 style='page-break-after:avoid'><span style='mso-fareast-font-family:"Times New Roman"'>8.1.6
+Computer Go Competitions/Tournaments and Results <o:p></o:p></span></h2>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'>Various
+computer Go competitions/tournaments exist and some of their results are
+available on the Internet. </p>
+
+<p><a href="http://nobi.ethz.ch/martin/cgresults.html">nobi.ethz.ch/martin/cgresults.html</a>
+(Martin <span class=spelle>M?ller</span>) <br>
+<a href="http://www.reiss.demon.co.uk/webgo/gores.htm">www.reiss.demon.co.uk/webgo/gores.htm</a>
+(Michael Reiss) <o:p></o:p></p>
+
+<p><a name=8.1.7><u1:p>&nbsp;</u1:p></a></p>
+
+<h2><span style='mso-fareast-font-family:"Times New Roman"'>8.1.7 Computer Go
+Bibliographies <o:p></o:p></span></h2>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'>There
+are several sources of computer Go bibliographies available. Peter <span
+class=spelle>Lipp</span> compiled a bibliography of books, articles, theses
+etc. pertaining to Go, computer Go and game related issues e.g. complexity etc.
+Michael Reiss advertised for computer Go references on the computer-go mailing
+list and has compiled three WWW bibliography pages. Martin <span class=spelle>M?ller</span>
+and Jay <span class=spelle>Burmeister</span> have placed the computer Go
+bibliographies resulting from their PhD work on WWW pages. </p>
+
+<p><a href="ftp://igs.nuri.net/Go/comp/compbibs.Z">igs.nuri.net/Go/comp/compbibs.Z</a>
+(Peter <span class=spelle>Lipp</span>) <br>
+<a href="http://nobi.ethz.ch/martin/references.html">nobi.ethz.ch/martin/references.html</a>
+(Martin <span class=spelle>M?ller</span>) <br>
+<a href="http://www.reiss.demon.co.uk/webgo/bib.htm">www.reiss.demon.co.uk/webgo/bib.htm</a>
+(Michael Reiss) <br>
+<a href="http://www.psy.uq.edu.au/%7Ejay/go/comp-go.bib.html">www.psy.uq.edu.au/~jay/go/comp-go.bib.html</a>
+(Jay <span class=spelle>Burmeister</span>) <o:p></o:p></p>
+
+<p><a name=8.1.8><u1:p>&nbsp;</u1:p></a></p>
+
+<h2><span style='mso-fareast-font-family:"Times New Roman"'>8.1.8 Game
+Databases <o:p></o:p></span></h2>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'>The
+IGS game archive contains games played on the IGS archived in postscript and
+Smart Go formats. Jan van <span class=spelle>der</span> Steen is involved in a
+Go database project, <span class=spelle>GoBase</span>, which is designed to
+allow thousands of professional Go games to be searched. </p>
+
+<p><a href="ftp://igs.nuri.net/Go/IGSArch/">igs.nuri.net/Go/IGSArch/</a> (IGS
+archive) <br>
+<a href="ftp://bsdserver.ucsf.edu/Go/games">bsdserver.ucsf.edu/Go/games/</a> <br>
+<a href="ftp://bsdserver.ucsf.edu/Go/pro">bsdserver.ucsf.edu/Go/pro/</a> <br>
+<a href="http://imageek.york.cuny.edu/search5d.html">imageek.york.cuny.edu/search5d.html</a>
+(5+ <span class=spelle>dan</span> IGS games) <br>
+<a href="http://www.cwi.nl/%7Ejansteen/gobase/gobase.html">www.cwi.nl/~jansteen/gobase/gobase.html</a>
+(Go Base) <a href="http://www.geocities.com/SiliconValley/Park/4872/index.html">www.geocities.com/SiliconValley/Park/4872/index.html</a>
+<o:p></o:p></p>
+
+<p><a name=8.2><u1:p>&nbsp;</u1:p></a></p>
+
+<h2 style='page-break-after:avoid'><span style='mso-fareast-font-family:"Times New Roman"'>8.2
+Go Related Internet Resources <o:p></o:p></span></h2>
+
+<h2 style='page-break-after:avoid'><a name=8.2.1><span style='mso-fareast-font-family:
+"Times New Roman"'>8.2.1 Go Rules and Learning to Play </span></a><span
+style='mso-fareast-font-family:"Times New Roman"'><o:p></o:p></span></h2>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'>There
+are different versions of Go rules, some of which are available in various
+formats on the Internet. </p>
+
+<p><a href="ftp://bsdserver.ucsf.edu/Go/RULES">bsdserver.ucsf.edu/Go/RULES</a> <br>
+<a href="ftp://bsdserver.ucsf.edu/Go/RULES.SG">bsdserver.ucsf.edu/Go/RULES.SG</a>
+<br>
+<a href="ftp://bsdserver.ucsf.edu/Go/aga/aga.rules.Z"><span class=spelle>bsdserver.ucsf.edu/Go/aga/aga.rules.Z</span></a>
+<br>
+<a href="ftp://bsdserver.ucsf.edu/Go/aga/ingrules.zip"><span class=spelle>bsdserver.ucsf.edu/Go/aga/ingrules.zip</span></a>
+<br>
+<a href="ftp://bsdserver.ucsf.edu/Go/igs/goe.rules.Z"><span class=spelle>bsdserver.ucsf.edu/Go/igs/goe.rules.Z</span></a>
+<br>
+<a href="ftp://bsdserver.ucsf.edu/Go/igs/goe.on.igs.Z"><span class=spelle>bsdserver.ucsf.edu/Go/igs/goe.on.igs.Z</span></a>
+<o:p></o:p></p>
+
+<p><a name=8.2.2><u1:p>&nbsp;</u1:p></a></p>
+
+<h2><span style='mso-fareast-font-family:"Times New Roman"'>8.2.2 Go Learning
+Aids and Tutorials <o:p></o:p></span></h2>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'>There
+are Go tutorials and versions of Go rules which are also designed to give
+novice players tutorial help in learning <span class=grame>Go</span> available
+on the Internet. </p>
+
+<p><a href="ftp://bsdserver.ucsf.edu/Go/RULES.PS.Z">bsdserver.ucsf.edu/Go/RULES.PS.Z</a>
+<br>
+<a href="http://www.cwi.nl/%7Ejansteen/go/rules/human.html">www.cwi.nl/~jansteen/go/rules/human.html</a>
+<br>
+<a href="http://www.cs.vu.nl/%7Ewillems/go.html">www.cs.vu.nl/~willems/go.html</a>
+<br>
+<a href="http://ltiwww.epfl.ch/%7Ewarkent/go/rules/rules.html">ltiwww.epfl.ch/~warkent/go/rules/rules.html</a>
+<br>
+<a href="http://ltiwww.epfl.ch/%7Ewarkent/go/rules/9x9game/1.html">ltiwww.epfl.ch/~warkent/go/rules/9x9game/1.html</a>
+(ASCII) <br>
+<a href="http://hyperg.iicm.tu-graz.ac.at/GTL"><span class=spelle>hyperg.iicm.tu-graz.ac.at/GTL</span></a>
+(Teaching Ladder page) <br>
+<a href="#2.0">Section 2 of this document</a> <o:p></o:p></p>
+
+<p><a name=8.2.3><u1:p>&nbsp;</u1:p></a></p>
+
+<h2><span style='mso-fareast-font-family:"Times New Roman"'>8.2.3 The Go News
+Group <o:p></o:p></span></h2>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'>The
+news group <span class=spelle>rec.games.go</span> is a good forum for
+discovering and sharing information about <span class=grame>Go</span>,
+tournaments, the IGS, etc. The Go news group is not specifically aimed at
+computer Go, however, discussions and information related to computer Go
+sometimes appear on the newsgroup. </p>
+
+<p><a href="news:rec.games.go"><span class=spelle>rec.games.go</span></a> <o:p></o:p></p>
+
+<p><a name=8.2.4><u1:p>&nbsp;</u1:p></a></p>
+
+<h2><span style='mso-fareast-font-family:"Times New Roman"'>8.2.4 The Go
+Frequently Asked Questions (FAQ) <o:p></o:p></span></h2>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'>The
+Go FAQ contains questions that are frequently posted to the <span class=spelle>rec.games.go</span>
+newsgroup and includes sections on basic Go, the IGS, and computer Go related
+issues. </p>
+
+<p style='margin-bottom:12.0pt'><a href="ftp://bsdserver.ucsf.edu/Go/FAQ">bsdserver.ucsf.edu/Go/FAQ</a>
+<br>
+<a href="ftp://rtfm.mit.edu/pub/usenet/news.answers/games/go-faq">rtfm.mit.edu/pub/usenet/news.answers/games/go-faq</a>
+<br>
+<a href="http://www.cs.utexas.edu/users/orb/go/gofaq.html">www.cs.utexas.edu/users/orb/go/gofaq.html</a>
+<a name=9.0></a></p>
+
+<h1><span style='mso-fareast-font-family:"Times New Roman"'>9.0 Conclusions <o:p></o:p></span></h1>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;margin-bottom:12.0pt'><a
+name=A><u1:p>&nbsp;</u1:p></a></p>
+
+<h1><span style='mso-fareast-font-family:"Times New Roman"'>Appendix <span
+class=grame>A</span> Common Go Terms and Their English Equivalents <o:p></o:p></span></h1>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'>The
+following selection of Go terms and their English equivalents are a subset of a
+file <a href="ftp://bsdserver.ucsf.edu/Go/info/definitions.Z">(<span
+class=spelle>definitions.Z</span>)</a> available by anonymous FTP which was
+originally due to Fletch <span class=spelle>Holmquist</span> and was extended
+by Bill Taylor. </p>
+
+<p><br>
+Atari: An immediate threat to capture; a single liberty remains. A verbal
+warning is often issued when placing an opponent into ate. </p>
+
+<p>Dame (useless): A neutral point, territory for neither; a liberty. </p>
+
+<p>Dan: Advanced grade. </p>
+
+<p><span class=spelle>Fuseki</span>: The opening moves of the game where
+influence and territory outlines are formed. (<span class=grame>literally</span>:
+`no stones') </p>
+
+<p><span class=spelle>Gote</span>: Defensive play, loss of initiative. (<span
+class=spelle>Literally:'lower</span> hand'.) </p>
+
+<p>Hoshi: (`star point'), 4-4 point. </p>
+
+<p><span class=spelle>Ikken-tobi</span>: One point extension. </p>
+
+<p><span class=spelle>Joseki</span> (established stones): Known sequences of
+moves near the corner which result in near equal positions for white and black.
+</p>
+
+<p><span class=spelle>Keima</span>: Knight's move extension. </p>
+
+<p><span class=grame>Ko</span>: Repetitive capture. (<span class=grame>literally</span>:
+`eternity') </p>
+
+<p><span class=grame>Ko</span> threat: Intervening move (that one hopes will
+force a reply) before a <span class=spelle>ko</span> can be recaptured. </p>
+
+<p><span class=spelle>Komi</span>: Score adjustment usually penalizing black
+for playing first. <span class=grame>Often 5.5 points.</span> </p>
+
+<p><span class=spelle>Kosumi</span>: A diagonal play next to one's own stone. </p>
+
+<p><span class=spelle>Kyu</span>: Learner grade. </p>
+
+<p><span class=spelle>Nobi</span> (Stretch): An extension away from an
+opponent's <span class=spelle>tsuke</span>, cross-cut, etc. </p>
+
+<p><span class=spelle>Ogeima</span> (large knight's move): Three across and one
+vertically (or vice versa). </p>
+
+<p>Seki: A situation where neither player may place the other in ate without placing
+himself in ate. Stalemate, with no territory awarded. </p>
+
+<p><span class=spelle>Sente</span>: Threat forcing direct response, creates
+initiative. <span class=grame>The right to choose where to play next.</span> <span
+class=grame>Opposite to </span><span class=spelle>gote</span><span class=grame>.</span>
+(Literally: `upper hand'.) </p>
+
+<p><span class=spelle>Shicho</span>: Ladder play. </p>
+
+<p><span class=spelle>Shicho-atari</span>: Ladder breaker. A stone played in
+the path of a potential <span class=spelle>shicho</span>, threatening to make
+it fail. </p>
+
+<p><span class=spelle>Tobi</span>: Jump. </p>
+
+<p><span class=spelle>Wei</span> Chi: The Chinese name for <span class=grame>Go</span>.
+(<span class=grame>literally</span><span class=spelle>:&quot;game</span> of
+encirclement&quot;) <o:p></o:p></p>
+
+<p style='margin-bottom:12.0pt'><a name=REFS><u1:p>&nbsp;</u1:p></a></p>
+
+<h1><span style='mso-fareast-font-family:"Times New Roman"'>References <o:p></o:p></span></h1>
+
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto'><i>(The
+references below are those which do not appear in the <a
+href="http://www.psy.uq.edu.au/%7Ejay/go/go.bib.html">general Go Bibliography</a>)
+</i></p>
+
+<p>Berliner, H. J. <span class=grame>A chronology of computer chess and its
+literature.</span> Artificial Intelligence, 10, pages 201 - 214, 1978. </p>
+
+<p><span class=grame>Fotland, D.</span> <span class=grame>The program G2.</span>
+Computer Go 1, 1986. </p>
+
+<p><span class=spelle>Fotland</span>, D. Knowledge representation in the many
+faces of Go. Available on <span class=grame>the I</span> <span class=spelle>nternet</span>
+at ftp://bsdserver.ucsf.edu/Go/comp/mfg.gz, 1993. </p>
+
+<p><span class=grame>Fotland, D. Personal communications, 1996.</span> </p>
+
+<p><span class=grame>Stoutamire, D. Machine learning, game play and Go.</span> <span
+class=grame>Technical Report TR 91-128, <st1:placename u2:st="on">Case</st1:placename>
+<st1:placename u2:st="on">Western Reserve</st1:placename> <st1:placetype u2:st="on">University</st1:placetype>,
+<st1:place u2:st="on"><st1:city u2:st="on">Cleveland</st1:city>, <st1:state u2:st="on">Ohio</st1:state></st1:place>,
+1991.</span> </p>
+
+<p><span class=grame>Computer-go mailing list references (</span><span
+class=spelle>cgm</span><span class=grame>) </span><br>
+<span class=spelle>Fotland</span><span class=grame>, D. E-mail communication on
+the computer-go mailing list.</span> <br>
+Mailing list archive available on the Internet at
+ftp://bsdserver.ucsf.edu/Go/comp/ <br>
+cgm1 compgo-mail-1.Z <br>
+cgm4 compgo-mail-4.Z </p>
+
+</div>
+
+</div>
+
+
+</div>
+</td>
+</tr>
+</table>
+
+<!-- START: Feedback line - Do not Modify -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" summary="Feedback">
+<tr><td align="right" class="feedback"> <a href="http://www.uq.edu.au/privacy" title="View Privacy details" class="home">privacy</a> | <a href="mailto:webmasters&#064;itee.uq.edu.au" title="Give Feedback on this website" class="home">feedback</a>&nbsp;</td></tr>
+</table>
+<!-- END: Feedback line -->
+
+<!-- START: Footer - Change where necessary -->
+<table width="100%" cellpadding="1" cellspacing="1" border="0" summary="Website Footer">
+<tr>
+<td class="footer" align="right">
+&copy; 2002-2012 The University of Queensland, Brisbane, Australia<br />
+ABN 63 942 912 684<br />
+CRICOS Provider No: <a href="http://cricos.deewr.gov.au/Institution/InstitutionDetails.aspx?ProviderID=25" target="_blank" title="Takes you to the CRICOS website">00025B</a><br />
+
+
+<br />
+This is a personal web area hosted on a University of Queensland web server.<br />
+Please be advised that this web page is not officially endorsed by The University of Queensland.<br />
+The University accepts no responsibility or liability for the contents of this area.<br />
+<br />
+
+
+Last Updated: 23 July, 2011, 8:15am
+</td>
+</tr>
+</table>
+<!-- END: Footer -->
+
+</body>
+</html>

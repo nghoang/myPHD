@@ -1,0 +1,248 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+   
+<head>
+ <title>Caution - High Risk Site Detected</title>
+ <style type="text/css" media="screen">@import "http://security.cf.ac.uk/Warning/firewall/style.css";</style>
+ <style type="text/css" media="print">@import "http://security.cf.ac.uk/Warning/firewall/print.css";</style>
+  
+ <!-- local stylesheet stuff -->
+ <style type="text/css">
+  #container {
+   width: 100%;
+   float: left;
+   text-align: left;
+   margin: 0px auto;
+  }
+
+  .banner {
+   width: 100%; 
+   height: 85px;
+   border: 1px solid #ccc;
+  }
+  
+  .bannerLeft {
+   width: 65px; 
+   float: left;
+   margin-top: 10px;
+   margin-left: 5px;
+  }
+  
+  .bannerLeft a {
+   border: 0px; 
+  } 
+    
+  .bannerRight {
+   float: right;
+   width: 360px;
+   margin-top: auto;
+   margin-bottom: auto;
+  }
+
+  .clear {
+   clear: both; 
+  }
+   
+  #content {
+   width: 100%;
+   float: left;
+   display: block;
+  }
+   
+  .insrvHeader {
+   background: #ccc;
+   width: 100%;
+   font-weight: bold;
+   padding: 5px 0px 5px 0px;
+  }
+
+  #leftContent {
+   width: 265px;
+   float: left;
+   padding: 5px;
+   margin-top: 10px;
+  }
+
+  #rightContent {
+    float: left;
+    width: 800px;;
+  }
+
+  #contentText {
+   font-size: 18px;
+
+  }
+
+  #contentTitle {
+   font-weight: bold;
+   font-size: 20px;
+   margin-top: 10px;
+   color: #c00;
+  }
+
+  .catTitle {
+   width: 100px;
+   float: left;
+  }
+
+  .catContent {
+   float: left;
+   margin: auto;
+  }
+
+  .padding20 {
+   height: 20px;
+   width: auto;
+  }
+
+  #insrvFooter {
+   float: right;
+  }
+
+  .insrvConnect {
+   text-align: right;
+  }
+
+ </style>
+
+ <!-- js bumpf -->
+ <script type="text/javascript">
+  function loadCategory(){
+
+   //load category and overwrite contents if applicable
+   var cat = "phishing-and-other-frauds";
+   switch (cat) {
+    case "adult-and-pornography":
+     //change h1
+     document.getElementById('contentTitle').innerHTML = "Warning: Restricted Content";
+
+     //change page title
+     document.title = "Warning: Restricted Content";
+
+     //change div contents
+     document.getElementById('contentText').innerHTML  = '<p>The web site you are trying to view is categorised as providing Adult and Pornographic material.</p>';
+     document.getElementById('contentText').innerHTML += '<p>For your protection and others in your location, the website has not been displayed. You may continue using the Internet, however, this web page will remain blocked.  If you require access to this page for academic purposes, please contact your <a href="http://www.cardiff.ac.uk/insrv/it/help/lcr/index.html">Local Computing Representative</a> or Course Tutor.</p>';
+    break;
+    
+    case "Access Not Authorised":
+     //change h1
+     document.getElementById('contentTitle').innerHTML = "Warning: Access Not Authorised";
+     
+     //change page title
+     document.title = "Warning: Access Not Authorised";
+     
+     //change div contents
+     document.getElementById('contentText').innerHTML  = '<p>The device you are using has not been authorised to connect to the Internet.</p>';
+     document.getElementById('contentText').innerHTML  += '<p>If you feel this is incorrect please contact your local IT representative or insrvConnect on the number below.</p>';    
+    break;
+    
+    case "Access Revoked":  
+     //change h1
+     document.getElementById('contentTitle').innerHTML = "Warning: Access Revoked";
+     
+     //change page title
+     document.title = "Warning: Access Revoked";
+     
+     //change div contents
+     document.getElementById('contentText').innerHTML  = '<p>Access to the site you are connecting to is not authorised.</p>';
+     document.getElementById('contentText').innerHTML  += '<p>Your access has been revoked.</p>'; 
+     document.getElementById('contentText').innerHTML  += '<p>Please contact insrvConnect on the number below or your local IT representative.</p>';
+    break;
+    
+   }
+  }
+
+ </script>
+
+</head>
+
+
+
+<body onload="loadCategory();">
+
+ <!-- Load container div -->
+ <div id="container">
+
+  <!-- banner -->
+  <div class="banner">
+   <div class="bannerLeft">
+        <a href="http://www.cardiff.ac.uk">
+     <img src="http://security.cf.ac.uk/Blocks/reslan/logouni.JPG" alt="Cardiff University | Prifysgol Caerdydd" title="Cardiff University | Prifysgol Caerdydd" />
+        </a>
+   </div>
+   <div class="bannerRight">
+        <img src="http://security.cf.ac.uk/Blocks/reslan/insrv1a.jpg" alt="Information Services" title="Information Services" />
+   </div>
+  </div>
+
+  <!-- css hack -->
+  <div class="clear">&nbsp;</div>
+
+
+  <!-- page content -->
+  <div id="content">
+
+        <!-- insrv banner thingy -->
+        <div class="insrvHeader">
+         Information Services
+        </div>
+
+        <!-- left content (warning image) -->
+        <div id="leftContent" >
+         <img src="http://security.cf.ac.uk/Blocks/reslan/warning.png" alt="warning" title="warning" width="250" height="200" />
+        </div>
+
+        <!-- right content (main stuff) -->
+        <div id="rightContent">
+         <div id="contentTitle">
+          Warning - Malware Site Detected
+         </div>
+
+         <div id="contentText">
+      <p>Malware sites try to install programs that steal private information, use your computer to attack others, or damage your system.</p>
+      <p>Some malware sites intentionally distribute harmful software but are compromised without the knowledge or permission of their owners.</p>
+      <p>You may continue using the internet, however, this web page will remain blocked for your protection and the protection of the wider University.</p>
+      <p>Please contact your Local Computing Representative or Course tutor if you require access to this site. </p>
+         </div>
+
+         <div class="padding20">&nbsp;</div>
+
+         <!-- contents for pal;o tags -->
+         <div class="catTitle">User: </div>
+         <div class="catContent">10.72.2.165</div>
+         <div class="clear">&nbsp;</div>
+         <div class="catTitle">URL: </div>
+         <div class="catContent">tailorings51.hostingsiteforfree.com/computer-repair-businesses.html</div>
+         <div class="clear">&nbsp;</div>
+         <div class="catTitle">Category: </div>
+         <div class="catContent">phishing-and-other-frauds</div>
+         <div class="clear">&nbsp;</div>
+
+         <div class="padding20">&nbsp;</div>
+
+         <pan_form/>
+
+         <div class="padding20">&nbsp;</div>
+
+         <input type="button" value="Back" onclick="history.go(-1);" />
+
+         <div class="padding20">&nbsp;</div>
+
+         <!-- insrvconnect stuff -->
+         <div class="insrvConnect">
+          <p>insrvConnect on 02920 874487 or via email: <a href="mailto:insrvconnect@cf.ac.uk">insrvConnect@cardiff.ac.uk</a></p>
+          <p><a href="http://www.cf.ac.uk/govrn/cocom/resources/UNIVERSITY%20ACCEPTABLE%20USE%20POLICY.doc">University Acceptable Use Policy (IT Facilities)</a></p>
+          <p><a href="http://www.cardiff.ac.uk/insrv/resources/regulationsandstrategy/informationservicesregulations.pdf">Information Services Regulations</a></p>
+          <img src="http://security.cf.ac.uk/Blocks/reslan/information_services_small.gif" alt="information services" title="information services" />
+         </div>
+
+
+        </div>
+
+  </div> <!-- div#content -->
+
+ </div><!-- div#container -->
+
+ </body>
+ </html>
+

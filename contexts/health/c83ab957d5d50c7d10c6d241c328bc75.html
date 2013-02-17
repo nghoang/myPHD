@@ -1,0 +1,995 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+	<!--
+		Use transitional DOCTYPE for SharePoint.  Strict DOCTYPEs can be problematic because the browser will ignore any deprecated HTML,	and
+		there is a chance that deprecated HTML will be displayed by SharePoint Server.
+		Note: SharePoint sites will not validate through any W3C checker with either DOCTYPE assigned.  However, though the pages will not
+		validate, the design experience will be more reliable if a valid DOCTYPE is used.
+	-->
+<html __expr-val-dir="ltr" dir="ltr">
+	
+	<head id="ctl00_Head1"><meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta http-equiv="Expires" content="0" />
+		<!--
+		SharePoint requires the "IE=EmulateIE7" http-equiv meta tag to function properly when a DOCTYPE is specified since IE8 displays internet-facing web sites
+		in full "Standards" mode when a DOCTYPE is specified which can cause problems with some of the legacy HTML that is behind the scenes in SharePoint Server
+		-->
+		<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" /><META NAME="ROBOTS" CONTENT="NOHTMLINDEX"/>
+		<!--	Meta tags from metatagger	-->
+		<meta name="geo.region" content="US-CA" /><meta name="geo.placename" content="San Diego" /><META name="description" content="UC San Diego Health System is widely recognized as one of the premier health care systems in the United States. We’re the only academic hospital in San Diego. "><META name="robots" content="index, follow"><title>
+	
+	UC San Diego Health System | San Diego Hospital, Healthcare
+
+</title>
+			<!--	Additional body styles 	-->
+			<link rel="stylesheet" type="text/css" href="/Style%20Library/GlobalNav_MegaDropDown.css"/>
+<link rel="stylesheet" type="text/css" href="/Style%20Library/WelcomeHealth.css"/>
+<link rel="stylesheet" type="text/css" href="/_layouts/1033/styles/core.css?rev=5msmprmeONfN6lJ3wtbAlA%3D%3D"/>
+<link rel="stylesheet" type="text/css" href="/Style%20Library/UCSD.css"/>
+
+		<!-- End PlaceHolderBodyAreaClass -->
+
+		<!-- Global Nav Styles -->
+		
+
+		<!--	Styles used for positioning, font and spacing definitions	-->
+		<script src="/_layouts/1033/init.js?rev=SKi7C%2FTrsh1U%2FCnIwkB9Ag%3D%3D"></script>
+<script type="text/javascript" language="javascript" src="/_layouts/1033/ie55up.js?rev=Ni7%2Fj2ZV%2FzCvd09XYSSWvA%3D%3D"></script>
+
+	
+	<!-- End editmodestyles -->
+
+	<!-- JQuery -->
+	<script type="text/javascript" src="/Style Library/JavaScript/jquery-1.5.1.min.js"></script>
+	
+	<!-- if JS is enabled remove nojavascript classes -->
+	<script type="text/javascript">
+			$(function(){
+				$('#feature-links, #tabs > ul, #tabs > #tabs-2, #tabs > #tabs-3, #tabs > #tabs-4').removeClass('noShow');
+				$('#tabs, #tabs-1').removeClass('nojavascript');			
+			});
+		</script>
+	
+	<!-- Rotator -->
+	<script type="text/javascript" src="/Style Library/JavaScript/rotator.js"></script>
+		
+	<!-- JQuery Tabs -->
+	<script type="text/javascript" src="/Style Library/JavaScript/jquery-ui-1.8.11.custom.min.js"></script>	
+	<script type="text/javascript">
+			$(function(){
+	
+				// Tabs
+				$('#tabs').tabs();
+				
+				//hover states on the static widgets
+				$('#dialog_link, ul#icons li').hover(
+					function() { $(this).addClass('ui-state-hover'); }, 
+					function() { $(this).removeClass('ui-state-hover'); }
+				);
+				$("#tabs").tabs("add","#tabs-4","YouTube");
+			});
+		</script>
+	
+	<!-- YouTube Feed -->
+	<script type="text/javascript" src="/Style Library/JavaScript/jquery.jgfeed-min.js"></script>
+	<script type="text/javascript" src="/Style Library/JavaScript/jyoutube.min.js"></script>
+	<script type="text/javascript" charset="utf-8">
+            $(document).ready(function() {            
+                $.jGFeed('http://gdata.youtube.com/feeds/api/users/ucsdmedicalcenter/uploads?orderby=updated',
+                function(feeds){
+                    // Check for errors
+                    if(!feeds){
+                        // there was an error
+                        return false;
+                    }
+
+                    var html = '';
+
+                    // do whatever you want with feeds here
+                    for(var i=0; i<feeds.entries.length; i++){
+                        var entry = feeds.entries[i];
+                    	html += '<div class="youTubeThumbContainer">' + '<a href="' + entry.link + '" title="' + entry.title + '" target="_blank"><img src="' + $.jYoutube(entry.link, 'small') + '" alt="' + entry.title + '" class="youTubeThumb"></a>' + '<p>' + '<a href="' + entry.link + '" title="' + entry.title + '" target="_blank">' + entry.title + '</a>' + '</p>' + '</div>';
+                    }
+
+                    $('#you_tube_feed').html(html);
+                }, 5);
+            });
+        </script>
+	
+<!-- End PlaceHolderAdditionalPageHead -->
+		
+		<!--	AddThis script	-->
+		<script type="text/javascript">     var addthis_config = {"data_track_clickback":true}; </script> <script type="text/javascript" src="https://s7.addthis.com/js/250/addthis_widget.js#pubid=ucsandiego"></script>
+		<!--	Browser style sheet overrides	-->
+		<!--[if IE 6]>
+			<link rel="stylesheet" type="text/css" href="/Style%20Library/ie6.css" />
+		<![endif]-->
+		<!--	Overrides name.dll in IE7	-->
+		<script type="text/javascript" src="/Style%20Library/JavaScript/custom_activex_override.js"></script>
+		<script type="text/javascript" src="/Style%20Library/JavaScript/css_browser_selector.js"></script>
+
+				
+		<!-- Google Analytics for health.ucsd.edu -->				
+		<script type="text/javascript">
+		
+		  var _gaq = _gaq || [];
+		  _gaq.push(['_setAccount', 'UA-233377-1']);
+		  _gaq.push(['_trackPageview']);
+		
+		  (function() {
+		    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		  })();
+		
+		</script>
+			
+		<!--	Google Analytics Outbound link tracking snippet for links to open in new window 	-->				
+		<script type="text/javascript">
+		  function recordOutboundLink(link, category, action) {
+		    _gat._getTrackerByName()._trackEvent(category, action);
+		  }
+		</script>
+					
+		<!--	Google Analytics Outbound link tracking snippet for links to open in same window	-->				
+		<script type="text/javascript">
+		  function recordInboundLink(link, category, action) {
+		    _gat._getTrackerByName()._trackEvent(category, action);
+		    setTimeout('document.location = "' + link.href + '"', 100);
+		  }
+		</script>
+		<meta name="google-site-verification" content="dVGoKlLW5yWr2UaQU9nwXH1WGOGU0bsCI3N7QjY2TFQ" /><link rel="shortcut icon" href="/images/favicon.ico" /><link href="/WebResource.axd?d=Ono_ABmwx2Iwesfu5O-ul81c7dxnbbzk2wXW9Rz2jpp5Opx4JWI5O5gDWBTIqNuJ4XQZqvEa3qDXOjl0hUaw6JdAVoeCTF26a3MBKFUsATsCqr4RC1dUkRoDPSvO7Z2L9YLrlfPWfJSVk-OlNE0eX8aBJxw6v3mRNopMvPminEwUYi4D0&amp;t=634850311547456516" type="text/css" rel="stylesheet" class="Telerik_stylesheet" /><link href="/WebResource.axd?d=KNvTfdEIKU4ZbGNqCBePrfLgPEj15GIRD8eGH_LfIOe7JqkVcsW2OQisX_-BZ6qMb0cNY-m7Xru9im1v8GK2hT0Bnt_M0wY8s861QxLO7TotGWjMsQ1Dnih9OY_QbrESVQbpcfgSB9cZNqkFFMCBU3Bpq65oWkdCh8L_KmcExA8IFox7ejECnrTdHwtSFWixCBGxtg2&amp;t=634850311547456516" type="text/css" rel="stylesheet" class="Telerik_stylesheet" /><style type="text/css">
+	.ctl00_PlaceHolderMain_LatestEvents_0 { border-color:Black;border-width:1px;border-style:Solid; }
+	.ctl00_PlaceHolderMain_LatestNews_0 { border-color:Black;border-width:1px;border-style:Solid; }
+
+</style></head><!-- End Head -->
+
+
+<body class="body" onload="javascript:_spBodyOnLoadWrapper();">
+
+<form name="aspnetForm" method="post" action="default.aspx" onsubmit="javascript:return WebForm_OnSubmit();" id="aspnetForm">
+<div>
+<input type="hidden" name="__SPSCEditMenu" id="__SPSCEditMenu" value="true" />
+<input type="hidden" name="MSOWebPartPage_PostbackSource" id="MSOWebPartPage_PostbackSource" value="" />
+<input type="hidden" name="MSOTlPn_SelectedWpId" id="MSOTlPn_SelectedWpId" value="" />
+<input type="hidden" name="MSOTlPn_View" id="MSOTlPn_View" value="0" />
+<input type="hidden" name="MSOTlPn_ShowSettings" id="MSOTlPn_ShowSettings" value="False" />
+<input type="hidden" name="MSOGallery_SelectedLibrary" id="MSOGallery_SelectedLibrary" value="" />
+<input type="hidden" name="MSOGallery_FilterString" id="MSOGallery_FilterString" value="" />
+<input type="hidden" name="MSOTlPn_Button" id="MSOTlPn_Button" value="none" />
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__REQUESTDIGEST" id="__REQUESTDIGEST" value="0x112F34073A7B2922C99E2ABD97B2D162906836602A31B97232BD95D6213164E6C45DDF92D2FFC4F0FB7E87E24C2E78A836044494647D711B6520BDCF38555F38,05 Nov 2012 21:31:34 -0000" />
+<input type="hidden" name="MSOAuthoringConsole_FormContext" id="MSOAuthoringConsole_FormContext" value="" />
+<input type="hidden" name="MSOAC_EditDuringWorkflow" id="MSOAC_EditDuringWorkflow" value="" />
+<input type="hidden" name="MSOSPWebPartManager_DisplayModeName" id="MSOSPWebPartManager_DisplayModeName" value="Browse" />
+<input type="hidden" name="MSOWebPartPage_Shared" id="MSOWebPartPage_Shared" value="" />
+<input type="hidden" name="MSOLayout_LayoutChanges" id="MSOLayout_LayoutChanges" value="" />
+<input type="hidden" name="MSOLayout_InDesignMode" id="MSOLayout_InDesignMode" value="" />
+<input type="hidden" name="MSOSPWebPartManager_OldDisplayModeName" id="MSOSPWebPartManager_OldDisplayModeName" value="Browse" />
+<input type="hidden" name="MSOSPWebPartManager_StartWebPartEditingName" id="MSOSPWebPartManager_StartWebPartEditingName" value="false" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUBMA9kFgJmD2QWAgIBD2QWBAIBD2QWAgIJD2QWAmYPZBYCAgEPFgIeE1ByZXZpb3VzQ29udHJvbE1vZGULKYgBTWljcm9zb2Z0LlNoYXJlUG9pbnQuV2ViQ29udHJvbHMuU1BDb250cm9sTW9kZSwgTWljcm9zb2Z0LlNoYXJlUG9pbnQsIFZlcnNpb249MTIuMC4wLjAsIEN1bHR1cmU9bmV1dHJhbCwgUHVibGljS2V5VG9rZW49NzFlOWJjZTExMWU5NDI5YwFkAgMPZBYOAgQPZBYCBSZnX2YwNGYyYTc0XzgwYThfNDg4MF9hZDhiX2RjZDJjODhmNWEzNw8PFgIeC1BhcmFtVmFsdWVzMuYEAAEAAAD/////AQAAAAAAAAAMAgAAAFhNaWNyb3NvZnQuU2hhcmVQb2ludCwgVmVyc2lvbj0xMi4wLjAuMCwgQ3VsdHVyZT1uZXV0cmFsLCBQdWJsaWNLZXlUb2tlbj03MWU5YmNlMTExZTk0MjljBQEAAAA9TWljcm9zb2Z0LlNoYXJlUG9pbnQuV2ViUGFydFBhZ2VzLlBhcmFtZXRlck5hbWVWYWx1ZUhhc2h0YWJsZQEAAAAFX2NvbGwDHFN5c3RlbS5Db2xsZWN0aW9ucy5IYXNodGFibGUCAAAACQMAAAAEAwAAABxTeXN0ZW0uQ29sbGVjdGlvbnMuSGFzaHRhYmxlBwAAAApMb2FkRmFjdG9yB1ZlcnNpb24IQ29tcGFyZXIQSGFzaENvZGVQcm92aWRlcghIYXNoU2l6ZQRLZXlzBlZhbHVlcwAAAwMABQULCBxTeXN0ZW0uQ29sbGVjdGlvbnMuSUNvbXBhcmVyJFN5c3RlbS5Db2xsZWN0aW9ucy5JSGFzaENvZGVQcm92aWRlcgjsUTg/BgAAAAoKCwAAAAkEAAAACQUAAAAQBAAAAAQAAAAGBgAAAAZVc2VySUQGBwAAAAZMaXN0SUQGCAAAAAVUb2RheQYJAAAABldlYlVSTBAFAAAABAAAAAYKAAAAD0N1cnJlbnRVc2VyTmFtZQYLAAAAJntGMTM3NEMwMC1BNkQxLTQ4RUEtQUE5Ni03NzkzQ0UxMDZEMUZ9BgwAAAAUMjAxMi0xMS0wNVQxMzozMTozNFoGDQAAABR7c2l0ZWNvbGxlY3Rpb25yb290fQtkZAIID2QWAgIDD2QWAgIBDw8WAh4HVmlzaWJsZWdkFgQCAQ8PFgIfAmhkFhwCAQ8PFgIfAmhkZAIDDxYCHwJoZAIFDw8WAh8CaGRkAgcPFgIfAmhkAgkPDxYCHwJoZGQCCw8PFgIfAmhkZAINDw8WAh8CaGRkAg8PDxYEHgdFbmFibGVkaB8CaGRkAhEPDxYCHwJoZGQCEw8PFgQfA2gfAmhkZAIVDw8WAh8CaGRkAhcPFgIfAmhkAhkPFgIfAmhkAhsPDxYCHwJnZGQCAw8PFgIfAmdkFgYCAQ8PFgIfAmdkZAIDDw8WBh4YcGVyc2lzdGVkRXJyb3JBY3Rpb25UcmVlZB4bcGVyc2lzdGVkRXJyb3JBY3Rpb25UcmVlSWRzZB8CZ2RkAgUPDxYCHwJnZGQCCg9kFgICAQ8WAh8CaBYCZg9kFgQCAg9kFgYCAQ8WAh8CaGQCAw8WAh8CaGQCBQ8WAh8CaGQCAw8PFgIeCUFjY2Vzc0tleQUBL2RkAgwPZBYCAgEPDxYCHwEyqQQAAQAAAP////8BAAAAAAAAAAwCAAAAWE1pY3Jvc29mdC5TaGFyZVBvaW50LCBWZXJzaW9uPTEyLjAuMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPTcxZTliY2UxMTFlOTQyOWMFAQAAAD1NaWNyb3NvZnQuU2hhcmVQb2ludC5XZWJQYXJ0UGFnZXMuUGFyYW1ldGVyTmFtZVZhbHVlSGFzaHRhYmxlAQAAAAVfY29sbAMcU3lzdGVtLkNvbGxlY3Rpb25zLkhhc2h0YWJsZQIAAAAJAwAAAAQDAAAAHFN5c3RlbS5Db2xsZWN0aW9ucy5IYXNodGFibGUHAAAACkxvYWRGYWN0b3IHVmVyc2lvbghDb21wYXJlchBIYXNoQ29kZVByb3ZpZGVyCEhhc2hTaXplBEtleXMGVmFsdWVzAAADAwAFBQsIHFN5c3RlbS5Db2xsZWN0aW9ucy5JQ29tcGFyZXIkU3lzdGVtLkNvbGxlY3Rpb25zLklIYXNoQ29kZVByb3ZpZGVyCOxROD8FAAAACgoLAAAACQQAAAAJBQAAABAEAAAAAwAAAAYGAAAABlVzZXJJRAYHAAAABVRvZGF5BggAAAAITGlzdE5hbWUQBQAAAAMAAAAGCQAAAA9DdXJyZW50VXNlck5hbWUGCgAAABQyMDEyLTExLTA1VDEzOjMxOjM0WgYLAAAADUV4cGxvcmUgTGlua3MLZGQCDg9kFgICAQ8PFgIfATKpBAABAAAA/////wEAAAAAAAAADAIAAABYTWljcm9zb2Z0LlNoYXJlUG9pbnQsIFZlcnNpb249MTIuMC4wLjAsIEN1bHR1cmU9bmV1dHJhbCwgUHVibGljS2V5VG9rZW49NzFlOWJjZTExMWU5NDI5YwUBAAAAPU1pY3Jvc29mdC5TaGFyZVBvaW50LldlYlBhcnRQYWdlcy5QYXJhbWV0ZXJOYW1lVmFsdWVIYXNodGFibGUBAAAABV9jb2xsAxxTeXN0ZW0uQ29sbGVjdGlvbnMuSGFzaHRhYmxlAgAAAAkDAAAABAMAAAAcU3lzdGVtLkNvbGxlY3Rpb25zLkhhc2h0YWJsZQcAAAAKTG9hZEZhY3RvcgdWZXJzaW9uCENvbXBhcmVyEEhhc2hDb2RlUHJvdmlkZXIISGFzaFNpemUES2V5cwZWYWx1ZXMAAAMDAAUFCwgcU3lzdGVtLkNvbGxlY3Rpb25zLklDb21wYXJlciRTeXN0ZW0uQ29sbGVjdGlvbnMuSUhhc2hDb2RlUHJvdmlkZXII7FE4PwUAAAAKCgsAAAAJBAAAAAkFAAAAEAQAAAADAAAABgYAAAAGVXNlcklEBgcAAAAFVG9kYXkGCAAAAAhMaXN0TmFtZRAFAAAAAwAAAAYJAAAAD0N1cnJlbnRVc2VyTmFtZQYKAAAAFDIwMTItMTEtMDVUMTM6MzE6MzRaBgsAAAANVXRpbGl0eSBMaW5rcwtkZAIYD2QWAgIBDxQrAAIUKwACDxYCHhdFbmFibGVBamF4U2tpblJlbmRlcmluZ2hkEBYEZgIBAgICAxYEFCsAAmQQFgFmFgEUKwACZGQPFgFmFgEFdFRlbGVyaWsuV2ViLlVJLlJhZE1lbnVJdGVtLCBUZWxlcmlrLldlYi5VSSwgVmVyc2lvbj0yMDA5LjMuMTEwMy4yMCwgQ3VsdHVyZT1uZXV0cmFsLCBQdWJsaWNLZXlUb2tlbj0xMjFmYWU3ODE2NWJhM2Q0FCsAAmQQFgFmFgEUKwACZGQPFgFmFgEFdFRlbGVyaWsuV2ViLlVJLlJhZE1lbnVJdGVtLCBUZWxlcmlrLldlYi5VSSwgVmVyc2lvbj0yMDA5LjMuMTEwMy4yMCwgQ3VsdHVyZT1uZXV0cmFsLCBQdWJsaWNLZXlUb2tlbj0xMjFmYWU3ODE2NWJhM2Q0FCsAAmQQFgFmFgEUKwACZGQPFgFmFgEFdFRlbGVyaWsuV2ViLlVJLlJhZE1lbnVJdGVtLCBUZWxlcmlrLldlYi5VSSwgVmVyc2lvbj0yMDA5LjMuMTEwMy4yMCwgQ3VsdHVyZT1uZXV0cmFsLCBQdWJsaWNLZXlUb2tlbj0xMjFmYWU3ODE2NWJhM2Q0FCsAAmQQFgFmFgEUKwACZGQPFgFmFgEFdFRlbGVyaWsuV2ViLlVJLlJhZE1lbnVJdGVtLCBUZWxlcmlrLldlYi5VSSwgVmVyc2lvbj0yMDA5LjMuMTEwMy4yMCwgQ3VsdHVyZT1uZXV0cmFsLCBQdWJsaWNLZXlUb2tlbj0xMjFmYWU3ODE2NWJhM2Q0DxYEZmZmZhYBBXRUZWxlcmlrLldlYi5VSS5SYWRNZW51SXRlbSwgVGVsZXJpay5XZWIuVUksIFZlcnNpb249MjAwOS4zLjExMDMuMjAsIEN1bHR1cmU9bmV1dHJhbCwgUHVibGljS2V5VG9rZW49MTIxZmFlNzgxNjViYTNkNGRkAiQPZBYMAgUPFgIfAAsrBAFkAgcPFgIfAAsrBAFkAgkPFgIfAAsrBAFkAgsPZBYCZg8PFgIfAmhkZAIND2QWAmYPDxYCHwJoZGQCDw8WAh8ACysEAWQYAQUeX19Db250cm9sc1JlcXVpcmVQb3N0QmFja0tleV9fFgEFJ2N0bDAwJFBsYWNlSG9sZGVySG9yaXpvbnRhbE5hdiRSYWRNZW51MavU6mt3lerIwBtFICP0KiKE+8mz" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['aspnetForm'];
+if (!theForm) {
+    theForm = document.aspnetForm;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="/WebResource.axd?d=MGlS7VjzTqWyGQu3Z6jwwdaw94zuD5HNJPNy0zrm1giikugyPiC-tr4lOW77g7HQR-M_QADnEkz9y2Ug3OB5iD9_Jm81&amp;t=634752235183412145" type="text/javascript"></script>
+
+<script> var MSOWebPartPageFormName = 'aspnetForm';</script>
+<script type="text/javascript">
+//<![CDATA[
+
+                function DoCallBack(filterText)
+                {
+                    WebForm_DoCallback('ctl00$SPWebPartManager1$g_f04f2a74_80a8_4880_ad8b_dcd2c88f5a37',filterText,UpdateFilterCallback,0,CallBackError,true);
+                }
+                function CallBackError(result, clientsideString)
+                {                
+                }
+            //]]>
+</script>
+<script type="text/JavaScript" language="JavaScript">
+<!--
+var L_Menu_BaseUrl="";
+var L_Menu_LCID="1033";
+var L_Menu_SiteTheme="";
+//-->
+</script><SCRIPT LANGUAGE='JavaScript' >
+<!--
+//-->
+</SCRIPT>
+<script src="/ScriptResource.axd?d=TGyqQI2ZlSZVqKnK9d_nF_YhNVrHsDoCTcCAXSlGyc0ysfuPVfCgkXvENJSIUssn8FOXVAQjqzNPSJ-MjR6xOVKC0kwAJjqTOAuuekVL05Ur_u7kwlDJgloxT5VcBW9OptbGl1BHBIGGQ8k9CL2NdAQ1t1Q1&amp;t=634720871983890428" type="text/javascript"></script>
+<script src="/ScriptResource.axd?d=bXuDQA6NTD9QO-FCgoC7G2q2EfHvSRS8LVQCW513MlKgeqtHT2O3WpjXtwWEgA3SJ7JZyi0dH3-3oQy58UCLnsv11Dj0wI4UIP4M3_hYhEG-rf2BdzZRSuAon3VbFjOtgdtELdGzt28-SJtLpfJkmn4oFU8CeKM7deesxRdoIRFb9eh00&amp;t=634720871983890428" type="text/javascript"></script>
+<script src="/ScriptResource.axd?d=grZZLlzA5V3CENp66SjoYLkO4_0BQ1Wpz1LPubP-ZHSKm0CoKs4_vRUGegy-iwBQwhGZKEXI0MVbC57BNXH3PmBpEoq4293G9iW8Plk53MKg0nszYD_UBmr3tACs7eWphhgTZ2px7jqTzfAgLKPcxzAl5EgLq3T8bIOPvpvy4YPxMjiK0&amp;t=634850311547456516" type="text/javascript"></script>
+<script src="/ScriptResource.axd?d=vtprHpwLV7lSh5bebtpzLSRd371o3z6VlYSgL1tWnOMN8-kw6WH4BwUaxaQOV5-QCeHMcazmuOdesFTnqSe02iPLZw5P7Saaa2BVw0U-ELPaEVuaq_1nY3BenBhGb9noGkyEKQ62oV6ghcNEJWugKjbvIvz8ueOlLQBhsK7tSgNn2pE20&amp;t=634850311547456516" type="text/javascript"></script>
+<script src="/ScriptResource.axd?d=ijvf0CFDXXUTGelv8BLUXfApUtsSro-WwiN4xLAFy1zZjIBrCyS3fIcQRThL8v2_H-i3XpGnuBJiBheCn29kfUVj6q8y7gClTWKiDsPwJHPJthsvgT2R8mjUSw3e2mu7V2Nnph5u2g0O3HGfx_EAAsjkmYxZVLF3WS5Djs33U0C3to8ycZ91wuLJrOKPwG0K96TUcg2&amp;t=634850311547456516" type="text/javascript"></script>
+<script src="/ScriptResource.axd?d=HM3V8-9aPvAKl_6V1sQ6c832CV4638DcZ0ryWVsvKqoC3auLJuiPayirl4KLWWcMJGIjngdL9AsFfKu8EPz_g5jq0B-r9x8Hl_hUNX_LapTM-zayWDJkORJzrGoHaeIjnhr1CKRRAtG6C-CGxRYKbcKSwF-zKQv3jkQBWciwJlODOHjW2xmiHTBNVrkjkNP4knj9zQ2&amp;t=634850311547456516" type="text/javascript"></script>
+<script src="/ScriptResource.axd?d=NHsIzB2CUoW_zKAUVkmrgv3fHzw8d9fLmY4VazzLs-by7-CamKRKYtDh2f7TuAHJ13CdVkSlbJrOqXPGpxUDh4ZVb71kLCG79EXEc84OCXoX_Zv6YRn3O4v9HrG9l1-wpwqaeVA2PCozkaBCUyQtQfqcUomydPDjBtHL9FyHACy5bZKxUZCRQUBHRR6L40TS_lx5Ow2&amp;t=634850311547456516" type="text/javascript"></script>
+<script src="/ScriptResource.axd?d=3SKkzQMfPIwEgMOkQFFQwqT6h5NAJuR7oZrbaFietBDJluOIQ62A0d1Blq1-wNGPG9oMBjZeGLDkKzePoU3-L7nB4iLcmxMNFAjj21Ga8_jcurlyIvBlE2cfpJ18QZGTE6HVfVSch3oHO5RL_bTSkkFfY_6pjwtg9zQw1Y6aNx7JusuH0&amp;t=634850311547456516" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+function WebForm_OnSubmit() {
+UpdateFormDigest('\u002f', 1440000);return _spFormOnSubmitWrapper();
+return true;
+}
+//]]>
+</script>
+
+
+	<!--	ScriptManager used for Telerik AJAX controls	-->
+	<script type="text/javascript">
+//<![CDATA[
+Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager1', document.getElementById('aspnetForm'));
+Sys.WebForms.PageRequestManager.getInstance()._updateControls([], [], [], 90);
+//]]>
+</script>
+
+	
+	<!-- =====  Edit Bars  ============================================================ -->
+	<!-- wss edit console -->
+	
+
+					
+	<!-- publishing page editor toolbar  -->
+	
+<!-- Console -->
+<span id="ctl00_ctl14_publishingContext1"></span>
+
+<!-- Console -->
+
+				
+<div id="wrapper">
+	<div id="container">
+		<div class="SharePointMenu">
+			<div class="SharePointSiteActionsMenu" title="SharePoint Site Actions Menu">
+				<!-- site actions menu  -->
+				
+<!-- Begin Action Menu Markup -->
+<table height=100% class="ms-siteaction" cellpadding=0 cellspacing=0>
+	<tr>
+					   <td class="ms-siteactionsmenu" id="siteactiontd">
+					   
+					</td>
+	</tr>
+</table>
+<!-- End Action Menu Markup -->
+
+			</div><!-- End .SharePointSiteActionsMenu -->
+		</div><!-- End .SharePointMenu -->
+						
+		<div id="ExploreUtilityBar">
+		<div id="ExploreBar">
+						
+							<div id="explore" title="Links to other UCSD Health Sciences websites">
+								<!--	Explore Dropdown: Start	-->
+								<table TOPLEVEL border="0" cellpadding="0" cellspacing="0" width="100%">
+	<tr>
+		<td valign="top"><div WebPartID="00000000-0000-0000-0000-000000000000" HasPers="true" id="WebPartWPQ1" width="100%" OnlyForMePart="true" allowDelete="false" style="" ><div id="explore" xmlns:x="http://www.w3.org/2001/XMLSchema" xmlns:d="http://schemas.microsoft.com/sharepoint/dsp" xmlns:asp="http://schemas.microsoft.com/ASPNET/20" xmlns:__designer="http://schemas.microsoft.com/WebParts/v2/DataView/designer" xmlns:SharePoint="Microsoft.SharePoint.WebControls" xmlns:ddwrt2="urn:frontpage:internal"><ul class="dropdown"><li class="first"><a href="#">Explore other UCSD Health Sciences sites</a><ul><li title=""><a href="http://cancer.ucsd.edu">UC San Diego Moores Cancer Center</a></li><li title=""><a href="http://heartcenter.ucsd.edu">UC San Diego Sulpizio Cardiovascular Center</a></li><li title=""><a href="http://healthsciences.ucsd.edu">UC San Diego Health Sciences</a></li><li title=""><a href="http://som.ucsd.edu">UCSD School of Medicine</a></li></ul></li></ul></div></div></td>
+	</tr>
+</table>
+								<!--	Explore Dropdown: End	-->
+							</div>
+						
+		</div>
+		
+		<ul class="utilityLinks" style="padding-right:28px;"><li><a href="http://myucsdchart.ucsd.edu" onClick="recordOutboundLink(this, 'Utility', 'MyUCSDChart'); return true;" target="_blank"><strong>MyUCSDChart Login</strong></a></li></ul>	
+		
+		<div id="UtilityBar">
+					
+				<!--	Utility Links: Start	-->
+				<table TOPLEVEL border="0" cellpadding="0" cellspacing="0" width="100%">
+	<tr>
+		<td valign="top"><div WebPartID="00000000-0000-0000-0000-000000000000" HasPers="true" id="WebPartWPQ2" width="100%" OnlyForMePart="true" allowDelete="false" style="" ><ul class="utilityLinks right" xmlns:x="http://www.w3.org/2001/XMLSchema" xmlns:d="http://schemas.microsoft.com/sharepoint/dsp" xmlns:asp="http://schemas.microsoft.com/ASPNET/20" xmlns:__designer="http://schemas.microsoft.com/WebParts/v2/DataView/designer" xmlns:SharePoint="Microsoft.SharePoint.WebControls" xmlns:ddwrt2="urn:frontpage:internal"><li title="" class="first"><a href="http://health.ucsd.edu/locations/Pages/default.aspx">Locations</a></li><li title=""><a href="http://health.ucsd.edu/careers/">Careers</a></li><li title=""><a href="http://health.ucsd.edu/medinfo/nursing/Pages/default.aspx">Nursing</a></li><li title=""><a href="http://health.ucsd.edu/about/volunteer/">Volunteer</a></li><li title=""><a href="http://health.ucsd.edu/about/giving">Make a Donation</a></li></ul></div></td>
+	</tr>
+</table>
+				<!--	Utility Links: End	-->
+					
+		</div>
+</div>
+<!-- End PlaceHolderExploreDropdown-->
+		
+		<br />
+		
+		<div id="HeaderTopCorners"></div><!-- End #HeaderTopCorners -->
+		
+		<div class="wrapperPageBorder">
+			<div id="header" title="Header">
+				
+					<div id="logo" title="Return to Hospital Home Page">
+						<a href="/Pages/default.aspx" title="Return to Hospital Home Page"><img src="/Style Library/Images/UCSD/logo-health-system.jpg" class="logo" /></a>
+					</div><!-- End #logo -->
+				<!-- End PlaceHolderPageImage -->
+				
+				<div id="headerButtons">
+				      <span class="findDoc">
+						<a id="ctl00_FindADoc" href="http://doctors.ucsd.edu/">Find a Doctor</a></span><br>
+				       <span class="apptRef">
+						<a id="ctl00_Appointments" href="../request_appt/">Appointments &amp; Referrals</a></span><br>
+				       <span class="contact">
+						<a id="ctl00_Contact" href="../about/Pages/contactus.aspx">Contact Us</a> | <strong>858-657-7000</strong></span>
+				</div>
+			</div><!-- End #header -->
+		</div><!-- End .wrapperPageBorder -->
+		
+		
+		<div class="wrapperPageBorder">
+			<!-- =====  Horizontal Top Navigation Bar ============================================================ -->
+			<!-- top / global nav  -->
+			<div id="globalNav">
+				<!-- =====  Horizontal Top Navigation Bar ============================================================ -->
+				<!-- top / global nav  -->
+				<div style="float:left; width:660px;">
+				
+
+					<!--	Top navigation menu for the page	-->
+					
+<div class="nocontent">					
+					<div id="ctl00_PlaceHolderHorizontalNav_RadMenu1" class="RadMenu RadMenu_Sitefinity rmSized" EnableShadows="true" style="width:920px;">
+	<!-- 2009.3.1103.20 --><ul class="rmHorizontal rmRootGroup">
+		<li class="rmItem rmFirst"><a href="/patients/Pages/default.aspx" class="rmLink"><span class="rmText">Patients & Visitors</span></a><div class="rmSlide">
+			<ul class="rmVertical rmGroup rmLevel1">
+				<li class="rmItem rmFirst rmLast rmTemplate Products" style="width:640px;"><div class="rmText">
+					
+                                <div id="CatWrapper" class="Wrapper" style="width: 610px;">
+                                <table>
+                                	<tr>
+                                		<td>
+                                			<div class="MenuColumn">
+                                				<h4>Patients</h4>
+                                				<ul class="Menu">
+                                					<li><a href="/request_appt">Appointments</a></li>
+                                					<li><a href="http://doctors.ucsd.edu/">Find a Doctor</a></li>
+                                					<li><a href="/healthinfo">Health Library</a></li>
+                                					<li><a href="/locations" onClick="recordInboundLink(this, 'Global Nav', 'Locations'); return false;">Locations</a></li>
+                                					<li><a href="/patients/yourhospitalstay">Your Hospital Stay</a></li>
+                                					<li><a href="/patients/events">Events &amp; Classes</a></li>
+                                					<li><a href="/patients/Pages/carepages.aspx">CarePages</a></li>
+                                					<li><a href="/clinicaltrials">Clinical Trials</a></li>
+                                				</ul>
+                                			</div>
+                                
+                                			<div class="MenuColumn2">
+                                				<h4>Visitors</h4>
+                                				<ul class="Menu">
+                                					<li><a href="/patients/Pages/visitors.aspx">Visitor Information</a></li>
+                                					<li><a href="/patients/Pages/icu.aspx">ICU Visiting</a></li>
+                                					<li><a href="/locations" onClick="recordInboundLink(this, 'Global Nav', 'Locations'); return false;">Directions</a></li>
+                                					<li><a href="/locations/Pages/parking.aspx">Parking</a></li>
+                                					<li><a href="/patients/Pages/contact-patient.aspx">Contact a Patient</a></li>
+                                					<li><a href="/patients/bannister">Bannister House</a></li>
+                                					<li><a href="/patients/Pages/lodging.aspx">Nearby Lodging</a></li>
+                                				</ul>
+                                			</div>
+                                
+                                			<div class="MenuColumn2">
+                                				<h4>Services</h4>
+                                				<ul class="Menu">
+                                					<li><a href="http://myucsdchart.ucsd.edu" target="_blank">MyUCSDChart</a></li>
+                                					<li><a href="/feedback">Send Us Feedback</a></li>
+                                					<li><a href="/patients/billing/Pages/default.aspx">Billing &amp; Insurance</a></li>
+                                					<li><a href="/patients/Pages/medical-records.aspx">Medical Records</a></li>
+                                					<li><a href="/patients/mdvisit/Pages/lab.aspx">Lab Test Results</a></li>
+                                					<li><a href="/patients/mdvisit/Pages/contact.aspx">Contact a Physician</a></li>
+                                					<li><a href="/patients/Pages/carepages.aspx">Create a CarePage</a></li>
+                                					<li><a href="/specialties/pharmacy/Pages/default.aspx">Pharmacy</a></li>
+                                				</ul>
+                                			</div>	
+                                		</td>
+                                	</tr>
+                                	<tr>
+                                		<td>
+                                			<div class="MenuFeature">
+                                				<h4><a href="http://doctors.ucsd.edu/" onClick="recordInboundLink(this, 'Global Nav Feature', 'Find a Doc'); return false;">Find a Doctor</a></h4>
+                                				<a href="http://doctors.ucsd.edu/" onClick="recordInboundLink(this, 'Global Nav Feature', 'Find a Doc'); return false;"><img src="/PublishingImages/global-nav/nav_findDoc.jpg" alt="Find a Doctor" /></a>
+                                				<p>Search for your doctor or find doctors accepting new patients.<br>
+                                				<a href="http://doctors.ucsd.edu/" onClick="recordInboundLink(this, 'Global Nav Feature', 'Find a Doc'); return false;">Search</a></p>
+                                			</div>
+                                
+                                			<div class="MenuFeature2">
+                                				<h4><a href="/patients/Pages/visitors.aspx" onClick="recordInboundLink(this, 'Global Nav Feature', 'Visiting Hours'); return false;">Visiting Hours</a></h4>
+                                				<a href="/patients/Pages/visitors.aspx" onClick="recordInboundLink(this, 'Global Nav Feature', 'Visiting Hours'); return false;"><img src="/PublishingImages/global-nav/nav_visiting2.jpg" alt="Hospital visiting hours at UCSD"></a>
+                                				<p>Find out about our hospital visiting hours and policies.<br>
+                                				<a href="/patients/Pages/visitors.aspx" onClick="recordInboundLink(this, 'Global Nav Feature', 'Visiting Hours'); return false;">More Info</a></p>
+                                			</div>
+                                
+                                			<div class="MenuFeature2">
+                                				<h4><a href="http://myucsdchart.ucsd.edu" onClick="recordOutboundLink(this, 'Global Nav Feature', 'MyUCSDChart'); return true;" target="_blank">Log In</a></h4>
+                                				<a href="http://myucsdchart.ucsd.edu" onClick="recordOutboundLink(this, 'Global Nav Feature', 'MyUCSDChart'); return true;" target="_blank"><img src="/PublishingImages/global-nav/nav_login.jpg" alt="Log In to MyUCSDChart"></a>
+                                				<p>Log In to MyUCSDChart to access your medical information<br>
+                                				<a href="http://myucsdchart.ucsd.edu" onClick="recordOutboundLink(this, 'Global Nav Feature', 'MyUCSDChart'); return true;" target="_blank">Log In</a></p>
+                                			</div>	
+                                		</td>
+                                	</tr>
+                                </table>
+                                </div>
+
+                               
+                            		
+				</div></li>
+			</ul>
+		</div></li><li class="rmItem "><a href="/specialties/" class="rmLink"><span class="rmText">Specialties & Programs</span></a><div class="rmSlide">
+			<ul class="rmVertical rmGroup rmLevel1">
+				<li class="rmItem rmFirst rmLast rmTemplate" style="width:640px;"><div class="rmText">
+					
+                                <div id="CatWrapper" class="Wrapper" style="width: 610px;">
+                                <table>
+                                	<tr>
+                                		<td>
+                                			<div class="MenuColumnSpecialties">
+                                				<h4>Most Popular Specialties</h4>
+                                				<div class="clr"></div>
+                                				<div class="MenuColumn">
+                                					<ul class="Menu">
+                                						<li><img src="/PublishingImages/bullet_arrow.png" border="0" alt=""> <a href="/specialties"><strong>View All Specialties</strong></a></li>
+                                						<li><a href="/specialties/Pages/cancer.aspx">Cancer</a></li>
+                                						<li><a href="/specialties/Pages/cardiology.aspx">Cardiology</a></li>
+                                						<li><a href="/specialties/gastro">Gastroenterology / <br />Liver Disease</a></li>
+                                						<li><a href="/specialties/surgery/otolaryngology">Head &amp; Neck Surgery (ENT)</a></li>
+                                						<li><a href="/specialties/mri">MRI</a></li>
+                                						<li><a href="/specialties/neuro">Neurology / Neurosurgery</a></li>
+                                						<li><a href="/specialties/surgery/ortho">Orthopedics</a></li>
+                                						<li><a href="/women/child">Pregnancy &amp; Childbirth</a></li>
+                                					</ul>
+                                				</div>
+                                				<div class="MenuColumn">
+                                					<ul class="Menu">
+                                						<li>&nbsp;</li>
+                                						<li><a href="/specialties/Pages/primary-care.aspx">Primary Care</a></li>
+                                						<li><a href="/specialties/psych">Psychiatry</a></li>
+                                						<li><a href="/specialties/pulmonary">Pulmonology</a></li>
+                                						<li><a href="/specialties/radiology">Radiology</a></li>
+                                						<li><a href="/specialties/surgery">Surgical Services</a></li>
+                                						<li><a href="/specialties/surgery/transplant">Transplant</a></li>
+                                						<li><a href="/specialties/surgery/urology">Urology</a></li>
+                                						<li><a href="/women">Women's Services</a></li>
+                                					</ul>
+                                				</div>
+                                				<div class="clr"></div>
+                                				<br><strong style="color:#666;">Specialties A-Z Listing:</strong>
+												<div id="specialtiesAZ">
+													<a class="azLinks" href="/specialties/Pages/specialties-a-z.aspx#groupA">A</a> <a class="azLinks" href="/specialties/Pages/specialties-a-z.aspx#groupB">B</a> 
+													<a class="azLinks" href="/specialties/Pages/specialties-a-z.aspx#groupC">C</a> <a class="azLinks" href="/specialties/Pages/specialties-a-z.aspx#groupD">D</a> 
+													<a class="azLinks" href="/specialties/Pages/specialties-a-z.aspx#groupE">E</a> <a class="azLinks" href="/specialties/Pages/specialties-a-z.aspx#groupF">F</a> 
+													<a class="azLinks" href="/specialties/Pages/specialties-a-z.aspx#groupG">G</a> <a class="azLinks" href="/specialties/Pages/specialties-a-z.aspx#groupH">H</a> 
+													<a class="azLinks" href="/specialties/Pages/specialties-a-z.aspx#groupI">I</a> <a class="azLinks" href="/specialties/Pages/specialties-a-z.aspx#groupJ">J</a> 
+													<a class="azLinks" href="/specialties/Pages/specialties-a-z.aspx#groupK">K</a> <a class="azLinks" href="/specialties/Pages/specialties-a-z.aspx#groupL">L</a> 
+													<a class="azLinks" href="/specialties/Pages/specialties-a-z.aspx#groupM">M</a> <br /><a class="azLinks" href="/specialties/Pages/specialties-a-z.aspx#groupN">N</a> 
+													<a class="azLinks" href="/specialties/Pages/specialties-a-z.aspx#groupO">O</a> <a class="azLinks" href="/specialties/Pages/specialties-a-z.aspx#groupP">P</a> 
+													<a class="azLinks" href="/specialties/Pages/specialties-a-z.aspx#groupQ">Q</a> <a class="azLinks" href="/specialties/Pages/specialties-a-z.aspx#groupR">R</a>
+													<a class="azLinks" href="/specialties/Pages/specialties-a-z.aspx#groupS">S</a> <a class="azLinks" href="/specialties/Pages/specialties-a-z.aspx#groupT">T</a>
+													<a class="azLinks" href="/specialties/Pages/specialties-a-z.aspx#groupU">U</a> <a class="azLinks" href="/specialties/Pages/specialties-a-z.aspx#groupV">V</a> 
+													<a class="azLinks" href="/specialties/Pages/specialties-a-z.aspx#groupW">W</a> <a class="azLinks" href="/specialties/Pages/specialties-a-z.aspx#groupX">X</a> 
+													<a class="azLinks" href="/specialties/Pages/specialties-a-z.aspx#groupY">Y</a> <a class="azLinks" href="/specialties/Pages/specialties-a-z.aspx#groupZ">Z</a>
+												</div>
+                                			</div>
+                                
+                                			<div class="MenuColumn2">
+                                				<h4>Featured Centers</h4>
+                                				<ul class="Menu">
+                                					<li><a href="http://cancer.ucsd.edu/" target="_blank">Moores Cancer Center</a></li>
+                                					<li><a href="http://heartcenter.ucsd.edu/" target="_blank">Sulpizio Cardiovascular Center</a></li>
+                                					<li><a href="http://bmi.ucsd.edu/" target="_blank">Bariatric Metabolic Institute</a></li>
+                                					<li><a href="/specialties/cppm">Center for Pain Medicine</a></li>
+                                					<li><img src="/PublishingImages/bullet_arrow.png" alt=""> <a href="/specialties"><strong>View All Centers</strong></a></li>
+                                				</ul>
+
+                                				<h4>Health Library</h4>
+                                				<ul class="Menu">
+                                					<li><a href="/healthinfo">Health Library</a></li>
+                                					<li><a href="/healthinfo/Pages/conditions.aspx">Topics A-Z</a></li> 
+                                					<li><a href="/healthinfo/videos">Videos on Demand</a></li>
+                                					<li><a href="/healthinfo/Pages/tutorials.aspx">Patient Education Tutorials</a></li>
+                                				</ul>
+                                			</div>	
+                                		</td>
+                                	</tr>
+                                </table>
+                                </div>
+                            		
+				</div></li>
+			</ul>
+		</div></li><li class="rmItem "><a href="/medinfo/" class="rmLink"><span class="rmText">For Health Professionals</span></a><div class="rmSlide">
+			<ul class="rmVertical rmGroup rmLevel1">
+				<li class="rmItem rmFirst rmLast rmTemplate" style="width:230px;"><div class="rmText">
+					
+                            <div id="CatWrapper" class="Wrapper" style="width: 230px;">
+                                <table>
+                                	<tr>
+                                		<td>
+                                			<div class="MenuColumn">
+                                			
+                                				<ul class="Menu">
+                                					<li><a href="/medinfo/Pages/refer.aspx">Physician Access Services</a></li>
+                                					<li><a href="/medinfo/Pages/medical-careers.aspx">Medical Careers</a></li>                 
+                                					<li><a href="/medinfo/medical-staff">Medical Staff Admin</a></li>               					
+                                					<li><a href="/medinfo/training/Pages/default.aspx">Training</a></li>                                					
+                                   					<li><a href="/medinfo/Pages/resources.aspx">Professional Resources</a></li>
+                                					<li><a href="/medinfo/Pages/clinical-research.aspx">Research &amp; Clinical Trials</a></li>
+                                				</ul>
+                                				</div>
+                                		</td>
+                                	</tr>
+                                </table>
+                                				<div class="MenuFeature">
+                                			     <h4><a href="/medinfo/nursing" onClick="recordOutboundLink(this, 'Global Nav Feature', 'Nursing'); return true;">Nursing @ UCSD</a></h4>
+                                				<a href="/medinfo/nursing" onClick="recordOutboundLink(this, 'Global Nav Feature', 'Nursing'); return true;"><img src="/PublishingImages/global-nav/nav_nursing2.jpg" alt="Academic Nursing at UCSD"></a>
+                                				<p>Find out about our academic nursing program.<br>
+                                				<a href="/medinfo/nursing" onClick="recordOutboundLink(this, 'Global Nav Feature', 'Nursing'); return true;">More Info</a></p>
+                                			</div>	
+                                	
+                                </div>
+                              
+                            		
+				</div></li>
+			</ul>
+		</div></li><li class="rmItem rmLast"><a href="/about/" class="rmLink"><span class="rmText">About Us</span></a><div class="rmSlide">
+			<ul class="rmVertical rmGroup rmLevel1">
+				<li class="rmItem rmFirst rmLast rmTemplate" style="width:230px;"><div class="rmText">
+					
+                            <div id="CatWrapper" class="Wrapper" style="width: 230px;">
+                            <table>
+                                	<tr>
+                                		<td>
+                                			<div class="MenuColumn">
+                                				<ul class="Menu">
+                                					<li><a href="/about/who-we-are">Who We Are</a></li>
+                                					<li><a href="/jacobs/Pages/default.aspx">Jacobs Medical Center</a></li>
+                                					<li><a href="/about/gca/Pages/default.aspx">Government &amp; Community Affairs</a></li>
+                                				    <li><a href="/specialties/international/Pages/default.aspx">International Patient Services</a></li>
+                                				    <li><a href="/about/Pages/research-education.aspx">Research &amp; Education</a></li>
+                                					<li><a href="/about/marketing/Pages/default.aspx">Marketing &amp; Communications</a></li>                                					
+                                					<li><a href="/news">Press &amp; Media</a></li>
+                                					<li><a href="/about/giving">Giving Opportunities</a></li>
+                                					<li><a href="/about/Pages/vendors.aspx">Supplier Information</a></li>
+                                					<li><a href="/about/volunteer">Volunteering</a></li>
+                                					<li><a href="/careers">Careers</a></li>
+                                   					<li><a href="/about/Pages/contactus.aspx">Contact Us</a></li>
+                                				</ul>
+                                			</div>
+                                		</td>
+                                	</tr>
+                                </table>
+                                <div class="MenuFeature">
+                                			     <h4>Contact Us | 858-657-7000</h4>
+                                				 <a href="/about/Pages/contactus.aspx">Send us an Email</a>
+                                			</div>
+                            		
+				</div></li>
+			</ul>
+		</div></li>
+	</ul><input id="ctl00_PlaceHolderHorizontalNav_RadMenu1_ClientState" name="ctl00_PlaceHolderHorizontalNav_RadMenu1_ClientState" type="hidden" />
+</div>
+        			</div>
+				<!-- End PlaceHolderHorizontalNav -->
+        </div>
+        
+					<div id="search">	
+						<div class="searchContainer">
+<iframe title="Search Input Box"  style="float: left; height: 24px; width: 216px;" name="Search" src="/searchpage.aspx" scrolling="no" border="0" frameborder="0">
+				Your browser does not support inline frames or is currently configured not to display inline frames.
+			</iframe>
+						</div><!-- End .searchContainer -->
+					</div><!-- End #search -->
+				<!-- End PlaceHolderSearchArea -->
+			</div><!-- End #globalNav -->
+			
+			<!-- =====  Breadcrumb  ============================================================ -->
+			<!-- page breadcrumb -->
+			<!-- End PlaceHolderTitleBreadcrumb -->
+			
+			<div class="bgContent">
+				<div class="wrapperContent3Column">
+					<div class="wrapperContent2Column">
+						<!-- ===== Quick Launch / Left Nav  ============================================================ -->
+						<!-- left nav placeholder can be overridden -->
+						<!-- End PlaceHolderLeftNavBar -->
+						<!-- small menu used for wiki and meetings -->
+						
+						<!-- ===== Main  ============================================================ -->
+						<!-- page title  -->
+						
+						<div class="mainPgContent">
+							<!-- page content loads from the pages layout -->
+							
+	
+	
+
+			<div class="clr"></div>
+
+	<div id="divisionHomeTop">
+		
+		<div id="features">
+			<div id="feature-links" class="noShow">
+				<a href="#feature-1" id="feature-link-1" title="Top 50 Cardio" class="feature-link active"></a>
+				<a href="#feature-2" id="feature-link-2" title="Top Docs 2012" class="feature-link"></a>
+				<a href="#feature-3" id="feature-link-3" title="MAC" class="feature-link"></a>
+				<a href="#feature-4" id="feature-link-4" title="Now Open in Encinitas" class="feature-link"></a>
+				<a href="#feature-5" id="feature-link-5" title="Jacobs Medical Center" class="feature-link"></a>
+			</div>
+
+			<div style="display: block;" id="feature-1" class="feature-story active">
+				<div class="slide"><a id="slide-1" href="/news/releases/Pages/2012-10-03-SCVC-top-heart-hospital.aspx" onClick="recordInboundLink(this, 'HPRotator', 'Top 50 Cardio'); return false;"></a></div>
+				<div class="slideMessage">
+					<p>&nbsp;&nbsp;&nbsp;Sulpizio Cardiovascular Center receives national recognition.</p>
+					<!-- three spaces before text are necessary for spacing, instead of using padding. 
+					 	This fixes slight jump/shift in text when fading with padding in IE -->
+				</div>
+			</div>
+
+			<div style="display: none;" id="feature-2" class="feature-story">
+				<div class="slide"><a id="slide-2" href="http://doctors.ucsd.edu/?groups=17" target="_blank" onClick="recordOutboundLink(this, 'HPRotator', 'Top Docs 2012'); return true;"></a></div>
+				<div class="slideMessage">
+					<p>&nbsp;&nbsp;&nbsp;See who made the list in San Diego Magazine’s annual survey.</p>
+					<!-- three spaces before text are necessary for spacing, instead of using padding. 
+					 	This fixes slight jump/shift in text when fading with padding in IE -->
+				</div>
+			</div>
+			
+			<div style="display: none;" id="feature-3" class="feature-story">
+				<div class="slide"><a id="slide-3" href="http://cancer.ucsd.edu/mac" target="_blank" onClick="recordOutboundLink(this, 'HPRotator', 'MAC'); return true;"></a></div>
+				<div class="slideMessage">
+					<p>&nbsp;&nbsp;&nbsp;Help us move from "one size fits all" to customized treatment.</p>
+					<!-- three spaces before text are necessary for spacing, instead of using padding. 
+					 	This fixes slight jump/shift in text when fading with padding in IE -->
+				</div>
+			</div>
+			
+			<div style="display: none;" id="feature-4" class="feature-story">
+				<div class="slide"><a id="slide-4" href="/locations/Pages/north-coastal.aspx" onClick="recordInboundLink(this, 'HPRotator', 'Encinitas'); return false;"></a></div>
+				<div class="slideMessage">
+					<p>&nbsp;&nbsp;&nbsp;Learn more about services offered in North County.</p>
+					<!-- three spaces before text are necessary for spacing, instead of using padding. 
+					 	This fixes slight jump/shift in text when fading with padding in IE -->
+				</div>
+			</div>
+
+			<div style="display: none;" id="feature-5" class="feature-story">
+				<div class="slide"><a id="slide-5" href="/jacobs" onClick="recordOutboundLink(this, 'HPRotator', 'JMC'); return true;" target="_blank"></a></div>
+				<div class="slideMessage">
+					<p>&nbsp;&nbsp;&nbsp;Architectural model now on display.</p>
+					<!-- three spaces before text are necessary for spacing, instead of using padding. 
+					 	This fixes slight jump/shift in text when fading with padding in IE -->
+				</div>
+			</div>
+
+		</div><!-- end #features -->
+				
+		<div id="quickLinks">
+			<div class="quickLinksContainer">
+				<div class="quickLinkBtn topBtn"><a href="http://doctors.ucsd.edu/">Find a 
+								Doctor</a> </div>
+				<div class="quickLinkBtn middleBtn"><a href="/request_appt">
+								Request an Appointment</a> </div>
+				<div class="quickLinkBtn middleBtn"><a href="/medinfo/Pages/referral.aspx">
+								Refer a Patient</a> </div>
+				<div class="quickLinkBtn bottomBtn"><a href="/clinicaltrials">
+								Browse Clinical Trials</a> </div>
+			</div>
+			<div style="padding-top: 10px;"><a href="/specialties/primary-care" onClick="recordInboundLink(this, 'HPButton', 'PrimaryCare'); return false;"><img alt="Primary Care at our San Diego Hospitals" src="/PublishingImages/home-page/btn-primary-care.jpg" /></a></div>
+		</div>
+	</div><!-- End #divisionHomeTop -->
+
+			<div class="clr"></div>
+
+	<div id="divisionHomeBottom">
+		<div id="LeftColumnsBack">
+			<div id="LeftColumnsTop"></div>
+			<div id="LeftColumns">
+				<div id="homeColumnLeft">
+					<h1>
+					&nbsp;Hospital Highlights&nbsp;</h1>
+					<div class="lineBreak"></div>
+					<div style="width:320px;clear:both;padding-top:10px">
+<div style="width:120px;padding-right:10px;float:left"><a href="/news/releases/Pages/2012-11-01-baggett-president-of-association-of-california-nurse-leaders.aspx"><img style="border:0px solid;width:120px;height:100px" alt="hospital leader named president" src="/PublishingImages/bag.png"></a> </div>
+<div style="width:190px;float:right">
+<h2><a href="/news/releases/Pages/2012-11-01-baggett-president-of-association-of-california-nurse-leaders.aspx">Leader Named President of State Nurses Association</a> </h2>
+Margarita Baggett, our chief nursing officer and interim chief operating officer, has been elected President of the Association of California Nurse Leaders.
+<h2></h2>
+</div>
+</div>
+<div style="width:320px;clear:both;padding-top:10px">
+<div style="width:120px;padding-right:10px;float:left"><a href="/news/releases/Pages/2012-10-24-sulpizio-cardiovascular-center-program-receives-recognition.aspx"><img style="border:0px solid;width:120px;height:100px" alt="hospital helps woman breath" src="/PublishingImages/PTE.png"></a> </div>
+<div style="width:190px;float:right">
+<h2><a href="/news/releases/Pages/2012-10-24-sulpizio-cardiovascular-center-program-receives-recognition.aspx">Specialized procedure helps woman breathe easily</a></h2>
+People come from all over the world to receive this lifesaving surgery pioneered here, which recently won national recognition.</div>
+</div>
+				</div><!-- End #homeColumnLeft -->
+				
+				<div id="homeColumnCenter">
+					<h1>
+					&nbsp;Upcoming Events&nbsp;</h1>
+					<div class="lineBreak"></div>
+					<div id="LatestEventsWrapper">
+						<table width="100%" cellpadding="0" cellspacing="0" border="0">
+	<tr>
+		<td id="MSOZoneCell_WebPartWPQ3" vAlign="top"><table TOPLEVEL border="0" cellpadding="0" cellspacing="0" width="100%">
+			<tr>
+				<td valign="top"><div WebPartID="f04f2a74-80a8-4880-ad8b-dcd2c88f5a37" HasPers="false" id="WebPartWPQ3" width="100%" allowDelete="false" style="" ><table border="0" width="100%" cellpadding="2" cellspacing="0" xmlns:x="http://www.w3.org/2001/XMLSchema" xmlns:d="http://schemas.microsoft.com/sharepoint/dsp" xmlns:asp="http://schemas.microsoft.com/ASPNET/20" xmlns:__designer="http://schemas.microsoft.com/WebParts/v2/DataView/designer" xmlns:SharePoint="Microsoft.SharePoint.WebControls" xmlns:ddwrt2="urn:frontpage:internal"><tr valign="top"></tr><tr><td class="ms-vb" style="height: 20px">1/3</td><td class="ms-vb" style="height: 20px"><a href="https://events.r20.constantcontact.com/register/eventReg?oeidk=a07e680h8ugc5856390&amp;oseq=">Weight Loss and Diabetes Seminar</a></td></tr><tr><td class="ms-vb" style="height: 20px">1/8</td><td class="ms-vb" style="height: 20px"><a href="http://health.ucsd.edu/specialties/mindfulness/schedule/Pages/default.aspx">Mindfulness-Based Stress Reduction</a></td></tr><tr><td class="ms-vb" style="height: 20px">2/1</td><td class="ms-vb" style="height: 20px"><a href="http://cme.ucsd.edu/bridging/">Bridging the Hearts and Minds of Youth</a></td></tr><tr><td class="ms-vb" style="height: 20px">2/7</td><td class="ms-vb" style="height: 20px"><a href="https://events.r20.constantcontact.com/register/eventReg?oeidk=a07e680h99raca27fa7&amp;oseq=">Women's Heart Health Seminar</a></td></tr><tr><td class="ms-vb" style="height: 20px">3/7</td><td class="ms-vb" style="height: 20px"><a href="https://events.r20.constantcontact.com/register/eventReg?oeidk=a07e680hxrr0d794b6b&amp;oseq=">Colorectal Health and Disease Prevention Seminar</a></td></tr></table></div></td>
+			</tr>
+		</table></td>
+	</tr>
+</table>
+					</div>
+					<div id="viewEventsBtn" style="text-align:right; width:215px; clear:both;" class="blueButtonShort"><a href="/patients/events" style="float:right">
+									View All Events</a></div>
+					
+					<div id="careersBtn" style="clear: both;"><a href="/careers" onClick="recordInboundLink(this, 'HPButton', 'Careers'); return false;"><img alt="Careers at UC San Diego Health System" src="/PublishingImages/home-page/btn-careers.gif" /></a></div>
+				</div><!-- End #homeColumnCenter -->
+			</div>
+			<div class="clr"></div>
+			<div id="LeftColumnsBottom"></div>
+		</div>
+		
+		<div id="homeColumnRight">
+			<div id="tabs" class="nojavascript">
+				<ul class="noShow">
+    				<li><a href="#tabs-1">News</a> </li>
+    				<li><a href="#tabs-2">Twitter</a> </li>
+    				<li><a href="#tabs-3">Facebook</a> </li>
+				</ul>
+				<div id="tabs-1" class="nojavascript">
+					<h2 style="margin:0px; padding:0px; height:20px;">Latest News</h2>
+					<div id="latestNewsContainer">
+						<table width="100%" cellpadding="0" cellspacing="0" border="0">
+	<tr>
+		<td id="MSOZoneCell_WebPartctl00_SPWebPartManager1_g_c4474512_87e1_4335_a08a_6c27c750f703" vAlign="top"><table TOPLEVEL border="0" cellpadding="0" cellspacing="0" width="100%">
+			<tr>
+				<td valign="top"><div WebPartID="c4474512-87e1-4335-a08a-6c27c750f703" HasPers="false" id="WebPartctl00_SPWebPartManager1_g_c4474512_87e1_4335_a08a_6c27c750f703" width="100%" class="ms-WPBody" allowMinimize="false" allowRemove="false" allowDelete="false" allowExport="false" style="" ><div id="ctl00_SPWebPartManager1_g_c4474512_87e1_4335_a08a_6c27c750f703">
+					<div id="ctl00_SPWebPartManager1_g_c4474512_87e1_4335_a08a_6c27c750f703_pnlRSSReader">
+						<ul id="rssNewsCompact"><li><a href="http://health.ucsd.edu/news/releases/Pages/2012-11-01-baggett-president-of-association-of-california-nurse-leaders.aspx"> Margarita Baggett Elected President of Association of California Nurse Leaders</a></li><li><a href="http://health.ucsd.edu/news/releases/Pages/2012-10-26-bridging-hearts-minds-of-youth.aspx"> “Bridging the Hearts and Minds of Youth Conference” Opens Registration</a></li><li><a href="http://health.ucsd.edu/news/releases/Pages/2012-10-25-optimal-weight-loss-surgery-at-UC-San-Diego.aspx"> Optimal Care for Surgical Weight Loss Confirmed at UC San Diego Health System</a></li><li><a href="http://health.ucsd.edu/news/releases/Pages/2012-10-24-sulpizio-cardiovascular-center-program-receives-recognition.aspx"> UC San Diego Sulpizio Cardiovascular Center Program Receives National Recognition</a></li></ul><p><a href="/news/Pages/default.aspx">View All News &gt;</a></p>
+					</div>
+				</div></div></td>
+			</tr>
+		</table></td>
+	</tr>
+</table>
+					</div>
+				</div>
+				<div id="tabs-2" class="noShow">
+					<a class="twitter-timeline" height="350" width="250" href="https://twitter.com/UCSDHealth" data-widget-id="258596555588771840">Tweets by @UCSDHealth</a>
+					<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+				</div>
+				<div id="tabs-3" class="noShow">
+					<!--<h2>Recent Posts</h2>-->
+					<div id="facebookfeed">
+						<div id="fb-root"></div>
+						<script>
+							(function(d, s, id) {
+				  				var js, fjs = d.getElementsByTagName(s)[0];
+				 	 			if (d.getElementById(id)) {return;}
+				  				js = d.createElement(s); js.id = id;
+				  				js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+				  				fjs.parentNode.insertBefore(js, fjs);
+							}(document, 'script', 'facebook-jssdk'));
+						</script>
+						<div class="fb-like-box" data-href="http://www.facebook.com/ucsdhealth" data-width="250" data-height="280" data-show-faces="false" data-border-color="cccccc" data-stream="true" data-header="false"></div>
+					</div>
+					<!--<div style="padding-top:10px;">
+						<p><a href="http://www.facebook.com/UCSDHealth" target="_blank" style="color:#569BBE;"><img src="/Style Library/Images/UCSD/icon_facebook_16.png" alt="Find UC San Diego Health System on Facebook" style="vertical-align:middle;" /> Like Us on Facebook</a></p>
+					</div>-->
+				</div>
+				<div id="tabs-4" class="noShow">
+					<h2 style="margin:0px; padding:0px; height:20px;">Most 
+					Recent Videos</h2>
+					<div id="you_tube_feed"></div>
+				</div>
+			</div>			
+		</div><!-- End #homeColumnRight -->
+
+	<div class="clr"></div>
+
+	<div id="seoTextBox">
+		UC San Diego Health System is San Diego's only academic health system and is comprised of <a href="/locations">hospitals in San Diego</a>, including <a href="/locations/Pages/hillcrest.aspx">UC San Diego Medical Center in Hillcrest</a>, and <a href="/locations/Pages/thornton.aspx">UC San Diego Thornton Hospital</a>, <a href="http://cancer.ucsd.edu/" target="_blank">Moores Cancer Center</a>, <a href="/locations/Pages/shiley.aspx">Shiley Eye Center</a>, <a href="http://heartcenter.ucsd.edu/" target="_blank">Sulpizio Cardiovascular Center</a> and <a href="/jacobs">Jacobs Medical Center</a> (opening in 2016) in La Jolla. UC San Diego Health System provides <a href="/">health care</a> and <a href="/specialties">medical services</a> in a large number of specialties, including <a href="/specialties/Pages/primary-care.aspx">primary care</a>, <a href="/specialties/Pages/cardiology.aspx">cardiovascular</a>, <a href="/specialties/Pages/cancer.aspx">cancer</a>, <a href="/women">women health</a> and <a href="/women/child">prenatal care</a>, <a href="/specialties/surgery/mis">minimally invasive surgery</a>, <a href="/specialties/surgery/transplant">organ transplantation</a>, <a href="/specialties/surgery/ortho">orthopedics</a> and <a href="/specialties/surgery/Pages/bariatric.aspx">weight-loss surgery</a>. Our dedicated <a href="http://doctors.ucsd.edu/">San Diego doctors</a>, <a href="http://doctors.ucsd.edu/">San Diego surgeons,</a> nurses, pharmacists, physician assistants, nurse practitioners, social workers, technicians and countless others provide compassionate, patient-centered care every day to patients from around the corner and around the world. Learn more about our services or find a <a href="http://doctors.ucsd.edu/">doctor in San Diego</a> at one of our <a href="/locations">San Diego hospitals</a>. View our <a href="/locations">locations</a> or find <a href="/locations">addresses and phone numbers</a> or <a href="/about/Pages/contactus.aspx">contact us</a>.
+	</div>
+
+	<div class="clr"></div>
+	</div><!-- End #divisionHomeBottom -->
+	
+		<!-- End SEOeditmodepanel -->
+
+						</div><!-- End .mainPgContent -->
+						<!-- The form digest security control used to for security validation on forms -->
+						
+							
+						<!-- End PlaceHolderFormDigest -->
+						
+						<div class="customClear"></div><!-- End .customClear -->
+					</div><!-- End .wrapperContent2Column -->
+				</div><!-- End .wrapperContent3Column -->
+			</div><!-- End .bgContent -->
+		</div><!-- End .wrapperPageBorder -->
+	</div><!-- End #container -->
+
+	<div id="pageBottom"></div><!-- End #pageBottom -->
+	
+	
+					<div id="footer">
+						<div id="footerTopCorners"></div>
+						<div id="footerInside">
+		    			
+							<div id="FooterAddress">
+								<h4>UC San Diego Health System</h4>
+								<ul class="address right">
+									<li>858-657-7000</li>
+									<li class="socialMediaIcon"><a href="http://www.facebook.com/UCSDHealth" onClick="recordOutboundLink(this, 'Social Links', 'Facebook - footer'); return true;" target="_blank"><img src="/Style Library/Images/UCSD/icon_facebook_16.png" alt="Find UC San Diego Health System on Facebook" /></a></li>
+									<li class="socialMediaIcon"><a href="http://twitter.com/#!/UCSDHealth" onClick="recordOutboundLink(this, 'Social Links', 'Twitter - footer'); return true;" target="_blank"><img src="/Style Library/Images/UCSD/icon_twitter_16.png" alt="Follow UC San Diego Health System on Twitter" /></a></li>
+									<li class="socialMediaIcon"><a href="https://plus.google.com/100338615490884366203?prsrc=3" onClick="recordOutboundLink(this, 'Social Links', 'GooglePlus - footer'); return true;" target="_blank"><img src="https://ssl.gstatic.com/images/icons/gplus-16.png" alt="UC San Diego Health System on Google Plus"/></a></li>
+									<li class="socialMediaIcon"><a href="http://www.linkedin.com/company/uc-san-diego-health-system" onClick="recordOutboundLink(this, 'Social Links', 'LinkedIn - footer'); return true;" target="_blank"><img src="/Style Library/Images/UCSD/icon_linkedin_16.png" alt="Find UC San Diego Health System on LinkedIn" /></a></li>
+									<li class="socialMediaIcon"><a href="http://www.youtube.com/user/UCSDMedicalCenter" onClick="recordOutboundLink(this, 'Social Links', 'YouTube - footer'); return true;" target="_blank"><img src="/Style Library/Images/UCSD/icon_youtube_16.png" alt="Watch UC San Diego Health System on YouTube" /></a></li>
+									<li class="socialMediaIcon"><a href="http://ucsdhealthsciences.tumblr.com/" onClick="recordOutboundLink(this, 'Social Links', 'Tumblr - footer'); return true;" target="_blank"><img src="/Style Library/Images/UCSD/icon_tumblr_16.png" alt="Follow UC San Diego Health Sciences Tumblr blog" /></a></li>
+									<li class="socialMediaIcon"><a href="/news/Pages/rss.aspx"><img src="/Style Library/Images/UCSD/icon_rss_16.png" alt="UC San Diego RSS News Feed" /></a></li>
+								</ul>
+						    </div><!-- End .footerAddress -->
+						    
+						<!-- Anamatrix Section Title - Do Not REMOVE MCF -->
+												<script type="text/javascript" language="javascript1.1">
+var SectionTitleAttribute = new Object();
+SectionTitleAttribute["p.a_1"] = document.getElementById("ctl00_PlaceHolderLeftNavBar_PlaceHolderLeftNavHeader_ctl00_lblSectionTitle").innerText;
+</script>
+								
+
+						<!-- Anamatrix Code - Do Not REMOVE MCF -->
+						<script type="text/javascript" language="javascript1.1" src="/Style%20Library/JavaScript/anametrix.js"></script>
+						
+						
+						<!-- Anamatrix Code - Do Not REMOVE MCF -->
+						<script type="text/javascript" language="javascript1.1">
+						  nr_t. pageView(SectionTitleAttribute);
+						</script>
+						
+						
+						
+						
+						
+						<div class="customClear"></div><!-- End .customClear -->
+
+						
+							<div class="footerNav">
+													<div class="footerNavColLong">
+														<ul>
+															<li><a class="first" href="/patients/Pages/default.aspx">Patients &amp; Visitors</a></li>
+															<li><a href="/locations">Locations &amp; Directions</a></li>
+															<li><a href="/request_appt">Appointments</a></li>
+															<li><a href="/patients/Pages/medical-records.aspx">Medical Records</a></li>
+															<li><a href="/about/Pages/contactus.aspx">Contact Us</a></li>
+														</ul>
+													</div>
+													<div class="footerNavColLong">
+														<ul>
+															<li><a class="first" href="/specialties/Pages/default.aspx">Specialties &amp; Programs</a></li>
+															<li><a href="/specialties/Pages/default.aspx">Conditions A-Z</a></li>
+															<li><a href="/specialties/surgery/Pages/default.aspx">Surgical Services</a></li>
+															<li><a href="/women/Pages/default.aspx">Women's Services</a></li>
+														</ul>
+													</div>
+													<div class="footerNavColLong">
+														<ul>
+															<li><a class="first" href="/medinfo/Pages/default.aspx">For Health Professionals</a></li>
+															<li><a href="/medinfo/Pages/referral.aspx">Refer a Patient</a></li>
+															<li><a href="/clinicaltrials/Pages/default.aspx">Find a Clinical Trial</a></li>
+															<li><a href="/medinfo/Pages/medical-careers.aspx">Medical Careers</a></li>
+														</ul>
+													</div>
+													<div class="footerNavColShort">
+														<ul>
+															<li><a class="first" href="/about/Pages/default.aspx">About Us</a></li>
+															<li><a href="/about/who-we-are/Pages/accomplishments.aspx">Awards</a></li>
+															<li><a href="/about/giving/pages/default.aspx">Giving</a></li>
+															<li><a href="/news/pages/default.aspx">News</a></li>
+															<li><a href="/careers/pages/default.aspx">Careers</a></li>
+														</ul>
+													</div>
+													<div class="footerNavColShort">
+														<ul>
+															<li><a class="first" href="/locations">Locations</a></li>
+															<li><a href="/locations/Pages/hillcrest.aspx">Hillcrest</a></li>
+															<li><a href="/locations/Pages/thornton.aspx">La Jolla</a></li>
+															<li><a href="/locations/Pages/north-coastal.aspx">North Coastal</a></li>
+														</ul>
+													</div>
+													<div class="footerNavColLong" style="padding-right:0px;">
+														<ul>
+															<li><a class="first" href="http://doctors.ucsd.edu/">Find a Doctor</a></li>
+															<li><a href="http://doctors.ucsd.edu/AdvancedSearch">Search</a></li>
+															<li><a href="http://doctors.ucsd.edu/?groups=17">Top Docs</a></li>
+														</ul>
+													</div>
+			            	</div><!-- End .footerNav -->
+						
+						
+						<div class="customClear"></div><!-- End .customClear -->
+						
+						
+						<div id="footerLogoCopyrightContainer">
+							<div class="footerLogo">
+								<a href="http://www.ucsd.edu"></a>
+							</div>
+							
+							<div class="copyright">
+								<p>Official Web Site of the University of California, San Diego. <br />
+											<script language="javascript"> 
+												<!-- 
+												today = new Date(); 
+												document.write("Copyright &copy;", today.getFullYear()); 
+												//--> 
+											</script>
+								Regents of the University of California. All rights reserved.</p>
+											<ul class="footerLegalLinks">
+												<li class="first"><a href="/pages/legal.aspx">Legal</a></li>
+												<li><a href="/hipaa">Notice of Privacy Practices</a></li>
+												<li><a href="/Pages/sitemap.aspx">Site Map</a></li>
+												<li><a href="mailto:mcwebmaster@ucsd.edu?subject=Health.ucsd.edu website comment">Website Comments</a></li>
+											</ul>
+							</div><!-- End .copyright -->
+						</div>
+							
+		            	</div> <!-- End #footerInside -->
+						<div id="footerBottomCorners"></div>
+		            </div> <!-- End #footer -->
+	            <!-- End PlaceHolderFooter -->
+		
+		<!-- Google Code for Main List WAI -->
+		<script type="text/javascript">
+			/* <![CDATA[ */
+			var google_conversion_id = 961825018;
+			var google_conversion_label = "lmcpCP6CoAYQ-pHRygM";
+			var google_custom_params = window.google_tag_params;
+			var google_remarketing_only = true;
+			/* ]]> */
+		</script>
+		<script type="text/javascript" src="/pagead/conversion.js">
+		</script>
+		<noscript>
+			<div style="display:inline;">
+				<img height="1" width="1" style="border-style:none;" alt="" src="/pagead/viewthroughconversion/961825018?value=0&amp;label=lmcpCP6CoAYQ-pHRygM&amp;guid=ON&amp;script=0"/>
+			</div>
+		</noscript>
+
+</div><!-- End #wrapper -->
+
+
+
+
+
+<script type="text/javascript">
+//<![CDATA[
+
+WebForm_InitCallback();var __wpmExportWarning='This Web Part Page has been personalized. As a result, one or more Web Part properties may contain confidential information. Make sure the properties contain information that is safe for others to read. After exporting this Web Part, view properties in the Web Part description file (.WebPart) by using a text editor such as Microsoft Notepad.';var __wpmCloseProviderWarning='You are about to close this Web Part.  It is currently providing data to other Web Parts, and these connections will be deleted if this Web Part is closed.  To close this Web Part, click OK.  To keep this Web Part, click Cancel.';var __wpmDeleteWarning='You are about to permanently delete this Web Part.  Are you sure you want to do this?  To delete this Web Part, click OK.  To keep this Web Part, click Cancel.';//]]>
+</script>
+<SCRIPT LANGUAGE='JavaScript' >
+<!--
+WPSC.Init(document);
+var varPartWPQ3 = WPSC.WebPartPage.Parts.Register('WPQ3','f04f2a74-80a8-4880-ad8b-dcd2c88f5a37',document.all.item('WebPartWPQ3'));
+var varPartWPQ1 = WPSC.WebPartPage.Parts.Register('WPQ1','00000000-0000-0000-0000-000000000000',document.all.item('WebPartWPQ1'));
+var varPartWPQ2 = WPSC.WebPartPage.Parts.Register('WPQ2','00000000-0000-0000-0000-000000000000',document.all.item('WebPartWPQ2'));
+WPSC.WebPartPage.WebURL = 'http:\u002f\u002fhealth.ucsd.edu';
+WPSC.WebPartPage.WebServerRelativeURL = '\u002f';
+
+//-->
+</SCRIPT><script type="text/javascript" language="javascript" src="/_layouts/1033/core.js?rev=mHKsOQ0iU3Q5jdm9OZNDdg%3D%3D"></script>
+
+<script type="text/javascript">
+//<![CDATA[
+Sys.Application.initialize();
+Sys.Application.add_init(function() {
+    $create(Telerik.Web.UI.RadMenu, {"_childListElementCssClass":null,"_skin":"Sitefinity","attributes":{"EnableShadows":"true"},"clientStateFieldID":"ctl00_PlaceHolderHorizontalNav_RadMenu1_ClientState","collapseAnimation":"{\"duration\":450}","expandAnimation":"{\"duration\":450}","itemData":[{"items":[{"cssClass":"Products","templated":true}],"postBack":0,"navigateUrl":"/patients/Pages/default.aspx"},{"items":[{"templated":true}],"postBack":0,"navigateUrl":"/specialties/"},{"items":[{"templated":true}],"postBack":0,"navigateUrl":"/medinfo/"},{"items":[{"templated":true}],"postBack":0,"navigateUrl":"/about/"}]}, null, null, $get("ctl00_PlaceHolderHorizontalNav_RadMenu1"));
+});
+//]]>
+</script>
+</form>
+</body>
+</html>

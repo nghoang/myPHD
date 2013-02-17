@@ -1,0 +1,361 @@
+  <!DOCTYPE html>
+<html class="no-js" lang="en-US" dir="ltr">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <title>Import Internet Explorer Favorites from another computer | Firefox Help</title>
+
+  <link rel="shortcut icon" type="image/x-icon" href="/media/img/favicon.ico"/>
+  <link rel="search" type="application/opensearchdescription+xml" title="Firefox Help" href="/en-US/search/xml"/>
+  
+  <link rel="stylesheet" media="screen,projection,tv" href="/media/css/common-min.css?build=393cfec" />
+  <link rel="stylesheet" media="print" href="/media/css/print-min.css?build=393cfec" />
+      <link rel="stylesheet" media="screen,projection,tv" href="/media/css/wiki-min.css?build=393cfec" />
+  
+          <link href="//www.mozilla.org/tabzilla/media/css/tabzilla.css" rel="stylesheet" />
+  
+  <!--[if lte IE 7]>
+<link rel="stylesheet" media="screen,projection,tv" href="/media/css/ie-min.css?build=393cfec" />
+<![endif]-->
+  <!--[if IE 8]>
+<link rel="stylesheet" media="screen,projection,tv" href="/media/css/ie8-min.css?build=393cfec" />
+<![endif]-->
+
+            <meta name="description" content="This article describes how to get Internet Explorer Favorites from another computer into your Firefox Bookmarks."/>
+      
+  
+      <link rel="canonical" href="/en-US/kb/import-ie-favorites-other-computer" />
+  
+  <!--[if lt IE 9]>
+<script src="/media/js/libs/html5-shiv.js"></script>
+<![endif]-->
+</head>
+<body class="html-ltr document en-US"
+      data-readonly="false"
+      data-for-os="{&#34;win8&#34;: 8, &#34;winxp&#34;: 6, &#34;win&#34;: 1, &#34;maemo&#34;: 4, &#34;win7&#34;: 7, &#34;mac&#34;: 2, &#34;linux&#34;: 3, &#34;android&#34;: 5}"
+      data-for-version="{&#34;m11&#34;: 18, &#34;m10&#34;: 16, &#34;m12&#34;: 20, &#34;m15&#34;: 24, &#34;m14&#34;: 22, &#34;m17&#34;: 28, &#34;m16&#34;: 26, &#34;m9&#34;: 14, &#34;m5&#34;: 7, &#34;m4&#34;: 4, &#34;m7&#34;: 10, &#34;m6&#34;: 8, &#34;fx35&#34;: 2, &#34;fx11&#34;: 17, &#34;fx10&#34;: 15, &#34;fx13&#34;: 21, &#34;fx12&#34;: 19, &#34;fx15&#34;: 25, &#34;fx14&#34;: 23, &#34;fx17&#34;: 29, &#34;fx16&#34;: 27, &#34;fx9&#34;: 13, &#34;fx8&#34;: 11, &#34;fx5&#34;: 5, &#34;fx4&#34;: 1, &#34;fx7&#34;: 9, &#34;fx6&#34;: 6, &#34;fx3&#34;: 3, &#34;m8&#34;: 12}"
+      data-usernames-api="/en-US/users/api/usernames"
+      data-media-url="/media/"
+data-track-url="/media/img/pixel.gif" data-document-id="608" >
+
+
+<header>
+  <div class="container_12 cf">
+    <div class="grid_12">
+                      <a href="http://www.mozilla.org/" id="tabzilla">mozilla</a>
+            <div class="cf">
+        <nav id="aux-nav" role="navigation">
+          <ul>
+                                <li><a href="/en-US/questions/new" class="ask">Ask a question</a></li>
+          <li><a href="/en-US/users/login" class="sign-in">Sign In</a></li>
+      <li><a href="/en-US/users/register" class="register">Register</a></li>
+      
+                                    <li><a href="/en-US/locales" class="locale-picker">English</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="cf">
+                            <form id="support-search" action="/en-US/search" method="get" >
+    <input type="hidden" name="esab" value="a">
+        <input type="text" name="q" required="required" placeholder="Search Mozilla Support" />
+    <button type="submit" title="Search">Search</button>
+  </form>
+
+                <a href="/en-US/home"><img class="logo" alt="mozilla support" src="/media/img/mozilla-support.png" /></a>
+      </div>
+      <nav id="main-nav">
+        <ul class="cf">
+          <li><a href="/en-US/products">Products &amp; Services</a></li>
+          <li><a href="/en-US/kb">Help Articles</a></li>
+          <li><a href="/en-US/topics/hot">Hot Topics</a></li>
+          <li><a href="/en-US/kb/mozilla-news">Mozilla News</a></li>
+          <li><a href="/en-US/kb/superheroes-wanted">Help Other Users</a></li>
+          <li><a href="/en-US/kb/suggestion-box">Suggestion Box</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</header>
+
+
+<div class="container_12 cf">
+  <div class="grid_12">
+    
+      <h1 class="product-title cf"><img src="/media/img/blank.png" alt="" class="logo-sprite" style="background-image: url('/media/uploads/products/2012-09-05-06-01-18-d6a5c9.png');" />Firefox     <section id="support-for">
+        <div>
+      <select id="os" data-oses="{&#34;win8&#34;: true, &#34;winxp&#34;: true, &#34;win&#34;: true, &#34;win7&#34;: true, &#34;mac&#34;: true, &#34;linux&#34;: true}" class="enable-if-js" disabled="disabled">
+                              <option value="winxp" data-dependency="desktop">Windows XP</option>
+                      <option value="win7" data-dependency="desktop" selected="selected" data-default="true">Windows 7/Vista</option>
+                      <option value="win8" data-dependency="desktop">Windows 8</option>
+                      <option value="mac" data-dependency="desktop">Mac OS X</option>
+                      <option value="linux" data-dependency="desktop">Linux</option>
+                        </select>
+    </div>
+    <div>
+      <select id="browser" data-browsers="{&#34;fx9&#34;: {&#34;product&#34;: &#34;fx&#34;, &#34;maxFloatVersion&#34;: 9.9999000000000002}, &#34;fx8&#34;: {&#34;product&#34;: &#34;fx&#34;, &#34;maxFloatVersion&#34;: 8.9999000000000002}, &#34;fx5&#34;: {&#34;product&#34;: &#34;fx&#34;, &#34;maxFloatVersion&#34;: 5.9999000000000002}, &#34;fx4&#34;: {&#34;product&#34;: &#34;fx&#34;, &#34;maxFloatVersion&#34;: 4.9999000000000002}, &#34;fx7&#34;: {&#34;product&#34;: &#34;fx&#34;, &#34;maxFloatVersion&#34;: 7.9999000000000002}, &#34;fx6&#34;: {&#34;product&#34;: &#34;fx&#34;, &#34;maxFloatVersion&#34;: 6.9999000000000002}, &#34;fx3&#34;: {&#34;product&#34;: &#34;fx&#34;, &#34;maxFloatVersion&#34;: 3.4998999999999998}, &#34;fx35&#34;: {&#34;product&#34;: &#34;fx&#34;, &#34;maxFloatVersion&#34;: 3.9998999999999998}, &#34;fx11&#34;: {&#34;product&#34;: &#34;fx&#34;, &#34;maxFloatVersion&#34;: 11.9999}, &#34;fx10&#34;: {&#34;product&#34;: &#34;fx&#34;, &#34;maxFloatVersion&#34;: 10.9999}, &#34;fx13&#34;: {&#34;product&#34;: &#34;fx&#34;, &#34;maxFloatVersion&#34;: 13.9999}, &#34;fx12&#34;: {&#34;product&#34;: &#34;fx&#34;, &#34;maxFloatVersion&#34;: 12.9999}, &#34;fx15&#34;: {&#34;product&#34;: &#34;fx&#34;, &#34;maxFloatVersion&#34;: 15.9999}, &#34;fx14&#34;: {&#34;product&#34;: &#34;fx&#34;, &#34;maxFloatVersion&#34;: 14.9999}, &#34;fx17&#34;: {&#34;product&#34;: &#34;fx&#34;, &#34;maxFloatVersion&#34;: 17.9999}, &#34;fx16&#34;: {&#34;product&#34;: &#34;fx&#34;, &#34;maxFloatVersion&#34;: 16.9999}}" data-version-groups="{&#34;fx&#34;: [[3.4998999999999998, &#34;3&#34;], [3.9998999999999998, &#34;35&#34;], [4.9999000000000002, &#34;4&#34;], [5.9999000000000002, &#34;5&#34;], [6.9999000000000002, &#34;6&#34;], [7.9999000000000002, &#34;7&#34;], [8.9999000000000002, &#34;8&#34;], [9.9999000000000002, &#34;9&#34;], [10.9999, &#34;10&#34;], [11.9999, &#34;11&#34;], [12.9999, &#34;12&#34;], [13.9999, &#34;13&#34;], [14.9999, &#34;14&#34;], [15.9999, &#34;15&#34;], [16.9999, &#34;16&#34;], [17.9999, &#34;17&#34;]]}" class="enable-if-js" disabled="disabled">
+                          <optgroup label="Desktop:">
+                          <option value="fx17" data-dependency="desktop"
+                >Firefox 17</option>
+                          <option value="fx16" data-dependency="desktop"
+                                  data-default="true"
+                                                          selected="selected"
+                                  >Firefox 16</option>
+                          <option value="fx15" data-dependency="desktop"
+                >Firefox 15</option>
+                          <option value="fx14" data-dependency="desktop"
+                >Firefox 14</option>
+                          <option value="fx10" data-dependency="desktop"
+                >Firefox ESR</option>
+                      </optgroup>
+              </select>
+    </div>
+  </section></h1>
+  </div>
+
+      <aside class="grid_3">
+                            <nav id="doc-tools">
+    <ul class="sidebar-nav sidebar-folding">
+      <li id="editing-tools-sidebar" >
+        <span>Editing Tools</span>
+        <ul class="sidebar-nav">
+                      <li class="selected">
+              <a href="/en-US/kb/import-ie-favorites-other-computer">Article</a>
+            </li>
+                                <li>
+              <a href="/en-US/kb/import-ie-favorites-other-computer/discuss">Discussion</a>
+            </li>
+                                <li>
+              <a href="/en-US/kb/import-ie-favorites-other-computer/edit">Edit Article</a>
+            </li>
+                                <li>
+              <a href="/en-US/kb/import-ie-favorites-other-computer/locales">Translate Article</a>
+            </li>
+                                          <li>
+              <a href="/en-US/kb/import-ie-favorites-other-computer/history">Show History</a>
+            </li>
+                  </ul>
+      </li>
+      
+    </ul>
+    <div class="email"></div>
+  </nav>
+        <aside id="doc-related" class="folding-section">
+        <header>Related Articles</header>
+        <section>
+          <ul>
+                          <li><a href="/en-US/kb/import-bookmarks-internet-explorer">Import Bookmarks from Internet Explorer</a></li>
+                          <li><a href="/en-US/kb/import-bookmarks-data-another-browser">Import Bookmarks and personal data from another browser</a></li>
+                          <li><a href="/en-US/kb/restore-bookmarks-from-backup-or-move-them">Restore bookmarks from backup or move them to another computer</a></li>
+                          <li><a href="/en-US/kb/export-bookmarks-internet-explorer">Export bookmarks to Internet Explorer</a></li>
+                          <li><a href="/en-US/kb/uninstall-firefox-from-your-computer">Uninstall Firefox from your computer</a></li>
+                      </ul>
+        </section>
+      </aside>
+    
+  <ul class="sidebar-nav topics">
+                              <li>
+        <a href="/en-US/products/firefox/get-started">
+          Learn the Basics: get started
+        </a>
+      </li>
+                              <li>
+        <a href="/en-US/products/firefox/download-and-install">
+          Download, install and migration
+        </a>
+      </li>
+                              <li>
+        <a href="/en-US/products/firefox/privacy-and-security">
+          Privacy and security settings
+        </a>
+      </li>
+                              <li>
+        <a href="/en-US/products/firefox/customize">
+          Customize controls, options and add-ons
+        </a>
+      </li>
+                              <li>
+        <a href="/en-US/products/firefox/fix-problems">
+          Fix slowness, crashing, error messages and other problems
+        </a>
+      </li>
+                              <li>
+        <a href="/en-US/products/firefox/tips">
+          Tips and tricks
+        </a>
+      </li>
+                              <li>
+        <a href="/en-US/products/firefox/bookmarks">
+          Bookmarks
+        </a>
+      </li>
+                              <li>
+        <a href="/en-US/products/firefox/cookies">
+          Cookies
+        </a>
+      </li>
+                              <li>
+        <a href="/en-US/products/firefox/tabs">
+          Tabs
+        </a>
+      </li>
+                              <li>
+        <a href="/en-US/products/firefox/websites">
+          Websites
+        </a>
+      </li>
+      </ul>
+                </aside>
+  
+    <div class="grid_9">
+    <article class="wiki-doc">
+      <h1 class="title">Import Internet Explorer Favorites from another computer</h1>
+          
+      <section id="doc-content">
+          <p>This article describes how to get Internet Explorer Favorites from another computer into your Firefox Bookmarks on Windows.<span class="for" data-for="mac,linux"> The Internet Explorer browser is not currently available for your operating system.</span>
+</p>
+<ul><li> <strong>Copying Favorites from the same computer?</strong> See <a href="/en-US/kb/import-bookmarks-internet-explorer">Import Bookmarks from Internet Explorer</a>.
+</li><li> <strong>Copying <em>Firefox</em> Bookmarks from another computer?</strong> See <a href="/en-US/kb/Moving%20your%20Firefox%20bookmarks%20and%20settings">Moving your Firefox bookmarks and settings</a>.
+</li></ul>
+<p>To copy your Bookmarks/Favorites to another computer, you will have to export them from Internet Explorer, copy the file to the other computer, then import them into Firefox.
+</p>
+<div id="toc"><h2>Table of Contents</h2><ul><li class="toclevel-1"><a href="#w_exporting-bookmarks-from-internet-explorer"><span class="tocnumber">1</span> <span class="toctext">Exporting bookmarks from Internet Explorer</span></a></li><li class="toclevel-1"><a href="#w_copying-the-bookmark-file-to-another-computer"><span class="tocnumber">2</span> <span class="toctext">Copying the bookmark file to another computer</span></a></li><li class="toclevel-1"><a href="#w_importing-bookmarks-into-firefox"><span class="tocnumber">3</span> <span class="toctext">Importing bookmarks into Firefox</span></a></li></ul></div>
+<h1 id="w_exporting-bookmarks-from-internet-explorer">Exporting bookmarks from Internet Explorer</h1>
+<div class="note"><strong>Note:</strong> These steps are for Internet Explorer 9.  Steps for previous versions may be slightly different.</div>
+<ol><li> Open Internet Explorer on the computer that has the Favorites you want to export.
+</li><li> Press the <span class="key">Alt</span> key on your keyboard. The menu bar (with <span class="menu">File</span>, <span class="menu">Edit</span>, <span class="menu">View</span>, etc.) will appear.
+</li><li> Click on the <span class="menu">File</span> menu and select <span class="menu">Import and Export...</span>. The Import/Export Settings Window will appear. <br> <br>   
+
+
+    <img alt="Importing IE Favorites 1" class="frameless lazy" data-original-src="/media/uploads/gallery/images/2011-06-09-01-59-18-dcac41.jpg" src="/media/img/placeholder.gif" title="">
+    <noscript>  <img class="frameless "
+    src="/media/uploads/gallery/images/2011-06-09-01-59-18-dcac41.jpg"
+    alt="Importing IE Favorites 1"
+          title=""
+                    />
+  </noscript>
+
+ <br>
+</li><li> In the Import/Export Settings window, click to select <strong>Export to a file</strong>. Then click the <span class="button">Next</span> button.
+</li><li> Select <strong>Favorites</strong>. Then click the <span class="button">Next</span> button.
+</li><li> Select the Favorites folders you want to export. To export all your favorites, click the <strong>Favorites</strong> folder at the top of the list. Then click the <span class="button">Next</span> button.
+</li><li> Click the <span class="button">Browse...</span> button, then navigate to a folder to save your bookmarks file. Then click the <span class="button">Export</span> button.
+</li></ol>
+<p><br>
+</p>
+<h1 id="w_copying-the-bookmark-file-to-another-computer">Copying the bookmark file to another computer</h1>
+<p>Copy the file you created above to the other computer. You can do this by e-mail, over a network, with a USB drive, or whatever means you have.
+</p><p><br>
+</p>
+<h1 id="w_importing-bookmarks-into-firefox">Importing bookmarks into Firefox</h1>
+<p>Open Firefox on the computer that you want to put the Favorites on and then:
+</p>
+<div class="note"><strong>Tip:</strong> It would be a good idea to backup your bookmarks before importing. To do so go to <a href="/en-US/kb/restore-bookmarks-from-backup-or-move-them">Restore bookmarks from backup or move them to another computer</a> </div>
+<ol><li><p><span class="for" data-for="win">Click the Bookmarks button   
+
+
+    <img alt="Bookmarks button win 2" class="frameless lazy" data-original-src="/media/uploads/gallery/images/2011-03-04-06-12-39-555dfd.png" src="/media/img/placeholder.gif" title="">
+    <noscript>  <img class="frameless "
+    src="/media/uploads/gallery/images/2011-03-04-06-12-39-555dfd.png"
+    alt="Bookmarks button win 2"
+          title=""
+                    />
+  </noscript>
+
+ on the right side of the navigation toolbar (Windows XP: click the <span class="menu">Bookmarks</span> menu)  and select <span class="menu">Show All Bookmarks</span> to open the Library window.</span><span class="for" data-for="mac">On the menu bar, click <span class="menu">Bookmarks</span> and select <span class="menu">Show All Bookmarks</span> to open the Library window.</span><span class="for" data-for="linux">At the top of the Firefox window, click the <span class="menu">Bookmarks</span> menu and select <span class="menu">Show All Bookmarks</span> to open the Library window.</span>
+
+</p>
+</li><li>From the toolbar on the Library window, click <span class="button"><span class="for" data-for="mac">  
+
+
+    <img alt="f60cc26c38fc04cce87eb6ea6ec8c400-1259975468-619-1.png" class="frameless lazy" data-original-src="/media/uploads/gallery/images/f60cc26c38fc04cce87eb6ea6ec8c400-1259975468-619-1.png" src="/media/img/placeholder.gif" title="">
+    <noscript>  <img class="frameless "
+    src="/media/uploads/gallery/images/f60cc26c38fc04cce87eb6ea6ec8c400-1259975468-619-1.png"
+    alt="f60cc26c38fc04cce87eb6ea6ec8c400-1259975468-619-1.png"
+          title=""
+                    />
+  </noscript>
+
+</span>Import and Backup</span> and choose <span class="menu">Import Bookmarks from HTML...</span>. <span class="for" data-for="win"><br>  
+
+
+    <img alt="Importing HTML Bookmarks - Win fx7" class="frameless lazy" data-original-src="/media/uploads/gallery/images/2011-09-13-12-41-00-a4555c.png" src="/media/img/placeholder.gif" title="">
+    <noscript>  <img class="frameless "
+    src="/media/uploads/gallery/images/2011-09-13-12-41-00-a4555c.png"
+    alt="Importing HTML Bookmarks - Win fx7"
+          title=""
+                    />
+  </noscript>
+
+</span></li>
+<li>In the Import Bookmarks File window that opens, navigate to the bookmarks HTML file you are importing and select the file.</li>
+<li>Click the <span class="button">Open</span> button. The Import Bookmarks File window will close.</li>
+<li>Close the Library window.</li>
+</ol>
+<p>Your Internet Explorer Favorites will be added to your Firefox bookmarks within the <strong>Bookmarks Menu</strong> directory.
+</p><p></p><div class="note"><strong>Share this article:</strong> You can use the link <a href="http://mzl.la/LrUmkj">http://mzl.la/LrUmkj</a> to easily share this article with others. It will display instructions automatically customized for their operating system and language.</div>
+<p></p>
+      </section>
+      <section id="doc-contributors">
+    Contributors to this page: <a href="/en-US/user/11">AliceWyman</a>, <a href="/en-US/user/26">Bo102010</a>, <a href="/en-US/user/209080">scoobidiver</a>, <a href="/en-US/user/352597">Swarnava</a>  </section>
+
+              <div class="vote-wrap">
+                              <div class="document-vote">
+      <form class="helpful" action="/en-US/kb/import-ie-favorites-other-computer/vote" method="post">
+        <p>
+          <span>Was this article helpful?</span>
+          <input type="hidden" name="revision_id" value="26533" />
+          <input type="submit" class="btn" name="helpful" value="Yes" />
+          <input type="submit" class="btn" name="not-helpful" value="No" />
+          <img class="wait" src="/media/img/customercare/spinner.gif" alt="Please wait..." />
+        </p>
+      </form>
+    </div>
+  
+        </div>
+          </article>
+  </div>
+</div>
+
+<footer>
+  <div class="container_12 cf">
+    <div class="grid_2"><img src="/media/img/mozilla-logo.png" alt="Mozilla" /></div>
+    <div class="grid_4 suffix_1">
+      <div class="fineprint">
+        Portions of this content are &copy;1998Ð2012 <br>by individual mozilla.org contributors. Content <br>available under a Creative Commons license.      </div>
+    </div>
+    <div class="grid_2">
+      <ul>
+        <li><a href="http://www.mozilla.org/about/contact.html">Contact Us</a></li>
+        <li><a href="http://www.mozilla.org/privacy-policy.html">Privacy Policy</a></li>
+        <li><a href="http://www.mozilla.org/about/legal.html">Legal Notices</a></li>
+        <li><a href="http://www.mozilla.org/legal/fraud-report/index.html">Report Trademark Abuse</a></li>
+      </ul>
+    </div>
+    <div class="grid_2 suffix_1">
+      <ul>
+        <li><a href="http://www.twitter.com/mozilla">Twitter</a></li>
+        <li><a href="http://www.facebook.com/mozilla">Facebook</a></li>
+        <li><a href="http://affiliates.mozilla.org/">Firefox Affiliates</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+<script src="/en-US/jsi18n/build:393cfec"></script>
+<script src="/wafflejs"></script>
+<script src="/media/js/common-min.js?build=393cfec"></script>
+<!--[if (gte IE 6)&(lte IE 8)]>
+  <script src="/media/js/ie6-8-min.js?build=393cfec"></script>
+<![endif]-->
+  <script src="/media/js/wiki-min.js?build=393cfec"></script>
+  <script src="/media/js/readtracker-min.js?build=393cfec"></script>
+
+    <script src="//www.mozilla.org/tabzilla/media/js/tabzilla.js"></script>
+
+<script src="/media/js/webtrends.js"></script>
+<noscript>
+  <div><img alt="DCSIMG" id="DCSIMG" width="1" height="1" src="//statse.webtrendslive.com/dcsz45fp6vz5bdvu89oegdwp8_7u8z/njs.gif?dcsuri=/nojavascript&amp;WT.js=No&amp;WT.tv=9.4.0&amp;dcssip=www.support.mozilla.org"/></div>
+</noscript>
+
+
+
+</body>
+</html>

@@ -1,0 +1,2677 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+ 
+
+
+
+
+
+
+   
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://www.facebook.com/2008/fbml">
+    <head id="ctl00_Head1">
+    
+    <script language="javascript" type="text/javascript">
+    var date1_obj=new Date();
+    </script>
+    <!--HeaderInclude-->
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" /><link rel="icon" href="/favicon.ico" type="image/x-icon" />
+<script language="javascript" type="text/javascript" src="http://static.metronews.topscms.com/TopletsResources/js/jquery.min.js"></script>
+<link type="text/css" rel="stylesheet" href="http://static.metronews.topscms.com/styles/standard.css?v=9Aug" />
+<link type="text/css" rel="stylesheet" href="http://static.metronews.topscms.com/styles/home.css?v=12oct2011" />
+<script language="javascript" type="text/javascript" src="http://static.metronews.topscms.com/js/facebookkeys.js?v=19may"></script>
+<script language="javascript" type="text/javascript" src="http://static.metronews.topscms.com/js/TD.js"></script>
+<script language="javascript" type="text/javascript" src="http://static.metronews.topscms.com/js/async.js?h=u"></script>
+<script language="javascript" type="text/javascript" src="http://static.metronews.topscms.com/js/master.js?a=26may11"></script>
+<script language="javascript" type="text/javascript" src="http://eas21.emediate.eu/EAS_tag.1.0.js"></script>
+    <title>Metro - What if every Olympic sport was photographed like beach volleyball?</title>
+    
+    
+    
+    
+    
+    
+<script language="javascript" type="text/javascript" src="http://static.metronews.topscms.com/topletsresources/phototoplet/js/PhotoToplet.js?ll=ll"></script>
+
+<script language="javascript" type="text/javascript" src="http://static.metronews.topscms.com/js/commentsv2.js?v=20jan11"></script>
+
+
+<script language="javascript" type="text/javascript" src="http://static.metronews.topscms.com/js/JqModal.js"></script>
+
+<link type="text/css" rel="stylesheet" href="http://static.metronews.topscms.com/topletsresources/phototoplet/css/metronews.css?ll=ll" />
+
+<link type="text/css" rel="stylesheet" href="http://static.metronews.topscms.com/TopletsResources/UserRatingComments2/css/UserRatingCommentsPlain.css" />
+
+<link type="text/css" rel="stylesheet" href="http://static.metronews.topscms.com/TopletsResources/UserRatingComments2/css/ratingsComments.css" />
+    
+<script language="javascript" type="text/javascript" src="http://static.metronews.topscms.com/topletsresources/Paging/Paging.js"></script>
+		
+
+<script language="javascript" type="text/javascript" src="http://static.metronews.topscms.com/js/jquery.boxy.js"></script>
+
+<link type="text/css" rel="stylesheet" href="http://static.metronews.topscms.com/styles/boxy.css?v=2dec" />
+	<style type="text/css">
+	    .sfywdgt_StorifyWidget
+	    {
+	    	clear:none;
+	    	}
+	    	
+	    .upperBox, .upperBox a:hover
+        {
+        text-decoration: none !important;
+        text-decoration: none;
+        }	
+	    	
+	    </style>
+	<!--rfzappala floating box & foursquare -->
+	
+
+           <script language="javascript" type="text/javascript">
+
+    function addToFoursquare(vid, message) {
+
+        window.open('http://foursquare.com/remote_todo?vid=' + vid + '&message=' + message, "foursquare", "toolbar=0,status=0,height=380,width=650,scrollbars=no,resizable=no");       
+        return false;
+        
+      }
+    
+    
+
+ 
+    $(document).ready(function($) {
+    
+    var $floatingbox = $('#floating-box');
+    var $shareboxhorizontal = $('#shareBoxHorizontal');
+    var readyToMove = false;
+    var minimumWidth = 1140;
+    var bodyY = parseInt($('#floating-box').offset().top) - 20;
+    
+    function sizeCheck()
+    {
+        var windowW=$(window).width(); 
+        // set the floating box's top = the horizontal box top
+        
+                       
+        if (windowW<minimumWidth)
+        {                
+            $floatingbox.css('display','none');
+            $shareboxhorizontal.css('display','block');
+            bodyY = parseInt($('#floating-box').offset().top) - 20;
+            readyToMove = false;
+        }
+        else
+        {                
+            $floatingbox.css('display','block');
+            $shareboxhorizontal.css('display','none');
+            bodyY = parseInt($('#floating-box').offset().top) - 20;
+            readyToMove = true;
+        }
+        
+        
+        
+    }
+    
+    
+     $(document).ready(function(){
+       sizeCheck();
+     });
+
+    
+    // on the left or in the body?
+    $(window).resize(function() {
+      sizeCheck();        
+    });
+ 
+	//this is the floating content
+	
+ 
+	if($('#floating-box').length > 0){
+ 
+	  var bodyY = parseInt($('#floating-box').offset().top) - 20;
+	  var originalX = $floatingbox.css('margin-left');
+ 
+	  $(window).scroll(function () { 
+	  
+ 
+	   var scrollY = $(window).scrollTop();
+	   var isfixed = $floatingbox.css('position') == 'fixed';
+ 
+	   if($floatingbox.length > 0 &&!($.browser.msie&&parseInt($.browser.version)<7)){
+ 
+	      /*$floatingbox.html("srollY : " + scrollY + ", bodyY : " 
+                                    + bodyY + ", isfixed : " + isfixed);*/
+ 
+	      if ( scrollY > bodyY && !isfixed && readyToMove) {
+			$floatingbox.stop().css({
+			  position: 'fixed',
+			  left: '50%',
+			  top: 17,
+			  marginLeft: -560
+			});
+		} else if ( scrollY < bodyY && isfixed ) {
+		 	  $floatingbox.css({
+			  position: 'relative',
+			  left: 0,
+			  top: 0,
+			  marginLeft: -80
+		});
+	     }
+	   
+	   }
+       });
+     }
+  });
+</script>
+           
+        
+
+	
+
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="Metro New York " />
+    <meta property="og:title" content="What if every Olympic sport was photographed like beach volleyball? " />
+    <meta property="og:image" content="http://media.metronews.topscms.com/images/18/75/8c7ee63746b6ab964351303f56fb.jpg"/>
+    <meta property="og:description" content="Getty Images is gross." />    
+    
+<META NAME="TITLE" CONTENT="What if every Olympic sport was photographed like beach volleyball? " />
+<META NAME="KEYWORDS" CONTENT=",Olympics, beach volleyball" />
+<META NAME="SECTION" CONTENT="sports" />
+<META NAME="SUBSECTION" CONTENT="" />
+<META NAME="description" CONTENT="Getty Images is gross." />    
+<META NAME="ABSTRACT" CONTENT="Getty Images is gross." />    
+<link rel="image_src" href="http://media.metronews.topscms.com/images/18/75/8c7ee63746b6ab964351303f56fb.jpg"/>
+<META NAME="sailthru.title" CONTENT="What if every Olympic sport was photographed like beach volleyball? " />
+<META NAME="sailthru.tags" CONTENT="olympics, beach volleyball,sports,newyork_sticky" />
+<META NAME="sailthru.thumb" content="http://media.metronews.topscms.com/images/18/75/8c7ee63746b6ab964351303f56fb.jpg"/>
+<META NAME="sailthru.date" CONTENT="01-August-2012 " />
+
+
+
+<!--[if IE 6]>
+<style type="text/css">.wrapperArticleImage{width:400px;}</style>
+<![endif]-->
+
+
+<script language="javascript" type="text/javascript" src="http://static.metronews.topscms.com/TopletsResources/VideoPlayerV2/videozone.js"></script>
+
+<link type="text/css" rel="stylesheet" href="http://static.metronews.topscms.com/styles/Article.css?v=16may112" />
+    
+<script language="javascript" type="text/javascript" src="http://static.metronews.topscms.com/js/jquery.carousel.min.js"></script>
+    
+    
+<script language="javascript" type="text/javascript" src="http://static.metronews.topscms.com/js/facebook_graph_lib.js"></script>
+                
+
+        
+        <style type="text/css">
+        #metroNav .metroNavElements:hover div.metroSubNav{ display:block;}
+</style>
+    
+        
+<script language="javascript" type="text/javascript" src="/js/Window.js"></script>
+        
+<script type="text/javascript" language="javascript">
+//<![CDATA[
+function showlayer()
+{
+    if(Tops.Controls.WindowControl.getInstance()) {
+        Tops.Controls.WindowControl.getInstance().show();
+    }
+}
+function hidelayer()
+{
+    if(Tops.Controls.WindowControl.getInstance()) {
+        Tops.Controls.WindowControl.getInstance().hide();
+    }
+}
+//]]>
+</script>
+ <script type="text/javascript">
+ //<![CDATA[
+
+ // If you don't want to put unstandard properties in your stylesheet, here's yet
+ // another means of activating the script. This assumes that you have at least one
+ // stylesheet included already. Remove the /* and */ lines to activate.
+
+ 
+ //if (document.all && document.styleSheets && document.styleSheets[0] &&
+  //document.styleSheets[0].addRule)
+ //{
+  // Feel free to add rules for specific tags only, you just have to call it several times.
+  //document.styleSheets[0].addRule('*', 'behavior: url(/js/iepngfix.htc)');
+ //}
+ //]]>
+ 
+ function ShowHidediv (divToShow, divToHide)
+ {
+    var ToShow = document.getElementById(divToShow);
+    var ToHide = document.getElementById(divToHide);
+    if (ToShow)
+        ToShow.style.display = 'block';
+    if (ToHide)
+        ToHide.style.display = 'none';
+    
+ }
+ 
+ </script>
+ 
+ <!--[if IE 6]>
+              <style type="text/css">
+              #metroNav
+              {
+                 font-size:11px;
+              }
+             #metroNav .metroNavElements:hover div.metroSubNav
+
+             {
+             display:none;
+             }
+              </style>
+             
+              <![endif]-->
+ <!--HeaderInclude-->
+ <script type="text/javascript">
+    var isIE6="n"
+    </script>
+ 
+<link type="text/css" rel="stylesheet" href="/topletsresources/Paging/paging.css" /><title>
+	Metronews - Article
+</title></head>
+   <body>
+   
+   
+    
+    
+      
+      
+      
+      
+                                                                                                             
+      
+      
+      
+      
+      
+      
+      
+ 
+ 
+ 
+      
+       <!--
+      TakeOver Query:keywords:"Olympics" OR keywords:"beach volleyball" OR  assetuid:0
+      Current TakeOver ID:
+      -->
+      
+      
+  
+     
+     
+        <body>
+     
+     
+        
+      
+    
+    <b style="display:none">
+    <img src="http://media.metronews.topscms.com/images/18/75/8c7ee63746b6ab964351303f56fb.jpg" alt="metronews.ca"  />
+    </b>
+    
+    
+<!--MainMenuFull-->
+          <script type="text/javascript">
+            var ord = Math.random()*10000000000000000;
+            // this is for the family bar
+            var pCity="newyork";
+          </script>            
+<!--MainMenu1-->
+
+          
+                
+<script language="javascript" type="text/javascript" src="http://static.metronews.topscms.com/js/familybarUS.js"></script>
+              
+
+          <div id="wrapper" style="" >
+          
+          
+          
+          <div>
+          
+          </div>
+          <div style="clear:both;"></div>
+              <div id="wrapperHeader">              
+              
+              
+               <div style="padding-top:0px;padding-bottom:3px;"  >
+                    <div id="mainweatherBox" style="float:left;">
+                    
+                    
+                    
+            <script type="text/javascript" src="http://eas21.emediate.eu/eas?cu=7008;cre=mu;js=y;target=_blank"></script><noscript><a target="_blank" href="http://eas21.emediate.eu/eas?cu=7008;ty=ct"><img src="http://eas21.emediate.eu/eas?cu=7008;cre=img" border="0" alt=" " width="230" height="90"/></a></noscript><!--newyork_ros_230x90_-->
+
+        
+                    
+                                       
+</div>
+                        
+
+                        <div  class="adHolder">
+
+                         
+                         
+            <script type="text/javascript" src="http://eas21.emediate.eu/eas?cu=7009;cre=mu;js=y;target=_blank"></script><noscript><a target="_blank" href="http://eas21.emediate.eu/eas?cu=7009;ty=ct"><img src="http://eas21.emediate.eu/eas?cu=7009;cre=img" border="0" alt=" " width="728" height="90"/></a></noscript><!--newyork_ros_728x90_-->
+
+        
+                             
+                        </div>
+                    </div>  
+              
+              
+              
+               <div class="topbarlinks">
+                    <div class="canadalinks">           
+            
+
+            <ul class="headerLinks">
+                <li class="selected">METRO PUBLISHES IN</li>
+                
+                        <li>
+                            <a href="http://www.metro.us/philadelphia">Philadelphia</a>
+                        </li>
+                    
+                        <li>
+                            <a href="http://www.metro.us/boston">Boston</a>
+                        </li>
+                    
+                        <li>
+                            <a href="http://www.metro.us/newyork">New York</a>
+                        </li>
+                    
+                        <li>
+                            <a href="http://www.metronews.ca/vancouver">Vancouver</a>
+                        </li>
+                    
+                        <li>
+                            <a href="http://www.metronews.ca/calgary">Calgary</a>
+                        </li>
+                    
+                        <li>
+                            <a href="http://www.metronews.ca/edmonton">Edmonton</a>
+                        </li>
+                    
+                        <li>
+                            <a href="http://www.metronews.ca/winnipeg">Winnipeg</a>
+                        </li>
+                    
+                        <li>
+                            <a href="http://www.metronews.ca/london">London</a>
+                        </li>
+                    
+                        <li>
+                            <a href="http://www.metronews.ca/toronto">Toronto</a>
+                        </li>
+                    
+                        <li>
+                            <a href="http://www.metronews.ca/ottawa">Ottawa</a>
+                        </li>
+                    
+                        <li>
+                            <a href="http://www.journalmetro.com">Montréal</a>
+                        </li>
+                    
+                        <li>
+                            <a href="http://www.metronews.ca/halifax">Halifax</a>
+                        </li>
+                     
+                <li>
+                    <a href="/newyork/static/179175">
+                        <img src="http://static.metronews.topscms.com/App_Themes/standard/images/header/moreTopBarButtonen.gif" border="0"   style="padding-top:2px;" alt="more"/>
+                    </a>
+                </li>
+            </ul>   
+    
+    </div>
+                    
+               </div>
+<!--MainMenu1-->               
+                    
+                     
+<!--MainMenu2--> 
+<div id="metroHeader" style="">
+
+
+
+
+
+<div class="newyork">
+<div id="Link1" style="display:block; width:220px;height:78px;float:left;" >
+<a href="/newyork" style="display:block;width:219px; height:75px;"></a>
+</div>
+<div id="link2" style="display:block;width:150px;height:78px; float:left; " ><a href="/newyork" style=" display:block; width:60px; height:12px;">.</a>
+<div id="Weather_box"  >
+</div>
+
+</div>
+<div id="User_info" style="float:right;">
+
+</div>
+<script language="javascript" type="text/javascript" >
+$(document).ready(function(){getUserInfoAdded();})
+function getUserInfoAdded(){
+    $.get("/toplets/login/loginstatus.aspx?callurl=/newyork/sports/article/1148979--what-if-every-olympic-sport-was-photographed-like-beach-volleyball&rand="+ord, function(data) { $("#User_info").html(data);
+    if($("#Metro_UserStatus").attr("value")=="1")
+    {$(".metro_LoggedIn_js_view").css("display","");}
+    
+    if($("#Metro_UserStatus").attr("value")=="0")
+    {$(".metro_LoggedOut_js_view").css("display","");}
+     })
+}
+</script>
+         <div id="metroHeaderLinks" style=";display:none;">
+
+                            <div id="Lupdate" class="lastUpdate" style="">
+
+                                <strong style="">Last Updated:</strong>Loading... 
+
+                            </div>
+
+
+
+ 
+
+
+
+<a href="javascript: showlayer();" style="">Change city</a>|
+<a href="/newyork/rsslist" style="">RSS</a>|    
+
+
+<a href="/newyork/mobile" style="">Mobile</a>
+
+
+                  
+                  |<a href="http://www.facebook.com/metronewyork" target="_blank" style="">Facebook</a>
+                  |<a href="http://twitter.com/metronewyork" target="_blank" style="">Twitter</a>
+                  |<a href="http://foursquare.com/metronews" target="_blank" style="">Foursquare</a>
+                  |<a href="http://www.metronews.ca/newyork/gigpark" style="">GigPark</a>
+                  
+
+
+                            
+
+                        </div>
+         
+                        
+                        
+      
+                        
+                        
+                        </div>
+    
+                        
+                        
+                        </div>
+                        
+                        
+                       
+          
+                         
+                   
+                </div>
+               
+               
+               
+                <div   >
+                   
+
+
+
+
+
+
+<div id="metroNav" >
+
+
+
+<div class="metroNavElements">
+<a href="/newyork/news"   style="height:21px;">news</a> <b class="seperator_nav">|</b>
+
+<div id="_news" class="metroSubNav L"  >
+
+<div  style="overflow:hidden;" class="InnerBox">
+<a  class="submenulinks" href="/newyork/local"    style="height:21px;">local</a><br />                 
+</div>
+
+<div  style="overflow:hidden;" class="InnerBox">
+<a  class="submenulinks" href="/newyork/national"    style="height:21px;">national</a><br />                 
+</div>
+
+<div  style="overflow:hidden;" class="InnerBox">
+<a  class="submenulinks" href="/newyork/international"    style="height:21px;">international</a><br />                 
+</div>
+
+<div  style="overflow:hidden;" class="InnerBox">
+<a  class="submenulinks" href="http://business-news.thestreet.com/metro-new-york"    style="height:21px;">money</a><br />                 
+</div>
+
+                    </div>
+
+</div>
+
+
+
+
+
+
+<div class="metroNavElements">
+<a href="/newyork/blogs"   style="height:21px;">blogs</a> <b class="seperator_nav">|</b>
+
+</div>
+
+
+
+
+
+
+<div class="metroNavElements">
+<a href="/newyork/life"   style="height:21px;">life</a> <b class="seperator_nav">|</b>
+
+<div id="_life" class="metroSubNav L"  >
+
+<div  style="overflow:hidden;" class="InnerBox">
+<a  class="submenulinks" href="/newyork/life/career"    style="height:21px;">career</a><br />                 
+</div>
+
+<div  style="overflow:hidden;" class="InnerBox">
+<a  class="submenulinks" href="/newyork/life/education"    style="height:21px;">education</a><br />                 
+</div>
+
+<div  style="overflow:hidden;" class="InnerBox">
+<a  class="submenulinks" href="/newyork/life/tech"    style="height:21px;">tech</a><br />                 
+</div>
+
+<div  style="overflow:hidden;" class="InnerBox">
+<a  class="submenulinks" href="/newyork/life/travel"    style="height:21px;">travel</a><br />                 
+</div>
+
+<div  style="overflow:hidden;" class="InnerBox">
+<a  class="submenulinks" href="/newyork/life/home"    style="height:21px;">home</a><br />                 
+</div>
+
+<div  style="overflow:hidden;" class="InnerBox">
+<a  class="submenulinks" href="/newyork/life/style"    style="height:21px;">style</a><br />                 
+</div>
+
+<div  style="overflow:hidden;" class="InnerBox">
+<a  class="submenulinks" href="/newyork/life/wellbeing"    style="height:21px;">wellbeing</a><br />                 
+</div>
+
+<div  style="overflow:hidden;" class="InnerBox">
+<a  class="submenulinks" href="/newyork/life/food"    style="height:21px;">food</a><br />                 
+</div>
+
+<div  style="overflow:hidden;" class="InnerBox">
+<a  class="submenulinks" href="/newyork/life/people"    style="height:21px;">people</a><br />                 
+</div>
+
+                    </div>
+
+</div>
+
+
+
+
+
+
+<div class="metroNavElements">
+<a href="/newyork/entertainment"   style="height:21px;">entertainment</a> <b class="seperator_nav">|</b>
+
+<div id="_entertainment" class="metroSubNav L"  >
+
+<div  style="overflow:hidden;" class="InnerBox">
+<a  class="submenulinks" href="/newyork/entertainment/music"    style="height:21px;">music</a><br />                 
+</div>
+
+<div  style="overflow:hidden;" class="InnerBox">
+<a  class="submenulinks" href="/newyork/entertainment/television"    style="height:21px;">television</a><br />                 
+</div>
+
+<div  style="overflow:hidden;" class="InnerBox">
+<a  class="submenulinks" href="/newyork/entertainment/movies"    style="height:21px;">movies</a><br />                 
+</div>
+
+<div  style="overflow:hidden;" class="InnerBox">
+<a  class="submenulinks" href="/newyork/entertainment/arts"    style="height:21px;">arts</a><br />                 
+</div>
+
+<div  style="overflow:hidden;" class="InnerBox">
+<a  class="submenulinks" href="/newyork/entertainment/goingout"    style="height:21px;">going out</a><br />                 
+</div>
+
+<div  style="overflow:hidden;" class="InnerBox">
+<a  class="submenulinks" href="/newyork/entertainment/gossip"    style="height:21px;">gossip</a><br />                 
+</div>
+
+<div  style="overflow:hidden;" class="InnerBox">
+<a  class="submenulinks" href="/newyork/entertainment/books"    style="height:21px;">books</a><br />                 
+</div>
+
+<div  style="overflow:hidden;" class="InnerBox">
+<a  class="submenulinks" href="/newyork/entertainment/theword"    style="height:21px;">the word</a><br />                 
+</div>
+
+                    </div>
+
+</div>
+
+
+
+
+
+
+<div class="metroNavElements">
+<a href="/newyork/sports"   style="height:21px;">sports</a> <b class="seperator_nav">|</b>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+<div class="metroNavElements">
+<a href="http://www.classifieds.metro.us/"  target="_blank"   style="height:21px;">classifieds</a> <b class="seperator_nav">|</b>
+
+</div>
+
+
+
+
+
+
+<div class="metroNavElements">
+<a href="http://educationoption.com/"  target="_blank"   style="height:21px;">EducationOption.com</a> <b class="seperator_nav">|</b>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+                    
+                    <div style="float:right; margin-right:2px; margin-top:-4px;">
+                    <input type="text" id="search_text_box" value="search" onkeypress="if(event.keyCode==13){DoSearchUS($('#search_text_box').attr('value'),'metro','newyork');}" onblur="Clear_search_box_out('search')" onfocus="Clear_search_box_in('search')" />&nbsp;<input id="search_metro_btn" type="button" value="metro" onclick="DoSearchUS($('#search_text_box').attr('value'),'metro','newyork')" />&nbsp;<input id="search_yahoo_btn" type="button" value="web" onclick="DoSearchUS($('#search_text_box').attr('value'),'yahoo','newyork')" />
+                    </div>
+                    
+</div>
+
+<p style="display:block;">
+
+
+                    
+
+
+
+<!-- ticker div -->
+
+<div id="metroTicker" >
+    <div class="metroTickerContainer">        
+        <div class="metroTickerElementsTitle">HOT TOPICS</div>        
+                           
+        
+                <div class="metroTickerBullet"></div>
+                <div class="metroTickerElements"><a href="http://issuu.com/metro_us/docs/20121015_us_new-york/19">NYC Department of Education: Expect Success!</a></div>                
+            
+                <div class="metroTickerBullet"></div>
+                <div class="metroTickerElements"><a href="/newyork/keyword/MTA">MTA</a></div>                
+            
+                <div class="metroTickerBullet"></div>
+                <div class="metroTickerElements"><a href="http://business-news.thestreet.com/metro-new-york">Money</a></div>                
+            
+                <div class="metroTickerBullet"></div>
+                <div class="metroTickerElements"><a href="http://www.ziptrial.us">Find a clinical trial</a></div>                
+            
+                <div class="metroTickerBullet"></div>
+                <div class="metroTickerElements"><a href="/newyork/keyword/mets">Mets</a></div>                
+            
+                <div class="metroTickerBullet"></div>
+                <div class="metroTickerElements"><a href="/newyork/keyword/yankees">Yankees</a></div>                
+            
+        <div class="metroTickerSeparator">|</div>
+        <div class="metroTickerElementsTitle">LATEST:</div>
+        <div id="metroTickerLatest"></div>
+    </div>
+    <div class="tickerGradient" style=" background:url(http://static.metronews.topscms.com/images/tickerFaderSQ.png) no-repeat 0 0;"></div>
+
+
+
+<!-- latest news for ticker -->
+
+        <ul id="latestNewsBlock">
+    
+        <li id="latest1"><a href="/newyork/local/article/1155615--long-waits-confusion-for-new-yorkers-heading-to-the-polls">Long waits, confusion for New Yorkers heading to the polls</a></li>
+    
+        <li id="latest2"><a href="/newyork/national/article/1155610--voters-go-to-polls-to-give-verdict-in-close-white-house-race">Voters go to polls to give verdict in close White House race</a></li>
+    
+        <li id="latest3"><a href="/newyork/national/article/1155589--obama-s-romney-s-49-49-chance-to-get-elected">Obama's, Romney's 49/49 chance to get elected</a></li>
+    
+        <li id="latest4"><a href="/newyork/national/article/1155586--from-their-mouths-to-your-ears-a-campaign-in-quotes">From their mouths to your ears: A campaign in quotes</a></li>
+    
+        <li id="latest5"><a href="/newyork/local/article/1155578--city-s-displaced-and-homeless-facing-another-storm-this-week-many-without-heat">City's displaced and homeless facing another storm this week, many without heat</a></li>
+    
+        <li id="latest6"><a href="/newyork/local/article/1155569--red-blue-grab-a-cocktail-your-color-for-the-election">Red? Blue? Grab a cocktail your color for the election</a></li>
+    
+        <li id="latest7"><a href="/newyork/national/article/1155547--i-told-my-kid-i-ate-all-their-halloween-candy-again">I Told My Kid I Ate All Their Halloween Candy (again)</a></li>
+    
+        </ul>
+    
+</div>
+<!-- {{$If(IsNotEmpty(Split(.fullDefaultCategory,'/','3')),ToLower(Concat('/',Split(.fullDefaultCategory,'/','3'))),'')$}}-->
+<!-- this javascript code actually starts the ticker -->
+<script language="javascript" type="text/javascript">
+    var stop_ticker=""  
+    var delay = 8;
+    var numOfNews = $("#latestNewsBlock li").length;
+    changeTicker(0, numOfNews);
+</script> 
+                    
+                    </p>
+
+<script language="javascript" type="text/javascript">
+    var menu_beig_used = 0;
+    InitMenus();
+  
+</script>
+     
+                          
+                     </div>           
+                     
+                     
+                <div style="color:White; font-size:10px; background-color:White;">
+                x
+                </div>     
+                     
+                
+             <!--MainMenu2--><!--MainMenuFull-->
+                 
+                 
+              <div id="wrapperMain"    >
+              
+                  
+
+    <div id="fb-root"></div>
+    <script src="http://connect.facebook.net/en_US/all.js"></script>
+    <script>
+      FB.init({
+      appId  : GetFacebookAppIds('www.metro.us'),
+      status : true,
+      cookie : true,
+      xfbml  : true
+      });
+    </script>
+                
+
+    <div id="fb_form_container" style="display:none;">
+      
+          <table border="0" cellspacing="0" cellpadding="0" style="width:200px;">
+            <tr >
+              <td colspan="2" style="text-align:left;color:#000000;padding:5px;font-size:15px;"></td>
+            </tr>
+            <tr>
+              <td colspan="2">
+                <br/>
+              </td>
+            </tr>
+            <tr >
+              <td style="text-align:center;width:60px;" class="profile_pic">
+
+              </td>
+              <td style="text-align:left;vertical-align:bottom;">
+                <b class="u_name">
+                  <b>
+            </td>
+            </tr>
+            <tr>
+              <td colspan="2">
+                <br/>
+              </td>
+            </tr>
+            <tr>
+              <td colspan="2"  class="u_your_comment">
+                Your comment
+              </td>
+            </tr>
+            <tr>
+              <td colspan="2">
+                <div    class="Comment_display comment_showcase"></div>
+              </td>
+            </tr>
+            <tr>
+              <td colspan="2">
+                <br/>
+              </td>
+            </tr>
+            <tr>
+              
+              <td colspan="2">
+                <table border="0" cellpadding="0" cellspacing="0">
+                  <tr>
+                    <td>
+                      <input type="checkbox" checked="checked" class="post_tofb"/>
+                    </td>
+                    <td>
+                      <img src="http://static.metronews.topscms.com/App_Themes/standard/images/icon_fb2.png" style="width:15px;height:15px;"/>
+                    </td>
+                    <td class="u_your_comment">Also post this comment to Facebook</td>
+                  </tr>
+                  
+                </table>
+                
+              </td>
+              
+            </tr>
+            
+            <tr>
+              <td colspan="2">
+                <br/>
+              </td>
+            </tr>
+            <tr style="text-align:right;">
+              <td style="text-align:right;"></td>
+              <td style="text-align:right;">
+                
+                  <input type="button"  value="Cancel" class="submit_btn_skip" onclick="Cancelbtn()">
+                    &nbsp;
+                    <input type="button"  value="Post" class="submit_btn_skip" onclick="ShareBtn('http://www.metronews.ca/newyork/sports/article/1148979--what-if-every-olympic-sport-was-photographed-like-beach-volleyball')">
+              </td>
+            </tr>
+          </table>
+        </div>
+    
+    
+<input type="hidden" id="thanks_commenting" value="Thanks For commenting."/>
+    
+    
+    
+    <!--  OMNITURE VARIABLE FOR SUB CONTENT TYPE -->
+    
+    <!--  POLLCATEGORY VARIABLE POLL -->
+    
+    
+    
+    
+    
+    
+    
+     
+    
+    
+    
+    
+       
+       
+     
+    
+    
+     
+    
+    
+    
+    
+    
+ 
+ <style type="text/css">
+    
+    #articlemain li
+    {
+         list-style-image:url("{{$ToLower(Config[CDNUrl])$}}/images/sub{{$Capitalize(Param[page_source])$}}Bullet.png");
+         line-height: 18px;
+    }
+    #comment_ifr_p
+        	{border-right:solid 1px #66A566; overflow:hidden; height:300px;}
+</style> 
+
+<!--[if IE]>
+<style type="text/css">
+
+.top_box,
+        .bottom_box
+        {
+        	 display:none;
+        	}
+        	#comment_ifr_p
+        	{border-right:none; }
+        	
+ </style>
+<![endif]-->
+    
+    <style type="text/css">
+       
+       #tooltip{
+	position:absolute;
+	border:1px solid #333;
+	background:#f7f5d1;
+	padding:2px 5px;
+	color:#333;
+	display:none;
+	}
+       .image_thum
+       {
+       	 border:solid 2px #171717;
+       	}
+       .list_style
+       {
+       	 float:left; list-style-type:none; background-image:none; width:73px;  height:74px; margin:0 0 0 0;
+       	}
+   .Image_tite
+   {
+   	 font-size:20px;
+   	 font-family:Trebuchet MS;
+   	  line-height:21px;
+   	  background-color:#333333;
+   	   color:White;
+   	}
+   
+   	.Image_para
+   	    {
+   	        font-size:13px;
+   	        font-family:Trebuchet MS;
+   	 	    line-height:16px;
+            background-image:url(/images/greytrans66.png);
+   	 	    color:White; 
+   	 	    padding: 0 0 0 0;
+   	 	    margin:0 0 0 0;
+   	 	    height:50px;    	 	  
+   		}
+   		
+   	.Image_para a,.Image_para a:visited
+   		{
+   		    font-weight: bold;
+   		    color: White;
+   		}
+   		
+   #slideshow
+   		{
+   			  width:2000px;
+   			}
+   			.glide_left
+   	{
+   		
+   		 background-color:#333333;
+   		 width:70px;
+   		 height:70px; text-align:center;
+   		 border-left:solid 1px #333333;
+   		 border-right:solid 1px #333333;
+   		  border-top:solid 2px #333333;
+   		  border-bottom:solid 2px #333333;
+   		   display:block; 
+   		
+   		}
+   		.glide_left 
+   		{
+   		  background-position:center center;
+   		  background-repeat:no-repeat;
+   		  cursor:pointer;
+   		  
+   			}
+   		.glide_left:hover, .glide_left.selected
+   		{
+   		border-left:solid 1px #00FE00;border-right:solid 1px #00FE00;border-top:solid 2px #00FE00;border-bottom:solid 2px #00FE00;
+   		}
+   			.player_img_btn
+   			{
+   				margin:0 0 0 0; padding:0 0 0 0; text-decoration:none; border:none;
+   			}
+   				.list_style.tooltip
+   				{
+   					border-left:solid 1px #00FE00;border-right:solid 1px #00FE00;border-top:solid 2px #00FE00;border-bottom:solid 2px #00FE00;
+   				}
+   		
+   </style>
+
+    
+    
+      
+     
+      
+      
+      <div id="Editors_Picks_Ajax" style="width:960px;height:174px; border:0px;"></div>
+      
+      <script language="javascript" type="text/javascript"  >
+        
+        
+            $.get("http://www.metro.us/newyork/editorspicks/1148979", function(data) {                       
+             // $("#Editors_Picks_Ajax").html($("span.EditorsPicksPreFetched", data).html());              
+               $("#Editors_Picks_Ajax").html(data); 
+             });
+        
+      </script>
+      
+      
+      
+     
+      
+      <div style="height:2px; width:5px;"></div>      
+      <div style="width:960px; height:1px; background-color:#a7a7a7; "></div>
+      <div style="height:5px; width:5px;"></div>
+      
+    <div id="wrapperLeftColumnSection" class="wrapperArticle">
+
+        <!-- ARTICLE TOP -->
+       
+        <div id="wrapperArticleTop">
+      <!--  -->
+          
+        
+        
+       <div style="padding-top: 7px;" >
+       
+       
+         
+        <div style="height: 20px;" >
+            <div class="SubTitle" style="font-size:14px; font-weight:600; padding-bottom:6px; float: left;">
+                <a href="/newyork" style="color:#000000;">Home</a>             
+            </div>    
+            
+                    <div style="float: left; padding-top: 1px; padding-left: 5px; padding-right: 5px;">
+                        <img src="http://static.metronews.topscms.com/images/subSportsBullet.png">
+                    </div>
+                    <div class="SubTitle" style="font-size:14px; font-weight:600; padding-bottom:6px; float: left;">
+                        <a href="/newyork/sports" style="color:#000000;">Sports</a>
+                    </div>
+                
+            
+            
+                    <div style="float: left; padding-top: 1px; padding-left: 5px; padding-right: 5px;">
+                        <img src="http://static.metronews.topscms.com/images/subSportsBullet.png">
+                    </div>
+                    <div class="SubTitle" style="font-size:14px; font-weight:600; padding-bottom:6px; float: left;">
+                    
+                            <a href="/newyork/keyword/Olympics" style="color:#000000;">Olympics</a>
+                                                                            
+                    </div>
+                                                                
+        </div>
+        <div class="clear"></div>
+                  
+       
+        <h1>What if every Olympic sport was photographed like beach volleyball?</h1>
+            
+                <div class="SubTitle" style="visibility:hidden;">
+               
+                </div>
+                
+           
+       </div>
+       
+                <!--floating-box rfzappala-->   
+	            
+            
+            
+        
+                       
+             <div id="floating-box">   
+                <div style="text-align: center;">	            
+                    <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://www.metro.us/newyork/sports/article/1148979--what-if-every-olympic-sport-was-photographed-like-beach-volleyball" data-count="vertical" data-via="metronewyork">Tweet</a>
+                    <script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+                </div>
+                <div style="padding: 10px 0 0 10px; max-height:85px; s">	            
+                    
+                    <fb:like href="http://www.metro.us/newyork/sports/article/1148979--what-if-every-olympic-sport-was-photographed-like-beach-volleyball" send="true" layout="box_count" width="70px" show_faces="true" font="trebuchet ms"></fb:like>                    
+                </div> 
+                <div class="clear"></div>
+                <div style="font-family: Trebuchet MS; font-size: 14px; line-height:16px; text-align:center; padding-top: 10px; padding-left: 6px;">                    
+                    <a onclick="javascript:window.open('http://www.metro.us/emailarticle/1148979?path=/newyork/sports/article/1148979--what-if-every-olympic-sport-was-photographed-like-beach-volleyball&language=en&refurl=http://www.metro.us/newyork/sports/article/1148979--what-if-every-olympic-sport-was-photographed-like-beach-volleyball');" href="javascript:void(0);">
+                        <div style="float: left;"><img src="/images/email.png" alt="" /></div>
+                        <div style="float:left; width:3px; height:16px;"></div>
+                        <div style="float: left;">Email</div>	                         
+                    </a>
+                </div>
+                
+                <div class="clear"></div>
+                <div style="padding: 10px 0 0 6px;">	            	                
+                    <div class="addthis_toolbox addthis_default_style">
+                        <a href="http://addthis.com/bookmark.php?v=250&amp;username=xa-4c40c65a116a15d5" class="addthis_button_compact">more</a>
+                    </div>
+                    <script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#username=xa-4c40c65a116a15d5"></script>
+                    <script type="text/javascript">
+                        var addthis_config =
+                        {
+                            services_exclude: 'facebook, twitter, tweetmeme'
+                        }
+                    </script>
+                </div>
+                
+
+                
+            </div>
+        
+            
+            
+        		            
+        
+        <div id="otherSections"> 
+        
+        
+ 
+ 
+ 
+            
+                    
+                            <!-- ARTICLE IMAGE (CONDITIONAL) -->
+
+                            <div class="wrapperArticleImage" style="max-width:400px" >
+                               <div  style="text-align:right">
+                               
+                                                                    <img src="http://media.metronews.topscms.com/images/dc/40/3e06f93943a8a9f40c03bef69353.jpg" alt="Beach Volleyball - Practice Session" />
+                                                                    
+                                        <div style="text-align:right;padding:0 0 0 0; " class="credits" >
+                                       &nbsp; Streeter Lecka/Getty Images</div>
+                                    
+                                
+                                <p style="text-align:left;" class="abstract">
+                                    An "unidentified" beach volleyball player during the practice sessions for the London 2012 Olympics.
+                                    </p>
+                                
+                                
+                                    
+                                 </div>
+                                
+                               
+                            </div>
+                        
+                
+            
+            <div class="pullquotespace"></div>
+         <div class="supportingLinks">
+                        <!-- ARTICLE TOOLBAR -->
+             
+                        
+                        <!-- RELATED LINKS -->
+                        
+                        
+  
+  
+                            <!-- MORE ON THIS TOPIC -->
+                            
+                                <div class="relatedLink">
+                                    <div class="relatedLinkBox Sports"> 
+                                    <span id="ctl00_ContentPlaceHolder_Main_If2_FalseTemplate0_ctl05_TrueTemplate0_artcileTags_HeaderTemplate0_Span1">More about </span>
+                <a href="/newyork/keyword/Olympics">Olympics</a>
+            
+                                    </div>
+                                    <div class="holder">
+                                    
+                                    
+                                    
+                                        
+                                             
+                                                 <div class="relatedHeadlineBox">
+                                                    <div class="relatedHeadlineBullet">
+                                                        <img src="http://static.metronews.topscms.com/images/subSportsBullet.png" /> 
+                                                    </div>
+                                                    <div class="relatedHeadlineRightBox">                    
+                                                        <a href="/newyork/sports/article/1153900--anthony-chandler-bonded-over-olympic-experience" style="font-weight:100">Anthony, Chandler bonded over Olympic experience</a>
+                                                    </div>
+                                                 </div>                                               
+                                             
+                                             <div class="clear"></div>
+                                             
+                                             
+                                                 <div class="relatedHeadlineBox">
+                                                    <div class="relatedHeadlineBullet">
+                                                        <img src="http://static.metronews.topscms.com/images/subSportsBullet.png" /> 
+                                                    </div>
+                                                    <div class="relatedHeadlineRightBox">                    
+                                                        <a href="/newyork/national/article/1149815--nolympics-post-olympic-depression-and-anger-with-nbc-again" style="font-weight:100">#Nolympics: Post-Olympic depression and anger with NBC (again)</a>
+                                                    </div>
+                                                 </div>                                               
+                                             
+                                             <div class="clear"></div>
+                                             
+                                             
+                                                 <div class="relatedHeadlineBox">
+                                                    <div class="relatedHeadlineBullet">
+                                                        <img src="http://static.metronews.topscms.com/images/subSportsBullet.png" /> 
+                                                    </div>
+                                                    <div class="relatedHeadlineRightBox">                    
+                                                        <a href="/newyork/international/article/1149789--olympics-2012-goodbye-london" style="font-weight:100">Olympics 2012: Goodbye, London</a>
+                                                    </div>
+                                                 </div>                                               
+                                             
+                                             <div class="clear"></div>
+                                             
+                                             
+                                                 <div class="relatedHeadlineBox">
+                                                    <div class="relatedHeadlineBullet">
+                                                        <img src="http://static.metronews.topscms.com/images/subSportsBullet.png" /> 
+                                                    </div>
+                                                    <div class="relatedHeadlineRightBox">                    
+                                                        <a href="/newyork/international/article/1149772--photos-scenes-from-two-weeks-in-london-2012" style="font-weight:100">PHOTOS: Scenes from two weeks in London 2012</a>
+                                                    </div>
+                                                 </div>                                               
+                                             
+                                             <div class="clear"></div>
+                                             
+                                    
+                                    </div>
+                                </div>   
+                            
+                            
+                            <!-- MOVIE SHOWTIMES -->
+                            <!-- MORE ON THIS TOPIC -->
+                            
+                            
+                        
+                            
+                            
+                                
+                           </div>
+        
+                           
+                           
+      
+                        
+       
+        
+        
+        
+        
+        </div>
+           
+           <div id="articleSection">
+           <!-- sphereit start -->
+           
+            
+                <div class="author" style="font-weight:400">
+              
+                
+                                    <script language="javascript" type="text/javascript">
+                   document.write(ProcessCreditLine_en("NATE JONES","http://static.metronews.topscms.com"));
+                    </script>
+                
+                </div>
+                
+                
+            
+                        <div class="author" style="font-weight:400"><strong>Published: </strong>August 01, 2012 1:34 p.m.</div>            
+                    
+            
+                        <div class="author" style="font-weight:400"><strong>Last modified: </strong>August 08, 2012 12:10 p.m.</div>            
+                    
+            <div  style="height:10px; display:block;"></div>
+                       
+            
+
+                <!--rfzappala shareBoxHorizontal-->
+                
+            
+            
+             
+            
+        <table id="shareBoxHorizontal" cellpadding="0" cellspacing="0" border="0" style="width: 233px; display: none;">
+                <tr>
+                    <td>
+                        <div style="padding-top: 2px; width:150px; height:20px;">
+                            
+                            <fb:like href="http://www.metro.us/newyork/sports/article/1148979--what-if-every-olympic-sport-was-photographed-like-beach-volleyball" send="true" layout="button_count" width="160px" show_faces="false" font="trebuchet ms"></fb:like>
+                        </div>
+                    </td>                    
+                    <td>
+                        
+                        <td>
+                </tr>
+
+                <tr>
+                    <td colspan="3" style=" padding-top: 8px;">
+                        <table width="235" cellpadding="0" cellspacing="0" border="0">
+                            <tr>
+                                <td style="width:110px;">
+                                    <div style="padding-top: 2px; width:98px;">                        
+                                        <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://www.metro.us/newyork/sports/article/1148979--what-if-every-olympic-sport-was-photographed-like-beach-volleyball" data-count="horizontal" data-via="metronewyork">Tweet</a>
+                                        <script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>                        
+                                    </div>
+                                </td> 
+                                <td>
+                                    <div class="addthis_toolbox addthis_default_style">
+                                        <a href="http://addthis.com/bookmark.php?v=250&amp;username=xa-4c40c65a116a15d5" class="addthis_button_compact">more</a>
+                                    </div>
+                                    <script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#username=xa-4c40c65a116a15d5"></script>
+                                    <script type="text/javascript">
+                                        var addthis_config =
+                                        {
+                                            services_exclude: 'facebook, twitter, tweetmeme'
+                                        }
+                                    </script>
+                                </td>                                                       
+                                <td>
+                                    <table style="padding-top:1px;" cellpadding="0" cellspacing="0" border="0" >
+                                        <tr>
+                                            <td style="width: 3px;">&nbsp;</td>
+                                            <td style="padding-top:1px;">
+                                                <a onclick="javascript:window.open('http://www.metro.us/emailarticle/1148979?path=/newyork/sports/article/1148979--what-if-every-olympic-sport-was-photographed-like-beach-volleyball&language=en&refurl=http://www.metro.us/newyork/sports/article/1148979--what-if-every-olympic-sport-was-photographed-like-beach-volleyball');" href="javascript:void(0);">
+                                                
+                                                    <img src="/images/email.png" alt="Email" />
+                                                </a>
+                                            </td>
+                                            <td style="padding-top:1px; padding-left:5px;">
+                                                <a onclick="javascript:window.open('http://www.metro.us/emailarticle/1148979?path=/newyork/sports/article/1148979--what-if-every-olympic-sport-was-photographed-like-beach-volleyball&language=en&refurl=http://www.metro.us/newyork/sports/article/1148979--what-if-every-olympic-sport-was-photographed-like-beach-volleyball');" href="javascript:void(0);">
+                                                
+                                                    Email
+                                                </a>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                
+                
+            </table>          
+               
+
+        
+            
+            
+            
+
+                
+            
+                
+            
+            
+            
+            
+            
+            <div  style="height:10px; display:block;"></div>
+       <div class="author" style="background-image:url(/app_themes/standard/images/content/iconComments.png); background-repeat:no-repeat; ">
+       <a href="#commentbox" style="padding-left:40px;">
+       
+       
+                                         (395)
+                                    
+       </a>
+       </div>
+       
+                   
+       <div class="author" style="background-image:url(/App_Themes/standard/images/structure/articleIcons/printIcon2.gif); background-repeat:no-repeat; background-position:2px 4px; padding-top:4px; "><a href="javascript:openWinPrintPreview('/ArticlePrint/1148979?language=en');" style="padding-left:40px;">Print article</a></div>            
+       <div id="txt_sz_box" class="author" style=""><a href="javascript:SetFontSize_v2();" onmouseover="document.getElementById('txt_sz_box').className='author small';" onmouseout="document.getElementById('txt_sz_box').className='author';" style="text-decoration:none;"  >&nbsp;&nbsp;&nbsp;</a>&nbsp;<a href="javascript:SetFontSize_v2('grow');" style="text-decoration:none;" onmouseover="document.getElementById('txt_sz_box').className='author large';" onmouseout="document.getElementById('txt_sz_box').className='author';" >&nbsp;&nbsp;&nbsp;</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+       <span style="margin-left: -33px; font-weight:100; z-index: 0;" >Text size</span>
+       
+        <script src="http://site.answers.com/main/js/web_answertip.js?ANSW.nafid=8" type="text/javascript"></script>
+<span id="answerTipEnabled" style="display: none"></span>
+<script type="text/javascript">
+
+ANSW.Trigger.showLogoIfEnabled("AnswerTips_landing_square.gif","");</script>
+        
+        
+        
+       </div>            
+        <!-- ARTICLE BODY -->
+        <div id="wrapperArticleBody">   
+        <script language="javascript">
+        try
+        {
+        Prop8="False"
+        }
+        catch(err)
+        {
+        
+        }
+        </script>
+        
+            
+                            
+                             
+            <div id="articlemain">
+          
+            <!-- New Regex: (>|[ \t])+(((http)+(s?)\://){1}\S+)(<)* -->
+            <!-- Old Regex: ((([ \t]+http)+(s?)\://){1}\S+) -->
+            <!-- Old Regex: (>|[ \t])+((http(s?)\://){1}(\w|\.)+) -->
+      
+     
+     
+     
+        
+        
+            	
+	
+<div id="ctl00_ContentPlaceHolder_Main_If2_FalseTemplate0_testpagingtoplet_testpagingtoplet">
+	
+<div class="pagedata">
+	
+        <div id="mainPara" >
+    
+      We were browsing Getty Images last week for images of Olympic beach volleyball when we came upon something interesting.<br/>
+<br/>
+And by "interesting," we mean "kind of gross."<br/>
+<br/>
+Check out these results:<br/>
+<br/>
+<img alt="" src="http://i.imgur.com/GQgkx.jpg"></img><br/>
+<br/>
+<img alt="" src="http://i.imgur.com/jzgpH.jpg"></img><br/>
+<br/>
+<img alt="" src="http://i.imgur.com/FvwXr.jpg"></img><br/>
+<br/>
+This got us thinking: What if <em>all</em> Olympic sports were photographed this way? We decided to find out. <br/>
+<br/>
+<h1>Basketball</h1>
+<br/>
+<img alt="" src="http://i.imgur.com/uszgX.jpg"></img><br/>
+<br/>
+<img alt="" src="http://i.imgur.com/ncB0N.jpg"></img><br/>
+<br/>
+<h1>Diving</h1>
+<br/>
+<img alt="" src="http://i.imgur.com/xw2Cf.jpg"></img><br/>
+<br/>
+<img alt="" src="http://i.imgur.com/KYtcD.jpg"></img><br/>
+<br/>
+<h1>Gymnastics</h1>
+<br/>
+<img alt="" src="http://i.imgur.com/XR9dm.jpg"></img><br/>
+<br/>
+<img alt="" src="http://i.imgur.com/F4zKk.jpg"></img><br/>
+<br/>
+<img alt="" src="http://i.imgur.com/Q7EiL.jpg"></img><br/>
+<br/>
+<img alt="" src="http://i.imgur.com/7zaoV.jpg"></img><br/>
+<br/>
+<img alt="" src="http://i.imgur.com/geeJ3.jpg"></img><br/>
+<br/>
+<img alt="" src="http://i.imgur.com/slw69.jpg"></img><br/>
+<br/>
+<img alt="" src="http://i.imgur.com/JTSGn.jpg"></img><br/>
+<br/>
+<h1>Swimming</h1>
+<br/>
+<img alt="" src="http://i.imgur.com/Q1Zvo.jpg"></img><br/>
+<br/>
+<img alt="" src="http://i.imgur.com/KPtrR.jpg"></img><br/>
+<br/>
+<img alt="" src="http://i.imgur.com/BR4D0.jpg"></img><br/>
+<br/>
+<img alt="" src="http://i.imgur.com/dxvZI.jpg"></img><br/>
+<br/>
+<h1>Track and Field</h1>
+<br/>
+<img alt="" src="http://i.imgur.com/4kK6W.jpg"></img><br/>
+<br/>
+<img alt="" src="http://i.imgur.com/PLPUl.jpg"></img><br/>
+<br/>
+<h1>Wrestling</h1>
+<br/>
+<img alt="" src="http://i.imgur.com/dvHP8.jpg"></img><br/>
+<br/>
+<img alt="" src="http://i.imgur.com/N7R2U.jpg"></img><br/>
+<br/>
+<img alt="" src="http://i.imgur.com/rQX91.jpg"></img><br/>
+<br/>
+<em>Follow Nate Jones on Twitter at <a href="https://twitter.com/kn8" target="_blank">@kn8</a>.<br/>
+<br/>
+<br/>
+</em><strong>Read more about the Olympics:</strong><em><br/>
+</em><br/>
+<a href="www.metro.us/philadelphia/national/article/1149424--u-s-rower-henrik-rummel-on-olympic-excitement-i-swear-it-s-not-erect" target="_blank">U.S. rower Henrik Rummel on Olympic excitement: 'I swear it's not erect!'</a><br/>
+<br/>
+<a href="http://www.metro.us/newyork/national/article/1149078--photos-inside-the-exclusive-usa-house-in-london" target="_blank"> </a><a target="_blank" href="http://www.metro.us/philadelphia/entertainment/article/1149129--playing-the-field-ryan-lochte-s-secret-crush-chad-johnson-s-porn-career">Ryan Lochte's secret crush</a><br/>
+<br/>
+<a href="http://www.metro.us/newyork/national/article/1149078--photos-inside-the-exclusive-usa-house-in-london" target="_blank">Inside USA House, the high-security retreat for America's Olympians</a><br/>
+<br/>
+<a href="http://www.metro.us/newyork/international/article/1149066--kerri-walsh-s-abs-coach-krzyzewski-on-lebron-fan-photos" target="_blank">Overheard at the Olympics!</a><br/>
+<br/>
+<a target="_blank" href="http://www.metro.us/philadelphia/local/article/1148991--stars-of-the-u-s-women-s-gymnastics-team-are-pretty-much-just-like-regular-16-year-olds">Stars of the U.S. women's gymnastics team are pretty much just like regular 16-year-olds</a><br/>
+<br/>
+<a target="_blank" href="http://www.metro.us/boston/sports/article/1148973--olympics-first-scandal-eight-badminton-players-suspended-for-throwing-matches">Olympics' first scandal: Eight badminton players suspended for throwing matches</a><br/>
+<br/>
+<a target="_blank" href="http://www.metro.us/newyork/sports/article/1148685--playing-the-field-us-swimming-sings-call-me-maybe">US swimming sings 'Call Me Maybe'</a><br/>
+<br/>
+<a target="_blank" href="http://www.metro.us/boston/international/article/1148990--london-s-small-businesses-where-are-all-the-olympic-tourists">London's small businesses: Where are all the Olympic tourists?</a> 
+      
+      
+      
+      
+        
+        
+        
+        
+        
+        
+        </div>
+        
+</div>
+	<script type="text/javascript" language="javascript">
+	var containeridarg= "ctl00_ContentPlaceHolder_Main_If2_FalseTemplate0_testpagingtoplet_testpagingtoplet";
+	var enabledarg = "0";
+	var pagesizearg = "2000";
+      var pager = new PagingObj( { container:containeridarg,pagesize:pagesizearg,enabled:enabledarg } );
+    </script>
+
+</div>
+
+        
+        
+       
+
+
+
+     
+<!-- sphereit end -->
+<p style="text-align:right; font-size:12px;">
+
+
+
+
+</p>
+            </div>   
+            
+           
+            
+            
+
+    
+         <div id="FooterTags" >   
+         
+          <strong><span id="ctl00_ContentPlaceHolder_Main_If2_FalseTemplate0_ctl08_FalseTemplate0_artcileTags_HeaderTemplate0_Span1">More about </span></strong>
+                <a href="/newyork/keyword/Olympics">Olympics</a>
+            ,
+                <a href="/newyork/keyword/beach_volleyball">beach volleyball</a>
+            
+           
+         
+             </div>
+                     
+        </div>
+        
+        <div style=" clear:both; height:11px;"></div>
+        
+        
+
+
+<input type="hidden" id="vid" value="1148635" />
+<input type="hidden" id="images" value="1148639--" />
+<input type="hidden" id="video" value="" />
+<input type="hidden" id="reserved" value="" />
+
+                
+        
+        <br id="commentbox" name="commentbox" />
+        <div id="comments" name="comments"></div>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+  <div style="height:5px; width:10px; clear:both;"></div>
+  <div style="float: left;">
+    <fb:like href="http://www.metro.us/newyork/sports/article/1148979--what-if-every-olympic-sport-was-photographed-like-beach-volleyball" send="true" action="recommend" width="450" show_faces="true" font="trebuchet ms"></fb:like>
+  </div>
+  <div style="float:left;">
+    <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://www.metro.us/newyork/sports/article/1148979--what-if-every-olympic-sport-was-photographed-like-beach-volleyball" data-count="horizontal" data-via="metronewyork">Tweet</a>
+    <script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>                        
+  </div>
+  <div style="float: left;">
+    <script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>    
+    <g:plusone size="medium"></g:plusone>
+  </div>  
+  <div style="height:5px; width:10px; clear:both;"></div>
+  
+        
+        
+        
+        <div style="clear:right;"></div>
+         <!--EDITORS PICK-->
+         
+         
+         
+       
+                            
+                            
+                                
+            
+            
+                      
+            
+            
+            
+            
+           
+            
+            
+            
+           
+            
+         
+            
+           
+            
+            
+            
+            <div id="EditorsPickBottomPanel" style="text-align:left;" >       
+            
+       
+            <!-- CHECK FOR LINEUP-->   
+            
+       
+            <!--IMPLEMENT SEARCH -->
+            <div style="text-align:left;">             
+             <div style="width: 640px; display: block; ">      
+               <div class="bottomSection">                   
+                   <div class="bottomSectionSportsHeader">
+                     <a href="/newyork/sports">
+                        <span class="subSectionTitle" style="margin-left:15px;">
+                            more sports stories
+                        </span>
+                     </a>
+                    </div>                    
+                
+                        <div style="padding-bottom:5px; text-align:left;"></div>  
+                    
+                    
+                        <div class="relatedArticlesBox" style="padding-top:5px">
+                        
+                                <div style="min-height:50px; width:70px; float:left; padding-right:10px;">
+                                    <a href="/newyork/sports/article/1155621--playing-the-field-obama-crushes-beers-and-marcus-vick-crushes-the-eagles"><img src="http://media.metronews.topscms.com/images/75/d2/6fc33a1a4b9f903f40580087f1f0.jpg" style="float:left; padding-right: 10px;" alt="" /></a>
+                                </div>
+                               
+                            <div style="margin-left:80px;">
+                                <a href="/newyork/sports/article/1155621--playing-the-field-obama-crushes-beers-and-marcus-vick-crushes-the-eagles" style="line-height:14px;">                  
+                                    <div class="relatedArticlesBoxTitleImage" style="padding-bottom:4px;">Playing the Field: Obama crushes beers and Marcus Vick crushes the Eagles                      
+                                                          
+                                    </div>
+                                    <div>
+                                        Welcome to the Election Day version of Playing the Field, aka 400-plus
+words of awkward attempts to tie sports gossip stories to politics.
+                                    </div>
+                                </a>                     
+                            </div>         
+                        </div>
+                        <div class="clear"></div>
+                        <div class="subSectionseparator"></div>
+                        <div class="rightStoriesGreyBarDivider"></div>
+                        <div style="display:none;"></div>
+                              
+            
+            
+                    
+                        <div class="relatedArticlesBox" style="padding-top:5px">
+                        
+                                <div style="min-height:50px; width:70px; float:left; padding-right:10px;">
+                                    <a href="/newyork/sports/article/1155608--nets-throw-away-win-against-minnesota"><img src="http://media.metronews.topscms.com/images/ce/8b/eb1954e443808662c6b235fc42dc.jpg" style="float:left; padding-right: 10px;" alt="" /></a>
+                                </div>
+                               
+                            <div style="margin-left:80px;">
+                                <a href="/newyork/sports/article/1155608--nets-throw-away-win-against-minnesota" style="line-height:14px;">                  
+                                    <div class="relatedArticlesBoxTitleImage" style="padding-bottom:4px;">Nets throw away win against Minnesota                      
+                                                          
+                                    </div>
+                                    <div>
+                                        The Nets have routinely espoused their belief that they will be a playoff team. Playoff teams know how to finish games.
+                                    </div>
+                                </a>                     
+                            </div>         
+                        </div>
+                        <div class="clear"></div>
+                        <div class="subSectionseparator"></div>
+                        <div class="rightStoriesGreyBarDivider"></div>
+                        <div style="display:none;"></div>
+                              
+            
+            
+                    
+                        <div class="relatedArticlesBox" style="padding-top:5px">
+                        
+                                <div style="min-height:50px; width:70px; float:left; padding-right:10px;">
+                                    <a href="/newyork/sports/article/1155607--jets-search-for-identity-coming-off-bye-week"><img src="http://media.metronews.topscms.com/images/fa/77/4d2d1e2f4364a56d41c382cac40a.jpg" style="float:left; padding-right: 10px;" alt="" /></a>
+                                </div>
+                               
+                            <div style="margin-left:80px;">
+                                <a href="/newyork/sports/article/1155607--jets-search-for-identity-coming-off-bye-week" style="line-height:14px;">                  
+                                    <div class="relatedArticlesBoxTitleImage" style="padding-bottom:4px;">Jets search for identity coming off bye week                      
+                                                          
+                                    </div>
+                                    <div>
+                                        Head coach Rex Ryan&rsquo;s self-proclaimed &ldquo;best team I&rsquo;ve had since I&rsquo;ve
+been the coach here&rdquo; is currently 3-5 as they search for their identity
+coming off a bye week.
+                                    </div>
+                                </a>                     
+                            </div>         
+                        </div>
+                        <div class="clear"></div>
+                        <div class="subSectionseparator"></div>
+                        <div class="rightStoriesGreyBarDivider"></div>
+                        <div style="display:none;"></div>
+                              
+            
+             
+                
+               </div> 
+            </div>
+            
+              
+              
+           <!--EDITORS PICK-->     
+            
+            
+            </div>
+
+    
+    <div style="clear:right;"></div>
+        
+        
+        <div id="gfc_fb_link_box" style="display:none;">
+        <a href="javascript:void(0)" onclick="return Metro_FbLogin('www.metro.us')">comment using facebook</a><br /><a href="javascript:void(0)" onclick="return Metro_FbLogout('www.metro.us');">Sign Out</a>
+       
+        <br /><br /><br />
+                
+        <a href="javascript:void(0)" onclick="return Metro_SNLogin()">comment using Google-Twitter-Yahoo</a><br /><a href="javascript:void(0)" onclick="return Metro_SNLogout();">Sign Out</a>
+        
+        </div>
+        
+        
+        
+                
+                
+
+      <!--<div style='font-size:20px; color:#ffffff; margin-left:0;width:630px;background-image:url(/App_themes/standard/images/mostpopular/black_dot2.gif); background-repeat:repeat-x; padding:0 0 0 0;background-position:center center;'  >
+      _
+    </div>-->
+
+      
+          <br/>
+          <table style="padding-bottom:5px; width:625px;" class="table_comments">
+            <tr>
+              <td style="width:35px;">
+                <img src="http://static.metronews.topscms.com/TopletsResources/UserRatingComments2/images/icoCommentsBig.gif" />
+              </td>
+              <td style="font-size:20px;">Add your comment</td>
+              <td>&nbsp;</td>
+              <td style="text-align:right;width:320px;font-family:Trebuchet MS;font-size:13px;">
+                <div class="metro_LoggedIn_js_view" style="display:none;">
+                  Comment as <span class="metro_LoggedIn_js_username"></span>&nbsp;&nbsp;&nbsp;<a href="/webapp/Login.aspx?logout=true&rurl=/newyork/sports/article/1148979--what-if-every-olympic-sport-was-photographed-like-beach-volleyball"  onclick="return LogUserOut('http://www.metro.us/newyork/sports/article/1148979--what-if-every-olympic-sport-was-photographed-like-beach-volleyball');">Logout</a>
+                </div>
+                <div class="metro_Loggedout_js_view" style="display:none;"></div>
+              </td>
+            </tr>
+          </table>
+
+          <div id="Say_box" style="padding-top:5px;">
+            <textarea id="Comment_txt" rows="4" cols="75" onkeyup="limitText(this,900);" onkeydown="limitText(this,900);"  style="border:1px solid #000000;"></textarea>
+            <p style="text-align:right;width:625px;display:block;color:#ffffff;font-size:8px;padding:0 0 0 0;">
+              _
+            </p>
+            <p style="text-align:right;width:625px;padding:0 0 0 0;">
+              <table cellspacing="0" cellpadding="0" border="0" style="width:620px;">
+                <tr>
+                  <td>
+                    <p style="width:100%;font-family:Trebuchet MS;font-size:14px;padding-top:2px;line-height:14px;">
+                      Comments are not reviewed before posting. If you believe a comment has violated the commenting guidelines, please alert a moderator using links provided.
+
+                    </p>
+
+                  </td>
+                  <td style="width:230px;text-align:center;">
+                    <span class="metro_LoggedIn_js_viewx" style="display:none;width:200px;white-space:nowrap;font-family:trebuchet ms;font-size:15px;">
+                      <input type="checkbox" id="fb_logged_in_chk" value=""/><img src="http://static.metronews.topscms.com/App_Themes/standard/images/icon_fb2.png" style="width:15px;height:15px;"/> Post to my facebook too
+                    </span>
+                  </td>
+                  <td style="width:100px;">
+                    <input type="button" id="SendComment_btn" value="Post" style="color:#ffffff;background-color:#2e782b;border:0px solid #000000;font-size:13px; font-weight:600;height:22px;width:100px;" onclick="PostStoryV2($('#Comment_txt').attr('value'),'1148979')" />
+                  </td>
+                </tr>
+              </table>
+            </p>
+
+
+          
+
+
+
+
+
+      
+          <!-- <p style="width:625px;font-family:Trebuchet MS;font-size:11px;padding-top:5px;">
+           Comments are not reviewed before posting. If you believe a comment has violated the commenting guidelines, please alert a moderator using links provided.        
+          </p> -->
+        
+
+      
+
+      </div>
+      <div id="CollectComments">
+
+      </div>
+     
+          <div id="hidden_title_comment" style="display:none">
+            What if every Olympic sport was photographed like beach volleyball?
+          </div>
+          <div id="hidden_sa_comment" style="display:none">
+            Getty Images is gross.
+          </div>
+          <script language="javascript" type="text/javascript">
+            function PostUsingFacebook()
+            {
+            var comment_text=$("#Comment_txt").attr("value");
+            var doc_loc = "http://www.metronews.ca/newyork/sports/article/1148979--what-if-every-olympic-sport-was-photographed-like-beach-volleyball";
+            fb_graph_startsession(doc_loc,comment_text);
+            }
+
+            function PostUsingFacebook1()
+            {
+            var comment_text=$("#Comment_txt").attr("value");
+            FB.Connect.requireSession(function() {
+            FB.Facebook.apiClient.users_hasAppPermission('publish_stream', function(result) {
+            var attachm = null;
+            var doc_loc = document.location + "";
+            var title = $("#hidden_title_comment").text();
+            var shortabstract =$("#hidden_sa_comment").text();
+            var image_path="/images/18/75/8c7ee63746b6ab964351303f56fb.jpg"
+            var mediaserver="http://media.metronews.topscms.com";
+            if(image_path == "")
+            {
+            attachm = {name : title, href : doc_loc, description : shortabstract}
+            }
+            else
+            {
+            attachm = {
+            name : title,
+            href : doc_loc,
+            description : shortabstract,
+            media : [ {"type" : "image", "src" : mediaserver+image_path, "href" : doc_loc}]
+            }
+            }
+            FB.Connect.streamPublish(comment_text, attachm, null, 0, "Post this to your facebook profile?", function(){LocalPost();}, true);
+
+            });
+            });
+            }
+            function LocalPost()
+            {
+            var orx = Math.random() * 10000000000000000;
+            var uid= readCookie(GetKey("www.metro.us")+"_user");
+            if(uid!=""){
+            $.post("/Toplets/UserratingComments2/fbcommentonly.aspx?aid=1148979&rand="+orx+"&user="+uid,{"CommentText":$("#Comment_txt").attr("value")},function(data){
+            if(data.indexOf("added")>-1){document.location=document.location+"";createCookie('1148979','1',0.02);}else{alert("Could not add.");}
+            });
+            }
+            }
+            function LocalPostV2()
+            {
+            FB.api('/me', function(response) {
+            var orx = Math.random() * 10000000000000000;
+            var uid=response.id;
+            if(uid!=null){
+            $.post("/Toplets/UserratingComments2/fbcommentonly.aspx?aid=1148979&rand="+orx+"&user="+uid,{"CommentText":$("#Comment_txt").attr("value")},function(data){
+            if(data.indexOf("added")>-1){document.location=document.location+"";createCookie('1148979','1',0.02);}else{
+            if(data.indexOf("inapp")>-1){
+            alert('Your comment contans terms we do not allow.Please re-word your comment');
+            }else{
+            alert("Could not add.");
+            }
+
+
+
+            }
+            });
+            }
+            });
+            }
+          </script>
+        
+      <script language="javascript" type="text/javascript" defer="defer">
+        GetCommentStreamV2(1,'1148979');
+      </script>
+                    
+            
+        
+        
+        
+         <pre id="Pop_3" style="display:none;">
+        <input id="st1" type="hidden" value="<iframe src='/toplets/UserRatingComments2/AnonymousOffensive.aspx?assetId=" />
+        <input id="st2" type="hidden" value="1148979&commentid=" />
+        <input id="st3" type="hidden" value="' width='270px' scrolling='no' height='300px' frameborder='0' ></iframe>" />  
+        </pre>
+        
+        
+        
+        
+
+     
+        <!--Most Shared Count:<result>236</result>-->
+        
+        
+       </div> 
+        
+     </div>
+     
+    </div>
+    
+           
+
+
+
+
+
+<!-- Load the Google AJAX API Loader -->
+
+
+
+
+
+
+
+<script language="javascript" type="text/javascript" defer="defer">
+//ClearStorify();
+setTimeout("ClearStorify()",2000);
+function ClearStorify(){
+$(".sfywdgt_StorifyWidget").css("clear","right");
+}
+</script>
+
+    <script language="javascript" type="text/javascript">
+      try{
+      FB.Event.subscribe('edge.create',function(targetUrl){
+      _gaq.push(['_trackSocial','facebook','like','1148979']);
+      });
+      }catch(err){ }
+      try{
+      FB.Event.subscribe('message.send',function(targetUrl){
+      _gaq.push(['_trackSocial','facebook','send','1148979']);
+      });
+      }catch(err){ }
+      try{
+      twttr.events.bind('tweet',function(event){
+      _gaq.push(['_trackSocial','twitter','tweet','1148979']);
+      });
+      }catch(err){ }
+    </script>
+             
+
+
+               </div>
+               
+                  
+                  
+               
+              <div id="wrapperRightColumn">
+                <!-- LOCAL SEARCH-->
+               
+                
+                <!-- FINDER -->  
+                
+                
+                <!-- BIGBOX SECTION-->
+                 
+                  <div style=" width:299px; height:60px; float:right;">
+                
+        <div class="socialMediaButtonsBlock">  
+            <div class="socialMediaButtonsBlockSeparator" style="width: 20px;"></div>                        
+            <div class="socialMediaButtonsBlockButton">
+                <a target="_blank" href="http://www.facebook.com/pages/Metro-New-York/113278138726964"><img src="http://static.metronews.topscms.com/images/btnFacebook.png" alt="Facebook" /></a>
+            </div>    
+            <div class="socialMediaButtonsBlockSeparator" style="width: 22px;"></div>                                       
+            <div class="socialMediaButtonsBlockButton">                
+                <a target="_blank" href="http://twitter.com/metronewyork"><img src="http://static.metronews.topscms.com/images/btnTwitter.png" alt="Twitter" /></a>
+            </div>                
+            <div class="socialMediaButtonsBlockSeparator" style="width: 22px;"></div>                        
+            <div class="socialMediaButtonsBlockButton">
+                <a href="http://www.stumbleupon.com/stumbler/MetroUS/"><img src="/images/btnStumbleupon.png" alt="Stumble upon" /></a>
+            </div>            
+            <div class="socialMediaButtonsBlockSeparator" style="width: 22px;"></div>                        
+            <div class="socialMediaButtonsBlockButton">
+                <a href="/newyork/rsslist"><img src="http://static.metronews.topscms.com/images/btnRSS.png" alt="RSS" /></a>
+            </div>  
+            <div class="socialMediaButtonsBlockSeparator" style="width: 12px;"></div>                        
+            <!--
+            <div class="socialMediaButtonsBlockButton">
+                <a href="/newyork/mobile"><img src="http://static.metronews.topscms.com/images/btnMobile.png" alt="Mobile" /></a>
+            </div>            
+            -->
+            <div class="clear"></div>
+        </div>
+    
+                </div>
+                  
+                  
+                  
+                  
+                   
+                  
+                  
+                  
+                                
+                <div style=" width:300px;  float:right;">
+                
+                      
+                      
+                      
+                      
+            <script type="text/javascript" src="http://eas21.emediate.eu/eas?cu=7011;cre=mu;js=y;target=_blank"></script><noscript><a target="_blank" href="http://eas21.emediate.eu/eas?cu=7011;ty=ct"><img src="http://eas21.emediate.eu/eas?cu=7011;cre=img" border="0" alt=" " width="300" height="250"/></a></noscript><!--newyork_ros_300x250_middle-->
+
+        
+                </div> 
+                 
+                
+                
+                
+                
+                
+                
+       
+        
+                <!-- Home Vedio Player -->
+                 
+             
+             
+                                  
+    
+        
+        <div style=" float: left;">
+
+
+ 
+
+<br />
+<div>
+          
+        <div id="Most_Popular_Ajax" style="height:465px; width:300px; display:block; overflow:hidden;">
+     
+     </div>
+                </div>
+       
+     
+     
+         
+    
+
+        </div>
+    
+    
+
+
+
+
+    
+
+
+
+
+    
+    
+                  <div style="clear:both; height:10px;"></div>
+    
+    
+    
+    
+    
+   
+    
+
+
+
+
+
+   
+   
+    
+    
+    
+ 
+
+    
+    
+    
+   
+   
+    
+    
+        <table width="100%" cellpadding="0" cellspacing="0" style="color:#b5b5b5;  font-family:Verdana; font-size:10px; text-align:center;border-top-style:solid; border-top-color:#efefef; border-top-width:1px;border-bottom-style:solid; border-bottom-color:#efefef; border-bottom-width:1px;">
+    <tr>
+    <td>
+    F E A T U R E D &nbsp; S P O N S O R S
+    </td>
+    </tr>
+    </table>
+     <div style="display:none;"></div>
+    
+        
+        
+            <script type="text/javascript" src="http://eas21.emediate.eu/eas?cu=;cre=mu;js=y;target=_blank"></script><noscript><a target="_blank" href="http://eas21.emediate.eu/eas?cu=;ty=ct"><img src="http://eas21.emediate.eu/eas?cu=;cre=img" border="0" alt=" " width="300" height="60"/></a></noscript><!--newyork_ros_300x60_1-->
+
+        
+    
+        
+        
+            <script type="text/javascript" src="http://eas21.emediate.eu/eas?cu=;cre=mu;js=y;target=_blank"></script><noscript><a target="_blank" href="http://eas21.emediate.eu/eas?cu=;ty=ct"><img src="http://eas21.emediate.eu/eas?cu=;cre=img" border="0" alt=" " width="300" height="60"/></a></noscript><!--newyork_ros_300x60_2-->
+
+        
+    
+        
+        
+            <script type="text/javascript" src="http://eas21.emediate.eu/eas?cu=7016;cre=mu;js=y;target=_blank"></script><noscript><a target="_blank" href="http://eas21.emediate.eu/eas?cu=7016;ty=ct"><img src="http://eas21.emediate.eu/eas?cu=7016;cre=img" border="0" alt=" " width="300" height="60"/></a></noscript><!--newyork_ros_300x60_3-->
+
+        
+    
+        
+        
+            <script type="text/javascript" src="http://eas21.emediate.eu/eas?cu=7017;cre=mu;js=y;target=_blank"></script><noscript><a target="_blank" href="http://eas21.emediate.eu/eas?cu=7017;ty=ct"><img src="http://eas21.emediate.eu/eas?cu=7017;cre=img" border="0" alt=" " width="300" height="60"/></a></noscript><!--newyork_ros_300x60_4-->
+
+        
+    
+        
+        
+            <script type="text/javascript" src="http://eas21.emediate.eu/eas?cu=7018;cre=mu;js=y;target=_blank"></script><noscript><a target="_blank" href="http://eas21.emediate.eu/eas?cu=7018;ty=ct"><img src="http://eas21.emediate.eu/eas?cu=7018;cre=img" border="0" alt=" " width="300" height="60"/></a></noscript><!--newyork_ros_300x60_5-->
+
+        
+    
+    
+    
+    
+      <br />
+      
+ 
+    
+      
+      
+        
+            
+           
+            
+           
+            
+          
+      
+       
+            
+        
+     
+      
+      
+      
+<div style="clear:both; height:10px;"></div>
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+    
+    
+              <!-- Most Read, Most Emailed, Most Commented -->
+                       
+                          <!--Old Code Start
+                          
+                          Old Code ENd -->
+                          
+                    
+                       
+ 
+           
+           
+                                 
+                <!-- HOME AD BUTTON -->
+                     
+                
+                <div class="rightSideRelated" style="width:300px;height:600px;">
+                
+                
+                
+            <script type="text/javascript" src="http://eas21.emediate.eu/eas?cu=7013;cre=mu;js=y;target=_blank"></script><noscript><a target="_blank" href="http://eas21.emediate.eu/eas?cu=7013;ty=ct"><img src="http://eas21.emediate.eu/eas?cu=7013;cre=img" border="0" alt=" " width="160" height="600"/></a></noscript><!--newyork_ros_160x600_-->
+
+        
+                </div>
+                
+                
+                
+                <div style="display:block;color:#ffffff;" >
+                X
+                </div>
+                <div id="fb_like_box_usa" style="display:block;padding-top:10px;width:299px;overflow:hidden;">
+
+                </div>
+                <script language="javascript" type="text/javascript" defer="defer">
+                $("#fb_like_box_usa").html('<iframe src="http://www.facebook.com/plugins/likebox.php?href=http%3a%2f%2fwww.facebook.com%2fMetroNewYork&amp;width=300&amp;colorscheme=light&amp;show_faces=true&amp;stream=false&amp;header=false&amp;height=255" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:300px; height:270px;" allowTransparency="true"></iframe>');
+                </script>
+
+                
+                
+  
+                 
+                <!-- Poll Request -->
+                
+                  
+              </div>
+              
+                  
+                  
+ 
+    <!--Footer-->
+              
+<div class="clear"></div>
+
+
+              <div id="wrapperFooterNew" style="height:151px;">
+                  
+                  
+            <div class="column">
+                <div>
+                <strong>METRO.US:</strong>
+                <ul>
+
+                    
+                            <li>
+                                
+                                        <a href="/newyork/aboutus">
+                                    
+                                About Us</a>
+                            </li>
+                        
+                            <li>
+                                
+                                        <a href="/newyork/advertise">
+                                    
+                                Advertise</a>
+                            </li>
+                        
+                            <li>
+                                
+                                        <a href="/newyork/contactus">
+                                    
+                                Contact Us</a>
+                            </li>
+                        
+                            <li>
+                                
+                                        <a href="http://tbe.taleo.net/NA6/ats/careers/jobSearch.jsp?org=METRO&cws=4" target="_blank">
+                                    
+                                Jobs</a>
+                            </li>
+                        
+                            <li>
+                                
+                                        <a href="https://www.metropolitanpanel.us/Portal/default.aspx" target="_blank">
+                                    
+                                Metropolitan Panel</a>
+                            </li>
+                        
+                </ul>                               
+                </div>                
+                
+                        <div style="padding-top:10px; clear:both;">
+                            <a href="http://topscms.com/" target="_blank"><img src="/images/tops_logo.png" alt="" /></a>
+                        </div>
+                    
+            </div>
+        
+                  
+            <div class="column">
+                <strong>READ THE PRINT<br/> EDITION ONLINE:</strong>
+                <ul>
+
+                    
+
+                            
+                            <li>
+                                <a href="http://www.readmetro.com/show/en/NewYork/20121106/2/1/" target="_blank">New York</a>
+                            </li>
+                          
+                        
+                        
+
+                        
+
+                            
+                            <li>
+                                <a href="http://www.readmetro.com/show/en/Boston/20121106/2/1/" target="_blank">Boston</a>
+                            </li>
+                          
+                        
+                        
+
+                        
+
+                            
+                            <li>
+                                <a href="http://www.readmetro.com/show/en/Philadelphia/20121106/2/1/" target="_blank">Philadelphia</a>
+                            </li>
+                          
+                        
+                        
+                </ul>
+            </div>
+        
+                  <div class="column">
+                  <strong>CONNECT</strong>
+                  <ul>                 
+                  <li><a href="http://www.facebook.com/pages/Metro-New-York/113278138726964" target="_blank">Facebook</a></li>
+                  <li><a href="http://twitter.com/metronewyork" target="_blank">Twitter</a></li>
+                  <li><a href="http://www.stumbleupon.com/stumbler/MetroUS/">stumbleupon</a></li>
+                  <li><a href="/newyork/rsslist">RSS</a></li>
+                  </ul>
+                  </div>
+                  
+                  
+                  
+            <div class="column">
+                <div>
+                <strong>INFO</strong>
+                <ul>
+
+                    
+                            <li>
+                                
+                                        <a href="/newyork/terms">
+                                    
+                                Terms and Conditions</a>
+                            </li>
+                        
+                            <li>
+                                
+                                        <a href="/newyork/policy">
+                                    
+                                Privacy Code</a>
+                            </li>
+                        
+                            <li>
+                                
+                                        <a href="/newyork/commentingguidelines">
+                                    
+                                Commenting Guidelines</a>
+                            </li>
+                        
+                            <li>
+                                
+                                        <a href="/newyork/sitemap">
+                                    
+                                Site Map</a>
+                            </li>
+                        
+                </ul>                               
+                </div>                
+                
+            </div>
+        
+                  <!--
+                   <strong>LOCAL GUIDES</strong>       
+                   <ul><li>
+                   <select size="1" style="width:100px;margin-top:1px; background-color:#e5ebe9; color:#4A4D4C; text-transform:none; font-weight:normal; font-family:Trebuchet MS; font-size:10px;" onchange="GetLocalGuidesLink(this.options[this.selectedIndex].value)">
+                   <option value="">Local Guides</option>
+                   <option value="http://torontoguides.metronews.ca/" title="All Local Guides" >All Local Guides</option>
+<option value="http://torontoguides.metronews.ca/Ajax_ON-cAjax+ON.html" title="Ajax" >Ajax</option>
+<option value="http://torontoguides.metronews.ca/Bolton_ON-cBolton+ON.html" title="Bolton" >Bolton</option>
+<option value="http://torontoguides.metronews.ca/Brampton_ON-cBrampton+ON.html" title="Brampton" >Brampton</option>
+<option value="http://torontoguides.metronews.ca/Markham_ON-cMarkham+ON.html" title="Markham" >Markham</option>
+<option value="http://torontoguides.metronews.ca/Mississauga_ON-cMississauga+ON.html" title="Mississauga" >Mississauga</option>
+<option value="http://torontoguides.metronews.ca/Newmarket_ON-cNewmarket+ON.html" title="Newmarket" >Newmarket</option>
+<option value="http://torontoguides.metronews.ca/Oakville_ON-cOakville+ON.html" title="Oakville" >Oakville</option>
+<option value="http://torontoguides.metronews.ca/Oshawa_ON-cOshawa+ON.html" title="Oshawa" >Oshawa</option>
+<option value="http://torontoguides.metronews.ca/Pickering_ON-cPickering+ON.html" title="Pickering" >Pickering</option>
+<option value="http://torontoguides.metronews.ca/Richmond_Hill_ON-cRichmond+Hill+ON.html" title="Richmond Hill" >Richmond Hill</option>
+<option value="http://torontoguides.metronews.ca/Toronto_ON-cToronto+ON.html" title="Toronto" >Toronto</option>
+<option value="http://torontoguides.metronews.ca/Vaughan_ON-cVaughan+ON.html" title="Vaughan" >Vaughan</option>
+<option value="http://torontoguides.metronews.ca/Whitby_ON-cWhitby+ON.html" title="Whitby" >Whitby</option>
+<option value="http://torontoguides.metronews.ca/Business_Services_Toronto_ON-t4159_Toronto+ON.html" title="Business Services Toronto">Business Services Toronto</option>
+<option value="http://torontoguides.metronews.ca/Computing__Technology_Toronto_ON-t4160_Toronto+ON.html" title="Computing & Technology Toronto">Computing & Technology Toronto</option>
+<option value="http://torontoguides.metronews.ca/Finance_Toronto_ON-t4185_Toronto+ON.html" title="Finance Toronto">Finance Toronto</option>
+<option value="http://torontoguides.metronews.ca/Health_Toronto_ON-t4161_Toronto+ON.html" title="Health Toronto">Health Toronto</option>
+<option value="http://torontoguides.metronews.ca/Internet_Toronto_ON-t4162_Toronto+ON.html" title="Internet Toronto">Internet Toronto</option>
+                   </select>
+                   </li></ul>
+                   -->
+              </div>
+              <div id="copyright">
+                  Copyright 2001-2012, Free Daily News Group Inc.
+                  </div>
+
+
+      
+
+              <!--Footer-->
+          
+          <div style=" width:300px;">
+           
+          </div>
+             <script language="javascript" type="text/javascript"  >
+  //  GetWeatherRequest("newyork");
+ 
+    $.get("/weather/?pcity=New York&v=v2", function(data) { 
+     if("false"=="false")
+  {
+    $("#Weather_box").html($("#Weather_info", data).html()); 
+    }
+     if($("#Most_Popular_Ajax").length>0){
+          $("#Most_Popular_Ajax").html($("span.cls_most_pop_pre_fetched:first", data).html());
+          }
+          });
+    
+</script>  
+          
+           
+            
+       
+              
+      
+          <script language="javascript" type="text/javascript" defer="defer">
+            //<![CDATA[
+       var ifrs=new Array();
+       ifrs=document.getElementsByTagName('iframe');
+       for(var i=0;i<ifrs.length;i++)
+       {
+        if(ifrs[i].src.indexOf("/toplets/mostpopular/homepage.aspx?") > 0 || ifrs[i].src.indexOf("/scroller?StaticID=") > 0 || ifrs[i].src.indexOf("/toplets/glider/") > 0 ||  ifrs[i].src.indexOf("/fanpage") > 0)
+        {
+         ifrs[i].src=ifrs[i].src;
+        }
+       }
+       if($("#take_over_links_adtech").length==1)
+       {
+       var takeoverlinkshtml=$("#take_over_links_adtech").html();
+       $("#wrapper").append(takeoverlinkshtml);
+       }
+       //]]>
+          </script>
+        
+    
+          
+
+
+        
+        <span> 
+        <!--   url=http://www.metro.us/private/article_new.aspx?assetId=1148979&virtualPath=/newyork/sports/article      --> 
+          </span>
+          
+       <script type="text/javascript">
+
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+
+</script>
+
+<script type="text/javascript">
+
+try {
+
+var pageTracker = _gat._getTracker("UA-307495-10");
+pageTracker._setDomainName("none");
+pageTracker._setAllowLinker(true);
+pageTracker._trackPageview();
+pageTracker._trackPageLoadTime();
+} catch(err) {}</script>
+
+        
+        
+        
+        <div style="background-color:Gray">
+        
+   </div>
+   
+   
+   
+   
+   
+   
+   
+   
+      
+    
+    
+ 
+</body>
+</html><img width='0' height='0' border='0' src='/tops-counter?uid=1148979&counter=607351'/>

@@ -1,0 +1,2729 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>HijackThis Tutorial - How to use HijackThis to remove Browser Hijackers & Spyware</title>
+<meta name="Description" content="HijackThis is a utility that produces a listing of certain settings found in your computer. HijackThis will scan your registry and various other files for entries that are similar to what a Spyware or Hijacker program would leave behind. Interpreting these results can be tricky as there are many legitimate programs that are installed in your operating system in a similar manner that Hijackers get installed. Therefore you must use extreme caution when having HijackThis fix any problems. I can not stress how important it is to follow the above warning." />
+<meta name="Abstract" content="HijackThis is a utility that produces a listing of certain settings found in your computer. HijackThis will scan your registry and various other files for entries that are similar to what a Spyware or Hijacker program would leave behind. Interpreting these results can be tricky as there are many legitimate programs that are installed in your operating system in a similar manner that Hijackers get installed. Therefore you must use extreme caution when having HijackThis fix any problems. I can not stress how important it is to follow the above warning." />
+<meta name="Keywords" content="tutorials, guides, how-to,virus removal, malware removal, computer help, technical support" />
+<link rel="canonical" href="http://www.bleepingcomputer.com/tutorials/how-to-use-hijackthis/" />
+<link rel="stylesheet" type="text/css" href="http://www.bleepstatic.com/css/new-bc.css">
+
+<style type='text/css' media='all'>@import 'http://www.bleepstatic.com/css/tutorials.css';</style>
+<meta name="Owner" content="Lawrence Abrams/BleepingComputer.com" />
+<link rel="shortcut icon" href="http://www.bleepstatic.com/favicon/favicon.ico" />
+<meta http-equiv="Pragma" content="no-cache" />
+<LINK REL="alternate" TITLE="Bleeping Computer Tutorials" HREF="http://www.bleepingcomputer.com/tutorials/feed/" TYPE="application/rss+xml">
+<META NAME="ROBOTS" CONTENT="NOODP" />
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-91740-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+<link href="https://plus.google.com/112790257026281352252" rel="publisher" />
+</head>                 
+<body>  
+ 
+<div id="bcwrapper">
+
+      <div id="nav-wrap">
+      <div id="logo-text">bleepingcomputer.com</div>
+        <ul id="nav">
+             <li><a href="/" title="Tech Support and Virus Removal" ><span>Home</span></a></li>
+             <li><a href="http://www.bleepingcomputer.com/forums/" title="Tech Support and Virus Removal Forums"><span>Forums</span></a></li>
+             <li><a href="http://www.bleepingcomputer.com/download/" title="Computer Downloads"><span>Downloads</span></a></li>
+             <li><a href="http://www.bleepingcomputer.com/tutorials/" title="Computer Tutorials" class="active"><span>Tutorials</span></a></li>
+             <li><a href="http://www.bleepingcomputer.com/startups/" title="Windows Startup Programs Database" ><span>Startup List</span></a></li>
+             <li><a href="http://www.bleepingcomputer.com/virus-removal/" title="Virus, Spyware, and Malware Removal Guides" ><span>Virus Removal</span></a></li>
+             <li><a href="http://www.bleepingcomputer.com/uninstall/" title="Uninstall Database" ><span>Uninstall List</span></a></li>
+             <li><a href="http://www.bleepingcomputer.com/filedb/" title="File Database" ><span>File Database</span></a></li>
+             <li><a href="http://www.bleepingcomputer.com/glossary/" title="Computer Glossary" ><span>Glossary</span></a></li>
+        </ul>
+      </div>
+      
+      <div id="head-meta">
+        <div id="meta-top">
+                    <div class="bcnav_left">
+            Welcome Guest (<a href='http://www.bleepingcomputer.com/forums/index.php?app=core&amp;module=global&amp;section=login&amp;return=http://www.bleepingcomputer.com'>Log In</a> | <a href='http://www.bleepingcomputer.com/forums/index.php?app=core&amp;module=global&amp;section=register'>Create Account</a>)
+          </div>
+             
+          <div class="bcnav_right">
+            New Member? <a href="http://www.bleepingcomputer.com/forums/index.php?app=core&amp;module=global&amp;section=register">Join for free.</a>
+          </div>
+
+	</div>
+        <div id="submenu">
+          <ul>
+            <li><a href="http://www.bleepingcomputer.com/welcome-guide/">Welcome Guide</a></li>
+            <li><a href="http://www.bleepingcomputer.com/chat/">Chat</a></li>
+            <li><a href="http://www.bleepingcomputer.com/forums/index.php?app=core&amp;module=help">Help</a></li>
+            <li><a href="http://www.bleepingcomputer.com/forums/index.php?app=core&amp;module=search&amp;search_in=forums">Search</a></li>
+            <li><a href="http://www.bleepingcomputer.com/rss-feeds/">RSS</a></li>
+          </ul>
+          &nbsp;
+        </div>
+      </div>
+
+  <div class="ban_cont">
+  <div id="top_ban">
+   <center>
+<script type="text/javascript"> 
+//<![CDATA[
+ord = window.ord || Math.floor(Math.random()*1E16);
+document.write('<script type="text/javascript" src="http://ad.doubleclick.net/adj/ns.bleepingcomputer/tutorials;ppos=atf;kw=;tile=1;sz=970x90,728x90;ord=' + ord + '?"><\/script>');
+//]]>
+</script>
+<noscript><a href="http://ad.doubleclick.net/jump/ns.bleepingcomputer/tutorials;ppos=atf;kw=;tile=1;sz=970x90,728x90;ord=123456789?" target="_blank" ><img src="http://ad.doubleclick.net/ad/ns.bleepingcomputer/tutorials;ppos=atf;kw=;tile=1;sz=970x90,728x90;ord=123456789?" border="0" alt="" /></a></noscript>
+</center>
+  </div>
+ </div>
+<div id='breadcrumb' align='left'>
+ <a href='/'>Home</a> > <a href="http://www.bleepingcomputer.com/tutorials/">Computer Tutorials</a> > <a href="http://www.bleepingcomputer.com/tutorials/security/">Security Tutorials</a> > HijackThis Tutorial - How to use HijackThis to remove Browser Hijackers & Spyware
+</div>
+<table width="100%"  border="0" cellpadding="0" cellspacing="0" align='center'>
+	<tr>
+	<!-- Begin Middle Column -->
+
+	<td valign="top" width="" style='min-width: 600px'>
+	 <div class='tutorial_wrap'>
+ 
+<script type="text/javascript">
+function printDiv() {
+ var divToPrint = document.getElementById('tute_cont');
+ newWin= window.open();
+ newWin.document.write(divToPrint.innerHTML);
+ newWin.document.close();
+ newWin.focus();
+ newWin.print();
+ newWin.close();
+}
+
+</script>
+
+ <div id="tute2">
+  <div id="tute_head">
+   <div id="tute_info">
+    <h2>HijackThis Tutorial - How to use HijackThis to remove Browser Hijackers & Spyware</h2>
+    By <a rel='author' href='http://www.bleepingcomputer.com/author/lawrence-abrams/'>Lawrence Abrams</a> on March 25, 2004 | Last Updated: June 12, 2012 | Read 1,998,880 times.
+   </div>
+   <div id="tute_share">
+    
+<ul id="share">
+ <li>
+  <g:plusone size="medium"></g:plusone>
+<script type="text/javascript">
+  (function() {
+    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+    po.src = 'https://apis.google.com/js/plusone.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+  })();
+</script>
+ </li>
+ <li>
+<iframe src="//www.facebook.com/plugins/like.php?href=http%3A%2F%2Fwww.bleepingcomputer.com%2Ftutorials%2Fhow-to-use-hijackthis%2F&amp;send=false&amp;layout=button_count&amp;width=100&amp;show_faces=false&amp;action=like&amp;colorscheme=light&amp;font&amp;height=21&amp;appId=138522026175591" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:100px; height:21px;" allowTransparency="true"></iframe>
+ </li>
+ <li>
+  <script type="text/javascript" src="http://platform.linkedin.com/in.js"></script><script type="in/share" data-counter="right"></script>
+ </li>
+ <li>
+  <a href="http://twitter.com/share" class="twitter-share-button" data-count="horizontal" data-via="BleepinComputer">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+ </li>
+ <li style='width: 20px;'><a href="JavaScript:printDiv();"><img src="http://www.bleepstatic.com/images/site/icons/print.png" alt="Print this page" title="Print this page"></a></li>
+</ul>
+
+   </div>
+  </div>
+  <div id="tute_cont">
+   
+   <p>
+	<a href="http://www.bleepingcomputer.com/tutorials/como-usar-hijackthis/">This tutorial is also available in Spanish.</a><br />
+	<a href="http://www.bleepingcomputer.com/tutorials/wie-hijackthis-genutzt-wird-um/">This tutorial is also available in German.</a><br />
+	<a href="http://www.bleepingcomputer.com/tutorials/hoe-gebruik-je-hijackthis/">This tutorial is also available in Dutch.</a><br />
+	<a href="http://www.bleepingcomputer.com/tutorials/comment-utiliser-hijackthis/">Ce tutoriel est aussi traduit en fran&ccedil;ais ici.</a></p>
+<p>
+	<strong><u>Table of Contents</u></strong><!--GoogleAd--></p>
+<ol>
+	<li>
+		<a href="#warning" rel="nofollow">Warning</a></li>
+	<li>
+		<a href="#intro" rel="nofollow">Introduction</a></li>
+	<li>
+		<a href="#HowToUse" rel="nofollow">How to use HijackThis</a></li>
+	<li>
+		<a href="#HTRestore" rel="nofollow">How to restore items mistakenly deleted</a></li>
+	<li>
+		<a href="#HTStartupList" rel="nofollow">How to Generate a Startup Listing</a></li>
+	<li>
+		<a href="#HTProcessManager" rel="nofollow">How to use the Process Manager</a></li>
+	<li>
+		<a href="#HTHostsManager" rel="nofollow">How to use the Hosts File Manager</a></li>
+	<li>
+		<a href="#delreb" rel="nofollow">How to use the Delete on Reboot tool</a></li>
+	<li>
+		<a href="#adsspy" rel="nofollow">How to use ADS Spy</a></li>
+	<li>
+		<a href="#uniman" rel="nofollow">How to use the Uninstall Manager</a></li>
+	<li>
+		<a href="#InterpretIntro" rel="nofollow">How to interpret the scan listings</a></li>
+	<li>
+		<a href="#RDiag" rel="nofollow">R0, R1, R2, R3 Sections</a></li>
+	<li>
+		<a href="#FDiag" rel="nofollow">F0, F1, F2,F3 Sections</a></li>
+	<li>
+		<a href="#NDiag" rel="nofollow">N1, N2, N3, N4 Sections</a></li>
+	<li>
+		<a href="#O1Diag" rel="nofollow">O1 Section</a></li>
+	<li>
+		<a href="#O2Diag" rel="nofollow">O2 Section</a></li>
+	<li>
+		<a href="#O3Diag" rel="nofollow">O3 Section</a></li>
+	<li>
+		<a href="#O4Diag" rel="nofollow">O4 Section</a></li>
+	<li>
+		<a href="#O5Diag" rel="nofollow">O5 Section</a></li>
+	<li>
+		<a href="#O6Diag" rel="nofollow">O6 Section</a></li>
+	<li>
+		<a href="#O7Diag" rel="nofollow">O7 Section</a></li>
+	<li>
+		<a href="#O8Diag" rel="nofollow">O8 Section</a></li>
+	<li>
+		<a href="#O9Diag" rel="nofollow">O9 Section</a></li>
+	<li>
+		<a href="#O10Diag" rel="nofollow">O10 Section</a></li>
+	<li>
+		<a href="#O11Diag" rel="nofollow">O11 Section</a></li>
+	<li>
+		<a href="#O12Diag" rel="nofollow">O12 Section</a></li>
+	<li>
+		<a href="#O13Diag" rel="nofollow">O13 Section</a></li>
+	<li>
+		<a href="#O14Diag" rel="nofollow">O14 Section</a></li>
+	<li>
+		<a href="#O15Diag" rel="nofollow">O15 Section</a></li>
+	<li>
+		<a href="#O16Diag" rel="nofollow">O16 Section</a></li>
+	<li>
+		<a href="#O17Diag" rel="nofollow">O17 Section</a></li>
+	<li>
+		<a href="#O18Diag" rel="nofollow">O18 Section</a></li>
+	<li>
+		<a href="#O19Diag" rel="nofollow">O19 Section</a></li>
+	<li>
+		<a href="#O20Diag" rel="nofollow">O20 Section</a></li>
+	<li>
+		<a href="#O21Diag" rel="nofollow">O21 Section</a></li>
+	<li>
+		<a href="#O22Diag" rel="nofollow">O22 Section</a></li>
+	<li>
+		<a href="#O23Diag" rel="nofollow">O23 Section</a></li>
+	<li>
+		<a href="#O24Diag" rel="nofollow">O24 Section</a></li>
+	<li>
+		<a href="#conc" rel="nofollow">Conclusion</a></li>
+</ol>
+<p>
+	<strong><font color="#000000"><u>Warning</u></font></strong></p>
+<p>
+	<br />
+	<font color="#000000"><strong>HijackThis should only be used if your browser or computer is still having problems after running Spybot or another Spyware/Hijacker remover. HijackThis is an advanced tool, and therefore requires advanced knowledge about Windows and operating systems in general. If you delete items that it shows, without knowing what they are, it can lead to other problems such as your Internet no longer working or problems with running Windows itself. You should also attempt to clean the Spyware/Hijacker/Trojan with all other methods before using HijackThis. If you allow HijackThis to remove entries before another removal tool scans your computer, the files from the Hijacker/Spyware will still be left on your computer and future removal tools will not be able to find them.</strong></font><strong> </strong></p>
+<p>
+	<font color="#FF0000"><strong>If you do not have advanced knowledge about computers you should NOT fix entries using HijackThis without consulting an expert on using this program. If you have already run Spybot - S&amp;D and Ad-Aware and are still having problems, then please continue with this tutorial and post a HijackThis log in our <a href="http://www.bleepingcomputer.com/forums/forum22.html">HijackThis forum</a>, including details about your problem, and we will advise you on what to fix.</strong></font></p>
+<p>
+	<br />
+	<strong><u><a name="Intro" rel="nofollow"></a>Introduction</u></strong></p>
+<p>
+	<br />
+	HijackThis is a utility that produces a listing of certain settings found in your computer. HijackThis will scan your registry and various other files for entries that are similar to what a Spyware or Hijacker program would leave behind. Interpreting these results can be tricky as there are many legitimate programs that are installed in your operating system in a similar manner that Hijackers get installed. Therefore you must use extreme caution when having HijackThis fix any problems. I can not stress how important it is to follow the above warning.</p>
+<p>
+	There are two prevalent tutorials about HijackThis on the Internet currently, but neither of them explain what each of the sections actually mean in a way that a layman can understand. This tutorial, in addition, to showing how to use HijackThis, will also go into detail about each of the sections and what they actually mean. There is no reason why you should not understand what it is you are fixing when people examine your logs and tell you what to do.</p>
+<p>
+	If you would like to first read a tutorial on how to use Spybot, you can click here: <a href="http://www.bleepingcomputer.com/tutorials/using-spybot-to-remove-spyware/">How to use Spybot - Search and Destroy Tutorial</a></p>
+<p>
+	With that said, lets move on to the tutorial on how to use it. If you want to see normal sizes of the screen shots you can click on them. Keep in mind, that a new window will open up when you do so, so if you have pop-up blockers it may stop the image window from opening.</p>
+<p>
+	<br />
+	<strong><u><a name="HowToUse" rel="nofollow"></a>How to use HijackThis</u></strong></p>
+<p>
+	<br />
+	HijackThis can be downloaded as a standalone executable or as an installer. The standalone application allows you to save and run HijackThis.exe from any folder you wish, while the installer will install HijackThis in a specific location and create desktop shortcuts to that executable. When using the standalone version you should not run it from your Temporary Internet Files folder as your backup folder will not be saved after you close the program. In order to avoid the deletion of your backups, please save the executable to a specific folder before running it. We suggest that you use the HijackThis installer as that has become the standard way of using the program and provides a safe location for HijackThis backups.</p>
+<p>
+	The first step is to download HijackThis to your computer in a location that you know where to find it again. HijackThis can be downloaded from the following link:</p>
+<blockquote>
+	<a href="http://www.bleepingcomputer.com/download/hijackthis/">HijackThis Download Link</a></blockquote>
+<p>
+	If you have downloaded the standalone application, then simply double-click on the HijackThis.exe file and then <a href="#run_hijackthis" rel="nofollow">click here</a> to skip to the part where the program has started.</p>
+<p>
+	Otherwise, if you downloaded the installer, navigate to the location where it was saved and double-click on the <strong>HiJackThis.msi</strong> file in order to start the installation of HijackThis. When the install starts, click on the <strong>Install</strong> button to have HijackThis installed into the <strong>C:\Program Files\Trend Micro\HijackThis</strong> folder, create a desktop shortcut that can be used to run the program when you need to, and to automatically launch HijackThis for the first time.</p>
+<p>
+	<a name="run_hijackthis" rel="nofollow"></a>You should now see a screen similar to the figure below:<br />
+	&nbsp;</p>
+<p align="center">
+	<img alt="HijackThis Tutorial and Guide" border="0" src="http://www.bleepstatic.com/tutorials/hijackthis/startup-screen.jpg" /><br />
+	<strong>Figure 1. HijackThis Startup screen when run for the first time</strong></p>
+<p>
+	&nbsp;</p>
+<p>
+	We suggest you put a checkmark in the checkbox labeled <strong>Do not show this windows when I start HijackThis, </strong>designated by the blue arrow above, as most instructions you will given will not account for this screen. After you have put a checkmark in that checkbox, click on the <strong>None of the above, just start the program</strong> button, designated by the red arrow in the figure above. You will then be presented with the main HijackThis screen as seen in Figure 2 below.<br />
+	<br />
+	&nbsp;</p>
+<p align="center">
+	<img alt="HijackThis Tutorial and Guide" border="0" src="http://www.bleepstatic.com/tutorials/hijackthis/hijackthis-start.jpg" /><br />
+	<strong><a id="StartingHT" name="StartingHT" rel="nofollow"></a>Figure 2. Starting Screen of Hijack This</strong></p>
+<p>
+	&nbsp;</p>
+<p>
+	You should first click on the <strong>Config</strong> button, which is designated by the blue arrow in Figure 2, and confirm that your settings match those found in Figure 3 below. The options that should be checked are designated by the red arrow.</p>
+<p>
+	&nbsp;</p>
+<p align="center">
+	<img alt="HijackThis Tutorial and Guide" border="0" src="http://www.bleepstatic.com/tutorials/hijackthis/hijackthis-config.jpg" /><br />
+	<strong><a id="HTConfig" name="HTConfig" rel="nofollow"></a>Figure 3. HijackThis Configuration Options</strong></p>
+<p>
+	&nbsp;</p>
+<p>
+	When you are done setting these options, press the <strong>back</strong> key and continue with the rest of the tutorial.</p>
+<p>
+	To have HijackThis scan your computer for possible Hijackers, click on the <strong>Scan</strong> button designated by the red arrow in Figure 2. You will then be presented with a screen listing all the items found by the program as seen in Figure 4.</p>
+<p>
+	&nbsp;</p>
+<p align="center">
+	<img alt="HijackThis Tutorial and Guide" border="0" src="http://www.bleepstatic.com/tutorials/hijackthis/hijackthis-scan.jpg" /><br />
+	<strong><a id="HTScanResults" name="HTScanResults" rel="nofollow"></a>Figure 4. Scan Results</strong></p>
+<p>
+	&nbsp;</p>
+<p>
+	At this point, you will have a listing of all items found by HijackThis.</p>
+<p>
+	If what you see seems confusing and daunting to you, then click on the <strong>Save Log</strong> button, designated by the red arrow, and save the log to your computer somewhere you will remember later.</p>
+<p>
+	To open up the log and paste it into a forum, like <a href="http://www.bleepingcomputer.com/forums/forum22.html">ours</a>, you should following these steps:</p>
+<ol>
+	<li>
+		Click on <strong>Start</strong> then <strong>Run</strong> and type <strong>Notepad</strong> and press OK. Notepad will now be open on your computer.</li>
+	<li>
+		Click on <strong>File</strong> and <strong>Open</strong>, and navigate to the directory where you saved the Log file.</li>
+	<li>
+		When you see the file, double click on it. The log file should now be opened in your Notepad.</li>
+	<li>
+		Click on <strong>Edit</strong> and then <strong>Select All</strong>. All the text should now be selected.</li>
+	<li>
+		Click on <strong>Edit</strong> and then <strong>Copy</strong>, which will copy all the selected text into your clipboard.</li>
+	<li>
+		Go to the <a href="http://www.bleepingcomputer.com/forums/forum22.html">message forum</a> and create a new message.</li>
+	<li>
+		Title the message: HijackThis Log: Please help Diagnose</li>
+	<li>
+		Right click in the message area where you would normally type your message, and click on the <strong>paste</strong> option. The previously selected text should now be in the message.</li>
+	<li>
+		Press <strong>Submit</strong></li>
+</ol>
+<p>
+	If you would like to see information about any of the objects listed, you can click once on a listing, and then press the &quot;<strong>Info on selected item...</strong>&quot; button. This will bring up a screen similar to Figure 5 below:</p>
+<p>
+	&nbsp;</p>
+<p align="center">
+	<img alt="HijackThis Tutorial and Guide" border="0" src="http://www.bleepstatic.com/tutorials/hijackthis/hijackthis-info.jpg" /><br />
+	<strong><a id="HTObjectInfo" name="HTObjectInfo" rel="nofollow"></a>Figure 5. Object Information</strong></p>
+<p>
+	&nbsp;</p>
+<p>
+	When you are done looking at the information for the various listings, and you feel that you are knowledgeable enough to continue, look through the listings and select the items you would like to remove by placing checkmarks in the checkboxes next to each listing as shown in Figure 6. At the end of the document we have included some basic ways to interpret the information in these log files. By no means is this information extensive enough to cover all decisions, but should help you determine what is legitimate or not.</p>
+<p>
+	&nbsp;</p>
+<p align="center">
+	<img alt="HijackThis Tutorial and Guide" border="0" src="http://www.bleepstatic.com/tutorials/hijackthis/hijackthis-select.jpg" /><br />
+	<strong><a id="HTItemRemove" name="HTItemRemove" rel="nofollow"></a>Figure 6. Select an item to Remove</strong></p>
+<p>
+	&nbsp;</p>
+<p>
+	Once you have selected the items you would like to remove, press the <strong>Fix Checked</strong> button, designated by the blue arrow, in Figure 6. HijackThis will then prompt you to confirm if you would like to remove those items. Press <strong>Yes</strong> or <strong>No</strong> depending on your choice.</p>
+<p>
+	<strong><u><a id="HTRestore" name="HTRestore" rel="nofollow"></a>How to restore items mistakenly deleted</u></strong></p>
+<p>
+	HijackThis comes with a backup and restore procedure in the event that you erroneously remove an entry that is actually legitimate. If you have configured HijackThis as was shown in this tutorial, then you should be able to restore entries that you have previously deleted. If you have had your HijackThis program running from a temporary directory, then the restore procedure will not work.</p>
+<p>
+	If the configuration setting <strong>Make backups before fixing items</strong> is checked, HijackThis will make a backup of any entries that you fix in a directory called <strong>backups </strong>that resides in the same location as Hijackthis.exe.</p>
+<p>
+	If you start HijackThis and click on <strong>Config</strong>, and then the <strong>Backup</strong> button you will be presented with a screen like Figure 7 below. You will have a listing of all the items that you had fixed previously and have the option of restoring them. Once you restore an item that is listed in this screen, upon scanning again with HijackThis, the entries will show up again.</p>
+<p>
+	&nbsp;</p>
+<p align="center">
+	<img alt="HijackThis Tutorial and Guide" border="0" src="http://www.bleepstatic.com/tutorials/hijackthis/hijackthis-backups.jpg" /><br />
+	<strong>Figure 7. Restoring a mistakenly removed entry</strong></p>
+<p>
+	&nbsp;</p>
+<p>
+	Once you are finished restoring those items that were mistakenly fixed, you can close the program.</p>
+<p>
+	<br />
+	<strong><u><a id="HTStartupList" name="HTStartupList" rel="nofollow"></a>How to Generate a Startup Listing</u></strong></p>
+<p>
+	<br />
+	At times when you post your log to a message forum asking for assistance, the people helping may ask you to generate a listing of all the programs that automatically start on your computer. HijackThis has a built in tool that will allow you to do this.</p>
+<p>
+	In order to do this go into the <strong>Config</strong> option when you start HijackThis, which is designated by the blue arrow in Figure 2, and then click on the <strong>Misc Tools</strong> button at the top. You should see a screen similar to Figure 8 below.</p>
+<p>
+	&nbsp;</p>
+<p align="center">
+	<img alt="HijackThis Tutorial and Guide" border="0" src="http://www.bleepstatic.com/tutorials/hijackthis/hijackthis-misc.jpg" /><br />
+	<strong>Figure 8. Generating a StartupList Log.</strong></p>
+<p align="center">
+	&nbsp;</p>
+<p>
+	You will then click on the button labeled <strong>Generate StartupList Log</strong> which is is designated by the red arrow in Figure 8. Once you click that button, the program will automatically open up a notepad filled with the Startup items from your computer. Copy and paste these entries into a message and submit it.</p>
+<p>
+	Hopefully with either your knowledge or help from others you will have cleaned up your computer. If you would like to learn more detailed information about what exactly each section in a scan log means, then continue reading.</p>
+<p>
+	&nbsp;</p>
+<p>
+	<strong><u><a id="HTProcessManager" name="HTProcessManager" rel="nofollow"></a>How to use the Process Manager</u></strong></p>
+<p>
+	HijackThis has a built in process manager that can be used to end processes as well as see what DLLs are loaded in that process. To access the process manager, you should click on the <strong>Config</strong> button and then click on the <strong>Misc Tools</strong> button. You should now see a new screen with one of the buttons being <strong>Open Process Manager</strong>. If you click on that button you will see a new screen similar to Figure 9 below.</p>
+<p>
+	&nbsp;</p>
+<p align="center">
+	<img alt="HijackThis Tutorial and Guide" src="http://www.bleepstatic.com/tutorials/hijackthis/hjt-pm.jpg" /><br />
+	<strong>Figure 9. HijackThis Process Manager</strong></p>
+<p align="center">
+	&nbsp;</p>
+<p>
+	This window will list all open processes running on your machine. You can then click once on a process to select it, and then click on the <strong>Kill Process</strong> button designated by the red arrow in Figure 9 above. This will attempt to end the process running on the computer.</p>
+<p>
+	If you would like to terminate multiple processes at the same time, press and hold down the <strong>control</strong> key on your keyboard. While that key is pressed, click once on each process that you want to be terminated. As long as you hold down the <strong>control</strong> button while selecting the additional processes, you will be able to select multiple processes at one time. When you have selected all the processes you would like to terminate you would then press the <strong>Kill Process </strong>button.</p>
+<p>
+	If you would like to see what DLLs are loaded in a selected process, you can put a checkmark in the checkbox labeled Show DLLs, designated by the blue arrow in the figure above. This will split the process screen into two sections. The first section will list the processes like before, but now when you click on a particular process, the bottom section will list the DLLs loaded in that process.</p>
+<p>
+	To exit the process manager you need to click on the <strong>back</strong> button twice which will place you at the main screen.</p>
+<p>
+	&nbsp;</p>
+<p>
+	<strong><u><a id="HTHostsManager" name="HTHostsManager" rel="nofollow"></a>How to use the Hosts File Manager</u></strong></p>
+<p>
+	HijackThis also has a rudimentary Hosts file manager. With this manager you can view your hosts file and delete lines in the file or toggle lines on or off. To access the Hosts file manager, you should click on the Config button and then click on the Misc Tools button. You should now see a new screen with one of the buttons being Hosts File Manager. If you click on that button you will see a new screen similar to Figure 10 below.</p>
+<p>
+	&nbsp;</p>
+<p align="center">
+	<img alt="HijackThis Hosts File Manager" src="http://www.bleepstatic.com/tutorials/hijackthis/hjt-hfm.jpg" /><br />
+	<strong>Figure 10: Hosts File Manager</strong></p>
+<p>
+	&nbsp;</p>
+<p>
+	This window will list the contents of your HOSTS file. To delete a line in your hosts file you would click on a line like the one designated by the blue arrow in Figure 10 above. This will select that line of text. Then you can either delete the line, by clicking on the Delete line(s) button, or toggle the line on or off, by clicking on the Toggle line(s) button. It is possible to select multiple lines at once using the shift and control keys or dragging your mouse over the lines you would like to interact with.</p>
+<p>
+	If you delete the lines, those lines will be deleted from your HOSTS file. If you toggle the lines, HijackThis will add a # sign in front of the line. This will comment out the line so that it will not be used by Windows. If you are unsure as to what to do, it is always safe to Toggle the line so that a # appears before it.</p>
+<p>
+	To exit the Hosts file manager you need to click on the <strong>back</strong> button twice which will place you at the main screen.</p>
+<p>
+	<br />
+	<strong><u><a id="delreb" name="delreb" rel="nofollow"></a>How to use the Delete on Reboot tool </u></strong></p>
+<p>
+	At times you may find a file that stubbornly refuses to be deleted by conventional means. HijackThis introduced, in version 1.98.2, a method to have Windows delete the file as it boots up, before the file has the chance to load. To do this follow these steps:</p>
+<ol>
+	<li>
+		Start Hijackthis</li>
+	<li>
+		Click on the <strong>Config</strong> button</li>
+	<li>
+		Click on the <strong>Misc Tools</strong> button</li>
+	<li>
+		Click on the button labeled<strong> Delete a file on reboot...</strong></li>
+	<li>
+		A new window will open asking you to select the file that you would like to delete on reboot. Navigate to the file and click on it once, and then click on the <strong>Open</strong> button.</li>
+	<li>
+		You will now be asked if you would like to reboot your computer to delete the file. Click on the <strong>Yes</strong> button if you would like to reboot now, otherwise click on the <strong>No</strong> button to reboot later.</li>
+</ol>
+<p>
+	<br />
+	<br />
+	<strong><u><a id="adsspy" name="adsspy" rel="nofollow"></a>How to use ADS Spy</u></strong></p>
+<p>
+	&nbsp;</p>
+<p>
+	There is a particular infection called Home Search Assistant or CWS_NS3 that will sometimes use a file called an <a href="http://www.bleepingcomputer.com/tutorials/windows-alternate-data-streams/">Alternate Data Stream File</a> to infect your computer. These files can not be seen or deleted using normal methods. ADS Spy was designed to help in removing these types of files. For those who are interested, you can learn more about Alternate Data Streams and the Home Search Assistant by reading the following articles:</p>
+<p>
+	<strong><a href="http://www.bleepingcomputer.com/tutorials/windows-alternate-data-streams/"><font color="#FF0000">Windows Alternate Data Streams</font></a> [Tutorial Link]</strong></p>
+<p>
+	<strong><a href="http://www.bleepingcomputer.com/forums/topic3141.html"><font color="#FF0000">Home Search Assistant Analysis</font></a> [Tutorial Link]</strong></p>
+<p>
+	<br />
+	To use the ADS Spy utility you would start HijackThis and then click on the <strong>Config</strong> button. Then click on the <strong>Misc Tools</strong> button and finally click on the<strong> ADS Spy </strong>button. When the ADS Spy utility opens you will see a screen similar to figure 11 below.</p>
+<p>
+	&nbsp;</p>
+<p align="center">
+	<img alt="HijackThis Tutorial and Guide" src="http://www.bleepstatic.com/tutorials/hijackthis/adsspy-start.jpg" /><br />
+	<strong>Figure 11: ADS Spy </strong></p>
+<p align="center">
+	&nbsp;</p>
+<p>
+	Press the <strong>Scan</strong> button and the program will start to scan your Windows folder for any files that are Alternate Data Streams. If it finds any, it will display them similar to figure 12 below.</p>
+<p>
+	&nbsp;</p>
+<p align="center">
+	<img alt="HijackThis Tutorial and Guide" src="http://www.bleepstatic.com/tutorials/hijackthis/adsspy-remove.jpg" /><br />
+	<strong>Figure 12: Listing of found Alternate Data Streams</strong></p>
+<p align="center">
+	&nbsp;</p>
+<p>
+	To remove one of the displayed ADS files, simply place a checkmark next to its entry and click on the <strong>Remove selected</strong> button. This will remove the ADS file from your computer. When you are done, press the <strong>Back</strong> button next to the <strong>Remove selected </strong>until you are at the main HijackThis screen.</p>
+<p>
+	<br />
+	<strong><u><a id="uniman" name="uniman" rel="nofollow"></a>How to use the Uninstall Manager</u></strong></p>
+<p>
+	The Uninstall Manager allows you to manage the entries found in your control panel&#39;s Add/Remove Programs list. When cleaning malware from a machine entries in the Add/Remove Programs list invariably get left behind. Many users understandably like to have a clean Add/Remove Programs list and have difficulty removing these errant entries. Using the Uninstall Manager you can remove these entries from your uninstall list.</p>
+<p>
+	To access the Uninstall Manager you would do the following:</p>
+<ol>
+	<li>
+		Start HijackThis</li>
+	<li>
+		Click on the <strong>Config</strong> button</li>
+	<li>
+		Click on the <strong>Misc Tools</strong> button</li>
+	<li>
+		Click on the <strong>Open Uninstall Manager</strong> button.</li>
+</ol>
+<p>
+	You will now be presented with a screen similar to the one below:</p>
+<p align="center">
+	<br />
+	<img alt="Uninstall Manager" src="http://www.bleepstatic.com/tutorials/hijackthis/uninstall-man.jpg" /><br />
+	<strong>Figure 13: HijackThis Uninstall Manager</strong></p>
+<p align="center">
+	&nbsp;</p>
+<p>
+	To delete<strong> </strong>an entry simply click on the entry you would like to remove and then click on the <strong>Delete this entry </strong>button. If you want to change the program this entry is associated with you can click on the <strong>Edit uninstall command</strong> button and enter the path to the program that should be run if you double-click on that entry in the <strong>Add/Remove Programs</strong> list. This last function should only be used if you know what you are doing.</p>
+<p>
+	If you are asked to save this list and post it so someone can examine it and advise you as to what you should remove, you can click on the <strong>Save list...</strong> button and specify where you would like to save this file. When you press <strong>Save </strong> button a notepad will open with the contents of that file. Simply copy and paste the contents of that notepad into a reply in the topic you are getting help in.</p>
+<p>
+	<strong><u><a id="InterpretIntro" name="InterpretIntro" rel="nofollow"></a>How to interpret the scan listings</u></strong></p>
+<p>
+	<br />
+	This next section is to help you diagnose the output from a HijackThis scan. If you are still unsure of what to do, or would like to ask us to interpret your log, paste your log into a post in our <a href="http://www.bleepingcomputer.com/forums/forum22.html">Privacy Forum</a>.</p>
+<p>
+	Every line on the Scan List for HijackThis starts with a section name. Below is a list of these section names and their explanations. You can click on a section name to bring you to the appropriate section.</p>
+<table border="0">
+	<tbody>
+		<tr bgcolor="#CCCCCC">
+			<td>
+				<div align="center">
+					Section Name</div>
+			</td>
+			<td>
+				<div align="center">
+					Description</div>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<a href="#RDiag" rel="nofollow">R0, R1, R2, R3 </a></td>
+			<td>
+				Internet Explorer Start/Search pages URLs</td>
+		</tr>
+		<tr>
+			<td>
+				<a href="#FDiag" rel="nofollow">F0, F1, F2,F3</a></td>
+			<td>
+				Auto loading programs</td>
+		</tr>
+		<tr>
+			<td>
+				<a href="#NDiag" rel="nofollow">N1, N2, N3, N4</a></td>
+			<td>
+				Netscape/Mozilla Start/Search pages URLs</td>
+		</tr>
+		<tr>
+			<td>
+				<a href="#O1Diag" rel="nofollow">O1 </a></td>
+			<td>
+				Hosts file redirection</td>
+		</tr>
+		<tr>
+			<td>
+				<a href="#O2Diag" rel="nofollow">O2</a></td>
+			<td>
+				Browser Helper Objects</td>
+		</tr>
+		<tr>
+			<td>
+				<a href="#O3Diag" rel="nofollow">O3</a></td>
+			<td>
+				Internet Explorer toolbars</td>
+		</tr>
+		<tr>
+			<td>
+				<a href="#O4Diag" rel="nofollow">O4</a></td>
+			<td>
+				Auto loading programs from Registry</td>
+		</tr>
+		<tr>
+			<td>
+				<a href="#O5Diag" rel="nofollow">O5</a></td>
+			<td>
+				IE Options icon not visible in Control Panel</td>
+		</tr>
+		<tr>
+			<td>
+				<a href="#O6Diag" rel="nofollow">O6</a></td>
+			<td>
+				IE Options access restricted by Administrator</td>
+		</tr>
+		<tr>
+			<td>
+				<a href="#O7Diag" rel="nofollow">O7</a></td>
+			<td>
+				Regedit access restricted by Administrator</td>
+		</tr>
+		<tr>
+			<td>
+				<a href="#O8Diag" rel="nofollow">O8</a></td>
+			<td>
+				Extra items in the IE right-click menu</td>
+		</tr>
+		<tr>
+			<td>
+				<a href="#O9Diag" rel="nofollow">O9</a></td>
+			<td>
+				Extra buttons on main IE button toolbar, or extra items in IE &#39;Tools&#39; menu</td>
+		</tr>
+		<tr>
+			<td>
+				<a href="#O10Diag" rel="nofollow">O10</a></td>
+			<td>
+				Winsock hijacker</td>
+		</tr>
+		<tr>
+			<td>
+				<a href="#O11Diag" rel="nofollow">O11</a></td>
+			<td>
+				Extra group in IE &#39;Advanced Options&#39; window</td>
+		</tr>
+		<tr>
+			<td>
+				<a href="#O12Diag" rel="nofollow">O12</a></td>
+			<td>
+				IE plugins</td>
+		</tr>
+		<tr>
+			<td>
+				<a href="#O13Diag" rel="nofollow">O13</a></td>
+			<td>
+				IE Default Prefix hijack</td>
+		</tr>
+		<tr>
+			<td>
+				<a href="#O14Diag" rel="nofollow">O14</a></td>
+			<td>
+				&#39;Reset Web Settings&#39; hijack</td>
+		</tr>
+		<tr>
+			<td>
+				<a href="#O15Diag" rel="nofollow">O15</a></td>
+			<td>
+				Unwanted site in Trusted Zone</td>
+		</tr>
+		<tr>
+			<td>
+				<a href="#O16Diag" rel="nofollow">O16</a></td>
+			<td>
+				ActiveX Objects (aka Downloaded Program Files)</td>
+		</tr>
+		<tr>
+			<td>
+				<a href="#O17Diag" rel="nofollow">O17</a></td>
+			<td>
+				Lop.com/Domain Hijackers</td>
+		</tr>
+		<tr>
+			<td>
+				<a href="#O18Diag" rel="nofollow">O18</a></td>
+			<td>
+				Extra protocols and protocol hijackers</td>
+		</tr>
+		<tr>
+			<td>
+				<a href="#O19Diag" rel="nofollow">O19</a></td>
+			<td>
+				User style sheet hijack</td>
+		</tr>
+		<tr>
+			<td>
+				<a href="#O20Diag" rel="nofollow">O20</a></td>
+			<td>
+				AppInit_DLLs Registry value Autorun</td>
+		</tr>
+		<tr>
+			<td>
+				<a href="#O21Diag" rel="nofollow">O21</a></td>
+			<td>
+				ShellServiceObjectDelayLoad</td>
+		</tr>
+		<tr>
+			<td>
+				<a href="#O22Diag" rel="nofollow">O22</a></td>
+			<td>
+				SharedTaskScheduler</td>
+		</tr>
+		<tr>
+			<td>
+				<a href="#O23Diag" rel="nofollow">O23</a></td>
+			<td>
+				Windows XP/NT/2000 Services</td>
+		</tr>
+		<tr>
+			<td>
+				<a href="#O24Diag" rel="nofollow">O24</a></td>
+			<td>
+				Windows Active Desktop Components</td>
+		</tr>
+	</tbody>
+</table>
+<p>
+	It is important to note that certain sections use an internal white list so that HijackThis will not show known legitimate files. To disable this white list you can start hijackthis in this method instead: <strong>hijackthis.exe /ihatewhitelists</strong>.</p>
+<p>
+	In our explanations of each section we will try to explain in layman terms what they mean. We will also tell you what registry keys they usually use and/or files that they use. Finally we will give you recommendations on what to do with the entries.</p>
+<p>
+	<strong><u><a id="RDiag" name="RDiag" rel="nofollow"></a>R0,R1,R2,R3 Sections</u></strong></p>
+<p>
+	<br />
+	This section covers the Internet Explorer Start Page, Home Page, and Url Search Hooks.</p>
+<p>
+	R0 is for Internet Explorers starting page and search assistant.</p>
+<p>
+	R1 is for Internet Explorers Search functions and other characteristics.</p>
+<p>
+	R2 is not used currently.</p>
+<p>
+	R3 is for a Url Search Hook. An Url Search Hook is used when you type an address in the location field of the browser, but do not include a protocol such as http:// or ftp:// in the address. When you enter such an address, the browser will attempt to figure out the correct protocol on its own, and if it fails to do so, will use the UrlSearchHook listed in the R3 section to try to find the location you entered.</p>
+<table border="0" width="93%">
+	<tbody>
+		<tr>
+			<td width="21%">
+				<strong>Some Registry Keys:</strong></td>
+			<td width="79%">
+				HKLM\Software\Microsoft\Internet Explorer\Main,Start Page</td>
+		</tr>
+		<tr>
+			<td>
+				&nbsp;</td>
+			<td width="79%">
+				HKCU\Software\Microsoft\Internet Explorer\Main: Start Page</td>
+		</tr>
+		<tr>
+			<td>
+				&nbsp;</td>
+			<td>
+				HKLM\Software\Microsoft\Internet Explorer\Main: Default_Page_URL</td>
+		</tr>
+		<tr>
+			<td>
+				&nbsp;</td>
+			<td>
+				HKCU\Software\Microsoft\Internet Explorer\Main: Default_Page_URL</td>
+		</tr>
+		<tr>
+			<td>
+				&nbsp;</td>
+			<td>
+				HKLM\Software\Microsoft\Internet Explorer\Main: Search Page</td>
+		</tr>
+		<tr>
+			<td>
+				&nbsp;</td>
+			<td>
+				HKCU\Software\Microsoft\Internet Explorer\Main: Search Page</td>
+		</tr>
+		<tr>
+			<td>
+				&nbsp;</td>
+			<td>
+				HKCU\Software\Microsoft\Internet Explorer\SearchURL: (Default)</td>
+		</tr>
+		<tr>
+			<td>
+				&nbsp;</td>
+			<td>
+				HKCU\Software\Microsoft\Internet Explorer\Main: Window Title</td>
+		</tr>
+		<tr>
+			<td>
+				&nbsp;</td>
+			<td>
+				HKCU\Software\Microsoft\Windows\CurrentVersion\Internet Settings: ProxyOverride</td>
+		</tr>
+		<tr>
+			<td>
+				&nbsp;</td>
+			<td>
+				HKCU\Software\Microsoft\Internet Connection Wizard: ShellNext</td>
+		</tr>
+		<tr>
+			<td>
+				&nbsp;</td>
+			<td>
+				HKCU\Software\Microsoft\Internet Explorer\Main: Search Bar</td>
+		</tr>
+		<tr>
+			<td>
+				&nbsp;</td>
+			<td>
+				HKEY_CURRENT_USER\Software\Microsoft\Internet Explorer\URLSearchHooks</td>
+		</tr>
+		<tr>
+			<td>
+				&nbsp;</td>
+			<td>
+				HKLM\Software\Microsoft\Internet Explorer\Search,CustomizeSearch =</td>
+		</tr>
+		<tr>
+			<td>
+				&nbsp;</td>
+			<td>
+				HKCU\Software\Microsoft\Internet Explorer\Search,CustomizeSearch</td>
+		</tr>
+		<tr>
+			<td>
+				&nbsp;</td>
+			<td>
+				HKLM\Software\Microsoft\Internet Explorer\Search,SearchAssistant</td>
+		</tr>
+	</tbody>
+</table>
+<br />
+<table border="0" bordercolor="#CCCCCC" width="75%">
+	<tbody>
+		<tr bgcolor="#CCCCCC">
+			<td width="14%">
+				Example Listing</td>
+			<td width="86%">
+				R0 - HKCU\Software\Microsoft\Internet Explorer\Main,Start Page = http://www.google.com/</td>
+		</tr>
+	</tbody>
+</table>
+<p>
+	A common question is what does it mean when the word Obfuscated is next to one of these entries. When something is obfuscated that means that it is being made difficult to perceive or understand. In Spyware terms that means the Spyware or Hijacker is hiding an entry it made by converting the values into some other form that it understands easily, but humans would have trouble recognizing, such as adding entries into the registry in Hexadecimal. This is just another method of hiding its presence and making it difficult to be removed.</p>
+<p>
+	If you do not recognize the web site that either R0 and R1 are pointing to, and you want to change it, then you can have HijackThis safely fix these, as they will not be detrimental to your Internet Explorer install. If you would like to see what sites they are, you can go to the site, and if it&#39;s a lot of popups and links, you can almost always delete it. It is important to note that if an RO/R1 points to a file, and you fix the entry with HijackThis, Hijackthis will not delete that particular file and you will have to do it manually.</p>
+<p>
+	There are certain R3 entries that end with a underscore ( _ ) . An example of what one would look like is:</p>
+<p>
+	<strong>R3 - URLSearchHook: (no name) - {CFBFAE00-17A6-11D0-99CB-00C04FD64497}_ - (no file)</strong></p>
+<p>
+	Notice the CLSID, the numbers between the { }, have a _ at the end of it and they may sometimes difficult to remove with HijackThis. To fix this you will need to delete the particular registry entry manually by going to the following key:</p>
+<p>
+	HKEY_CURRENT_USER\Software\Microsoft\Internet Explorer\URLSearchHooks</p>
+<p>
+	Then delete the CLSID entry under it that you would like to remove. Please leave the CLSID , CFBFAE00-17A6-11D0-99CB-00C04FD64497, as it is the valid default one.</p>
+<p>
+	Unless you recognize the software being used as the UrlSearchHook, you should generally Google it and after doing some research, allow HijackThis to fix it</p>
+<p>
+	&nbsp;</p>
+<hr />
+<p>
+	<br />
+	<strong><a id="FDiag" name="FDiag" rel="nofollow"></a><u>F0, F1, F2, F3 Sections</u></strong></p>
+<p>
+	<br />
+	These sections cover applications that are loaded from your .INI files, system.ini and win.ini, in Windows ME and below or their equivalent places in the registry for Windows NT based versions. The Windows NT based versions are XP, 2000, 2003, and Vista.</p>
+<p>
+	A F0 entry corresponds to the <strong>Shell=</strong> statement, under the <strong>[Boot]</strong> section, of the System.ini file. The <strong>Shell=</strong> statement in the system.ini file is used to designate what program would act as the shell for the operating system.</p>
+<table border="0" bordercolor="#CCCCCC" cellpadding="5" cellspacing="5" width="100%">
+	<tbody>
+		<tr bgcolor="#CCCCCC">
+			<td width="14%">
+				<b>Example Listing:</b></td>
+			<td>
+				F0 - system.ini: Shell=Explorer.exe badprogram.exe</td>
+		</tr>
+		<tr bgcolor="#CCCCCC" bordercolor="#FFFFCC">
+			<td>
+				<strong>Files Used:</strong></td>
+			<td>
+				c:\windows\system.ini</td>
+		</tr>
+	</tbody>
+</table>
+<p>
+	The Shell is the program that would load your desktop, handle window management, and allow the user to interact with the system. Any program listed after the shell statement will be loaded when Windows starts, and act as the default shell. There were some programs that acted as valid shell replacements, but they are generally no longer used. Windows 95, 98, and ME all used Explorer.exe as their shell by default. Windows 3.X used Progman.exe as its shell. It is also possible to list other programs that will launch as Windows loads in the same Shell = line, such as Shell=explorer.exe badprogram.exe. This line will make both programs start when Windows loads.</p>
+<p>
+	A F1 entry corresponds to the <strong>Run=</strong> or <strong>Load=</strong> entry in the win.ini file. Like the system.ini file, the win.ini file is typically only used in Windows ME and below.</p>
+<table border="0" bordercolor="#CCCCCC" width="100%">
+	<tbody>
+		<tr bgcolor="#CCCCCC">
+			<td width="14%">
+				<b>Example Listing</b></td>
+			<td>
+				F1 - win.ini: load=bad.pif<br />
+				F1 - win.ini: run=evil.pif</td>
+		</tr>
+		<tr bgcolor="#CCCCCC" bordercolor="#FFFFCC">
+			<td>
+				<strong>Files Used:</strong></td>
+			<td>
+				c:\windows\win.ini</td>
+		</tr>
+	</tbody>
+</table>
+<p>
+	Any programs listed after the run= or load= will load when Windows starts. This run= statement was used during the Windows 3.1, 95, and 98 years and is kept for backwards compatibility with older programs. Most modern programs do not use this ini setting, and if you do not use older program you can rightfully be suspicious. The load= statement was used to load drivers for your hardware. On Windows NT based systems (Windows 2000, XP, etc) HijackThis will show the entries found in win.ini and system.ini, but Windows NT based systems will not execute the files listed there.</p>
+<p>
+	F2 and F3 entries correspond to the equivalent locations as F0 and F1, but they are instead stored in the registry for Windows versions XP, 2000, and NT. These versions of Windows do not use the system.ini and win.ini files. Instead for backwards compatibility they use a function called IniFileMapping. IniFileMapping, puts all of the contents of an .ini file in the registry, with keys for each line found in the .ini key stored there. Then when you run a program that normally reads their settings from an .ini file, it will first check the registry key HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\IniFileMapping for an .ini mapping, and if found will read the settings from there instead. You can see that these entries, in the examples below, are referring to the registry as it will contain REG and then the .ini file which IniFileMapping is referring to.</p>
+<p>
+	F2 entries are displayed when there is a value that is not whitelisted, or considered safe, in the registry key<strong> HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon </strong>under the values <strong>Shell</strong> and <strong>Userinit</strong>.</p>
+<table border="0" bordercolor="#CCCCCC" width="100%">
+	<tbody>
+		<tr bgcolor="#CCCCCC">
+			<td width="14%">
+				<b>Example Listings:</b></td>
+			<td>
+				F2 - REG:system.ini: UserInit=userinit,nddeagnt.exe</td>
+		</tr>
+		<tr bgcolor="#CCCCCC">
+			<td>
+				&nbsp;</td>
+			<td>
+				F2 - REG:system.ini: Shell=explorer.exe beta.exe</td>
+		</tr>
+		<tr bgcolor="#CCCCCC">
+			<td>
+				&nbsp;</td>
+			<td>
+				&nbsp;</td>
+		</tr>
+		<tr bgcolor="#CCCCCC">
+			<td>
+				<strong>Registry Keys:</strong></td>
+			<td>
+				HKLM\Software\Microsoft\Windows NT\CurrentVersion\Winlogon\Userinit</td>
+		</tr>
+		<tr bgcolor="#CCCCCC">
+			<td>
+				&nbsp;</td>
+			<td>
+				HKLM\Software\Microsoft\Windows NT\CurrentVersion\Winlogon\Shell</td>
+		</tr>
+	</tbody>
+</table>
+<p>
+	The Shell registry value is equivalent to the function of the <strong>Shell=</strong> in the system.ini file as described above. The <strong>Userinit</strong> value specifies what program should be launched right after a user logs into Windows. The default program for this key is C:\windows\system32\userinit.exe. Userinit.exe is a program that restores your profile, fonts, colors, etc for your username. It is possible to add further programs that will launch from this key by separating the programs with a comma. For example: HKLM\Software\Microsoft\Windows NT\CurrentVersion\Winlogon\Userinit =C:\windows\system32\userinit.exe,c:\windows\badprogram.exe. This will make both programs launch when you log in and is a common place for trojans, hijackers, and spyware to launch from. It should be noted that the <strong>Userinit</strong> and the <strong>Shell</strong> F2 entries will not show in HijackThis unless there is a non-whitelisted value listed.</p>
+<p>
+	F3 entries are displayed when there is a value that is not whitelisted in the registry key <strong>HKCU\Software\Microsoft\Windows NT\CurrentVersion\Windows</strong> under the values <strong>load</strong> and <strong>run</strong>.<strong> </strong>These entries are the Windows NT equivalent of those found in the F1 entries as described above.</p>
+<table border="0" bordercolor="#CCCCCC" width="100%">
+	<tbody>
+		<tr bgcolor="#CCCCCC">
+			<td width="14%">
+				<b>Example Listings:</b></td>
+			<td>
+				F3 - REG:win.ini: load=chocolate.exe</td>
+		</tr>
+		<tr bgcolor="#CCCCCC">
+			<td>
+				&nbsp;</td>
+			<td>
+				F3 - REG:win.ini: run=beer.exe</td>
+		</tr>
+		<tr bgcolor="#CCCCCC">
+			<td>
+				&nbsp;</td>
+			<td>
+				&nbsp;</td>
+		</tr>
+		<tr bgcolor="#CCCCCC">
+			<td>
+				<strong>Registry Keys:</strong></td>
+			<td>
+				HKCU\Software\Microsoft\Windows NT\CurrentVersion\Windows\load</td>
+		</tr>
+		<tr bgcolor="#CCCCCC">
+			<td>
+				&nbsp;</td>
+			<td>
+				HKCU\Software\Microsoft\Windows NT\CurrentVersion\Windows\run</td>
+		</tr>
+	</tbody>
+</table>
+<p>
+	For F0 if you see a statement like Shell=Explorer.exe something.exe, then you can generally delete it, but you should first consult Google and the sites listed below.</p>
+<p>
+	For F1 entries you should google the entries found here to determine if they are legitimate programs. You can also search at the sites below for the entry to see what it does.</p>
+<p>
+	For F2, if you see UserInit=userinit.exe, with or without nddeagnt.exe, as in the above example, then you can leave that entry alone. If you see UserInit=userinit.exe (notice no comma) that is still ok, so you should leave it alone. If you see another entry with userinit.exe, then that could potentially be a trojan or other malware. The same goes for F2 Shell=; if you see explorer.exe by itself, it should be fine, if you don&#39;t, as in the above example listing, then it could be a potential trojan or malware. You can generally delete these entries, but you should consult Google and the sites listed below.</p>
+<p>
+	Please be aware that when these entries are fixed HijackThis does not delete the file associated with it. You must manually delete these files.</p>
+<p>
+	Site to use for research on these entries:</p>
+<p>
+	<a href="http://www.bleepingcomputer.com/startups/"><b>Bleeping Computer Startup Database</b></a><br />
+	<a href="http://www.answersthatwork.com/Tasklist_pages/tasklist.htm" rel="nofollow">Answers that work</a> <a href="http://greatis.com/regrun3appdatabase.htm" rel="nofollow"><br />
+	Greatis Startup Application Database</a><br />
+	<a href="http://www.sysinfo.org/startuplist.php" rel="nofollow">Pacman&#39;s Startup Programs List</a><br />
+	<a href="http://www.pacs-portal.co.uk/startup_content.php#THE_PROGRAMS" rel="nofollow">Pacman&#39;s Startup Lists for Offline Reading</a><br />
+	<a href="http://www.kephyr.com/filedb/index.php" rel="nofollow">Kephyr File Database</a> <br />
+	<a href="http://www.liutilities.com/products/wintaskspro/processlibrary/" rel="nofollow">Wintasks Process Library</a></p>
+<hr />
+<p>
+	<br />
+	<strong><a id="NDiag" name="NDiag" rel="nofollow"></a><u>N1, N2, N3, N4 Sections</u></strong></p>
+<p>
+	<br />
+	These sections are for Netscape and Mozilla Browsers Start and default search pages.</p>
+<p>
+	These entries are stored in the prefs.js files stored in different places under the C:\Documents and Settings\YourUserName\Application Data folder. Netscape 4&#39;s entries are stored in the prefs.js file in the program directory which is generally, DriveLetter:\Program Files\Netscape\Users\default\prefs.js.</p>
+<p>
+	N1 corresponds to the Netscape 4&#39;s Startup Page and default search page.</p>
+<p>
+	N2 corresponds to the Netscape 6&#39;s Startup Page and default search page.</p>
+<p>
+	N3 corresponds to Netscape 7&#39; Startup Page and default search page.</p>
+<p>
+	N4 corresponds to Mozilla&#39;s Startup Page and default search page.</p>
+<p>
+	<strong>Files Used:</strong> prefs.js</p>
+<p>
+	As most spyware and hijackers tend to target Internet Explorer these are usually safe. If you see web sites listed in here that you have not set, you can use HijackThis to fix it. There is one known site that does change these settings, and that is Lop.com which is discussed <a href="http://web.archive.org/web/20040213203639/doxdesk.com/parasite/lop.html" rel="nofollow">here</a>.</p>
+<hr />
+<p>
+	<br />
+	<strong><u><a id="O1Diag" name="O1Diag" rel="nofollow"></a>O1 Section</u></strong></p>
+<p>
+	<br />
+	This section corresponds to Host file Redirection.</p>
+<p>
+	The hosts file contains mappings for hostnames to IP addresses.For example, if I enter in my host file:</p>
+<p>
+	<strong>127.0.0.1 www.bleepingcomputer.com</strong></p>
+<p>
+	and you try to go to www.bleepingcomputer.com, it will check the hosts file, see the entry and convert that to the IP address of 127.0.0.1 instead of its correct address.</p>
+<p>
+	Host file redirection is when a hijacker changes your hosts file to redirect your attempts to reach a certain web site to another site. So if someone added an entry like:</p>
+<p>
+	<strong>127.0.0.1 www.google.com</strong></p>
+<p>
+	and you tried to go to www.google.com, you would instead get redirected to 127.0.0.1 which is your own computer.</p>
+<table border="0" bordercolor="#CCCCCC" width="75%">
+	<tbody>
+		<tr bgcolor="#CCCCCC">
+			<td width="14%">
+				Example Listing</td>
+			<td width="86%">
+				O1 - Hosts: 192.168.1.1 www.google.com</td>
+		</tr>
+	</tbody>
+</table>
+<p>
+	<strong>Files Used: </strong>The hosts file is a text file that can be edited by any text editor and is stored by default in the following places for each Operating System, unless you chose to install to different paths -</p>
+<table border="1" cellspacing="0" width="70%">
+	<tbody>
+		<tr bgcolor="#CCCCCC">
+			<td>
+				Operating System</td>
+			<td>
+				<div align="center">
+					Location</div>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				Windows 3.1</td>
+			<td>
+				C:\WINDOWS\HOSTS</td>
+		</tr>
+		<tr>
+			<td>
+				Windows 95</td>
+			<td>
+				C:\WINDOWS\HOSTS</td>
+		</tr>
+		<tr>
+			<td>
+				Windows 98</td>
+			<td>
+				C:\WINDOWS\HOSTS</td>
+		</tr>
+		<tr>
+			<td>
+				Windows ME</td>
+			<td>
+				C:\WINDOWS\HOSTS</td>
+		</tr>
+		<tr>
+			<td>
+				Windows XP</td>
+			<td>
+				C:\WINDOWS\SYSTEM32\DRIVERS\ETC\HOSTS</td>
+		</tr>
+		<tr>
+			<td>
+				Windows NT</td>
+			<td>
+				C:\WINNT\SYSTEM32\DRIVERS\ETC\HOSTS</td>
+		</tr>
+		<tr>
+			<td>
+				Windows 2000</td>
+			<td>
+				C:\WINNT\SYSTEM32\DRIVERS\ETC\HOSTS</td>
+		</tr>
+		<tr>
+			<td>
+				Windows 2003</td>
+			<td>
+				C:\WINDOWS\SYSTEM32\DRIVERS\ETC\HOSTS</td>
+		</tr>
+	</tbody>
+</table>
+<p>
+	The location of the Hosts file can be changed by modifying the Registry key below for Windows NT/2000/XP.</p>
+<p>
+	<strong>Registry Key: </strong>HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\Tcpip\Parameters\: DatabasePath</p>
+<p>
+	If you see entries like the above example, and they are not their for a specific reason that you know about, you can safely remove them.</p>
+<p>
+	If you see an entry Hosts file is located at C:\Windows\Help\hosts<strong>, </strong>that means you are infected with the CoolWebSearch. If the Hosts file is located in a location that is not the default for your operating system, see table above, then you should have HijackThis fix this as it is most likely caused by an infection.</p>
+<p>
+	You can also download the program <a href="http://www.funkytoad.com/download/HostsXpert.zip" rel="nofollow">HostsXpert</a> which gives you the ability to restore the default host file back onto your machine. To do so, download the HostsXpert program and run it. When it opens, click on the <strong>Restore Original Hosts</strong> button and then exit HostsXpert.</p>
+<hr />
+<p>
+	<br />
+	<strong><a id="O2Diag" name="O2Diag" rel="nofollow"></a><u>O2 Section</u></strong></p>
+<p>
+	<br />
+	This section corresponds to Browser Helper Objects.</p>
+<p>
+	Browser helper objects are plugins to your browser that extend the functionality of it. They can be used by spyware as well as legitimate programs such as Google Toolbar and Adobe Acrobat Reader. You must do your research when deciding whether or not to remove any of these as some may be legitimate.</p>
+<p>
+	<strong>Registry Keys: </strong>HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Browser Helper Objects</p>
+<table border="0" bordercolor="#CCCCCC" width="75%">
+	<tbody>
+		<tr bgcolor="#CCCCCC">
+			<td width="14%">
+				Example Listing</td>
+			<td width="86%">
+				O2 - BHO: NAV Helper - {BDF3E430-B101-42AD-A544-FADC6B084872} - C:\Program Files\Norton Antivirus\NavShExt.dll</td>
+		</tr>
+	</tbody>
+</table>
+<p>
+	There is an excellent list of known CSLIDs associated with Browser Helper Objects and Toolbars, compiled by Tony Klein, here: <a href="http://www.systemlookup.com/lists.php?list=1" rel="nofollow">CLSID List </a>. When consulting the list, using the CLSID which is the number between the curly brackets in the listing. The CLSID in the listing refer to registry entries that contain information about the Browser Helper Objects or Toolbars.</p>
+<p>
+	When you fix these types of entries with HijackThis, HijackThis will attempt to the delete the offending file listed. There are times that the file may be in use even if Internet Explorer is shut down. If the file still exists after you fix it with HijackThis, it is recommended that you reboot into safe mode and delete the offending file.</p>
+<hr />
+<p>
+	<br />
+	<strong><a id="O3Diag" name="O3Diag" rel="nofollow"></a><u>O3 Section</u></strong></p>
+<p>
+	<br />
+	This section corresponds to Internet Explorer toolbars.</p>
+<p>
+	These are the toolbars that are underneath your navigation bar and menu in Internet Explorer.</p>
+<p>
+	<strong>Registry Keys: </strong>HKLM\SOFTWARE\Microsoft\Internet Explorer\Toolbar</p>
+<table border="0" bordercolor="#CCCCCC" width="86%">
+	<tbody>
+		<tr bgcolor="#CCCCCC">
+			<td width="14%">
+				Example Listing</td>
+			<td width="86%">
+				O3 - Toolbar: Norton Antivirus - {42CDD1BF-3FFB-4238-8AD1-7859DF00B1D6} - C:\Program Files\Norton Antivirus\NavShExt.dll</td>
+		</tr>
+	</tbody>
+</table>
+<p>
+	There is an excellent list of known CSLIDs associated with Browser Helper Objects and Toolbars, compiled by Tony Klein, here: <a href="http://www.systemlookup.com/lists.php?list=1" rel="nofollow">CLSID List </a>. When consulting the list, using the CLSID which is the number between the curly brackets in the listing. The CLSID in the listing refer to registry entries that contain information about the Browser Helper Objects or Toolbars.<br />
+	<br />
+	When you fix these types of entries, HijackThis will not delete the offending file listed. It is recommended that you reboot into safe mode and delete the offending file.</p>
+<hr />
+<p>
+	<br />
+	<strong><a id="O4Diag" name="O4Diag" rel="nofollow"></a><u>O4 Section</u></strong></p>
+<p>
+	<br />
+	This section corresponds to certain registry keys and startup folders that are used to automatically start an application when Windows starts. O4 keys are the HJT entries that the majority of programs use to autostart, so particular care must be used when examining these keys. The O4 Registry keys and directory locations are listed below and apply, for the most part, to all versions of Windows.</p>
+<p>
+	As of HijackThis version 2.0, HijackThis will also list entries for other users that are actively logged into a computer at the time of the scan by reading the information from the HKEY_USERS registry key. If a user is not logged on at the time of the scan, their user key will not be loaded, and therefore HijackThis will not list their autoruns. When working on HijackThis logs it is not advised to use HijackThis to fix entries in a person&#39;s log when the user has multiple accounts logged in. We advise this because the other user&#39;s processes may conflict with the fixes we are having the user run.</p>
+<p>
+	The current locations that O4 entries are listed from are:</p>
+<p>
+	<strong>Directory Locations:</strong></p>
+<blockquote>
+	<p>
+		<strong>User&#39;s Startup Folder</strong>: Any files located in a user&#39;s Start Menu Startup folder will be listed as a <font color="#0000FF">O4 - Startup</font>. This location, for the newer versions of Windows, are <font color="#0000FF">C:\Documents and Settings\USERNAME\Start Menu\Programs\Startup</font> or under <font color="#0000FF">C:\Users\USERNAME\AppData\Roaming\Microsoft\Windows\Start Menu</font> in Vista<strong>. </strong>These entries will be executed when the particular user logs onto the computer.</p>
+	<p>
+		<strong>All Users Startup Folder</strong>: These items refer to applications that load by having them in the All Users profile Start Menu Startup Folder and will be listed as <font color="#0000FF">O4 - Global Startup</font>. This location, for the newer versions of Windows, are <font color="#0000FF">C:\Documents and Settings\All Users\Start Menu\Programs\Startup</font> or under<font color="#0000FF"> C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Startup </font>in Vista<strong>.</strong> These entries will be executed when any user logs onto the computer.</p>
+</blockquote>
+<p>
+	<strong>Startup Registry Keys: </strong>O4 entries that utilize registry keys will start with the abbreviated registry key in the entry listing. Examples and their descriptions can be seen below. For all of the keys below, if the key is located under HKCU, then that means the program will only be launched when that particular user logs on to the computer. If the entry is located under HKLM, then the program will be launched for all users that log on to the computer.</p>
+<p>
+	<strong>Note: In the listing below, HKLM stands for HKEY_LOCAL_MACHINE and HKCU stands for HKEY_CURRENT_USER.</strong></p>
+<p>
+	The <strong>Run</strong> keys are used to launch a program automatically when a user, or all users, logs on to the machine.</p>
+<table align="center" border="0" id="listtable">
+	<tbody>
+		<tr>
+			<td bwidth="95%">
+				<strong>Run keys:</strong></td>
+		</tr>
+		<tr>
+			<td bgcolor="#CCCCCC" bwidth="95%">
+				HKLM\Software\Microsoft\Windows\CurrentVersion\Run</td>
+		</tr>
+		<tr>
+			<td bgcolor="#CCCCCC" width="95%">
+				HKCU\Software\Microsoft\Windows\CurrentVersion\Run</td>
+		</tr>
+	</tbody>
+</table>
+<p>
+	&nbsp;</p>
+<p>
+	The <strong>RunOnce</strong> keys are used to launch a service or background process whenever a user, or all users, logs on to the computer. Once the program is successfully launched for the first time its entry will be removed from the Registry so it does not run again on subsequent logons.</p>
+<table align="center" border="0" id="listtable">
+	<tbody>
+		<tr>
+			<td>
+				<strong>RunOnce keys:</strong></td>
+		</tr>
+		<tr>
+			<td bgcolor="#CCCCCC" width="95%">
+				HKLM\Software\Microsoft\Windows\CurrentVersion\RunOnce</td>
+		</tr>
+		<tr>
+			<td bgcolor="#CCCCCC" width="95%">
+				HKCU\Software\Microsoft\Windows\CurrentVersion\RunOnce</td>
+		</tr>
+	</tbody>
+</table>
+<p>
+	&nbsp;</p>
+<p>
+	The <strong>RunServices</strong> keys are used to launch a service or background process whenever a user, or all users, logs on to the computer.</p>
+<table align="center" id="listtable">
+	<tbody>
+		<tr>
+			<td>
+				<strong>RunServices keys:</strong></td>
+		</tr>
+		<tr>
+			<td bgcolor="#CCCCCC" width="95%">
+				HKLM\Software\Microsoft\Windows\CurrentVersion\RunServices</td>
+		</tr>
+		<tr>
+			<td bgcolor="#CCCCCC" width="95%">
+				HKCU\Software\Microsoft\Windows\CurrentVersion\RunServices</td>
+		</tr>
+	</tbody>
+</table>
+<p>
+	&nbsp;</p>
+<p>
+	The <strong>RunServicesOnce</strong> keys are used to launch a service or background process whenever a user, or all users, logs on to the computer. Unlike the RunServices keys, when a program is launched from the RunServicesOnce key its entry will be removed from the Registry so it does not run again on subsequent logons.</p>
+<table align="center" border="0" id="listtable">
+	<tbody>
+		<tr>
+			<td>
+				<strong>RunServicesOnce keys:</strong></td>
+		</tr>
+		<tr>
+			<td bgcolor="#CCCCCC">
+				HKLM\Software\Microsoft\Windows\CurrentVersion\RunServicesOnce</td>
+		</tr>
+		<tr>
+			<td bgcolor="#CCCCCC" width="95%">
+				HKCU\Software\Microsoft\Windows\CurrentVersion\RunServicesOnce</td>
+		</tr>
+	</tbody>
+</table>
+<p>
+	&nbsp;</p>
+<p>
+	The <strong>RunOnceEx</strong> keys are used to launch a program once and then remove itself from the Registry. This particular key is typically used by installation or update programs.</p>
+<table align="center" border="0" id="listtable">
+	<tbody>
+		<tr>
+			<td>
+				<strong>RunOnceEx key:</strong></td>
+		</tr>
+		<tr>
+			<td bgcolor="#CCCCCC" width="95%">
+				HKLM\Software\Microsoft\Windows\CurrentVersion\RunOnceEx</td>
+		</tr>
+	</tbody>
+</table>
+<p>
+	&nbsp;</p>
+<p>
+	The <strong>Policies\Explorer\Run</strong> keys are used by network administrator&#39;s to set a group policy settings that has a program automatically launch when a user, or all users, logs on to the computer. Under the Policies\Explorer\Run key are a series of values, which have a program name as their data. When a user, or all users, logs on to the computer each of the values under the Run key is executed and the corresponding programs are launched.</p>
+<table align="center" border="0" id="listtable">
+	<tbody>
+		<tr>
+			<td>
+				<strong>Policies\Explorer\Run keys:</strong></td>
+		</tr>
+		<tr>
+			<td bgcolor="#CCCCCC" width="95%">
+				HKLM\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer\Run</td>
+		</tr>
+		<tr>
+			<td bgcolor="#CCCCCC">
+				HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer\Run</td>
+		</tr>
+	</tbody>
+</table>
+<p>
+	&nbsp;</p>
+<p>
+	A complete listing of other startup locations that are not necessarily included in HijackThis can be found here : <a href="http://www.bleepingcomputer.com/tutorials/windows-program-automatic-startup-locations/">Windows Program Automatic Startup Locations</a></p>
+<p>
+	A sample of the type of O4 listings that you can see in HijackThis can be seen below:</p>
+<table border="0" cellpadding="5" width="100%">
+	<tbody>
+		<tr bgcolor="#CCCCCC">
+			<td rowspan="5" width="11%">
+				<strong>Example Listings:</strong></td>
+			<td width="89%">
+				04 - HKLM\..\Run: [nwiz] nwiz.exe /install</td>
+		</tr>
+		<tr bgcolor="#CCCCCC">
+			<td>
+				O4 - Global Startup: Adobe Reader Speed Launch.lnk = D:\Program Files\Adobe\Acrobat 7.0\Reader\reader_sl.exe</td>
+		</tr>
+		<tr bgcolor="#CCCCCC">
+			<td>
+				O4 - HKLM\..\Policies\Explorer\Run: [user32.dll] C:\Program Files\Video ActiveX Access\iesmn.exe</td>
+		</tr>
+		<tr bgcolor="#CCCCCC">
+			<td>
+				O4 - S-1-5-21-1222272861-2000431354-1005 Startup: numlock.vbs (User &#39;BleepingComputer.com&#39;)</td>
+		</tr>
+		<tr bgcolor="#CCCCCC">
+			<td>
+				O4 - HKUS\S-1-5-21-1229272821-2000478354--1005\..\Run: [Windows Defender] &quot;C:\Program Files\Windows Defender\MSASCui.exe&quot; -hide (User &#39;BleepingComputer.com&#39;)</td>
+		</tr>
+	</tbody>
+</table>
+<p>
+	Looking at the examples above, we see 5 different startup entries, with 2 of them being for users who are logged on in the background. If an entry starts with a long series of numbers and contains a username surrounded by parenthesis at the end, then this is a O4 entry for a user logged on in the background. Let&#39;s break down the examples one by one.</p>
+<ul>
+	<li>
+		<strong>04 - HKLM\..\Run: [nwiz] nwiz.exe /install </strong>- This entry corresponds to a startup launching from <font color="#0000FF">HKLM\Software\Microsoft\Windows\CurrentVersion\Run</font> for the currently logged in user. The name of the Registry value is <font color="#0000FF">nwiz</font> and when the entry is started it will launch the <font color="#0000FF">nwiz.exe /install</font> command.<br />
+		&nbsp;</li>
+	<li>
+		<strong>O4 - Global Startup: Adobe Reader Speed Launch.lnk = D:\Program Files\Adobe\Acrobat 7.0\Reader\reader_sl.exe - </strong>This entry corresponds to a program started by the All Users Startup Folder located at <font color="#0000FF">C:\Documents and Settings\All Users\Start Menu\Programs\Startup</font><strong>. </strong><br />
+		&nbsp;</li>
+	<li>
+		<strong>O4 - HKLM\..\Policies\Explorer\Run: [user32.dll] C:\Program Files\Video ActiveX Access\iesmn.exe</strong> - This entry corresponds to a value located under the <font color="#0000FF">HKLM\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer\Run</font> key. The name of the Registry value is <font color="#0000FF">user32.dll </font>and its data is <font color="#0000FF">C:\Program Files\Video ActiveX Access\iesmn.exe</font>. This particular example happens to be malware related.<br />
+		&nbsp;</li>
+	<li>
+		<strong>O4 - S-1-5-21-1222272861-2000431354-1005 Startup: numlock.vbs (User &#39;BleepingComputer.com&#39;) - </strong>This particular entry is a little different. As you can see there is a long series of numbers before and it states at the end of the entry the user it belongs to. Those numbers in the beginning are the user&#39;s SID, or security identifier, and is a number that is unique to each user on your computer. This SID translates to the BleepingComputer.com Windows user as shown at the end of the entry. The rest of the entry is the same as a normal one, with the program being launched from a user&#39;s Start Menu Startup folder and the program being launched is <font color="#0000FF">numlock.vbs</font>.<br />
+		&nbsp;</li>
+	<li>
+		<strong>O4 - HKUS\S-1-5-21-1222272861-2000431354-1005\..\Run: [Windows Defender] &quot;C:\Program Files\Windows Defender\MSASCui.exe&quot; -hide (User &#39;BleepingComputer.com&#39;) </strong> - This type of entry is similar to the first example, except that it belongs to the BleepingComputer.com user. This is just another example of HijackThis listing other logged in user&#39;s autostart entries.</li>
+</ul>
+<p>
+	Now that we know how to interpret the entries, let&#39;s learn how to fix them. When you fix O4 entries, Hijackthis will not delete the files associated with the entry. Instead, you must delete these manually afterwards, usually by having the user first reboot into safe mode. The Global Startup and Startup entries work a little differently. HijackThis will delete the shortcuts found in these entries, but not the file they are pointing to. If an actual executable resides in the Global Startup or Startup directories then the offending file <strong>WILL </strong> be deleted.</p>
+<p>
+	When examining O4 entries and trying to determine what they are for you should consult one of the following lists:</p>
+<p>
+	<a href="http://www.bleepingcomputer.com/startups/"><b>Bleeping Computer Startup Database</b></a><br />
+	<a href="http://www.answersthatwork.com/Tasklist_pages/tasklist.htm" rel="nofollow">Answers that work</a> <a href="http://greatis.com/regrun3appdatabase.htm" rel="nofollow"><br />
+	Greatis Startup Application Database</a><br />
+	<a href="http://www.sysinfo.org/startuplist.php" rel="nofollow">Pacman&#39;s Startup Programs List</a><br />
+	<a href="http://www.pacs-portal.co.uk/startup_content.php#THE_PROGRAMS" rel="nofollow">Pacman&#39;s Startup Lists for Offline Reading</a><br />
+	<a href="http://www.kephyr.com/filedb/index.php" rel="nofollow">Kephyr File Database</a> <br />
+	<a href="http://www.liutilities.com/products/wintaskspro/processlibrary/" rel="nofollow">Wintasks Process Library</a><br />
+	<a href="http://www.windowsstartup.com/wso/search.php" rel="nofollow">Windows Startup Online Database</a></p>
+<hr />
+<p>
+	<br />
+	<strong><u><a id="O5Diag" name="O5Diag" rel="nofollow"></a>O5 Section</u></strong></p>
+<p>
+	<br />
+	This section corresponds to having your Internet Explorer control show in the Control Panel.</p>
+<p>
+	It is possible to disable the seeing of a control in the Control Panel by adding an entry into the file called control.ini which is stored, for Windows XP at least, in c:\windows\control.ini. From within that file you can specify which specific control panels should not be visible.</p>
+<p>
+	<strong>Files User: </strong>control.ini</p>
+<table border="0" bordercolor="#CCCCCC" width="75%">
+	<tbody>
+		<tr bgcolor="#CCCCCC">
+			<td width="14%">
+				Example Listing</td>
+			<td width="86%">
+				O5 - control.ini: inetcpl.cpl=no</td>
+		</tr>
+	</tbody>
+</table>
+<p>
+	If you see a line like above then that may be a sign that a piece of software is trying to make it difficult for you to change your settings. Unless it is there for a specific known reason, like the administrator set that policy or Spybot - S&amp;D put the restriction in place, you can have HijackThis fix it.</p>
+<hr />
+<p>
+	<br />
+	<strong><u><a id="O6Diag" name="O6Diag" rel="nofollow"></a>O6 Section</u></strong></p>
+<p>
+	<br />
+	This section corresponds to an Administrative lock down for changing the options or homepage in Internet explorer by changing certain settings in the registry.</p>
+<p>
+	<strong>Registry Key: </strong> HKCU\Software\Policies\Microsoft\Internet Explorer\Restrictions</p>
+<table border="0" bordercolor="#CCCCCC" width="75%">
+	<tbody>
+		<tr bgcolor="#CCCCCC">
+			<td width="14%">
+				Example Listing</td>
+			<td width="86%">
+				O6 - HKCU\Software\Policies\Microsoft\Internet Explorer\Restrictions</td>
+		</tr>
+	</tbody>
+</table>
+<p>
+	These options should only appear if your administrator set them on purpose or if you used Spybots Home Page and Option Lock down features in the <strong>Mode</strong> -&gt; <strong>Advanced Mode</strong> -&gt; <strong>Tools</strong> -&gt; <strong>IE Tweaks</strong> section.</p>
+<hr />
+<p>
+	<br />
+	<strong><u><a id="O7Diag" name="O7Diag" rel="nofollow"></a>O7 Section</u></strong></p>
+<p>
+	<br />
+	This section corresponds to Regedit not being allowed to run by changing an entry in the registry.</p>
+<p>
+	<strong>Registry Key: </strong>HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\System</p>
+<table border="0" bordercolor="#CCCCCC" width="75%">
+	<tbody>
+		<tr bgcolor="#CCCCCC">
+			<td width="14%">
+				Example Listing</td>
+			<td width="86%">
+				O7 - HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\System: DisableRegedit=1</td>
+		</tr>
+	</tbody>
+</table>
+<p>
+	Please note that many Administrators at offices lock this down on purpose so having HijackThis fix this may be a breach of corporate policy. If you are the Administrator and it has been enabled without your permission, then have HijackThis fix it.</p>
+<hr />
+<p>
+	<br />
+	<strong><u><a id="O8Diag" name="O8Diag" rel="nofollow"></a>O8 Section</u></strong></p>
+<p>
+	<br />
+	This section corresponds to extra items being found in the in the Context Menu of Internet Explorer.</p>
+<p>
+	<strong>Registry Key: </strong>HKEY_CURRENT_USER\Software\Microsoft\Internet Explorer\MenuExt</p>
+<table border="0" bordercolor="#CCCCCC" width="75%">
+	<tbody>
+		<tr bgcolor="#CCCCCC">
+			<td width="14%">
+				Example Listing</td>
+			<td width="86%">
+				O8 - Extra context menu item: &amp;Google Search - res://c:\windows\GoogleToolbar1.dll/cmsearch.html</td>
+		</tr>
+	</tbody>
+</table>
+<p>
+	Each O8 entry will be a menu option that is shown when you right-click on Internet Explorer. The program shown in the entry will be what is launched when you actually select this menu option. Certain ones, like &quot;Browser Pal&quot; should always be removed, and the rest should be researched using Google. An example of a legitimate program that you may find here is the Google Toolbar.</p>
+<p>
+	When you fix these types of entries, HijackThis does not delete the file listed in the entry. If you need to remove this file, it is recommended that you reboot into safe mode and delete the file there.</p>
+<hr />
+<p>
+	<br />
+	<strong><u><a id="O9Diag" name="O9Diag" rel="nofollow"></a>O9 Section</u></strong></p>
+<p>
+	<br />
+	This section corresponds to having buttons on main Internet Explorer toolbar or items in the Internet Explorer &#39;Tools&#39; menu that are not part of the default installation.</p>
+<p>
+	<strong>Registry Key:</strong> HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Internet Explorer\Extensions registry key.</p>
+<table border="0" bordercolor="#CCCCCC" width="75%">
+	<tbody>
+		<tr bgcolor="#CCCCCC">
+			<td width="14%">
+				Example Listing</td>
+			<td width="86%">
+				O9 - Extra Button: AIM (HKLM)</td>
+		</tr>
+	</tbody>
+</table>
+<p>
+	If you do not need these buttons or menu items or recognize them as malware, you can remove them safely.</p>
+<p>
+	When you fix these types of entries, HijackThis will not delete the offending file listed. It is recommended that you reboot into safe mode and delete the offending file.</p>
+<hr />
+<p>
+	<br />
+	<strong><u><a id="O10Diag" name="O10Diag" rel="nofollow"></a>O10 Section</u></strong></p>
+<p>
+	<br />
+	This section corresponds to <strong>Winsock Hijackers</strong> or otherwise known as LSP (Layered Service Provider).</p>
+<p>
+	LSPs are a way to chain a piece of software to your Winsock 2 implementation on your computer. Since the LSPs are chained together, when Winsock is used, the data is also transported through each of the LSPs in the chain. Spyware and Hijackers can use LSPs to see all traffic being transported over your Internet connection.</p>
+<p>
+	You should use extreme caution when deleting these objects if it is removed without properly fixing the gap in the chain, you can have loss of Internet access.</p>
+<table border="0" bordercolor="#CCCCCC" width="75%">
+	<tbody>
+		<tr bgcolor="#CCCCCC">
+			<td width="14%">
+				Example Listing</td>
+			<td width="86%">
+				O10 - Broken Internet access because of LSP provider &#39;spsublsp.dll&#39; missing</td>
+		</tr>
+	</tbody>
+</table>
+<p>
+	Many Virus Scanners are starting to scan for Viruses, Trojans, etc at the Winsock level. The problem is that many tend to not recreate the LSPs in the right order after deleting the offending LSP. This can cause HijackThis to see a problem and issue a warning, which may be similar to the example above, even though the Internet is indeed still working. You should therefore seek advice from an experienced user when fixing these errors. It is also advised that you use LSPFix, see link below, to fix these.</p>
+<p>
+	<a href="http://www.safer-networking.org/" rel="nofollow"> Spybot</a> can generally fix these but make sure you get the latest version as the older ones had problems. There is a tool designed for this type of issue that would probably be better to use, called <a href="http://www.cexx.org/lspfix.htm" rel="nofollow">LSPFix</a>. For a great list of LSP and whether or not they are valid you can visit <a href="http://www.systemlookup.com/lists.php?list=9" rel="nofollow">SystemLookup&#39;s LSP List Page</a>.</p>
+<hr />
+<p>
+	<br />
+	<strong><u><a id="O11Diag" name="O11Diag" rel="nofollow"></a>O11 Section</u></strong></p>
+<p>
+	<br />
+	This section corresponds to a non-default option group that has been added to the <strong>Advanced Options Tab</strong> in Internet Options on IE.</p>
+<p>
+	If you look in your Internet Options for Internet Explorer you will see an Advanced Options tab. It is possible to add an entry under a registry key so that a new group would appear there.</p>
+<p>
+	<strong>Registry Key:</strong> HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Internet Explorer\AdvancedOptions</p>
+<table border="0" bordercolor="#CCCCCC" width="75%">
+	<tbody>
+		<tr bgcolor="#CCCCCC">
+			<td width="14%">
+				Example Listing</td>
+			<td width="86%">
+				O11 - Options group: [CommonName] CommonName</td>
+		</tr>
+	</tbody>
+</table>
+<p>
+	According to Merijn, of HijackThis, there is only one known Hijacker that uses this and it is CommonName. If you see CommonName in the listing you can safely remove it. If it is another entry, you should Google to do some research.</p>
+<hr />
+<p>
+	<br />
+	<strong><u><a id="O12Diag" name="O12Diag" rel="nofollow"></a>O12 Section</u></strong></p>
+<p>
+	<br />
+	This section corresponds to <strong>Internet Explorer Plugins</strong>.</p>
+<p>
+	Internet Explorer Plugins are pieces of software that get loaded when Internet Explorer starts to add functionality to the browser. There are many legitimate plugins available such as PDF viewing and non-standard image viewers.</p>
+<p>
+	<strong>Registry key</strong>: HKEY_LOCAL_MACHINE\software\microsoft\internet explorer\plugins</p>
+<p>
+	&nbsp;</p>
+<table border="0" bordercolor="#CCCCCC" width="75%">
+	<tbody>
+		<tr bgcolor="#CCCCCC">
+			<td width="14%">
+				Example Listing</td>
+			<td width="86%">
+				Plugin for .PDF: C:\Program Files\Internet Explorer\PLUGINS\nppdf32.dll</td>
+		</tr>
+	</tbody>
+</table>
+<p>
+	Most plugins are legitimate, so you should definitely Google the ones you do not recognize before you delete them. One known plugin that you should delete is the Onflow plugin that has the extension of .OFB.<br />
+	<br />
+	When you fix these types of entries with HijackThis, HijackThis will attempt to the delete the offending file listed. There are times that the file may be in use even if Internet Explorer is shut down. If the file still exists after you fix it with HijackThis, it is recommended that you reboot into safe mode and delete the offending file.</p>
+<hr />
+<p>
+	<br />
+	<strong><u><a id="O13Diag" name="O13Diag" rel="nofollow"></a>O13 Section</u></strong></p>
+<p>
+	<br />
+	This section corresponds to an IE DefaultPrefix hijack.</p>
+<p>
+	The default prefix is a setting on Windows that specifies how URLs that you enter without a preceding, http://, ftp://, etc are handled. By default Windows will attach a http:// to the beginning, as that is the default Windows Prefix. It is possible to change this to a default prefix of your choice by editing the registry. The Hijacker known as CoolWebSearch does this by changing the default prefix to a <strong>http://ehttp.cc/?</strong>. That means when you connect to a url, such as <strong>www.google.com</strong>, you will actually be going to <strong>http://ehttp.cc/?www.google.com</strong>, which is actually the web site for CoolWebSearch.</p>
+<p>
+	<strong>Registry Key:</strong> HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\URL\DefaultPrefix\</p>
+<table border="0" bordercolor="#CCCCCC" width="75%">
+	<tbody>
+		<tr bgcolor="#CCCCCC">
+			<td width="14%">
+				Example Listing</td>
+			<td width="86%">
+				O13 - WWW. Prefix: http://ehttp.cc/?</td>
+		</tr>
+	</tbody>
+</table>
+<p>
+	If you are experiencing problems similar to the one in the example above, you should run CWShredder. This program is used to remove all the known varieties of CoolWebSearch that may be on your machine. You can read a tutorial on how to use CWShredder here:</p>
+<p>
+	<a href="http://www.bleepingcomputer.com/tutorials/remove-coolwebsearch-with-cwshredder/">How to remove CoolWebSearch with CoolWeb Shredder</a></p>
+<p>
+	If CWShredder does not find and fix the problem, you should always let HijackThis fix this entry when it is found.</p>
+<hr />
+<p>
+	<br />
+	<strong><u><a id="O14Diag" name="O14Diag" rel="nofollow"></a>O14 Section</u></strong></p>
+<p>
+	<br />
+	This section corresponds to a &#39;Reset Web Settings&#39; hijack.</p>
+<p>
+	There is a file on your computer that Internet Explorer uses when you reset options back to their Windows default. That file is stored in c:\windows\inf\iereset.inf and contains all the default settings that will be used. When you reset a setting, it will read that file and change the particular setting to what is stated in the file. If a Hijacker changes the information in that file, then you will get re infected when you reset that setting, as it will read the incorrect information from the iereset.inf file.</p>
+<table border="0" bordercolor="#CCCCCC" width="75%">
+	<tbody>
+		<tr bgcolor="#CCCCCC">
+			<td width="14%">
+				Example Listing</td>
+			<td width="86%">
+				O14 - IERESET.INF: START_PAGE_URL=http://www.searchalot.com</td>
+		</tr>
+	</tbody>
+</table>
+<p>
+	Please be aware that it is possible for this setting to have been legitimately changed by a Computer Manufacturer or the Administrator of machine. If you do not recognize the address, then you should have it fixed.</p>
+<hr />
+<p>
+	<br />
+	<strong><u><a id="O15Diag" name="O15Diag" rel="nofollow"></a>O15 Section</u></strong></p>
+<p>
+	<br />
+	This section corresponds to sites or IP addresses in the Internet Explorer Trusted Zone and Protocol Defaults.</p>
+<p>
+	<strong>Trusted Zone</strong></p>
+<p>
+	Internet Explorer&#39;s security is based upon a set of zones. Each zone has different security in terms of what scripts and applications can be run from a site that is in that zone. There is a security zone called the Trusted Zone. This zone has the lowest security and allows scripts and applications from sites in this zone to run without your knowledge. It is therefore a popular setting for malware sites to use so that future infections can be easily done on your computer without your knowledge as these sites will be in the Trusted Zone..</p>
+<table border="0" width="90%">
+	<tbody>
+		<tr>
+			<td width="14%">
+				Registry Keys</td>
+			<td bgcolor="#CCCCCC" width="86%">
+				HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Internet Settings\ZoneMap\Domains</td>
+		</tr>
+		<tr>
+			<td>
+				&nbsp;</td>
+			<td bgcolor="#CCCCCC">
+				HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Internet Settings\ZoneMap\Domains</td>
+		</tr>
+		<tr>
+			<td>
+				&nbsp;</td>
+			<td bgcolor="#CCCCCC">
+				HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Internet Settings\ZoneMap\Ranges</td>
+		</tr>
+		<tr>
+			<td>
+				&nbsp;</td>
+			<td bgcolor="#CCCCCC">
+				HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Internet Settings\ZoneMap\Ranges</td>
+		</tr>
+	</tbody>
+</table>
+<p>
+	&nbsp;</p>
+<table border="0" bordercolor="#CCCCCC" width="90%">
+	<tbody>
+		<tr bgcolor="#CCCCCC">
+			<td width="14%">
+				Example Listing</td>
+			<td width="86%">
+				O15 - Trusted Zone: http://www.bleepingcomputer.com</td>
+		</tr>
+		<tr bgcolor="#CCCCCC">
+			<td>
+				&nbsp;</td>
+			<td>
+				O15 - Trusted IP range: 206.161.125.149</td>
+		</tr>
+		<tr bgcolor="#CCCCCC">
+			<td>
+				&nbsp;</td>
+			<td>
+				O15 - Trusted IP range: 206.161.125.149 (HKLM)</td>
+		</tr>
+	</tbody>
+</table>
+<p>
+	<br />
+	Which key, Domains or Ranges, is used by Internet Explorer is determined by the URL that the user is trying to reach. If the URL contains a domain name then it will search in the Domains subkeys for a match. If it contains an IP address it will search the Ranges subkeys for a match. When domains are added as a Trusted Site or Restricted they are assigned a value to signify that. If they are assigned a <strong>*=4</strong> value, that domain will be entered into the Restricted Sites zone. If they are given a <strong>*=2</strong> value, then that domain will be added to the Trusted Sites zone.</p>
+<p>
+	Adding an IP address works a bit differently. Under the SOFTWARE\Microsoft\Windows\CurrentVersion\Internet Settings\ZoneMap\Ranges key you may find other keys called Ranges1, Ranges2, Ranges3, Ranges4,... Each of these subkeys correspond to a particular security zone/protocol. If you add an IP address to a security zone, Windows will create a subkey starting with Ranges1 and designate that subkey as the one that will contain all IP addresses of a particular security zone for a particular protocol. For example, if you added http://192.168.1.1 as a trusted sites, Windows would create the first available Ranges key (Ranges1) and add a value of http=2. Any future trusted http:// IP addresses will be added to the Range1 key. Now if you added an IP address to the Restricted sites using the http protocol (ie. http://192.16.1.10), Windows would create another key in sequential order, called Range2. This would have a value of http=4 and any future IP addresses added to the restricted sites will be placed in that key. This continues on for each protocol and security zone setting combination.</p>
+<p>
+	If you ever see any domains or IP addresses listed here you should generally remove it unless it is a recognizable URL such as one your company uses. The most common listing you will find here are free.aol.com which you can have fixed if you want. I personally remove all entries from the Trusted Zone as they are ultimately unnecessary to be there.<br />
+	<br />
+	<strong>ProtocolDefaults</strong></p>
+<p>
+	When you use IE to connect to a site, the security permissions that are granted to that site are determined by the Zone it is in. There are 5 zones with each being associated with a specific identifying number. These zones with their associated numbers are:</p>
+<div align="center">
+	<table border="1" cellspacing="0" width="249">
+		<tbody>
+			<tr align="center" bgcolor="#CCCCCC">
+				<td>
+					<strong>Zone </strong></td>
+				<td>
+					<strong>Zone Mapping</strong></td>
+			</tr>
+			<tr>
+				<td width="101">
+					<strong>My Computer</strong></td>
+				<td width="138">
+					<div align="center">
+						0</div>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<strong>Intranet</strong></td>
+				<td>
+					<div align="center">
+						1</div>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<strong>Trusted</strong></td>
+				<td>
+					<div align="center">
+						2</div>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<strong>Internet</strong></td>
+				<td>
+					<div align="center">
+						3</div>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<strong>Restricted</strong></td>
+				<td>
+					<div align="center">
+						4</div>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+<p>
+	<br />
+	<br />
+	Each of the protocols that you use to connect to a site, such as HTTP, FTP, HTTPS, are then mapped to a one of these zones. The following are the default mappings:</p>
+<div align="center">
+	<table border="1" cellspacing="0" width="212">
+		<tbody>
+			<tr align="center" bgcolor="#CCCCCC">
+				<td>
+					<strong>Protocol</strong></td>
+				<td>
+					<strong>Zone Mapping</strong></td>
+			</tr>
+			<tr>
+				<td width="85">
+					<strong>HTTP</strong></td>
+				<td width="117">
+					<div align="center">
+						3</div>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<strong>HTTPS</strong></td>
+				<td>
+					<div align="center">
+						3</div>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<strong>FTP</strong></td>
+				<td>
+					<div align="center">
+						3</div>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<strong>@ivt</strong></td>
+				<td>
+					<div align="center">
+						1</div>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<strong>shell</strong></td>
+				<td>
+					<div align="center">
+						0</div>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+<p>
+	&nbsp;</p>
+<p>
+	For example, if you connect to a site using the http:// it will be part of the Internet zone by default. This is because the default zone for http is 3 which corresponds to the Internet zone. The problem arises if a malware changes the default zone type of a particular protocol. For example, if a malware has changed the default zone for the HTTP protocol to 2, then any site you connect to using http will now be considered part of the Trusted zone. As of now there are no known malware that causes this, but we may see differently now that HJT is enumerating this key.</p>
+<table border="0">
+	<tbody>
+		<tr>
+			<td width="106">
+				<strong>Registry Keys:</strong></td>
+			<td width="760">
+				HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Internet Settings\ZoneMap\ProtocolDefaults</td>
+		</tr>
+		<tr>
+			<td>
+				&nbsp;</td>
+			<td>
+				HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Internet Settings\ZoneMap\ProtocolDefaults</td>
+		</tr>
+	</tbody>
+</table>
+<p>
+	If the default settings are changed you will see a HJT entry similar to the one below:</p>
+<table border="0" bordercolor="#CCCCCC" width="75%">
+	<tbody>
+		<tr bgcolor="#CCCCCC">
+			<td width="14%">
+				Example Listing</td>
+			<td width="86%">
+				O15 - ProtocolDefaults: &#39;http&#39; protocol is in Trusted Zone, should be Internet Zone (HKLM)</td>
+		</tr>
+	</tbody>
+</table>
+<p>
+	To fix these settings so they are back to their defaults simply fix the HJT entry.</p>
+<hr />
+<p>
+	<br />
+	<strong><a id="O16Diag" name="O16Diag" rel="nofollow"></a><u>O16 Section</u></strong></p>
+<p>
+	<br />
+	This section corresponds to ActiveX Objects, otherwise known as Downloaded Program Files, for Internet Explorer.</p>
+<p>
+	ActiveX objects are programs that are downloaded from web sites and are stored on your computer. When Internet Explorer is started, these programs will be loaded as well to provide extra functionality. These objects are stored in C:\windows\Downloaded Program Files. They are also referenced in the registry by their CLSID which is the long string of numbers between the curly braces. To find a listing of all of the installed ActiveX component&#39;s CLSIDs, you can look under the <strong>HEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Code Store Database\Distribution Units\ </strong>Windows Registry key.</p>
+<p>
+	There are many legitimate ActiveX controls such as the one in the example which is an iPix viewer.</p>
+<table border="0" bordercolor="#CCCCCC" width="75%">
+	<tbody>
+		<tr bgcolor="#CCCCCC">
+			<td width="14%">
+				Example Listing</td>
+			<td width="86%">
+				O16 - DPF: {11260943-421B-11D0-8EAC-0000C07D88CF} (iPix ActiveX Control) - http://www.ipix.com/download/ipixx.cab</td>
+		</tr>
+	</tbody>
+</table>
+<p>
+	If you see names or addresses that you do not recognize, you should Google them to see if they are legitimate or not. If you feel they are not, you can have them fixed. By deleting most ActiveX objects from your computer, you will not have a problem as you can download them again. Be aware that there are some company applications that do use ActiveX objects so be careful. You should always delete 016 entries that have words like sex, porn, dialer, free, casino, adult, etc.</p>
+<p>
+	There is a program called <a href="http://www.javacoolsoftware.com/spywareblaster.html" rel="nofollow">SpywareBlaster</a> that has a large database of malicious ActiveX objects. You can download that and search through it&#39;s database for known ActiveX objects. A tutorial on using SpywareBlaster can be found here:</p>
+<p>
+	<a href="http://www.bleepingcomputer.com/tutorials/use-spywareblaster-to-protect-your-computer/">Using SpywareBlaster to protect your computer from Spyware, Hijackers, and Malware.</a><br />
+	<br />
+	When you fix O16 entries, HijackThis will attempt to delete them from your hard drive. Normally this will not be a problem, but there are times that HijackThis will not be able to delete the offending file. If this occurs, reboot into safe mode and delete it then.</p>
+<hr />
+<p>
+	<br />
+	<strong><u><a id="O17Diag" name="O17Diag" rel="nofollow"></a>O17 Section</u></strong></p>
+<p>
+	<br />
+	This section corresponds to Lop.com Domain Hacks.</p>
+<p>
+	When you go to a web site using an hostname, like www.bleepingcomputer.com, instead of an IP address, your computer uses a DNS server to resolve the hostname into an IP address like 192.168.1.0. Domain hacks are when the Hijacker changes the DNS servers on your machine to point to their own server, where they can direct you to any site they want. By adding google.com to their DNS server, they can make it so that when you go to www.google.com, they redirect you to a site of their choice.</p>
+<table border="0" bordercolor="#CCCCCC" width="75%">
+	<tbody>
+		<tr bgcolor="#CCCCCC">
+			<td width="14%">
+				Example Listing</td>
+			<td width="86%">
+				017 - HKLM\System\CS1\Services\VxD\MSTCP: NameServer = 69.57.146.14,69.57.147.175</td>
+		</tr>
+	</tbody>
+</table>
+<p>
+	If you see entries for this and do not recognize the domain as belonging to your ISP or company, and the DNS servers do not belong to your ISP or company, then you should have HijackThis fix it. You can go to <a href="http://www.arin.net/index.shtml" rel="nofollow">Arin </a>to do a whois a on the DNS server IP addresses to determine what company they belong to.</p>
+<hr />
+<p>
+	<br />
+	<strong><u><a id="O18Diag" name="O18Diag" rel="nofollow"></a>O18 Section</u></strong></p>
+<p>
+	<br />
+	This section corresponds to extra protocols and protocol hijackers.</p>
+<p>
+	This method is used by changing the standard protocol drivers that your computer users to ones that the Hijacker provides. This allows the Hijacker to take control of certain ways your computer sends and receives information.</p>
+<table border="0" width="93%">
+	<tbody>
+		<tr>
+			<td width="22%">
+				<strong>Registry Keys:</strong></td>
+			<td width="78%">
+				HKEY_LOCAL_MACHINE\SOFTWARE\Classes\PROTOCOLS\</td>
+		</tr>
+		<tr>
+			<td>
+				&nbsp;</td>
+			<td>
+				HKEY_LOCAL_MACHINE\SOFTWARE\Classes\CLSID</td>
+		</tr>
+		<tr>
+			<td>
+				&nbsp;</td>
+			<td>
+				HKEY_LOCAL_MACHINE\SOFTWARE\Classes\PROTOCOLS\Handler</td>
+		</tr>
+		<tr>
+			<td>
+				&nbsp;</td>
+			<td>
+				HKEY_LOCAL_MACHINE\SOFTWARE\Classes\PROTOCOLS\Filter</td>
+		</tr>
+	</tbody>
+</table>
+<p>
+	HijackThis first reads the Protocols section of the registry for non-standard protocols. When it finds one it queries the CLSID listed there for the information as to its file path.</p>
+<table border="0" bordercolor="#CCCCCC" width="75%">
+	<tbody>
+		<tr bgcolor="#CCCCCC">
+			<td width="14%">
+				Example Listing</td>
+			<td width="86%">
+				O18 - Protocol: relatedlinks - {5AB65DD4-01FB-44D5-9537-3767AB80F790} - C:\PROGRA~1\COMMON~1\MSIETS\msielink.dll</td>
+		</tr>
+	</tbody>
+</table>
+<p>
+	Common offenders to this are CoolWebSearch, Related Links, and Lop.com. If you see these you can have HijackThis fix it.</p>
+<p>
+	Use google to see if the files are legitimate. You can also use <a href="http://www.systemlookup.com/lists.php" rel="nofollow">SystemLookup.com</a> to help verify files.</p>
+<p>
+	It is important to note that fixing these entries does not seem to delete either the Registry entry or the file associated with it. You should have the user reboot into safe mode and manually delete the offending file.</p>
+<hr />
+<p>
+	<br />
+	<strong><u><a id="O19Diag" name="O19Diag" rel="nofollow"></a>O19 Section</u></strong></p>
+<p>
+	<br />
+	This section corresponds to User style sheet hijacking.</p>
+<p>
+	A style sheet is a template for how page layouts, colors, and fonts are viewed from an html page. This type of hijacking overwrites the default style sheet which was developed for handicapped users, and causes large amounts of popups and potential slowdowns.</p>
+<p>
+	<strong>Registry Key:</strong> HKEY_CURRENT_USER\Software\Microsoft\Internet Explorer\Styles\: User Stylesheets</p>
+<table border="0" bordercolor="#CCCCCC" width="75%">
+	<tbody>
+		<tr bgcolor="#CCCCCC">
+			<td width="14%">
+				Example Listing</td>
+			<td width="86%">
+				O19 - User style sheet: c:\WINDOWS\Java\my.css</td>
+		</tr>
+	</tbody>
+</table>
+<p>
+	You can generally remove these unless you have actually set up a style sheet for your use.<br />
+	<br />
+	When you fix these types of entries, HijackThis will not delete the offending file listed. It is recommended that you reboot into safe mode and delete the style sheet.</p>
+<hr />
+<p>
+	<br />
+	<strong><u><a id="O20Diag" name="O20Diag" rel="nofollow"></a>O20 Section</u></strong></p>
+<p>
+	<br />
+	<strong>AppInit_DLLs</strong><br />
+	<br />
+	This section corresponds to files being loaded through the AppInit_DLLs Registry value and the Winlogon Notify Subkeys</p>
+<p>
+	The AppInit_DLLs registry value contains a list of dlls that will be loaded when user32.dll is loaded. As most Windows executables use the user32.dll, that means that any DLL that is listed in the AppInit_DLLs registry key will be loaded also. This makes it very difficult to remove the DLL as it will be loaded within multiple processes, some of which can not be stopped without causing system instability. The user32.dll file is also used by processes that are automatically started by the system when you log on. This means that the files loaded in the AppInit_DLLs value will be loaded very early in the Windows startup routine allowing the DLL to hide itself or protect itself before we have access to the system.</p>
+<p>
+	This method is known to be used by a CoolWebSearch variant and can only be seen in Regedit by right-clicking on the value, and selecting Modify binary data. <a href="http://www.resplendence.com/reglite" rel="nofollow">Registrar Lite</a>, on the other hand, has an easier time seeing this DLL.</p>
+<p>
+	<strong>Registry Key:</strong> HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Windows\\AppInit_DLLs</p>
+<table border="0" bordercolor="#CCCCCC" width="81%">
+	<tbody>
+		<tr bgcolor="#CCCCCC">
+			<td width="16%">
+				Example Listing</td>
+			<td width="84%">
+				O20 - AppInit_DLLs: C:\WINDOWS\System32\winifhi.dll</td>
+		</tr>
+	</tbody>
+</table>
+<p>
+	There are very few legitimate programs that use this Registry key, but you should proceed with caution when deleting files that are listed here. Use our <a href="http://www.bleepingcomputer.com/startups/"><b>Bleeping Computer Startup Database</b></a> or <a href="http://www.systemlookup.com/lists.php" rel="nofollow">SystemLookup.com</a> to help verify files.<br />
+	<br />
+	When you fix these types of entries, HijackThis will not delete the offending file listed. It is recommended that you reboot into safe mode and delete the offending file.<br />
+	<br />
+	<br />
+	<strong>Winlogon Notify</strong><br />
+	<br />
+	The Winlogon Notify key is generally used by Look2Me infections. HijackThis will list all Winlogon Notify keys that are non-standard so that you can easily spot one that does not belong. You can recognize the Look2Me infection key as it will have a DLL with a random filename located in the %SYSTEM% directory. The name of the Notify key will have a normal looking name even though it does not belong there.</p>
+<p>
+	<strong>Registry Key: </strong>HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon\Notify</p>
+<table border="0" bordercolor="#CCCCCC" width="81%">
+	<tbody>
+		<tr bgcolor="#CCCCCC">
+			<td width="16%">
+				Example Listing</td>
+			<td width="84%">
+				O20 - Winlogon Notify: Extensions - C:\WINDOWS\system32\i042laho1d4c.dll</td>
+		</tr>
+	</tbody>
+</table>
+<p>
+	When you fix this entry it will remove the key from the registry but leave the file. You must then manually delete this file<br />
+	.</p>
+<hr />
+<p>
+	<br />
+	<strong><u><a id="O21Diag" name="O21Diag" rel="nofollow"></a>O21 Section</u></strong></p>
+<p>
+	<br />
+	This section corresponds to files being loaded through the ShellServiceObjectDelayLoad registry key.</p>
+<p>
+	This Registry contains values in a similar way as the Run key does. The difference is that instead of pointing to the file itself, it points to the CLSID&#39;s InProcServer, which contains the information about the particular DLL file that is being used.</p>
+<p>
+	The files under this key are loaded automatically by Explorer.exe when your computer starts. Because Explorer.exe is the shell for your computer, it will always start, thus always loading the files under this key. These files are therefore loaded early in the startup process before any human intervention occurs.</p>
+<p>
+	A hijacker that uses the method can be recognized by the following entries:</p>
+<table border="0" bordercolor="#CCCCCC" width="90%">
+	<tbody>
+		<tr bgcolor="#CCCCCC">
+			<td width="14%">
+				Example Listing</td>
+			<td width="86%">
+				R0 - HKCU\Software\Microsoft\Internet Explorer\Main,Start Page = C:\WINDOWS\secure.html<br />
+				R1 - HKCU\Software\Microsoft\Internet Explorer\Main,Default_Page_URL = C:\WINDOWS\secure.html</td>
+		</tr>
+	</tbody>
+</table>
+<p>
+	<strong>Registry Key:</strong> HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\ShellServiceObjectDelayLoad</p>
+<table border="0" bordercolor="#CCCCCC" width="90%">
+	<tbody>
+		<tr bgcolor="#CCCCCC">
+			<td width="14%">
+				Example Listing</td>
+			<td width="86%">
+				O21 - SSODL: System - {3CE8EED5-112D-4E37-B671-74326D12971E} - C:\WINDOWS\system32\system32.dll</td>
+		</tr>
+	</tbody>
+</table>
+<p>
+	HijackThis uses an internal white list to not show common legitimate entries under this key. If you do see a listing for this, then it is not a standard one and should be considered suspicious. Use our <a href="http://www.bleepingcomputer.com/startups/"><b>Bleeping Computer Startup Database</b></a> or <a href="http://www.systemlookup.com/lists.php" rel="nofollow">SystemLookup.com</a> to help verify files.<br />
+	<br />
+	When you fix these types of entries, HijackThis will not delete the offending file listed. It is recommended that you reboot into safe mode and delete the offending file.</p>
+<hr />
+<p>
+	<br />
+	<strong><u><a id="O22Diag" name="O22Diag" rel="nofollow"></a>O22 Section</u></strong></p>
+<p>
+	<br />
+	This section corresponds to files being loaded through the SharedTaskScheduler registry value.</p>
+<p>
+	The entries in this registry run automatically when you start windows. This key is commonly used by SmitFraud variants to display fake security alerts and to download rogue anti-spyware programs.</p>
+<p>
+	<strong>Registry Key</strong>: HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\SharedTaskScheduler</p>
+<table border="0" bordercolor="#CCCCCC" width="96%">
+	<tbody>
+		<tr bgcolor="#CCCCCC">
+			<td width="14%">
+				Example Listing</td>
+			<td width="86%">
+				O22 - SharedTaskScheduler: (no name) - {3F143C3A-1457-6CCA-03A7-7AA23B61E40F} - c:\windows\system32\mtwirl32.dll</td>
+		</tr>
+	</tbody>
+</table>
+<p>
+	Be carefully when removing items listed in these keys as some are legitimate. Your can use google to see if you can determine if it is a valid. Use our <a href="http://www.bleepingcomputer.com/startups/"><b>Bleeping Computer Startup Database</b></a> or <a href="http://www.systemlookup.com/lists.php" rel="nofollow">SystemLookup.com</a> to help verify files.</p>
+<p>
+	Hijackthis will delete the SharedTaskScheduler value associated with this entry, but will not delete the CLSID that it points to and the file that the CSLID&#39;s Inprocserver32 points to. Therefore you should always have the user reboot into safe mode and manually delete this file.</p>
+<p>
+	&nbsp;</p>
+<hr />
+<p>
+	<br />
+	<strong><u><a id="O23Diag" name="O23Diag" rel="nofollow"></a>O23 Section</u></strong></p>
+<p>
+	<br />
+	This section corresponds to XP,NT, 2003, and 2003 services.</p>
+<p>
+	Services are programs that are loaded automatically by Windows on startup. These services are loaded regardless of whether or not a user logs on to the the computer and tend to be used to handle system wide tasks such as Windows operating system features, antivirus software, or application servers. Lately there has been an increased trend for malware to use services to infect a computer. It is therefore important to examine each of the services listed for ones that do not look correct. Common malware services you may find are Home Search Assistant and the new Bargain Buddy variant. Examples of lines associated with those infections can be found below.</p>
+<p>
+	The majority of the Microsoft services have been added to the white list so they will not be listed. If you would like to see these services you can start HijackThis with the /ihatewhitelists flag.</p>
+<p>
+	<strong>Legitimate Service</strong> <strong>Example:</strong></p>
+<br />
+<table border="0" bordercolor="#CCCCCC" width="96%">
+	<tbody>
+		<tr bgcolor="#CCCCCC">
+			<td width="13%">
+				Example Listing</td>
+			<td width="87%">
+				O23 - Service: AVG7 Alert Manager Server (Avg7Alrt) - GRISOFT, s.r.o. - C:\PROGRA~1\Grisoft\AVGFRE~1\avgamsvr.exe</td>
+		</tr>
+	</tbody>
+</table>
+<br />
+<p>
+	<strong>Home Search Assistant Example:</strong></p>
+<table border="0" bordercolor="#CCCCCC" width="96%">
+	<tbody>
+		<tr bgcolor="#CCCCCC">
+			<td width="13%">
+				Example Listing</td>
+			<td width="87%">
+				O23 - Service: Workstation NetLogon Service - Unknown - C:\WINDOWS\system32\crxu.exe</td>
+		</tr>
+	</tbody>
+</table>
+<br />
+<p>
+	<strong>Bargain Buddy Examples:</strong></p>
+<br />
+<table border="0" bordercolor="#CCCCCC" width="96%">
+	<tbody>
+		<tr bgcolor="#CCCCCC">
+			<td width="13%">
+				Example Listing</td>
+			<td width="87%">
+				O23 - Service: ZESOFT - Unknown - C:\WINDOWS\zeta.exe</td>
+		</tr>
+		<tr bgcolor="#CCCCCC">
+			<td>
+				&nbsp;</td>
+			<td>
+				O23 - Service: ISEXEng - Unknown - C:\WINDOWS\System32\angelex.exe</td>
+		</tr>
+	</tbody>
+</table>
+<p>
+	<br />
+	When you fix a O23 entry Hijackthis will change the startup for this service to disabled, stop the service, and then ask the user to reboot. It will not delete the actual service from the registry or the file it points to. In order to delete the service you will need to know the service name. This name is the text between the parenthesis. If the display name is the same as the service name, then it will not list the service name.</p>
+<p>
+	There are three methods you can use to delete the service key:</p>
+<ol>
+	<li>
+		Delete it using XP&#39;s SC command you would type the following from a command prompt:<br />
+		<br />
+		<strong>sc delete servicename</strong><br />
+		<br />
+		To delete the service using a registry file you can use the following example:<br />
+		&nbsp;</li>
+	<li>
+		Use a registry file to delete a service. The below registry file is an example of how to remove Angelex.exe Bargain buddy variant:<br />
+		<br />
+		<table border="0" cellspacing="0">
+			<tbody>
+				<tr>
+					<td bgcolor="#CCCCCC">
+						<strong>REGEDIT4 </strong><br />
+						<br />
+						<strong>[-HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Enum\Root\LEGACY_ISEXENG]</strong><br />
+						<strong>[-HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\ISEXEng] </strong><br />
+						<strong>[-HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Enum\Root\LEGACY_ISEXENG]</strong><br />
+						<strong>[-HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Services\ISEXEng]</strong><br />
+						<strong>[-HKEY_LOCAL_MACHINE\SYSTEM\ControlSet003\Enum\Root\LEGACY_ISEXENG]</strong><br />
+						<strong>[-HKEY_LOCAL_MACHINE\SYSTEM\ControlSet003\Services\ISEXEng]</strong></td>
+				</tr>
+			</tbody>
+		</table>
+	</li>
+	<li>
+		Use HijackThis to delete the service. You can click on <strong>Config</strong>, then<strong> Misc Tools</strong>, and then press the <strong>Delete an NT service.. </strong>button. When it opens you should then enter the service name and press <strong>OK</strong>.</li>
+</ol>
+<p>
+	<br />
+	Be careful when removing items listed in these keys as for the most part they are legitimate. To research O23 entries you can use the <a href="http://www.bleepingcomputer.com/startups/"><b>Bleeping Computer Startup Database</b></a> or <a href="http://www.systemlookup.com/lists.php" rel="nofollow">SystemLookup.com</a>.</p>
+<p>
+	&nbsp;</p>
+<hr />
+<p>
+	<br />
+	<strong><u><a id="O24Diag" name="O24Diag" rel="nofollow"></a>O24 Section</u></strong></p>
+<p>
+	This section corresponds to Windows Active Desktop Components.</p>
+<p>
+	Active Desktop Components are local or remote html files that are embedded directly onto your desktop as a background. Infections use this method to embed messages, pictures, or web pages directly on to a users desktop. Common examples of infections that use this method are the SmitFraud family of rogue anti-spyware programs. These infections use Active Desktop Components to display fake security warnings as the background of a user&#39;s desktop. Other infections that use this method can be found at the following links:</p>
+<blockquote>
+	<p>
+		<a href="http://threatinfo.trendmicro.com/vinfo/grayware/ve_graywaredetails.asp?gname=ADW_AVGOLD.A" rel="nofollow">AVGold</a><br />
+		<a href="http://vil.nai.com/vil/content/v_135962.htm" rel="nofollow">Raze AntiSpyware</a><br />
+		<a href="http://www.symantec.com/security_response/writeup.jsp?docid=2006-041312-2136-99&amp;tabid=2" rel="nofollow">AlfaCleaner</a><br />
+		<a href="http://www.symantec.com/security_response/writeup.jsp?docid=2005-031915-0219-99&amp;tabid=2" rel="nofollow">TopAntiSpyware</a></p>
+</blockquote>
+<p>
+	The registry key associated with Active Desktop Components is:</p>
+<p>
+	<strong>Registry Key</strong>: HKEY_CURRENT_USER\Software\Microsoft\Internet Explorer\Desktop\Components</p>
+<p>
+	Each specific component is then listed as a numeric subkey of the above Key starting with the number 0. For example:</p>
+<blockquote>
+	<p>
+		<strong>HKEY_CURRENT_USER\Software\Microsoft\Internet Explorer\Desktop\Components\0\<br />
+		HKEY_CURRENT_USER\Software\Microsoft\Internet Explorer\Desktop\Components\1\<br />
+		HKEY_CURRENT_USER\Software\Microsoft\Internet Explorer\Desktop\Components\2\</strong></p>
+</blockquote>
+<p>
+	Example listings of Desktop Component entries used by SmitFraud variants are:</p>
+<table border="0" bordercolor="#CCCCCC" width="96%">
+	<tbody>
+		<tr bgcolor="#CCCCCC">
+			<td width="16%">
+				<strong>Example Listing</strong></td>
+			<td width="84%">
+				<p>
+					O24 - Desktop Component 0: (Security) - %windir%\index.html<br />
+					O24 - Desktop Component 1: (no name) - %Windir%\warnhp.html</p>
+			</td>
+		</tr>
+	</tbody>
+</table>
+<p>
+	As it is possible someone has purposely configured an Active Desktop Component, if you see one that is unfamiliar it is advised that you ask the user if they purposely added it.</p>
+<p>
+	When fixing these entries, HijackThis will only remove the Desktop Component in the registry. The actual HTML file being referenced, though, will not be deleted. Therefore, if the component is malware related you should manually delete this file.</p>
+<p>
+	<strong><u><a name="conc" rel="nofollow"></a>Conclusion</u></strong></p>
+<p>
+	<br />
+	HijackThis is a very powerful tool for finding out the specifics of your browser and what is running in Windows. Unfortunately, diagnosing the scan results of HijackThis can be complicated. Hopefully my recommendations and explanations will ease the way somewhat. This program, though, is to be used with caution, as incorrectly removing some items can cause problems with legitimate programs. If you have any questions please feel free to post them in our <a href="http://www.bleepingcomputer.com/forums/forum22.html">spyware forums</a>.</p>
+<div>
+	<p>
+		Also if you would like more information on removing malware using HijackThis and other antispyware tools you can join the Bleeping Computer HijackThis Trainee program. For admittance please send a message using this <a href="http://www.bleepingcomputer.com/forums/index.php?act=Msg&amp;CODE=04&amp;entered_name=Grinler">this link</a>.</p>
+	<p>
+		<strong>--<br />
+		Lawrence Abrams<br />
+		Bleeping Computer Internet Security and Spyware Tutorials<br />
+		<a href="http://www.bleepingcomputer.com/">BleepingComputer.com: Computer Support &amp; Tutorials for the beginning computer user.</a></strong></p>
+	<p>
+		<br />
+		<em>Revision Information:<br />
+		<br />
+		03/30/04: Added all startup location to the O4 section. Added information about the F2 section. Added named anchor tags listed at the end of this document so people can link to me.</em><br />
+		<em>03/31/04: Added more complete information about the F2 and F3 sections.</em><br />
+		<em>04/01/04: Added more stringent warning to O10 section about Virus Scanners not chaining LSPs properly.</em><br />
+		<em>04/09/04: Added information about CWShredder to section O13.<br />
+		04/24/04: Added information as to what Obfuscated means in the R sections.<br />
+		04/25/04: Added sharper warning to top and changed style to reflect newer tutorials.</em><br />
+		<em>05/21/04: Added information about R3 entries that end with a _</em><br />
+		<em>07/09/04: Added information about the new O20,O21,O22 entries, new process manager and host file manager, as well as revised for bug fixes in version 1.98<br />
+		12/24/04: Added information about the new features of version 1.99.0 Extensive update on the O15 entry. Info on the O23 entries. Info on new features such as multi-process killer, adsspy, and interface<br />
+		02/16/05: Added information about the new features of version 1.99.1. Heavy focus on the new O15: Protocol Defaults, and the O20 Winlogon Notify key.</em><br />
+		<em>05/29/06: Updated the O6 entry to reflect correct location of immunize feature.<br />
+		03/16/07: Added information about O24 section add by Trend Micro after purchasing HijackThis.<br />
+		03/20/07: Fixed the link to Hoster<br />
+		06/20/07: Major update on O4 entries and how Trend can now remove the O24 entries.<br />
+		07/17/07: Reworded a confusing portion of the O4 information and added more information about the various O4 entries.<br />
+		11/14/07: Fixed various errors, links, and typos. Thanks nickW!<br />
+		05/02/08: Updated F0,F1,F2,F3 section per suggestion from Metallica. Thanks!<br />
+		04/21/09: Cleared up some confusion about O16 entries .<br />
+		05/28/09: Updated guide to reflect standalone executable and installer.<br />
+		05/15/11: Updated images. </em></p>
+	<p>
+		<strong>Named Anchor Tags</strong>: For those who have requested named anchor tags so they can link directly to different locations in this document, they are listed below.</p>
+	<table border="0" width="58%">
+		<tbody>
+			<tr bgcolor="#CCCCCC">
+				<td width="10%">
+					<div align="center">
+						Named Anchor Tag</div>
+				</td>
+				<td width="40%">
+					<div>
+						Location in Document</div>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					Warning</td>
+				<td>
+					Warning in beginning</td>
+			</tr>
+			<tr>
+				<td>
+					Intro</td>
+				<td>
+					Main Intro in the beginning of document</td>
+			</tr>
+			<tr>
+				<td>
+					HowToUse</td>
+				<td>
+					Beginning of How To use HijackThis</td>
+			</tr>
+			<tr>
+				<td>
+					StartingHT</td>
+				<td>
+					Starting HijackThis Picture</td>
+			</tr>
+			<tr>
+				<td>
+					HTConfig</td>
+				<td>
+					Configuration HijackThis Picture</td>
+			</tr>
+			<tr>
+				<td>
+					HTScanResults</td>
+				<td>
+					Scan Results HijackThis Picture</td>
+			</tr>
+			<tr>
+				<td>
+					HTObjectInfo</td>
+				<td>
+					Object Information HijackThis Picture</td>
+			</tr>
+			<tr>
+				<td>
+					HTItemRemove</td>
+				<td>
+					Fix Items HijackThis Picture</td>
+			</tr>
+			<tr>
+				<td>
+					HTRestore</td>
+				<td>
+					Restore HijackThis Picture</td>
+			</tr>
+			<tr>
+				<td>
+					HTStartupList</td>
+				<td>
+					Startup List HijackThis Picture</td>
+			</tr>
+			<tr>
+				<td>
+					HTProcessManager</td>
+				<td>
+					Process Manager HowTo</td>
+			</tr>
+			<tr>
+				<td>
+					HTHostsManager</td>
+				<td>
+					Hosts File Manager HowTo</td>
+			</tr>
+			<tr>
+				<td>
+					delreb</td>
+				<td>
+					How to use the Delete on Reboot Tool</td>
+			</tr>
+			<tr>
+				<td>
+					adsspy</td>
+				<td>
+					How to use ADS Spy</td>
+			</tr>
+			<tr>
+				<td>
+					uniman</td>
+				<td>
+					How to use the Uninstall Manager</td>
+			</tr>
+			<tr>
+				<td>
+					InterpretIntro</td>
+				<td>
+					Intro to Interpreting the Sections</td>
+			</tr>
+			<tr>
+				<td>
+					RDiag</td>
+				<td>
+					R Section Explanation</td>
+			</tr>
+			<tr>
+				<td>
+					FDiag</td>
+				<td>
+					F Section Explanation</td>
+			</tr>
+			<tr>
+				<td>
+					NDiag</td>
+				<td>
+					N Section Explanation</td>
+			</tr>
+			<tr>
+				<td>
+					O1Diag</td>
+				<td>
+					O1 Section Explanation</td>
+			</tr>
+			<tr>
+				<td>
+					O2Diag</td>
+				<td>
+					O2 Section Explanation</td>
+			</tr>
+			<tr>
+				<td>
+					O3Diag</td>
+				<td>
+					O3 Section Explanation</td>
+			</tr>
+			<tr>
+				<td>
+					O4Diag</td>
+				<td>
+					O4 Section Explanation</td>
+			</tr>
+			<tr>
+				<td>
+					O5Diag</td>
+				<td>
+					O5 Section Explanation</td>
+			</tr>
+			<tr>
+				<td>
+					O6Diag</td>
+				<td>
+					O6 Section Explanation</td>
+			</tr>
+			<tr>
+				<td>
+					O7Diag</td>
+				<td>
+					O7 Section Explanation</td>
+			</tr>
+			<tr>
+				<td>
+					O8Diag</td>
+				<td>
+					O8 Section Explanation</td>
+			</tr>
+			<tr>
+				<td>
+					O9Diag</td>
+				<td>
+					O9 Section Explanation</td>
+			</tr>
+			<tr>
+				<td>
+					O10Diag</td>
+				<td>
+					O10 Section Explanation</td>
+			</tr>
+			<tr>
+				<td>
+					O11Diag</td>
+				<td>
+					O11 Section Explanation</td>
+			</tr>
+			<tr>
+				<td>
+					O12Diag</td>
+				<td>
+					O12 Section Explanation</td>
+			</tr>
+			<tr>
+				<td>
+					O13Diag</td>
+				<td>
+					O13 Section Explanation</td>
+			</tr>
+			<tr>
+				<td>
+					O14Diag</td>
+				<td>
+					O14 Section Explanation</td>
+			</tr>
+			<tr>
+				<td>
+					O15Diag</td>
+				<td>
+					O15 Section Explanation</td>
+			</tr>
+			<tr>
+				<td>
+					O16Diag</td>
+				<td>
+					O16 Section Explanation</td>
+			</tr>
+			<tr>
+				<td>
+					O17Diag</td>
+				<td>
+					O17 Section Explanation</td>
+			</tr>
+			<tr>
+				<td>
+					O18Diag</td>
+				<td>
+					O18 Section Explanation</td>
+			</tr>
+			<tr>
+				<td>
+					O19Diag</td>
+				<td>
+					O19 Section Explanation</td>
+			</tr>
+			<tr>
+				<td>
+					O20Diag</td>
+				<td>
+					O20 Section Explanation</td>
+			</tr>
+			<tr>
+				<td>
+					O21Diag</td>
+				<td>
+					O21 Section Explanation</td>
+			</tr>
+			<tr>
+				<td>
+					O22Diag</td>
+				<td>
+					O22 Section Explanation</td>
+			</tr>
+			<tr>
+				<td>
+					O23Diag</td>
+				<td>
+					O23 Section Explanation</td>
+			</tr>
+			<tr>
+				<td>
+					O24Diag</td>
+				<td>
+					O24 Section Explanation</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+  </div>
+  
+ <div style='margin-left: 10px;'>
+   <script language="JavaScript" src="http://www.bleepstatic.com/js/cas/tutorials.js"></script>
+
+   <script type="text/javascript">
+        google_ad_client = "pub-0920899300397823"; google_ad_channel = '5063087600'; google_ad_output = 'js'; google_max_num_ads = '1'; google_ad_type = 'text'; google_image_size = '728x90'; google_feedback = 'on'; google_skip = google_adnum; bc_ad_unit = 'banner';
+   // -->
+   </script>
+   <script language="JavaScript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js"></script>
+ </div>
+  <div id='related_content'>
+ <div id='related_content_title'>
+  Users who read this also read:
+ </div>
+  <div class="rtb_list">
+  <div class="rtb_list_image"><img src="http://www.bleepstatic.com/images/site/tutorials/hl-images/q/quarantine-s.png" width="64px" height="64px" alt=" Image"></div>
+  <div class="rtb_list_cont">
+   <div class="rtb_list_title"><h2><a href="http://www.bleepingcomputer.com/tutorials/how-to-remove-a-trojan-virus-worm-or-malware/" onClick="_gaq.push(['_trackEvent', 'tutorials_rt', 'bottom', 'how-to-remove-a-trojan-virus-worm-or-malware']);">How to remove a Trojan, Virus, Worm, or other Malware</a></h2></div>
+   <div class="rtb_list_summ">If you use a computer, read the newspaper, or watch the news, you will know about computer viruses or other malware. These are those malicious programs that once they infect your machine will start causing havoc on your computer. What many people do not know is that there are many different types of infections that are categorized in the general category of Malware.</div>
+  </div>
+  
+ </div>
+ <div class="rtb_list">
+  <div class="rtb_list_image"><img src="http://www.bleepstatic.com/images/site/tutorials/hl-images/a/antivirus-s.png" width="64px" height="64px" alt=" Image"></div>
+  <div class="rtb_list_cont">
+   <div class="rtb_list_title"><h2><a href="http://www.bleepingcomputer.com/tutorials/simple-steps-for-removing-malware/" onClick="_gaq.push(['_trackEvent', 'tutorials_rt', 'bottom', 'simple-steps-for-removing-malware']);">4 Simple Steps for removing Spyware, Hijackers, Viruses, and other Malware</a></h2></div>
+   <div class="rtb_list_summ">If you are experiencing problems such as viruses that wont go away, your browser gets redirected to pages that you did not ask for, popups, slowness on your computer, or just a general sense that things may not be right, it is possible you are infected with some sort of malware. To remove this infection please follow these 4 simple steps outlined below. Not all of these steps may be necessary, but ...</div>
+  </div>
+  
+ </div>
+ <div class="rtb_list">
+  <div class="rtb_list_image"><img src="http://www.bleepstatic.com/images/site/tutorials/hl-images/s/secunia-psi.jpg" width="64px" height="64px" alt=" Image"></div>
+  <div class="rtb_list_cont">
+   <div class="rtb_list_title"><h2><a href="http://www.bleepingcomputer.com/tutorials/detect-vulnerable-programs-with-secunia-psi/" onClick="_gaq.push(['_trackEvent', 'tutorials_rt', 'bottom', 'detect-vulnerable-programs-with-secunia-psi']);">How to detect vulnerable and out-dated programs using Secunia Personal Software Inspector (PSI)</a></h2></div>
+   <div class="rtb_list_summ">One of the most important things a user can do to keep their computer secure is make sure they are using the latest security updates for Windows and their installed programs. Unfortunately, staying on top of these updates can be a time consuming and frustrating task when you have hundreds of programs installed on your computer. Thankfully, we have a utility called Secunia PSI, which is vital  ...</div>
+  </div>
+  
+ </div>
+ <div class="rtb_list">
+  <div class="rtb_list_image"><img src="http://www.bleepstatic.com/images/site/tutorials/hl-images/s/search-files-s.png" width="64px" height="64px" alt=" Image"></div>
+  <div class="rtb_list_cont">
+   <div class="rtb_list_title"><h2><a href="http://www.bleepingcomputer.com/tutorials/how-to-see-hidden-files-in-windows/" onClick="_gaq.push(['_trackEvent', 'tutorials_rt', 'bottom', 'how-to-see-hidden-files-in-windows']);">How to see hidden files in Windows</a></h2></div>
+   <div class="rtb_list_summ">By default Windows hides certain files from being seen with Windows Explorer or My Computer. This is done to protect these files, which are usually system files, from accidentally being modified or deleted by the user. Unfortunately viruses, spyware, and hijackers often hide there files in this way making it hard to find them and then delete them.</div>
+  </div>
+  
+ </div>
+ <div class="rtb_list">
+  <div class="rtb_list_image"><img src="http://www.bleepstatic.com/images/site/tutorials/hl-images/r/registry.jpg" width="64px" height="64px" alt=" Image"></div>
+  <div class="rtb_list_cont">
+   <div class="rtb_list_title"><h2><a href="http://www.bleepingcomputer.com/tutorials/demystifying-the-windows-registry/" onClick="_gaq.push(['_trackEvent', 'tutorials_rt', 'bottom', 'demystifying-the-windows-registry']);">Demystifying the Windows Registry</a></h2></div>
+   <div class="rtb_list_summ">Ever since Windows 95, the Windows operating system has been using a centralized hierarchical database to store system settings, hardware configurations, and user preferences. This database is called the Windows Registry or more commonly known as the Registry. When new hardware is installed in the computer, a user changes a settings such as their desktop background, or a new software is installed, ...</div>
+  </div>
+  
+ </div>
+
+</div>
+  <div id="tute_comments">
+<p>&nbsp;</p>
+<h3>Comments:</h3>
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'bleepingcomputer'; // required: replace example with your forum shortname
+    var disqus_identifier = 't42';
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
+  <div id="tute_footer">
+   
+ <hr />
+ <p>This article is published and created for http://www.bleepingcomputer.com/, otherwise known as <strong>Bleeping Computer&reg;</strong>, and is covered by all copyright laws.  All articles on this website are copyright &copy;&nbsp; 2003-2012 by Bleeping Computer, LLC.  All right reserved.  Use of these articles is limited to viewing and printing for personal use only.  If you would like to use this material or portions of this material for other purposes you must receive explicit <a href='/contact/' target="_blank">permission</a> from Bleeping Computer before reprinting or redistributing this article in any medium.
+ </p>
+  </div>
+ </div>
+</div>
+
+	</td>
+
+	<!-- End of Middle Column -->
+		<!-- Begin Right Column -->
+
+		<td valign="top" width="320px">
+		 <div id="r_sidebar">
+ 
+ <div class='side_box'>
+  <span class='side_box_title'>Search for a Tutorial</span>
+  <div class='side_box_cont'>
+   <form action="http://www.bleepingcomputer.com/tutorials/search/" method="get">
+    <input type='hidden' name='act' value='search' />
+    <input type='text' maxlength='60' size='30' class='forminput' name='keyword' />
+    <p><input type='submit' value='Search' class='forminput' /></p>
+   </form>
+  </div>
+ </div>
+
+ <div class='side_box'>
+  <span class='side_box_title'>Tutorials Navigation</span>
+  <div class='side_box_cont'>
+   <ul class='sb_ul bul_list'>
+    <li><a href="http://www.bleepingcomputer.com/tutorials/">Tutorials Home</a></li>
+    <li><a href="http://www.bleepingcomputer.com/tutorials/new/">New Tutorials</a></li>
+    <li><a href="http://www.bleepingcomputer.com/tutorials/popular/">Popular Tutorials</a></li>
+    <li><a href="/rss-feeds/">RSS Feed</a></li>
+   </ul>
+  </div>
+ </div>
+
+ 
+
+ 
+<div class='side_box'>
+ <div class='side_box_ad'>
+<script type="text/javascript">
+//<![CDATA[
+ord = window.ord || Math.floor(Math.random()*1E16);
+document.write('<script type="text/javascript" src="http://ad.doubleclick.net/adj/ns.bleepingcomputer/tutorials;ppos=atf;kw=;tile=2;sz=300x250,300x600;ord=' + ord + '?"><\/script>');
+//]]>
+</script>
+<noscript><a href="http://ad.doubleclick.net/jump/ns.bleepingcomputer/tutorials;ppos=atf;kw=;tile=2;sz=300x250,300x600;ord=123456789?" target="_blank" ><img src="http://ad.doubleclick.net/ad/ns.bleepingcomputer/tutorials;ppos=atf;kw=;tile=2;sz=300x250,300x600;ord=123456789??" border="0" alt="" /></a></noscript>
+ </div>
+</div>
+ <div class='side_box'>
+ <span class='side_box_title'>Most Popular Tutorials</span>
+ <div class='side_box_cont'>
+  <p><a href='http://www.bleepingcomputer.com/tutorials/how-to-start-windows-in-safe-mode/'>How to start Windows in Safe Mode</a></p>
+<p><a href='http://www.bleepingcomputer.com/tutorials/how-to-remove-a-trojan-virus-worm-or-malware/'>How to remove a Trojan, Virus, Worm, or other Malware</a></p>
+<p><a href='http://www.bleepingcomputer.com/tutorials/how-to-see-hidden-files-in-windows/'>How to see hidden files in Windows</a></p>
+<p><a href='http://www.bleepingcomputer.com/tutorials/how-to-use-hijackthis/'>HijackThis Tutorial - How to use HijackThis to remove Browser Hijackers & Spyware</a></p>
+<p><a href='http://www.bleepingcomputer.com/tutorials/repair-windows-with-windows-startup-repair/'>How to automatically repair Windows Vista using Startup Repair</a></p>
+
+ </div>
+</div>
+
+ 
+<div class='side_box'>
+ <div class='side_box_ad'>
+<script type="text/javascript">
+//<![CDATA[
+ord = window.ord || Math.floor(Math.random()*1E16);
+document.write('<script type="text/javascript" src="http://ad.doubleclick.net/adj/ns.bleepingcomputer/tutorials;ppos=atf;kw=;tile=2;sz=300x250;ord=' + ord + '?"><\/script>');
+//]]>
+</script>
+<noscript><a href="http://ad.doubleclick.net/jump/ns.bleepingcomputer/tutorials;ppos=atf;kw=;tile=2;sz=300x250;ord=123456789?" target="_blank" ><img src="http://ad.doubleclick.net/ad/ns.bleepingcomputer/tutorials;ppos=atf;kw=;tile=2;sz=300x250;ord=123456789??" border="0" alt="" /></a></noscript>
+ </div>
+</div>
+ 
+
+</div>
+
+		</td>
+
+		<!-- End Right Column -->
+	</tr>
+</table>
+
+ <div class="ban_cont">
+  <div id="bottom_ban">
+   
+<script type="text/javascript">
+//<![CDATA[
+ord = window.ord || Math.floor(Math.random()*1E16);
+document.write('<script type="text/javascript" src="http://ad.doubleclick.net/adj/ns.bleepingcomputer/startups;ppos=atf;kw=;tile=2;sz=970x90,728x90;ord=' + ord + '?"><\/script>');
+//]]>
+</script>
+<noscript><a href="http://ad.doubleclick.net/jump/ns.bleepingcomputer/startups;ppos=atf;kw=;tile=2;sz=970x90,728x90;ord=123456789?" target="_blank" ><img src="http://ad.doubleclick.net/ad/ns.bleepingcomputer/startups;ppos=atf;kw=;tile=2;sz=970x90,728x90;ord=123456789??" border="0" alt="" /></a></noscript>
+
+  </div>
+ </div>
+
+<!-- End of Content Section -->
+<br />
+<table width="100%" border="0" cellspacing="4" cellpadding="0">
+  <tr>
+    <td align='center'>
+                <a href="http://www.bleepingcomputer.com/advertise/" rel="nofollow">Advertise</a>
+                &nbsp;&nbsp;|&nbsp;&nbsp;
+                <a href="http://www.bleepingcomputer.com/about/" rel="nofollow">About Us</a>   
+                &nbsp;&nbsp;|&nbsp;&nbsp;
+                <a href="http://www.bleepingcomputer.com/user-agreement/" rel="nofollow">User Agreement</a>            
+                &nbsp;&nbsp;|&nbsp;&nbsp;
+                <a href="http://www.bleepingcomputer.com/privacy/" rel="nofollow">Privacy Policy</a>
+                &nbsp;&nbsp;|&nbsp;&nbsp;
+                <a href="http://www.bleepingcomputer.com/contact/" rel="nofollow">Contact Us</a>     
+                &nbsp;&nbsp;|&nbsp;&nbsp;
+                <a href="http://www.bleepingcomputer.com/sitemap/">Sitemap</a>
+                &nbsp;&nbsp;|&nbsp;&nbsp;
+                <a href="http://www.bleepingcomputer.com/chat/" rel="nofollow">Chat</a>
+                &nbsp;&nbsp;|&nbsp;&nbsp;
+                <a href="http://www.bleepingcomputer.com/tutorials/">Tutorials</a>
+                &nbsp;&nbsp;|&nbsp;&nbsp;
+                <a href="http://www.bleepingcomputer.com/uninstall/">Uninstall List</a>
+    </td>
+  </tr>
+  <tr>
+    <td align='center'>
+                <a href="http://www.bleepingcomputer.com/forums/">Tech Support Forums</a>
+                &nbsp;&nbsp;|&nbsp;&nbsp;
+                <a href="http://www.bleepingcomputer.com/glossary/">The Computer Glossary</a>
+                &nbsp;&nbsp;|&nbsp;&nbsp;
+                <a href="http://www.bleepingcomputer.com/rss-feeds/">RSS Feeds</a>
+                &nbsp;&nbsp;|&nbsp;&nbsp;
+                <a href="http://www.bleepingcomputer.com/startups/">Startups</a>
+                &nbsp;&nbsp;|&nbsp;&nbsp;
+                <a href="http://www.bleepingcomputer.com/filedb/">The File Database</a>
+                &nbsp;&nbsp;|&nbsp;&nbsp;
+                <a href="http://www.bleepingcomputer.com/virus-removal/">Virus Removal Guides</a>
+                &nbsp;&nbsp;|&nbsp;&nbsp;
+                <a href="http://www.bleepingcomputer.com/download/">Downloads</a>
+    </td>
+  </tr>
+</table>
+<br /><br />
+<div align='center'>
+ <font size="1">
+  
+  &copy;&nbsp;2003-2012 All Rights Reserved <a href="http://www.bleepingcomputer.com/"><b>Bleeping Computer LLC</b></a>.
+  
+ </font>
+</div>
+<br /><br />
+<!--End of Footer-->
+
+
+
+<!-- End Wrapper -->
+</div>
+
+</body>
+</html>

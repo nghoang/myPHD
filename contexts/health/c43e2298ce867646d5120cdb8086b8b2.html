@@ -1,0 +1,404 @@
+<!-- Content [Open Page] -->
+<!DOCTYPE html public "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<HTML>
+<HEAD>
+
+<!-- Inserted by Resolution: BEGIN EmbedTmplHeadHook -->
+
+		<link rel="stylesheet" 
+				href="/NR/System/WBC/Customizable/WBC.css">
+		<script language="JavaScript" 
+				src="/NR/System/WBC/Customizable/WBCFuncPagesConfig/UIStringConstants/JavaScriptUIStrings.js" 
+				type="text/javascript"></script>
+		<script language="JavaScript" 
+				src="/NR/System/WBC/Customizable/OptionsClient.js" 
+				type="text/javascript"></script>
+		<script language="JavaScript" 
+				src="/NR/System/WBC/Internals/Shared/Dates.js" 
+				type="text/javascript"></script>
+		<script language="JavaScript" 
+				src="/NR/System/WBC/Internals/Shared/Windows.js" 
+				type="text/javascript"></script>
+		<script language="JavaScript" 
+				src="/NR/System/WBC/Internals/Shared/CommonClient.js" 
+				type="text/javascript"></script>
+	<META name="ROBOTS" content="FOLLOW,INDEX">
+
+<!-- Inserted by Resolution: END EmbedTmplHeadHook -->
+
+<SCRIPT language="JavaScript">
+var jsBASEIMGFOLDER = "/NR/ykregion/images/";
+var jsBASEHOSTHEADER= "www.york.ca";
+var jsBASEURL       = "http://" + jsBASEHOSTHEADER + "/";
+var jsBASEURL0      = "http://" + jsBASEHOSTHEADER;
+</SCRIPT>
+
+<script LANGUAGE = 'JavaScript'>
+ var	jBaseUrl_GISapp = "http://www.york.ca/NR/scripts/gis/"
+</script>
+<META NAME="LASTUPDATED" CONTENT="2012-11-06">
+<META NAME="Keywords" CONTENT="region, york, government">
+
+<script LANGUAGE="JavaScript" src="/nr/ykregion/scripts/commonfunc.js"></script> 
+<script LANGUAGE="JavaScript" src="/NR/ykregion/scripts/dom.js"></script>
+<script LANGUAGE="JavaScript" src="/NR/ykregion/scripts/windows.js"></script>
+<script language="JavaScript">
+<!--
+function Startup() {
+	// Preload Site Images   		ref : commonfunc.js
+	MM_preloadImages('/NR/ykregion/images/top_b_eserv.gif', '/NR/ykregion/images/top_b_eserv_up.gif', '/NR/ykregion/images/top_b_council.gif', '/NR/ykregion/images/top_b_council_up.gif', '/NR/ykregion/images/top_b_tran.gif', '/NR/ykregion/images/top_b_tran_up.gif', '/NR/ykregion/images/top_b_yl.gif', '/NR/ykregion/images/top_b_yl_up.gif', '/NR/ykregion/images/top_b_employment.gif', '/NR/ykregion/images/top_b_employment_up.gif', '/NR/ykregion/images/top_b_calendar.gif', '/NR/ykregion/images/top_b_calendar_up.gif', '/NR/ykregion/images/top_b_tourism.gif', '/NR/ykregion/images/top_b_tourism_up.gif', '/NR/ykregion/images/mnu_abo.gif', '/NR/ykregion/images/mnu_abo_up.gif', '/NR/ykregion/images/mnu_ser.gif', '/NR/ykregion/images/mnu_ser_up.gif', '/NR/ykregion/images/mnu_reg.gif', '/NR/ykregion/images/mnu_reg_up.gif', '/NR/ykregion/images/mnu_news4.gif', '/NR/ykregion/images/mnu_news4_up.gif', '/NR/ykregion/images/mnu_bus.gif', '/NR/ykregion/images/mnu_bus_up.gif', '/NR/ykregion/images/mnu_notice.gif', '/NR/ykregion/images/mnu_notice_up.gif', '/NR/ykregion/images/mnu_pub.gif', '/NR/ykregion/images/mnu_pub_up.gif', '/NR/ykregion/images/mnu_dep.gif', '/NR/ykregion/images/mnu_dep_up.gif', '/NR/ykregion/images/mnu_mun.gif', '/NR/ykregion/images/mnu_mun_up.gif')
+	defaultStatus='';
+
+	
+}
+
+window.onload = Startup
+//-->
+</script>
+
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+   HM_DOM = (document.getElementById) ? true : false;
+   HM_NS4 = (document.layers) ? true : false;
+    HM_IE = (document.all) ? true : false;
+   HM_IE4 = HM_IE && !HM_DOM;
+   HM_Mac = (navigator.appVersion.indexOf("Mac") != -1);
+  HM_IE4M = HM_IE4 && HM_Mac;
+HM_IsMenu = (HM_DOM || HM_NS4 || (HM_IE4 && !HM_IE4M));
+
+HM_BrowserString = HM_NS4 ? "NS4" : HM_DOM ? "DOM" : "IE4";
+
+if(window.event + "" == "undefined") event = null;
+function HM_f_PopUp(){return false};
+function HM_f_PopDown(){return false};
+popUp = HM_f_PopUp;
+popDown = HM_f_PopDown;
+
+function getPositionX(elementID) 
+{	
+	if (HM_NS4){
+		return eval("window." + elementID).x
+	} else {
+		var obj = HM_DOM ? document.getElementById(elementID) : HM_IE4 ? document.all(elementID) : null;
+		var xPos = 0
+		while (obj != null) {
+	  		xPos += obj.offsetLeft;
+  			obj = obj.offsetParent;
+  		}
+		return xPos;
+	}
+}
+
+function getPositionY(elementID) 
+{	
+	if (HM_NS4){
+		return eval("window." + elementID).y
+	} else {
+		var obj = HM_DOM ? document.getElementById(elementID) : HM_IE4 ? document.all(elementID) : null;
+		var yPos = 0
+		while (obj != null) {
+	  		yPos += obj.offsetTop;
+  			obj = obj.offsetParent;
+  		}
+		return yPos;
+	}
+}
+	
+function HM_MenuOffsetX ( menuNo, offsetX ) 
+{ 
+	return getPositionX('HMMENU_'+menuNo) + ((typeof(offsetX)=='undefined')?2:offsetX); 
+} 
+
+function HM_MenuOffsetY ( menuNo, offsetY ) 
+{ 
+	return  getPositionY('HMMENU_'+menuNo) + ((typeof(offsetY)=='undefined')?25:offsetY);
+}
+
+-->
+</SCRIPT> 
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+if(HM_IsMenu) {
+
+HM_PG_MenuWidth		= 180;
+HM_PG_FontFamily	= "Tahoma, Verdana, Arial";
+HM_PG_FontSize 		= "8";
+HM_PG_FontBold		= true
+HM_PG_FontColor 	= "#FFFFFF";
+HM_PG_FontColorOver = "#FFFFFF";
+HM_PG_BGColor 		= "#3100A5";
+HM_PG_BGColorOver 	= "#4E7FC8";
+HM_PG_BorderWidth 	= 1;
+HM_PG_BorderColor 	= "#D6CEEF";
+HM_PG_BorderStyle 	= "solid";
+HM_PG_SeparatorSize = 1;
+HM_PG_SeparatorColor= "#cccccc";
+HM_PG_ChildOffset = 5;
+
+HM_PG_ImageSrc 		= "/NR/ykregion/menu/HM_More_yellow_right.gif"
+HM_PG_ImageSrcOver	= "/NR/ykregion/menu/HM_More_navy_right.gif"
+HM_PG_ImageSrcLeft	= "/NR/ykregion/menu/HM_More_yellow_left.gif"
+HM_PG_ImageSrcLeftOver="/NR/ykregion/menu/HM_More_navy_left.gif"
+
+HM_PG_ClickKill = false;
+HM_PG_KeepHilite = true;
+HM_PG_TopSecondsVisible = 1;
+HM_PG_StatusDisplayLink = 1;
+
+HM_PG_UponDisplay = null;
+HM_PG_UponHide = null;
+HM_PG_StatusDisplayBuild = 0;
+}
+//-->
+</SCRIPT> 
+			<script LANGUAGE="JavaScript" src="/NR/ykregion/menu/menuarray.js"></script> 
+<title>Default Public Health Services</title>
+<LINK REL="stylesheet" TYPE="text/css" HREF="/nr/ykregion/css/navigation.css">
+<LINK REL="stylesheet" TYPE="text/css" HREF="/nr/ykregion/css/content.css">
+</HEAD>
+
+
+<BODY LEFTMARGIN=0 RIGHTMARGIN=0 TOPMARGIN=0 MARGINWIDTH=0 MARGINHEIGHT=0>
+<!-- Inserted by Resolution: BEGIN EmbedBodyBeginHook -->
+
+<!-- Inserted by Resolution: END EmbedBodyBeginHook -->
+
+<a name="top"></a>
+
+<table cellpadding=0 cellspacing=0 width=100% height=100% border=0>
+<tr>
+	
+	<td width=159 valign=top background="/NR/ykregion/images/main0301.gif">
+		<A href="/nr/ykregion/extpg/InstructionsDIS.htm">
+		<img src="/NR/ykregion/images/main0101.gif" border=0
+			alt="Welcome to the York Region Web site. If you would like to navigate this site using screen reading software click here now">
+		</A>
+	</td>
+	
+	<td valign=top colspan=2>
+		<table cellpadding=0 cellspacing=0 width=100% border=0>
+		<tr>
+			<td width=1%  valign=top><img src="/NR/ykregion/images/main0102.gif" alt=""></td>
+			<td width=100% align=center valign=top background="/NR/ykregion/images/main0103.gif">
+				<table cellpadding=0 cellspacing=0 border=0><tr>
+<TD valign=top><A HREF="http://www.york.ca/e-services/" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('TOPIMGMNU0','','/NR/ykregion/images/top_b_eserv_up.gif',1)"><IMG SRC="/NR/ykregion/images/top_b_eserv.gif" border=0 name=TOPIMGMNU0 alt="Link to York Region e-Services"></A></TD>
+<TD valign=top><A HREF="http://www.york.ca/Regional+Government/" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('TOPIMGMNU4','','/NR/ykregion/images/top_b_council_up.gif',1)"><IMG SRC="/NR/ykregion/images/top_b_council.gif" border=0 name=TOPIMGMNU4 alt="Link to Regional+Government"></A></TD>
+<TD valign=top><A HREF="http://www.york.ca/Services/Transit/" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('TOPIMGMNU8','','/NR/ykregion/images/top_b_tran_up.gif',1)"><IMG SRC="/NR/ykregion/images/top_b_tran.gif" border=0 name=TOPIMGMNU8 alt="York Region Transit"></A></TD>
+<TD valign=top><A HREF="http://www.york.ca/NR/yorklink/" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('TOPIMGMNU12','','/NR/ykregion/images/top_b_yl_up.gif',1)"><IMG SRC="/NR/ykregion/images/top_b_yl.gif" border=0 name=TOPIMGMNU12 alt="Yorklink Directory"></A></TD>
+<TD valign=top><A HREF="http://www.york.ca/Employment/" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('TOPIMGMNU16','','/NR/ykregion/images/top_b_employment_up.gif',1)"><IMG SRC="/NR/ykregion/images/top_b_employment.gif" border=0 name=TOPIMGMNU16 alt="Link to Careers"></A></TD>
+<TD valign=top><A HREF="http://www.york.ca/Calendars" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('TOPIMGMNU20','','/NR/ykregion/images/top_b_calendar_up.gif',1)"><IMG SRC="/NR/ykregion/images/top_b_calendar.gif" border=0 name=TOPIMGMNU20 alt="Region Calendar"></A></TD>
+<TD valign=top><A HREF="http://www.york.ca/Tourism/" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('TOPIMGMNU24','','/NR/ykregion/images/top_b_tourism_up.gif',1)"><IMG SRC="/NR/ykregion/images/top_b_tourism.gif" border=0 name=TOPIMGMNU24 alt="York Tourism"></A></TD>
+</tr></table>
+
+			</td>
+			<td width=1%  valign=top><img src="/NR/ykregion/images/main0104.gif" alt="" border=0></td>
+		</tr>
+		</table>
+		<table cellpadding=0 cellspacing=0 width=100% border=0 bordercolor="#0000ff" >
+		<tr>
+			<td width=1%  valign=top><img src="/NR/ykregion/images/main0202.gif" alt=""></td>
+			<td width=100% align=center valign=top background="/NR/ykregion/images/main0203.gif">
+				<table cellpadding=0 cellspacing=0 border=0 height=100% bordercolor=#ff0000 ><tr>
+<TD valign=middle nowrap class=TopLink><A HREF="http://www.york.ca/" class=TopLink>Home</A></TD>
+<TD valign=middle nowrap class=TopLink><A HREF="http://www.york.ca/disclaimer" class=TopLink>Disclaimer</A></TD>
+<TD valign=middle nowrap class=TopLink><A HREF="http://maps.york.ca" class=TopLink>Maps</A></TD>
+<TD valign=middle nowrap class=TopLink><A HREF="http://www.york.ca/_Contact+Us.asp" class=TopLink>Contact Us</A></TD>
+<TD valign=middle nowrap class=TopLink><A HREF="http://www.york.ca/NR/YKREGION/EXTPG/sitemap.asp" class=TopLink>Site Map</A></TD>
+
+	<form name="gs" method="GET" action="http://search.york.ca/search" >
+	<td valign="middle" nowrap><INPUT name="q" value="" maxLength="256" size="4" class="searchinput" 
+		style="width:100px; height:18px; margin-top:2px;"  ></td>
+	<td valign="middle" nowrap>
+		<div class="TopLink">
+			<A href="//#", class=TopLink onclick='document.gs.submit();return false;' title='Search'>
+				<IMG SRC="/NR/ykregion/images/navigation/search.gif" align=absmiddle width=16 height=16 border=0  alt="SEARCH">&nbsp;Search&nbsp;</A>
+		</div>
+	</td>
+		<input type="hidden" name="site" value="default_collection">
+		<input type="hidden" name="entqr" value="0">
+		<input type="hidden" name="ud" value="1">
+		<input type="hidden" name="sort" value="date:D:L:d1">
+		<input type="hidden" name="output" value="xml_no_dtd">
+		<input type="hidden" name="oe" value="UTF-8"><input type="hidden" name="ie" value="UTF-8">
+		<input type="hidden" name="client" value="default_frontend">
+		<input type="hidden" name="proxystylesheet" value="default_frontend">
+		<input type="hidden" name="btnG" value="Search">
+	</form>
+
+<TD valign=middle nowrap><DIV class=TopLink><A HREF="/Services/Public+Health+and+Safety/Default+Health+Services+Department.htm?PF=1" class=TopLink><IMG SRC="/NR/ykregion/images/navigation/print.gif" align=absmiddle width=16 height=16 border=0  alt="PRINT">&nbsp;Print&nbsp;</A></DIV></TD>
+</tr></table>
+
+			</td>
+			<td width=1% valign=top><img src="/NR/ykregion/images/main0204.gif" alt="" border=0></td>
+		</tr>
+		</table>
+		<table cellpadding=0 cellspacing=0 width=100% border=0 id=sectHorizNavigation >
+		<tr width=100% height=22>
+		
+				<td bgcolor="#ccccff" width="100%"><A HREF="http://www.york.ca" class=HNav>YORK REGION</A><SPAN class=HNavTxt>></SPAN><A HREF="/Services/" class=HNav>Services</A><SPAN class=HNavTxt>></SPAN><A HREF="/Services/Public+Health+and+Safety/" class=HNav>Public Health and Safety</A></td>
+		</tr>
+		</table>
+	</td>
+</tr>
+
+<tr height=100%>
+	
+	<td width=159 align=left valign=top height=100%>
+		
+<table cellpadding=0 cellspacing=0 border=0 height=100% >
+<tr height=1%>
+	<td bgcolor="#3200A4" valign=top>
+		<TABLE cellpadding=0 cellspacing=0 border=0><TR><TD height=15>&nbsp</TD></TR><TR><TD valign=top><A ID="HMMENU_20" HREF="http://www.york.ca/About+Us/" onmouseover="MM_swapImage('IMGMENU_20','','/NR/ykregion/images/mnu_abo_up.gif',1); popUp('elMenu20',event)" onMouseOut="MM_swapImgRestore(); popDown('elMenu20')"><IMG SRC="/NR/ykregion/images/mnu_abo.gif" border=0 name=IMGMENU_20 alt="Menu About Us"></A></TD></TR>
+
+<TR><TD valign=top><A ID="HMMENU_21" HREF="http://www.york.ca/Services/" onmouseover="MM_swapImage('IMGMENU_21','','/NR/ykregion/images/mnu_ser_up.gif',1); popUp('elMenu21',event)" onMouseOut="MM_swapImgRestore(); popDown('elMenu21')"><IMG SRC="/NR/ykregion/images/mnu_ser.gif" border=0 name=IMGMENU_21 alt="Menu Services"></A></TD></TR>
+
+<TR><TD valign=top><A ID="HMMENU_22" HREF="http://www.york.ca/Regional+Government/" onmouseover="MM_swapImage('IMGMENU_22','','/NR/ykregion/images/mnu_reg_up.gif',1); popUp('elMenu22',event)" onMouseOut="MM_swapImgRestore(); popDown('elMenu22')"><IMG SRC="/NR/ykregion/images/mnu_reg.gif" border=0 name=IMGMENU_22 alt="Menu Regional Government"></A></TD></TR>
+
+<TR><TD ><A HREF="http://www.york.ca/Publications/News/" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('IMGMENU_3','','/NR/ykregion/images/mnu_news4_up.gif',1)"><IMG SRC="/NR/ykregion/images/mnu_news4.gif" border=0 name=IMGMENU_3 alt="Menu News"></A></TD></TR>
+
+<TR><TD valign=top><A ID="HMMENU_24" HREF="http://www.york.ca/Business/" onmouseover="MM_swapImage('IMGMENU_24','','/NR/ykregion/images/mnu_bus_up.gif',1); popUp('elMenu24',event)" onMouseOut="MM_swapImgRestore(); popDown('elMenu24')"><IMG SRC="/NR/ykregion/images/mnu_bus.gif" border=0 name=IMGMENU_24 alt="Business"></A></TD></TR>
+
+<TR><TD valign=top><A ID="HMMENU_25" HREF="http://www.york.ca/Public+Notices/" onmouseover="MM_swapImage('IMGMENU_25','','/NR/ykregion/images/mnu_notice_up.gif',1); popUp('elMenu25',event)" onMouseOut="MM_swapImgRestore(); popDown('elMenu25')"><IMG SRC="/NR/ykregion/images/mnu_notice.gif" border=0 name=IMGMENU_25 alt="Menu Public Notices"></A></TD></TR>
+
+<TR><TD ><A HREF="http://www.york.ca/Publications/" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('IMGMENU_6','','/NR/ykregion/images/mnu_pub_up.gif',1)"><IMG SRC="/NR/ykregion/images/mnu_pub.gif" border=0 name=IMGMENU_6 alt="Menu Publications"></A></TD></TR>
+
+<TR><TD ><A HREF="http://www.york.ca/Departments/" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('IMGMENU_7','','/NR/ykregion/images/mnu_dep_up.gif',1)"><IMG SRC="/NR/ykregion/images/mnu_dep.gif" border=0 name=IMGMENU_7 alt="Menu Departments"></A></TD></TR>
+
+<TR><TD ><A HREF="http://www.york.ca/Municipal+Links/" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('IMGMENU_8','','/NR/ykregion/images/mnu_mun_up.gif',1)"><IMG SRC="/NR/ykregion/images/mnu_mun.gif" border=0 name=IMGMENU_8 alt="Municipalities"></A></TD></TR>
+
+<TR><TD ><IMG SRC="/NR/ykregion/images/mnu_end.gif" border=0 alt=""></TD></TR></TABLE>
+	</td>
+	<td valign=top><img src="/NR/ykregion/images/main0402f.jpg" border=0 alt=""></td>
+</tr>
+<tr height=100%>
+	<td colspan=2 background="/NR/ykregion/images/main0501.gif">&nbsp;</td>
+</tr>
+</table> 
+	</td>
+	
+	<td valign=top width=100% height=100% > 
+<div>
+	<TABLE border=1 cellSpacing=0 cellPadding=0 width=619 height=480>
+<TBODY>
+<TR>
+<TD style="BACKGROUND: #c2c88a" vAlign=top width=208 align=left><!--First Column Start-->
+<TABLE border=0 cellSpacing=0 cellPadding=0>
+<TBODY>
+<TR>
+<TD style="BACKGROUND: #dad4ad">
+<DIV><IMG border=0 src="/NR/rdonlyres/qy6bgriivxt3omqtmgxh5ergyf5fkqrzxrryfjrb6lz4xtavay7lvznzuhqugu6bjssuoorcbg2b4eooq6wqwwca6c/Healthy-Living.jpg"></DIV>
+<DIV><IMG border=0 src="/NR/rdonlyres/3m3nnlv67rn6i7rxebjnt7t2r5yzubwexxrw7oqyucqbfpvjaontttlvfreh2a4hcuyjc4y7lcmtjvdixyghaz34ih/HL-title.gif"> </DIV>
+<DIV style="PADDING-TOP: 2px">
+<UL style="LIST-STYLE-TYPE: none; PADDING-LEFT: 5px; MARGIN-LEFT: 0px">
+<LI style="PADDING-BOTTOM: 5px"><A href="/Services/Public+Health+and+Safety/Child+and+Family+Health/Breastfeeding+Babies+and+Children.htm">Breastfeeding</A>&nbsp; &nbsp; 
+<LI style="PADDING-BOTTOM: 5px"><A href="/Services/Public+Health+and+Safety/Cancer+Prevention/default+Cancer+Prevention.htm">Cancer Screening and Prevention</A> 
+<LI style="PADDING-BOTTOM: 5px"><A href="/Services/Public+Health+and+Safety/Dental+Services/Default+Dental+Service.htm">Dental Health</A> 
+<LI style="PADDING-BOTTOM: 5px"><A href="/Services/Public+Health+and+Safety/Sexual+Health/HarmReductionHome.htm">Harm Reduction - Needle Exchange Program</A> 
+<LI style="PADDING-BOTTOM: 5px"><A href="/Departments/Health+Services/Health+Connection.htm">Health Connection</A>&nbsp; 
+<LI style="PADDING-BOTTOM: 5px"><A href="/Services/Public+Health+and+Safety/Immunization/default+Immunization+.htm">Immunization</A> 
+<LI style="PADDING-BOTTOM: 5px"><A href="/Services/Public+Health+and+Safety/Health+Inspection/Infection+Prevention+and+Control.htm">Infection Prevention</A> 
+<LI style="PADDING-BOTTOM: 5px"><A href="/Services/Public+Health+and+Safety/Injury+Prevention/default+Injury+Prevention.htm">Injury Prevention</A> 
+<LI style="PADDING-BOTTOM: 5px"><A href="/Services/Public+Health+and+Safety/Food+and+Nutrition/">Nutrition</A> 
+<LI style="PADDING-BOTTOM: 5px"><A href="/Services/Public+Health+and+Safety/Child+and+Family+Health/Parenting+Your+Child.htm">Parenting</A> 
+<LI style="PADDING-BOTTOM: 5px"><A href="/Services/Public+Health+and+Safety/Healthy+Lifestyles/AHC+Home.htm">Physical Activity</A> &nbsp; 
+<LI style="PADDING-BOTTOM: 5px"><A href="/Services/Public+Health+and+Safety/Child+and+Family+Health/Pregnancy.htm">Pregnancy</A> &nbsp; 
+<LI style="PADDING-BOTTOM: 5px"><A href="/Services/Public+Health+and+Safety/Injury+Prevention/Falls+Prevention+and+Seniors.htm">Seniors and Healthy Aging</A>&nbsp; 
+<LI style="PADDING-BOTTOM: 5px"><A href="/Services/Public+Health+and+Safety/Sexual+Health/">Sexual Health</A> 
+<LI style="PADDING-BOTTOM: 5px"><A href="/Services/Public+Health+and+Safety/Substance+Use/Default+Substance+Use.htm">Substance Use</A> 
+<LI style="PADDING-BOTTOM: 5px"><A href="/Services/Public+Health+and+Safety/Cancer+Prevention/Sun+Safety.htm">Sun Safety</A> 
+<LI style="PADDING-BOTTOM: 5px"><A href="/Services/Public+Health+and+Safety/Tobacco+Free+Living/">Tobacco</A> 
+<LI style="PADDING-BOTTOM: 5px"><A href="/Services/Public+Health+and+Safety/Travel+Health/">Travel Health</A>&nbsp; 
+<LI style="PADDING-BOTTOM: 0px"><A href="/Services/Public+Health+and+Safety/Infectious+Diseases/TB+Home.htm">Tuberculosis</A>&nbsp;&nbsp;</LI></UL></DIV></TD></TR>
+<TR>
+<TD style="BACKGROUND: #c2c88a">
+<DIV><IMG border=0 alt="Divisions of the Public Health Department" src="/NR/rdonlyres/zaiamx6jt34p4rtav5yd6k3vucprfmmxmtaicvrdxudv4xfumyfpudz7ajqjxu5kzz3r32fbbcocfd5poy3ornxl5a/PHDiv-title.gif"></DIV>
+<DIV style="PADDING-TOP: 5px">
+<UL style="LIST-STYLE-TYPE: none; PADDING-LEFT: 5px; MARGIN-LEFT: 0px">
+<LI style="PADDING-BOTTOM: 5px"><A href="/Services/Public+Health+and+Safety/Child+and+Family+Health/default+Child+and+Family+Health.htm">Child and Family Health</A> 
+<LI style="PADDING-BOTTOM: 5px"><A href="/Services/Public+Health+and+Safety/Health+Inspection/Default+Health+Inspection.htm">Health Protection</A> 
+<LI style="PADDING-BOTTOM: 5px"><A href="/Services/Public+Health+and+Safety/Healthy+Lifestyles/">Healthy Living</A> 
+<LI style="PADDING-BOTTOM: 5px"><A href="/Services/Public+Health+and+Safety/Infectious+Diseases/default+Infectious+Diseases.htm">Infectious Diseases Control</A></LI></UL></DIV><BR></TD></TR></TBODY></TABLE></TD>
+<TD style="BACKGROUND: #dad5ad" vAlign=top width=208><!--Second Column Start-->
+<TABLE cellSpacing=0 cellPadding=0 width="100%">
+<TBODY>
+<TR>
+<TD style="BACKGROUND: #c2c88a" vAlign=top width=208>
+<DIV><IMG border=0 src="/NR/rdonlyres/7zgyz74lcpfl7bc26cfw74pmsrp7uxbjxhmtdiop3xxkfm6skymoeofto6qhq6qc3szfyhkfgigpvz7fyde3hdyg6f/Healthy-Communities.jpg"></DIV>
+<DIV><IMG border=0 src="/NR/rdonlyres/iz7ebixk72r6tcpal5uijm3shxvu7aomzjygelydqrfl43dcbgduerxoqfyj2g2j45d5qwuliea5hstcynwk4cimbf/HC-title.gif"></DIV>
+<DIV style="PADDING-TOP: 5px">
+<UL style="LIST-STYLE-TYPE: none; PADDING-LEFT: 5px; MARGIN-LEFT: 0px">
+<LI style="PADDING-BOTTOM: 5px"><A href="/Services/Public+Health+and+Safety/Infectious+Diseases/IDSU+-+Home.htm">Infectious Disease Surveillance</A> 
+<LI style="PADDING-BOTTOM: 5px"><A href="/Departments/Health+Services/Long+Term+Care/">Long Term Care Settings</A> 
+<LI style="PADDING-BOTTOM: 5px"><A href="/Services/Public+Health+and+Safety/Healthy+Schools/">Schools</A> 
+<LI style="PADDING-BOTTOM: 5px"><A href="/Services/Public+Health+and+Safety/Workplace+Wellness/">Workplaces</A> </LI></UL></DIV></TD></TR>
+<TR>
+<TD height=15 vAlign=top width=208 align=left>
+<DIV><IMG border=0 src="/NR/rdonlyres/ywkioxx5ufew5gx6pbebzdss7qchmt7lxb6kbtmlce6mmq25dhpnauv7igpqedleeosdfcjups3upmtovflbjxjguf/HE-title.gif"></DIV></TD></TR>
+<TR>
+<TD style="BACKGROUND: #f0eea4" vAlign=top>
+<DIV style="PADDING-TOP: 5px">
+<UL style="LIST-STYLE-TYPE: none; PADDING-LEFT: 5px; MARGIN-LEFT: 0px">
+<LI style="PADDING-BOTTOM: 5px"><A href="/Services/Public+Health+and+Safety/Environmental+Health/Outdoor+Air+Quality+.htm">Air Quality</A> 
+<LI style="PADDING-BOTTOM: 5px"><A href="/Services/Public+Health+and+Safety/Environmental+Health/Beach+Water+Sampling+Results.htm">Beach Water Sampling</A> 
+<LI style="PADDING-BOTTOM: 5px"><A href="/Services/Public+Health+and+Safety/Health+Inspection/Bed+Bugs.htm">Bed Bugs</A> 
+<LI style="PADDING-BOTTOM: 5px"><A href="/Services/Public+Health+and+Safety/Environmental+Health/Extreme+Heat.htm">Extreme Heat</A> 
+<LI style="PADDING-BOTTOM: 5px"><A href="/Services/Public+Health+and+Safety/Food+Safety/default+Food+Safey+Program.htm">Food Safety</A> 
+<LI style="PADDING-BOTTOM: 5px"><A href="/Services/Public+Health+and+Safety/Health+Inspection/">Health Inspection</A> 
+<LI style="PADDING-BOTTOM: 5px"><A href="/Services/Public+Health+and+Safety/lymedisease.htm">Lyme Disease</A> &nbsp; 
+<LI style="PADDING-BOTTOM: 5px"><A href="/Services/Public+Health+and+Safety/Environmental+Health/Pesticide+Reduction+Guidelines+for+Lands+Owned+by+the+Regional+Municipality+of+York.htm">Pesticides</A> 
+<LI style="PADDING-BOTTOM: 5px"><A href="/Services/Public+Health+and+Safety/Health+Inspection/Rabies.htm">Rabies Control</A> 
+<LI style="PADDING-BOTTOM: 5px"><A href="/Services/Public+Health+and+Safety/Safe+Water+Program/">Safe Water</A> 
+<LI style="PADDING-BOTTOM: 5px"><A href="/Services/Public+Health+and+Safety/West+Nile+Virus+Surveillance/">West Nile Virus</A> 
+<LI style="PADDING-BOTTOM: 40px"><A href="/Services/Public+Health+and+Safety/Health+Inspection/YorkSafe.htm">YorkSafe</A>&nbsp;&nbsp;</LI></UL></DIV></TD></TD>
+<TR>
+<TD style="BACKGROUND: #dad5ad" vAlign=top><IMG border=0 alt="Fact Sheets" src="/NR/rdonlyres/rqsvqlymtrjtdspzrfrb4zl3yfbqb55rcj3lpw25litepy5gl3onk3ugixqzlct25xvgb25d7amn4pvddyibdaneua/PH-FS-title.gif"> 
+<DIV style="PADDING-TOP: 2px">
+<UL style="LIST-STYLE-TYPE: none; PADDING-LEFT: 5px; MARGIN-LEFT: 0px">
+<LI style="PADDING-BOTTOM: 6px"><A href="/Departments/Health+Services/Health+Services+Facts+Sheets.htm">Fact Sheets</A> 
+<LI style="PADDING-BOTTOM: 6px"><A href="/Departments/Health+Services/Personal+Health+Information+Protection+Act+2004.htm">Personal Health Information Privacy</A> 
+<LI style="PADDING-BOTTOM: 6px"><A href="/Services/Public+Health+and+Safety/Food+Safety/PROTON.htm">PROTON&nbsp;Food&nbsp;Handler&nbsp;Certification </A>
+<LI style="PADDING-BOTTOM: 6px"><A href="http://www.york.ca/Services/Public+Health+and+Safety/Immunization/Immunization+Records.htm">Your Child's Immunization Record</A> 
+<LI style="PADDING-BOTTOM: 6px"><A href="http://www.phac-aspc.gc.ca/cphorsphc-respcacsp/2011/pdf/cpho-resp-2011-eng.pdf" target=_blank>Report on the State of Public Health in Canada 2011</A> 
+<LI style="PADDING-BOTTOM: 6px">&nbsp;&nbsp;<BR><BR></LI></UL></DIV></TD></TR></TBODY></TABLE><!--Second Column End--></TD>
+<TD vAlign=top width=208><!--Third Column Start-->
+<DIV><IMG style="BORDER-BOTTOM: #cccccc 1px solid" alt="What's New in Public Health" src="/NR/rdonlyres/cgcthcrqydcguycbpicee7d7ww53vva6fgf23tx2frricep3poobehhcknkrehsnzfzrskb4r3ii53dpn26rz52jag/whatis-new-title.jpg"><BR><A href="/Services/Public+Health+and+Safety/Infectious+Diseases/Health+Professionals.htm"><IMG border=0 alt="Infectious Diseases control information for health professionals" vspace=3 src="/NR/rdonlyres/dhewdj4oclnrtopzkxyuzluxbtv6fbh6obnhjp52jc46pqkm4i27xdxau6vx5yhqtlqkub63drwyc3dtabnb7o6kff/HPBanner-sm.jpg"></A></DIV>
+<DIV><A href="/Services/Public+Health+and+Safety/Health+Inspection/Be+Spa+Safe.htm"><IMG border=0 alt="Be Spa Safe" src="/NR/rdonlyres/kysfgvxas6zvt3kisbhbav3jplg4onvyyzoc6xspehtkpcngaz5wnteypz5ut5j4rib4437zppfgtqhzbs2cw6igtd/BSS-banner-sm.jpg"></A></DIV>
+<DIV><A href="/Services/Public+Health+and+Safety/Food+Safety/foodsafetyathome.htm"><IMG border=0 alt="Food Safety at Home" vspace=2 src="/NR/rdonlyres/skuvnyqblzts4bmen5tdyeqou7oile3t43tyr5xmzhtj6iqwvyf4yj63vxgt7jpdqblmghtmhxeq7xxjflirmeemhg/york%2ecabanner2.jpg"></A></DIV>
+<DIV><A href="/Services/Public+Health+and+Safety/Health+Inspection/Bed+Bugs.htm" alt="Bed Bugs" border="0"><IMG border=0 alt=" Information on Bed Bugs" src="/NR/rdonlyres/iq72z7pkalwjvjozesk2mnkahgf5qurfi4ntiu5beebat6igya5f7nv5cbrwaj7ntpev6xlbttcygvsxrizwo6qyvh/BedBugsTravelBanner.jpg"></A></DIV>
+<DIV><A href="/Services/Public+Health+and+Safety/Seasonal+Flu+-+Clinics.htm"><IMG border=0 alt="Seasonal Flu" vspace=2 src="/NR/rdonlyres/6eff4vysgsgfshrfx2hbea3oijays4kw4sugewzunps75qgvni7jxi4wog6pym2hbd2kldjk7uvnflgmcdznoicala/FluHomeBanner.jpg"></A></DIV>
+<DIV><A href="/Services/Public+Health+and+Safety/Infectious+Diseases/Designated+Officer+Program.htm"><IMG border=0 alt="Designated Officers Program " vspace=2 src="/NR/rdonlyres/3uanigafvuyqtvnk7tvh7alxkta64dhpojqhdbklcwsctfraguu43vgfelafrrglwz2oljb7e2faygbzgcj4246rie/DOP-bannerNR.jpg"></A></DIV>
+<DIV><A href="javascript:OpenWindowOnFocus('/NR/ykregion/app/CHSwidget/widgetAlt.html', '_blank', 'width=305,height=255,resizable=0,scrollbars=0,status=0,location=0,border=0');"><IMG border=0 alt="Use an application to search for your local Health Care options " vspace=2 src="/NR/rdonlyres/vxnkxqzakcmjd2c6c5ozgsp3olii3cdxzdnawf3yph2euy6z5na222ybm4wzlvc5u2fiu4sxacsnmnzpfol7i6223f/HealthCareOptions.gif"></A><IMG border=0 src="/NR/rdonlyres/ctmtcu3vqlwnn5sy6xhob6dxbua6k3xyo57tuwrmknalzzn4vv74ng3h4kc5fy7iot2e3nfhk4bgei3vefdxcsytga/space1x1.gif" width=237 height=2><BR></DIV>
+<DIV style="PADDING-LEFT: 5px">&nbsp;</DIV>
+<DIV style="PADDING-LEFT: 5px"><STRONG>Food Premise &amp; Restaurant Disclosure Charges:<BR></STRONG><A href="/NR/rdonlyres/mrmye4platqz4gt23aklz72a4xniyz6jc6podeaqcbssyuhdo2drpb7erolydllxyuii2xelv2qurrqu2z65uzd2qg/FoodDisclosureNov4-12.pdf" target=_blank>October 29 to November 4, 2012</A>&nbsp;<BR>&nbsp;<STRONG><BR>Newsletters: </STRONG></DIV>
+<UL style="LIST-STYLE-TYPE: none; PADDING-LEFT: 5px; MARGIN-LEFT: 0px">
+<LI style="PADDING-BOTTOM: 5px"><A href="/Services/Public+Health+and+Safety/Child+and+Family+Health/Come+Grow+With+Us.htm">Come Grow With Us</A>&nbsp; 
+<LI style="PADDING-BOTTOM: 5px"><A href="/Services/Public+Health+and+Safety/Food+and+Nutrition/Healthy+Measures+E-+Bulletin.htm">Healthy Measures E-Bulletin</A> </LI></UL><!--Third Column End-->
+<DIV></DIV>
+<DIV></DIV>
+<UL></UL></TD></TR></TBODY></TABLE>
+</div>
+<div>&nbsp;</div>
+<div><A href="#top">Back to top</a></div>
+<div>&nbsp;</div>
+
+	</td>
+	
+	<td valign=top height=100% ><img alt='space' src='/NR/ykregion/images/space1x1.gif' width=10 height=0 border=0 ></td>
+	
+</tr>
+</table>
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+if(HM_IsMenu) {
+	document.write("<SCR" + "IPT LANGUAGE='JavaScript1.2' SRC='/nr/ykregion/menu/HM_Script"+ HM_BrowserString +".js' TYPE='text/javascript'><\/SCR" + "IPT>");
+}
+-->
+</SCRIPT> 
+<!-- Inserted by Resolution: BEGIN EmbedBodyEndHook -->
+
+<!-- Inserted by Resolution: END EmbedBodyEndHook -->
+</body>
+
+</html>
+

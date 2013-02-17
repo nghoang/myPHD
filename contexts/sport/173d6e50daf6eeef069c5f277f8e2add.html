@@ -1,0 +1,2195 @@
+<!DOCTYPE html>
+<!--[if lte IE 7]> <html xmlns:fb="http://www.facebook.com/2008/fbml" xmlns:og="http://opengraphprotocol.org/schema/" class="ie7 lte8 lte9 " lang="en-au"> <![endif]-->
+<!--[if IE 8]> <html xmlns:fb="http://www.facebook.com/2008/fbml" xmlns:og="http://opengraphprotocol.org/schema/" class="ie8 lte8 lte9 " lang="en-au"> <![endif]-->
+<!--[if IE 9]> <html xmlns:fb="http://www.facebook.com/2008/fbml" xmlns:og="http://opengraphprotocol.org/schema/" class="ie9 lte9 " lang="en-au"> <![endif]-->
+<!--[if gt IE 9]> --> <html lang="en-au" class=""> <!--<![endif]-->
+<head>
+        <script type="text/javascript">
+        if (((document.domain.indexOf("smh.com.au") != -1) || (document.domain.indexOf("theage.com.au") != -1) ||
+                (document.domain.indexOf("watoday.com.au") != -1) ||
+                (document.domain.indexOf("brisbanetimes.com.au") != -1) ||
+                (document.domain.indexOf("canberratimes.com.au") != -1) ||
+                (document.domain.indexOf("essentialkids.com.au") != -1) ||
+                (document.domain.indexOf("essentialbaby.com.au") != -1) ||
+                (document.domain.indexOf("businessday.com.au") != -1)) && (isSmartPhone()) &&
+                (document.cookie.indexOf("iphone_redirect=false") == -1)) {
+            var currentLocation = document.location.href;
+            if (currentLocation.indexOf("www.") != -1 && currentLocation.indexOf("/lifestyle/cuisine") == -1) {
+                currentLocation = currentLocation.replace("www.", "m.");
+                window.location = currentLocation;
+            }
+        }
+
+        /**
+         * Returns a <code>Boolean</code> indicating whether or not the user agent represents a smart phone.
+         *
+         * @return True if the user agent represents a smart phone; otherwise false.
+         */
+        function isSmartPhone() {
+            var userAgent = navigator.userAgent
+            return ((matchesSmartPhoneUserAgentRegularExpressions(userAgent)) &&
+                    (!matchesTabletUserAgentRegularExpressions(userAgent)));
+        }
+
+        /**
+         * Returns a <code>Boolean</code> indicating whether or not the specified user agent represents a smart phone.
+         * If any of the regular expressions are updated then they should be updated in
+         * <code>SmartPhoneHelper.java</code>.
+         *
+         * @param userAgent User agent to test.
+         * @return True if the user agent represents a smart phone; otherwise false.
+         */
+        function matchesSmartPhoneUserAgentRegularExpressions(userAgent) {
+            var smartPhoneUserAgentRegularExpressions = ["^Mozilla/5.0.*iPhone.*", "^Mozilla/5.0.*iPod.*",
+                "^Mozilla/5.0.*Android [1-3].*", "^Mozilla/5.0.*SymbianOS/9.*", "^Mozilla/5.0.*Symbian/3.*",
+                "^Mozilla/5.0.*Mobile Safari/.*5[2-3][0-9].*", ".*Dolfin/[1-2].[0-9].*", "^Mozilla/[4-5].0.*Windows Phone OS 7.[0-5].*", "^Opera/9.*Android; Opera Mini.*"];
+            if ((userAgent) && (userAgent.length > 0)) {
+                var index = 0;
+                for (; index < smartPhoneUserAgentRegularExpressions.length; index++) {
+                    if (userAgent.match(smartPhoneUserAgentRegularExpressions[index])) {
+                        return true;
+                    }
+                }
+            }
+            return false;
+        }
+        /**
+         * Returns a <code>Boolean</code> indicating whether or not the specified user agent represents a tablet. If any
+         * of the regular expressions are updated then they should be updated in <code>SmartPhoneHelper.java</code>.
+         *
+         * @param userAgent User agent to test.
+         * @return True if the user agent represents a tablet; otherwise false.
+         */
+        function matchesTabletUserAgentRegularExpressions(userAgent) {
+            var tableUserAgentRegularExpressions = ["^Mozilla/5.0.*iPad.*", "^Mozilla/5.0.*GT-P1000.*",
+                "^Mozilla/5.0.*GT-P7500.*", "^Mozilla/5.0.*MZ601.*", "^Mozilla/5.0.*Transformer TF101.*"];
+            if ((userAgent) && (userAgent.length > 0)) {
+                var index = 0;
+                for (; index < tableUserAgentRegularExpressions.length; index++) {
+                    if (userAgent.match(tableUserAgentRegularExpressions[index])) {
+                        return true;
+                    }
+                }
+            }
+            return false;
+        }
+
+    </script>
+
+    <title>WA Sport News: West Coast Eagles, Perth Glory, Fremantle Dockers</title>
+    <meta http-equiv="content-language" content="en" />
+<meta http-equiv="imagetoolbar" content="no" />
+    <link rel="canonical" href="http://www.watoday.com.au/sport"/>
+<meta name="robots" content="noarchive,noodp" />
+<meta name="robots" content="ACAP allow-index" />
+<meta name="robots" content="ACAP allow-follow" />
+<meta name="robots" content="ACAP disallow-preserve" />
+<meta name="robots" content="ACAP allow-present prohibited-modification=annotation" />
+<meta name="description" content="" />
+<meta name="keywords" content="" />
+
+<link rel="shortcut icon" type="image/ico" href="/favicon.ico" />
+<meta name="application-name" content="WA Today" />
+<meta name="msapplication-tooltip" content="Open WA Today" />
+<meta name="msapplication-starturl" content="http://www.watoday.com.au" />
+
+    <meta name="msapplication-task" content="name=National;action-uri=http://www.watoday.com.au/national;icon-uri=http://www.watoday.com.au/favicon.ico;" />
+    <meta name="msapplication-task" content="name=World;action-uri=http://www.watoday.com.au/world;icon-uri=http://www.watoday.com.au/favicon.ico;" />
+    <meta name="msapplication-task" content="name=Sport;action-uri=http://www.watoday.com.au/sport;icon-uri=http://www.watoday.com.au/favicon.ico;" />
+    <meta name="msapplication-task" content="name=Weather;action-uri=http://www.watoday.com.au/weather;icon-uri=http://www.watoday.com.au/favicon.ico;" />
+        
+
+                <link rel="stylesheet" type="text/css" media="screen,print" href="http://resources.watoday.com.au/common/media-common-1.0/css/output/7.14.9/common.skin.news_min.css" />
+
+                <link rel="stylesheet" type="text/css" media="screen,print" href="http://resources.watoday.com.au/common/media-common-1.0/css/output/7.14.9/common.skin.watoday_min.css" />
+
+                <link rel="stylesheet" type="text/css" media="screen,print" href="http://resources.watoday.com.au/common/media-common-1.0/css/output/7.14.9/common.skin.sport_min.css" />
+
+                <link rel="stylesheet" type="text/css" media="screen,print" href="http://resources.watoday.com.au/common/media-common-1.0/css/output/7.14.9/skin.promotions_min.css" />
+
+                <link rel="stylesheet" type="text/css" media="screen,print" href="http://resources.watoday.com.au/common/media-common-1.0/css/output/7.14.9/common.skin.mysite_min.css" />
+
+
+<!-- Initialise Google Analytics event queue -->
+<script type="text/javascript">
+    var _gaq = _gaq || [];
+</script>
+</head>
+<body class="watoday sport">
+    <script type="text/javascript">
+// <![CDATA[
+	document.body.className += " scriptable";
+// ]]>
+</script>
+
+    <a class="skipLink" href="#nav">Skip to navigation</a>
+<a class="skipLink" href="#content">Skip to content</a>
+<a class="skipLink" href="http://www.watoday.com.au/siteguide/accessibility">Help using this website - Accessibility statement</a>
+
+            <esi:include src="/ugc/dock.html"/>
+        <esi:remove><div class="mySite" role="document" aria-live="polite" aria-relevant="additions removals" aria-atomic="true">
+    <div class="ms-toolbarWrap">
+        <div class="ms-toolbar clearfix">
+            <p class="hiddenWithJS alert"><em>JavaScript disabled.</em> Please enable JavaScript to use My News, My Clippings, My Comments and user settings.</p>
+<p><em>New <span class="hiddenVisually">feature</span></em> Personalise your news, save articles to read later and customise settings <a href="javascript:;" class="btn alt" title="View demo">View Demo</a></p>
+<em class="profile">Hi there!</em>
+<ul>
+    <li class="account secondLast"><a class="gaTrackable" href="https://watoday.myfairfax.com.au/members/members/signup?channel_key=cNCahKwb2BqM7dlyjtEOUA&callback_uri=http://www.watoday.com.au/ugc/login.html" data-gaAction="Sign-up" data-gaCategory="MyMasthead" data-gaLabel="Dock Bar">Sign-up</a></li>
+    <li class="account last login"><a class="gaTrackable" href="https://watoday.myfairfax.com.au/members/session/new?channel_key=cNCahKwb2BqM7dlyjtEOUA&callback_uri=http://www.watoday.com.au/ugc/login.html" data-gaAction="Login" data-gaCategory="MyMasthead" data-gaLabel="Dock Bar">Log in</a></li>
+</ul>
+<span class="beta">Beta <span class="hiddenVisually">version</span></span>
+<div id="ms-dialogLogin" class="dialogWrap hiddenVisually">
+    <div class="dialogContent main">
+        <p class="hiddenVisually">If you have trouble accessing our login form below, you can go to our <a href="https://watoday.myfairfax.com.au/members/session/new?channel_key=cNCahKwb2BqM7dlyjtEOUA&callback_uri=http://www.watoday.com.au/ugc/login.html" title="This link will open in a new window" target="_parent">login page</a>.</p>
+        <iframe id="loginIframe" width="625" height="425" frameborder="0" scrolling="no" src="" data-dialogHref="https://watoday.myfairfax.com.au/members/session/dialog?channel_key=cNCahKwb2BqM7dlyjtEOUA&callback_uri=http://www.watoday.com.au/ugc/login.html"></iframe>
+    </div>
+</div>    <div id="ms-dialogLoginPrompt" class="dialogWrap hiddenVisually">
+        <div class="dialogContent main">
+            <p class="hiddenVisually">If you have trouble accessing our login form below, you can go to our <a href="https://watoday.myfairfax.com.au/members/session/new?channel_key=cNCahKwb2BqM7dlyjtEOUA&callback_uri=http://www.watoday.com.au/ugc/login.html" title="This link will open in a new window" target="_parent">login page</a>.</p>
+            <iframe id="loginPromptIframe" width="625" height="425" frameborder="0" scrolling="no" src="" data-dialogHref="https://watoday.myfairfax.com.au/members/session/dialog?skin=prompt&channel_key=cNCahKwb2BqM7dlyjtEOUA&callback_uri=http://www.watoday.com.au/ugc/login.html"></iframe>
+        </div>
+    </div>
+        </div>
+    </div>
+</div></esi:remove>
+    <div data-brandTimezone="Australia/Perth"></div>
+
+
+
+    <div id="sponsorLink_cA-helmet" class="cA-helmet">
+    <div id="video-player-companion-ad-helmet"></div><!-- id:video-player-companion-ad-helmet -->
+</div><!-- id:sponsorLink_cA-helmet -->
+    <div class="outerWrap">
+        <div class="wrap cfix">
+            <div class="nN-whiteStrip">
+    <ul class="linksLeft" id="nN-whiteStrip-linksLeft">
+            <li id="whiteStrip-time"><em>2:45AM</em> Wednesday Nov 07, 2012</li>
+            <li class="last"><a href="http://www.watoday.com.au/contact/" title="Send your news tips/photos to news@watoday.com.au">Send your news tips/photos to news@watoday.com.au</a></li>
+
+</ul>
+
+    <a class="logo" href="http://www.fairfax.com.au/">Fairfax Media</a>
+        <ul class="linksRight">
+        
+<li><a href="http://www.watoday.com.au" onclick="trackCode(this, 'ws-top');">WA Today</a></li>
+                <li><a href="http://www.domain.com.au/" onclick="linktop(this);">Real Estate</a></li>
+                <li><a href="http://www.drive.com.au/" onclick="linktop(this);">Cars</a></li>
+                <li><a href="http://mycareer.com.au/" onclick="linktop(this);">Jobs</a></li>
+                <li><a href="http://www.rsvp.com.au/" onclick="linktop(this);">Dating</a></li>
+                <li><a href="https://membercentre.fairfax.com.au/NewsletterSubscription.aspx" onclick="linktop(this);">Newsletters</a></li>
+
+            <li class="hasDropdown last"><a href="javascript:;">More</a>
+                <ul>
+                            <li><a href="http://www.essentialbaby.com.au/" onclick="linktop(this);">Essential Baby</a></li>
+                            <li><a href="http://www.stayz.com.au/" onclick="linktop(this);">Stayz</a></li>
+                            <li><a href="http://www.investsmart.com.au/" onclick="linktop(this);">InvestSMART</a></li>
+                            <li><a href="http://www.tradingroom.com.au" onclick="linktop(this);">Trading Room</a></li>
+                            <li><a href="http://www.weatherzone.com.au/" onclick="linktop(this);">Weatherzone</a></li>
+                    <li class="last"><a onclick="linktop(this);" href="http://www.fairfax.com.au/">More sites &raquo;</a></li>
+                </ul>
+            </li>
+    </ul>
+
+</div><!-- class:nN-whiteStrip -->
+<!-- Header (class according to new HTML5 element 'header'; was 'masthead') (scope: network-wide) -->
+<div class="header span-24">
+        <div id="adspot-728x90,468x60-pos-1" class="ad"> <script type="text/javascript"> function getAdCookie(name) { var regex = new RegExp('(?:^|; )' + name + '=([^;]*)'); var value = regex.exec(document.cookie); if (value && value.length > 1) { value = decodeURIComponent(value[1]); } else { value = ""; } return value; } function getFrameDocument(fr) { var doc = fr.contentWindow || fr.contentDocument; if (doc && doc.document) { doc = doc.document; } return doc; } function closeDoc(doc) { doc.close(); } function closeOpenDocuments(openDocs) { for (var i=0;i< openDocs.length; i++) { closeDoc(getFrameDocument(document.getElementById(openDocs[i]))); } } function isIE() { return /msie/i.test(navigator.userAgent) && !/opera/i.test(navigator.userAgent); } function setHash (element, hash) { if(element.hash) { element.hash = element.hash + "," + hash; } else { element.hash = hash; } } function renderIFAd(holderID, adID, srcUrl, width, height, hash, bodyAttributes) { setHash(document.getElementById(holderID), hash); document.dcdAdsR.push(adID); if (ie) { var sizePart = srcUrl.substring(srcUrl.indexOf("sz=")+3); sizePart = sizePart.substring(0, sizePart.indexOf(";")); var multiSizes = sizePart.split(","); var minSize = multiSizes[0]; if (multiSizes.length > 1) { for(var i=1; i< multiSizes.length; i++) { if (minSize > multiSizes[i]) { minSize = multiSizes[i]; } } var sizeParts = minSize.toLowerCase().split("x"); width = sizeParts[0]; height = sizeParts[1]; srcUrl = srcUrl.replace(sizePart, minSize); } } document.write('<iframe id="' + adID + '" src="' + srcUrl + '" width="' + width + '" height="' + height + '" scrolling="no" marginheight="0" marginwidth="0" allowtransparency="true" frameborder="0"><\/iframe>'); } function renderJIFAd(holderID, adID, srcUrl, width, height, hash, bodyAttributes) { setHash(document.getElementById(holderID), hash); document.dcdAdsR.push(adID); document.write('<iframe id="' + adID + '" src="javascript: ;" width="' + width + '" height="' + height + '" scrolling="no" marginheight="0" marginwidth="0" allowtransparency="true" frameborder="0"><\/iframe>'); var body = '<html><head></head><body ' + bodyAttributes + '><scr' + 'ipt src="' + srcUrl + '"></sc' + 'ript></body></html>'; var fr = document.getElementById(adID); setHash(fr, hash); fr.body = body; var doc = getFrameDocument(fr); doc.open(); doc.write(body); setTimeout(function() {closeDoc(getFrameDocument(document.getElementById(adID)))}, 2000); } function renderIJAd(holderID, adID, srcUrl, hash) { document.dcdAdsAA.push(holderID); setHash(document.getElementById(holderID), hash); document.write('<scr' + 'ipt src="' + srcUrl + '" id="' + adID + '"></sc' + 'ript>'); } function renderJAd(holderID, adID, srcUrl, hash) { document.dcdAdsAA.push(holderID); setHash(document.getElementById(holderID), hash); document.dcdAdsH.push(holderID); document.dcdAdsI.push(adID); document.dcdAdsU.push(srcUrl); } function er_showAd() { var regex = new RegExp("externalReferrer=(.*?)(; |&|$)", "gi"); var value = regex.exec(document.cookie); if (value && value.length == 3) { var externalReferrer = value[1]; return (!FD.isInternalReferrer() || ((externalReferrer) && (externalReferrer > 0))); } return false; } function isHome() { var loc = "" + window.location; loc = loc.replace("//", ""); var tokens = loc.split("/"); if (tokens.length == 1) { return true; } else if (tokens.length == 2) { if (tokens[1].trim().length == 0) { return true; } } return false; } function checkAds(checkStrings) { var cs = checkStrings.split(","); for (var i=0;i< document.dcdAdsAA.length; i++) { var cAd = document.getElementById(document.dcdAdsAA[i]); document.dcdAdsAG.push(cAd.hash); for (var j=0; j<cs.length; j++) { var c = cs[j].trim(); if (c.length > 0 && cAd.innerHTML.indexOf(c)>0) { document.dcdAdsAI.push(cAd.hash); cAd.style.display ='none'; } } } if (!ie) { for (var i=0;i< document.dcdAdsR.length; i++) { var fr = document.getElementById(document.dcdAdsR[i]); if (fr) { document.dcdAdsAG.push(fr.hash); var doc = getFrameDocument(fr); for (var j=0; j<cs.length; j++) { var c = cs[j].trim(); if (c.length > 0 && doc.body.innerHTML.indexOf(c)>0) { document.dcdAdsAI.push(fr.hash); fr.style.display ='none'; } } } } } if (document.dcdAdsAI.length > 0 || document.dcdAdsAG.length > 0) { var pingServerParams = "i="; var sep = ""; for (var i=0;i< document.dcdAdsAI.length; i++) { pingServerParams += sep + document.dcdAdsAI[i]; sep = ","; } } document.pingServerAdParams = pingServerParams; } function pingAdStatus() { if (isHome ()) { return; } if (document.pingServerAdParams && document.pingServerAdParams.length > 0) { var pingServerUrl = "/action/pingServerAction?" + document.pingServerAdParams; var xmlHttp = null; try { xmlHttp = new XMLHttpRequest(); } catch(e) { try { xmlHttp = new ActiveXObject("Microsoft.XMLHttp"); } catch(e) { xmlHttp = null; } } if (xmlHttp != null) { xmlHttp.open( "GET", pingServerUrl, true); xmlHttp.send( null ); } } } function initAds(log) { for (var i=0;i< document.dcdAdsU.length; i++) { var shadowHolder = document.getElementById("adShD" + i); var targetHolder = document.getElementById(document.dcdAdsH[i]); if (shadowHolder && targetHolder) { var adNodes = new Array(); for (var j=0; j<shadowHolder.childNodes.length; j++) { var child = shadowHolder.childNodes[j]; if (child.nodeName.toLowerCase() != "script") { adNodes.push(child); } } for (var j=0; j<adNodes.length; j++) { targetHolder.appendChild(shadowHolder.removeChild(adNodes[j])); } } } if (er_showAd()) { for (var i=0;i< document.dcdAdsE.length; i++) { var erAd = document.getElementById(document.dcdAdsEH[i]); erAd.className = document.dcdAdsEC[i]; erAd.appendChild(document.dcdAdsE[i]); } } if (log) { console.log(document.igCount + "/" + document.tCount); } } document.refreshAds = function rAds(adID) { if (document.dcdAdsR) { document.dcdsAdsToClose = new Array(); for (var i=0;i< document.dcdAdsR.length; i++) { var fr = document.getElementById(document.dcdAdsR[i]); if (fr) { if (!ie) { if (!adID || adID =="*" || fr.parentNode.id==adID ) { var chNodes = new Array(); for (var j=0; j<fr.parentNode.childNodes.length; j++) { var child = fr.parentNode.childNodes[j]; if (!(child.nodeName.toLowerCase() == "script" || child.nodeName.toLowerCase() == "iframe")) { chNodes.push(child); } } for (var j=0; j<chNodes.length; j++) { chNodes[j].parentNode.removeChild(chNodes[j]); } var doc = getFrameDocument(fr); while (doc.childNodes.length > 0) { doc.removeChild(doc.childNodes[0]); } doc.open(); var newBody = fr.body; newBody = newBody.replace(";ord=", ";ord=" + Math.floor(100000000*Math.random())); doc.write(newBody); document.dcdsAdsToClose.push(fr.id); } } else { var newSrc = fr.src; newSrc = newSrc.replace(";ord=", ";ord=" + Math.floor(100000000*Math.random())); fr.src = newSrc; } } } if (document.dcdsAdsToClose.length > 0) { setTimeout(function() {closeOpenDocuments(document.dcdsAdsToClose)}, 500); } } }; var ie = isIE(); if(ie && typeof String.prototype.trim !== 'function') { String.prototype.trim = function() { return this.replace(/^\s+|\s+$/g, ''); }; } document.dcdAdsH = new Array(); document.dcdAdsI = new Array(); document.dcdAdsU = new Array(); document.dcdAdsR = new Array(); document.dcdAdsEH = new Array(); document.dcdAdsE = new Array(); document.dcdAdsEC = new Array(); document.dcdAdsAA = new Array(); document.dcdAdsAI = new Array(); document.dcdAdsAG = new Array(); document.dcdAdsToClose = new Array(); document.igCount = 0; document.tCount = 0; var dcOrd = Math.floor(100000000*Math.random()); document.dcAdsCParams = ""; var savValue = getAdCookie("sav"); if (savValue != null && savValue.length > 2) { document.dcAdsCParams = savValue + ";"; } </script> <script> renderJAd("adspot-728x90,468x60-pos-1", "dcAd-1", 'http://ad-apac.doubleclick.net/adj/onl.wa.sport/sport/homepage;cat1=homepage;cat=sport;ctype=index;pos=1;dcopt=ist;' + document.dcAdsCParams +'sz=728x90,468x60;tile=1;ord=' + dcOrd + '?', 1075665975); </script> <noscript> <a href='http://ad-apac.doubleclick.net/jump/onl.wa.sport/sport/homepage;cat1=homepage;cat=sport;ctype=index;pos=1;dcopt=ist;sz=728x90,468x60;tile=1;ord=7.8233741E7?' target="_blank"> <img src='http://ad-apac.doubleclick.net/ad/onl.wa.sport/sport/homepage;cat1=homepage;cat=sport;ctype=index;pos=1;dcopt=ist;sz=728x90,468x60;tile=1;ord=7.8233741E7?' border="0" alt=""> </a> </noscript> </div>
+
+    <p class="mh-logo"><a href="http://www.watoday.com.au" title="WA Today">WA Today</a></p>
+            <h2><a href="http://www.watoday.com.au/sport" title="Sport">Sport</a></h2>
+        <ul id="nav" role="navigation" >
+        
+                <li>
+                    <a href="http://www.watoday.com.au/olympics" title="Olympics">Olympics</a>
+                </li>
+                <li class=" hasDropdown realfooty">
+                    <a href="http://www.watoday.com.au/afl" title="AFL">AFL</a>
+                            <ul>
+                                    <li class="first">
+                                        <a href="http://www.watoday.com.au/afl" title="Real Footy">Real Footy</a>
+                                    </li>
+                                    <li>
+                                        <a href="http://www.watoday.com.au/afl/afl-news" title="News">News</a>
+                                    </li>
+                                    <li>
+                                        <a href="http://livescores.watoday.com.au/afl/ladder.html" title="Ladder">Ladder</a>
+                                    </li>
+                                    <li>
+                                        <a href="http://www.watoday.com.au/afl/fixtures" title="Fixtures">Fixtures</a>
+                                    </li>
+                                    <li>
+                                        <a href="http://afl.tipping.watoday.com.au/" title="Tipping">Tipping</a>
+                                    </li>
+                                    <li>
+                                        <a href="http://www.watoday.com.au/afl/blogs" title="Blogs">Blogs</a>
+                                    </li>
+                                    <li class="last">
+                                        <a href="http://livescores.watoday.com.au/afl" title="Live Scores">Live Scores</a>
+                                    </li>
+                            </ul>
+                </li>
+                <li class=" hasDropdown rugbyheaven">
+                    <a href="http://www.watoday.com.au/rugby-union" title="Union">Union</a>
+                            <ul>
+                                    <li class="first">
+                                        <a href="http://www.watoday.com.au/rugby-union" title="Rugby Heaven">Rugby Heaven</a>
+                                    </li>
+                                    <li>
+                                        <a href="http://www.watoday.com.au/rugby-union/union-news" title="News">News</a>
+                                    </li>
+                                    <li>
+                                        <a href="http://www.watoday.com.au/rugby-union/super-rugby" title="Super Rugby">Super Rugby</a>
+                                    </li>
+                                    <li>
+                                        <a href="http://www.watoday.com.au/rugby-union/rugby-world-cup" title="Rugby World Cup">Rugby World Cup</a>
+                                    </li>
+                                    <li>
+                                        <a href="http://www.watoday.com.au/rugby-union/tri-nations" title="Tri Nations">Tri Nations</a>
+                                    </li>
+                                    <li>
+                                        <a href="http://www.watoday.com.au/rugby-union/six-nations" title="Six Nations">Six Nations</a>
+                                    </li>
+                                    <li>
+                                        <a href="http://www.watoday.com.au/rugby-union/club-rugby" title="Club &amp; Provincial">Club &amp; Provincial</a>
+                                    </li>
+                                    <li>
+                                        <a href="http://www.watoday.com.au/rugby-union/international-rugby" title="International">International</a>
+                                    </li>
+                                    <li>
+                                        <a href="http://www.watoday.com.au/rugby-union/calendar" title="Calendar">Calendar</a>
+                                    </li>
+                                    <li>
+                                        <a href="http://superrugby.tipping.watoday.com.au/" title="Tipping">Tipping</a>
+                                    </li>
+                                    <li class="last">
+                                        <a href="http://livescores.watoday.com.au/rugby" title="Live Scores">Live Scores</a>
+                                    </li>
+                            </ul>
+                </li>
+                <li class=" hasDropdown ">
+                    <a href="http://www.watoday.com.au/sport/cricket" title="Cricket">Cricket</a>
+                            <ul>
+                                    <li class="first">
+                                        <a href="http://livescores.watoday.com.au/cricket/" title="Live scores">Live scores</a>
+                                    </li>
+                            </ul>
+                </li>
+                <li>
+                    <a href="http://www.watoday.com.au/sport/soccer" title="Soccer">Soccer</a>
+                </li>
+                <li>
+                    <a href="http://www.watoday.com.au/sport/golf" title="Golf">Golf</a>
+                </li>
+                <li>
+                    <a href="http://www.watoday.com.au/sport/horseracing" title="Horse Racing">Horse Racing</a>
+                </li>
+                <li>
+                    <a href="http://www.watoday.com.au/sport/motorsport" title="Motorsport">Motorsport</a>
+                </li>
+                <li>
+                    <a href="http://www.watoday.com.au/sport/tennis" title="Tennis">Tennis</a>
+                </li>
+                <li>
+                    <a href="http://www.watoday.com.au/sport/cycling" title="Cycling">Cycling</a>
+                </li>
+                <li>
+                    <a href="http://www.watoday.com.au/sport/basketball" title="Basketball">Basketball</a>
+                </li>
+                <li class=" hasDropdown leaguehq">
+                    <a href="http://www.watoday.com.au/rugby-league" title="NRL">NRL</a>
+                            <ul>
+                                    <li class="first">
+                                        <a href="http://www.watoday.com.au/rugby-league" title="League HQ">League HQ</a>
+                                    </li>
+                                    <li>
+                                        <a href="http://www.watoday.com.au/rugby-league/league-news" title="News">News</a>
+                                    </li>
+                                    <li>
+                                        <a href="http://livescores.watoday.com.au/nrl/ladder.html" title="Ladder">Ladder</a>
+                                    </li>
+                                    <li>
+                                        <a href="http://www.watoday.com.au/rugby-league/nrl-fixtures" title="Fixtures">Fixtures</a>
+                                    </li>
+                                    <li>
+                                        <a href="http://nrl.tipping.watoday.com.au/" title="Tipping">Tipping</a>
+                                    </li>
+                                    <li class="last">
+                                        <a href="http://livescores.watoday.com.au/nrl" title="Live Scores">Live Scores</a>
+                                    </li>
+                            </ul>
+                </li>
+                <li>
+                    <a href="http://livescores.watoday.com.au" title="Live Scores">Live Scores</a>
+                </li>
+                <li class=" hasDropdown swimming">
+                    <a href="http://www.watoday.com.au/sport/" title="More">More</a>
+                            <ul>
+                                    <li class="first">
+                                        <a href="http://www.watoday.com.au/sport/swimming" title="Swimming">Swimming</a>
+                                    </li>
+                            </ul>
+                </li>
+    </ul>
+
+        <p class="breadcrumb">
+        <span>You are here:</span>
+            <a href="http://www.watoday.com.au" >Home</a>
+            <a href="http://www.watoday.com.au/sport" class="last">Sport</a>
+    </p>
+
+        <div class="cN-searchBox cfix">
+        <form action="http://www.watoday.com.au/execute_search.html" method="get">
+            <h2>Search watoday:</h2>
+            <label for="search">
+                <input type="text" name="text" id="search" placeholder='Search here...' onfocus="this.value='';" />
+            </label>
+            <h3>Search in:</h3>
+            <ul id="ddown" class="ddown">
+                <li><a class="selected" href="#">Sport</a>
+                    <div class="srch-wrap">
+                        <div></div>
+                        <ul class="cfix">
+                                <li class="first"><a href="#">watoday.com.au</a></li>
+                                <li><a href="#">Web</a></li>
+                                <li><a href="#">Sport</a></li>
+                        </ul>
+                    </div><!-- class:srch-wrap -->
+                </li>
+            </ul>
+            <input type="hidden" name="ss" value="Sport" />
+            <input type="submit" class="btnSubmit" value="Search" />
+        </form>
+    </div><!-- class:cN-searchBox cfix -->
+
+</div>
+<!-- End component: Header -->
+
+            <div id="adspot-940x20-pos-1" class="ad adPageTop"> <script> renderJAd("adspot-940x20-pos-1", "dcAd-2", 'http://ad-apac.doubleclick.net/adj/onl.wa.sport/sport/homepage;cat1=homepage;cat=sport;ctype=index;pos=1;' + document.dcAdsCParams +'sz=940x20;tile=2;ord=' + dcOrd + '?', -489715019); </script> <noscript> <a href='http://ad-apac.doubleclick.net/jump/onl.wa.sport/sport/homepage;cat1=homepage;cat=sport;ctype=index;pos=1;sz=940x20;tile=2;ord=7.8233741E7?' target="_blank"> <img src='http://ad-apac.doubleclick.net/ad/onl.wa.sport/sport/homepage;cat1=homepage;cat=sport;ctype=index;pos=1;sz=940x20;tile=2;ord=7.8233741E7?' border="0" alt=""> </a> </noscript> </div>
+            
+            
+
+
+            <div id="content" class="span-16">
+                
+
+
+
+                
+                
+                
+
+                
+    <div  class="cN-storyImageLead media-image storySpecialFeature">
+                
+    <div class="media">
+<a title="Cup favourite jockey Damien Oliver admits to betting scandal" href="http://www.watoday.com.au/sport/horseracing/cup-favourite-jockey-damien-oliver-admits-to-betting-scandal-20121105-28u8v.html" > <img src="http://images.watoday.com.au/2012/11/06/3772201/DEFCON-OLIVER-USE-620x0.jpg" width="620" alt="Damien Oliver"/> </a>    </div>
+
+        <div class="wof">
+            
+            <h3><a href="http://www.watoday.com.au/sport/horseracing/cup-favourite-jockey-damien-oliver-admits-to-betting-scandal-20121105-28u8v.html" title="Damien Oliver admits to betting scandal">Damien Oliver admits to betting scandal</a></h3>
+            <p><cite>Nick McKenzie, Richard Baker</cite>
+                    AUSTRALIA'S top jockey Damien Oliver - who will ride favourite Americain in today's Cup - has admitted to authorities that he bet on a rival horse in a 2010 race and expects to be charged
+            </p>
+            
+
+                
+                
+                
+                
+        </div><!-- class:wof -->
+    </div><!-- class:cN-storyImageLead media-image storySpecialFeature -->
+    
+
+
+                <div id="emptyAdspot-620x45"></div><!-- id:emptyAdspot-620x45 -->
+                <div class="span-11">
+                    
+
+
+                            
+
+        <h3 class="cT-strapHeading">
+            Sport Headlines
+            <span>
+
+</span>
+        </h3>
+                
+    <div class="cN-storyHeadlineLead cfix  ">
+            <h3><a href="http://www.watoday.com.au/sport/horseracing/green-moon-wins-melbourne-cup-20121106-28vkx.html" title="Green Moon wins Melbourne Cup">Green Moon wins Melbourne Cup</a></h3>
+                        <a href="http://www.watoday.com.au/sport/horseracing/green-moon-wins-melbourne-cup-20121106-28vkx.html" title="Green Moon wins Melbourne Cup"><img src="http://images.watoday.com.au/2012/10/15/3714263/th-CUPcup2-90x60.jpg" width="90" height="60" alt="Cups contenders." /></a>
+
+            
+        <p>
+                <cite><a href="http://www.watoday.com.au/sport/by/Andrew-Eddy" title="Andrew Eddy">ANDREW EDDY</a> <small>5:13pm</small></cite>
+            Owner Lloyd Williams has won his fourth Melbourne Cup and jet-setting jockey Brett Prebble his first after the Hong Kong-based rider gave Green Moon 'the ride of my life'.
+        </p>
+        
+    <p class="comments">
+            <a href="http://www.watoday.com.au/sport/horseracing/green-moon-wins-melbourne-cup-20121106-28vkx.html#comments">Comments <span>8</span></a>
+    </p>
+
+            
+    </div>
+        
+        
+    
+
+                
+    <div class="cN-storyHeadlineLead cfix date ">
+            <h3><a href="http://www.watoday.com.au/sport/horseracing/cup-favourite-jockey-damien-oliver-admits-to-betting-scandal-20121105-28u8v.html" title="Cup favourite jockey Damien Oliver admits to betting scandal">Cup favourite jockey Damien Oliver admits to betting scandal</a></h3>
+                        <a href="http://www.watoday.com.au/sport/horseracing/cup-favourite-jockey-damien-oliver-admits-to-betting-scandal-20121105-28u8v.html" title="Cup favourite jockey Damien Oliver admits to betting scandal"><img src="http://images.watoday.com.au/2012/11/05/3772053/th_betting-90x60.jpg" width="90" height="60" alt="th_betting" /></a>
+
+            
+        <p>
+                <cite>Nick McKenzie, Richard Baker</cite>
+            AUSTRALIA'S top jockey Damien Oliver - who will ride equal favourite Americain in today's Melbourne Cup - has admitted to racing authorities that he bet on a rival horse in a 2010 race and expects to be charged soon.
+        </p>
+        
+
+            
+    </div>
+        
+        
+    
+
+                
+    <div class="cN-storyHeadlineLead cfix date ">
+            <h4>Horse Racing</h4>
+            <h3><a href="http://www.watoday.com.au/sport/horseracing/raiders-return-for-round-two-20121105-28u8u.html" title="Raiders return for round two">Raiders return for round two</a></h3>
+                        <a href="http://www.watoday.com.au/sport/horseracing/raiders-return-for-round-two-20121105-28u8u.html" title="Raiders return for round two"><img src="http://images.watoday.com.au/2012/11/05/3771716/1_horse-90x60.jpg" width="90" height="60" alt="x" /></a>
+
+            
+        <p>
+                <cite>Chris Roots</cite>
+            IT IS said you have to have the heartbreak of losing a grand final to win one. If true, that bodes well for the team around Red Cadeaux, which has lived for the past 12 months with the knowledge that it was millimetres from winning the Melbourne Cup.
+        </p>
+        
+
+            
+    </div>
+        
+        
+    
+
+                
+    <div class="cN-storyHeadlineLead cfix date ">
+            <h4>Cricket</h4>
+            <h3><a href="http://www.watoday.com.au/sport/cricket/tough-customer-given-his-chance-20121105-28u4f.html" title="Tough customer given his chance">Tough customer given his chance</a></h3>
+                        <a href="http://www.watoday.com.au/sport/cricket/tough-customer-given-his-chance-20121105-28u4f.html" title="Tough customer given his chance"><img src="http://images.watoday.com.au/2012/11/05/3771579/dan-20121105184716803088-90x60.jpg" width="90" height="60" alt="Rob Quiney" /></a>
+
+            
+        <p>
+                <cite><a href="http://www.watoday.com.au/sport/by/Phil-Lutton" title="Phil Lutton">PHIL LUTTON</a></cite>
+            Victorian Rob Quiney, a blue-collar cricketer about to add a baggy green to his work uniform, believes his forging in Sheffield Shield cricket holds him in good stead to thwart a stacked South African attack in the first Test in Brisbane.
+        </p>
+        
+
+            
+    </div>
+        
+        
+    
+
+                
+    <div class="cN-storyHeadlineLead cfix date ">
+            <h4>Football</h4>
+            <h3><a href="http://www.watoday.com.au/afl/afl-news/malthouse-challenges-gibbs-20121105-28u80.html" title="Malthouse challenges Gibbs">Malthouse challenges Gibbs</a></h3>
+                        <a href="http://www.watoday.com.au/afl/afl-news/malthouse-challenges-gibbs-20121105-28u80.html" title="Malthouse challenges Gibbs"><img src="http://images.watoday.com.au/2012/11/05/3771674/th-MALTHOUSE2-90x60.jpg" width="90" height="60" alt="Carlton's first traing session under new coach Mick Malthouse." /></a>
+
+            
+        <p>
+                <cite><a href="http://www.watoday.com.au/afl/by/Michael-Gleeson" title="Michael Gleeson">MICHAEL GLEESON</a></cite>
+            On his first day in the job, Michael Malthouse has thrown a challenge to the as yet unfulfilled talent of Bryce Gibbs to become a genuine midfielder next season.
+        </p>
+        
+
+            
+    </div>
+        
+        
+    
+
+
+        
+
+        <h3 class="cT-strapHeading">
+            Cricket
+            <span>
+
+</span>
+        </h3>
+                
+    <div class="cN-storyHeadlineLead cfix  ">
+            <h3><a href="http://www.watoday.com.au/sport/cricket/howzat-for-a-spin-seeker-20121106-28vhs.html" title="Howzat for a spin seeker">Howzat for a spin seeker</a></h3>
+                        <a href="http://www.watoday.com.au/sport/cricket/howzat-for-a-spin-seeker-20121106-28vhs.html" title="Howzat for a spin seeker"><img src="http://images.watoday.com.au/2012/11/06/3773316/ahmed-spinner_320x214-90x60.jpg" width="90" height="60" alt="Fawad Ahmed" /></a>
+
+            
+        <p>
+                <cite><a href="http://www.watoday.com.au/sport/by/Chloe-Saltau" title="Chloe Saltau">CHLOE SALTAU</a></cite>
+            Pakistani asylum-seeker Fawad Ahmed has scalps of a few Test batsmen to show.
+        </p>
+        
+
+            
+    </div>
+        
+        
+    
+
+                
+    <div class="cN-storyHeadlineLead cfix  ">
+            <h3><a href="http://www.watoday.com.au/breaking-news-sport/ponting-chasing-south-africa-redemption-20121107-28wqs.html" title="Ponting chasing South Africa redemption">Ponting chasing South Africa redemption</a></h3>
+                
+            
+        <p>
+                <cite>Ed Jackson <small>12:06am</small></cite>
+            Last time Ricky Ponting took on South Africa at Test level it almost ended his long career, but the veteran feels he's ready to fire back this summer.
+        </p>
+        
+
+            
+    </div>
+        
+        
+    
+
+                
+    <div class="cN-storyHeadlineLead cfix  ">
+            <h3><a href="http://www.watoday.com.au/sport/cricket/quiney-callup-timely-reminder-for-fringe-vics-20121106-28w4i.html" title="Quiney call-up timely reminder for fringe Vics">Quiney call-up timely reminder for fringe Vics</a></h3>
+                        <a href="http://www.watoday.com.au/sport/cricket/quiney-callup-timely-reminder-for-fringe-vics-20121106-28w4i.html" title="Quiney call-up timely reminder for fringe Vics"><img src="http://images.watoday.com.au/2012/11/06/3774351/th-scCHRISROGERS-90x60.jpg" width="90" height="60" alt="Chris Rogers will benefit directly from Rob Quiney's call-up to play in the first Test." /></a>
+
+            
+        <p>
+                <cite><a href="http://www.watoday.com.au/sport/by/Adam-Cooper" title="Adam Cooper">ADAM COOPER</a></cite>
+            Victoria hopes Rob Quiney's selection will encourage others to fight for spots in team.
+        </p>
+        
+
+            
+    </div>
+        
+        
+    
+
+
+        
+
+        <h3 class="cT-strapHeading">
+            Fremantle Dockers
+            <span>
+
+</span>
+        </h3>
+                
+    <div class="cN-storyHeadlineLead cfix date ">
+            <h3><a href="http://www.watoday.com.au/afl/afl-news/2013-draw-fremantle-20121031-28j1y.html" title="2013 draw: Fremantle">2013 draw: Fremantle</a></h3>
+                
+            
+        <p>
+                
+            2013 draw: Fremantle.
+        </p>
+        
+
+            
+    </div>
+        
+        
+    
+
+                
+    <div class="cN-storyHeadlineLead cfix date ">
+            <h4>AFL</h4>
+            <h3><a href="http://www.watoday.com.au/afl/afl-news/eagles-dockers-form-new-reserves-alignments-20121031-28j06.html" title="Eagles, Dockers form new reserves alignments">Eagles, Dockers form new reserves alignments</a></h3>
+                
+            
+        <p>
+                
+            After failing in their bid to land a stand-alone reserve teams of their own, West Coast and Fremantle have agreed to alignments with WAFL clubs East Perth and Peel respectively for 2014 and beyond.
+        </p>
+        
+
+            
+    </div>
+        
+        
+    
+
+                
+    <div class="cN-storyHeadlineLead cfix date ">
+            <h4>AFL</h4>
+            <h3><a href="http://www.watoday.com.au/afl/afl-news/mcphee-signs-on-for-another-year-with-freo-20121022-281bq.html" title="McPhee signs on for another year with Freo">McPhee signs on for another year with Freo</a></h3>
+                        <a href="http://www.watoday.com.au/afl/afl-news/mcphee-signs-on-for-another-year-with-freo-20121022-281bq.html" title="McPhee signs on for another year with Freo"><img src="http://images.watoday.com.au/2012/06/07/3357703/McPhee_Duffield_thumb-90x60.jpg" width="90" height="60" alt="Paul Duffield and Adam McPhee" /></a>
+
+            
+        <p>
+                
+            Fremantle utility Adam McPhee has agreed to terms for a one-year contract extension.
+        </p>
+        
+
+            
+    </div>
+        
+        
+    
+
+
+        
+
+        <h3 class="cT-strapHeading">
+            West Coast Eagles
+            <span>
+
+</span>
+        </h3>
+                
+    <div class="cN-storyHeadlineLead cfix date ">
+            <h4>AFL</h4>
+            <h3><a href="http://www.watoday.com.au/afl/afl-news/mitch-brown-to-weigh-up-his-future-at-eagles-20121101-28lqq.html" title="Mitch Brown to weigh up his future at Eagles">Mitch Brown to weigh up his future at Eagles</a></h3>
+                        <a href="http://www.watoday.com.au/afl/afl-news/mitch-brown-to-weigh-up-his-future-at-eagles-20121101-28lqq.html" title="Mitch Brown to weigh up his future at Eagles"><img src="http://images.watoday.com.au/2012/10/26/3744379/mitch-brown-th-90x60.jpg" width="90" height="60" alt="Mitch Brown." /></a>
+
+            
+        <p>
+                
+            West Coast are desperate for him to re-sign beyond next season, but Eagles' defender Mitch Brown is expected to take a wait-and-see approach after having his bid to join St Kilda scuppered.
+        </p>
+        
+
+            
+    </div>
+        
+        
+    
+
+                
+    <div class="cN-storyHeadlineLead cfix date ">
+            <h3><a href="http://www.watoday.com.au/afl/afl-news/2013-draw-west-coast-20121031-28j8d.html" title="2013 draw: West Coast">2013 draw: West Coast</a></h3>
+                
+            
+        <p>
+                
+            2013 draw: West Coast.
+        </p>
+        
+
+            
+    </div>
+        
+        
+    
+
+                
+    <div class="cN-storyHeadlineLead cfix date ">
+            <h4>AFL</h4>
+            <h3><a href="http://www.watoday.com.au/afl/afl-news/eagles-dockers-form-new-reserves-alignments-20121031-28j06.html" title="Eagles, Dockers form new reserves alignments">Eagles, Dockers form new reserves alignments</a></h3>
+                
+            
+        <p>
+                
+            After failing in their bid to land a stand-alone reserve teams of their own, West Coast and Fremantle have agreed to alignments with WAFL clubs East Perth and Peel respectively for 2014 and beyond.
+        </p>
+        
+
+            
+    </div>
+        
+        
+    
+
+
+        
+
+        <h3 class="cT-strapHeading">
+            Western Force
+            <span>
+
+</span>
+        </h3>
+                
+    <div class="cN-storyHeadlineLead cfix date ">
+            <h3><a href="http://www.watoday.com.au/rugby-union/union-news/western-force-set-for-halfback-showdown-20121105-28u8y.html" title="Western Force set for halfback showdown">Western Force set for halfback showdown</a></h3>
+                        <a href="http://www.watoday.com.au/rugby-union/union-news/western-force-set-for-halfback-showdown-20121105-28u8y.html" title="Western Force set for halfback showdown"><img src="http://images.watoday.com.au/2012/11/05/3771712/th_alby_mathewson-90x60.jpg" width="90" height="60" alt="." /></a>
+
+            
+        <p>
+                <cite>Justin Chadwick</cite>
+            One is currently playing for the Wallabies and has been a mainstay at the Western Force since 2010. The other is a former All Black who has been lured to the Perth-based franchise as their marquee international player.
+        </p>
+        
+
+            
+    </div>
+        
+        
+    
+
+                
+    <div class="cN-storyHeadlineLead cfix date ">
+            <h3><a href="http://www.watoday.com.au/rugby-union/force/former-wallaby-mcmeniman-signs-with-western-force-20121022-280sw.html" title="Former Wallaby McMeniman signs with Western Force">Former Wallaby McMeniman signs with Western Force</a></h3>
+                        <a href="http://www.watoday.com.au/rugby-union/force/former-wallaby-mcmeniman-signs-with-western-force-20121022-280sw.html" title="Former Wallaby McMeniman signs with Western Force"><img src="http://images.watoday.com.au/2012/10/22/3733566/McMeniman_thumb-90x60.jpg" width="90" height="60" alt="Hugh McMeniman" /></a>
+
+            
+        <p>
+                
+            Former Wallaby Hugh McMeniman has signed with the Western Force for the 2013 Super Rugby season.
+        </p>
+        
+
+            
+    </div>
+        
+        
+    
+
+                
+    <div class="cN-storyHeadlineLead cfix date ">
+            <h3><a href="http://www.watoday.com.au/rugby-union/union-news/force-sign-hugh-mcmeniman-20121022-280on.html" title="Force sign Hugh McMeniman">Force sign Hugh McMeniman</a></h3>
+                        <a href="http://www.watoday.com.au/rugby-union/union-news/force-sign-hugh-mcmeniman-20121022-280on.html" title="Force sign Hugh McMeniman"><img src="http://images.watoday.com.au/2012/10/22/3733371/th_hugh_mcmeninam-90x60.jpg" width="90" height="60" alt="<p>" /></a>
+
+            
+        <p>
+                
+            Shoulder and knee issues limited McMeniman to just 29 appearances over five injury-plagued seasons with the Queensland Reds from 2005-09, and 21 Test caps for the Wallabies.
+        </p>
+        
+
+            
+    </div>
+        
+        
+    
+
+
+        
+
+        <h3 class="cT-strapHeading">
+            More Sport
+            <span>
+
+</span>
+        </h3>
+                
+    <div class="cN-storyHeadlineLead cfix  ">
+            <h3><a href="http://www.watoday.com.au/breaking-news-sport/wrestler-stripped-of-olympic-medal-20121107-28wr5.html" title="Wrestler stripped of Olympic medal">Wrestler stripped of Olympic medal</a></h3>
+                
+            
+        <p>
+                <cite>Stephen Wilson <small>2:25am</small></cite>
+            An Olympic wrestler from Uzbekistan has been stripped of his bronze medal from the London Games after failing a doping test, officials say.
+        </p>
+        
+
+            
+    </div>
+        
+        
+    
+
+                
+    <div class="cN-storyHeadlineLead cfix  ">
+            <h3><a href="http://www.watoday.com.au/breaking-news-sport/wallabies-up-vibe-in-europe-20121107-28wqy.html" title="Wallabies up vibe in Europe">Wallabies up vibe in Europe</a></h3>
+                
+            
+        <p>
+                <cite>Russell Jackson <small>2:14am</small></cite>
+            The return of several key Wallabies from injury has the side in a bright mood ahead of their clash with France in Paris.
+        </p>
+        
+
+            
+    </div>
+        
+        
+    
+
+                
+    <div class="cN-storyHeadlineLead cfix  ">
+            <h3><a href="http://www.watoday.com.au/breaking-news-sport/ponting-chasing-south-africa-redemption-20121107-28wqs.html" title="Ponting chasing South Africa redemption">Ponting chasing South Africa redemption</a></h3>
+                
+            
+        <p>
+                <cite>Ed Jackson <small>12:06am</small></cite>
+            Last time Ricky Ponting took on South Africa at Test level it almost ended his long career, but the veteran feels he's ready to fire back this summer.
+        </p>
+        
+
+            
+    </div>
+        
+        
+    
+
+                
+    <div class="cN-storyHeadlineLead cfix  ">
+            <h4>Rugby Union</h4>
+            <h3><a href="http://www.watoday.com.au/rugby-union/union-news/deans-calls-for-super-player-rotation-20121106-28vzw.html" title="Deans calls for Super player rotation">Deans calls for Super player rotation</a></h3>
+                        <a href="http://www.watoday.com.au/rugby-union/union-news/deans-calls-for-super-player-rotation-20121106-28vzw.html" title="Deans calls for Super player rotation"><img src="http://images.watoday.com.au/2012/11/06/3774373/th-svWALLABIES-90x60.jpg" width="90" height="60" alt="Wallabies training" /></a>
+
+            
+        <p>
+                <cite><a href="http://www.watoday.com.au/rugby-union/by/Georgina-Robinson" title="Georgina Robinson">GEORGINA ROBINSON</a></cite>
+            Wallabies coach's call to save Australian rugby from unprecedented ''carnage'' wrought by injuries.
+        </p>
+        
+
+            
+    </div>
+        
+        
+    
+
+                
+    <div class="cN-storyHeadlineLead cfix  ">
+            <h4>Motor Sport</h4>
+            <h3><a href="http://www.watoday.com.au/sport/motorsport/gloves-are-off-in-race-to-the-title-20121106-28vzx.html" title="Gloves are off in race to the title">Gloves are off in race to the title</a></h3>
+                        <a href="http://www.watoday.com.au/sport/motorsport/gloves-are-off-in-race-to-the-title-20121106-28vzx.html" title="Gloves are off in race to the title"><img src="http://images.watoday.com.au/2012/11/06/3774357/th-svVETTEL-90x60.jpg" width="90" height="60" alt="Hats on: Fernando Alonso (left) and Sebastian Vettel after the Abu Dhabi Grand Prix. " /></a>
+
+            
+        <p>
+                <cite>David Coulthard</cite>
+            What a couple of races are coming up in the US and Brazil to decide this year's winner.
+        </p>
+        
+
+            
+    </div>
+        
+        
+    
+
+                
+    <div class="cN-storyHeadlineLead cfix  ">
+            <h3><a href="http://www.watoday.com.au/rugby-union/union-news/deans-wants-players-rested-20121106-28w4r.html" title="Deans wants players rested">Deans wants players rested</a></h3>
+                        <a href="http://www.watoday.com.au/rugby-union/union-news/deans-wants-players-rested-20121106-28w4r.html" title="Deans wants players rested"><img src="http://images.watoday.com.au/2012/11/06/3774402/th-DeansTH-90x60.jpg" width="90" height="60" alt="Wallabies coach Robbie Deans" /></a>
+
+            
+        <p>
+                <cite><a href="http://www.watoday.com.au/rugby-union/by/Georgina-Robinson" title="Georgina Robinson">GEORGINA ROBINSON</a></cite>
+            PARIS: Wallabies coach Robbie Deans has called on the Super Rugby franchises to begin rotating Test players to save Australian rugby from the unprecedented ''carnage'' wrought by injuries this year.
+        </p>
+        
+
+            
+    </div>
+        
+        
+    
+
+                
+    <div class="cN-storyHeadlineLead cfix  ">
+            <h3><a href="http://www.watoday.com.au/sport/sonny-bills-return-up-in-the-air-20121106-28wit.html" title="Sonny Bill's return up in the air">Sonny Bill's return up in the air</a></h3>
+                        <a href="http://www.watoday.com.au/sport/sonny-bills-return-up-in-the-air-20121106-28wit.html" title="Sonny Bill's return up in the air"><img src="http://images.watoday.com.au/2012/11/06/3774700/th-svSBW-90x60.jpg" width="90" height="60" alt="Sonny Bill Williams." /></a>
+
+            
+        <p>
+                <cite>Sydney <small>9:01pm</small></cite>
+            Dual international's recovery from shoulder surgery progressing as well as hoped.
+        </p>
+        
+
+            
+    </div>
+        
+        
+    
+
+                
+    <div class="cN-storyHeadlineLead cfix  ">
+            <h3><a href="http://www.watoday.com.au/sport/a-league/victorys-best-hard-to-stop-postecoglou-20121106-28w2y.html" title="Victory's best hard to stop: Postecoglou">Victory's best hard to stop: Postecoglou</a></h3>
+                        <a href="http://www.watoday.com.au/sport/a-league/victorys-best-hard-to-stop-postecoglou-20121106-28w2y.html" title="Victory's best hard to stop: Postecoglou"><img src="http://images.watoday.com.au/2012/11/06/3774356/th-svPOSTECOGLOU-90x60.jpg" width="90" height="60" alt="Ange Postecoglou congratulates Marcos Flores after the game against Phoneix." /></a>
+
+            
+        <p>
+                
+            But Melbourne Victory coach says slack finish to 3-2 win over Phoenix was unacceptable.
+        </p>
+        
+
+            
+    </div>
+        
+        
+    
+
+                
+    <div class="cN-storyHeadlineLead cfix  ">
+            <h3><a href="http://www.watoday.com.au/breaking-news-sport/sbw-return-remains-up-in-the-air-20121106-28vx3.html" title="SBW return remains up in the air">SBW return remains up in the air</a></h3>
+                
+            
+        <p>
+                <cite>James MacSmith <small>3:06pm</small></cite>
+            Sonny Bill Williams is recovering well from shoulder surgery but when he will be fit to return to football and boxing remains in doubt.
+        </p>
+        
+
+            
+    </div>
+        
+        
+    
+
+                
+    <div class="cN-storyHeadlineLead cfix  ">
+            <h3><a href="http://www.watoday.com.au/breaking-news-sport/culina-returns-to-action-with-sydney-fc-20121106-28vwu.html" title="Culina returns to action with Sydney FC">Culina returns to action with Sydney FC</a></h3>
+                
+            
+        <p>
+                <cite>Adrian Warren <small>2:59pm</small></cite>
+            Socceroo midfielder Jason Culina has shown good touch in his first match after an injury-enforced layoff of almost two years.
+        </p>
+        
+
+            
+    </div>
+        
+        
+    
+
+
+        
+
+
+        
+
+
+        
+
+
+        
+
+
+        
+
+
+        
+
+
+
+                    
+
+
+                </div><!-- class:span-11 -->
+                <div class="span-5 last">
+                            
+
+
+
+
+        <h4 class="cT-strapSubHeading">Multimedia</h4>
+                
+    <div  class="cN-storyImageLead  media-image">
+                
+    <div class="media">
+<a class="play-video" title="Who is Pat Cummins?" href="http://media.watoday.com.au/sport/sports-hq/who-is-pat-cummins-2698796.html" > <img src="http://images.watoday.com.au/2011/10/18/2698798/pat-cummins-3x2-180x120.jpg" width="180" alt="Who is Pat Cummins? (Thumbnail)"/> <span class="size-med"> </span> </a>    </div>
+
+        <div class="wof">
+            
+            <h3><a href="http://media.watoday.com.au/sport/sports-hq/who-is-pat-cummins-2698796.html" title="Who is Pat Cummins?">Who is Pat Cummins?</a></h3>
+            <p>
+                    Background on the Australian cricket teams wunderkind recruit.
+            </p>
+            
+
+                
+                
+                
+                
+        </div><!-- class:wof -->
+    </div><!-- class:cN-storyImageLead  media-image -->
+    
+
+                
+    <div  class="cN-storyImageLead  media-image">
+                
+    <div class="media">
+<a class="play-video" title="Motor sport world mourns Wheldon death" href="http://media.watoday.com.au/cars/car-news/motor-sport-world-mourns-wheldon-death-2698060.html" > <img src="http://images.watoday.com.au/2011/10/18/2698062/th-wheldon-180x120.jpg" width="180" alt="LAS VEGAS - OCTOBER 14: Dan Wheldon, driver of the #77 Bowers & Wilkens Dallara Honda, looks on during qualifying for the IZOD IndyCar World Series Championships on October 14, 2011 at Las Vegas Motor Speedway in Las Vegas, Nevada. Wheldon was killed in a massive fifteen car crash during the IZOD IndyCar World Series Championships Las Vegas Indy 300 on October 16, 2011. (Photo by Jonathan Ferrey/Getty Images)"/> <span class="size-med"> </span> </a>    </div>
+
+        <div class="wof">
+            
+            <h3><a href="http://media.watoday.com.au/cars/car-news/motor-sport-world-mourns-wheldon-death-2698060.html" title="World mourns champ">World mourns champ</a></h3>
+            <p>
+                    The world of motor sport mourns Indy 500 champion Dan Wheldon.
+            </p>
+            
+
+                
+                
+                
+                
+        </div><!-- class:wof -->
+    </div><!-- class:cN-storyImageLead  media-image -->
+    
+
+                
+    <div  class="cN-storyImageLead  media-image">
+                
+    <div class="media">
+<a class="play-video" title="Wallabies take positive out of RWC defeat" href="http://media.watoday.com.au/sport/sports-hq/wallabies-take-positive-out-of-rwc-defeat-2697177.html" > <img src="http://images.watoday.com.au/2011/10/17/2697179/Robbie_Deans_sm-180x120.jpg" width="180" alt="Wallabies take positive out of RWC defeat (Thumbnail)"/> <span class="size-med"> </span> </a>    </div>
+
+        <div class="wof">
+            
+            <h3><a href="http://media.watoday.com.au/sport/sports-hq/wallabies-take-positive-out-of-rwc-defeat-2697177.html" title="Wallabies take defeat">Wallabies take defeat</a></h3>
+            <p>
+                    Wallabies coach says his team will be better after the World Cup.
+            </p>
+            
+
+                
+                
+                
+                
+        </div><!-- class:wof -->
+    </div><!-- class:cN-storyImageLead  media-image -->
+    
+
+                
+    <div  class="cN-storyImageLead  media-image">
+                
+    <div class="media">
+<a class="more-photos" title="Stoner crows at Phillip Island" href="http://www.watoday.com.au/photogallery/sport/motorsport/stoner-crows-at-phillip-island-20111017-1lt3g.html" > <img src="http://images.watoday.com.au/2011/10/15/2693277/1_thumb-180x120.jpg" width="180" alt="Casey Stoner of Australia races his Honda during the third practice session for the Australian Grand Prix motorcycling MotoGP race at Phillip Island."/> <span class="size-med"> </span> </a>    </div>
+
+        <div class="wof">
+            
+            <h3><a href="http://www.watoday.com.au/photogallery/sport/motorsport/stoner-crows-at-phillip-island-20111017-1lt3g.html" title="Stoner crows">Stoner crows</a></h3>
+            <p>
+                    Winning a world championship. Not a bad way to mark your birthday.
+            </p>
+            
+
+                
+                
+                
+                
+        </div><!-- class:wof -->
+    </div><!-- class:cN-storyImageLead  media-image -->
+    
+
+                
+    <div  class="cN-storyImageLead  media-image">
+                
+    <div class="media">
+<a class="play-video" title="All Blacks fans celebrate in NZ" href="http://media.watoday.com.au/sport/sports-hq/all-blacks-fans-celebrate-in-nz-2695957.html" > <img src="http://images.watoday.com.au/2011/10/17/2695978/th-Untitled-1-180x120.jpg" width="180" alt="All Blacks supporters"/> <span class="size-med"> </span> </a>    </div>
+
+        <div class="wof">
+            
+            <h3><a href="http://media.watoday.com.au/sport/sports-hq/all-blacks-fans-celebrate-in-nz-2695957.html" title="All Blacks fans">All Blacks fans</a></h3>
+            <p>
+                    Crowd at Auckland's Queens Wharf celebrate the All Blacks win.
+            </p>
+            
+
+                
+                
+                
+                
+        </div><!-- class:wof -->
+    </div><!-- class:cN-storyImageLead  media-image -->
+    
+
+                
+    <div  class="cN-storyImageLead  media-image">
+                
+    <div class="media">
+<a class="more-photos" title="Australia continues their netball streak against England." href="http://www.watoday.com.au/photogallery/sport/australia-continues-their-netball-streak-against-england-20111017-1lrws.html" > <img src="http://images.watoday.com.au/2011/10/17/2695566/th_581154356-180x120.jpg" width="180" alt="Holden Netball Test Series at Allphones Arena Sydney Olympic Park Australia v England Sunday October 16th 2011."/> <span class="size-med"> </span> </a>    </div>
+
+        <div class="wof">
+            
+            <h3><a href="http://www.watoday.com.au/photogallery/sport/australia-continues-their-netball-streak-against-england-20111017-1lrws.html" title="Streak continues">Streak continues</a></h3>
+            <p>
+                    The Holden Netball Test Series between Australia &amp; England.
+            </p>
+            
+
+                
+                
+                
+                
+        </div><!-- class:wof -->
+    </div><!-- class:cN-storyImageLead  media-image -->
+    
+
+                
+    <div  class="cN-storyImageLead  media-image">
+                
+    <div class="media">
+<a class="more-photos" title="Stoner takes MotoGP World Title" href="http://www.watoday.com.au/photogallery/world/stoner-takes-motogp-world-title-20111016-1lrhz.html" > <img src="http://images.watoday.com.au/2011/10/16/2695116/motothumb_20111016205041925241-180x120.jpg" width="180" alt="Honda MotoGP rider Casey Stoner of Australia rides during the Australian Grand Prix on Phillip Island near Melbourne October 16, 2011. Photo by Reuters"/> <span class="size-med"> </span> </a>    </div>
+
+        <div class="wof">
+            
+            <h3><a href="http://www.watoday.com.au/photogallery/world/stoner-takes-motogp-world-title-20111016-1lrhz.html" title="Stoner takes title">Stoner takes title</a></h3>
+            <p>
+                    Australian Casey Stoner took the Grand Prix World Championship.
+            </p>
+            
+
+                
+                
+                
+                
+        </div><!-- class:wof -->
+    </div><!-- class:cN-storyImageLead  media-image -->
+    
+
+                
+    <div  class="cN-storyImageLead  media-image">
+                
+    <div class="media">
+<a class="more-photos" title="All Blacks wallop Wallabies" href="http://www.watoday.com.au/photogallery/world/all-blacks-wallop-wallabies-20111016-1lro1.html" > <img src="http://images.watoday.com.au/2011/10/16/2695286/1rugbythumb_20111016221926611161-180x120.jpg" width="180" alt="The All Blacks perform the haka during semi final two of the 2011 IRB Rugby World Cup between New Zealand and Australia at Eden Park on October 16, 2011 in Auckland, New Zealand. Photo by Getty Images"/> <span class="size-med"> </span> </a>    </div>
+
+        <div class="wof">
+            
+            <h3><a href="http://www.watoday.com.au/photogallery/world/all-blacks-wallop-wallabies-20111016-1lro1.html" title="All Blacks wallop">All Blacks wallop</a></h3>
+            <p>
+                    Wallabies suffer a 20-6 defeat at the semi-final at Eden Park.
+            </p>
+            
+
+                
+                
+                
+                
+        </div><!-- class:wof -->
+    </div><!-- class:cN-storyImageLead  media-image -->
+    
+
+                
+    <div  class="cN-storyImageLead  media-image">
+                
+    <div class="media">
+<a class="more-photos" title="Kangaroos crush Kiwis in Newcastle" href="http://www.watoday.com.au/photogallery/rugby-league/league-news/kangaroos-crush-kiwis-in-newcastle-20111016-1lrbd.html" > <img src="http://images.watoday.com.au/2011/10/16/2694819/ind_akuila_uate-180x120.jpg" width="180" alt="."/> <span class="size-med"> </span> </a>    </div>
+
+        <div class="wof">
+            
+            <h3><a href="http://www.watoday.com.au/photogallery/rugby-league/league-news/kangaroos-crush-kiwis-in-newcastle-20111016-1lrbd.html" title="Kiwis crushed">Kiwis crushed</a></h3>
+            <p>
+                    A early try blitzkrieg by the Kangaroos sets up a big win.
+            </p>
+            
+
+                
+                
+                
+                
+        </div><!-- class:wof -->
+    </div><!-- class:cN-storyImageLead  media-image -->
+    
+
+                
+    <div  class="cN-storyImageLead  media-image">
+                
+    <div class="media">
+<a class="play-video" title="St Kilda unveil their new coach" href="http://media.watoday.com.au/sport/sports-hq/st-kilda-unveil-their-new-coach-2694654.html" > <img src="http://images.watoday.com.au/2011/10/16/2694657/Scott-Watters-32-180x120.jpg" width="180" alt="St Kilda unveil their new coach (Thumbnail)"/> <span class="size-med"> </span> </a>    </div>
+
+        <div class="wof">
+            
+            <h3><a href="http://media.watoday.com.au/sport/sports-hq/st-kilda-unveil-their-new-coach-2694654.html" title="St Kilda unveil coach">St Kilda unveil coach</a></h3>
+            <p>
+                    Former Magpie assistant Scott Watters is St Kilda's new coach.
+            </p>
+            
+
+                
+                
+                
+                
+        </div><!-- class:wof -->
+    </div><!-- class:cN-storyImageLead  media-image -->
+    
+
+                
+    <div  class="cN-storyImageLead  media-image">
+                
+    <div class="media">
+<a class="more-photos" title="Wales see red as France stumble on" href="http://www.watoday.com.au/photogallery/rugby-union/union-news/wales-see-red-as-france-stumble-on-20111015-1lqiy.html" > <img src="http://images.watoday.com.au/2011/10/15/2694056/ind-tip_tackle-180x120.jpg" width="180" alt="."/> <span class="size-med"> </span> </a>    </div>
+
+        <div class="wof">
+            
+            <h3><a href="http://www.watoday.com.au/photogallery/rugby-union/union-news/wales-see-red-as-france-stumble-on-20111015-1lqiy.html" title="Wales see red">Wales see red</a></h3>
+            <p>
+                    France has won the first semi-final of the Rugby World Cup.
+            </p>
+            
+
+                
+                
+                
+                
+        </div><!-- class:wof -->
+    </div><!-- class:cN-storyImageLead  media-image -->
+    
+
+                
+    <div  class="cN-storyImageLead  media-image">
+                
+    <div class="media">
+<a class="more-photos" title="Caulfield Cup action from the track" href="http://www.watoday.com.au/photogallery/national/caulfield-cup-action-from-the-track-20111015-1lq41.html" > <img src="http://images.watoday.com.au/2011/10/15/2693685/-_20111015184045301051-180x120.jpg" width="180" alt="Craig Williams with trophy after winning The Caulfield Cup on Southern Speed."/> <span class="size-med"> </span> </a>    </div>
+
+        <div class="wof">
+            
+            <h3><a href="http://www.watoday.com.au/photogallery/national/caulfield-cup-action-from-the-track-20111015-1lq41.html" title="Caulfield Cup action">Caulfield Cup action</a></h3>
+            <p>
+                    A selection of images capturing the action from race day.
+            </p>
+            
+
+                
+                
+                
+                
+        </div><!-- class:wof -->
+    </div><!-- class:cN-storyImageLead  media-image -->
+    
+
+                
+    <div  class="cN-storyImageLead  media-image">
+                
+    <div class="media">
+<a class="more-photos" title="Grand Prix action from Phillip Island" href="http://www.watoday.com.au/photogallery/national/grand-prix-action-from-phillip-island-20111015-1lq12.html" > <img src="http://images.watoday.com.au/2011/10/15/2693277/1_thumb-180x120.jpg" width="180" alt="Casey Stoner of Australia races his Honda during the third practice session for the Australian Grand Prix motorcycling MotoGP race at Phillip Island."/> <span class="size-med"> </span> </a>    </div>
+
+        <div class="wof">
+            
+            <h3><a href="http://www.watoday.com.au/photogallery/national/grand-prix-action-from-phillip-island-20111015-1lq12.html" title="Grand Prix">Grand Prix</a></h3>
+            <p>
+                    All the action during practice sessions for the Australian MotoGP.
+            </p>
+            
+
+                
+                
+                
+                
+        </div><!-- class:wof -->
+    </div><!-- class:cN-storyImageLead  media-image -->
+    
+
+                
+    <div  class="cN-storyImageLead  media-image">
+                
+    <div class="media">
+<a class="play-video" title="'It's a big game of rugby' says Henry" href="http://media.watoday.com.au/sport/sports-hq/its-a-big-game-of-rugby-says-henry-2691375.html" > <img src="http://images.watoday.com.au/2011/10/14/2691391/th-henry-180x120.jpg" width="180" alt="New Zealand All Black coach Graham Henry"/> <span class="size-med"> </span> </a>    </div>
+
+        <div class="wof">
+            
+            <h3><a href="http://media.watoday.com.au/sport/sports-hq/its-a-big-game-of-rugby-says-henry-2691375.html" title="'It's a big game'">'It's a big game'</a></h3>
+            <p>
+                    Graham Henry talks about the Rugby World Cup semi-final.
+            </p>
+            
+
+                
+                
+                
+                
+        </div><!-- class:wof -->
+    </div><!-- class:cN-storyImageLead  media-image -->
+    
+
+                
+    <div  class="cN-storyImageLead  media-image">
+                
+    <div class="media">
+<a class="more-photos" title="All Blacks grind out win over Pumas" href="http://www.watoday.com.au/photogallery/rugby-union/rugby-world-cup/all-blacks-grind-out-win-over-pumas-20111009-1lfni.html" > <img src="http://images.watoday.com.au/2011/10/09/2680171/ind_sonny_bill-180x120.jpg" width="180" alt="."/> <span class="size-med"> </span> </a>    </div>
+
+        <div class="wof">
+            
+            <h3><a href="http://www.watoday.com.au/photogallery/rugby-union/rugby-world-cup/all-blacks-grind-out-win-over-pumas-20111009-1lfni.html" title="All Blacks win">All Blacks win</a></h3>
+            <p>
+                    The All Blacks rely on the boot of Piri Weepu to tame the Pumas.
+            </p>
+            
+
+                
+                
+                
+                
+        </div><!-- class:wof -->
+    </div><!-- class:cN-storyImageLead  media-image -->
+    
+
+                
+    <div  class="cN-storyImageLead  media-image">
+                
+    <div class="media">
+<a class="play-video" title="Courageous Wallabies defy Springbok onslaught" href="http://media.watoday.com.au/sport/sports-hq/courageous-wallabies-defy-springbok-onslaught-2679605.html" > <img src="http://images.watoday.com.au/2011/10/09/2679607/Wallabies-beat-SA-3x2-180x120.jpg" width="180" alt="Courageous Wallabies defy Springbok onslaught (Thumbnail)"/> <span class="size-med"> </span> </a>    </div>
+
+        <div class="wof">
+            
+            <h3><a href="http://media.watoday.com.au/sport/sports-hq/courageous-wallabies-defy-springbok-onslaught-2679605.html" title="Courageous Wallabies">Courageous Wallabies</a></h3>
+            <p>
+                    How the Wallabies beat the Springboks to make it through.
+            </p>
+            
+
+                
+                
+                
+                
+        </div><!-- class:wof -->
+    </div><!-- class:cN-storyImageLead  media-image -->
+    
+
+                
+    <div  class="cN-storyImageLead  media-image">
+                
+    <div class="media">
+<a class="play-video" title="Black Caviar wins 14 straight" href="http://media.watoday.com.au/sport/horse-racing/black-caviar-wins-14-straight-2679380.html" > <img src="http://images.watoday.com.au/2011/10/09/2679382/black-caviar-thumb32-180x120.jpg" width="180" alt="Black Caviar wins 14 straight (Thumbnail)"/> <span class="size-med"> </span> </a>    </div>
+
+        <div class="wof">
+            
+            <h3><a href="http://media.watoday.com.au/sport/horse-racing/black-caviar-wins-14-straight-2679380.html" title="Black Caviar record">Black Caviar record</a></h3>
+            <p>
+                    Fans flock to see Black Caviar continue her record winning streak.
+            </p>
+            
+
+                
+                
+                
+                
+        </div><!-- class:wof -->
+    </div><!-- class:cN-storyImageLead  media-image -->
+    
+
+                
+    <div  class="cN-storyImageLead  media-image">
+                
+    <div class="media">
+<a class="more-photos" title="Harry's Victory" href="http://www.watoday.com.au/photogallery/national/harrys-victory-20111008-1levk.html" > <img src="http://images.watoday.com.au/2011/10/08/2679066/A-League-Soccer_THUMB-180x120.jpg" width="180" alt="The A League Soccer Melbourne Victory v Sydney at Etihad Stadium. Harry Kewell."/> <span class="size-med"> </span> </a>    </div>
+
+        <div class="wof">
+            
+            <h3><a href="http://www.watoday.com.au/photogallery/national/harrys-victory-20111008-1levk.html" title="Harry's Victory">Harry's Victory</a></h3>
+            <p>
+                    The star player for Melbourne Victory helped take on Sydney FC
+            </p>
+            
+
+                
+                
+                
+                
+        </div><!-- class:wof -->
+    </div><!-- class:cN-storyImageLead  media-image -->
+    
+
+                
+    <div  class="cN-storyImageLead  media-image last">
+                
+    <div class="media">
+<a class="more-photos" title="West Coast Eagles Best and Fairest Awards" href="http://www.watoday.com.au/photogallery/afl/west-coast-eagles/west-coast-eagles-best-and-fairest--awards-20111008-1lesi.html" > <img src="http://images.watoday.com.au/2011/10/08/2678787/Eaglesbestandfairest-180x120.jpg" width="180" alt="Eaglesbestandfairest"/> <span class="size-med"> </span> </a>    </div>
+
+        <div class="wof">
+            
+            <h3><a href="http://www.watoday.com.au/photogallery/afl/west-coast-eagles/west-coast-eagles-best-and-fairest--awards-20111008-1lesi.html" title="Best and Fairest">Best and Fairest</a></h3>
+            <p>
+                    Skipper Darren Glass claims West Coast Eagles award.
+            </p>
+            
+
+                
+                
+                
+                
+        </div><!-- class:wof -->
+    </div><!-- class:cN-storyImageLead  media-image last -->
+    
+
+
+        
+
+
+
+
+
+        
+
+
+
+
+
+        
+
+
+
+
+
+        
+
+
+
+
+
+        
+
+
+
+
+
+
+                </div><!-- class:span-5 last -->
+            </div><!-- id:content -->
+            <div class="aside span-8 last">
+                
+
+
+                
+
+
+
+                
+
+
+                
+                    
+
+                <div id="adspot-300x600,300x250-pos-1" class="ad"> <small>Advertisement</small> <script> renderJAd("adspot-300x600,300x250-pos-1", "dcAd-3", 'http://ad-apac.doubleclick.net/adj/onl.wa.sport/sport/homepage;cat1=homepage;cat=sport;ctype=index;pos=1;' + document.dcAdsCParams +'sz=300x600,300x250;tile=3;ord=' + dcOrd + '?', -767700686); </script> <noscript> <a href='http://ad-apac.doubleclick.net/jump/onl.wa.sport/sport/homepage;cat1=homepage;cat=sport;ctype=index;pos=1;sz=300x600,300x250;tile=3;ord=7.8233741E7?' target="_blank"> <img src='http://ad-apac.doubleclick.net/ad/onl.wa.sport/sport/homepage;cat1=homepage;cat=sport;ctype=index;pos=1;sz=300x600,300x250;tile=3;ord=7.8233741E7?' border="0" alt=""> </a> </noscript> </div>
+                <!-- add solar quotes for all Environment sections -->
+                
+
+            <br>
+<a href="/olympics">
+<img src="http://images.theage.com.au/2011/11/15/2773951/london-olympics-header_300.jpg?rand=1321320443885" width="300" height="60" alt="London Olympics" style="display:block;border-bottom:1px solid #ccc;padding:0;margin:0 0 10px 0;"></a>
+
+                    <div class="cS-latestVideo">
+        <h3>Sports HQ Video <a href="http://media.watoday.com.au/video-sports-hq/sports-hq">More video</a></h3>
+        <div class="media-video" id="video-player-latest">
+            <div id="video-player-latest-player" class="videoWrap"></div><!-- id:video-player-latest-player -->
+            <div class="fdVideoWof accessibleWof">
+                <h4>Tomic found guilty</h4>
+                <p>Tomic admits off court controversy has taken a toll on him both professionally and personally.</p>
+            </div><!-- class:fdVideoWof accessibleWof -->
+            <ul class="span-5">
+                    <li>
+                                <a class="play-video " href="http://media.watoday.com.au/sport/sports-hq/live-call-of-the-card-3770268.html" title="LIVE: Call of the Card"><img src="http://images.watoday.com.au/2012/11/05/3770269/Call-of-the-Card_bg-92x52.jpg" width="92" height="52" alt="Live: Call of thecards (Video Thumbnail)" /><span class="size-sml">Click to play video</span></a>
+
+                        <p><a href="http://media.watoday.com.au/sport/sports-hq/live-call-of-the-card-3770268.html">LIVE: Call of the Card</a></p>
+                    </li>
+                    <li>
+                                <a class="play-video " href="http://media.watoday.com.au/sport/sports-hq/mariners-masterclass-stuns-sydney-fc-3770530.html" title="Mariners' masterclass stuns Sydney FC"><img src="http://images.watoday.com.au/2012/11/05/3770534/vd-al4-92x52.jpg" width="92" height="52" alt="A-League" /><span class="size-sml">Click to play video</span></a>
+
+                        <p><a href="http://media.watoday.com.au/sport/sports-hq/mariners-masterclass-stuns-sydney-fc-3770530.html">Mariners' masterclass stuns Sydney FC</a></p>
+                    </li>
+                    <li>
+                                <a class="play-video " href="http://media.watoday.com.au/national/selections/green-moon-wins-the-melbourne-cup-3770221.html" title="Green Moon wins the Melbourne Cup"><img src="http://images.watoday.com.au/2012/11/06/3773402/winwide-92x52.jpg" width="92" height="52" alt="Green Moon wins the Melbourne Cup (Video Thumbnail)" /><span class="size-sml">Click to play video</span></a>
+
+                        <p><a href="http://media.watoday.com.au/national/selections/green-moon-wins-the-melbourne-cup-3770221.html">Green Moon wins the Melbourne Cup</a></p>
+                    </li>
+            </ul>
+        </div><!-- id:video-player-latest -->
+    </div><!-- class:cS-latestVideo -->
+
+
+
+
+
+
+    
+    
+    <div class="cS-photoGalleryLinks cfix">
+        <h3>Sport Photos</h3>
+        <ul>
+                        <li>
+                            <a href="http://www.watoday.com.au/photogallery/sport/horseracing/green-moon-races-to-victory-in-melbourne-cup-20121106-28vo1.html">
+                                    <img src="http://images.watoday.com.au/2012/11/06/3773552/---th_green_moon10_20121106161025421262-90x60.jpg" width="89" height="60" alt="Green Moon."/>
+                            </a>
+                            <p><a href="http://www.watoday.com.au/photogallery/sport/horseracing/green-moon-races-to-victory-in-melbourne-cup-20121106-28vo1.html">Green Moon races to victory in Melbourne Cup</a></p>
+                        </li>
+                        <li>
+                            <a href="http://www.watoday.com.au/photogallery/sport/horseracing/derby-day-2012-20121103-28qln.html">
+                                    <img src="http://images.watoday.com.au/2012/11/03/3767251/DP_DerbyDayTH-20121103171633705109-90x60.jpg" width="89" height="60" alt="VRC Derby Day Flemington , Spring"/>
+                            </a>
+                            <p><a href="http://www.watoday.com.au/photogallery/sport/horseracing/derby-day-2012-20121103-28qln.html">Derby Day 2012</a></p>
+                        </li>
+                        <li>
+                            <a href="http://www.watoday.com.au/photogallery/sport/a-league/melbourne-had-no-heart-20121102-28owr.html">
+                                    <img src="http://images.watoday.com.au/2012/11/02/3766425/H-Aleagueth-20121102225423875897-90x60.jpg" width="89" height="60" alt="Leo GIBBS no 13 in action during the Western Sydney Wanderers vs The Melbourne Heart at Parramatta Stadium
+Photography Brendan Esposito
+smh,2nd november,2012"/>
+                            </a>
+                            <p><a href="http://www.watoday.com.au/photogallery/sport/a-league/melbourne-had-no-heart-20121102-28owr.html">Melbourne had no heart</a></p>
+                        </li>
+                        <li>
+                            <a href="http://www.watoday.com.au/photogallery/sport/australian-boat-race--sydney-university-vs-melbourne-university-20121102-28oxb.html">
+                                    <img src="http://images.watoday.com.au/2012/11/02/3765434/H-Rowingthu-20121102183132450757-90x60.jpg" width="89" height="60" alt="Sydney University womens 8, trains on Sydney Harbour for this Sundays race against Melb Uni. Photo: Peter Rae Tuesday 30 October 2012."/>
+                            </a>
+                            <p><a href="http://www.watoday.com.au/photogallery/sport/australian-boat-race--sydney-university-vs-melbourne-university-20121102-28oxb.html">Australian Boat Race</a></p>
+                        </li>
+                        <li>
+                            <a href="http://www.watoday.com.au/photogallery/rugby-union/union-news/john-eales-medal-2012-20121101-28mw5.html">
+                                    <img src="http://images.watoday.com.au/2012/11/01/3762166/dksmithmedalthumb-20121101195741280630-90x60.jpg" width="89" height="60" alt="Tatafu Polota-Nauat the John Eales Medal, Sydney."/>
+                            </a>
+                            <p><a href="http://www.watoday.com.au/photogallery/rugby-union/union-news/john-eales-medal-2012-20121101-28mw5.html">John Eales Medal</a></p>
+                        </li>
+                        <li>
+                            <a href="http://www.watoday.com.au/photogallery/sport/horseracing/the-mad-hatters-of-spring-racing-20121101-28lj5.html">
+                                    <img src="http://images.watoday.com.au/2012/11/01/3760824/MadhatThumb-20121101124808973253-90x60.jpg" width="89" height="60" alt="Melbourne Cup 2011 at flemington. Angela Menz enjoys the biggest racing day of the year in Australia."/>
+                            </a>
+                            <p><a href="http://www.watoday.com.au/photogallery/sport/horseracing/the-mad-hatters-of-spring-racing-20121101-28lj5.html">The mad hatters of Spring Racing</a></p>
+                        </li>
+        </ul>
+    </div><!-- class:cS-photoGalleryLinks cfix -->
+    
+
+
+
+
+    <div class="cN-articles ">
+            <h3 class="cT-strapHeading">
+                Sport newsletter
+                <span>
+
+</span>
+            </h3>
+            
+            <!-- cN-story -->
+<div class="cN-story cfix ">
+    <div class="wof">
+        <h3>
+                <a href="https://membercentre.fairfax.com.au/NewsletterSubscription.aspx" title="Sign up now">Sign up now</a>
+        </h3>
+                <p>Get all the latest Sport news delivered to your inbox every week</p>
+            
+    </div>
+</div>
+
+            
+    </div><!-- class:cN-articles  -->
+
+
+
+                <div id="adspot-300x250-pos-2" class="ad"> <small>Advertisement</small> <script type="text/javascript"> if (ie) { renderIFAd("adspot-300x250-pos-2", "dcAd-1-4", "http://ad-apac.doubleclick.net/adi/onl.wa.sport/sport/homepage;cat1=homepage;cat=sport;ctype=index;pos=2;" + document.dcAdsCParams + "sz=300x250;tile=4;ord=" + dcOrd + "?", 300, 250, 181244940); } else { renderJIFAd("adspot-300x250-pos-2","dcAd-1-4", "http://ad-apac.doubleclick.net/adj/onl.wa.sport/sport/homepage;cat1=homepage;cat=sport;ctype=index;pos=2;" + document.dcAdsCParams + "sz=300x250;tile=4;ord=" + dcOrd + "?", 300, 250, 181244940, ""); } </script> <noscript> <iframe id="dcAd-1-4" src="http://ad-apac.doubleclick.net/adi/onl.wa.sport/sport/homepage;cat1=homepage;cat=sport;ctype=index;pos=2;sz=300x250;tile=4;ord=7.8233741E7?" width='300' height='250' scrolling="no" marginheight="0" marginwidth="0" allowtransparency="true" frameborder="0"> </iframe> </noscript> </div>
+                
+
+
+                
+            </div><!-- class:aside span-8 last -->
+            <!-- Footer fN-footerNetwork (class according to new HTML5 element 'footer'; scope: network-wide) -->
+<div class="footer span-24" role="contentinfo">
+    
+    <div class="c5 classifieds cfix">
+                            <div class="s1 cWAToday">
+                            <!-- Campaign ID: 1262275 -->
+                            <h2><a title="Sport" class="gaTrackable" data-gaAction="RainbowStrip Click" data-gaCategory="RainbowStrip" href="http://www.watoday.com.au">Sport</a></h2>
+                                        <div class="puff">
+                                                <a href="http://www.watoday.com.au/afl/brownlow-medal" rel="nofollow" class="gaTrackable" data-gaAction="RainbowStrip Click" data-gaCategory="RainbowStrip"  >
+    <img src="http://images.watoday.com.au/2011/09/19/2634943/brownlow-172x115.jpg" width="172" alt="brownlow"/></a>
+
+                                            <h5><a href="http://www.watoday.com.au/afl/brownlow-medal" rel="nofollow" title="2011brownlowmedal" class="gaTrackable" data-gaAction="RainbowStrip Click" data-gaCategory="RainbowStrip">2011 Brownlow Medal </a></h5>
+                                        </div><!-- class:puff -->
+                                        <ul><li class="lWAToday"><a href="http://www.watoday.com.au" class="gaTrackable" data-gaAction="RainbowStrip Click" data-gaCategory="RainbowStrip">Watoday.com.au</a></li>
+                                        <li><a href="http://www.watoday.com.au/rugby-union/" class="gaTrackable" data-gaAction="RainbowStrip Click" data-gaCategory="RainbowStrip">RWC Live Scores</a></li>
+                                        <li><a href="http://nrl.tipping.watoday.com.au/" class="gaTrackable" data-gaAction="RainbowStrip Click" data-gaCategory="RainbowStrip">NRL tipping comp</a></li>
+                                        <li><a href="/sport" class="gaTrackable" data-gaAction="RainbowStrip Click" data-gaCategory="RainbowStrip">Sport news and analysis</a></li>
+                                </ul>
+                        </div><!-- class:s1 cWAToday -->
+                        <div class="s2 cDrive">
+                            <!-- Campaign ID: 1262277 -->
+                            <h2><a title="Motoring" class="gaTrackable" data-gaAction="RainbowStrip Click" data-gaCategory="RainbowStrip" href="http://www.drive.com.au">Motoring</a></h2>
+                                        <div class="puff">
+                                                <a href="http://www.drive.com.au/car-of-the-year/" rel="nofollow" class="gaTrackable" data-gaAction="RainbowStrip Click" data-gaCategory="RainbowStrip"  >
+    <img src="http://images.watoday.com.au/2012/10/30/3754633/12MOT_MI052_PCA_OnlineAds172x115-172x115.jpg" width="172" alt="Drive Car of the Year - People's Choice awards"/></a>
+
+                                            <h5><a href="http://www.drive.com.au/car-of-the-year/" rel="nofollow" title="haveyoursayindrivescaroftheyear" class="gaTrackable" data-gaAction="RainbowStrip Click" data-gaCategory="RainbowStrip">Have your say in Drive's Car of the Year</a></h5>
+                                        </div><!-- class:puff -->
+                                        <ul><li class="lDrive"><a href="http://www.drive.com.au" class="gaTrackable" data-gaAction="RainbowStrip Click" data-gaCategory="RainbowStrip">Drive.com.au</a></li>
+                                        <li><a href="http://pinkribbonbreakfast.org.au/drive?source=rainbowstrip&s_rid=cost-Free:network-fairfax:brand-drive:placement-rainbow:medium-online:format-display_ad:type-house:date-2012-09:cpn_name-winabmw" class="gaTrackable" data-gaAction="RainbowStrip Click" data-gaCategory="RainbowStrip">Win a BMW convertible and support NBCF</a></li>
+                                        <li><a href="http://promotions.drive.com.au/s3/AstonMartin?source=Rainbow_strip&s_rid=cost-Free:network-fairfax:brand-drive:placement-rainbow:medium-online:format-display_ad:type-house:date-2012-11:cpn_name-astonmartin" class="gaTrackable" data-gaAction="RainbowStrip Click" data-gaCategory="RainbowStrip">Win the Aston Martin or a $10,000 European Holiday</a></li>
+                                        <li><a href="https://selfservice.drive.com.au/" class="gaTrackable" data-gaAction="RainbowStrip Click" data-gaCategory="RainbowStrip">Sell your car easily</a></li>
+                                </ul>
+                        </div><!-- class:s2 cDrive -->
+                        <div class="s3 cDomain">
+                            <!-- Campaign ID: 1262283 -->
+                            <h2><a title="Real Estate" class="gaTrackable" data-gaAction="RainbowStrip Click" data-gaCategory="RainbowStrip" href="http://www.domain.com.au">Real Estate</a></h2>
+                                        <div class="puff">
+                                                <a href="http://www.domain.com.au/Public/HomeAlertSetup.aspx?utm_source=spring2012&utm_medium=banner&utm_campaign=competition" rel="nofollow" class="gaTrackable" data-gaAction="RainbowStrip Click" data-gaCategory="RainbowStrip"  >
+    <img src="http://images.watoday.com.au/2012/10/24/3737957/dominate_homealertcomp-172x115.jpg" width="172" alt="$1,000 to be won each week with Domain"/></a>
+
+                                            <h5><a href="http://www.domain.com.au/Public/HomeAlertSetup.aspx?utm_source=spring2012&utm_medium=banner&utm_campaign=competition" rel="nofollow" title="win$1,000withdomainhomealerts" class="gaTrackable" data-gaAction="RainbowStrip Click" data-gaCategory="RainbowStrip">Win $1,000 with Domain Home Alerts</a></h5>
+                                        </div><!-- class:puff -->
+                                        <ul><li class="lDomain"><a href="http://www.domain.com.au" class="gaTrackable" data-gaAction="RainbowStrip Click" data-gaCategory="RainbowStrip">Domain.com.au</a></li>
+                                        <li><a href="http://www.domain.com.au/" class="gaTrackable" data-gaAction="RainbowStrip Click" data-gaCategory="RainbowStrip">Buy real estate</a></li>
+                                        <li><a href="http://www.domain.com.au/planner  " class="gaTrackable" data-gaAction="RainbowStrip Click" data-gaCategory="RainbowStrip">Plan your property inspections </a></li>
+                                        <li><a href="http://www.homepriceguide.com.au/Products/Product.aspx?ProductID=7 " class="gaTrackable" data-gaAction="RainbowStrip Click" data-gaCategory="RainbowStrip">Nice house - can you afford it? </a></li>
+                                </ul>
+                        </div><!-- class:s3 cDomain -->
+                        <div class="s4 cRsvp">
+                            <!-- Campaign ID: 1262289 -->
+                            <h2><a title="Relationships" class="gaTrackable" data-gaAction="RainbowStrip Click" data-gaCategory="RainbowStrip" href="http://www.rsvp.com.au">Relationships</a></h2>
+                                        <div class="puff">
+                                                <a href="http://www.rsvp.com.au/browse/Status/Chatting.jsp?s_rid=rainbowstrip:onlinenow" rel="nofollow" class="gaTrackable" data-gaAction="RainbowStrip Click" data-gaCategory="RainbowStrip"  >
+    <img src="http://images.watoday.com.au/2010/10/11/1978365/popular_man-172x115.gif" width="172" alt="RSVP Australia's most popular singles"/></a>
+
+                                            <h5><a href="http://www.rsvp.com.au/browse/Status/Chatting.jsp?s_rid=rainbowstrip:onlinenow" rel="nofollow" title="findsinglesonlinenow" class="gaTrackable" data-gaAction="RainbowStrip Click" data-gaCategory="RainbowStrip">Find Singles Online Now</a></h5>
+                                        </div><!-- class:puff -->
+                                        <ul><li class="lRsvp"><a href="http://www.rsvp.com.au" class="gaTrackable" data-gaAction="RainbowStrip Click" data-gaCategory="RainbowStrip">Rsvp.com.au</a></li>
+                                        <li><a href="http://www.rsvp.com.au/search/fullSearchAction.jsp?lo=Perth,+WA&lh=area&x6=135&a1=28&a2=40" class="gaTrackable" data-gaAction="RainbowStrip Click" data-gaCategory="RainbowStrip">Meet Perth Women</a></li>
+                                        <li><a href="http://www.rsvp.com.au?s_rid=rainbowstrip:internetdating" class="gaTrackable" data-gaAction="RainbowStrip Click" data-gaCategory="RainbowStrip">Internet Dating</a></li>
+                                        <li><a href="http://www.rsvp.com.au/singles+travel/trips+holidays.jsp?s_rid=rainbowstrip:singlesholidays" class="gaTrackable" data-gaAction="RainbowStrip Click" data-gaCategory="RainbowStrip">Holidays just for Singles</a></li>
+                                </ul>
+                        </div><!-- class:s4 cRsvp -->
+                        <div class="s5 cTheVine">
+                            <!-- Campaign ID: 1262292 -->
+                            <h2><a title="TheVine" class="gaTrackable" data-gaAction="RainbowStrip Click" data-gaCategory="RainbowStrip" href="http://www.thevine.com.au">TheVine</a></h2>
+                                        <div class="puff">
+                                                <a href="http://www.thevine.com.au/entertainment/top10/top-ten-worst-movie-relationships20120131.aspx?utm_source=FD&utm_medium=rainbow&utm_campaign=movie-relationships" rel="nofollow" class="gaTrackable" data-gaAction="RainbowStrip Click" data-gaCategory="RainbowStrip"  >
+    <img src="http://images.watoday.com.au/2012/01/31/2927681/RELATIONSHIPS-172x115.jpg" width="172" alt="relationships"/></a>
+
+                                            <h5><a href="http://www.thevine.com.au/entertainment/top10/top-ten-worst-movie-relationships20120131.aspx?utm_source=FD&utm_medium=rainbow&utm_campaign=movie-relationships" rel="nofollow" title="toptenworstmovierelationships" class="gaTrackable" data-gaAction="RainbowStrip Click" data-gaCategory="RainbowStrip">Top ten worst movie relationships</a></h5>
+                                        </div><!-- class:puff -->
+                                        <ul><li class="lTheVine"><a href="http://www.thevine.com.au" class="gaTrackable" data-gaAction="RainbowStrip Click" data-gaCategory="RainbowStrip">Thevine.com.au</a></li>
+                                        <li><a href="http://www.thevine.com.au/entertainment/" class="gaTrackable" data-gaAction="RainbowStrip Click" data-gaCategory="RainbowStrip">Entertainment & celebrity news</a></li>
+                                        <li><a href="http://www.thevine.com.au/fashion/holiday-gift-ideas/" class="gaTrackable" data-gaAction="RainbowStrip Click" data-gaCategory="RainbowStrip">Best gift ideas</a></li>
+                                        <li><a href="http://www.thevine.com.au/music/?utm_source=FD&utm_medium=rainbow&utm_campaign=music" class="gaTrackable" data-gaAction="RainbowStrip Click" data-gaCategory="RainbowStrip">Music news and reviews</a></li>
+                                </ul>
+                        </div><!-- class:s5 cTheVine -->
+</div><!-- class:c5 classifieds cfix -->
+
+
+    <div class="fN-affiliateStrip">
+	<h2>Compare and Save</h2>
+    <div class="cN-tabPages affiliateStrip cfix">
+        <p class="access">Skip to:</p>
+        <ul class="nav" role="navigation">
+            <li class="tab-1 selected"><a id="link-tab-1" href="#tab-1">Best Deals</a></li>
+            <li class="tab-2"><a id="link-tab-2" data-remote="true" data-remote-url="/action/displayComponent?name=au.com.fairfaxdigital.common.media.webapp.ui.StaticIncludeComponent&designVersionName=media-common-1.0&params=tab-cands-2.html" href="#tab-2">Mobile</a></li>
+            <li class="tab-3"><a id="link-tab-3" data-remote="true" data-remote-url="/action/displayComponent?name=au.com.fairfaxdigital.common.media.webapp.ui.StaticIncludeComponent&designVersionName=media-common-1.0&params=tab-cands-3.html" href="#tab-3">Broadband</a></li>
+            <li class="tab-4"><a id="link-tab-4" data-remote="true" data-remote-url="/action/displayComponent?name=au.com.fairfaxdigital.common.media.webapp.ui.StaticIncludeComponent&designVersionName=media-common-1.0&params=tab-cands-4.html" href="#tab-4">Home Loans</a></li>
+            <li class="tab-5"><a id="link-tab-5" data-remote="true" data-remote-url="/action/displayComponent?name=au.com.fairfaxdigital.common.media.webapp.ui.StaticIncludeComponent&designVersionName=media-common-1.0&params=tab-cands-5.html" href="#tab-5">Credit Cards</a></li>
+            <li class="tab-6"><a id="link-tab-6" data-remote="true" data-remote-url="/action/displayComponent?name=au.com.fairfaxdigital.common.media.webapp.ui.StaticIncludeComponent&designVersionName=media-common-1.0&params=tab-cands-6.html" href="#tab-6">Low Rate Cards</a></li>
+            <li class="tab-7"><a id="link-tab-7" data-remote="true" data-remote-url="/action/displayComponent?name=au.com.fairfaxdigital.common.media.webapp.ui.StaticIncludeComponent&designVersionName=media-common-1.0&params=tab-cands-7.html" href="#tab-7">Rewards Cards</a></li>
+            <li class="tab-8"><a id="link-tab-8" data-remote="true" data-remote-url="/action/displayComponent?name=au.com.fairfaxdigital.common.media.webapp.ui.StaticIncludeComponent&designVersionName=media-common-1.0&params=tab-cands-8.html" href="#tab-8">Savings Accts</a></li>
+            <li class="tab-9"><a id="link-tab-9" data-remote="true" data-remote-url="/action/displayComponent?name=au.com.fairfaxdigital.common.media.webapp.ui.StaticIncludeComponent&designVersionName=media-common-1.0&params=tab-cands-9.html" href="#tab-9">Term Deposits</a></li>
+            <li class="tab-10 last"><a id="link-tab-10" data-remote="true" data-remote-url="/action/displayComponent?name=au.com.fairfaxdigital.common.media.webapp.ui.StaticIncludeComponent&designVersionName=media-common-1.0&params=tab-cands-10.html" href="#tab-10">Loans</a></li>
+        </ul>
+
+        <div id="tab-1" class="tab selected cfix" aria-live="polite">
+            <h3>Check out today's best deals</h3>
+            <div class="one">
+                <h3><a href="http://compare.watoday.com.au/credit-cards?mpp_tab=5&utm_source=CS_front&utm_medium=CnS&utm_campaign=CC_Zerofee" class="gaTrackable" data-gaAction="1" data-gaCategory="CompareSave" data-gaLabel="1">Cheap Credit Cards</a></h3>
+                <a href="http://compare.watoday.com.au/credit-cards?mpp_tab=5&utm_source=CS_front&utm_medium=CnS&utm_campaign=CC_Zerofee" class="gaTrackable" data-gaAction="1" data-gaCategory="CompareSave" data-gaLabel="1"><img src="http://images.watoday.com.au/compareandsave/cs-cc-0-annual-fee.png" width="60" height="50" /></a>
+                <p><a href="http://compare.watoday.com.au/credit-cards?mpp_tab=5&utm_source=CS_front&utm_medium=CnS&utm_campaign=CC_Zerofee" class="gaTrackable" data-gaAction="1" data-gaCategory="CompareSave" data-gaLabel="1">Say NO to credit card fees! Compare fee-free cards.</a></p>
+                <span></span>
+                <p class="links"><a href="http://compare.watoday.com.au/credit-cards?mpp_tab=5&utm_source=CS_front&utm_medium=CnS&utm_campaign=CC_Zerofee" class="gaTrackable" data-gaAction="1" data-gaCategory="CompareSave" data-gaLabel="1">Zero Fee Cards</a></p>
+            </div>
+            <div class="two">
+                <h3><a href="http://compare.watoday.com.au/home-loans?utm_source=CS_front&utm_medium=CnS&utm_campaign=HL_547generic" class="gaTrackable" data-gaAction="1" data-gaCategory="CompareSave" data-gaLabel="2">Top Home Loans</a></h3>
+                <a href="http://compare.watoday.com.au/home-loans?utm_source=CS_front&utm_medium=CnS&utm_campaign=HL_547generic" class="gaTrackable" data-gaAction="1" data-gaCategory="CompareSave" data-gaLabel="2"><img src="http://images.watoday.com.au/compareandsave/cs-hl-547.png" width="60" height="50" /></a>
+                <p><a href="http://compare.watoday.com.au/home-loans?utm_source=CS_front&utm_medium=CnS&utm_campaign=HL_547generic" class="gaTrackable" data-gaAction="1" data-gaCategory="CompareSave" data-gaLabel="2">Make your own rate cut. Compare loans from 5.47%.</a></p>
+                <span></span>
+                <p class="links"><a href="http://compare.watoday.com.au/home-loans?utm_source=CS_front&utm_medium=CnS&utm_campaign=HL_547generic" class="gaTrackable" data-gaAction="1" data-gaCategory="CompareSave" data-gaLabel="2">Lowest Rates</a></p>
+            </div>
+            <div class="three">
+                <h3><a href="http://compare.watoday.com.au/home-loans?mpp_tab=3&utm_source=CS_front&utm_medium=CnS&utm_campaign=HL_fixed" class="gaTrackable" data-gaAction="1" data-gaCategory="CompareSave" data-gaLabel="3">Time to Fix?</a></h3>
+                <a href="http://compare.watoday.com.au/home-loans?mpp_tab=3&utm_source=CS_front&utm_medium=CnS&utm_campaign=HL_fixed" class="gaTrackable" data-gaAction="1" data-gaCategory="CompareSave" data-gaLabel="3"><img src="http://images.watoday.com.au/compareandsave/cs-time-to-fix-2.png" width="60" height="50" /></a>
+                <p><a href="http://compare.watoday.com.au/home-loans?mpp_tab=3&utm_source=CS_front&utm_medium=CnS&utm_campaign=HL_fixed" class="gaTrackable" data-gaAction="1" data-gaCategory="CompareSave" data-gaLabel="3">Fixed home loan rates hit record lows. Compare now!</a></p>
+                <span></span>
+                <p class="links"><a href="http://compare.watoday.com.au/home-loans?mpp_tab=3&utm_source=CS_front&utm_medium=CnS&utm_campaign=HL_fixed" class="gaTrackable" data-gaAction="1" data-gaCategory="CompareSave" data-gaLabel="3">Fixed Rate Loans</a></p>
+            </div>
+            <div class="four">
+                <h3><a href="http://mobile-phones.watoday.com.au/MobilePhones/Virgin-Mobile-5-Months-Half-Price?utm_source=Widget_Fairfax_SMH_CompareAndSave&utm_medium=referral&utm_campaign=5_Months_-_Half_Price" class="gaTrackable" data-gaAction="1" data-gaCategory="CompareSave" data-gaLabel="4">5 Months - Half Price</a></h3>
+                <a href="http://mobile-phones.watoday.com.au/MobilePhones/Virgin-Mobile-5-Months-Half-Price?utm_source=Widget_Fairfax_SMH_CompareAndSave&utm_medium=referral&utm_campaign=5_Months_-_Half_Price" class="gaTrackable" data-gaAction="1" data-gaCategory="CompareSave" data-gaLabel="4"><img src="http://images.watoday.com.au/compareandsave/mobile_160x70_0512_5x_halfprice.jpg" width="60" height="50" /></a>
+                <p><a href="http://mobile-phones.watoday.com.au/MobilePhones/Virgin-Mobile-5-Months-Half-Price?utm_source=Widget_Fairfax_SMH_CompareAndSave&utm_medium=referral&utm_campaign=5_Months_-_Half_Price" class="gaTrackable" data-gaAction="1" data-gaCategory="CompareSave" data-gaLabel="4">Online only deal means savings of up to $222</a></p>
+                <span></span>
+                <p class="links"><a href="http://mobile-phones.watoday.com.au/MobilePhones/Virgin-Mobile-5-Months-Half-Price?utm_source=Widget_Fairfax_SMH_CompareAndSave&utm_medium=referral&utm_campaign=5_Months_-_Half_Price" class="gaTrackable" data-gaAction="1" data-gaCategory="CompareSave" data-gaLabel="4">5 Months at 50% Off</a></p>
+            </div>
+            <div class="five">
+                <h3><a href="http://mobile-phones.watoday.com.au/MobilePhones/iPhone-Plans?utm_source=Widget_Fairfax_SMH_CompareAndSave&utm_medium=referral&utm_campaign=iPhone_5_Plans" class="gaTrackable" data-gaAction="1" data-gaCategory="CompareSave" data-gaLabel="5">iPhone 5 Plans</a></h3>
+                <a href="http://mobile-phones.watoday.com.au/MobilePhones/iPhone-Plans?utm_source=Widget_Fairfax_SMH_CompareAndSave&utm_medium=referral&utm_campaign=iPhone_5_Plans" class="gaTrackable" data-gaAction="1" data-gaCategory="CompareSave" data-gaLabel="5"><img src="http://images.watoday.com.au/compareandsave/mobile_160x70_0912_iph5b.jpg" width="60" height="50" /></a>
+                <p><a href="http://mobile-phones.watoday.com.au/MobilePhones/iPhone-Plans?utm_source=Widget_Fairfax_SMH_CompareAndSave&utm_medium=referral&utm_campaign=iPhone_5_Plans" class="gaTrackable" data-gaAction="1" data-gaCategory="CompareSave" data-gaLabel="5">New stock available, compare plans now...</a></p>
+                <span></span>
+                <p class="links"><a href="http://mobile-phones.watoday.com.au/MobilePhones/iPhone-Plans?utm_source=Widget_Fairfax_SMH_CompareAndSave&utm_medium=referral&utm_campaign=iPhone_5_Plans" class="gaTrackable" data-gaAction="1" data-gaCategory="CompareSave" data-gaLabel="5">iPhone 5 Plans</a></p>
+            </div>
+        </div>
+
+        <div id="tab-2" class="tab cfix" aria-live="polite">
+        </div>
+
+        <div id="tab-3" class="tab cfix" aria-live="polite">
+        </div>
+
+        <div id="tab-4" class="tab cfix" aria-live="polite">
+        </div>
+
+        <div id="tab-5" class="tab cfix" aria-live="polite">
+        </div>
+
+        <div id="tab-6" class="tab cfix" aria-live="polite">
+        </div>
+
+        <div id="tab-7" class="tab cfix" aria-live="polite">
+        </div>
+
+        <div id="tab-8" class="tab cfix" aria-live="polite">
+        </div>
+
+        <div id="tab-9" class="tab cfix" aria-live="polite">
+        </div>
+
+        <div id="tab-10" class="tab cfix" aria-live="polite">
+        </div>
+
+    </div>
+</div>
+        
+<!-- Reader's most viewed -->
+<div class="c5 top5 cfix">
+    <h2 class="cfix">Readers' most viewed</h2>
+
+            <div class="s1 lSmh">
+                <a href="http://www.smh.com.au">Most viewed articles on The Sydney Morning Herald</a>
+                <h5>Top 5 <a href="http://www.smh.com.au/sport">Sport</a> articles</h5>
+    <ol>
+            <li><a href="http://www.smh.com.au/sport/horseracing/live-coverage-melbourne-cup-day-20121105-28sxc.html" title="Live coverage: Melbourne Cup Day" style="">Live coverage: Melbourne Cup Day</a></li>
+            <li><a href="http://www.smh.com.au/sport/horseracing/green-moon-wins-melbourne-cup-20121106-28vkx.html" title="Green Moon wins Melbourne Cup" style="">Green Moon wins Melbourne Cup</a></li>
+            <li><a href="http://www.smh.com.au/sport/horseracing/melbourne-cup-2012-how-they-finished-20121106-28vmn.html" title="Melbourne Cup 2012: How they finished" style="">Melbourne Cup 2012: How they finished</a></li>
+            <li><a href="http://www.smh.com.au/sport/horseracing/right-decision-to-keep-oliver-on-cup-favourite-owner-20121106-28uud.html" title="'Right decision' to keep Oliver on Cup favourite: owner" style="">'Right decision' to keep Oliver on Cup favourite: owner</a></li>
+            <li><a href="http://www.smh.com.au/sport/cycling/uci-investigating-bribe-claim-against-olympic-champion-20121106-28v6d.html" title="UCI investigating 'bribe' claim against Olympic champion" style="">UCI investigating 'bribe' claim against Olympic champion</a></li>
+    </ol>
+
+            </div>
+            <div class="s2 lAge">
+                <a href="http://www.theage.com.au">Most viewed articles on The Age</a>
+                <h5>Top 5 <a href="http://www.theage.com.au/sport">Sport</a> articles</h5>
+    <ol>
+            <li><a href="http://www.theage.com.au/sport/horseracing/live-coverage-melbourne-cup-day-20121105-28sxc.html" title="Live coverage: Melbourne Cup Day" style="">Live coverage: Melbourne Cup Day</a></li>
+            <li><a href="http://www.theage.com.au/sport/horseracing/green-moon-wins-melbourne-cup-20121106-28vkx.html" title="Green Moon wins Melbourne Cup" style="">Green Moon wins Melbourne Cup</a></li>
+            <li><a href="http://www.theage.com.au/sport/horseracing/right-decision-to-keep-oliver-on-cup-favourite-owner-20121106-28uud.html" title="'Right decision' to keep Oliver on Cup favourite: owner" style="">'Right decision' to keep Oliver on Cup favourite: owner</a></li>
+            <li><a href="http://www.theage.com.au/sport/horseracing/melbourne-cup-2012-how-they-finished-20121106-28vmn.html" title="Melbourne Cup 2012: How they finished" style="">Melbourne Cup 2012: How they finished</a></li>
+            <li><a href="http://www.theage.com.au/sport/horseracing/over-the-moon-20121106-28w6o.html" title="Over the Moon" style="">Over the Moon</a></li>
+    </ol>
+
+            </div>
+            <div class="s3 lBT">
+                <a href="http://www.brisbanetimes.com.au">Most viewed articles on Brisbane Times</a>
+                <h5>Top 5 <a href="http://www.brisbanetimes.com.au/sport">Sport</a> articles</h5>
+    <ol>
+            <li><a href="http://www.brisbanetimes.com.au/sport/horseracing/live-coverage-melbourne-cup-day-20121105-28sxc.html" title="Live coverage: Melbourne Cup Day" style="">Live coverage: Melbourne Cup Day</a></li>
+            <li><a href="http://www.brisbanetimes.com.au/sport/horseracing/melbourne-cup-2012-how-they-finished-20121106-28vmn.html" title="Melbourne Cup 2012: How they finished" style="">Melbourne Cup 2012: How they finished</a></li>
+            <li><a href="http://www.brisbanetimes.com.au/sport/horseracing/green-moon-wins-melbourne-cup-20121106-28vkx.html" title="Green Moon wins Melbourne Cup" style="">Green Moon wins Melbourne Cup</a></li>
+            <li><a href="http://www.brisbanetimes.com.au/sport/horseracing/lunar-eclipse-blots-out-rest-of-the-field-20121106-28wbs.html" title="Lunar eclipse blots out rest of the field" style="">Lunar eclipse blots out rest of the field</a></li>
+            <li><a href="http://www.brisbanetimes.com.au/sport/horseracing/melbourne-cup-first-four-payout-sets-new-record-20121106-28vuu.html" title="Melbourne Cup first four payout sets new record" style="">Melbourne Cup first four payout sets new record</a></li>
+    </ol>
+
+            </div>
+            <div class="s4 lCanberratimes">
+                <a href="http://www.canberratimes.com.au">Most viewed articles on Canberra Times</a>
+                <h5>Top 5 <a href="http://www.canberratimes.com.au/sport">Sport</a> articles</h5>
+    <ol>
+            <li><a href="http://www.canberratimes.com.au/sport/horseracing/live-coverage-melbourne-cup-day-20121105-28sxc.html" title="Live coverage: Melbourne Cup Day" style="">Live coverage: Melbourne Cup Day</a></li>
+            <li><a href="http://www.canberratimes.com.au/sport/horseracing/green-moon-wins-melbourne-cup-20121106-28vkx.html" title="Green Moon wins Melbourne Cup" style="">Green Moon wins Melbourne Cup</a></li>
+            <li><a href="http://www.canberratimes.com.au/sport/horseracing/melbourne-cup-2012-how-they-finished-20121106-28vmn.html" title="Melbourne Cup 2012: How they finished" style="">Melbourne Cup 2012: How they finished</a></li>
+            <li><a href="http://www.canberratimes.com.au/sport/horseracing/right-decision-to-keep-oliver-on-cup-favourite-owner-20121106-28uud.html" title="'Right decision' to keep Oliver on Cup favourite: owner" style="">'Right decision' to keep Oliver on Cup favourite: owner</a></li>
+            <li><a href="http://www.canberratimes.com.au/sport/horseracing/hoof-oil-and-water-wash-away-the-gloss-20121106-28wnj.html" title="Hoof oil and water wash away the gloss" style="">Hoof oil and water wash away the gloss</a></li>
+    </ol>
+
+            </div>
+            <div class="s5 lWAToday">
+                <a href="http://www.watoday.com.au">Most viewed articles on WA Today</a>
+                <h5>Top 5 <a href="http://www.watoday.com.au/sport">Sport</a> articles</h5>
+    <ol>
+            <li><a href="http://www.watoday.com.au/sport/horseracing/live-coverage-melbourne-cup-day-20121105-28sxc.html" title="Live coverage: Melbourne Cup Day" style="">Live coverage: Melbourne Cup Day</a></li>
+            <li><a href="http://www.watoday.com.au/sport/horseracing/melbourne-cup-2012-how-they-finished-20121106-28vmn.html" title="Melbourne Cup 2012: How they finished" style="">Melbourne Cup 2012: How they finished</a></li>
+            <li><a href="http://www.watoday.com.au/sport/horseracing/green-moon-wins-melbourne-cup-20121106-28vkx.html" title="Green Moon wins Melbourne Cup" style="">Green Moon wins Melbourne Cup</a></li>
+            <li><a href="http://www.watoday.com.au/sport/horseracing/right-decision-to-keep-oliver-on-cup-favourite-owner-20121106-28uud.html" title="'Right decision' to keep Oliver on Cup favourite: owner" style="">'Right decision' to keep Oliver on Cup favourite: owner</a></li>
+            <li><a href="http://www.watoday.com.au/sport/horseracing/melbourne-cup-first-four-payout-sets-new-record-20121106-28vuu.html" title="Melbourne Cup first four payout sets new record" style="">Melbourne Cup first four payout sets new record</a></li>
+    </ol>
+
+            </div>
+</div>
+
+            <div id="adspot-728x90,468x60-pos-2" class="ad"> <script> renderJAd("adspot-728x90,468x60-pos-2", "dcAd-5", 'http://ad-apac.doubleclick.net/adj/onl.wa.sport/sport/homepage;cat1=homepage;cat=sport;ctype=index;pos=2;' + document.dcAdsCParams +'sz=728x90,468x60;tile=5;ord=' + dcOrd + '?', -828176584); </script> <noscript> <a href='http://ad-apac.doubleclick.net/jump/onl.wa.sport/sport/homepage;cat1=homepage;cat=sport;ctype=index;pos=2;sz=728x90,468x60;tile=5;ord=7.8233741E7?' target="_blank"> <img src='http://ad-apac.doubleclick.net/ad/onl.wa.sport/sport/homepage;cat1=homepage;cat=sport;ctype=index;pos=2;sz=728x90,468x60;tile=5;ord=7.8233741E7?' border="0" alt=""> </a> </noscript> </div>
+        <ul class="fSectionLinks cfix">
+            <li ><a href="http://www.watoday.com.au/" title="WA Today Home">WA Today Home</a></li>
+            <li ><a href="http://www.watoday.com.au/wa-news" title="WA News">WA News</a></li>
+            <li ><a href="http://www.watoday.com.au/national" title="National">National</a></li>
+            <li ><a href="http://www.watoday.com.au/world" title="World">World</a></li>
+            <li ><a href="http://www.watoday.com.au/environment" title="Environment">Environment</a></li>
+            <li ><a href="http://www.watoday.com.au/opinion" title="Opinion">Opinion</a></li>
+            <li ><a href="http://www.watoday.com.au/business" title="Business">Business</a></li>
+            <li ><a href="http://www.watoday.com.au/technology" title="Technology">Technology</a></li>
+            <li ><a href="http://www.watoday.com.au/digital-life" title="Digital Life">Digital Life</a></li>
+            <li ><a href="http://www.watoday.com.au/lifestyle" title="Life &amp; Style">Life &amp; Style</a></li>
+            <li ><a href="http://www.watoday.com.au/travel" title="Travel">Travel</a></li>
+            <li ><a href="http://www.watoday.com.au/drive" title="Cars">Cars</a></li>
+            <li ><a href="http://www.watoday.com.au/sport" title="Sport">Sport</a></li>
+            <li class="last"><a href="http://weather.watoday.com.au/" title="Weather">Weather</a></li>
+    </ul>
+
+    <!-- Footer masthead links and copyright -->
+<div class="fMastheadLinks cfix">
+        <ul class="span-4 cfix">
+        <li class="first"><h5>WA Today</h5></li>
+            <li><a href="http://www.watoday.com.au/siteguide" title="Sitemap">Sitemap</a></li>
+            <li><a href="http://www.watoday.com.au/about-us/" title="About Us">About Us</a></li>
+            <li><a href="http://www.watoday.com.au/support/" title="Contact Us">Contact Us</a></li>
+            <li><a href="http://adcentre.fairfaxdigital.com.au/network/website.dot?id=6878" title="Advertise With Us">Advertise With Us</a></li>
+            <li><a href="http://www.watoday.com.au/text/" title="Text Version">Text Version</a></li>
+            <li><a href="http://www.watoday.com.au/siteguide/accessibility" title="Site Accessibility Guide">Site Accessibility Guide</a></li>
+    </ul>
+
+        <ul class="span-4 cfix">
+        <li class="first"><h5>Connect</h5></li>
+            <li><a href="http://m.watoday.com.au" title="Mobile Site">Mobile Site</a></li>
+            <li><a href="http://www.watoday.com.au/interactive/iphone-app-landing/" title="iPhone App">iPhone App</a></li>
+            <li><a href="http://www.watoday.com.au/rssheadlines" title="RSS">RSS</a></li>
+            <li><a href="http://www.facebook.com/pages/WAtodaycomau/251907774312" title="Facebook">Facebook</a></li>
+            <li><a href="http://twitter.com/watoday" title="Twitter">Twitter</a></li>
+            <li><a href="http://www.linkedin.com/today/watoday.com.au" title="LinkedIn">LinkedIn</a></li>
+    </ul>
+
+        <ul class="span-4 cfix">
+        <li class="first"><h5>Products & Services</h5></li>
+            <li><a href="http://www.goodguides.com.au/" title="Good Food Guide">Good Food Guide</a></li>
+            <li><a href="http://www.watoday.com.au/enewsletters/subscription.html" title="Newsletters">Newsletters</a></li>
+    </ul>
+
+        <ul class="span-4 cfix">
+        <li class="first"><h5>Classifieds</h5></li>
+            <li><a href="http://classifieds.fairfax.com.au/" title="Classifieds & Notices">Classifieds & Notices</a></li>
+            <li><a href="http://www.stayz.com.au/" title="Accommodation">Accommodation</a></li>
+            <li><a href="http://www.drive.com.au/" title="Cars">Cars</a></li>
+            <li><a href="http://www.rsvp.com.au/" title="Dating">Dating</a></li>
+            <li><a href="http://mycareer.com.au/" title="Jobs">Jobs</a></li>
+            <li><a href="http://apm.com.au/" title="Property Price Data">Property Price Data</a></li>
+            <li><a href="http://www.domain.com.au/" title="Real Estate">Real Estate</a></li>
+            <li><a href="http://www.buyandsell.com.au/?utm_source=WAToday&utm_medium=HomeFooterLinks&utm_campaign=Buy%2Band%2BSell" title="Buy and Sell">Buy and Sell</a></li>
+    </ul>
+
+        <ul class="span-4 cfix">
+        <li class="first"><h5>Fairfax Media</h5></li>
+            <li><a href="https://membercentre.fairfax.com.au/" title="Member Centre">Member Centre</a></li>
+            <li><a href="http://www.fairfax.com.au/conditions" title="Conditions of Use">Conditions of Use</a></li>
+            <li><a href="http://www.fairfax.com.au/privacy" title="Privacy Policy">Privacy Policy</a></li>
+            <li><a href="http://newsstore.fairfax.com.au/apps/newsSearch.ac?sy=nstore" title="News Store Archive">News Store Archive</a></li>
+            <li><a href="http://www.fairfaxsyndication.com/" title="Photo Sales">Photo Sales</a></li>
+            <li><a href="http://consumer.fairfaxsyndication.com/C.aspx?VP3=ViewBox_VPage&ALID=2ITHRGMNCNCN&CT=Album" title="Purchase Front Pages">Purchase Front Pages</a></li>
+            <li><a href="http://www.fairfaxsyndication.com/" title="Fairfax Syndication">Fairfax Syndication</a></li>
+            <li><a href="http://www.fairfaxevents.com.au/" title="Fairfax Events">Fairfax Events</a></li>
+            <li><a href="http://careers.fairfax.com.au/home.asp" title="Fairfax Careers">Fairfax Careers</a></li>
+            <li><a href="http://www.presscouncil.org.au/what-we-do/" title="Press Council">Press Council</a></li>
+    </ul>
+
+</div>
+<!-- This comment fixes IE6's logo problem. Might be temporary until we've got content below this point -->
+    <div class="nN-footerLinks">
+	<a href="http://www.fairfaxdigital.com.au" class="logo">Fairfax Media</a>
+	<div>
+        <h3>Our Sites</h3>
+    <ul>
+            <li class="first">
+                <a title="The Sydney Morning Herald" href="http://www.smh.com.au/">The Sydney Morning Herald</a>
+            </li>
+            <li>
+                <a title="The Age" href="http://www.theage.com.au/">The Age</a>
+            </li>
+            <li>
+                <a title="MyCareer" href="http://mycareer.com.au/">MyCareer</a>
+            </li>
+            <li>
+                <a title="Domain" href="http://www.domain.com.au/">Domain</a>
+            </li>
+            <li>
+                <a title="Drive" href="http://www.drive.com.au/">Drive</a>
+            </li>
+            <li>
+                <a title="RSVP" href="http://www.rsvp.com.au/">RSVP</a>
+            </li>
+            <li>
+                <a title="Essential Baby" href="http://www.essentialbaby.com.au/">Essential Baby</a>
+            </li>
+            <li>
+                <a title="InvestSMART" href="http://www.investsmart.com.au/">InvestSMART</a>
+            </li>
+            <li>
+                <a title="APM" href="http://apm.com.au/">APM</a>
+            </li>
+            <li>
+                <a title="Stayz" href="http://www.stayz.com.au/">Stayz</a>
+            </li>
+            <li>
+                <a title="Weatherzone" href="http://www.weatherzone.com.au/">Weatherzone</a>
+            </li>
+            <li>
+                <a title="The Vine" href="http://www.thevine.com.au/">The Vine</a>
+            </li>
+    </ul>
+
+        <h3>Our Partners</h3>
+    <ul>
+            <li class="first">
+                <a title="Business" href="http://www.business.com.au/">Business</a>
+            </li>
+            <li>
+                <a title="Fitness" href="http://www.fitness.com.au/">Fitness</a>
+            </li>
+            <li>
+                <a title="Horse" href="http://www.horse.com.au/">Horse</a>
+            </li>
+            <li>
+                <a title="Jogging" href="http://www.jogging.com.au/">Jogging</a>
+            </li>
+            <li>
+                <a title="Lawyers" href="http://www.lawyers.com.au/">Lawyers</a>
+            </li>
+            <li>
+                <a title="Mechanics" href="http://www.mechanics.com.au/">Mechanics</a>
+            </li>
+            <li>
+                <a title="Credit Cards" href="http://www.creditcards.com.au/">Credit Cards</a>
+            </li>
+            <li>
+                <a title="Wine" href="http://www.wine.com.au/">Wine</a>
+            </li>
+            <li>
+                <a title="Wedding" href="http://www.wedding.com.au/">Wedding</a>
+            </li>
+            <li>
+                <a title="Wine" href="http://www.wine.com.au/">Wine</a>
+            </li>
+    </ul>
+
+    </div>
+    <cite>Copyright &copy; 2012 Fairfax Media</cite>
+</div>
+        <div class="Kampyle" data-kampyleFormId="43615" data-kampyleSiteCode="8197243">
+        <a id="kampylink" class="k_static" href="http://www.kampyle.com/feedback_form/ff-feedback-form.php?site_code=8197243&lang=en&form_id=43615" target="kampyleWindow">
+            <img src="http://resources.watoday.com.au/watoday/media-common-1.0/images/feedback-button.gif" alt="Feedback Form" style="border:0"/>
+        </a>
+    </div><!-- class:Kampyle -->
+
+</div>
+  
+<!-- End fN-footerNetwork -->
+            <div id="adspot-1x1" class="ad"> <script> renderJAd("adspot-1x1", "dcAd-6", 'http://ad-apac.doubleclick.net/adj/onl.wa.sport/sport/homepage;cat1=homepage;cat=sport;ctype=index;' + document.dcAdsCParams +'sz=1x1;tile=6;ord=' + dcOrd + '?', -1305506471); </script> <noscript> <a href='http://ad-apac.doubleclick.net/jump/onl.wa.sport/sport/homepage;cat1=homepage;cat=sport;ctype=index;sz=1x1;tile=6;ord=7.8233741E7?' target="_blank"> <img src='http://ad-apac.doubleclick.net/ad/onl.wa.sport/sport/homepage;cat1=homepage;cat=sport;ctype=index;sz=1x1;tile=6;ord=7.8233741E7?' border="0" alt=""> </a> </noscript> </div>
+            <div id="adspot-1x11" class="ad"> <script> renderJAd("adspot-1x11", "dcAd-7", 'http://ad-apac.doubleclick.net/adj/onl.wa.sport/sport/homepage;cat1=homepage;cat=sport;ctype=index;' + document.dcAdsCParams +'sz=1x11;tile=7;ord=' + dcOrd + '?', -382879383); </script> <noscript> <a href='http://ad-apac.doubleclick.net/jump/onl.wa.sport/sport/homepage;cat1=homepage;cat=sport;ctype=index;sz=1x11;tile=7;ord=7.8233741E7?' target="_blank"> <img src='http://ad-apac.doubleclick.net/ad/onl.wa.sport/sport/homepage;cat1=homepage;cat=sport;ctype=index;sz=1x11;tile=7;ord=7.8233741E7?' border="0" alt=""> </a> </noscript> </div>
+        </div><!-- class:wrap cfix -->
+    </div><!-- class:outerWrap -->
+            <script type="text/javascript" src="http://resources.watoday.com.au/common/media-common-1.0/js/fdjsf/output/7.14.9/fd_min.js"></script>
+
+            <script type="text/javascript" src="http://resources.watoday.com.au/common/media-common-1.0/js/fdjsf/output/7.14.9/fd.registrars_min.js"></script>
+
+    <div data-brandName="watoday"></div>
+        <script type="text/javascript" src="http://resources.watoday.com.au/common/media-common-1.0/js/fdjsf/output/7.14.9/fd.videoplayer_min.js"></script>
+
+
+
+            <script type="text/javascript" src="http://resources.watoday.com.au/common/media-common-1.0/js/fdjsf/output/7.14.9/fd.registrars.mymasthead_min.js"></script>
+
+    <script type="text/javascript">
+    (function() {
+        
+    })();
+</script>
+    <script type="text/javascript">
+    (function() {
+        
+    })();
+</script>
+    <script type="text/javascript">
+    (function() {
+                (function() {
+        FD.addVideoPlayer(new FD.VideoPlayer({
+            "adServerUrl": "http://ad-apac.doubleclick.net/pfadx/vid.wa/news/nationalnews;channel=news;show=nationalnews;ctype=rhs;cat3=network10;sz=4x1,4x2;dcmt=text/html;ord=618310",
+            "assetId": "3771233",
+            "divId": "video-player-latest",
+            "playerId": "video-player-latest-player",
+            "playerType": "Index_rhs",
+            "postPlay": ""
+        }, {
+            "flashplayer": "http://resources.watoday.com.au/common/media-common-1.0/swf/jwplayer/player.swf",
+            "height": 170,
+            "playlist": [
+    {
+            "levels": [
+                    {
+                        "bitrate": "921",
+                        "file": "http://mediadownload2.f2.com.au/flash/media/2012/11/05/3771233/3771233_high.mp4"
+                    },
+                    {
+                        "bitrate": "606",
+                        "file": "http://mediadownload2.f2.com.au/flash/media/2012/11/05/3771233/3771233_low.mp4"
+                    },
+                    {
+                        "bitrate": "595",
+                        "file": "http://mediadownload2.f2.com.au/flash/media/2012/11/05/3771233/3771233_mid.mp4"
+                    }
+            ],
+            "image": "http://images.watoday.com.au/2012/11/05/3771234/Tomic_bg-190x107.jpg",
+        "title": "Tomic found guilty"
+    }
+],
+"plugins": {
+    "googima": {
+        "ad": {
+                    "ad0": {
+            "position": "pre",
+            "tag": "http://ad-apac.doubleclick.net/pfadx/vid.wa/news/nationalnews;channel=news;show=nationalnews;ctype=rhs;cat3=network10;sz=4x1,4x2;dcmt=text/html;ord=618310",
+            "targets": ["video-player-companion-ad-mrec", "video-player-companion-ad-gutter", "video-player-companion-ad-helmet"],
+            "type": "graphical_full_slot"
+        }
+
+        }
+    },
+    "timeslidertooltipplugin-2": {}
+},
+            "skin": "http://resources.watoday.com.au/common/media-common-1.0/swf/jwplayer/nacht.zip",
+            "width": 300
+        }, {
+            "ga": {
+    "channel": "News",
+    "duration": "045",
+    "headline": "Tomic found guilty",
+    "referrer": "",
+    "playerType": "Index_rhs",
+    "showName": "National News"
+}
+,
+            "nielsen": {
+    "brand": "watoday",
+        "c6": "b15",
+    "duration": "045",
+    "ou": "video/news/national-news",
+    "vc": "vc-wat-Video_News-Index_rhs-Video_National_News-Unknown-Network_Ten,_Kelly_Bergsma-3771233-Tomic_found_guilty-00:00:45"
+}
+        }));
+     })();
+
+
+    })();
+</script>
+    
+    <script src="http://maps.googleapis.com/maps/api/js?client=gme-fairfax&sensor=false&channel=watodaycomau" type="text/javascript"></script>
+        <script type="text/javascript" src="http://resources.watoday.com.au/common/media-common-1.0/js/fdjsf/output/7.14.9/fd.registrars.googlemap_min.js"></script>
+
+    <div class="hidden" id="adShD0"> <script type="text/javascript"> if (0 < document.dcdAdsU.length) { document.write('<scr' + 'ipt type="text\/javascript" id="' + document.dcdAdsI[0] + '" src="' + document.dcdAdsU[0] + '"><\/scr' + 'ipt>'); } </script> </div> <div class="hidden" id="adShD1"> <script type="text/javascript"> if (1 < document.dcdAdsU.length) { document.write('<scr' + 'ipt type="text\/javascript" id="' + document.dcdAdsI[1] + '" src="' + document.dcdAdsU[1] + '"><\/scr' + 'ipt>'); } </script> </div> <div class="hidden" id="adShD2"> <script type="text/javascript"> if (2 < document.dcdAdsU.length) { document.write('<scr' + 'ipt type="text\/javascript" id="' + document.dcdAdsI[2] + '" src="' + document.dcdAdsU[2] + '"><\/scr' + 'ipt>'); } </script> </div> <div class="hidden" id="adShD3"> <script type="text/javascript"> if (3 < document.dcdAdsU.length) { document.write('<scr' + 'ipt type="text\/javascript" id="' + document.dcdAdsI[3] + '" src="' + document.dcdAdsU[3] + '"><\/scr' + 'ipt>'); } </script> </div> <div class="hidden" id="adShD4"> <script type="text/javascript"> if (4 < document.dcdAdsU.length) { document.write('<scr' + 'ipt type="text\/javascript" id="' + document.dcdAdsI[4] + '" src="' + document.dcdAdsU[4] + '"><\/scr' + 'ipt>'); } </script> </div> <div class="hidden" id="adShD5"> <script type="text/javascript"> if (5 < document.dcdAdsU.length) { document.write('<scr' + 'ipt type="text\/javascript" id="' + document.dcdAdsI[5] + '" src="' + document.dcdAdsU[5] + '"><\/scr' + 'ipt>'); } </script> </div> <script type="text/javascript"> initAds(false); checkAds("817-grey.gif"); window.setTimeout('pingAdStatus()', 10000); </script>
+    
+<!-- START Google Analytics Tracking -->
+<script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-22700242-4']);
+    _gaq.push(['_setDomainName', '.watoday.com.au']);
+    _gaq.push(['_addIgnoredRef', 'watoday.com.au']);
+    _gaq.push(['_setAllowAnchor', true]);
+    _gaq.push(['_setCustomVar', 1, 'Section', 'sport', 3]);
+    _gaq.push(['_setCustomVar', 2, 'Sub-Section', '', 3]);
+    _gaq.push(['_setCustomVar', 3, 'Byline', '', 3]);
+    _gaq.push(['_setCustomVar', 4, 'Page Type', 'Index', 3]);
+    _gaq.push(['_setAllowAnchor', true]);
+    _gaq.push(['_setCampaignCookieTimeout', 1209600000]);
+    // Check whether the user is logged in.
+    var loggedIn = false;
+    if (window["FD"]) {
+        loggedIn = FD.isLoggedIn();
+    }
+    if (loggedIn) {
+        _gaq.push(['_setCustomVar', 5, 'Login Status', 'Logged In', 2]);
+    } else {
+        _gaq.push(['_setCustomVar', 5, 'Login Status', ' ', 2]);
+    }
+    _gaq.push(['_trackPageview']);
+    (function() {
+        var ga = document.createElement('script');
+        ga.type = 'text/javascript';
+        ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(ga, s);
+    })();
+</script>
+<!-- END Google Analytics Tracking -->
+
+<!-- START Nielsen Online SiteCensus V6.0 -->
+<!-- COPYRIGHT 2009 Nielsen Online -->
+<script type="text/javascript" src="//secure-au.imrworldwide.com/v60.js"></script>
+<script type="text/javascript">
+    var pvar = {cid:"f2", content:"WAToday-sport-index", server:"secure-au"};
+    var trac = nol_t(pvar);
+    trac.record().post();
+    window.s_pageName = "watoday:index:sport:";
+</script>
+<noscript>
+    <div>
+        <img src="//secure-au.imrworldwide.com/cgi-bin/m?ci=f2&amp;cg=0&amp;cc=1&amp;ts=noscript" width="1" height="1" alt=""/>
+    </div>
+</noscript>
+<!-- END Nielsen Online SiteCensus V6.0 -->
+    <script type="text/javascript">
+	if (window["FD"]) {
+		/**
+		 * Initiates the client side asset view tracking component (self executing).
+		 */
+		(function() {
+			FD.pingServerWithSuccessCallback("875105", "Index", "Sport", FD.updateWhiteStrip);
+		})();
+	}
+</script>
+
+<!-- FFX analytics stuff -->
+
+
+
+<script>
+    var _fmaq = _fmaq || [];
+    _fmaq.push(["_trackEvent", [
+        ["event", "view"],
+        ["system", "DCDS"],
+        ["site", "watoday"],
+        ["assetCategory", "Sport"],
+        ["asset", "875105"],
+        ["title", "Sport"],
+        ["assetType", "Index"]
+    ]]);
+
+    var _fma_options = {};
+
+    (function () {
+        var fma_script = document.createElement('script');
+        fma_script.src = 'http://resources.fairfax.com.au/js/track/1.0/track.min.js';
+        fma_script.setAttribute('async', 'true');
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(fma_script, s);
+    })();
+</script>
+
+
+    <script type="text/javascript">
+        var cX_ffx_customParameters = cX_ffx_customParameters || {};
+        if (!cX_ffx_customParameters.ffx_contentid) {
+            cX_ffx_customParameters.ffx_contentid = 'dcds_875105';
+        }
+    </script>
+    <div id="cX-root" style="display:none"></div>
+    <script type="text/javascript">
+        var cX = cX || {}; cX.callQueue = cX.callQueue || [];
+        cX.callQueue.push(['setAccountId', '9222289450909507108']);
+        cX.callQueue.push(['setSiteId', '9222289450909507109']);
+        if (cX_ffx_customParameters) {
+            cX.callQueue.push(['setCustomParameters', cX_ffx_customParameters]);
+        }
+        cX.callQueue.push(['sendPageViewEvent']);
+    </script>
+    <script type="text/javascript">
+        (function() { try { var scriptEl = document.createElement('script'); scriptEl.type = 'text/javascript'; scriptEl.async = 'async';
+            scriptEl.src = ('https:' == document.location.protocol) ? 'https://scdn.cxense.com/cx.js' : 'http://cdn.cxense.com/cx.js';
+            var targetEl = document.getElementsByTagName('script')[0]; targetEl.parentNode.insertBefore(scriptEl, targetEl); } catch (e) {};} ());
+    </script>
+
+
+            <script src="http://platform.twitter.com/widgets.js" type="text/javascript"></script>
+        <script src="http://widgets.twimg.com/j/2/widget.js" type="text/javascript"></script>
+    <div data-boomerangSegment="132489"></div>
+        <script type="text/javascript" src="http://resources.watoday.com.au/common/media-common-1.0/js/fdjsf/output/7.14.9/fd.registrars.social_min.js"></script>
+
+    
+          
+
+       <script type="text/javascript" src="http://secure-au.imrworldwide.com/cgi-bin/j?ci=rj0091-bt-homepage&amp;se=1&amp;te=0"> </script>
+
+
+ 
+
+    
+</body>
+</html>

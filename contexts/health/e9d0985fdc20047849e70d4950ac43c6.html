@@ -1,0 +1,889 @@
+<html>
+	<head>
+		<title>
+			Catholic Health Partners
+		</title>
+		<!-- begin keywords -->
+		<meta http-equiv=Keywords name=Keywords content="Catholic Health Partners, CHP, health system, healthcare, nonprofit, not-for-profit, hospital, long-term care, housing, home health">
+		<!-- end keywords -->
+		<!-- begin desc -->
+		<meta http-equiv=Description name=Description content="Catholic Health Partners is a nonprofit health system operating hospitals, long-term care facilities and other healthcare organizations in Indiana, Kentucky and Ohio. ">
+		<!-- end desc -->
+		<!-- Place this tag in the <head> of your document-->
+		<link href="https://plus.google.com/111201385152933359966/" rel="publisher" />
+		<script src="js/modernizr.custom.30925.js"></script>
+	</head>
+	<body >
+		<link href="css/main.css" rel="stylesheet" type="text/css" />
+
+<script type="text/javascript" src="js/milonic_src.js"></script>	
+<script type="text/javascript">
+    if(ns4)_d.write("<scr"+"ipt type=text/javascript src=js/mmenuns4.js><\/scr"+"ipt>");		
+else _d.write("<scr"+"ipt type=text/javascript src=js/mmenudom.js><\/scr"+"ipt>"); 
+</script>
+<script language="javascript">
+	function sendSearch(){
+		var sSearchTerm = document.all.mainkeyword.value;
+		if(sSearchTerm.length > 0){
+			window.location.href = "New_search_site_results.asp?keyword="+sSearchTerm;
+		}else{
+			alert('Please enter a keyword or phrase before submitting.');
+		}
+	}
+	
+	function searchDeselect(){
+		if(document.all.mainkeyword.value != "search"){	
+			document.all.mainkeyword.value = "";
+			document.all.mainkeyword.focus();
+		}
+	}
+</script>
+
+	<div id="wrapper">
+        <div id="header">
+			<a href="default.asp"><img src="img/logo2.gif" border="0" alt="logo" style="float:left;margin-top:6px;margin-left:15px;" /></a>
+			<div style="float:right;padding-right:30px;margin-top:35px;">
+				<div style="float:right;margin-left:5px;">
+					<input type="image" id="btnGO" src="img/btn_go.gif" onclick="Javascript:sendSearch();" />
+				</div>
+				<div style="float:right;">
+					<input type="text" name="mainkeyword" size="30" style="border:solid 1px #000;background-color:#FFFFCD;color:#03455D;" value="SEARCH" onFocus="Javascript:searchDeselect();" />
+				</div>
+				<div>
+					<a href="https://chpepiceweb.health-partners.org/mychart/" target="_blank"><img src="img/mychartHeaderLogo.png" alt="MyChart" style="float:right;margin-top:10px;margin-left:12px;clear:right;border:0px;"/></a>
+					<a href="pdfs/chp_at_a_glance.pdf" target="_blank"><img src="img/atAGlance.gif" alt="at glance" style="float:right;border:0px;margin-top:8px;clear:left;"/></a>
+				</div>					
+			</div>
+		</div>
+        <div id="menu">
+            
+			<script type="text/javascript" src="js/main_menu.asp"></script>
+			
+        </div>
+        <div id="mainContainer">
+			<img id="printHeader" src="img/logo_print.gif"/>
+			
+			<!--begin content-->
+				<style>
+				
+				/*slideshow*/
+
+
+				#slideShowWrapper
+				{
+					height:336px;
+					width:990px;
+				}
+				
+				
+				
+				#slideshow {
+				    position:relative;
+				    height:336px;
+					width:990px;
+				}
+				
+				#slideshow img{
+					border:none;
+					width:990px;
+					height:336px;
+					-ms-interpolation-mode: bicubic;
+					position:absolute;
+				    top:0;
+				    left:0;
+				    z-index:8;
+				}
+				
+				
+				
+				#slideshow img.active {
+				    z-index:10;
+				}
+				
+				#slideshow img.last-active {
+				    z-index:9;
+				}
+				
+				
+				
+				#divMarker
+				{
+
+					float:right;
+					width:100%;
+					height:30px;
+					background-color:#f0814a;
+					clear:both;
+					text-align:right;
+				}
+				
+				.marker
+				{
+					margin-top:10px;
+					cursor:pointer;
+				}
+				
+				#playerWrapper
+				{
+					width:990px;
+					height:336px;
+					position:absolute;
+					z-index:50;
+					float:left;
+				}
+				#player
+				{
+					float:right;
+					margin:36px 55px 0px 0px;
+				}
+				
+				#socialWrapper
+				{
+					width:990px;
+					height:336px;
+					position:absolute;
+					z-index:50;
+					float:left;
+					display:none;
+				}
+				#social
+				{
+					float:right;
+					margin:150px 220px 0px 0px;
+				}
+				#social img
+				{
+					height:50px;
+					border:none;
+					-ms-interpolation-mode: bicubic;
+				}
+				#socialPage
+				{
+					float:right;
+					margin:220px 90px 0px 0px;
+					height:20px;
+					width:107px;
+				}
+				/*slideshow end*/
+				</style>
+				<div style="text-align:left;">
+					<div id="playerWrapper">
+						<div id="player"></div>
+					</div>
+					<div id="socialWrapper">
+						<div id="social">
+							<a target="_blank" href="http://twitter.com/#!/CHPUpdate"><img src="img/twitter_banner_logo.png" alt="" /></a>
+							<a href="https://plus.google.com/111201385152933359966/?prsrc=3" style="text-decoration: none;"><img src="img/google_banner_logo.png" alt="" /></a>
+							<a target="_blank" href="http://www.facebook.com/pages/Catholic-Health-Partners/195499213812989"><img src="img/facebook_banner_logo.png" alt="" /></a>
+						</div>
+						<a href="http://www.health-partners.org/social_media.asp"><div id="socialPage"></div></a>
+					</div>
+					<div id="slideShowWrapper">
+						<div id="slideshow">
+							<img id="a1" class="active" src="img/homepage_banner_1.jpg" alt="" />
+							<img id="a2" src="img/homepage_banner_2.jpg" alt="" />
+							<img id="a3" src="img/homepage_banner_3.jpg" alt="" />
+						</div>
+					</div>
+					<div id="divMarker">
+						<img id="marker1" class="marker" src="img/slideshowMarker_off.png" alt="" onclick="changeSlideShow(1)" />
+						<img id="marker2" class="marker" src="img/slideshowMarker_off.png" alt="" onclick="changeSlideShow(2)" />
+						<img id="marker3" class="marker" src="img/slideshowMarker_off.png" alt="" onclick="changeSlideShow(3)" />
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					</div>
+				</div>
+				
+				<div id="contentHome">
+					<style>
+					#sddm
+					{	margin: 0;
+						padding: 0;
+						z-index: 30;
+						
+						}
+					
+					#sddm li
+					{	margin: 0;
+						padding: 0;
+						list-style: none;
+						float: left;
+						font: bold 11px arial;
+						
+						}
+					
+					
+					
+					
+					#sddm li a
+					{	display: block;
+						margin: 0 1px 0 0;
+						width: 60px;
+						color: #FFF;
+						text-align: center;
+						text-decoration: none;}
+					
+				
+					#sddm .ddiv
+					{	position: absolute;
+						visibility: hidden;
+						margin: 0;
+						padding: 0;
+						/*background: #FDF9D6;
+						border: 1px solid #5970B2;*/
+						}
+					
+						#sddm .ddiv a
+						{	position: relative;
+							display: block;
+							margin: 0;
+							padding: 5px 10px;
+							width: auto;
+							white-space: nowrap;
+							text-align: left;
+							text-decoration: none;
+							color: #2875DE;
+							font: 11px arial;}
+					
+						#sddm .ddiv a:hover
+						{	background: #49A3FF;
+							color: #FFF;}
+
+					</style>
+					<img src="img/inYourCommunity.jpg" style="float:left;" /><ul id="sddm">
+					    <li style="width:70px;"><a href="#" 
+					        onmouseover="mopen('m1')" 
+					        onmouseout="mclosetime()"><img src="img/ohio.jpg" style="border:0px;width:70px;" /></a>
+					        <div id="m1" class="ddiv" onmouseover="mcancelclosetime()" onmouseout="mclosetime()" >
+							<div class=stateDetailsTop>
+						<img src=img/stateDetailsTopPoint.gif /></div>
+						<div class=stateDetailsMain >
+							<table cellpadding="0" cellspacing="0">
+							<tr>
+								<td class="stateDetailsTitle" colspan="2">
+									Ohio
+								</td>
+							</tr>
+							<tr>
+								<td colspan="2">
+									
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<a target="_blank" href="http://www.e-mercy.com/mercy-hospital-anderson.aspx">Anderson Township</a>
+								</td>
+								<td>
+									<a target="_blank" href="http://www.mercyweb.org/st_charles.aspx">Oregon</a>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<a target="_blank" href="http://www.e-mercy.com/clermont-hospital.aspx">Batavia</a>
+								</td>
+								<td>
+									<a target="_blank" href="http://www.community-mercy.org/springfield_regional_medical_center.asp">Springfield</a>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<a target="_blank" href="http://hmpartners.org/ho_sebhc.aspx">Boardman</a>
+								</td>
+								<td>
+									<a target="_blank" href="http://www.mercyweb.org/mercy_tiffin.aspx">Tiffin</a>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<a target="_blank" href="http://www.jewishhospitalcincinnati.com">Cincinnati (Kenwood)</a>
+								</td>
+								<td>
+									<a target="_blank" href="http://www.mercyweb.org/st_vincent.aspx">Toledo (Downtown)</a>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<a target="_blank" href="http://www.e-mercy.com/mt-airy-hospital.aspx">Cincinnati (Mt Airy)</a>	
+								</td>
+								<td>
+									<a target="_blank" href="http://www.mercyweb.org/childrens">Toledo (Downtown - Children's)</a>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<a target="_blank" href="http://www.e-mercy.com/mercy-hospital-western-hills.aspx">Cincinnati (Western Hills)</a>	
+								</td>
+								<td>
+									<a target="_blank" href="http://www.mercyweb.org/st_anne.aspx">Toledo</a>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<a target="_blank" href="http://www.mercyweb.org/mercy_defiance.aspx">Defiance</a>	
+								</td>
+								<td>
+									<a target="_blank" href="http://www.community-mercy.org/mercy_memorial_hospital.asp">Urbana</a>
+									
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<a target="_blank" href="http://www.e-mercy.com/mercy-hospital-fairfield.aspx">Fairfield</a>	
+								</td>
+								<td>
+									<a target="_blank" href="http://hmpartners.org/ho_sjhc.aspx">Warren</a>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<a target="_blank" href="http://www.ehealthconnection.com/regions/mercy_st_ritas">Lima</a>	
+								</td>
+								<td>
+									<a target="_blank" href="http://www.mercyweb.org/mercy_willard.aspx">Willard</a>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<a target="_blank" href="http://www.mercyonline.org/mercy_regional_medical_center.aspx">Lorain</a>
+								</td>
+								<td>
+									<a target="_blank" href="http://hmpartners.org/ho_sehc.aspx">Youngstown</a>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<a target="_blank" href="http://www.mercyonline.org/mercy_allen_hospital.aspx">Oberlin</a>	
+								</td>
+								<td>
+								</td>
+							</tr>
+						</table>
+						</div>
+						</div>
+					    </li>
+						
+						<li style="width:115px;"><a href="#" 
+					        onmouseover="mopen('m3')" 
+					        onmouseout="mclosetime()"><img src="img/Kentucky.jpg" style="border:0px;width:115px;" /></a>
+					        <div id="m3" class="ddiv"
+					            onmouseover="mcancelclosetime()" 
+					            onmouseout="mclosetime()">
+					        <div class="stateDetailsTop">
+						<img src="img/stateDetailsTopPoint.gif" /></div>
+					<div class="stateDetailsMain" >
+						<table cellpadding="0" cellspacing="0" width="250px" >
+							<tr>
+								<td class="stateDetailsTitle" colspan="2">
+									Kentucky
+								</td>
+							</tr>
+							<tr>
+								<td colspan="2">
+									
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<a target="_blank" href="http://www.marcumandwallace.org/">Irvine</a>
+								</td>
+								<td>
+									<a target="_blank" href="http://www.lourdes-pad.org">Paducah</a>
+								</td>
+							</tr>
+						</table>
+					</div>
+					        </div>
+					    </li>
+					</ul>
+					<div style="clear:both"></div>
+					
+					<script language="javascript">
+						// Copyright 2006-2007 javascript-array.com
+						var timeout	= 500;
+						var closetimer	= 0;
+						var ddmenuitem	= 0;
+						
+						// open hidden layer
+						function mopen(id)
+						{	
+							// cancel close timer
+							mcancelclosetime();
+						
+							// close old layer
+							if(ddmenuitem) ddmenuitem.style.visibility = 'hidden';
+						
+							// get new layer and show it
+							ddmenuitem = document.getElementById(id);
+							ddmenuitem.style.visibility = 'visible';
+						
+						}
+						// close showed layer
+						function mclose()
+						{
+							if(ddmenuitem) ddmenuitem.style.visibility = 'hidden';
+						}
+						
+						// go close timer
+						function mclosetime()
+						{
+							closetimer = window.setTimeout(mclose, timeout);
+						}
+						
+						// cancel close timer
+						function mcancelclosetime()
+						{
+							if(closetimer)
+							{
+								window.clearTimeout(closetimer);
+								closetimer = null;
+							}
+						}
+						
+						// close layer when click-out
+						document.onclick = mclose; 
+
+					</script>
+					
+					
+					<!--<br/>
+					<br/>
+	       			Catholic Health Partners (CHP) is a mission-driven, nonprofit health system. We operate acute care hospitals, long-term care facilities, housing sites for the elderly, home health agencies, hospice programs, wellness centers and other healthcare organizations that meet the healthcare needs of people in Indiana, Kentucky and Ohio.
+					<br/>
+					<br/>-->
+					<br/>
+					<hr class="goldHR"/>
+					
+							<span class="newsTitle">Latest News</span>
+							<br/>
+							<br/>
+						<a class="newsLinks" href="news_show_local.asp?id=3831">CHP recognized as Organization of the Year</a><br/><em>News from Catholic Health Partners</em><br/>National Association of Health Services Executives (NAHSE) honors CHP for continuous support of its efforts
+Cincinnati, OH (Oct. 24, 2012) -- ...<br/><br/><br/><a class="newsLinks" href="news_show_local.asp?id=3813">CHP facilities did NOT get injectable steroid</a><br/><em>News from Catholic Health Partners</em><br/>
+
+Cincinnati, OH (Oct. 10, 2012) -- As has been widely reported, last week three lots of an injectable steroid normally given for back pain were ...<br/><br/><br/><a class="newsLinks" href="news_show_local.asp?id=3807">CHP featured in global online magazines</a><br/><em>News from Catholic Health Partners</em><br/>Cincinnati, OH -- Catholic Health Partners is featured in the most-recent editions of Business Review North America and Healthcare Global. The ...<br/><br/><br/>
+						<a href="news.asp">More Headlines</a>
+						</p>
+						<br/>
+						<hr class="goldHR"/>
+						<span class="newsTitle">Follow Us</span>
+						<br/>
+						<br/>
+						
+						<a target="_blank" href="http://www.youtube.com/user/CHPUpdate?feature=mhee"><img src="img/youtube_logo.gif" border="0" alt="YouTube" /></a>
+						&nbsp;
+						<a target="_blank" href="http://www.facebook.com/pages/Catholic-Health-Partners/195499213812989"><img src="img/facebook_logo.jpg" border="0" width="33px" alt="Facebook" /></a>
+						&nbsp;
+						<a href="http://pinterest.com/chpupdate/"><img src="https://a248.e.akamai.net/passets.pinterest.com.s3.amazonaws.com/images/big-p-button.png" width="33" height="33" alt="Follow Me on Pinterest" style="border: 0;padding-bottom:0px;" /></a>
+						&nbsp;
+						
+						<a target="_blank" href="http://twitter.com/#!/CHPUpdate"><img src="img/twitter_logo.jpg" border="0" alt="Twitter" /></a>
+						&nbsp;
+						<a target="_blank" href="http://www.linkedin.com/company/catholic-health-partners"><img src="img/linkedin_logo.jpg" border="0" alt="LinkedIn" /></a>
+						&nbsp;
+						<a href="https://plus.google.com/111201385152933359966/?prsrc=3" style="text-decoration: none;"><img src="https://ssl.gstatic.com/images/icons/gplus-32.png" width="32" height="32" style="border: 0;padding-bottom:2px;padding-left:2px;"/></a>
+						
+					
+				</div>
+				
+				<div id="sideBarHome">
+					<span class="sideBarTitle">Featured Links</span>
+					<hr class="goldHR"/>
+					<a href="our_regions.asp"><img src="img/fl_regional.gif" alt="Regional Health Systems" border="0" /></a>
+					<hr class="goldHR"/>
+					<a href="social_responsibility.asp"><img src="img/fl_social.gif" alt="Social Responsibility" border="0" /></a>
+					<hr class="goldHR"/>
+					<a href="foundations.asp"><img src="img/fl_foundation.gif" alt="CHP Foundation" border="0" /></a>
+					<!--<hr class="goldHR"/>
+					<a href="pay_online.asp"><img src="img/fl_pay.gif" alt="Pay Online" border="0" /></a>
+					<hr class="goldHR"/>
+					<a href="volunteering.asp"><img src="img/fl_volunteer.gif" alt="Volunteer Services" border="0" /></a>-->
+					<hr class="goldHR"/>
+					<a href="advocacy.asp"><img src="img/fl_advocacy.gif" alt="Advocacy" border="0" /></a>
+					<hr class="goldHR"/>
+					<a href="carepath.asp"><img src="img/fl_carepath.gif" alt="CarePATH" border="0" /></a>
+					
+					<hr class="goldHR"/>
+					<a target="_blank" href="http://chpvideo.wordpress.com"><img src="img/fl_videoblog.png" alt="Video Blog" border="0" /></a>
+					
+	            </div>
+				<div style="float:right;background-image:url('img/sideBarBG.jpg');background-repeat:repeat-x;background-position:bottom;text-align:left;">
+					<img src="img/sideBarBorder.jpg" /></div>
+				<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+				<script src="js/slideshow.js"></script>
+            <!--end content-->
+		
+	        </div>
+	        <div id="footer">
+	            <p>
+	            ? 2012 Catholic Health Partners. All rights reserved.<br />
+	            <a href="disclaimer.asp">Disclaimer</a> // 
+	            <a href="privacy.asp">Privacy Statement</a> // 
+	            <a href="terms_of_use.asp">Terms of Use</a><br/>
+	            Last Modified 10/30/2012 <br />
+	            </p>
+	        </div>
+		</div>
+		<div id="bottomShadow">
+		</div>
+    </body>
+</html>
+<!-- START OF SDC Advanced Tracking Code -->
+<!-- Copyright (c) 1996-2005 WebTrends Inc.  All rights reserved. -->
+<!-- V7.5 -->
+<!-- $DateTime: 2005/11/08 18:22:54 $ -->
+<SCRIPT LANGUAGE="Javascript"><!--
+var gService = true;
+var gTimeZone = -5;
+// Code section for Enable First-Party Cookie Tracking
+function dcsCookie(){
+	if (typeof(dcsOther)=="function"){
+		dcsOther();
+	}
+	else if (typeof(dcsPlugin)=="function"){
+		dcsPlugin();
+	}
+	else if (typeof(dcsFPC)=="function"){
+		dcsFPC(gTimeZone);
+	}
+}
+function dcsGetCookie(name){
+	var pos=document.cookie.indexOf(name+"=");
+	if (pos!=-1){
+		var start=pos+name.length+1;
+		var end=document.cookie.indexOf(";",start);
+		if (end==-1){
+			end=document.cookie.length;
+		}
+		return unescape(document.cookie.substring(start,end));
+	}
+	return null;
+}
+function dcsGetCrumb(name,crumb){
+	var aCookie=dcsGetCookie(name).split(":");
+	for (var i=0;i<aCookie.length;i++){
+		var aCrumb=aCookie[i].split("=");
+		if (crumb==aCrumb[0]){
+			return aCrumb[1];
+		}
+	}
+	return null;
+}
+function dcsGetIdCrumb(name,crumb){
+	var cookie=dcsGetCookie(name);
+	var id=cookie.substring(0,cookie.indexOf(":lv="));
+	var aCrumb=id.split("=");
+	for (var i=0;i<aCrumb.length;i++){
+		if (crumb==aCrumb[0]){
+			return aCrumb[1];
+		}
+	}
+	return null;
+}
+function dcsFPC(offset){
+	if (typeof(offset)=="undefined"){
+		return;
+	}
+	var name=gFpc;
+	var dCur=new Date();
+	dCur.setTime(dCur.getTime()+(dCur.getTimezoneOffset()*60000)+(offset*3600000));
+	var dExp=new Date(dCur.getTime()+315360000000);
+	var dSes=new Date(dCur.getTime());
+	if (document.cookie.indexOf(name+"=")!=-1){
+		var id=dcsGetIdCrumb(name,"id");
+		var lv=parseInt(dcsGetCrumb(name,"lv"));
+		var ss=parseInt(dcsGetCrumb(name,"ss"));
+		if ((id==null)||(id=="null")||isNaN(lv)||isNaN(ss)){
+			return;
+		}
+		WT.co_f=id;
+		var dLst=new Date(lv);
+		dSes.setTime(ss);
+		if ((dCur.getTime()>(dLst.getTime()+1800000))||(dCur.getTime()>(dSes.getTime()+28800000))){
+			dSes.setTime(dCur.getTime());
+			WT.vt_f_s="1";
+		}
+		if ((dCur.getDay()!=dLst.getDay())||(dCur.getMonth()!=dLst.getMonth())||(dCur.getYear()!=dLst.getYear())){
+			WT.vt_f_d="1";
+		}
+	}
+	else{
+		var tmpname=name+"_TMP=";
+		document.cookie=tmpname+"1";
+		if (document.cookie.indexOf(tmpname)!=-1){
+			document.cookie=tmpname+"; expires=Thu, 01-Jan-1970 00:00:01 GMT";
+			if ((typeof(gWtId)!="undefined")&&(gWtId!="")){
+				WT.co_f=gWtId;
+			}
+			else if ((typeof(gTempWtId)!="undefined")&&(gTempWtId!="")){
+				WT.co_f=gTempWtId;
+				WT.vt_f="1";
+			}
+			else{
+				WT.co_f="2";
+				var cur=dCur.getTime().toString();
+				for (var i=2;i<=(32-cur.length);i++){
+					WT.co_f+=Math.floor(Math.random()*16.0).toString(16);
+				}
+				WT.co_f+=cur;
+				WT.vt_f="1";
+			}
+			if (typeof(gWtAccountRollup)=="undefined"){
+				WT.vt_f_a="1";
+			}
+			WT.vt_f_s="1";
+			WT.vt_f_d="1";
+		}
+		else{
+			WT.vt_f="2";
+			WT.vt_f_a="2";
+			return;
+		}
+	}
+	WT.co_f=escape(WT.co_f);
+	WT.vt_sid=WT.co_f+"."+dSes.getTime();
+	var expiry="; expires="+dExp.toGMTString();
+	document.cookie=name+"="+"id="+WT.co_f+":lv="+dCur.getTime().toString()+":ss="+dSes.getTime().toString()+expiry+"; path=/"+(((typeof(gFpcDom)!="undefined")&&(gFpcDom!=""))?("; domain="+gFpcDom):(""));
+}
+
+// Code section for Use the new first-party cookie generated with this tag.
+var gFpc="WT_FPC";
+var gConvert=true;
+
+function dcsAdv(){
+	dcsFunc("dcsET");
+	dcsFunc("dcsCookie");
+	dcsFunc("dcsAdSearch");
+	dcsFunc("dcsTP");
+}
+
+//-->
+</SCRIPT>
+<!-- END OF SDC Advanced Tracking Code -->
+
+<!-- START OF SmartSource Data Collector TAG -->
+<!-- Copyright (c) 1996-2005 WebTrends Inc.  All rights reserved. -->
+<!-- V7.5 -->
+<!-- $DateTime: 2005/11/10 16:02:43 $ -->
+<SCRIPT LANGUAGE="Javascript"><!--
+gVersion="1.0";
+//-->
+</SCRIPT>
+<SCRIPT LANGUAGE="Javascript1.1"><!--
+gVersion="1.1";
+//-->
+</SCRIPT>
+<SCRIPT LANGUAGE="Javascript1.2"><!--
+gVersion="1.2";
+//-->
+</SCRIPT>
+<SCRIPT LANGUAGE="Javascript1.3"><!--
+gVersion="1.3";
+//-->
+</SCRIPT>
+<SCRIPT LANGUAGE="Javascript1.4"><!--
+gVersion="1.4";
+//-->
+</SCRIPT>
+<SCRIPT LANGUAGE="Javascript1.5"><!--
+gVersion="1.5";
+//-->
+</SCRIPT>
+<SCRIPT TYPE="text/javascript"><!--
+var gImages=new Array;
+var gIndex=0;
+var DCS=new Object();
+var WT=new Object();
+var DCSext=new Object();
+var gQP=new Array();
+if (window.RegExp){
+	var RE={"%09":/\t/g,"%20":/ /g,"%23":/\#/g,"%26":/\&/g,"%2B":/\+/g,"%3F":/\?/g,"%5C":/\\/g};
+}
+
+var gDomain="statse.webtrendslive.com";
+var gDcsId="dcs2i2uwr10000gkyksyb0cm0_9l1o";
+
+if ((typeof(gConvert)!="undefined")&&gConvert&&(document.cookie.indexOf(gFpc+"=")==-1)){
+	document.write("<SCR"+"IPT TYPE='text/javascript' SRC='"+"http"+(window.location.protocol.indexOf('https:')==0?'s':'')+"://"+gDomain+"/"+gDcsId+"/wtid.js"+"'><\/SCR"+"IPT>");
+}
+//-->
+</SCRIPT>
+<SCRIPT TYPE="text/javascript"><!--
+function dcsVar(){
+	var dCurrent=new Date();
+	WT.tz=dCurrent.getTimezoneOffset()/60*-1;
+	if (WT.tz==0){
+		WT.tz="0";
+	}
+	WT.bh=dCurrent.getHours();
+	WT.ul=navigator.appName=="Netscape"?navigator.language:navigator.userLanguage;
+	if (typeof(screen)=="object"){
+		WT.cd=navigator.appName=="Netscape"?screen.pixelDepth:screen.colorDepth;
+		WT.sr=screen.width+"x"+screen.height;
+	}
+	if (typeof(navigator.javaEnabled())=="boolean"){
+		WT.jo=navigator.javaEnabled()?"Yes":"No";
+	}
+	if (document.title){
+		WT.ti=document.title;
+	}
+	WT.js="Yes";
+	if (typeof(gVersion)!="undefined"){
+		WT.jv=gVersion;
+	}
+	if (document.body&&document.body.addBehavior){
+		document.body.addBehavior("#default#clientCaps");
+		if (document.body.connectionType){
+			WT.ct=document.body.connectionType;
+		}
+		document.body.addBehavior("#default#homePage");
+		WT.hp=document.body.isHomePage(location.href)?"1":"0";
+	}
+	if (parseInt(navigator.appVersion)>3){
+		if ((navigator.appName=="Microsoft Internet Explorer")&&document.body){
+			WT.bs=document.body.offsetWidth+"x"+document.body.offsetHeight;
+		}
+		else if (navigator.appName=="Netscape"){
+			WT.bs=window.innerWidth+"x"+window.innerHeight;
+		}
+	}
+	WT.fi="No";
+	if (window.ActiveXObject){
+		for(var i=9;i>0;i--){
+			try{
+				var flash = new ActiveXObject("ShockwaveFlash.ShockwaveFlash."+i);
+				WT.fi="Yes";
+				WT.fv=i+".0";
+				break;
+			}
+			catch(e){
+			}
+		}
+	}
+	else if (navigator.plugins&&navigator.plugins.length){
+		for (var i=0;i<navigator.plugins.length;i++){
+			if (navigator.plugins[i].name.indexOf('Shockwave Flash')!=-1){
+				WT.fi="Yes";
+				WT.fv=navigator.plugins[i].description.split(" ")[2];
+				break;
+			}
+		}
+	}
+	WT.sp="@@SPLITVALUE@@";
+	DCS.dcsdat=dCurrent.getTime();
+	DCS.dcssip=window.location.hostname;
+	DCS.dcsuri=window.location.pathname;
+	if (window.location.search){
+		DCS.dcsqry=window.location.search;
+		if (gQP.length>0){
+			for (var i=0;i<gQP.length;i++){
+				var pos=DCS.dcsqry.indexOf(gQP[i]);
+				if (pos!=-1){
+					var front=DCS.dcsqry.substring(0,pos);
+					var end=DCS.dcsqry.substring(pos+gQP[i].length,DCS.dcsqry.length);
+					DCS.dcsqry=front+end;
+				}
+			}
+		}
+	}
+	if ((window.document.referrer!="")&&(window.document.referrer!="-")){
+		if (!(navigator.appName=="Microsoft Internet Explorer"&&parseInt(navigator.appVersion)<4)){
+			DCS.dcsref=window.document.referrer;
+		}
+	}
+}
+
+function A(N,V){
+	return "&"+N+"="+dcsEscape(V);
+}
+
+function dcsEscape(S){
+	if (typeof(RE)!="undefined"){
+		var retStr = new String(S);
+		for (R in RE){
+			retStr = retStr.replace(RE[R],R);
+		}
+		return retStr;
+	}
+	else{
+		return escape(S);
+	}
+}
+
+function dcsCreateImage(dcsSrc){
+	if (document.images){
+		gImages[gIndex]=new Image;
+		if ((typeof(gHref)!="undefined")&&(gHref.length>0)){
+			gImages[gIndex].onload=gImages[gIndex].onerror=dcsLoadHref;
+		}
+		gImages[gIndex].src=dcsSrc;
+		gIndex++;
+	}
+	else{
+		document.write('<IMG ALT="" BORDER="0" NAME="DCSIMG" WIDTH="1" HEIGHT="1" SRC="'+dcsSrc+'">');
+	}
+}
+
+function dcsMeta(){
+	var elems;
+	if (document.all){
+		elems=document.all.tags("meta");
+	}
+	else if (document.documentElement){
+		elems=document.getElementsByTagName("meta");
+	}
+	if (typeof(elems)!="undefined"){
+		for (var i=1;i<=elems.length;i++){
+			var meta=elems.item(i-1);
+			if (meta.name){
+				if (meta.name.indexOf('WT.')==0){
+					WT[meta.name.substring(3)]=meta.content;
+				}
+				else if (meta.name.indexOf('DCSext.')==0){
+					DCSext[meta.name.substring(7)]=meta.content;
+				}
+				else if (meta.name.indexOf('DCS.')==0){
+					DCS[meta.name.substring(4)]=meta.content;
+				}
+			}
+		}
+	}
+}
+
+function dcsTag(){
+	var P="http"+(window.location.protocol.indexOf('https:')==0?'s':'')+"://"+gDomain+(gDcsId==""?'':'/'+gDcsId)+"/dcs.gif?";
+	for (N in DCS){
+		if (DCS[N]) {
+			P+=A(N,DCS[N]);
+		}
+	}
+	for (N in WT){
+		if (WT[N]) {
+			P+=A("WT."+N,WT[N]);
+		}
+	}
+	for (N in DCSext){
+		if (DCSext[N]) {
+			P+=A(N,DCSext[N]);
+		}
+	}
+	if (P.length>2048&&navigator.userAgent.indexOf('MSIE')>=0){
+		P=P.substring(0,2040)+"&WT.tu=1";
+	}
+	dcsCreateImage(P);
+}
+
+function dcsFunc(func){
+	if (typeof(window[func])=="function"){
+		window[func]();
+	}
+}
+
+dcsVar();
+dcsMeta();
+dcsFunc("dcsAdv");
+dcsTag();
+//-->
+</SCRIPT>
+
+<NOSCRIPT>
+<IMG ALT="" BORDER="0" NAME="DCSIMG" WIDTH="1" HEIGHT="1" SRC="http://statse.webtrendslive.com/dcs2i2uwr10000gkyksyb0cm0_9l1o/njs.gif?dcsuri=/nojavascript&amp;WT.js=No">
+</NOSCRIPT>
+<!-- END OF SmartSource Data Collector  TAG -->	

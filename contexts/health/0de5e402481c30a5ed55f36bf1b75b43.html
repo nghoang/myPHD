@@ -1,0 +1,1068 @@
+	
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+			
+					
+			
+			
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Assembly of First Nations - Policy Areas   - Health and Social Secretariat</title>
+    
+        
+    <link rel="stylesheet" type="text/css" href="http://www.afn.ca/themes/site_themes/default/css/all.css" />
+    <!--[if IE]><link rel="stylesheet" type="text/css" href="http://www.afn.ca/themes/site_themes/default/css/ie.css" /><![endif]-->
+    
+    <link rel="shortcut icon" type="image/x-icon" href="http://www.afn.ca/favicon.ico" />
+    
+    <script type="text/javascript" src="http://www.afn.ca/themes/site_themes/default/js/jquery-1.4.3.min.js"></script>
+    <script type="text/javascript" src="http://www.afn.ca/themes/site_themes/default/js/cufon.js"></script>
+    <script type="text/javascript" src="http://www.afn.ca/themes/site_themes/default/js/cufon-fonts.js"></script>
+    <script type="text/javascript" src="http://www.afn.ca/themes/site_themes/default/js/cufon-settings.js"></script>
+    <script type="text/javascript" src="http://www.afn.ca/themes/site_themes/default/js/drop-down.js"></script>
+    <script type="text/javascript" src="http://www.afn.ca/themes/site_themes/default/js/custom.js"></script>
+    
+    <!-- prettyPhoto (fat nav) -->
+    <link rel="stylesheet" href="http://www.afn.ca/themes/site_themes/default/js/prettyPhoto/css/prettyPhoto.css" type="text/css" media="screen" title="prettyPhoto main stylesheet" charset="utf-8" />
+    <script src="http://www.afn.ca/themes/site_themes/default/js/prettyPhoto/js/jquery.prettyPhoto.js" type="text/javascript" charset="utf-8"></script>    
+    
+    <!-- banner slides -->
+    <script type="text/javascript" src="http://www.afn.ca/scripts/jquery/jquery.easing.1.3.js"></script>	
+    <script type="text/javascript" src="http://www.afn.ca/scripts/jquery/jquery.slideviewer.1.2.js"></script>
+    
+    <!-- jquery dom ready -->
+    <script type="text/javascript">
+    // banner slides
+      var theLinks;
+      var nCount = 0;
+      var theTimerID;    
+
+      function autoSlide(){
+	jQuery.each(theLinks, function(i){
+	  if(jQuery(this).hasClass('current')){
+	    jQuery(theLinks[((i+1 < theLinks.length) ? (i+1) : 0)] ).trigger('click');
+	    return false;
+	  }
+	});
+      }
+	    
+      $(function(){
+      
+	    // banner slides
+	    $('#stripTransmitter_noscript').remove();
+	    $('#banner-inner').slideView();
+	    $('.stripTransmitter').detach().insertAfter($('#banner-outer')); // ie6 z-index fix	    
+	    theLinks = jQuery('#stripTransmitter0 a');	
+	    //for kill interval purposes
+	    theTimerID = setInterval('autoSlide()', 10000);
+    
+	    // latest tabs
+	    $('.navbar a').each(function(i){
+	      i++;
+	      $(this).hover(
+		    function(){
+		      $('.navbar a').removeAttr('class');
+		      $(this).addClass('active');
+		      Cufon.refresh('.navbar a');
+		      $('.article-list').css('display','none');
+		      $('#latest-content-'+i).css('display','block');
+		    }
+	      );
+	      
+	      $(this).click(
+		    function(){
+		      return false;
+		    }
+	      );
+	    });			
+	    
+	    // homepage latest news pagination
+	    $('#latest-content-1 .latest-123 a:not(.more)').each(function(i){
+	      i++;
+	      $(this).click(
+		    function(){
+		      $('#latest-content-1 .latest-123 a').removeAttr('class');
+		      $(this).addClass('current');
+		      $('#latest-content-1 li:not(.latest-123)').css('display','none');
+		      $('#latest-content-1 .pagination-'+i).css('display','block');
+		      return false;
+		    }
+	      );
+	    });
+	    
+	    // homepage events pagination
+	    $('#latest-content-2 .latest-123 a:not(.more)').each(function(i){
+	      i++;
+	      $(this).click(
+		    function(){
+		      $('#latest-content-2 .latest-123 a').removeAttr('class');
+		      $(this).addClass('current');
+		      $('#latest-content-2 li:not(.latest-123)').css('display','none');
+		      $('#latest-content-2 .pagination-'+i).css('display','block');
+		      return false;
+		    }
+	      );
+	    });
+	    
+	    // homepage policy pagination
+	    $('#latest-content-3 .latest-123 a:not(.more)').each(function(i){
+	      i++;
+	      $(this).click(
+		    function(){
+		      $('#latest-content-3 .latest-123 a').removeAttr('class');
+		      $(this).addClass('current');
+		      $('#latest-content-3 li:not(.latest-123)').css('display','none');
+		      $('#latest-content-3 .pagination-'+i).css('display','block');
+		      return false;
+		    }
+	      );
+	    });
+	    
+	    // homepage national chief pagination
+	    $('.article-holder .latest-123 a:not(.more)').each(function(i){
+	      i++;
+	      $(this).click(
+		    function(){
+		      $('.article-holder .latest-123 a').removeAttr('class');
+		      $(this).addClass('current');
+		      $('.article-holder li:not(.latest-123)').css('display','none');
+		      $('.article-holder .pagination-'+i).css('display','block');
+		      return false;
+		    }
+	      );
+	    });
+	    
+	    // breadcrumb - related cat url href
+	    $('#relCatURL').attr('href', $('.sub-nav-li a.active').attr('href'));
+	    
+	    // prettyPhoto (fat nav) - remove social buttons
+	    $("a[rel^='prettyPhoto']").prettyPhoto({
+		    allow_resize: true,
+		    default_width: 1040,
+		    horizontal_padding: 20,
+		    social_tools:false
+		});
+      });
+    </script>
+</head>
+<body class="en">
+<div id="wrapper">
+    <div id="header">
+        <div class="header-holder">
+            <h1 class="logo"><a href="http://www.afn.ca/index.php/en">Assembly of First Nations</a></h1>
+            <div class="section">
+                <div class="panel">
+                    <ul>
+                                                    <li>English</li>
+			    				<li><a href="http://www.afn.ca/index.php/fr/secteurs-de-politique/secretariat-a-la-sante-et-developpement-social">Français</a></li>
+			                                                </ul>
+                </div>
+				<form method="post" class="search" action="http://afn.ca/index.php"  >
+                    <div class='hiddenFields'>                    
+                        <input type="hidden" name="ACT" value="19" />
+                        <input type="hidden" name="XID" value="" />
+                        <input type="hidden" name="RP" value="en/search" />
+                        <input type="hidden" name="NRP" value="" />
+                        <input type="hidden" name="RES" value="10" />
+                        <input type="hidden" name="status" value="" />
+                        <input type="hidden" name="weblog" value="blogs|pages|pages-policy-areas|pages-related-to-policy-areas" />
+                        <input type="hidden" name="search_in" value="" />
+                        <input type="hidden" name="where" value="all" />
+                        <input type="hidden" name="site_id" value="1" />
+                    </div>
+                    <fieldset>
+                    	<input type="text" name="keywords" id="keywords" class="text" size="18" maxlength="100" value="" />
+                        <input type="submit" class="submit" value="Search" />
+                    </fieldset>                        
+                </form>
+            </div>
+        </div>
+        <div class="nav">
+            
+
+<ul id="main-nav">
+    
+    	        <li><a class="parent-li" href="http://www.afn.ca/index.php/en/national-chief">National Chief</a>
+            
+                
+
+
+
+
+
+
+
+<div class="drop">
+    <div>
+        <ul>        
+            
+                    
+
+
+
+    
+            <li><a style="width:170px; white-space:normal!important" href="http://www.afn.ca/index.php/en/national-chief/highlights-from-the-national-chief">Highlights from the National Chief</a></li>     
+            
+                
+        </ul>
+    </div>
+</div>
+                                   
+            
+        </li>
+    
+    	        <li><a class="parent-li" href="http://www.afn.ca/index.php/en/about-afn">About AFN</a>
+            
+                
+
+
+
+
+
+
+<div class="drop">
+    <div>
+        <ul>        
+                            
+                <li><a style="width:170px; white-space:normal!important" href="http://www.afn.ca/index.php/en/about-afn/our-story">Our Story</a></li>
+                
+                                   
+                
+                                
+                
+                            
+                <li><a style="width:170px; white-space:normal!important" href="http://www.afn.ca/index.php/en/about-afn/charter-of-the-assembly-of-first-nations">Charter of the Assembly of First Nations</a></li>
+                
+                                   
+                
+                                
+                
+                            
+                <li><a style="width:170px; white-space:normal!important" href="http://www.afn.ca/index.php/en/about-afn/executive-committee">Executive Committee</a></li>
+                
+                                   
+                
+                                
+                
+                            
+                <li><a style="width:170px; white-space:normal!important" href="http://www.afn.ca/index.php/en/about-afn/provincial-territorial-organizations">Provincial Territorial Organizations</a></li>
+                
+                                   
+                
+                                
+                
+                            
+                <li><a style="width:170px; white-space:normal!important" href="http://www.afn.ca/index.php/en/about-afn/partnerships">Partnerships</a></li>
+                
+                                   
+                
+                                
+                
+                            
+                <li><a style="width:170px; white-space:normal!important" href="http://www.afn.ca/index.php/en/about-afn/chronology-of-national-chiefs">Chronology of National Chiefs</a></li>
+                
+                                    </ul>
+                    <ul>
+                                   
+                
+                                
+                
+                            
+                <li><a style="width:170px; white-space:normal!important" href="http://www.afn.ca/index.php/en/about-afn/description-of-the-afn">Description of the AFN</a></li>
+                
+                                   
+                
+                                
+                
+                            
+                <li><a style="width:170px; white-space:normal!important" href="http://www.afn.ca/index.php/en/about-afn/a-declaration-of-first-nations">A Declaration of First Nations</a></li>
+                
+                                   
+                
+                                
+                
+                            
+                <li><a style="width:170px; white-space:normal!important" href="http://www.afn.ca/index.php/en/about-afn/national-congress-of-american-indians">Declaration of Kinship and Cooperation among the Indigenous Peoples and Nations of North America</a></li>
+                
+                                   
+                
+                                	
+
+
+
+    
+                                
+                
+            
+        </ul>
+    </div>
+</div>
+                                   
+            
+        </li>
+    
+    	        <li><a class="parent-li" href="http://www.afn.ca/index.php/en/resolutions">Resolutions</a>
+            
+        </li>
+    
+    				
+
+
+
+
+	        
+            <li><a class="parent-li" href="http://www.afn.ca/index.php/en/policy-areas">Policy Areas</a>
+        <div class="drop">
+            <div>    
+                <ul>
+        
+    
+    <li><a style="width:170px; white-space:normal!important" href="http://www.afn.ca/index.php/en/policy-areas/afn-elders-council">AFN Elders Council</a></li>                
+    
+        
+    
+    
+	    
+    
+    <li><a style="width:170px; white-space:normal!important" href="http://www.afn.ca/index.php/en/policy-areas/afn-youth">AFN National Youth Council</a></li>                
+    
+        
+    
+    
+	    
+    
+    <li><a style="width:170px; white-space:normal!important" href="http://www.afn.ca/index.php/en/policy-areas/afn-womens-council">AFN Women&#8217;s Council</a></li>                
+    
+        
+    
+    
+	    
+    
+    <li><a style="width:170px; white-space:normal!important" href="http://www.afn.ca/index.php/en/policy-areas/accountability">Accountability</a></li>                
+    
+        
+    
+    
+	    
+    
+    <li><a style="width:170px; white-space:normal!important" href="http://www.afn.ca/index.php/en/policy-areas/citizenship">Citizenship</a></li>                
+    
+        
+    
+    
+	    
+    
+    <li><a style="width:170px; white-space:normal!important" href="http://www.afn.ca/index.php/en/policy-areas/communications-unit">Communications Unit</a></li>                
+    
+        
+    
+    
+	    
+    
+    <li><a style="width:170px; white-space:normal!important" href="http://www.afn.ca/index.php/en/policy-areas/economic-development">Economic Development</a></li>                
+    
+        
+    
+    
+	    
+    
+    <li><a style="width:170px; white-space:normal!important" href="http://www.afn.ca/index.php/en/policy-areas/education">Education</a></li>                
+    
+        
+    
+    
+	    
+    
+    <li><a style="width:170px; white-space:normal!important" href="http://www.afn.ca/index.php/en/policy-areas/emergency-issues-management">Emergency Issues Management</a></li>                
+    
+        
+    
+    
+	    
+    
+    <li><a style="width:170px; white-space:normal!important" href="http://www.afn.ca/index.php/en/policy-areas/i-pledge.-end-violence">Ending Violence</a></li>                
+    
+        
+    
+    
+	    
+    
+    <li><a style="width:170px; white-space:normal!important" href="http://www.afn.ca/index.php/en/policy-areas/environmental-stewardship">Environmental Stewardship</a></li>                
+    
+        
+    
+    
+	    
+    
+    <li><a style="width:170px; white-space:normal!important" href="http://www.afn.ca/index.php/en/policy-areas/finance">Finance</a></li>                
+    
+        
+    
+    
+	    
+    
+    <li><a style="width:170px; white-space:normal!important" href="http://www.afn.ca/index.php/en/policy-areas/first-nations-e-community">First Nations E-Community</a></li>                
+    
+            </ul>
+        <ul>
+        
+    
+    
+	    
+    
+    <li><a style="width:170px; white-space:normal!important" href="http://www.afn.ca/index.php/en/policy-areas/fisheries-and-aquatic-resources-management1">Fisheries and Aquatic Resources Management</a></li>                
+    
+        
+    
+    
+	    
+    
+    <li><a style="width:170px; white-space:normal!important" href="http://www.afn.ca/index.php/en/policy-areas/health-and-social-secretariat">Health and Social Secretariat</a></li>                
+    
+        
+    
+    
+	    
+    
+    <li><a style="width:170px; white-space:normal!important" href="http://www.afn.ca/index.php/en/policy-areas/honouring-treaties">Honouring Treaties</a></li>                
+    
+        
+    
+    
+	    
+    
+    <li><a style="width:170px; white-space:normal!important" href="http://www.afn.ca/index.php/en/policy-areas/housing">Housing</a></li>                
+    
+        
+    
+    
+	    
+    
+    <li><a style="width:170px; white-space:normal!important" href="http://www.afn.ca/index.php/en/policy-areas/implementing-the-united-nations-declaration-on-the-rights-of-indigenou">Implementing the United Nations Declaration on the Rights of Indigenous Peoples</a></li>                
+    
+        
+    
+    
+	    
+    
+    <li><a style="width:170px; white-space:normal!important" href="http://www.afn.ca/index.php/en/policy-areas/indian-residential-schools-unit">Indian Residential Schools Unit</a></li>                
+    
+        
+    
+    
+	    
+    
+    <li><a style="width:170px; white-space:normal!important" href="http://www.afn.ca/index.php/en/policy-areas/land-rights-and-claims">Land Rights and Claims</a></li>                
+    
+        
+    
+    
+	    
+    
+    <li><a style="width:170px; white-space:normal!important" href="http://www.afn.ca/index.php/en/policy-areas/nation-building-and-re-building-supporting-first-nation-governments">Nation Building and Re-building: Supporting First Nation Governments</a></li>                
+    
+        
+    
+    
+	    
+    
+    <li><a style="width:170px; white-space:normal!important" href="http://www.afn.ca/index.php/en/policy-areas/parliamentary-relations">Parliamentary Relations</a></li>                
+    
+        
+    
+    
+	    
+    
+    <li><a style="width:170px; white-space:normal!important" href="http://www.afn.ca/index.php/en/policy-areas/recognition-and-implementation-of-first-nation-governments">Recognition and Implementation of First Nation Governments</a></li>                
+    
+        
+    
+    
+	    
+    
+    <li><a style="width:170px; white-space:normal!important" href="http://www.afn.ca/index.php/en/policy-areas/resource-revenues">Resource Revenues</a></li>                
+    
+        
+    
+    
+	    
+    
+    <li><a style="width:170px; white-space:normal!important" href="http://www.afn.ca/index.php/en/policy-areas/social-secretariat">Social Development</a></li>                
+    
+        
+    
+    
+	    
+    
+    <li><a style="width:170px; white-space:normal!important" href="http://www.afn.ca/index.php/en/policy-areas/strategic-planning-and-policy-coordination-sppc">Strategic Planning and Policy Coordination (SPPC)</a></li>                
+    
+        
+    
+    
+	    
+    
+    <li><a style="width:170px; white-space:normal!important" href="http://www.afn.ca/index.php/en/policy-areas/water">Water and Wastewater</a></li>                
+    
+        
+    
+                    </ul>
+            </div>
+        </div>        
+    
+                <li><a class="parent-li" href="http://www.afn.ca/index.php/en/news-media">News & Media</a>
+            
+                
+
+
+
+
+
+
+
+<div class="drop">
+    <div>
+        <ul>        
+            
+                    
+
+
+
+    
+            <li><a style="width:170px; white-space:normal!important" href="http://www.afn.ca/index.php/en/news-media/crown-first-nation-gathering">Crown-First Nation Gathering</a></li>     
+            
+            <li><a style="width:170px; white-space:normal!important" href="http://www.afn.ca/index.php/en/news-media/latest-news">Latest News</a></li>     
+            
+            <li><a style="width:170px; white-space:normal!important" href="http://www.afn.ca/index.php/en/news-media/current-issues">Current Issues</a></li>     
+            
+            <li><a style="width:170px; white-space:normal!important" href="http://www.afn.ca/index.php/en/news-media/events">Events</a></li>     
+            
+                
+        </ul>
+    </div>
+</div>
+                                   
+            
+        </li>
+    
+</ul>
+        </div>
+	<a id="fatnavtab" href="#fat_nav" rel="prettyPhoto[inline]"></a>
+    </div>
+    <div id="main">
+
+    <div class="visual">
+        
+    </div>
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="main-holder">
+
+    <div id="twocolumns">
+        <div class="aside">
+        	        
+            <h3>Learn About Our Policy Areas</h3>
+            
+
+
+            <ul class="bar">
+        
+    <li ><a href="http://www.afn.ca/index.php/en/policy-areas/afn-elders-council">AFN Elders Council</a></li>                        
+    
+    
+        
+    <li ><a href="http://www.afn.ca/index.php/en/policy-areas/afn-youth">AFN National Youth Council</a></li>                        
+    
+    
+        
+    <li ><a href="http://www.afn.ca/index.php/en/policy-areas/afn-womens-council">AFN Women&#8217;s Council</a></li>                        
+    
+    
+        
+    <li ><a href="http://www.afn.ca/index.php/en/policy-areas/accountability">Accountability</a></li>                        
+    
+    
+        
+    <li ><a href="http://www.afn.ca/index.php/en/policy-areas/citizenship">Citizenship</a></li>                        
+    
+    
+        
+    <li ><a href="http://www.afn.ca/index.php/en/policy-areas/communications-unit">Communications Unit</a></li>                        
+    
+    
+        
+    <li ><a href="http://www.afn.ca/index.php/en/policy-areas/economic-development">Economic Development</a></li>                        
+    
+    
+        
+    <li ><a href="http://www.afn.ca/index.php/en/policy-areas/education">Education</a></li>                        
+    
+    
+        
+    <li ><a href="http://www.afn.ca/index.php/en/policy-areas/emergency-issues-management">Emergency Issues Management</a></li>                        
+    
+    
+        
+    <li ><a href="http://www.afn.ca/index.php/en/policy-areas/i-pledge.-end-violence">Ending Violence</a></li>                        
+    
+    
+        
+    <li ><a href="http://www.afn.ca/index.php/en/policy-areas/environmental-stewardship">Environmental Stewardship</a></li>                        
+    
+    
+        
+    <li ><a href="http://www.afn.ca/index.php/en/policy-areas/finance">Finance</a></li>                        
+    
+    
+        
+    <li ><a href="http://www.afn.ca/index.php/en/policy-areas/first-nations-e-community">First Nations E-Community</a></li>                        
+    
+    
+        
+    <li ><a href="http://www.afn.ca/index.php/en/policy-areas/fisheries-and-aquatic-resources-management1">Fisheries and Aquatic Resources Management</a></li>                        
+    
+    
+        
+    <li class="active"><a href="http://www.afn.ca/index.php/en/policy-areas/health-and-social-secretariat">Health and Social Secretariat</a></li>                        
+    
+    
+        
+    <li ><a href="http://www.afn.ca/index.php/en/policy-areas/honouring-treaties">Honouring Treaties</a></li>                        
+    
+    
+        
+    <li ><a href="http://www.afn.ca/index.php/en/policy-areas/housing">Housing</a></li>                        
+    
+    
+        
+    <li ><a href="http://www.afn.ca/index.php/en/policy-areas/implementing-the-united-nations-declaration-on-the-rights-of-indigenou">Implementing the United Nations Declaration on the Rights of Indigenous Peoples</a></li>                        
+    
+    
+        
+    <li ><a href="http://www.afn.ca/index.php/en/policy-areas/indian-residential-schools-unit">Indian Residential Schools Unit</a></li>                        
+    
+    
+        
+    <li ><a href="http://www.afn.ca/index.php/en/policy-areas/land-rights-and-claims">Land Rights and Claims</a></li>                        
+    
+    
+        
+    <li ><a href="http://www.afn.ca/index.php/en/policy-areas/nation-building-and-re-building-supporting-first-nation-governments">Nation Building and Re-building: Supporting First Nation Governments</a></li>                        
+    
+    
+        
+    <li ><a href="http://www.afn.ca/index.php/en/policy-areas/parliamentary-relations">Parliamentary Relations</a></li>                        
+    
+    
+        
+    <li ><a href="http://www.afn.ca/index.php/en/policy-areas/recognition-and-implementation-of-first-nation-governments">Recognition and Implementation of First Nation Governments</a></li>                        
+    
+    
+        
+    <li ><a href="http://www.afn.ca/index.php/en/policy-areas/resource-revenues">Resource Revenues</a></li>                        
+    
+    
+        
+    <li ><a href="http://www.afn.ca/index.php/en/policy-areas/social-secretariat">Social Development</a></li>                        
+    
+    
+        
+    <li ><a href="http://www.afn.ca/index.php/en/policy-areas/strategic-planning-and-policy-coordination-sppc">Strategic Planning and Policy Coordination (SPPC)</a></li>                        
+    
+    
+        
+    <li ><a href="http://www.afn.ca/index.php/en/policy-areas/water">Water and Wastewater</a></li>                        
+    
+            </ul>
+    
+              </div>
+        <div id="content">
+	    <!-- AddThis Button BEGIN -->
+	    <div class="addthis_toolbox addthis_default_style ">
+	    <a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>
+	    <a class="addthis_button_tweet"></a>
+	    <a class="addthis_button_google_plusone" g:plusone:size="medium"></a>
+	    <a class="addthis_counter addthis_pill_style"></a>
+	    </div>
+	    <script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid=xa-4fda461e37ccfdb6"></script>
+	    <!-- AddThis Button END -->	
+	    <h1>Health and Social Secretariat</h1>	    
+	    <p>The Health and Social Secretariat (HSS) report is organized and aligned within our new structure: Strategic Policy, Public Health, Mental Wellness, Children and Youth, Information Management, Primary Care, and Social Development. Health strategies and decisions are developed in partnership with the National First Nations Health Technicians Network (NFNHTN) and the Chiefs Committee on Health (CCOH). <br /><br /><strong>1.&nbsp;&nbsp; &nbsp;STRATEGIC POLICY</strong><br /><br /><strong>A.&nbsp;&nbsp; &nbsp;Assembly of First Nations (AFN) &ndash; Health Canada (HC) &ndash; Public Health Agency of Canada (PHAC) Task Group Work Plan</strong><br /><br />The Task Group coordinates the highest level of work on health and has the potential for immense influence and change for program and funding sustainability, program coherence and innovation, such as that of the multi-jurisdictional partnerships approach. Phase One was completed and an agreement was signed on January 13, 2009, between the National Chief and the Minister of Health initiating work under Phase Two (2009-2011). In November 2011, a joint letter was signed by the National Chief and the Minister of Health renewing the AFN-HC-PHAC Task Group on First Nations Health from 2011-2012.<br /><br /><strong>Key Issues and Activities </strong><br /><br />The AFN-HC-PHAC Task Group Advisory Committee is finalizing the development of the Phase Two work plan building upon previous accomplishments. Bridging from Phase One and recognizing the joint interest in multi-lateral collaboration, the Task Group has identified three areas of focus to jointly explore: Structural Change; Strengthening Relationships; and, Accountability. Within these key areas work will include developing and implementing projects which focus upon key priorities in addressing First Nation health issues such as social determinants of health, multi-jurisdictional and integration agreements, cost-drivers analysis for health programming, review of continuing mental health and addictions needs (including the Indian Residential Schools Settlement Agreement), physical activity, sport and obesity. <br /><br /><strong>Anticipated Outcomes by the 2012 Annual General Assembly</strong><br /><br />&bull;&nbsp;&nbsp; &nbsp;The AFN-HC-PHAC Task Group Advisory Committee will finalize the work plan and continue to collaborate in the implementation of work plan activities.<br />&bull;&nbsp;&nbsp; &nbsp;Ensure that the needs of First Nations continue to be reflected in the work outcomes.<br /><br /><strong>B.&nbsp;&nbsp; &nbsp;Aboriginal Health Human Resources Initiative (AHHRI)</strong><br /><br />The AHHRI is one of the $700 million upstream investments whose authority and mandate ended March 31, 2010. Renewal of AHHRI was announced and approval of funding by Treasury Board took place in late 2010. AHHRI was renewed in 2010 for two years, with a budget of $40 million. AHHRI has further been renewed for an additional three years from 2010-2015 at $80 million. <br /><br /><strong>Key Issues and Activities </strong><br /><br />The renewed AHHRI is focused on a number of issues including increasing of the number of trained and certified First Nation health managers and community-based workers. In the first two years of the renewed AHHRI, the AFN advocated and secured continued funding for established cultural competency projects. The AFN continues its advocacy efforts to obtain funding for new cultural competency projects as they remain unfunded under the AHHRI guidelines for years 2013-2015. The First Nations and Inuit Health Branch (FNIHB) has also mandated AHHRI to fund the startup of the First Nations Health Managers Association (FNHMA) from 2010-2012.<br /><br /><strong>Anticipated Outcomes by the 2012 Annual General Assembly</strong><br /><br />&bull;&nbsp;&nbsp; &nbsp;Continue to work with regional First Nation partners to ensure that community needs are being addressed and met.<br />&bull;&nbsp;&nbsp; &nbsp;Continue to advocate for funding of new cultural competency projects.<br />&bull;&nbsp;&nbsp; &nbsp;Continue to work collaboratively with regional First Nation partners and participate in the creation and exchange of knowledge dissemination strategies. <br />&bull;&nbsp;&nbsp; &nbsp;Work closely with FNIHB to address changes in funding levels. <br /><br /><strong>C.&nbsp;&nbsp; &nbsp;First Nations Health Managers Association (FNHMA)</strong><br /><br />AFN Resolutions 58/2008 and 46/2009 support collaboration to address First Nations health human resource shortages, support the development of the FNHMA and approve the First Nations Health Managers Competency Framework.<br /><br /><strong>Key Issues and Activities </strong><br /><br />The draft Statement of Partnership between the AFN and FNHMA is currently on hold until the FNHMA addresses the parameters set out in Resolution 46/2009.While some issues have been addressed, many still remain outstanding such as by-laws and governance. The AFN continues to advocate for the outstanding concerns in Resolution 46/2009. <br /><br />The AFN is also advocating further with the FNHMA to address concerns about the development of a certification-learning tool called &ldquo;Certified Aboriginal Health Manager&rdquo; (CAHM). Specifically, Resolution 104/2004 opposes pan-Aboriginal approaches and the AFN is working to implement this direction with the FNHMA.<br /><br /><strong>Anticipated Outcomes by the 2012 Annual General Assembly</strong><br /><br />&bull;&nbsp;&nbsp; &nbsp;Continue to advocate for the necessary changes to the FNHMA in an effort to reach agreement and sign a Statement of Partnership.<br />&bull;&nbsp;&nbsp; &nbsp;Consider withdrawing support to the FNHMA should the parameters set out in Resolution 46/2009 and 104/2004 not be addressed.<br />&nbsp;<br /><br /><strong>D.&nbsp;&nbsp; &nbsp;Aboriginal Health Transition Fund (AHTF)</strong><br /><br />Originally, announced as a five-year initiative to end in 2010, the AHTF provided transitional short-term funding to federal, provincial and territorial governments and Aboriginal organizations to integrate provincial/territorial health systems and federally-funded health systems within First Nation and Inuit communities. The initiative was also meant to adapt provincial/territorial health services to better meet the needs of all Aboriginal peoples, including M&eacute;tis and those living off-reserve. The fund was structured into three envelopes and was jointly managed and accounted for by HC. The initiative was extended for one year to allow for completion of project work and ended on March 31, 2011. This was replaced by the Health Services Integration Fund (HSIF).<br /><br /><strong>Key Issues and Activities </strong><br /><br />The Treasury Board requires that a comprehensive meta-evaluation be conducted on AHTF. This evaluation includes a synthesis of the research and an analysis of the activities funded under AHTF. Various partners have and continue to participate in the working group meetings to ensure that the outcomes reflect the communities involved in the activities.<br /><br /><strong>Anticipated Outcomes by the 2012 Annual General Assembly</strong><br /><br />&bull;&nbsp;&nbsp; &nbsp;Participate and provide input into the development of the final meta-evaluation report of AHTF to ensure report reflects distinction-based outcomes.<br />&bull;&nbsp;&nbsp; &nbsp;Participate in ongoing knowledge exchange and transition to HSIF.<br /><br /><strong>E.&nbsp;&nbsp; &nbsp;Health Services Integration Fund (HSIF)</strong><br /><br />Midway through 2010, a new program referred to as the &ldquo;daughter&rdquo; of AHTF was informally announced, the HSIF. Since that time, HSIF has been confirmed in the amount of $80 million from 2010-2015 with the following breakdown:<br /><br />&nbsp;&nbsp; &nbsp;2010-2011:&nbsp; $5.5 million<br />&nbsp;&nbsp; &nbsp;2011-2012:&nbsp; $11.5 million<br />&nbsp;&nbsp; &nbsp;2012-2013:&nbsp; $18.4 million<br />&nbsp;&nbsp; &nbsp;2013-2014:&nbsp; $21.4 million<br />&nbsp;&nbsp; &nbsp;2014-2015:&nbsp; $23.2 million<br /><br /><strong>Key Issues and Activities </strong><br /><br />The AFN participates and provides input into the development of advisory committees for the new HSIF. The AFN advocates for meaningful First Nations involvement including the development of guidelines, framework, and terms of reference for the HSIF National Advisory Committee (NAC) ensuring a distinction-based approach and development of a collaborative communications plan.<br /><br /><strong>Anticipated Outcomes by the 2012 Annual General Assembly</strong><br /><br />&bull;&nbsp;&nbsp; &nbsp;Continue to work with regional First Nation partners to ensure community understanding of integration.<br />&bull;&nbsp;&nbsp; &nbsp;Strengthen First Nation membership on the HSIF NAC.<br /><br /><strong>2. PUBLIC HEALTH (PH)</strong><br /><br />Public health focuses on the social, environmental and economic factors affecting health, as well as the communities and settings where people gather and live. Programs and services are designed to promote and protect health, and prevent injury and disease.<br /><br />Protecting the health of First Nations and preventing disease is a priority area for both the AFN and FNIHB who have been collaborating to develop a First Nations Public Health Strategic Plan and longer-term vision. Following the completion of the AFN&rsquo;s Public Health Framework in 2006, support was secured for three five-year projects in Four Arrows Regional Health Authority, File Hills Qu&rsquo;Appelle and Kenora Treaty 3. These projects are now entering into their fifth and final year. These initiatives recognize the need for increased capacity at the regional level, a more inclusive governance structure in the management of public health services, enhanced disease surveillance, integrated public health programming with the provinces, and an agreed upon legislative base on which to protect the health of individuals and their community.<br /><br /><strong>Key Issues and Activities </strong><br /><br />The PH Pilot Projects have made strides in advancing their goals. A clear example of this is the Manitoba project that will commence the implementation of the community-developed PH Framework in two communities. Saskatchewan is actively collaborating with the FNIH office and the Province to advance their Framework Model and Kenora, Ontario is actively working toward completion of its project goals. An evaluation of year four work will be ready by the end of summer 2011. Also, the Community Public Health Pilot Project Newsletter has started its quarterly distribution and will continue until the end of year five. <br /><br />In addition to the focus on the pilots, the AFN Public Health team is establishing relationships with federal government departments and national organizations such as the Correctional Service of Canada, PHAC, Canadian Lung Association and the Canadian Asthma Society among others, to ensure the ongoing inclusion of First Nations in the development of new strategies to improve the health of First Nations.<br /><br /><strong>Anticipated Outcomes by the 2012 Annual General Assembly</strong><br /><br />&bull;&nbsp;&nbsp; &nbsp;Completion of year four evaluation in preparation for year five final evaluation process.<br />&bull;&nbsp;&nbsp; &nbsp;Assist FNIHB with their consultative dialogues in each region for feedback on their public health vision for the Branch.<br />&bull;&nbsp;&nbsp; &nbsp;Assist PHAC with their dialogue with First Nation regions in developing a PHAC policy framework on PHAC&rsquo;s role in First Nations public health.<br />&bull;&nbsp;&nbsp; &nbsp;Development of an AFN Policy Framework on Health Impact Assessments and Social Determinants of Health. <br />&bull;&nbsp;&nbsp; &nbsp;Establishment of the First Nation Public Health Advisory Committee. <br />&bull;&nbsp;&nbsp; &nbsp;Review and update the AFN Public Health Framework.<br /><br /><strong>A. Cancer</strong><br /><br />The incidence of cancer is rising faster in First Nation communities than in the general Canadian population. It is among the leading causes of death in some First Nation communities. While cancer was relatively rare in the past, common cancers such as breast, prostate, lung, and colorectal have increased remarkably over the last several decades in many First Nation communities.<br /><br />With the rapidly growing First Nation population, cancer may soon become an enormous public health issue for First Nations and for Canada. There is a potential for cancer to surpass diabetes as the number one killer of First Nation peoples. <br /><br />The AFN will continue to monitor the cancer care continuum (risk factors/prevention, screening, diagnosis, treatment, recovery, end of life/palliative care) to keep apprised of how First Nations might be affected. Efforts and limited resources this fiscal year will be focused on screening, liaison and raising awareness.<br /><br /><strong>Key Issues and Activities </strong><br /><br /><strong>Canadian Partnership Against Cancer (CPAC)</strong><br />The AFN has obtained funding from CPAC for the 2010/2011 fiscal year. The main objective of the work to be done is to raise awareness of cancer as an emerging crisis for First Nations. Activities include policy development and analysis, capacity building, and development of communication components that will support the objective of raising awareness with leadership, all levels of government, professional organizations, and First Nation communities.<br /><br /><strong>First Nations/Inuit/M&eacute;tis (FN/I/M) Advisory Council on Cancer Control</strong><br />The AFN has worked with CPAC and Inuit Tapiriit Kanatami (ITK) to draft Terms of Reference for the FN/I/M Advisory Council on Cancer Control. The AFN participates and provides support to First Nation representatives on the CPAC FN/I/M Advisory Council. The Advisory Council developed an action plan that was validated and began implementation in the spring of 2011. <br /><br /><strong>Cancerview.ca Website</strong><br />The AFN also participates on CPAC&rsquo;s Advisory Council for the FN/I/M website portal page. CPAC is in the process of developing a FN/I/M web portal for the Cancerview.ca website. Cancerview.ca connects Canadians to online services, information and resources for cancer control. The portal brings together resources for cancer prevention, screening, treatment, and supportive, palliative and end-of-life care. The FN/I/M portal will have a collection of FN/I/M specific resources for each of the population groups. <br /><br /><strong>Canadian Cancer Action Network (CCAN)</strong><br />The AFN is represented on the CCAN board by a First Nation cancer survivor. CCAN&rsquo;s priorities include playing a critical role in ensuring constructive and positive dialogue and development at both a provincial and national level. CCAN focuses on issues relevant to patient issues and ensuring patient voice by empowering and encouraging the cancer patient voice to be heard resulting in positive and quantifiable change. CCAN also works to establish strong, active and recognized presence in each province and territory, cultivate and pursue opportunities for effective dialogue and interaction with stakeholders through education and awareness, and establishing and implementing a strong and sustainable governance model. <br /><br /><strong>Anticipated Outcomes by the 2012 Annual General Assembly</strong><br /><br />&bull;&nbsp;&nbsp; &nbsp;Continue to raise the profile of cancer as an emerging crisis for First Nations, particularly in the area of screening, diagnosis and treatment, with political leadership, CCOH, NFNHTN and First Nation communities.<br />&bull;&nbsp;&nbsp; &nbsp;Continue to approach cancer by way of the cancer continuum: Risk Factors/Prevention, Screening, Diagnosis, Treatment, Recovery, and End of Life/Palliative Care.<br />&bull;&nbsp;&nbsp; &nbsp;Continue to identify key issues, explore options for policy change and other measures in cancer control.<br />&bull;&nbsp;&nbsp; &nbsp;Continue to inform First Nations and leadership on cancer issues as they arise.<br />&bull;&nbsp;&nbsp; &nbsp;Promotion of the Saint Elizabeth Health Centre&rsquo;s @Your Side Colleague (an interactive e-learning tool) to First Nation communities.<br />&bull;&nbsp;&nbsp; &nbsp;Explore the linkages between environmental health and cancer.<br /><br /><strong>B. Tuberculosis (TB)</strong><br />&nbsp;&nbsp; &nbsp;<br />TB is not just a public health issue; it is a social justice issue and a true marker of poverty. First Nations currently have rates of TB that are 31 times that of non-Aboriginal Canadians. Overcrowded housing, poor access to health care and food insecurity contribute greatly to this national disgrace. <br /><br /><strong>Key Issues and Activities </strong><br /><br />The AFN participated in the recently completed FNIHB 2011 Tuberculosis National Strategy, which is expected to start implementation this year and aims to address the burdens of TB in many First Nation communities. The AFN participated in World TB Day by releasing a Communiqu&eacute; and distributing advocacy material for use on this day. <br /><br />The AFN continues to participate as part of the Canadian Tuberculosis Subcommittee to the Canadian Tuberculosis Committee. The AFN continues its partnership with the STOP TB initiative, and will be supporting planning of the North American Region agenda for the 2012 TB conference in the USA. The work has been completed on the animation and voice over of the AFN National Youth Council developed cartoon strips. These will be distributed as DVDs to all communities. The AFN also recently established a partnership with the Social Determinants of TB (STTB) research study based at the University of Alberta.<br /><br /><strong>Anticipated Outcomes by the 2012 Annual General Assembly</strong><br /><br />&bull;&nbsp;&nbsp; &nbsp;Implementation of the FNIHB 2011Tuberculosis National Strategy in most regions.<br />&bull;&nbsp;&nbsp; &nbsp;Ongoing participation in the STOP TB initiative, raising awareness of TB issues in First Nation communities.<br />&bull;&nbsp;&nbsp; &nbsp;Animated cartoon strips to be distributed for the next World TB Day Campaign.<br />&bull;&nbsp;&nbsp; &nbsp;Distribution of the preliminary results of the STTB study.<br /><br /><strong>C. Asthma and the Lung Health Framework</strong><br /><br />Respiratory ailments are more prevalent in First Nation communities. The AFN is working through partnerships to improve programs and policies into bettering promotion, education, access and incidence.<br /><br /><strong>Key Issues and Activities</strong><br /><br />The First Nations Regional Longitudinal Health Survey (RHS) revealed that a significant number of First Nation people reported to have asthma. The AFN continues to collaborate with the Canadian Asthma Society on a project to adapt education materials for First Nation children, youth, and adults on asthma triggers.<br /><br />The AFN continues working with the National Lung Health Framework (NLHF), and has recently joined ITK and the M&eacute;tis National Council, as well as FNIHB and PHAC in a FN/I/M working group to identify common priorities for implementation of the NLHF.<br /><br /><strong>Anticipated Outcomes by the 2012 Annual General Assembly</strong><br /><br />&bull;&nbsp;&nbsp; &nbsp;Development of a priority areas and action plan for the Core FN/I/M working group. <br />&bull;&nbsp;&nbsp; &nbsp;Distribution of the results from phase I of the NLHF sponsored research studies.<br />&bull;&nbsp;&nbsp; &nbsp;Development of a Lung Health Action Plan for First Nations.<br /><br /><strong>D. Pandemic Planning and Emergency Preparedness</strong><br />&nbsp;&nbsp; &nbsp;<br />Health Emergency Preparedness has been a top priority for all First Nation communities since the H1N1 pandemic. The AFN has been actively engaged with key stakeholders in an effort to ensure that all First Nations have access to appropriate prevention and treatment responses for any future health emergency.<br /><br /><strong>Key Issues and Activities </strong><br /><br />The AFN has been participating on a Trilateral First Nations Pandemic Working Group (TFNP) with PHAC and FNIHB since 2006. Following an independent evaluation, the working group mandate has been extended for one year to develop and monitor the implementation of a workplan on pandemic influenza preparedness and response for First Nation communities. The workplan includes such activities as developing materials on emergency response, distribution of previously developed tools, knowledge transfer and publication of articles/results.<br /><br />The AFN developed a webinar, based on the Influenza Like Illness (ILI) guide that will be accessible as an online tool to all communities in 2011, with the intention of preparing community workers in early identification of possible influenza outbreaks. <br /><br />A questionnaire has been developed to collect data on e-Health utilization during H1N1. It has been distributed to selected communities in each region and results will be available later in the year.<br /><br />Recently, the AFN has started participating in the federal government&rsquo;s &ldquo;Senior Officials responsible for Emergency Management&rdquo; group, advocating for First Nation interests at the federal and regional levels.<br /><br /><strong>Anticipated Outcomes by the 2012 Annual General Assembly</strong><br /><br />&bull;&nbsp;&nbsp; &nbsp;The ILI webinar tool and the feedback results will be shared and future instruments will be planned accordingly.<br />&bull;&nbsp;&nbsp; &nbsp;The final report on the results of the e-Health utilization questionnaire will be shared and recommendations made.<br />&bull;&nbsp;&nbsp; &nbsp;Distribution of the materials produced by the TFNP. <br /><br /><strong>E. Environmental Public Health</strong><br /><br />The AFN is committed to working collaboratively with our First Nation regions and FNIHB&rsquo;s Environmental Public Health Division to assist with the reduction of environmental public health related issues. The AFN recognizes the importance of preventing disease through environmental public health stewardship as it relates to preventing disease and monitoring programs. <br /><br /><strong>Key Issues and Activities</strong><br /><br />Activities including policy development, capacity building and communication components support the objective of raising awareness with leadership, all levels of government, professional organizations, and First Nation communities. <br /><br />The AFN Health and Social Secretariat (HSS) provides information to Chiefs regarding the human health effects of emerging environmental health issues such as the recent oil spill in Alberta. <br /><br />An assessment is being prepared to gather information on environmental public health concerns and priorities as well as to identify current ongoing programs. An action plan is also being developed to increase awareness and distribute information regarding environmental public health issues.<br /><br /><strong>Anticipated Outcomes by the 2012 Annual General Assembly</strong><br /><br />&bull;&nbsp;&nbsp; &nbsp;Raise awareness of environmental health issues among First Nation leaders and community members.<br />&bull;&nbsp;&nbsp; &nbsp;Communication to First Nation communities and leadership on emerging environmental public health issues.<br />&bull;&nbsp;&nbsp; &nbsp;Explore the linkages between environmental health and cancer.<br /><br /><strong>F. Food Security and Nutrition</strong><br /><br />Food security exists when there is a comprehensive continuum of resources in a community&rsquo;s food system. The continuum of resources ranges from those providing short-term relief of acute food insecurity, to those that build the capacity of the community to feed itself, to strategies that redesign the food system toward a more economically, socially and environmentally sustainable model. <br /><br />The AFN works on ensuring and increasing First Nations participation in the development of food security related policy and initiatives in collaboration with FNIHB, PHAC, INAC, AFN regions, and other stakeholders.<br /><br /><strong>Key Issues and Activities </strong><br /><br /><strong>Nutrition North Canada (NNC)</strong><br />The NNC program began full implementation on April 1, 2011. The NNC program intends to bring healthy nutritious foods to residents of the north. The new program is now a market-driven/retail-based model that aims to be a sustainable, efficient, cost-effective and transparent means of helping Northerners access nutritious food in eligible communities. The NNC will replace the old Food Mail program with a number of changes being incorporated into the new program. Health Canada (HC) is playing a larger role in the NNC program by introducing nutrition promotion and retail education initiatives to support healthy eating. These activities will be culturally appropriate and community-based to deliver vital information on the use, marketing and preparation of nutritious foods. <br /><br />The AFN continues to monitor the progress of INAC and HC in the development and implementation of the new NNC. The AFN presented to the Standing Committee on Aboriginal Affairs and Northern Development Nutrition North Canada Study on November 1, 2010, along with other First Nation and Inuit stakeholders. <br /><br />As per Resolution 78/2010, the AFN has been mandated by the Chiefs-in-Assembly to undertake a comprehensive impact analysis of the Nutrition North Canada program. <br /><br /><strong>Food Security Reference Group (FSRG)</strong><br />The AFN participates on the FSRG to ensure collaboration towards improved food security for First Nations and Inuit. Key activities include building on a previously developed promising practices document, developing tools for community planning, exploring opportunities for influencing agendas to include food security, and continuing to build the evidence base. <br /><br /><strong>AFN Food Security Working Group (AFN FSWG)</strong><br />The AFN FSWG was approved as a subcommittee to the National First Nations Health Technicians Network (NFNHTN) in April. The AFN FSWG will be meeting in the fall of 2011 to draft its Terms of Reference and set priorities. <br /><br /><strong>Peoples Food Policy Project (PFPP)</strong><br />The AFN participated in the drafting of the Indigenous Food Sovereignty Chapter of the Peoples Food Policy. This was launched in April 2011 by the PFPP. The PFPP aims to influence and encourage the development of Canada&rsquo;s first food policy. <br /><br /><strong>Anticipated Outcomes by the 2012 Annual General Assembly</strong><br /><br />&bull;&nbsp;&nbsp; &nbsp;Conduct an impact analysis on those First Nation communities using the NNC program, those who are remote but are not eligible and those communities removed from the eligibility list from the previous Food Mail Program.<br />&bull;&nbsp;&nbsp; &nbsp;Develop a First Nations Food Security Position Statement. <br />&bull;&nbsp;&nbsp; &nbsp;Develop AFN Food Security Working Group Terms of Reference and priorities.<br /><br /><strong>G. Injury Prevention</strong><br /><br />Injuries are a major cause of morbidity and mortality in First Nation communities especially among youth and young adults. Injury prevention is concerned with modifying behavioral or contextual factors that place First Nations at greater risk for unintentional injury, morbidity and mortality from injuries when they occur. <br /><br />Resolution 34/2008 supports the work on Injury Prevention. Resolution 57/2009 supports the development and implementation of the National Comprehensive Injury Prevention Strategy.<br /><br /><strong>Key Issues and Activities </strong><br /><br />Work at the national level is focused on: raising awareness of injuries and their impact; building capacity for communities to carry out injury prevention work; and, relationship development with the goal of addressing programming gaps with the adaptation of existing injury prevention programming. Much of this work is guided by the First Nations Regional Injury Prevention (FNRIP) Advisory Group. <br /><br /><strong>Raising Awareness &nbsp;</strong><br />A First Nation Injury Prevention communications plan has been developed and is designed to coordinate and promote injury prevention efforts from a national perspective with the overall goal of safe and healthy First Nation communities that are injury free. This includes the promotion of and participation at the Canadian Injury Prevention and Safety Promotion Conference in November, 2011. The AFN is a co-lead on the Aboriginal Stream component of the conference which includes First Nations, M&eacute;tis and Inuit speakers, workshops, presentations and research. The FNRIP Working Group continues to implement the National Comprehensive Injury Prevention Strategy. In July 2011, FNRIP members will meet to further develop their workplans, activities and strategies to raise the profile of injury prevention nationally, regionally and locally.<br /><br /><strong>Community capacity in injury prevention</strong><br />The First Nations and Inuit Children and Youth Injury Indicators Working Group launched their report on First Nations Injury Prevention Indicators for Children and Youth in March. The report and indicators can be used to measure and evaluate the health of First Nation children, youth and their families in relation to injury prevention.<br /><br />In 2010, the AFN began participation on the British Columbia Injury Research and Prevention Unit&rsquo;s First Nations and Inuit Injury Indicators Working Group in the successful grant application for the &lsquo;Canadian Institutes of Health Research (CIHR) Team in Child and Youth Injury Prevention&rsquo; project. The project will identify and address gaps that will lead to the generation, translation and mobilization of new knowledge for end-users and stakeholders who develop and deliver policy and programs, and advocate for children and youth in Canada. In addition, the AFN participates on the First Nations Canine Management Network, a group developed to share resources, strategies and information among First Nations on managing their community dog populations. <br /><br /><strong>Anticipated Outcomes by the 2012 Annual General Assembly</strong><br /><br />&bull;&nbsp;&nbsp; &nbsp;Implementation of the National Comprehensive Injury Prevention strategy (including development and refinement of AFN&rsquo;s Injury Prevention Business Case, workplan, Handbook, and Press Kit) with direction from FNRIP working group as per Resolution 34/2008 and Resolution 56/2009.<br />&bull;&nbsp;&nbsp; &nbsp;Continued discussions with FNRIP and the Canadian Red Cross (CRC) on next steps from the AFN-CRC community injury prevention needs assessment survey and report.<br />&bull;&nbsp;&nbsp; &nbsp;Development of a collective evidence base on injury prevention, including the collection of community-based stories on successes with injury prevention activities.<br /><br /><strong>H. HIV/AIDS and Sexual Health</strong><br /><br />First Nations are acquiring HIV at a disproportionately higher rate than the general Canadian population; in particular, the rate among First Nation women and young adults (under 30 years of age) are much higher than those observed in Canada. As well, two-thirds of new infections are acquired through injection drug use; a proportion that is two times higher than that seen in Canada overall.<br /><br /><strong>Key Issues and Activities </strong><br /><br /><strong>Raising Awareness </strong><br />The AFN continues to implement the HIV/AIDS and Sexual Health communication plans with a focus on youth-oriented mediums. The AFN NYC finalized seven short videos on sexual health promotion, which are available on the AFN website. In March, the AFN signed on to the Vienna Declaration, an international statement seeking to improve community health, calling for the incorporation of scientific evidence into illicit drug policies. The AFN has co-authored and endorsed a Joint Policy Statement, &ldquo;Sexual and Reproductive Health, Rights, Realities, and Access to Services for Aboriginal People in Canada&rdquo;, which will be published in the Journal of Obstetrics and Gynaecology Canada in June 2011. <br /><br /><strong>Research and Policy Analysis </strong><br />The AFN continues to foster a partnership with the Society of Obstetricians and Gynaecologists of Canada (SOGC) and will enter into a Statement of Partnership at the 2011 AFN Annual General Assembly. The AFN is a partner on the Native Youth Sexual Health Network&rsquo;s project, entitled &ldquo;Taking Action II: Using Arts-Based Approaches to Foster Aboriginal Youth Leadership in HIV Prevention&rdquo; for 2011-2012. In addition, the AFN is participating on the Canadian Aboriginal AIDS Network&rsquo;s (CAAN) National Toolkit Committee to identify, collect and evaluate resources, materials and research on HIV/AIDS and Aboriginal people.<br /><br /><strong>Anticipated Outcomes by the 2012 Annual General Assembly</strong><br /><br />&bull;&nbsp;&nbsp; &nbsp;Re-establishment of the Young Eagles Challenge with CAAN and the AFN NYC.<br />&bull;&nbsp;&nbsp; &nbsp;Collaborate with the AFN NYC and SOGC on the development of community-based pilot projects on sexual health for First Nations youth.<br />&bull;&nbsp;&nbsp; &nbsp;Development of CAAN&rsquo;s National Toolkit of HIV/AIDS materials. <br />&bull;&nbsp;&nbsp; &nbsp;Implementation of the Taking Action II project to build the capacity of Aboriginal youth leaders to address the issue of HIV/AIDS in their own community.<br /><br /><strong>I. Immunization</strong><br /><br />Vaccines are proven to reduce the burden of disease, many of them potentially fatal, during childhood and adulthood, thus, improving life and health quality and representing one of the most cost-effective preventable public health interventions.<br /><br /><strong>Key Issues and Activities </strong><br /><br />Active collaboration with FNIHB and PHAC has allowed for the identification of data and program gaps. Data flow and analysis has proven inadequate to draw a clear picture of the immunization status of First Nations. <br /><br />The AFN continues working with FNIHB in the development and implementation of a social marketing campaign aimed at young parents and decision makers promoting the importance of immunization. This initiative is strongly based on the use of social media and electronic distribution channels such as Facebook, YouTube and Twitter, as well as printed materials and DVDs.<br /><br /><strong>Anticipated Outcomes by the 2012 Annual General Assembly</strong><br /><br />&bull;&nbsp;&nbsp; &nbsp;Information gathering on the immunization status of First Nation communities per region will be completed. <br />&bull;&nbsp;&nbsp; &nbsp;National Immunization Status Scan proposal will be submitted to FNIHB.<br /><br /><strong>J. Diabetes</strong><br /><br />The Aboriginal Diabetes Initiative (ADI) works to reduce type 2 diabetes by supporting health promotion and disease prevention activities and services delivered by trained community diabetes workers and health service providers. In 2010, the federal budget included a commitment of $275 million over five years for the ADI to sustain initiatives in First Nation and Inuit communities for children, youth, parents and families; the development of community-led food security plans to improve access to healthy foods, including traditional foods; diabetes prevention in pre-pregnancy and pregnancy; and enhanced training for home and community care nurses on clinical practice guidelines and chronic disease management. <br /><br />The First Nations Diabetes Working Group (FNDWG), with regionally-appointed First Nation representatives, provides ongoing support and guidance to the ADI, as well as other related diabetes initiatives and AFN activities.<br /><br /><strong>Key Issues and Activities</strong><br /><br /><strong>Life-Giving Medicine Wheel Workshop</strong><br />The FNDWG Life-Giving Medicine Wheel workshop and video is a tool in self-care management and also works to increase awareness and knowledge of diabetes during a women&rsquo;s gestational/prenatal period. The AFN continues to advocate for funding to assist in translating the Life-Giving Medicine Wheel video to ensure circulation to First Nation communities. <br /><br /><strong>AFN Fitness Challenge - Just Move It</strong><br />Since the successful completion of the 2nd annual AFN Fitness Challenge in 2009, the AFN diabetes file has been in discussion with the ADI to take the AFN Fitness Challenge to the next level. Subsequently, discussions have been underway with FNIHB, Inuit Tapiriit Kanatami (ITK) and Indian Health Services - Healthy Native Community Partners in the United States (US) on the potential of expanding the &ldquo;Just Move It&rdquo; initiative across Canada. &ldquo;Just Move It&rdquo; is a national online network running across the US that promotes physical activity through the sharing of American Indian community activities, tools and resources. The Indian Health Services - Healthy Native Community Partners are enthusiastic about creating an international network and extending this opportunity to First Nation and Inuit communities in Canada. <br /><br /><strong>Traditional Knowledge and Natural Law Approaches</strong><br />The AFN continues to explore Traditional Knowledge and Natural Law approaches in strengthening the social determinants of health and the goal of restoring sustainable First Nation communities. The AFN led a session at the National Aboriginal Diabetes Association&rsquo;s (NADA) 6th National Conference on Diabetes and Aboriginal Peoples. The AFN and the Global Country of World Peace and Global Mother Divine Organization&nbsp; presented on the topic of &ldquo;Indigenous Knowledge for Natural Health and Well Being &ndash; First Nations as Custodians of Natural Law and Restoring Healthy, Sustainable First Nations Communities&rdquo; in follow up to the November 2010, Canadian Conference on Global Health. The FNDWG members continue to restore knowledge in harvesting traditional medicines/foods as well as exploring traditional meditation as a potential tool for regulating diabetes and techniques to facilitate chronic stress reduction in First Nation communities. <br /><br /><strong>Family Action Plan</strong><br />The AFN is exploring collaborations with the First Nations of Quebec and Labrador Health and Social Services Commission (FNQLHSSC) and the University of Laval in efforts to build on the FNDWG&rsquo;s &ldquo;Women as Agents of Change &ndash; Family Action Plan&rdquo; to address the diabetes and obesity epidemic in First Nation communities. The FNQLHSSC has developed &ldquo;Empowering Words of First Nations Women &ndash; Family Resource Guide&rdquo; and Train-the-Trainer manual/ promising practices to increase awareness and knowledge on diabetes and other health-related concerns. To facilitate dialogue and direction on the story of diabetes and men in First Nations communities, the AFN is developing a survey on &ldquo;What is the Diabetes Story for Men?&rdquo; to strengthen the development of a Family Action Plan. <br />&nbsp;<br /><strong>Anticipated Outcomes by the 2012 Annual General Assembly </strong><br /><br />&bull;&nbsp;&nbsp; &nbsp;The FNDWG will continue to support the Diabetes Life-giving Medicine Wheel Walk developments and video presentations at varying forums. <br />&bull;&nbsp;&nbsp; &nbsp;Continue to explore the development of the &ldquo;Just Move It&rdquo; international online initiative in Canada for First Nation and Inuit communities, with a potential to launch in 2011, including the development of a partnership agreement with Healthy Native Community Partners and the ITK. <br />&bull;&nbsp;&nbsp; &nbsp;The FNDWG members continue to explore traditional meditation as a potential technique for regulating diabetes and tools to facilitate stress reduction in First Nation communities. <br /><br /><strong>K. Health Literacy</strong><br /><br />Health Literacy is a concept or idea that is predicated on the premise that both health and literacy impact an individual&rsquo;s health and well-being. In Canada, Health Literacy is understood to be a concept, process, outcome and public health goal with potential to impact areas such as disease prevention, health education and promotion, surveillance, and the delivery and access to health care. Social Determinants of Health (SDOH) include Literacy as a determinant of health and is incorporated in the SDOH Framework and the AFN Public Health Framework.<br /><br />Health Literacy is defined as: &ldquo;The ability to access, understand, evaluate, and communicate information as a way to promote, maintain and improve health in a variety of settings across the life-course.&rdquo;<br /><br /><strong>Key Issues and Activities</strong><br /><br />The AFN, along with a number of other national government and non-government organizations, have begun discussions to establish a National Health Literacy Council of Canada. The Council will be comprised of member organizations that are national in scope and cut across all sectors including health, education, civil society, and social justice. The AFN will co-chair the Council in partnership with PHAC. The goal of the Council is to promote awareness and understanding of health literacy, engage with key partners who have a role to play in health literacy, inform policy and promote coherence across all sectors related to health literacy, and mobilize coherent action by many players and sectors across all levels.<br /><br /><strong>Anticipated Outcomes by the 2012 Annual General Assembly</strong><br />&bull;&nbsp;&nbsp; &nbsp;Ratified Terms of Reference.<br />&bull;&nbsp;&nbsp; &nbsp;Establish workplan and critical path.<br /><br /><strong>3. MENTAL WELLNESS</strong><br /><br />The MHCC is well underway with the development of their National Mental Health Strategy for all Canadians. The MHCC continues to take both a pan-Canadian and pan-Aboriginal approach to strategy development, but has been working closely with the AFN to develop a First Nations specific stream that will fall within one of the five strategic directions of the strategy. The MHCC hopes to launch the National Mental Health Strategy in the spring of 2012.</p>
+<p><strong>Key Issues and Activities</strong></p>
+<p><strong>A. Mental Health and Wellness</strong></p>
+<p>The Mental Health Commission of Canada (MHCC) is well underway with the development of their National Mental Health Strategy for all Canadians. The MHCC continues to take both a pan-Canadian and pan-Aboriginal approach to strategy development, but has been working closely with the AFN to develop a First Nations specific stream that will fall within one of the six strategic directions of the strategy. The MHCC hopes to launch the National Mental Health Strategy in the spring of 2012.</p>
+<p><strong>B. Suicide Prevention</strong><br /><br />As a part of upstream renewals, the National Aboriginal Youth Suicide Prevention Strategy (NAYSPS) was renewed at par for an additional five years. AFN efforts have now focused on advocating for evaluation summation that reports findings, supports increases and enhancement past 2015 promotes mental wellness, community empowerment and youth leadership at the community level. <br /><br /><strong>Key Issues and Activities </strong><br /><br />In 2008, the AFN National Youth Council (AFN NYC) finalized a Youth Leadership Development Initiative entitled, &ldquo;CEPS: Cultural, Economic, Political and Social Youth Leadership Development Curriculum&rdquo; that has been without a printing and dissemination plan. As a result, the AFN has re-engaged the AFN NYC and is currently working with them to produce an implementation guide and strategy for community-based dissemination later in the fiscal year.<br /><br />In addition, over the past year, the AFN has been working with Health Canada to develop the contents of a First Nations specific suicide prevention tool-kit for frontline workers. The tool-kit includes:<br />&bull;&nbsp;&nbsp; &nbsp;Eleven fact sheets on different aspects of suicide: <br />o&nbsp;&nbsp; &nbsp;Suicide and colonization&mdash;how history, politics and society have contributed to making First Nations more vulnerable to suicide<br />o&nbsp;&nbsp; &nbsp;Factors that protect youth from suicide, and the importance of engaging them<br />o&nbsp;&nbsp; &nbsp;Risk factors and common warning signs for suicide<br />o&nbsp;&nbsp; &nbsp;How youth seek help<br />o&nbsp;&nbsp; &nbsp;The stigma linked with suicide, and the importance of talking about the issue<br />o&nbsp;&nbsp; &nbsp;How to help someone at risk of suicide in your community<br />o&nbsp;&nbsp; &nbsp;Self-care and its importance for frontline workers<br />o&nbsp;&nbsp; &nbsp;Media guidelines for reports on suicide<br />o&nbsp;&nbsp; &nbsp;The myths on suicide and the facts that disprove them<br />&bull;&nbsp;&nbsp; &nbsp;Posters<br />&bull;&nbsp;&nbsp; &nbsp;Presentation and contact cards<br />&bull;&nbsp;&nbsp; &nbsp;Full tool-kit on CD<br />&bull;&nbsp;&nbsp; &nbsp;Evaluation forms<br /><br />The tool-kit has been validated and is currently with Health Canada for publication and dissemination. <br /><br /><strong>Anticipated Outcomes by the 2012 Annual General Assembly</strong><br /><br />&bull;&nbsp;&nbsp; &nbsp;Launch and national dissemination of the CEPS Youth Leadership Development Curriculum.<br />&bull;&nbsp;&nbsp; &nbsp;Launch of the NAYSPS Suicide Prevention Tool-kit for Frontline Workers.<br />&bull;&nbsp;&nbsp; &nbsp;AFN to host, in partnership with FNIHB, a National Youth Forum focused on community empowerment and youth leadership. <br />&bull;&nbsp;&nbsp; &nbsp;AFN to produce a story book that promotes community-based mental wellness projects and initiatives. Stories, artwork and photography submitted by Aboriginal youth will be showcased throughout the book. <br /><br /><strong>C. Addictions</strong><br /><br /><strong>Key Issues and Activities </strong><br /><br />In partnership with the National Native Addictions Partnership Foundation (NNAPF) and Health Canada (HC), the AFN continues to be a key partner in the NNADAP Renewal Process. The NNADAP Renewal Process has been unique in taking an approach to developing a renewed program framework that is informed by culture, evidence and needs. The renewed program framework is currently at the final approval stages and awaiting printing. The renewed program framework will be unique in taking a systematic approach to supporting First Nations in addressing addictions prevention and treatment needs. The framework will be launched at the July 2011 Annual General Assembly and presented to Chiefs-in-Assembly for final ratification. <br /><br />The AFN continues to work in partnership with NNAPF and HC on the NNADAP Renewal Leadership Team. The Leadership Team is responsible for advising on the transition and change management from renewal through to implementation. <br /><br />Prescription drug abuse (PDA) is an increasing concern for First Nation communities and the mental wellness portfolio will address this issue through data-reviews and advocating for further research and policy development regarding PDA. <br /><br /><strong>Anticipated Outcomes by the 2012 Annual General Assembly</strong><br /><br />&bull;&nbsp;&nbsp; &nbsp;Ratification of the final version of the NNADAP Renewed Program Framework at the AFN AGA in July 2011.<br />&bull;&nbsp;&nbsp; &nbsp;Ongoing presentation of the NNADAP Renewed Program Framework to First Nation communities, professionals and associations working with First Nations in the area of addictions. <br /><br /><strong>D. Mental Health Supports for Indian Residential School Survivors</strong><br /><br />The AFN has advocated for thorough provision of mental health supports for survivors, their families and communities throughout all components of the Indian Residential Schools Settlement Agreement. <br /><br /><strong>Key Issues and Activities </strong><br /><br />In 2009, the Truth and Reconciliation Commission (TRC) said Health Canada (HC) would provide mental health support at TRC National and Community Events. As a result, the AFN has focused on advising HC on the provision of mental health supports and planning for safe spaces through participation on a Resolution Health Supports Advisory Committee (RHSAC), participation at the regional level through Regional Implementation Working Groups and a direct working relationship with the Mental Health and Addictions health support planning team. Through participation on these working groups and strong relationships with FNIHB, the AFN has also been directly advising Mental Health and Addictions Directorate (MHAD) on various components of the Indian Residential School Resolution Health Support Program and TRC event planning.<br /><br />In June 2010, the first National Truth and Reconciliation event took place in Winnipeg, Manitoba. The AFN was present for the two-day training leading up to the event, the four-day event and an additional day afterwards to partake in debriefing and assessment of the overall event. The AFN provided support to Health Canada and TRC workers throughout the event and has been working with each group closely as the Inuvik and Atlantic TRC events draw near. <br /><br />In addition, the AFN has been exploring ways to work with the National Native Addictions Partnership Foundation (NNAPF) to hold regional dialogue sessions with stakeholders and key partners to help identify gaps in health support services with regards to the IRS process and TRC Community and National Events. It will also help to identify needs/gaps emerging with the sunset of the IRS RHSP in 2015. <br /><br />Anticipated Outcomes by the 2012 Annual General Assembly<br />&bull;&nbsp;&nbsp; &nbsp;Partnership with NNAPF to hold regional dialogue sessions with stakeholders and key partners to identify gaps in health support services with regards to the IRS process and TRC Community and National Events.<br />&bull;&nbsp;&nbsp; &nbsp;Continued operations of an Advisory Committee tasked with advising HC on thorough mental health support planning for TRC truth and reconciliation activities.<br /><br /><strong>E. Tobacco</strong><br /><br />Through the Federal Tobacco Control Strategy (FTCS), the AFN received funding to develop a National First Nations Tobacco Control Strategy, host two national tobacco forums, re-engage a National First Nations Tobacco Control Network and conduct knowledge development and transfer activities. <br />&nbsp;<br /><strong>Key Issues and Activities </strong><br />&nbsp;<br />The AFN has re-engaged a national tobacco network and the AFN Tobacco Action Circle (TAC), which advises the AFN on federal and national tobacco control initiatives. The AFN TAC has guided the development of an Action Plan to Develop a First Nations Tobacco Control Strategy. The strategy will be informed by existing and new culturally competent evidence, community-based promising practices, and community/regional feedback.<br />&nbsp;<br />The two forums focused on sharing successes, best practices, producing recommendations in the area of integrating smoking cessation and prevention messaging into existing tobacco programs as well as&nbsp; collecting feedback on the draft Action Plan to create a National First Nations Tobacco Control Strategy.<br />&nbsp;<br /><strong>Anticipated Outcomes by the 2012 Annual General Assembly</strong><br />&nbsp;<br />&bull;&nbsp;&nbsp; &nbsp;Host knowledge exchange activities on tobacco control, cessation, and prevention in collaboration with AFN Councils (Women, Elders, Veterans and Youth) and continue promotion efforts to support traditional tobacco use as a smoking cessation and tobacco control tool.<br />&bull;&nbsp;&nbsp; &nbsp;Review and inclusion of key findings from an environmental scan on community-based tobacco control, prevention, cessation, and re-investment initiative into the Action Plan.<br />&bull;&nbsp;&nbsp; &nbsp;Regional review of draft Action Plan to create a National First Nations Tobacco Control Strategy.<br />&bull;&nbsp;&nbsp; &nbsp;Ongoing national distribution of the updated youth information booklet &ldquo;Keep it Sacred: Don&rsquo;t Misuse Tobacco&rdquo;. <br /><br /><strong>4. CHILDREN AND YOUTH</strong><br /><br />The newly formed Children and Youth Team continues to advocate for increased culturally-appropriate prevention and intervention strategies and programming that will lead to improved outcomes for First Nation children and youth. <br /><br /><strong>Key Issues and Activities </strong><br /><br /><strong>Childhood Obesity</strong><br />With RHS data demonstrating an alarming increase in childhood obesity rates since the 2002/03 report, the AFN has made addressing the childhood obesity epidemic a priority. The AFN is conducting and update of a 2006 report entitled, &ldquo;Protecting Our Gifts and Securing Our Future:&nbsp; First Nations Children and Obesity:&nbsp; A Growing Epidemic&rdquo;.&nbsp; &nbsp;<br /><br /><strong>Children&rsquo;s Nutrition</strong><br />The AFN continues to raise awareness of the need for a universal school nutrition program and promote organizations such as ONEXONE and their National First Nations Breakfast Program. <br /><br /><strong>Aboriginal Head Start</strong><br />The AFN formed a community-based working group that reviewed the Aboriginal Head Start On Reserve (AHSOR) Principles and Guidelines and Early Childhood Development (ECD) Operations Guide in order to ensure that these two Health Canada resources were adaptable and suitable for First Nation communities. <br /><br /><strong>Maternal Child Health</strong><br />In the area of Maternal Child Health (MCH), the AFN continues to examine the complex issues of infant attachment and bonding especially as it relates to the intergenerational impacts of the residential school experience. Sudden Infant Death Syndrome (SIDS) rates continue to be higher in First Nation communities than in the mainstream population, so AFN and Health Canada will be examining culturally-appropriate ways that this issue can be addressed at the community level. <br /><br /><strong>Fetal Alcohol Spectrum Disorder</strong><br />In the area of Fetal Alcohol Spectrum Disorder (FASD), the AFN Youth Council met in March to discuss FASD awareness and intervention. The Council continues to work towards achieving their goals of the Five-Year Action Plan to address FASD. <br /><br /><strong>Partnerships</strong><br />Working in partnership with other non-governmental organizations such as the Canadian Paediatric Society (CPS) and the Canadian Association of Speech-Language Pathologists and Audiologists ensures that the issues that affect First Nations children remain a priority with the federal government. In March, the AFN was part of the planning committee and attended CPS&rsquo;s 4th International Meeting on Indigenous Children&rsquo;s Health in Vancouver, B.C. <br /><br /><strong>Anticipated Outcomes by the 2012 Annual General Assembly</strong><br /><br />&bull;&nbsp;&nbsp; &nbsp;Phase II of the Childhood Obesity report will include greater community engagement to widen the circle of key informants to share their lived experiences with issues surrounding childhood obesity and to identify key issues and best practices. <br />&bull;&nbsp;&nbsp; &nbsp;A&nbsp; Child and Youth Tobacco Framework to feed into the Action Plan to Develop a First Nations Tobacco Control Strategy will be developed.<br />&bull;&nbsp;&nbsp; &nbsp;Increased partnerships with high profile organizations such as UNICEF and ONEXONE and other non-governmental organizations to ensure increased advocacy for the improved health of First Nation children and youth.<br />&bull;&nbsp;&nbsp; &nbsp;Launch of a Youth FASD Awareness campaign to be targeted for the September 9, 2011 (National FASD Awareness Day).<br />&bull;&nbsp;&nbsp; &nbsp;Address the issue of parenting, increased father involvement and the role of the family.<br />&bull;&nbsp;&nbsp; &nbsp;Increased attention to the lack of youth-specific health programming especially as it relates to mental health and sexual health.<br /><br /><strong>5. INFORMATION MANAGEMENT - eHealth</strong><br /><br />As eHealth becomes incorporated within the Canadian healthcare system, First Nations have been making strides in ensuring that they are part of this health care revolution. For example efforts are underway with Canada Health Infoway to include First Nations within their &ldquo;eHealth Blueprint&rdquo;. Work is also ongoing with Health Canada to identify requirements for the inter-operability of eHealth and the sharing of eHealth data across jurisdictions. &nbsp;<br /><br />Another priority this year has been to engage the regions. In addition to site visits across the country, the AFN hosted a National eHealth Policy Forum to bring First Nations, federal and provincial eHealth stakeholders to the table to highlight eHealth policy requirements. To further ensure that the regions are engaged and supported, a national body of First Nations eHealth representatives has been established. The main priorities of the National eHealth Advisory Committee (NeHAC) is to draft a &ldquo;First Nation eHealth Framework&rdquo; as well as a &ldquo;First Nation eHealth Information Governance Position&rdquo;.<br /><br /><strong>Key Issues and Activities </strong><br /><br /><strong>National Strategic eHealth Policy Forum</strong><br />The National Strategic eHealth Policy Forum outcomes report indicated eight key policy directions for eHealth. A key finding from the report is the recommendation to coordinate a national body of First Nations eHealth leads. As a result, the National eHealth Advisory Committee (NeHAC) was formed. With eHealth representatives from each region, NeHAC is tasked with implementing the recommendations from the eHealth Policy Forum.<br /><br /><strong>Canada Health Infoway (Infoway)</strong><br />NeHAC is currently working on a First Nations eHealth Framework that aligns with the Infoway eHealth Blueprint. In addition, the AFN has written a letter of support to Infoway to support funding for Client Registry Phase 2 project for the Kenora Chief&rsquo;s Advisory. <br /><br /><strong>Health Canada - Health Infostructure Strategic Action Plan (HISAP)</strong><br />There are currently eHealth Readiness Assessments underway to determine First Nations requirements for eHealth applications in Ontario (Giiwednong, Sioux Lookout), Quebec, Manitoba, Nova Scotia (Membertou), and Saskatchewan (Fort Qu&rsquo;appelle). Further work is required to ensure that future HISAP projects are First Nations driven and based on First Nations community priorities.<br /><br /><strong>Information Governance and Panorama</strong><br />The AFN is currently developing First Nations eHealth Governance Framework to support integration of FN eHealth Projects with First Nations.<br /><br /><strong>Anticipated Outcomes by the 2012 Annual General Assembly</strong><br /><br />&bull;&nbsp;&nbsp; &nbsp;Endorse &ldquo;First Nations eHealth Framework&rdquo; that aligns with Canada Health Infoway eHealth blueprint.<br />&bull;&nbsp;&nbsp; &nbsp;Continue to support the regions to work with the provinces and territories to develop sustainable, inter-operable eHealth applications.<br />&bull;&nbsp;&nbsp; &nbsp;Participate and engage with Health Canada on the implementation of HISAP.<br />&bull;&nbsp;&nbsp; &nbsp;Develop &ldquo;First Nations eHealth Governance Position&rdquo; for ratification by NFNHTN and Chiefs. <br />&bull;&nbsp;&nbsp; &nbsp;Ongoing NeHAC meetings to facilitate implementation of eHealth Strategic Planning Forum recommendations.<br />&bull;&nbsp;&nbsp; &nbsp;Coordination of &ldquo;Convergence Forum&rdquo; in the fall of 2011 to support trilateral partnerships between Health Canada, Provinces/Territories, with the support of Infoway and Canada&rsquo;s Health Informatics Association (COACH).<br />&bull;&nbsp;&nbsp; &nbsp;Continue to develop and utilize the NeHAC Web Portal to facilitate communications and information exchange between the National e-Health Advisory Committee.<br />&bull;&nbsp;&nbsp; &nbsp;Engage the regions to identify e-Health requirements and develop informatics expertise. <br />&bull;&nbsp;&nbsp; &nbsp;Develop communication tools such as portals to support regions in e-Health development.<br /><br /><strong>6. PRIMARY CARE / HEALTH BENEFITS</strong><br /><br /><strong>A.&nbsp;&nbsp; &nbsp;Non-Insured Health Benefits (NIHB)</strong><br /><br />The national NIHB Program provides coverage to registered First Nations and recognized Inuit to support them in reaching an overall health status that is at least comparable with other Canadians. Benefits under NIHB include eye and vision care, dental, medical transportation, drugs, medical supplies and equipment, crisis mental health counseling, and approved health services outside of Canada. <br /><br />Resolution&nbsp; 30/2010 passed at the 2010 Annual General Assembly directs the AFN to request that the Minister of Health terminate the contract between Brogan (an international pharmaceutical data company) and FNIHB which shares data from NIHB. In December 2010, a letter addressed to the Minister of Health requesting termination of the contract between Brogan and NIHB was issued and the AFN is waiting for a response from the Minister&rsquo;s office. <br /><br />Resolution 76/2010 directs the AFN to seek a Senate Order of Reference to study the NIHB Program. The letter to the Senate has been issued and the AFN is looking forward to a favorable response. <br /><br />The AFN is seeking sustainable funding to address population growth and increasing costs to the NIHB Program. <br /><br /><strong>Key Issues and Activities </strong><br /><br /><strong>Population Growth and Program Funding Shortfall: &nbsp;</strong><br /><br />A large driver in this increase will be the addition of new beneficiaries to the NIHB Program. The Federal Budget will need to consider estimates of approximately 50,000 new Status Indians as a result of the McIvor case and another 27,000 Qalipu Mi&rsquo;kmaq First Nations from Newfoundland who were recently recognized under the Indian Act. This amounts to a 9.7% increase in the NIHB Program eligible population growth. In addition, the AFN has estimated that increases of 6.3% to 9.3% are required in various benefit areas when growth of the existing client population, inflation, changes in health service utilization and health status, and effects of technological change are examined. <br /><br />During the past 15 years, NIHB has been actively implementing cost containment measures, or barriers to accessing NIHB health care, which present a significant risk to maintaining patient safety. With over 30% of our communities located more than 90 kilometers from a physician, it is common for First Nations to travel long distances to receive basic health care, including dental services, dialysis, mammography, chemotherapy and mental health. <br /><br />With the stressors on dental, pharmacy, transportation, medical supplies, equipment, mental health services, and no additional funding or a resolution to the population increase, First Nation children, adults, and elders will face an uphill battle and possible crisis for accessing basic health care needs and benefits. <br /><br /><strong>Dental Care </strong><br />The NIHB Program will be implementing some changes to the dental fee structure for 2011. Fees for most dental procedures will increase by the Canadian Price Index (CPI + 0.5%) and fees for select preventive services will be set a 100% of the 2010 provincial fee guides. &nbsp;<br /><br />The NIHB initiated a nationwide two-year Endodontic Trial Project (Root Canals) as of April 1, 2011 to assess the merits, feasibility and the appropriateness of removing the pre-determination requirement for standard root canals treatment on posterior teeth (bicuspids and first molars). <br /><br /><strong>Vision Care &nbsp;</strong><br />In the 2009/2010, NIHB undertook a review of the Vision Care Policy and the AFN identified gaps in coverage. The AFN worked with the Vision Institute of Canada and the Canadian National Institute for the Blind (CNIB) to provide recommendations for improving access and vision benefit coverage to NIHB Vision Care Program which will be considered before roll-out of Health Canada&rsquo;s new Vision Care Framework. NIHB is also streamlining processes to improve efficiency and client access, and encouraging the CNIB to register with the NIHB claims processer to facilitate claims payments.<br /><br /><strong>Medical Supplies and Equipment &nbsp;</strong><br />The AFN is advocating for the streamlining of prior approval requirements for Prosthetics and Orthotics and accepting prescriptions from General Practitioners. <br /><br /><strong>NIHB Client Handbook</strong><br />The joint AFN/NIHB client handbook is scheduled to be printed in early July and copies will be mailed to each First Nation community. <br /><br /><strong>NIHB Navigators</strong><br />The AFN is currently working on developing a national database and template for navigators to store data on NIHB access issues. This will enable AFN and the regions to compile reports and build a case to advocate for change, make improvements to the NIHB program, and reduce hardship on First Nations trying to access the program. Regions that currently don&rsquo;t have navigators in place are the NWT, Yukon and Manitoba. <br /><br /><strong>Anticipated Outcomes by the 2012 Annual General Assembly</strong><br /><br />&bull;&nbsp;&nbsp; &nbsp;Continue to advocate for increased and sustainable NIHB Program funding.<br />&bull;&nbsp;&nbsp; &nbsp;Reduced policy restrictions to the NIHB Dental Program and improved access to benefits. <br />&bull;&nbsp;&nbsp; &nbsp;Continue to advocate for NIHB Navigators in each region/territory. <br />&bull;&nbsp;&nbsp; &nbsp;Presentation to the NIHB Presentation to the Standing Committee on Health. <br /><br /><strong>B. Home and Community Care (HCC)</strong><br /><br />The First Nations and Inuit Home and Community Care Program (FNIHCC) was established to assist individuals who suffer from chronic and acute illnesses to receive treatment in their homes. This in home care enables the person to receive the required care in familiar surroundings and for the person requiring the care to be close to family, friends and community as long as possible to maintain some of their independence. <br /><br />HCC care can include nursing care services such as personal care like bathing and foot care, home support meal preparation, and in-home respite care. FNIHCC includes the authority for additional support as required. These additional services can be accessed and obtained if there is sufficient funding in place for palliative care and rehabilitation services. <br /><br />Each is assessed on a case by case basis dependent on the availability of funding, however, funding for these cases and services is not always available or accessible. <br /><br /><strong>Key Issues and Activities</strong><br /><br />The AFN Health Secretariat and First Nation Partners of the HCC Committee work very closely and continue to seek support from FNIHB to continually address the many in-home care issues and follow up on the recommendations made by First Nation nurses, who play a very vital role in the delivery of the program at the community level.<br /><br />Some of the key concerns and issues identified with First Nation health systems is the inability to offer competitive salaries due to funding. <br /><br />First Nation nurses, as an example, are compensated much less than their non-First Nation counterparts working off reserve. First Nation communities have a very difficult time competing with other governments and their lack of resources has very often hampered the recruitment and retention of health care service providers. Wage parity remains a long standing cause for concern and major issue within HCC. <br /><br />Most often First Nation HCC nurses are not able to provide the same quality and level of care to patients. In addition, many First Nation HCC nurses do not have access to the same training opportunities as provincial nurses. Funding levels remain a key cause for concern for retention of existing nurses.<br /><br />Resources and funding levels have not increased in HCC since 1999. This lack of funding has created a serious shortfall and does not allow communities to keep up with current demands and challenges. The AFN continues to advocate for increases in these funding levels.<br /><br />A consideration and proposal currently being discussed at the federal level was the possible integration of the HC&rsquo;s HCC program with Indian and Northern Affairs Canada&rsquo;s Assisted Living (AL) Program.<br /><br />The Joint Working Group on Continuing Care (CC) finalized a Policy Options Analysis Paper in 2008 which provides a comparative analysis of three options outlined to identify the need for an increase in funding and CC services such as increased home care services, palliative care, supportive housing options, and accessible long-term care facilities either on reserve or within close proximity.<br /><br />Discussions on integration of the two programs have taken place over the past year. One of the main concerns which needs to be clearly addressed is the critical need for a substantial increase to the program&rsquo;s funding levels. Integration will place additional burden of reporting on First Nation HCC nurses. <br /><br />Many HCC nurses already must travel long distances and work much longer hours to ensure client/patient care, very often in dangerous and difficult conditions. Most First Nation communities are struggling to support the current level of service provided by health units. Recruitment issues have further complicated matters and will become a greater cause for concern.<br /><br /><strong>Quality Improvement</strong><br /><br />The Quality Improvement Working Group (QWG), established in October 2006, continues to strive for the enhancement of quality in HCC service delivery. Currently, the QWG is assisting in the development of a Quality &amp; Risk Management Improvement Guide, which is being piloted in eight communities. The Guide&rsquo;s purpose is to build capacity for Quality Improvement within First Nation and Inuit communities.<br /><br />The AFN participated in the review of the Study Three &ldquo;Final Evaluation&rdquo; which is a summary or &ldquo;wrap-up&rdquo; study that will include HCC Studies One and Two and other home care research. <br /><br /><strong>Phase 4 of the Home and Community Care Project</strong><br /><br />Work has recently been completed and presented to the First Nation HCC partners working group. The &ldquo;Creating a Healthy Work Place&rdquo; manual will highlight the importance of creating a healthy work environment for nurses in First Nation communities. This phase, lead by the AFN, entailed four documents which looked at the challenges First Nation nurses face working in First Nation communities and recommendations that can be made towards improving these conditions.<br /><br />This project is in collaboration with FNIHB and will also underline the growing demands for services and emerging concerns/priorities for health care workers. The final draft has now been completed and will form part of the Healthy Workplace manual. This work was guided by the regional HCC partners who were involved in the process from the outset, and was presented at the recent First Nation partners meeting.<br /><br /><strong>Anticipated Outcomes by the 2012 Annual General Assembly </strong><br /><br />&bull;&nbsp;&nbsp; &nbsp;Continued examination of proposals to potentially merge the INAC Assisted Living program and the Health Canada HCC program, which has generated concerns from First Nation partners.<br />&bull;&nbsp;&nbsp; &nbsp;Translation, dissemination and delivery of the &ldquo;Creating a Healthy Work Environment for nurses&rdquo; will be completed. Training/orientation and use of the manual will need to be completed. <br />&bull;&nbsp;&nbsp; &nbsp;Continue to bring forward First Nations Partners&rsquo; HCC concerns to FNIHB senior management and advocate for increased funding levels.<br />&bull;&nbsp;&nbsp; &nbsp;Continue to participate in the National Evaluation Study, QWG, and the Abuse of Older First Nation Seniors, Alzheimer&rsquo;s, Palliative care committees in order to better respond to questions and concerns raised by communities.<br /><br /><strong>C. Continuing Care (CC)</strong><br /><br />The Joint Working Group (JWG) on CC finalized a Policy Options Analysis Paper in August 2008, which provides a comparative analysis of three options identified to address the need for improvements in funds and continuing care services, such as increased home care services, palliative care, supportive housing options, and accessible long-term care facilities either on reserve or within close proximity.<br /><br />As part of the improvements it was recommended that the in home care services funded by INAC be transferred to Health Canada (HC) for integration with the FNIHCC. <br /><br />A Costing Study was completed, which provides the estimated costs for all proposed improvements to continuing care, including enhancements to HCC, supportive housing, facility-based care, and palliative care. <br /><br />The final costing report was presented to the JWG in 2008. The JWG confirmed their support for the integration and expansion of federal program components, particularly to increase higher levels of care to meet the needs of First Nations living in or in close proximity to their communities. <br /><br />The JWG also strongly recommended increased political support and promotion by First Nation leadership to bring focus to this important issue as it moves through the federal government policy development and approval process. <br /><br />The final Options Analysis Paper was scheduled to be presented to the CCOH in April 2010. The report will be used by HC and INAC to generate discussions at various levels of government to determine how to address the need for improvements to continuing care services. Research and various reports confirm that the status quo is not an option. Current programs and policy framework has no capacity to meet changing needs and growth of the population. <br /><br />It is critical to close the gaps between existing continuing care services accessible to First Nations and those accessible to the general Canadian population. <br /><br />One major program change that is being recommended by both the AL Program Evaluation (2007-08) and the CC Policy Options Analysis Paper is the proposed transfer of authority and funding for the &ldquo;in-home care component&rdquo; of the AL program to HC to be integrated with the FNIHCC Program. This aligns with the ongoing work to develop a seamless continuum of care and will require further discussions and coordination between INAC and HC. <br /><br /><strong>Key Issues and Activities</strong><br /><br />The AFN has stressed the need to ensure First Nations input before the departments proceed with integration. Both HC and INAC have indicated that many steps need to be taken before integration could occur and agreed that First Nations would be engaged prior to any action on integration. However, there have been extensive discussions between the two federal departments (HC-INAC) with no First Nation involvement. Neither the AFN nor First Nation regional representatives have been included in these discussions.<br /><br />Prior to the call for a federal election, briefings of Ministers were to have taken place. The election delayed these briefings.<br /><br />The existing home care programs (FNIHCC and AL) face major sustainability issues due to limited funding and additional reporting requirements with the merger which is currently moving forward without First Nation involvement.<br /><br />The CC Research report indicates that HC and INAC need to increase current allocations for HCC by 90% plus another 50% over the next five years due to population growth, inflation, and costs related to increases in acuity. <br /><br />These issues are briefly mentioned in the Policy Options Analysis Paper but the paper does not include any recommendations to address sustainability because this issue was outside the scope of the CC initiative. Both HC and INAC agreed to continue to work with their respective First Nation working groups to develop a process to address the sustainability issues for the existing programs. <br /><br /><strong>Anticipated Outcomes by the 2012 Annual General Assembly</strong><br /><br />&bull;&nbsp;&nbsp; &nbsp;Brief relevant Ministers as to the implications of changes and the necessity for First Nation input and involvement. <br />&bull;&nbsp;&nbsp; &nbsp;Continue to advocate for the increase in funding levels and seek federal government support, as outlined in the CC Options and Analysis Paper, for improvements to CC services.<br />&bull;&nbsp;&nbsp; &nbsp;Have input into the discussions and decisions currently underway and move forward on the proposed integration of the &ldquo;in-home care&rdquo; component of AL and the FNIHCC Program.<br /><br /><strong>7. SOCIAL DEVELOPMENT</strong><br /><br />The AFN Social Development Secretariat follows the mandate provided by the Social Development Policy Framework, which proposes the long-term vision of &ldquo;an inclusive, holistic and culturally-based social development system under First Nation control that builds healthy, safe and sustainable communities&rdquo;. As such, the AFN Social Development Secretariat has the responsibility to work in the areas of First Nations Child Welfare, Income Assistance, National Child Benefit Reinvestment, Family Violence Prevention, and Assisted Living.<br /><br /><strong>Key Issues and Activities</strong><br /><br />The 2010-2011 fiscal year was one of great accomplishment for the Social Development Secretariat. Following a budget cut from Indian and Northern Affairs Canada (INAC) in 2008-2009 and given that no funding had been secured for 2009-2010, the Social Development Secretariat had been for the most part dismantled. As such, work for the 2010-2011 fiscal year did not begin until funding was secured, thus leaving three months to complete 16 deliverables. Despite the delay in receiving the annual funding, a new Social Development team was formed and worked diligently with renewed vigor to achieve its deliverables. <br /><br />The funding received for the 2010-2011 fiscal year was focused on work in the areas of Income Assistance, Family Violence Prevention, Assisted Living, and participation in INAC&rsquo;s Performance Measurement Strategy. <br /><br /><strong>Performance Measurement Strategy</strong><br /><br />The AFN was actively engaged in the development of INAC&rsquo;s Umbrella Performance Measurement Strategy for Social Programs. AFN Social Development regional networks were invited to engage in discussions with INAC counterparts to discuss and provide input on the strategy. This initiative has resulted in an ever-green strategy and the AFN has been promised that its involvement will be a part of the review process throughout the lifecycle of the strategy, including its six-month review cycles.<br /><br /><strong>Income Assistance</strong><br /><br />The INAC Income Assistance Program &ldquo;serves a broad client base including seniors, single parent families, the unemployed, those with physical and mental disabilities, youth at risk and the working poor.&rdquo; While the program has the authority to provide pre-employment assistance programs and other active measures, current funding limitations restrict the scope of the program to providing basic social assistance. Active measures can be defined as the activities, services and supports required by individuals wishing to complete their education and training, and/or attain employment or self-employment. The income assistance program authorities currently include active measures but funding increases have never been secured for their implementation. With that said, First Nations have significantly increased their uptake of available funding for active measures pilot projects in an effort to develop creative approaches to delivering pre-employment services (active measures) in First Nation communities. In addition, there has been a particular emphasis over the past year to focus efforts on breaking the youth cycle of dependence on income assistance.<br /><br />The First Nations Income Assistance Working Group (FNIAWG) was originally formed to develop and implement the Social Development Policy Framework Income Assistance Action Plan. Since its development, other priority areas for discussion and action have ensued, including: regional negotiations and implementation of active measures, a youth strategy for income assistance and breaking the cycle of dependency; special areas of impact from the income assistance program, including shelter allowance and housing, inadequacies surrounding Old Age Security (OAS), Guaranteed Income Supplement (GIS) and Canada Pension Plan (CPP) for First Nation Elders; and information sharing of best practices of active measures to assist regions in developing their own measures and prevention strategies. The renewed funding and federal focus on income assistance facilitated re-establishing the FNIAWG and thus resulted in two meetings since January 2011. The AFN was also able to facilitate the attendance of the FNIAWG at the annual Active Measures Conference, which showcased best practices in active measures across Canada, provided valuable insight into current initiatives and highlighted issues to be incorporated in the FNIAWG&rsquo;s national agenda. The FNIAWG is currently re-establishing national priorities, including the finalizing of a National Resource Guide on Active Measures, a National Compendium of Active Measures Projects, and planning of a National Social Development Learning Event for spring 2012.<br /><br />A large focus within the AFN&rsquo;s work on income assistance has been centered on the need to reduce the growing numbers of youth engaged in the cycle of dependency on income assistance. Much of the work in this area to date has been done in collaboration with the AFN NYC. A one-day dialogue session was held with the NYC to obtain their perspectives on the cycle youth dependency on income assistance. From this forum a video entitled &ldquo;Investing in Social Change for Future Generations&rdquo; was developed, as well as a report on the dialogue session and a toolkit to assist youth in breaking free from income assistance. In addition, the NYC assisted in the development of a mobile information kiosk which was used to showcase and distribute the youth dialogue video at the Gathering our Voices Conference 2011, in Prince Rupert, BC, which welcomed over 1,000 Aboriginal youth delegates.<br /><br />In an effort to meet the needs of First Nations francophone youth, a two-day Francophone Youth Dialogue on Income Assistance was held in Sept-Iles, QC. Unlike the youth who participated in the National Youth Dialogue with the NYC who were mainly students or employed, the participants in the French dialogue session were all active recipients of income assistance. A report from this meeting, as well as a French video &ldquo;Investir dans le changement social pour les futures generations&rdquo;, was developed.<br /><br />An identified priority by the FNIAWG has been the lack of take up and difficulties in accessing benefits of the OAS/GIS/ CPP programs for First Nation Elders and elderly. Valuable feedback was obtained by the AFN Elders Council and the First Nations Veterans Working Group through their participation in a dialogue session with the Social Development team to identify issues and develop a draft set of recommended actions on OAS/GIS/CPP. In addition, the Social Development team also arranged to have an information session provided to the group by Human Resources Skills and Development Canada (HRSDC) on the benefits available and how to obtain easier access to these benefits.<br /><br /><strong>Assisted Living (AL)</strong><br /><br />The vision for the AL program as stated in the Social Development Policy Framework is:&nbsp; &ldquo;To assist individuals, children and families in living as independently as possible for as long as possible and ensure, where possible, in-home and in-community care to allow people to remain within their communities.&rdquo; <br /><br />The AFN has been working with its regional partners to address the transfer of in-home care from INAC&rsquo;s Assisted Living Program to Health Canada&rsquo;s (First Nations and Inuit Health Branch) Home and Community Care (HCC) Program. The Social Development team held a one-day meeting with the HCC Partners (working group) to discuss issues relating to the transfer. The discussion resulted in the development of a list of issues relating to the transfer, as well as a list of proposed solutions to facilitate the transfer and engage First Nations in the process.<br /><br /><strong>Family Violence Prevention</strong><br /><br />Family violence and violence against women continue to be key issues for First Nation women and their families. The AFN&rsquo;s Social Development Secretariat is working to improve the quality of life of First Nation families affected by family violence, and to increase the services and supports available to these families. In an effort to reconnect and rebuild previously existing relationships with stakeholders, the AFN participated in an annual meeting of INAC-funded shelter directors hosted by the National Aboriginal Circle Against Family Violence (NACAFV). From this meeting arose an opportunity for the AFN to play a critical role in facilitating knowledge exchange through the sharing of best practices and providing a mechanism to encourage online discussions between shelter directors and NACAFV via the Social Development Secretariat&rsquo;s newly developed webpage and web portal. The membership-only access web portal was developed for First Nations Shelter Directors to have the opportunity to share information via real time online meetings and discussion boards.<br /><br /><strong>Social Development Webpage/Web Portals</strong><br /><br />The development of a mechanism to share information related to social development between regions and communities has been a priority for some time. As such, a new webpage was developed for the Social Development Secretariat that would house key information, provide links to organizations/community projects (where available) within the regions, and share an events calendar identifying national, regional and community events related to social development. In addition, in an effort to improve communication with regional partners and stakeholders, membership only access portals were developed for the FNIAWG and the First Nation Shelter Directors, so as to have real time online meetings, discussion boards and sharing of information intended for members only.<br /><br /><strong>Anticipated Outcomes by the 2012 Annual General Assembly</strong><br /><br />&bull;&nbsp;&nbsp; &nbsp;First Nations &ndash; INAC Policy Advisory Group (FNIPAG): The FNIPAG will be re-established to ensure that valuable First Nations input is provided into the Umbrella Performance Measurement Strategy to facilitate the development of meaningful culturally-appropriate measurement tools for First Nations. The FNIPAG is essential to providing an overarching coordinated approach to advocating and advancing First Nations social development issues. <br /><br />&bull;&nbsp;&nbsp; &nbsp;Income Assistance: The FNIAWG will continue its work on the Active Measures initiative, the improvements to the Income Assistance program and the region by region negotiations for funding for active measures. In addition, a National Learning Event, organized by the FNIAWG, is planned for spring 2012. Work will also continue with the AFN NYC on developing youth initiatives that work towards breaking the cycle of dependency on income assistance, including finalizing and implementing the Youth Action Plan on Income Assistance. The AFN will also continue its work with HRSDC and other stakeholders to improve the living conditions of First Nation Elders and the elderly through the OAS/GIS/CPP Program. <br /><br />&bull;&nbsp;&nbsp; &nbsp;Assisted Living: The AFN Social Development Secretariat will facilitate the development of a national First Nations Assisted Living Working Group to address salient issues related to Assisted Living, including but not limited: providing feedback and input into the development of a change management strategy, as well as the development of a framework for integration to facilitate seamless transfer of in-home care from the Assisted Living program to the Home and Community Care program.<br /><br />&bull;&nbsp;&nbsp; &nbsp;Family Violence Prevention Program: The AFN Social Development team will continue to work with its partners including; the AFN Women&rsquo;s Council, National Aboriginal Circle Against Family Violence (NACAFV), and the First Nations Shelter Directors to improve the quality of life of First Nation families affected by family violence and increase the services and supports available to these families. <br /><br />&bull;&nbsp;&nbsp; &nbsp;Chiefs Committee on Social Development: The AFN Social Development team is attempting to re-establish the Chiefs Committee on Social Development. Given the current political climate, the AFN believes that it is necessary to have a strong leadership body to advance a national social development agenda, particularly in the areas of child welfare, income assistance and assisted living.<br /><br /><br /></p>
+        </div>
+    </div>
+    <div id="sidebar">
+        
+
+        
+        
+		
+
+             
+                                    <ul class="sub-nav-ul">
+                                
+
+
+
+
+
+
+ 
+   
+    
+                                    <li class="sub-nav-li in-active"><a  href="http://www.afn.ca/index.php/en/policy-areas/health-and-social-secretariat/key-issues-activities/request-for-proposal">Key Issues & Activities</a>
+		    <ul>
+	                
+                 
+        <li>
+                    	<a  href="http://www.afn.ca/index.php/en/policy-areas/health-and-social-secretariat/key-issues-activities/request-for-proposal">Request for Proposal</a>
+                    </li>
+        
+                        </ul>
+            </li>
+                
+    
+
+                
+                                    </ul>
+                                
+                   
+            
+                                    <ul class="sub-nav-ul">
+                                
+
+
+
+
+
+
+ 
+   
+    
+                                    <li class="sub-nav-li in-active"><a  href="http://www.afn.ca/index.php/en/policy-areas/health-and-social-secretariat/resources-updates/health-bulletin-spring-2011">Resources & Updates</a>
+		    <ul>
+	                
+                 
+        <li>
+                    	<a  href="http://www.afn.ca/index.php/en/policy-areas/health-and-social-secretariat/resources-updates/health-bulletin-spring-2011">Health Bulletin Spring 2011</a>
+                    </li>
+        
+                
+    
+   
+    
+                 
+        <li>
+                    	<a  href="http://www.afn.ca/index.php/en/policy-areas/health-and-social-secretariat/resources-updates/afn-national-health-forum-newsletter">National Health Forum - Newsletter</a>
+                    </li>
+        
+                
+    
+   
+    
+                 
+        <li>
+                    	<a  href="http://www.afn.ca/index.php/en/policy-areas/health-and-social-secretariat/resources-updates/afn-national-youth-council-sexual-health-video-series">AFN National Youth Council - Sexual Health Video Series</a>
+                    </li>
+        
+                
+    
+   
+    
+                 
+        <li>
+                    	<a  href="http://www.afn.ca/index.php/en/policy-areas/health-and-social-secretariat/resources-updates/afn-hss-brief-to-the-parliamentary-standing-committee-on-health-hesa-s">AFN-HSS Brief to the Parliamentary Standing Committee on Health (HESA) Study on Health Innovation</a>
+                    </li>
+        
+                        </ul>
+            </li>
+                
+    
+
+                
+                                    </ul>
+                                
+                   
+            
+                                    <ul class="sub-nav-ul">
+                                
+
+
+
+
+
+
+ 
+   
+    
+                                    <li class="sub-nav-li in-active"><a  href="http://www.afn.ca/index.php/en/policy-areas/health-and-social-secretariat/events/national-immunization-social-marketing-campaign">Events</a>
+		    <ul>
+	                
+                 
+        <li>
+                    	<a  href="http://www.afn.ca/index.php/en/policy-areas/health-and-social-secretariat/events/national-immunization-social-marketing-campaign">National Immunization Social Marketing Campaign</a>
+                    </li>
+        
+                
+    
+   
+    
+                 
+        <li>
+                    	<a  href="http://www.afn.ca/index.php/en/policy-areas/health-and-social-secretariat/events/aboriginal-human-resources-initiative-national-forum">Aboriginal Human Resources Initiative National Forum</a>
+                    </li>
+        
+                        </ul>
+            </li>
+                
+    
+
+                
+                                    </ul>
+                                
+                   
+            
+                                    <ul class="sub-nav-ul">
+                                
+
+
+
+
+
+
+ 
+   
+    
+                                    <li class="sub-nav-li in-active"><a  href="http://www.afn.ca/index.php/en/policy-areas/health-and-social-secretariat/other/tuberculosis-tb">Other</a>
+		    <ul>
+	                
+                 
+        <li>
+                    	<a  href="http://www.afn.ca/index.php/en/policy-areas/health-and-social-secretariat/other/tuberculosis-tb">Tuberculosis (TB)</a>
+                    </li>
+        
+                
+    
+   
+    
+                 
+        <li>
+                    	<a  href="http://www.afn.ca/index.php/en/policy-areas/health-and-social-secretariat/other/indigenaction">IndigenACTION</a>
+                    </li>
+        
+                        </ul>
+            </li>
+                
+    
+
+                
+                                    </ul>
+                                
+                   
+                          
+        
+
+                
+            </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+</div>
+    <div id="footer">
+        <div class="footer-section">
+            <div class="add-nav">
+                <ul>
+                    
+                    
+                </ul>
+            </div>
+            <div class="breadcrumbs">
+                <ul>
+                    <li><a href="http://www.afn.ca/index.php/en">Home</a></li>
+                    
+		                        	<li>&gt; <a href="http://www.afn.ca/index.php/en/policy-areas">Policy Areas</a></li>
+                                        
+                                        
+                                        
+                                                                        <li>&gt; <a href="http://www.afn.ca/index.php/en/policy-areas/health-and-social-secretariat">Health and Social Secretariat</a></li>
+                        		                       
+                </ul>
+            </div>
+        </div>
+        <div class="holder">
+            <div class="boxes">
+                
+                    <table style="width: 100%;" border="0">
+<tbody>
+<tr>
+<td style="width: 30%;" valign="top">
+<h4>About AFN</h4>
+<ul>
+<li><a href="http://www.afn.ca/index.php/en/national-chief">National Chief</a></li>
+<li><a href="http://www.afn.ca/index.php/en/about-afn/executive-committee">Executive Committee</a></li>
+<li><a href="http://www.afn.ca/index.php/en/about-afn/our-story">Our Story</a></li>
+<li><a href="http://www.afn.ca/index.php/en/about-afn/provincial-territorial-organizations">Provincial Territorial Organizations</a></li>
+</ul>
+</td>
+<td style="width: 5%;">&nbsp;</td>
+<td style="width: 30%;" valign="top">
+<h4>Employment Opportunities</h4>
+<ul>
+<li><a href="http://www.afn.ca/index.php/en/employment-opportunities">Latest Employment Opportunities</a></li>
+</ul>
+</td>
+<td style="width: 5%;">&nbsp;</td>
+<td style="width: 30%;" valign="top">
+<h4>Links</h4>
+<ul>
+<li><a href="http://www.afn.ca/index.php/en/join-our-mailing-list">Join our mailing list</a></li>
+<li><a href="http://www.afn.ca/index.php/en/contact-us">Contact Us</a></li>
+<li><a href="/uploads/files/starwood.pdf">Starwood Partnership</a></li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+                
+            </div>
+            <ul class="tools">
+                <li><a href="http://www.facebook.com/AFN.APN" target="_blank" class="facebook" >facebook</a></li>
+                <!--<li><a href="#" class="rss" >rss</a></li>-->
+                <li><a href="http://twitter.com/AFN_Updates" target="_blank" class="twitter" >twitter</a></li>
+                <li><a href="http://www.youtube.com/user/afnposter" target="_blank" class="you-tube" >you-tube</a></li>
+            </ul>
+        </div>
+        <div class="block">
+            
+                <p>Assembly of First Nations</p>
+            
+        </div>
+    </div>
+</div>
+<div style="display:none;">
+    
+	<p><img src="/uploads/images/left-nav.jpg" alt="Assembly of First Nations" width="196" height="225" /></p>
+    
+</div>
+<div id="fat_nav" style="display:none;">
+    <div id="fn_wrapper">
+	<div id="fn_left">
+	    
+		<h3>Latest News</h3>
+<p><a href="http://www.afn.ca/index.php/en/news-media/latest-news/request-for-proposal-health-secretariat">Request for proposal - Health Secretariat</a></p>
+<p>&nbsp;</p>
+<h3>i pledge. end violence.</h3>
+<p><a href="http://www.afn.ca/index.php/en/i-pledge.-end-violence">Click here for more information</a></p>
+<p>&nbsp;</p>
+<h3>YouTube</h3>
+<p><a href="http://www.youtube.com/watch?v=YtkFsXvq0G0">National Chief Atleo addresses delegates of Special Chiefs Assembly on Education</a></p>
+	    
+	</div>
+	<div id="fn_middle">
+	    
+		<h2>Calendar</h2>
+<ul>
+<li><a href="http://www.afn.ca/index.php/en/special-chiefs-aseembly-2012">2012 Special Chiefs Assembly</a></li>
+</ul>
+<ul>
+<li>&nbsp;
+<ul>
+<li><a href="http://www.afn.ca/uploads/files/sca2012/sca-agenda-2012.pdf">Provisional Draft Agenda</a></li>
+<li><a href="http://www.afn.ca/index.php/en/special-chiefs-assembly-2012-registration">Registration</a></li>
+<li><a href="http://www.afn.ca/index.php/en/special-chiefs-assembly-2012-guest-rooms">Guest Rooms</a></li>
+<li><a href="http://www.afn.ca/index.php/en/special-chiefs-assembly-2012-travel">Travel</a></li>
+<li><a href="http://www.afn.ca/index.php/en/special-chiefs-assembly-2012-contact-information">Contact Information</a></li>
+<li><a href="https://maps.google.com/maps/ms?msid=209447867396287290509.0004cc56abb5dd12380b0&amp;msa=0" target="_blank">Map</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><a href="http://www.afn.ca/uploads/files/parliamentary/parliamentary-october15-29-2012.pdf" target="_blank">Parliamentary Wrap Up<br />October 15 &ndash; 29, 2012</a></li>
+</ul>
+<ul>
+<li><a href="http://www.afn.ca/uploads/files/meetings/invitation-naff.pdf">Chiefs Assembly of Education<br />Gatineau, Quebec</a><br /><a href="http://www.afn.ca/uploads/files/meetings/invitation-naff.pdf">October 1 - 3, 201</a></li>
+</ul>
+<div id="_mcePaste" class="mcePaste" style="position: absolute; left: -10000px; top: 0px; width: 1px; height: 1px; overflow: hidden;">
+<h4 style="text-align: center;"><a href="http://www.afn.ca/uploads/files/sca2012/sca-agenda-2012.pdf">Provisional Draft Agenda<br />Special Chiefs Assembly</a></h4>
+</div>
+	    
+	</div>
+	<div id="fn_right">
+	    
+		<h3><a href="http://www.facebook.com/AFN.APN"><img style="margin-left: 10px; margin-right: 10px; float: left;" src="/uploads/images/facebook-64x64.png" alt="" width="64" height="64" /></a><a href="http://www.facebook.com/AFN.APN"><br />Like Us on Facebook</a></h3>
+<p>&nbsp;</p>
+<h3><a href="https://twitter.com/AFN_Updates"><img style="float: left; margin-left: 10px; margin-right: 10px;" src="/uploads/images/twitter-64x64.png" alt="" width="64" height="64" /></a><a href="https://twitter.com/AFN_Updates"><br />Follow Us on Twitter</a></h3>
+<p>&nbsp;</p>
+<h3><a href="http://www.youtube.com/user/afnposter"><img style="margin-left: 10px; margin-right: 10px; float: left;" src="/uploads/images/youtube-64x64.png" alt="" width="64" height="64" /></a><a href="http://www.youtube.com/user/afnposter"><br />Watch Us on Youtube</a></h3>
+	    
+	</div>
+	<div class="clear"></div>
+    </div>    
+</div>
+<!-- google analytics -->
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-19871174-1']);
+  _gaq.push(['_setDomainName', '.afn.ca']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>        
+</body>
+</html>
+

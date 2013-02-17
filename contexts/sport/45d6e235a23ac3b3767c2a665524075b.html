@@ -1,0 +1,643 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<HTML xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+
+<HEAD>
+  <TITLE>Short-term Prediction Research and Transition Center (SPoRT)</TITLE>
+<!-- Later IE Versions Mimic Internet Explorer 7 -->
+  <META HTTP-EQUIV="X-UA-Compatible" CONTENT="IE=EmulateIE7">
+
+  <META HTTP-EQUIV="Pragma" CONTENT="no-cache">
+  <META HTTP-EQUIV="Expires" CONTENT="-1">
+
+  <META NAME="DESCRIPTION" CONTENT="The NASA Short-term Prediction Research and
+  Transition Center - SPoRT">
+  <META NAME="KEYWORDS" CONTENT="forecasting, modeling, observations, weather,
+  earth, science, assimilation, research, prediction, numerical, 
+  short-term, regional, experimental, satellite, space-based, NASA, NWS,
+  AWIPS, AWIPS 2,">
+
+  <STYLE TYPE="text/css" MEDIA="all">
+	@import "/sport/sportier.css";
+	@import "/sport/menu.css";
+  </STYLE>
+
+</HEAD>
+
+<BODY>
+
+
+
+<DIV ID="trail">
+		<LI>SPoRT</LI>
+</DIV>
+
+<!-- Header information -->
+	<link rel="stylesheet"
+    type="text/css"
+    media="print" href="/sport/print.css">
+ 
+ <DIV ID="print_container">
+ 
+ <!--[if lte IE 6]>
+ 	<STYLE>
+ 		@import "/sport/menu_ie6.css";
+ 	</STYLE>
+ <![endif]-->
+ 
+ <CENTER>
+ <TABLE BORDER="0" CELLSPACING="2" CELLPADDING="0" WIDTH="960">
+   <TR>
+     <!-- TD WIDTH="240">
+     	<A HREF="/sport"><CENTER>
+ 		<IMG SRC="/sport/images/sportredblue.gif" WIDTH="240" HEIGHT="68" ALIGN="BOTTOM" BORDER="0" NATURALSIZEFLAG="0" TITLE="SPoRT Project Graphic">
+ 	</CENTER></A>
+     </TD -->
+ 
+     <TD WIDTH="240">
+     	<A HREF="/sport"><CENTER>
+ 		<IMG SRC="/sport/images/sportLogoHQ.png" ALIGN="BOTTOM" BORDER="0" NATURALSIZEFLAG="0" ALT="SPoRT Logo" TITLE="Home">
+ 	</CENTER></A>
+     </TD>
+ 
+     <TD COLSPAN="2">
+     	<CENTER><H1>
+ 	    Short-term Prediction Research and Transition Center
+ 	</H1></CENTER>
+     </TD>
+      
+     <!-- TD WIDTH="90">
+     	<A HREF="http://www.earth.nasa.gov/">
+ 		<IMG SRC="/sport/images/nasa.gif" WIDTH="90" HEIGHT="75" ALIGN="BOTTOM" BORDER="0" NATURALSIZEFLAG="0" TITLE="NASA Logo">
+ 	</A>
+     </TD -->
+ 
+     <TD WIDTH="85">
+     	<A HREF="http://www.earth.nasa.gov/">
+ 		<IMG SRC="/sport/images/nasaLogoHQ.png" ALIGN="BOTTOM" BORDER="0" NATURALSIZEFLAG="0" ALT="NASA Logo" TITLE="NASA Science > Earth Page">
+ 	</A>
+     </TD>
+   </TR>
+ 
+   <TR>
+     <TD COLSPAN="4"><H5>
+   SPoRT is a NASA project to transition unique observations and research capabilities to the operational weather community to improve short-term forecasts on a regional scale.
+     </H5></TD>
+   </TR>
+ </TABLE>
+ 
+ <DIV ID="menu_horizontal_container">
+ <DIV ID="menu_horizontal">
+ 	<UL ID="nav">
+ 		<LI CLASS="data">
+ 		<!--[if lte IE 6]>
+ 		<A HREF="/sport/submenu_data.html">
+ 		<![endif]-->
+ 		<a href="#">Real-Time Data</a>
+ 		<!--[if lte IE 6]>
+ 		</A>
+ 		<![endif]-->
+ 			<UL>
+ 				<LI CLASS="topmost">
+ 					<A HREF="/cgi-bin/sportPublishData.pl?dataset=airs&product=">AIRS</A>
+ 				</LI>
+ 				<!-- LI>
+ 					<ACRONYM TITLE="Advanced Microwave Scanning Radiometer - Earth Observing Systems">
+ 						<A HREF="/cgi-bin/sportPublishData.pl?dataset=amsre&product=conus_rain">AMSR-E</A>
+ 					</ACRONYM>
+ 				</LI -->
+ 				<LI>
+ 					<A HREF="/cgi-bin/sportPublishData.pl?dataset=cira&product=conus_tpw">CIRA TPW</A>
+ 				</LI>
+ 				<LI>
+ 					<A HREF="/cgi-bin/sportPublishData.pl?dataset=foglowclouds">Fog/Low Clouds</A>
+ 				</LI>
+ 				<LI>
+ 					<A HREF="/cgi-bin/sportPublishData.pl?dataset=goesimager&product=ctp">GOES Imager</A>
+ 				</LI>
+ 				<LI>
+ 					<A HREF="/cgi-bin/sportPublishData.pl?dataset=goessounder&product=combctp">GOES Sounder</A>
+ 				</LI>
+ 				<LI>
+ 					<A HREF="/cgi-bin/sportPublishData.pl?dataset=modis&product=conus_11um">MODIS</A>
+ 				</LI>
+ 				<LI>
+ 					<A HREF="/cgi-bin/sportPublishData.pl?dataset=mghybridnasa&product=cconus_ir">MODIS/GOES Hybrid</A>
+ 				</LI>
+ 				<LI>
+ 					<A HREF="/cgi-bin/sportPublishData.pl?dataset=pmw&product=37H">Passive Microwave</A>
+ 				</LI>
+ 				<LI>
+ 					<A HREF="/cgi-bin/sportPublishData.pl?dataset=orbit">Polar Orbit Tracks</A>
+ 				</LI>
+ 				<LI>
+ 					<A HREF="/cgi-bin/sportPublishData.pl?dataset=ADAS&product=alltmpf">SPoRT ADAS</A>
+ 				</LI>
+ 				<LI>
+ 					<A HREF="/cgi-bin/sportPublishData_new.pl?dataset=sst&product=sport_nhemis">Sea Surface Temperatures</A>
+ 				</LI>
+ 				<LI>
+ 					<A HREF="/cgi-bin/sportPublishData.pl?dataset=viirs&product=lwir">VIIRS</A>
+ 				</LI>
+ 				<LI>
+ 					<A HREF="/cgi-bin/sportPublishData.pl?dataset=windsat&product=windbarbs">WindSat</A>
+ 				</LI>
+                                 <LI>
+ 					<A HREF="/sport/productstatus/#top">Product Status</A>
+ 				</LI>
+ 			</UL>
+ 		</LI>
+ 		<LI CLASS="projects">
+ 		<!--[if lte IE 6]>
+ 		<A HREF="/sport/submenu_projects.html">
+ 		<![endif]-->
+ 		<a href="#">Core Projects</a>
+ 		<!--[if lte IE 6]>
+ 		</A>
+ 		<![endif]-->
+ 			<UL>
+ 				<LI CLASS="topmost">
+ 					<A HREF="/sport/airs">AIRS</A>
+ 				</LI>
+ 				<LI>
+ 					<A HREF="/sport/amsre">AMSR-E</A>
+ 				</LI>
+ 				<LI>
+ 					<A HREF="/sport/awipsii">AWIPS II</A>			
+ 				</LI>
+ 				<LI>
+ 					<A HREF="/sport/cira">CIRA TPW</A>
+ 				</LI>
+ 				<LI>
+ 					<A HREF="/sport/goes_imager">GOES Imager</A>
+ 				</LI>
+ 				<LI>
+ 					<A HREF="/sport/goes_sounder">GOES Sounder</A>
+ 				</LI>
+ 				<LI>
+ 					<A HREF="/sport/lma">LMA</A>
+ 				</LI>
+ 				<LI>
+ 					<A HREF="/sport/modeling">Modeling</A>
+ 				</LI>
+ 				<LI>
+ 					<A HREF="/sport/modis">MODIS</A>
+ 				</LI>
+ 				<LI>
+ 					<A HREF="/sport/modisgoes_hybrid_nasa">MODIS/GOES Hybrid</A>
+ 				</LI>
+ 				<LI>
+ 					<A HREF="/sport/passiveMicrowave">Passive Microwave</A>
+ 				</LI>
+ 				<LI>
+ 					<A HREF="/sport/sst">Sea Surface Temperatures</A>
+ 				</LI>
+ 				<LI>
+ 					<A HREF="/sport/adas">SPoRT ADAS</A>
+ 				</LI>
+ 				<LI>
+ 					<A HREF="/sport/tornadoes">Tornado Analysis</A>
+ 				</LI>
+ 				<LI>
+ 					<A HREF="/sport/windsat">WindSat</A>
+ 				</LI>
+ 			</UL>
+ 		</LI>
+ 		<LI CLASS="projects">
+ 		<!--[if lte IE 6]>
+ 		<A HREF="/sport/submenu_goesrpg.html">
+ 		<![endif]-->
+ 		<a href="#">GOES-R PG</a>
+ 		<!--[if lte IE 6]>
+ 		</A>
+ 		<![endif]-->
+ 			<UL>
+ 				<LI CLASS="topmost">
+ 					<A HREF="/sport/goesrpg/">Overview</a>
+ 				</LI>
+ 				<LI>
+ 					<A HREF="/sport/goesrpg/map/">Map of Partners</A>
+ 				</LI>	
+ 				<LI>
+ 					<A HREF="/sport/goesrpg/lfa.html">Lightning Forecast Algorithm</a>
+ 				</LI>
+ 				<LI>
+ 					<A HREF="/sport/goesrpg/hybrid.html">MODIS/GOES Hybrid</a>
+ 				</LI>
+ 				<LI>
+ 					<A HREF="/sport/goesrpg/pglm.html">Pseudo GLM</A>
+ 				</LI>
+ 				<LI>
+ 					<A HREF="/sport/goesrpg/rgb.html">RGB Products</A>
+ 				</LI>
+ 			</UL>
+ 		</LI>
+ 		<LI CLASS="projects">
+ 		<!--[if lte IE 6]>
+ 		<A HREF="/sport/submenu_goesrpg.html">
+ 		<![endif]-->
+ 		<a href="#">JPSS PG</a>
+ 		<!--[if lte IE 6]>
+ 		</A>
+ 		<![endif]-->
+ 			<UL>
+ 				<LI CLASS="topmost">
+ 					<A HREF="/sport/jpsspg/">Overview</a>
+ 				</LI>
+ 				<LI>
+ 					<A HREF="/sport/jpsspg/map/">Map of Partners</A>
+ 				</LI>	
+ 				<LI>
+ 					<A HREF="/sport/jpsspg/viirs.html">VIIRS</A>
+ 				</LI>
+ 				<LI>
+ 					<A HREF="/sport/jpsspg/rgb.html">RGB Products</A>
+ 				</LI>
+ 			</UL>
+ 		</LI>
+ 		<LI CLASS="transitions">
+ 		<!--[if lte IE 6]>
+ 		<A HREF="/sport/submenu_transitions.html">
+ 		<![endif]-->
+ 		<a href="#">Transitions</a>
+ 		<!--[if lte IE 6]>
+ 		</A>
+ 		<![endif]-->
+ 			<UL>
+ 				<LI CLASS="topmost">
+ 					<A HREF="/sport/transitionedProducts">Transitioned Products</A>
+ 				</LI>
+ 				<LI>
+ 					<A HREF="/sport/training">Training</A>
+ 				</LI>
+ 				<LI>
+ 					<A HREF="/sport/survey">Survey</A>
+ 				</LI>
+ 				<LI>
+ 					<A HREF="/sport/survey/summary">Survey Results</A>
+ 				</LI>
+ 				<LI>
+ 					<A HREF="/sport/evaluations">Evaluations</A>
+ 				</LI>
+ 				<LI>
+ 					<A HREF="/sport/support">Request Support</A>
+ 				</LI>
+                                 <LI>
+ 					<A HREF="/sport/coordination">Coordination Calls</A>
+ 				</LI>
+ 			</UL>
+ 		</LI>
+ 		<LI CLASS="library">
+ 		<!--[if lte IE 6]>
+ 		<A HREF="/sport/submenu_library.html">
+ 		<![endif]-->
+ 		<a href="#">Library</a>
+ 		<!--[if lte IE 6]>
+ 		</A>
+ 		<![endif]-->
+ 			<UL>
+ 				<LI CLASS="topmost">
+ 					<A HREF="/sport/journal">Journal Publications</A>
+ 				</LI>
+ 				<LI>
+ 					<A HREF="/sport/conference">Conference Papers & Presentations</A>
+ 				</LI>
+ 				<LI>
+ 					<A HREF="/sport/sac_reports">SAC Reports & Presentations</A>
+ 				</LI>
+ 				<LI>
+ 					<A HREF="/sport/library/quarterly.html">Quarterly Reports</A>
+ 				</LI>
+ 				<LI>
+ 					<A HREF="/sport/library/status.html">Status Reports</A>
+ 				</LI>
+ 				<LI>
+ 					<A HREF="/sport/library/seminars.html">SPoRT Seminars</A>
+ 				</LI>
+ 				<LI>
+ 					<A HREF="/sport/library/tech_memos.html">Technical Memos</A>
+ 				</LI>
+ 				<LI>
+ 					<A HREF="/sport/workshops">SPoRT-Sponsored Workshops</A>
+ 				</LI>
+ 				<LI>
+ 					<A HREF="/sport/library/gallery.html">Gallery</A>
+ 				</LI>
+ 			</UL>
+ 		</LI>
+ 		<LI CLASS="organization">
+ 		<!--[if lte IE 6]>
+ 		<A HREF="/sport/submenu_organization.html">
+ 		<![endif]-->
+ 		<a href="#">Organization</a>
+ 		<!--[if lte IE 6]>
+ 		</A>
+ 		<![endif]-->
+ 			<UL>
+ 				<!--LI CLASS="topmost">History</LI>
+ 				<LI>Legacy</LI-->
+ 				<LI CLASS="topmost">
+ 					<A HREF="/sport/strategic">Strategic Plans</A>
+ 				</LI>
+ 				<LI>
+ 					<A HREF="/sport/staff">Staff</A>
+ 				</LI>
+ 				<LI>
+ 					<A HREF="/sport/organization/nws.html">Collaborative Partners</A>
+ 				</LI>
+ 				<LI>
+ 					<A HREF="/sport/organization/external.html">External Partners</A>
+ 				</LI>
+ 				<LI>
+ 					<A HREF="/sport/organization/sac.html">Science Advisory Committee</A>
+ 				</LI>
+ 				<LI>
+ 					<A HREF="/sport/organization/about.html">About</A>
+ 				</LI>
+ 				<LI>
+ 					<A HREF="http://nasasport.wordpress.com/">Blog</A>
+ 				</LI>
+ 			</UL>
+ 		</LI>
+ 	</UL>
+ </DIV>
+ </DIV>
+ 
+ <!--[if lte IE 6]>
+ 
+ <DIV STYLE="clear:both;"> </DIV>
+ 
+ 	You are currently using Internet Explorer 6 or older.<BR>
+         Not all features of this web page are compatible with your current browser.<BR>
+         Best viewed with Firefox, Safari or Internet Explorer 7+.<BR>
+ 	Select one of the following browsers.<BR>
+ 	Any of these downloads are free, easy, and take minimal time to install.<BR>
+ 
+ <A HREF="http://www.getfirefox.com/">
+ <IMG BORDER="0" ALT="Firefox 3" TITLE="Firefox 3" SRC="/sport/images/firefox.png"/>
+ </A>
+ 
+ &nbsp;
+ 
+ <A HREF="http://www.apple.com/safari/download/">
+ <IMG BORDER="0" ALT="Safari" TITLE="Safari" SRC="/sport/images/safari.jpeg"/>
+ </A>
+ 
+ &nbsp;
+ 
+ <A HREF="http://www.microsoft.com/ie/">
+ <IMG BORDER="0" ALT="Internet Explorer 7" TITLE="Internet Explorer 7" SRC="/sport/images/ie7.gif"/>
+ </A>
+ 
+ <BR>
+ 
+ <IMG SRC="/sport/images/bar.gif" WIDTH="674" HEIGHT="2" ALIGN="BOTTOM"
+ 		BORDER="0" NATURALSIZEFLAG="3" ALT="&quot;&quot;">
+ 
+ 
+ <![endif]-->
+ 
+ <DIV ID="main_content">
+
+<!-- End header-->
+
+<!-- Main content of page -->
+
+<!-- Sport Banner when needed -->
+<!-- Contains special web page links, or information -->
+	        <FONT SIZE="3">
+ 		<br>
+ 		Read About SPoRT's <A HREF="/sport/jpsspg">JPSS</a> and <A HREF="/sport/goesrpg">GOES-R</a> Proving Ground Activities
+ 		<br>
+ 	</FONT>
+
+<!-- End of SPoRT Banner -->
+
+<DIV ID="background">
+
+<!--BR>
+<CENTER>
+<TABLE BORDER="2" BORDERCOLOR="red"><TR><TD>
+<CENTER><P><B><A HREF="/sport/workshops/SPoRT_DA_Workshop_Agenda.pdf">SPoRT Data Assimilation Workshop Agenda!</A></B></P></CENTER>
+</TD></TR></TABLE>
+</CENTER-->
+
+<!-- Right Column -->
+<DIV ID="right">
+
+	<BR>
+	<DIV ID="module">
+		<b class="h1h"></b><b class="h2h"></b><b class="h3h"></b><b class="h4h"></b> 
+		<div class="hhead">
+			<H3>SPoRT Science Seminar Series</H3>
+		</div> 
+			<!-- Seminar -->
+			<!-- USE THIS SECTION WHEN WE DON'T YET HAVE INFORMATION FOR THE NEXT SEMINAR-->
+ 
+ 
+ 
+ 		<div id="hmodule" class="hcontent" style="height:auto;padding:8px 10px 0px 10px;">
+ 			<P>SPoRT periodically hosts visitors to learn more about our program and team as well as to discuss opportunities for future collaboration. Typically, during these visits, the guest will present a seminar outlining his or her current work to help provide background on common interests.  Please check back soon for information on the next seminar.</p>	
+ 			<BR>
+ 		</div>
+ 		<div id="hmodule" class="hfoot" STYLE="height:15px;">
+ 			<H6>
+ 				<A HREF="http://weather.msfc.nasa.gov/sport/library/seminars.html" target="_blank">Review Previous Seminars</A>
+ 			</H6>
+ 		</div>
+ 
+ 
+ <!-- USE THIS SECTION WHEN WE HAVE INFORMATION TO POST ABOUT THE NEXT SEMINAR -->
+ 
+ <!--
+ 
+ 		<div id="hmodule" class="hcontent" style="height:auto;padding:8px 10px 0px 10px;">
+ 			<H4>"Civil Environmental Monitoring Using Small Low-Cost Unmanned Aircraft Systems"</H4>
+ 			<BR>
+ 			
+ 			<P>
+ 				<b>Date/Time</b>: 12:45 PM, Tuesday, October 16, 2012<br>
+ 				<b>Location</b>: NSSTC, Room CR1010<br>
+ 				<b>Speaker</b>: Dr. Haiyang Chao, Flight Control Systems Laboratory, West Virginia University
+ 
+ 			</P>
+ 			<BR>
+ 		</div>
+ 
+ 		<div id="hmodule" class="hfoot" STYLE="height:30px;">
+ 			<H6>
+ 				<A HREF="/sport/library/sport_science_seminars/20121016_Chao/20121016_Chao_abstract.pdf">View Abstract</A><br>
+ 				<A HREF="/sport/library/seminars.html" target="_blank">Review Previous Seminars</A>
+ 		  </H6>
+ 		</div>
+ -->
+ 
+
+		<b class="h4bh"></b><b class="h3bh"></b><b class="h2bh"></b><b class="h1h"></b>
+	</DIV>
+
+	<DIV ID="module">
+		<b class="h1h"></b><b class="h2h"></b><b class="h3h"></b><b class="h4h"></b> 
+		<div class="hhead">
+			<H3>Wide World of SPoRT Blog</H3>
+		</div> 
+		<div id="hmodule" class="hcontent" style="height:auto;padding:8px 10px 0px 10px;">
+			<!-- SPORT BLOG -->
+			<H4>VIIRS DNB Difference Images Pinpoint Hurricane Sandy Damaged Regions Still Without Power</H4>
+ <H6 STYLE="margin-top:.5em;margin-bottom:0;">Fri, 02 Nov 2012 21:41:00 </H6>
+ <P>The DNB on VIIRS detects reflected moonlight from clouds, fog, and some reflective atmospheric and surface features and emission from city lights, small towns, and local communities (see other VIIRS blog posts on this page). SPoRT Disaster Response Team member Andrew Molthan has processed VIIRS DNB data from before and after Hurricane Sandy to detect [...]<img alt="" border="0" src="http://stats.wordpress.com/b.gif?host=nasasport.wordpress.com&#038;blog=11655411&#038;post=5082&#038;subd=nasasport&#038;ref=&#038;feed=1" width="1" height="1" /></P>
+ <BR>
+ </div>
+ <div id="hmodule" class="hfoot" STYLE="height:47px;">
+ <H6><A HREF="http://nasasport.wordpress.com/2012/11/02/viirs-dnb-difference-images-pinpoint-hurricane-sandy-damaged-regions-still-without-power/">Read full post</A><BR>
+
+			<A HREF="http://nasasport.wordpress.com">Visit the Wide World of SPoRT</A> <a href="http://nasasport.wordpress.com/feed/"><img src="images/rssIcon_15x15.png"></a><br>
+			<a href="/sport/etc/SPoRT_Blog_instructions.pdf">Posting Instructions</a></H6>
+		</div>
+		<b class="h4bh"></b><b class="h3bh"></b><b class="h2bh"></b><b class="h1h"></b>
+	</DIV>
+
+	<DIV ID="module">
+		<b class="h1h"></b><b class="h2h"></b><b class="h3h"></b><b class="h4h"></b>
+		<div class="hhead">
+			<H3>Product Status Page</H3>
+		</div> 
+		<div id="hmodule" class="hcontent" style="height:auto;padding:8px 10px 0px 10px;">
+			<!-- NEWS (entered manually) -->
+			<P>Though we're not 24/7, SPoRT strives to provide the most timely and reliable data products to its partners and end users.  
+			A system has been developed to monitor the availability of LDM and FTP products and categorize
+			each product based on its age.  Summaries are posted every 10 minutes to the link below.</P>
+			<BR>
+		</div>
+		<div id="hmodule" class="hfoot" STYLE="height:15px;">
+			<H6><a href="/sport/productstatus/">View the Product Status Page</a></H6>
+		</div>
+		<b class="h4bh"></b><b class="h3bh"></b><b class="h2bh"></b><b class="h1h"></b>
+	</DIV>
+
+	<DIV ID="module">
+		<b class="h1h"></b><b class="h2h"></b><b class="h3h"></b><b class="h4h"></b> 
+		<div class="hhead">
+			<H3>Follow SPoRT</H3>
+		</div> 
+		<div id="hmodule" class="hcontent" style="height:auto;padding:8px 10px 0px 10px;text-align:center;">
+			<center>
+			<table width="90%">
+				<tr align="center">
+					<td width="50%">
+						<!--- Twitter Badge https://twitter.com/goodies/buttons -->
+						<a href="http://twitter.com/#!/NASA_SPoRT" target="_blank"><img src="http://twitter-badges.s3.amazonaws.com/twitter-b.png" alt="Follow NASA SPoRT on Twitter"/></a>
+					</td>
+					<td width="50%">
+						<!--- Facebook Badge -->
+						<a href="http://www.facebook.com/NASA.SPoRT"><img src="/sport/images/facebook_logo.gif"></a>
+					</td>
+				</tr>
+			</table>
+			</center>
+
+		</div>
+		<b class="h4bh"></b><b class="h3bh"></b><b class="h2bh"></b><b class="h1h"></b>
+	</DIV>
+
+	<DIV ID="module">
+		<b class="h1h"></b><b class="h2h"></b><b class="h3h"></b><b class="h4h"></b> 
+		<div class="hhead">
+			<H3>Acronym of the Day</H3>
+		</div> 
+		<div id="hmodule" class="hcontent" style="height:auto;padding:8px 10px 0px 10px;text-align:center;">
+			<!-- ACRONYM OF THE DAY -->
+			<B>RMSE     </B>- Root Mean Square Error
+ <BR>
+
+		</div>
+		<b class="h4bh"></b><b class="h3bh"></b><b class="h2bh"></b><b class="h1h"></b>
+	</DIV>
+
+</DIV>
+
+<!-- Left Column -->
+<DIV ID="left">
+
+	<BR>
+	<DIV ID="module">
+		<b class="h1h"></b><b class="h2h"></b><b class="h3h"></b><b class="h4h"></b> 
+		<div class="hhead">
+			<H3>Image of the Day</H3>
+		</div> 
+		<div id="hmodule" class="hcontent" style="height:auto;padding:8px 10px 0px 10px;">
+			<!-- IMAGE OF THE DAY -->
+			<A HREF="/sport/daily_material/image/014.png">
+ 	<IMG SRC="/sport/daily_material/image/014_tn.png">
+         <CENTER><H6 STYLE="margin:0;">(click to enlarge)</CENTER></H6>
+ </A>
+ <P>This is a 24-hour summary of North Alabama Lightning Mapping Array activity across the Huntsville National Weather Service's County Warning Area for the Super Tuesday tornadoes on 6 February 2008. By looking at the lightning activity alone, once can see the specific tracks of the supercell thunderstorms (oriented from southwest to northeast) that crossed the region. Many of the tornadoes occurred as the lightning activity increased, shown by the brighter colors on the plot. This lightning jump is often used for helping issue tornado warnings.</P>
+ <BR>
+ </div>
+ <div id="hmodule" class="hfoot" STYLE="height:30px;">
+ <H6>
+ <A HREF="http://branch.nsstc.nasa.gov/PUBLIC/NALMA/">NALMA Data</A><BR>
+ <A HREF="http://weather.msfc.nasa.gov/sport/lma/">SPoRT LMA</A>
+ </H6>
+
+		</div>
+		<b class="h4bh"></b><b class="h3bh"></b><b class="h2bh"></b><b class="h1h"></b>
+	</DIV>
+
+	<DIV ID="module">
+		<b class="h1h"></b><b class="h2h"></b><b class="h3h"></b><b class="h4h"></b>
+		<div class="hhead">
+			<H3>Featured Article</H3>
+		</div> 
+		<div id="hmodule" class="hcontent" style="height:auto;padding:8px 10px 0px 10px;">
+			<!-- FEATURED ARTICLE -->
+			<H4>Evaluation of enhanced high resolution MODIS/AMSR-E SSTs and the impact on regional weather forecasts</H4>
+ <BR>
+ <P>The NASA Short-term Prediction Research and Transition (SPoRT) Center currently produces a high resolution sea surface temperature (SST) product for use by National Weather Service (NWS) Weather Forecast Offices (WFOs) as an operational diagnostic and also as input for their weather forecast models. This product uses Moderate Resolution Imaging Spectroradiometer (MODIS) data to produce composite SST output with spatial resolution superior to other SST data used to initialize regional weather forecast models. A six month study from February to August 2007 over the marine areas surrounding southern Florida was conducted to compare the use of the MODIS SST composite versus the Real-Time Global SST analysis to initialize the Weather Research and Forecasting (WRF) model.</P>
+ <BR>
+ </div>
+ <div id="hmodule" class="hfoot">
+ <H6><A HREF="http://ams.confex.com/ams/90annual/techprogram/paper_163774.htm">Read more at AMS's Extended Abstract</A></H6>
+
+		</div>
+		<b class="h4bh"></b><b class="h3bh"></b><b class="h2bh"></b><b class="h1h"></b>
+	</DIV>
+
+</DIV>
+
+<!-- Bottom that spans the page (left/right) -->
+
+
+<!-- Responsible Official / Contact Info -->
+</DIV>
+ </DIV>
+ 
+ <BR clear="both">
+ <CENTER>
+ 	<IMG SRC="/sport/images/bar.gif" WIDTH="800" HEIGHT="2" ALIGN="BOTTOM"
+ 		BORDER="0" NATURALSIZEFLAG="3" ALT="&quot;&quot;">
+ 	<BR><BR>
+ 	Technical Contact: Dr. Gary J. Jedlovec (<A HREF="mailto:gary.jedlovec@nasa.gov">gary.jedlovec@nasa.gov</a>)<BR>
+ 	Responsible Official: Dr. James L. Smoot (<A HREF="mailto:james.l.smoot@nasa.gov">james.l.smoot@nasa.gov</a>)<BR>
+ 	Page Curator: Kevin M. McGrath (<A HREF="mailto:kevin.m.mcgrath@nasa.gov">kevin.m.mcgrath@nasa.gov</a>)<BR>
+ 	<A HREF="/disclaimer.html">Disclaimer</A><BR>
+ 
+ </CENTER>
+ 
+ <!-- Close DIV print_container -->
+ </DIV>
+ 
+ <!--script type="text/javascript">
+ var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+ document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+ </script>
+ <script type="text/javascript">
+ var pageTracker = _gat._getTracker("UA-3211182-1");
+ pageTracker._initData();
+ pageTracker._trackPageview();
+ </script-->
+
+<!-- End contact info -->
+
+</BODY>
+
+</HTML>

@@ -1,0 +1,208 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<title> Code Medic </title>
+	<meta name=description content="Code Medic -- Graphical UNIX debugging environment">
+<meta name=keywords content="Code Medic, medic, IDE, SDK, Integrated Development Environment, C, C++, Fortran, Java, Assembly, programming, debug, debugger, UNIX, Linux, X, X11">
+	<meta http-equiv=content-type content="text/html; charset=utf-8">
+	<meta name="viewport" content="initial-scale=1.0, user-scalable=yes" />
+	<meta name="MSSmartTagsPreventParsing" content="TRUE">
+
+	<link rel="shortcut icon" href="http://www.newplanetsoftware.com/favicon.ico">
+
+	<style type="text/css">
+	body { font-family:verdana, sans-serif; }
+
+	#hd { background-color:#0AC0C0; min-height:80px; }
+	#home { float:left; }
+	#title { font-size:150%; font-weight:bold; text-align:center; margin:0; padding:0; }
+
+	#add-to-cart { background-color:#dddddd; }
+	.error { background-color:pink; padding:3px; }
+
+	a.nav:link, a.nav:visited, a.nav:active { text-decoration: none; color: black }
+	a.nav:hover { text-decoration: underline; color: black }
+	a.navhere:link, a.navhere:visited, a.navhere:active { text-decoration: none; color: #808080 }
+
+	p.nav  { line-height: 115% }
+	br.nav { line-height: 122% }
+
+	a.upsell:link, a.upsell:visited, a.upsell:active { color: black }
+
+	@media screen and (min-device-width: 1024px)
+		{
+		body { min-width:1024px; }
+		}
+
+	@media screen and (min-device-width: 602px)
+		{
+		#title { padding:25px 5px 5px 5px; }
+
+		#desktop-nav { background-color:#F7E79E; padding:0 20px 20px; float:left; width:200px; }
+		#desktop-nav .gsc-search-button input.gsc-search-button-v2 { padding:3px; }
+		#cart-container { float:right; }
+		.cart-link { background:url("/image/cart.gif") left center no-repeat; padding-left:20px; }
+
+		#mobile-nav { display:none; }
+
+		#add-to-cart { padding:5px 0 5px 300px; }
+		#upsell { float:right; font-size:80%; width:35%; }
+
+		#content { padding:20px; padding-left:260px; }
+
+		#copyright { clear:both; }
+		}
+
+	@media screen and (max-device-width: 601px)
+		{
+		body { margin:0; }
+		#content { margin:5px; }
+
+		#desktop-nav { display:none; }
+
+		#mobile-nav { background-color:#F7E79E; padding:5px; position:fixed; width:100%; }
+		#hd { padding-top:35px; }
+
+		#title { padding:5px; }
+
+		#bd { display:-webkit-box; -webkit-box-orient:vertical; }
+		#add-to-cart { -webkit-box-ordinal-group:2; margin-top:10px; }
+
+		#add-to-cart { display:-webkit-box; -webkit-box-orient:vertical; padding:5px; }
+		#upsell { -webkit-box-ordinal-group:2; font-size:80%; margin-top:5px; }
+		}
+	</style>
+
+	<script>
+	(function() {
+		var cx = '002370644448146005010:3obz-dt4kjw';
+		var gcse = document.createElement('script'); gcse.type = 'text/javascript'; gcse.async = true;
+		gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
+			'//www.google.com/cse/cse.js?cx=' + cx;
+		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(gcse, s);
+	})();
+	</script>
+</head>
+
+<body>
+
+	<div id="mobile-nav">
+		<label for="mobile-nav-menu">Navigate to:</label>
+		<select id="mobile-nav-menu" onchange="npsNavigateMobile();">
+			<option value="/">Home</option>
+			<option value="/nps/cart.php">Cart</option>
+			<option value="/nps/google_search.php">Search</option>
+
+			<option value="medic.php" selected="selected"> Introduction</option><option value="/nps/download.php?product_id=MEDIC-3-DEMO-LIMIT"> Demo</option><option value="features.php"> Features</option><option value="basic_features.php">- Debugging</option><option value="source_view.php">- Source</option><option value="stack_trace.php">- Stack trace</option><option value="variables.php">- Variables</option><option value="cmd_line.php">- Command line</option><option value="misc_features.php">- Miscellaneous</option><option value="ChangeLog.php"> Change log</option><option value="bugs.php">- Known bugs</option><option value="plans.php">- Future plans</option><option value="screenshots.php"> Screenshots</option><option value="faq.php"> FAQ</option><option value="techniques.php"> Techniques</option><option value="/nps/software.php"> Other software</option><option value="/blog/"> What's new!</option>		</select>
+
+		<script type="text/javascript">
+		function npsNavigateMobile()
+		{
+			window.location = document.getElementById('mobile-nav-menu').value;
+		}
+		</script>
+	</div>
+
+	<div id="hd">
+		<a id="home" href="/"><img src="/nps/image/logo_small.gif" alt="[logo]" width="75" height="75" border="0"></a>
+		<h1 id="title">Code Medic</h1>
+	</div>
+
+	<div id="desktop-nav">
+
+		<p id="cart-container"><a id="cart-link" href="/nps/cart.php"><b><a class="nav cart-link" href="/nps/cart.php" >Cart</a></b>
+</p>
+		<p><b><a class="nav " href="/" >Home</a></b>
+</p>
+
+		<gcse:searchbox-only></gcse:searchbox-only>
+
+		<p><b><a class="navhere " href="medic.php" >Introduction</a></b>
+<p><b><a class="nav " href="/nps/download.php?product_id=MEDIC-3-DEMO-LIMIT" >Demo</a></b>
+<p><b><a class="nav " href="features.php" >Features</a></b>
+<font size=-1><br>&nbsp;&nbsp;&nbsp;&nbsp;<a class="nav " href="basic_features.php" >Debugging</a></font>
+<font size=-1><br>&nbsp;&nbsp;&nbsp;&nbsp;<a class="nav " href="source_view.php" >Source</a></font>
+<font size=-1><br>&nbsp;&nbsp;&nbsp;&nbsp;<a class="nav " href="stack_trace.php" >Stack&nbsp;trace</a></font>
+<font size=-1><br>&nbsp;&nbsp;&nbsp;&nbsp;<a class="nav " href="variables.php" >Variables</a></font>
+<font size=-1><br>&nbsp;&nbsp;&nbsp;&nbsp;<a class="nav " href="cmd_line.php" >Command&nbsp;line</a></font>
+<font size=-1><br>&nbsp;&nbsp;&nbsp;&nbsp;<a class="nav " href="misc_features.php" >Miscellaneous</a></font>
+<font size=-1><p>&nbsp;&nbsp;&nbsp;&nbsp;<a class="nav " href="ChangeLog.php" >Change&nbsp;log</a></font>
+<font size=-1><br>&nbsp;&nbsp;&nbsp;&nbsp;<a class="nav " href="bugs.php" >Known&nbsp;bugs</a></font>
+<font size=-1><br>&nbsp;&nbsp;&nbsp;&nbsp;<a class="nav " href="plans.php" >Future&nbsp;plans</a></font>
+<p><b><a class="nav " href="screenshots.php" >Screenshots</a></b>
+<p><b><a class="nav " href="faq.php" >FAQ</a></b>
+<p><b><a class="nav " href="techniques.php" >Techniques</a></b>
+<p><b><a class="nav " href="/nps/software.php" >Other&nbsp;software</a></b>
+<p><b><a class="nav " href="/blog/" >What's&nbsp;new!</a></b>
+<p><b><a class="nav " href="/form/login.php?next=%2Fmedic%2Findex.php" >Log&nbsp;in</a></b>
+	</div>
+
+	<div id="bd">
+
+		<div id="add-to-cart">
+			<div id="upsell">
+<a class=upsell href=/nps/cc_ide.php>Code Crusader IDE</a> provides a great value and includes both Code Crusader and Code Medic!			</div>
+
+			<div>
+					<font size=-1>
+	<form method=POST action="/nps/cart.php">
+	<input type=hidden name=product_id value=MEDIC-3>
+	<input type=submit name=add_to_cart value="Add to cart">&nbsp;<input type=text name=quantity value=1 size=3>&nbsp;license(s)&nbsp;for&nbsp;<select name=platform_id><option value=6 selected> Linux-Intel<option value=903> OS X (Leopard/Intel)<option value=201> Ubuntu Lucid (Linux-Intel)	</select>
+	</form>
+	</font>
+
+				<form method=POST action="/nps/cart.php">
+				<input type=submit value="View my shopping cart">
+				</form>
+			</div>
+		</div>
+
+		<div id="content">
+
+	<h3>Linux / UNIX Debugging Environment</h3>
+		<p>
+
+
+The standard Linux / UNIX debugger, gdb, is extremely powerful, but its command line interface can be quite intimidating and painful to use.  Code Medic provides an elegant, graphical interface to gdb's most important features.  gdb currently supports C/C++, Java, PalmOS, various embedded systems, Assembly, FORTRAN, and Modula-2.
+<p>
+Code Medic also supports debugging PHP, by providing an interface on top of Xdebug.
+<p>
+In addition, Code Medic integrates with <a href="/jcc/">Code Crusader</a> to provide a rapid, efficient develop-debug cycle.
+<p>
+Code Medic is also compatible with the latest version of Sun's dbx, since this accepts gdb commands.
+<p>
+To learn more, click on the links in the column to the left.
+
+<p><br>
+Latest version: <a href="ChangeLog.php"><b>3.2</b></a>
+<br>
+Written with the <a href="/jx/"><b>JX</b> Application Framework</a>
+
+<p><br>
+<a href="image/example.gif"><img src="image/example_small.gif" border=0 width=115 height=81></a>
+
+<p><br>
+<a href="/form/contact.php?target=medic">Click here</a> to contact New Planet Software about Code Medic.
+
+<!--
+<img src="/image/new_splash.gif" alt="(NEW)" width=32 height=16>
+-->
+
+		</div>	<!-- content -->
+	</div>		<!-- bd -->
+
+	<center id="copyright">
+		<font size=-2>Copyright &copy; 2012 New Planet Software</font>
+	</center>
+
+	<script src="http://www.google-analytics.com/urchin.js" type="text/javascript"></script>
+	<script type="text/javascript">
+	_uacct = "UA-85747-1";
+	urchinTracker();
+	</script>
+
+	</body>
+
+	</html>
+

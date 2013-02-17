@@ -1,0 +1,604 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="ctl00_ctl00_Head1"><script id="EktronFlexMenuJS" type="text/javascript" src="/WorkArea/java/ek_flexmenu.js"></script>
+<script id="EktronJS" type="text/javascript" src="/WorkArea/java/ektron.js"></script>
+
+<link rel="icon" href="/images/shell/favicon.ico" type="image/x-icon" /><link rel="shortcut icon" href="/images/shell/favicon.ico" type="image/x-icon" /><link rel="stylesheet" type="text/css" href="/_css/global.css" /><link rel="stylesheet" type="text/css" href="/_css/print.css" media="print" /><link rel="stylesheet" type="text/css" href="/_css/accordion-faq.css" />
+    <script language="JavaScript" type="text/javascript" src="/_js/jquery.tools.min.js"></script>
+    <script language="JavaScript" type="text/javascript" src="/_js/hsi.js"></script>
+        <script type="text/javascript">
+    $(document).ready(function(){
+        $('a[href*=linkit]') 
+            .livequery('click', function(event) { 
+                var s=s_gi(s_account);
+                s.linkTrackVars='prop2,events';
+                s.linkTrackEvents='event3';
+                s.events='event3';
+                var pageTitle = "";
+                if (document.title != "Health & Safety Institute")
+                { 
+                   if (document.title.indexOf("Health & Safety Institute") != -1)
+                   {               
+                        pageTitle  = document.title.substring(0,document.title.indexOf("Health &"));
+                   } else {
+                        pageTitle  = document.title;
+                   }
+                } else {
+                    if (document.getElementById('ctl00_ctl00_body_BreadCrumb1_lblPage') != null)
+                    {
+                       pageTitle = s.document.getElementById('ctl00_ctl00_body_BreadCrumb1_lblPage').innerHTML;
+                    } else {
+			pageTitle = document.title;
+		    }
+                }
+		s.prop2 = pageTitle + " : " + this.innerHTML;                
+
+                s.tl(this,'d',this.href); 
+                return true; 
+            });         
+    });   
+
+    $(document).ready(function(){
+        $('a[href*=pdf]') 
+            .livequery('click', function(event) { 
+                var s=s_gi(s_account);
+                s.linkTrackVars='prop2,events';
+                s.linkTrackEvents='event3';
+                s.events='event3';
+                var pageTitle = "";
+                if (document.title != "Health & Safety Institute")
+                { 
+                   if (document.title.indexOf("Health & Safety Institute") != -1)
+                   {               
+                        pageTitle  = document.title.substring(0,document.title.indexOf("Health &"));
+                   } else {
+                        pageTitle  = document.title;
+                   }
+                } else {
+                    if (document.getElementById('ctl00_ctl00_body_BreadCrumb1_lblPage') != null)
+                    {
+                       pageTitle = s.document.getElementById('ctl00_ctl00_body_BreadCrumb1_lblPage').innerHTML;
+                    } else {
+			pageTitle = document.title;
+		    }
+                }
+		s.prop2 = pageTitle + " : " + this.innerHTML;                
+
+                s.tl(this,'d',this.href); 
+                return true; 
+            });         
+    });  
+
+
+    $(document).ready(function(){
+        $('a[href*=sign-in]') 
+            .livequery('click', function(event) { 
+                var s=s_gi(s_account);
+                s.linkTrackVars='events';
+                s.linkTrackEvents='event4';
+                s.events='event4';
+                s.tl(this,'o','Sign In');
+                return true; 
+            });         
+    });        
+
+        $(document).ready(function(){
+        $('a[href*=http]') 
+            .livequery('click', function(event) { 
+
+	    if (this.href.indexOf("hsi.com") == -1) {
+                var s=s_gi(s_account);
+                if (this.href.indexOf("store") != -1 || this.href.indexOf("Store") != -1)
+                {
+                    s.linkTrackVars='prop1,events';
+                    s.linkTrackEvents='event1';
+                    s.events='event1';
+                } else {
+                    s.linkTrackVars='prop1,events';
+                    s.linkTrackEvents='event2';
+                    s.events='event2';
+                }
+                
+                if (document.title != "Health & Safety Institute")
+                { 
+                   if (document.title.indexOf("Health & Safety Institute") != -1)
+                   {               
+                        s.prop1 = document.title.substring(0,document.title.indexOf("Health &"));
+                   } else {
+                        s.prop1 = document.title;
+                   }
+                } else {
+                    if (document.getElementById('ctl00_ctl00_body_BreadCrumb1_lblPage') != null)
+                    {
+                       s.prop1 = document.getElementById('ctl00_ctl00_body_BreadCrumb1_lblPage').innerHTML;
+                   }
+                }
+                
+                if (this.innerHTML.indexOf("IMG") != -1)
+                {
+                    s.prop1 += ": " + this.href;               
+                    s.tl(this,'e',this.href); 
+                } else {
+                    s.prop1 += ": " + this.innerHTML;               
+                    s.tl(this,'e',this.innerHTML); 
+                }
+	     }
+                return true; 
+            });         
+    });
+    
+   $(document).ready(function(){
+        $('a[rel*=tab]') 
+            .livequery('click', function(event) { 
+                if ($('#center-tabs') != null)
+                {
+                   var tabId = this.href.substring(this.href.indexOf("/#")+1);
+                   $('#center-tabs').tabs('select', tabId);
+                }
+                return true;
+            });         
+    });
+    </script>
+            
+    
+    
+<link type="text/css" rel="Stylesheet" href="/_css/ui.tabs.css" media="screen" />
+<script src="/_js/jquery.tabs.1.7.2.custom.min.js" type="text/javascript"></script>
+
+<script  type="text/javascript">
+    $(document).ready(function(){
+        $('#center-tabs').tabs();
+    });
+</script>
+ 
+
+
+    <script language="JavaScript" type="text/javascript" src="/_js/s_code.js"></script>        
+    <script language="JavaScript" type="text/javascript" src="/_js/jquery.livequery.js"></script>
+
+<link id="EktronModalCss" href="/WorkArea/java/plugins/modal/ektron.modal.css" type="text/css" rel="stylesheet" />
+
+<link id="__css_horizontal.css" href="/_css/horizontal.css" type="text/css" rel="stylesheet" />
+
+<link id="__css_left-nav.css" href="/_css/left-nav.css" type="text/css" rel="stylesheet" />
+<meta name="Description" content="Health &amp;amp; Safety Institute Web Site" /><title>
+	Regulatory Resources : Quality Assurance Center : Health &amp; Safety Institute
+</title></head>
+<body>
+    <form name="aspnetForm" method="post" action="/quality-assurance/regulatory-resources/medic-first-aid.aspx" onsubmit="javascript:return WebForm_OnSubmit();" id="aspnetForm">
+<div>
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUKLTc3MjkxMzE5OQ9kFgJmD2QWAmYPZBYCAgMQZGQWBgIDD2QWAmYPD2QWAh4Hb25mb2N1cwUOdGhpcy52YWx1ZT0nJztkAgcPZBYEAgMPZBYCAgEPDxYCHgdWaXNpYmxlZ2RkAgUPZBYEAgIPDxYCHgRUZXh0BS1RQSAmYW1wOyBBcHByb3ZhbCBSZXNvdXJjZXMgLSBNRURJQyBGaXJzdCBBaWRkZAIDD2QWAmYPZBYCAgEPD2QWAh4Fc3R5bGUFDWRpc3BsYXk6bm9uZTtkAgsPZBYCAgMPFgIfAgV5PHNjcmlwdCBsYW5ndWFnZT0nSmF2YVNjcmlwdCcgdHlwZT0ndGV4dC9qYXZhc2NyaXB0Jz5zLnBhZ2VOYW1lPSdRQSAmYW1wOyBBcHByb3ZhbCBSZXNvdXJjZXMgLSBNRURJQyBGaXJzdCBBaWQnOzwvc2NyaXB0PmQYAQUeX19Db250cm9sc1JlcXVpcmVQb3N0QmFja0tleV9fFgIFHWN0bDAwJGN0bDAwJEhlYWRlcjEkYnRuU2VhcmNoBSZjdGwwMCRjdGwwMCRib2R5JEJyZWFkQ3J1bWIxJGJ0blN1Ym1pdBhp9Vumgw7a/2ETmcl/PyMhzJAG" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['aspnetForm'];
+if (!theForm) {
+    theForm = document.aspnetForm;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="/WebResource.axd?d=bvAT7oCBpOG3UocDZkLK1zTIPVo7orMyypZHltLwPiHeVhMACPHzg1rfaRl4WQjfg4wtYjEtGOI7YfQAh3-Gq5OTvvE1&amp;t=634751542693095065" type="text/javascript"></script>
+
+
+<script src="/ScriptResource.axd?d=Bs0CA-5eVllQ7plJuabWFAAH40eyTx1gbnoyQgsO8H1AEOrJ_1n7dGHdmL8GcE5TYF_uZCNShWGYR665Wr6kYsX40WyUD_NmG1x8dUe52JuTIc62araeKHvpGx6VvRy76c3A1f0Io5fw0ds7HXdxFLDtQNA1&amp;t=3617c416" type="text/javascript"></script>
+<script src="/ScriptResource.axd?d=daAyew7S-y332MkWj7oHNjpwUpjYe27d5ZOrGAG_wus0lP6cP_65-YHguUl2ZVVCrKZOAWGq-ezrb129KKwA59FR8I-TSjY6-D18XwPrjyeTCu3o_HPz-dn6PjbiG6Zgdp72pn7EniS_e3RA1Oe30VDOSoQ1&amp;t=4a539685" type="text/javascript"></script>
+<script src="/ScriptResource.axd?d=MtqdrdebWEYnU5RdvayROhEe_ZdljiyqTIAFlBs6W6j9j0_gQb_VVczwYt3IPK0Ed9IsK7gpnPQ6NSLNBhuwj4-ojJXiPf--m6gnv7gAIYzh91RRhocwi1sc2P5PDiuJ1bxL5845t1wYH-a4BaEqPd3JyL7bO5DbrWdNPNHJTV05EsV_0&amp;t=4a539685" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+function WebForm_OnSubmit() {
+if (typeof(ValidatorOnSubmit) == "function" && ValidatorOnSubmit() == false) return false;
+return true;
+}
+//]]>
+</script>
+
+<div>
+
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEWBwLJw7vnDgKewbKlCAKMxLi9DwKzou+XBgK20cjzDALO4uPTDgLbyuayAowozYUKllj5FbxTHbpSX9rko2IE" />
+</div>
+    <script type="text/javascript">
+//<![CDATA[
+Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$ctl05', document.getElementById('aspnetForm'));
+Sys.WebForms.PageRequestManager.getInstance()._updateControls(['tctl00$ctl00$body$BreadCrumb1$uxEmail'], ['ctl00$ctl00$body$BreadCrumb1$btnSubmit'], [], 90);
+//]]>
+</script>
+
+    <div class="container">
+        
+<div class="header">
+    <div class="home">
+        <a href="/default.aspx">
+            <img src="/images/shell/hsi-logo.gif" width="200" height="100" alt="HSI" /></a></div>
+    <div class="siteSearch">
+        <input name="ctl00$ctl00$Header1$txtSearchText" type="text" value="Search" id="ctl00_ctl00_Header1_txtSearchText" class="searchText" onfocus="this.value='';" />
+        <input type="image" name="ctl00$ctl00$Header1$btnSearch" id="ctl00_ctl00_Header1_btnSearch" src="/images/shell/spacer.gif" style="border-width:0px;outline: none" />
+    </div>
+    <div class="hdr-links">
+        <a href="/sign-in/" target="_blank" onclick="var s=s_gi('whitehorsehsi');s.linkTrackVars='events';s.linkTrackEvents='event4';s.events='event4';s.tl(this,'o','Sign In');">Sign in</a> | <a href="/faq/">FAQ</a> | <a href="/about-hsi/contact-us">Contact Us</a> | 
+  
+        <!-- BEGIN LivePerson Button Code --><a id="_lpChatBtn" href='http://server.iad.liveperson.net/hc/22550264/?cmd=file&file=visitorWantsToChat&site=22550264&byhref=1&imageUrl=http://server.iad.liveperson.net/hcp/Gallery/ChatButton-Gallery/English/General/1a/' target='chat22550264'  onClick="javascript:window.open('http://server.iad.liveperson.net/hc/22550264/?cmd=file&file=visitorWantsToChat&site=22550264&imageUrl=http://server.iad.liveperson.net/hcp/Gallery/ChatButton-Gallery/English/General/1a/&referrer='+escape(document.location),'chat22550264','width=475,height=400,resizable=yes');var s=s_gi('whitehorsehsi');s.linkTrackVars='prop6,events';s.linkTrackEvents='event9';s.events='event9';s.prop6='Click to Chat: Top Nav';s.tl(this,'o','Click to Chat: Top Nav');return false;" >Live Chat</a><!-- END LivePerson Button code -->
+        
+     </div>
+    <!-- /header -->
+</div>
+
+        <link type="text/css" rel="stylesheet" href="/_css/horizontal.css" /><div class="horizontal"><div class="ekflexmenu" id="eb2083d84_4294967296_0_ekflexmenu"><div class="ekflexmenu_menu_level_0 ekflexmenu_submenu"><ul class="ekflexmenu_submenu_items" id="eb2083d84_4294967296_0_submenu_items"><li class="ekflexmenu_menu_level_1 ekflexmenu_submenu ekflexmenu_startlevel" id="eb2083d84_4294967296_6"><a id="eb2083d84_4294967296_6_button" tabindex="0" class="ekflexmenu_button" href="/about-hsi/">About HSI</a><input type="hidden" id="eb2083d84_4294967296_6_parentid" value="eb2083d84_4294967296_4294967296" /></li><li class="ekflexmenu_menu_level_1 ekflexmenu_submenu ekflexmenu_startlevel" id="eb2083d84_4294967296_7"><a id="eb2083d84_4294967296_7_button" tabindex="0" class="ekflexmenu_button" href="/our-services/"><img border="0" src="/uploadedImages/Images/Buttons/bullet.gif" />Our Services</a><input type="hidden" id="eb2083d84_4294967296_7_parentid" value="eb2083d84_4294967296_4294967296" /></li><li class="ekflexmenu_menu_level_1 ekflexmenu_submenu ekflexmenu_startlevel" id="eb2083d84_4294967296_8"><a id="eb2083d84_4294967296_8_button" tabindex="0" class="ekflexmenu_button" href="/program-catalog/"><img border="0" src="/uploadedImages/Images/Buttons/bullet.gif" />Online Store</a><input type="hidden" id="eb2083d84_4294967296_8_parentid" value="eb2083d84_4294967296_4294967296" /></li><li class="ekflexmenu_menu_level_1 ekflexmenu_submenu ekflexmenu_startlevel" id="eb2083d84_4294967296_9"><a id="eb2083d84_4294967296_9_button" tabindex="0" class="ekflexmenu_button" href="/training-resources/"><img border="0" src="/uploadedImages/Images/Buttons/bullet.gif" />Training Resources</a><input type="hidden" id="eb2083d84_4294967296_9_parentid" value="eb2083d84_4294967296_4294967296" /></li><li class="ekflexmenu_menu_level_1 ekflexmenu_submenu ekflexmenu_startlevel" id="eb2083d84_4294967296_10"><a id="eb2083d84_4294967296_10_button" tabindex="0" class="ekflexmenu_button" href="/events/"><img border="0" src="/uploadedImages/Images/Buttons/bullet.gif" />News &amp; Events</a><input type="hidden" id="eb2083d84_4294967296_10_parentid" value="eb2083d84_4294967296_4294967296" /></li><li class="ekflexmenu_menu_level_1 ekflexmenu_submenu ekflexmenu_startlevel" id="eb2083d84_4294967296_11"><a id="eb2083d84_4294967296_11_button" tabindex="0" class="ekflexmenu_button_selected" href="/quality-assurance/"><img border="0" src="/uploadedImages/Images/Buttons/bullet.gif" />Quality Assurance Center</a><input type="hidden" id="eb2083d84_4294967296_11_parentid" value="eb2083d84_4294967296_4294967296" /></li><li><a class="ekflexmenu_link" href="http://info.hsi.com/good-samaritan-success-stories/" target="_self"><img border="0" src="/uploadedImages/Images/Buttons/bullet.gif" />Good Sam</a></li><li><a class="ekflexmenu_link" href="http://info.hsi.com/blog" target="_self"><img border="0" src="/uploadedImages/Images/Buttons/bullet.gif" />Blog</a></li></ul></div></div></div>                
+        <div class="main">
+	<h1 class="printMe"><img src="/images/shell/hsi-logo.gif" width="200" height="100" alt="" /></h1>
+           
+            <div class="leftchannel">
+                <span id="ctl00_ctl00_body_flexMenu"><link type="text/css" rel="stylesheet" href="/_css/left-nav.css" /><div class="left-nav"><div class="ekflexmenu" id="e2ab21bc8_16_0_ekflexmenu"><div class="ekflexmenu_menu_level_0 ekflexmenu_submenu"><ul><li><a class="hsi-home" href="/default.aspx">HSI Home</a><ul class="ekflexmenu_submenu_items" id="e2ab21bc8_16_0_submenu_items"><li class="ekflexmenu_menu_level_0 ekflexmenu_submenu ekflexmenu_startlevel" id="e2ab21bc8_16_16"><a id="e2ab21bc8_16_16_button" tabindex="0" onkeydown="return (ekFlexMenuKey(event));" onblur="return (ekFlexMenuMsOut(event));" onfocus="return (ekFlexMenuMsOvr(event));" onclick="return (ekFlexMenuClk(event));" onmouseover="return (ekFlexMenuMsOvr(event));" onmouseout="return (ekFlexMenuMsOut(event));" class="ekflexmenu_button_selected" href="/quality-assurance/">Quality Assurance Center</a><input type="hidden" id="e2ab21bc8_16_16_parentid" value="e2ab21bc8_16_0" /><ul id="e2ab21bc8_16_16_submenu_items" class="ekflexmenu_submenu_items"><li><a class="ekflexmenu_link" href="/quality-assurance/approval-compliance.aspx" target="_self">Approval &amp; Compliance</a></li><li class="ekflexmenu_menu_level_1 ekflexmenu_submenu" id="e2ab21bc8_16_2147483650"><a id="e2ab21bc8_16_2147483650_button" tabindex="0" onkeydown="return (ekFlexMenuKey(event));" onblur="return (ekFlexMenuMsOut(event));" onfocus="return (ekFlexMenuMsOvr(event));" onclick="return (ekFlexMenuClk(event));" onmouseover="return (ekFlexMenuMsOvr(event));" onmouseout="return (ekFlexMenuMsOut(event));" class="ekflexmenu_button_selected" href="/quality-assurance/regulatory-resources/">QA &amp; Approval Resources</a><input type="hidden" id="e2ab21bc8_16_2147483650_parentid" value="e2ab21bc8_16_16" /><ul id="e2ab21bc8_16_2147483650_submenu_items" class="ekflexmenu_submenu_items"><li><a class="ekflexmenu_link" href="/quality-assurance/regulatory-resources/ashi.aspx" target="_self">ASHI</a></li><li><a class="ekflexmenu_link_selected" href="/quality-assurance/regulatory-resources/medic-first-aid.aspx" target="_self">MEDIC First Aid</a></li><li><a class="ekflexmenu_link" href="/quality-assurance/regulatory-resources/24-7ems.aspx" target="_self">24-7 EMS</a></li><li><a class="ekflexmenu_link" href="/quality-assurance/regulatory-resources/24-7Fire/" target="_self">24-7 Fire</a></li></ul></li><li><a class="ekflexmenu_link" href="/quality-assurance/instructor-resources.aspx" target="_self">Instructor QA Resources</a></li><li><a class="ekflexmenu_link" href="http://www.osmanager4.com/hsi/marketing_apps/qa.aspx" target="_top">Status Verification</a></li><li><a class="ekflexmenu_link" href="/quality-assurance/submit-request.aspx" target="_self">Regulatory Request Form</a></li></ul></li></ul></li></ul></div></div></div><div><img src="/images/shell/bg-nav-left-btm.gif" width="176" height="15" alt="" /></div><script language="JavaScript" type="text/javascript">
+			// Pass server control properties, etc., to Javascript:
+			if (("undefined" == typeof window.ekFlexMenu_ekflexmenuArray)
+				|| (null == window.ekFlexMenu_ekflexmenuArray)) {
+				window.ekFlexMenu_ekflexmenuArray = new Array;
+			}
+			window.ekFlexMenu_ekflexmenuArray[window.ekFlexMenu_ekflexmenuArray.length] = "e2ab21bc8_16_0";
+			//
+			if (("undefined" == typeof window.ekFlexMenu_swRev)
+			|| (null == window.ekFlexMenu_swRev)) {
+			window.ekFlexMenu_swRev = new Array;
+			}
+			window.ekFlexMenu_swRev["e2ab21bc8"] = "7.0.0.66";
+			//
+			if (("undefined" == typeof window.ekFlexMenu_startupSubmenuBranchId)
+			|| (null == window.ekFlexMenu_startupSubmenuBranchId)) {
+			window.ekFlexMenu_startupSubmenuBranchId = new Array;
+			}
+			window.ekFlexMenu_startupSubmenuBranchId["e2ab21bc8"] = "";
+			//
+			if (("undefined" == typeof window.ekFlexMenu_autoCollapseBranches)
+			|| (null == window.ekFlexMenu_autoCollapseBranches)) {
+			window.ekFlexMenu_autoCollapseBranches = new Array;
+			}
+			window.ekFlexMenu_autoCollapseBranches["e2ab21bc8"] = "true";
+			//
+			if (("undefined" == typeof window.ekFlexMenu_startCollapsed)
+			|| (null == window.ekFlexMenu_startCollapsed)) {
+			window.ekFlexMenu_startCollapsed = new Array;
+			}
+			window.ekFlexMenu_startCollapsed["e2ab21bc8"] = "true";
+			//
+			if (("undefined" == typeof window.ekFlexMenu_startWithRootFolderCollapsed)
+				|| (null == window.ekFlexMenu_startWithRootFolderCollapsed)) {
+				window.ekFlexMenu_startWithRootFolderCollapsed = new Array;
+			}
+			window.ekFlexMenu_startWithRootFolderCollapsed["e2ab21bc8"] = "false";
+			//
+			if (("undefined" == typeof window.ekFlexMenu_masterControlIdHash)
+				|| (null == window.ekFlexMenu_masterControlIdHash)) {
+				window.ekFlexMenu_masterControlIdHash = new Array;
+			}
+			window.ekFlexMenu_masterControlIdHash["e2ab21bc8"] = "";
+			
+			//
+			if (("undefined" == typeof window.ekFlexMenu_ajaxEnabled)
+			|| (null == window.ekFlexMenu_ajaxEnabled)) {
+			window.ekFlexMenu_ajaxEnabled = new Array;
+			}
+			window.ekFlexMenu_ajaxEnabled["e2ab21bc8"] = "false";
+			//
+			if (("undefined" == typeof window.ekFlexMenu_ajaxWSPath)
+			|| (null == window.ekFlexMenu_ajaxWSPath)) {
+			window.ekFlexMenu_ajaxWSPath = new Array;
+			}
+			window.ekFlexMenu_ajaxWSPath["e2ab21bc8"] = "/WorkArea/webservices/";
+			// 
+			if (("undefined" == typeof window.ekFlexMenu_displayXslt)
+			|| (null == window.ekFlexMenu_displayXslt)) {
+			window.ekFlexMenu_displayXslt = new Array;
+			}
+			window.ekFlexMenu_displayXslt["e2ab21bc8"] = "/_xslt/LeftNavMenu.xsl";
+			//
+			if (("undefined" == typeof window.ekFlexMenu_cacheInterval)
+			|| (null == window.ekFlexMenu_cacheInterval)) {
+			window.ekFlexMenu_cacheInterval = new Array;
+			}
+			window.ekFlexMenu_cacheInterval["e2ab21bc8"] = "600";
+			//
+			//////////////////////////////////////////////////////////////////
+			// Add event handler calling functions:
+			//   Test to ensure that ekFlexMenu is valid/reachable (this is needed 
+			//   to prevent intermittent Javascript errors that can occur if user
+			//   causes event to fire while page is being torn down (i.e. a link is
+			//   clicked, browser is fetching new page, movement causes mouse-out...):
+			function ekFlexMenu_IsValid(obj) {
+				return (("undefined" != typeof obj) && (null != obj));
+			}
+			function ekFlexMenuPopupMsIn(event) {
+				if (ekFlexMenu_IsValid(ekFlexMenu) && ekFlexMenu_IsValid(ekFlexMenu.mouseIn)) {
+					return (ekFlexMenu.mouseIn(event));
+				}
+				return (true);
+			}
+			function ekFlexMenuPopupMsOut(event) {
+				if (ekFlexMenu_IsValid(ekFlexMenu) && ekFlexMenu_IsValid(ekFlexMenu.mouseOut)) {
+					return (ekFlexMenu.mouseOut(event));
+				}
+				return (true);
+			}
+			function ekFlexMenuKey(event) {
+				if (ekFlexMenu_IsValid(ekFlexMenu) && ekFlexMenu_IsValid(ekFlexMenu.menuBtnKeyHdlr)) {
+					return (ekFlexMenu.menuBtnKeyHdlr(event));
+				}
+				return (true);
+			}
+			function ekFlexMenuMsOut(event) {
+				if (ekFlexMenu_IsValid(ekFlexMenu) && ekFlexMenu_IsValid(ekFlexMenu.menuBtnMouseOutHdlr)) {
+					return (ekFlexMenu.menuBtnMouseOutHdlr(event));
+				}
+				return (true);
+			}
+			function ekFlexMenuMsOvr(event) {
+				if (ekFlexMenu_IsValid(ekFlexMenu) && ekFlexMenu_IsValid(ekFlexMenu.menuBtnMouseOverHdlr)) {
+					return (ekFlexMenu.menuBtnMouseOverHdlr(event));
+				}
+				return (true);
+			}
+			function ekFlexMenuClk(event) {
+				if (ekFlexMenu_IsValid(ekFlexMenu) && ekFlexMenu_IsValid(ekFlexMenu.menuBtnClickHdlr)) {
+					return (ekFlexMenu.menuBtnClickHdlr(event));
+				}
+				return (true);
+			}
+		</script><script language="javascript" type="text/javascript" src="/WorkArea/java/ek_flexmenu.js"></script></span>
+                
+    <div id="ctl00_ctl00_body_cphLeftChannel_LeftPromo1">
+	<div class="EktronAjaxLoading" align="left"><img src="/WorkArea/images/application/loading_big.gif" alt="Loading..." /></div><div class="channel-header">GSA Advantage</div><div class="channel-content-full"><img src="/uploadedImages/Partners/GSAwNumber_MEDIC.jpg" alt="GSA Advantage" title="GSA Advantage" /></div><div class="channel-content"><HTMLContent><a href="/gsa/" title="Click here for instructions" class="cta">Instructions</a></HTMLContent></div><div class="channel-content-base"></div>
+</div>
+
+            </div>
+            <div class="centerchannel">
+                
+<div class="breadcrumb">
+<span id="ctl00_ctl00_body_BreadCrumb1_cmsBreadcrumb"><a target="_self" href="/default.aspx" title="HSI Home">HSI Home</a> > <a target="_self" href="/quality-assurance" title="Quality Assurance Center">Quality Assurance Center</a></span><span id="ctl00_ctl00_body_BreadCrumb1_lblSpace" class="extra-space">&gt;</span><span id="ctl00_ctl00_body_BreadCrumb1_lblPage">QA &amp; Approval Resources - MEDIC First Aid</span>
+
+<div id="email"><a href="javascript://" onclick="emailPage();return false;"><img src="/images/shell/spacer.gif" width="11" height="10" alt="Email" title="Email" /></a></div>
+<div id="printpage"><a href="javascript://" onclick="window.print();var s=s_gi('whitehorsehsi');s.linkTrackVars='prop8,events';s.linkTrackEvents='event13';s.events='event13';s.prop8='Print This Page:'+document.title;s.tl(this,'o','Print');return false"><img src="/images/shell/spacer.gif" id="print" width="11" height="10" alt="Print this page" title="Print this page" /></a></div>
+<script language="javascript" type="text/javascript">
+function resetForm()
+{
+   document.getElementById('ctl00_ctl00_body_BreadCrumb1_lblSuccess').style.display = "none";
+   document.getElementById('ctl00_ctl00_body_BreadCrumb1_pnlEmailForm').style.display = "block";  
+}
+</script>
+<!-- /breadcrumb --></div>
+<div class="jqmOverlay" id="overlay">
+    <br />
+</div>
+<div id="emailPage" style="display: none;">
+    <div align="right" style="padding-bottom: 5px;">
+        <a href="#" onclick="closeEmailPage();resetForm();">
+            <img src="/images/closelabel.gif" />
+        </a>
+    </div>
+    <div id="emailForm">
+   
+        <h2>
+            Email this Page to a Friend</h2>
+        <br />
+        <div id="ctl00_ctl00_body_BreadCrumb1_uxEmail">
+	
+      <div id="ctl00_ctl00_body_BreadCrumb1_lblSuccess" style="display:none;">
+		Thank you. Your email has been sent.
+      <br /><br />
+      <a href="#" onclick="closeEmailPage();resetForm();">Close Window</a>
+      
+	</div>
+      
+      <div id="ctl00_ctl00_body_BreadCrumb1_pnlEmailForm" onkeypress="javascript:return WebForm_FireDefaultButton(event, 'ctl00_ctl00_body_BreadCrumb1_btnSubmit')">
+		  
+       <p>
+            To email address:<br />
+            <input name="ctl00$ctl00$body$BreadCrumb1$txtToEmail" type="text" id="ctl00_ctl00_body_BreadCrumb1_txtToEmail" style="width:195px;" /><span id="ctl00_ctl00_body_BreadCrumb1_RequiredFieldValidator1" style="color:Red;display:none;"> *required</span>
+        </p>
+        <p>
+            Your email address:<br />
+            <input name="ctl00$ctl00$body$BreadCrumb1$txtFromEmail" type="text" id="ctl00_ctl00_body_BreadCrumb1_txtFromEmail" style="width:195px;" /><span id="ctl00_ctl00_body_BreadCrumb1_RequiredFieldValidator2" style="color:Red;display:none;"> *required</span>
+        </p>
+        <p>
+            Comments:<br />
+        <textarea name="ctl00$ctl00$body$BreadCrumb1$txtComments" rows="2" cols="20" id="ctl00_ctl00_body_BreadCrumb1_txtComments" style="width:310px;"></textarea></p>
+        <div align="right"><input type="image" name="ctl00$ctl00$body$BreadCrumb1$btnSubmit" id="ctl00_ctl00_body_BreadCrumb1_btnSubmit" src="/images/shell/btn-submit.gif" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$ctl00$body$BreadCrumb1$btnSubmit&quot;, &quot;&quot;, true, &quot;EmailForm&quot;, &quot;&quot;, false, false))" style="border-width:0px;" /></div> 
+     
+	</div>      
+     
+</div> 
+    </div>
+</div>
+                <div class="content-top"></div>
+                <div class="content">
+                    
+    <div id="ctl00_ctl00_body_cphMain_cbMain">
+	<div class="EktronAjaxLoading" align="left"><img src="/WorkArea/images/application/loading_big.gif" alt="Loading..." /></div><div class="module-whole"><h1>QA &amp; Approval Resources for MEDIC First Aid</h1><Content></Content></div><div class="clear"></div><br /><div id="center-tabs"><ul class="ui-tabs-nav"><li><a href="#tab-1"><span><Name>Quality Assurance</Name></span></a></li><li><a href="#tab-2"><span><Name>Medical Guidelines/Source Authorities</Name></span></a></li><li><a href="#tab-3"><span><Name>Instructor Authorization</Name></span></a></li></ul><div class="boxed ui-tabs-container ui-tabs-hide" id="tab-1"><div class="module-whole"><h1>Quality Assurance</h1><Content><p>MEDIC FIRST AID is committed to the highest levels of excellence in both our materials and their delivery. Quality Assurance is a critical element that imbues every aspect of our operations. Our programs, corporate staff, Training Centers, and Instructors are all held to rigorous standards that exceed those of many other national certification organizations.For more detailed information, visit the following links:</p>
+<p><a class="cta" title="Sample Certification Cards" href="/uploadedFiles/site_root/Regulatory_Resource_Center/MEDIC First Aid G2010 Certification Card samples.pdf" target="_blank">Sample G2010 Certification Cards</a>Ê(PDF)</p>
+<p><a href="/HSI-TCAM-v16-1/" title="Training Center Administrative Manual" target="_blank" class="cta"><span class="cta">Training Center Administrative Manual</span></a>Ê(PDF)</p>
+<p><a class="cta" title="Training Center Audits" href="/quality-assurance/regulatory-resources/medic-first-aid/quality.aspx">Training Center Audits</a></p>
+<p><a class="cta" title="Rate Your Program " href="/quality-assurance/regulatory-resources/medic-first-aid/quality.aspx#rate">Rate Your Program </a></p>
+<p><a class="cta" title="Complaint Review Process" href="/quality-assurance/regulatory-resources/medic-first-aid/quality.aspx#complaint">Complaint Review Process</a></p>
+</Content></div><div class="clear"></div></div><div class="boxed ui-tabs-container ui-tabs-hide" id="tab-2"><div class="module-whole"><h1>Your assurance of integrity </h1><Content><p><span>MEDIC FIRST AID Training Programs adhere to the most up-to-date medical and educational guidelines published by nationally recognized authorities. When possible, MEDIC FIRST AID participates in the guideline process to help in the development and revision of our training programs.</span></p>
+<p><!--StartFragment--></p>
+<p><span class="Normal1"><strong>The MEDIC First Aid BasicPlus Student
+Guide is based upon the following standards, guidelines, and recommendations:</strong></span></p>
+<p>Ê</p>
+<ul>
+<li>Ò2010
+International Consensus on Cardiopulmonary Resuscitation and Emergency
+Cardiovascular Care Science with Treatment Recommendations.Ó Circulation 122,
+suppl. 2 (2010): S250-S581.</li>
+<li>Ò2010 American Heart Association and American Red Cross International Consensus
+on First Aid Science with Treatment Recommendations.Ó Circulation 122, suppl. 2
+(2010): S582-S605.</li>
+<li>Ò2010 American Heart Association Guidelines for Cardiopulmonary Resuscitation
+and Emergency Cardiovascular Care Science.Ó Circulation 122, suppl. 3 (2010):
+S639-S946.</li>
+<li>Ò2010
+American Heart Association and American Red Cross Guidelines for First Aid.Ó
+Circulation 122, suppl. 3 (2010): S934-S946.</li>
+<li>ANSI
+Standard Z490.1. ÒCriteria for Accepted Practices in Safety, Health, and
+Environmental Training.Ó American National Standard, 2009.</li>
+<li>ASTM
+Standard F2171-02. ÒStandard Guide for Defining the Performance of First Aid
+Providers in Occupational Settings.Ó ASTM International, 2009.</li>
+<li>OSHA
+3317-06N. ÒBest Practices Guide: Fundamentals of a Workplace First-Aid
+Program.Ó U.S. Department of Labor, Occupational Safety and Health
+Administration, 2006.</li>
+</ul>
+<p>Ê</p>
+</Content></div><div class="clear"></div></div><div class="boxed ui-tabs-container ui-tabs-hide" id="tab-3"><div class="module-whole"><h1>Authorization process</h1><Content><p>Affiliation with a MEDIC First Aid Training Center is a requirement for authorization as an Instructor.  MEDIC First Aid Instructor authorization lasts for a period of two years.  Applications for authorization must be submitted to HSI by the Director of the Training Center.<br /><br />There are two methods of achieving authorization:<br /><br />1. Successful completion of an appropriate MEDIC First Aid Instructor Development Course.<br /><br />2. Through reciprocity, i.e., holding current Instructor credentials with another nationally recognized and reputable organization or equivalent.<br /><br />MEDIC First Aid has five Instructor categories; each authorized to certify providers in specific MEDIC First Aid brand programs. </p>
+<p><a class="cta" title="Learn more about MEDIC First Aid Instructor categories" href="/uploadedFiles/site_root/Training_Resources/Instructor_Resources/MEDIC_Instructor_types.pdf" target="_blank">Learn more about MEDIC First Aid Instructor categories</a></p>
+</Content></div><div class="clear"></div></div></div><div class="clear"></div><div class="module-whole"><h1></h1><Content></Content></div>
+</div>
+
+                    <!-- /content -->
+                </div>
+                <div class="content-btm">
+                </div>
+                <!-- /center-channel -->
+            </div>
+            <div class="rightchannel">
+                
+    <div id="ctl00_ctl00_body_cphRightChannel_Promo1">
+	<div class="EktronAjaxLoading" align="left"><img src="/WorkArea/images/application/loading_big.gif" alt="Loading..." /></div><div class="channel-header">Commited to Excellence</div><div class="channel-content-full"><div class="qa"><a class="header3" href="/quality-assurance/" target=""><h3>HSI Quality Assurance</h3></a><div align="center"><img src="/uploadedImages/Images/PromoSpots/star-excellence.gif" /></div><h4 class="rate">Rate Your Program</h4><a href="http://www.ashinstitute.org/surveyuser/v1.asp?n=2" target="_blank">ASHI</a><a href="http://www.ashinstitute.org/medicsurveyuser/v1.asp?n=51" target="_blank">MEDIC First Aid</a><h4 class="voice">Voice a Concern</h4><a href="http://www.ashinstitute.org/surveyUser/launchNewStepSurvey.asp?n=14" target="_blank">ASHI</a><a href="http://www.ashinstitute.org/medicsurveyUser/launchNewStepSurvey.asp?n=43" target="_blank">MEDIC First Aid</a><h4 class="admin">Training Ctr. Standards</h4><a href="/WorkArea/linkit.aspx?LinkIdentifier=id&amp;ItemID=2147485681" target="">HSI  TCAM  2012</a></div></div><div class="selector-nav-base"></div>
+</div>
+    
+    
+
+            </div>
+
+        </div>
+        
+<div class="footer">
+    <div class="copyright">
+        &copy; 2012 HSI<!-- /copyright --></div>
+    <div class="footer-links">
+        <div id="ctl00_ctl00_Footer1_cbFooter">
+	<div class="EktronAjaxLoading" align="left"><img src="/WorkArea/images/application/loading_big.gif" alt="Loading..." /></div><a title="Quality Assurance" href="/quality-assurance/">Quality Assurance</a> | <a href="/privacy-policy.aspx">Privacy Policy</a> | <a href="/terms-of-use.aspx">Terms of Use</a> | <a href="/sitemap.aspx">Site Map</a>
+</div>        
+        <!-- /footerlinks -->
+     </div>
+    <div id="ctl00_ctl00_Footer1_cbSocialFooter">
+	<div class="EktronAjaxLoading" align="left"><img src="/WorkArea/images/application/loading_big.gif" alt="Loading..." /></div>
+</div>        
+    <!-- /footer -->
+</div>
+
+
+    </div>
+    
+
+
+<script language='JavaScript' type='text/javascript'>s.pageName='QA &amp; Approval Resources - MEDIC First Aid';</script>
+
+    
+<!-- BEGIN LivePerson Monitor. need this on all pages -->
+    <script language='javascript'> var lpMTagConfig = {'lpServer' : "server.iad.liveperson.net",'lpNumber' : "22550264",'lpProtocol' : "http"}; function lpAddMonitorTag(src){if(typeof(src)=='undefined'||typeof(src)=='object'){src=lpMTagConfig.lpMTagSrc?lpMTagConfig.lpMTagSrc:'/hcp/html/mTag.js';}if(src.indexOf('http')!=0){src=lpMTagConfig.lpProtocol+"://"+lpMTagConfig.lpServer+src+'?site='+lpMTagConfig.lpNumber;}else{if(src.indexOf('site=')<0){if(src.indexOf('?')<0)src=src+'?';else src=src+'&';src=src+'site='+lpMTagConfig.lpNumber;}};var s=document.createElement('script');s.setAttribute('type','text/javascript');s.setAttribute('charset','iso-8859-1');s.setAttribute('src',src);document.getElementsByTagName('head').item(0).appendChild(s);} if (window.attachEvent) window.attachEvent('onload',lpAddMonitorTag); else window.addEventListener("load",lpAddMonitorTag,false);</script>
+<!-- END LivePerson Monitor. -->
+	
+<!-- Start of HubSpot Logging Code  -->
+<script type="text/javascript" language="javascript">
+var hs_portalid=22308; 
+var hs_salog_version = "2.00";
+var hs_ppa = "hsi.app2.hubspot.com";
+document.write(unescape("%3Cscript src='" + document.location.protocol + "//" + hs_ppa + "/salog.js.aspx' type='text/javascript'%3E%3C/script%3E"));
+</script>
+
+<script type="text/javascript">
+(function() {
+ var p = document.createElement('script');
+ p.type = 'text/javascript'; p.async = true;
+ p.src = '//d2f7h8c8hc0u7y.cloudfront.net/performable/pax/4vfEk7.js';
+ var s = document.getElementsByTagName('script')[0];
+ s.parentNode.insertBefore(p, s);
+})();
+</script>
+<!-- End of HubSpot Logging Code -->
+
+<!-- Google Analytics -->
+<script type="text/javascript">
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-26022974-1']);
+_gaq.push(['_trackPageview']);
+(function() {
+var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script>
+<!-- End of Google Analytics -->
+
+   
+    <span></span>
+    
+<script type="text/javascript">
+//<![CDATA[
+var Page_Validators =  new Array(document.getElementById("ctl00_ctl00_body_BreadCrumb1_RequiredFieldValidator1"), document.getElementById("ctl00_ctl00_body_BreadCrumb1_RequiredFieldValidator2"));
+//]]>
+</script>
+
+<script type="text/javascript">
+//<![CDATA[
+var ctl00_ctl00_body_BreadCrumb1_RequiredFieldValidator1 = document.all ? document.all["ctl00_ctl00_body_BreadCrumb1_RequiredFieldValidator1"] : document.getElementById("ctl00_ctl00_body_BreadCrumb1_RequiredFieldValidator1");
+ctl00_ctl00_body_BreadCrumb1_RequiredFieldValidator1.controltovalidate = "ctl00_ctl00_body_BreadCrumb1_txtToEmail";
+ctl00_ctl00_body_BreadCrumb1_RequiredFieldValidator1.errormessage = " *required";
+ctl00_ctl00_body_BreadCrumb1_RequiredFieldValidator1.display = "Dynamic";
+ctl00_ctl00_body_BreadCrumb1_RequiredFieldValidator1.validationGroup = "EmailForm";
+ctl00_ctl00_body_BreadCrumb1_RequiredFieldValidator1.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
+ctl00_ctl00_body_BreadCrumb1_RequiredFieldValidator1.initialvalue = "";
+var ctl00_ctl00_body_BreadCrumb1_RequiredFieldValidator2 = document.all ? document.all["ctl00_ctl00_body_BreadCrumb1_RequiredFieldValidator2"] : document.getElementById("ctl00_ctl00_body_BreadCrumb1_RequiredFieldValidator2");
+ctl00_ctl00_body_BreadCrumb1_RequiredFieldValidator2.controltovalidate = "ctl00_ctl00_body_BreadCrumb1_txtFromEmail";
+ctl00_ctl00_body_BreadCrumb1_RequiredFieldValidator2.errormessage = " *required";
+ctl00_ctl00_body_BreadCrumb1_RequiredFieldValidator2.display = "Dynamic";
+ctl00_ctl00_body_BreadCrumb1_RequiredFieldValidator2.validationGroup = "EmailForm";
+ctl00_ctl00_body_BreadCrumb1_RequiredFieldValidator2.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
+ctl00_ctl00_body_BreadCrumb1_RequiredFieldValidator2.initialvalue = "";
+//]]>
+</script>
+
+
+<script type="text/javascript">
+//<![CDATA[
+
+var Page_ValidationActive = false;
+if (typeof(ValidatorOnLoad) == "function") {
+    ValidatorOnLoad();
+}
+
+function ValidatorOnSubmit() {
+    if (Page_ValidationActive) {
+        return ValidatorCommonOnSubmit();
+    }
+    else {
+        return true;
+    }
+}
+        Sys.Application.initialize();
+
+document.getElementById('ctl00_ctl00_body_BreadCrumb1_RequiredFieldValidator1').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ctl00_ctl00_body_BreadCrumb1_RequiredFieldValidator1'));
+}
+
+document.getElementById('ctl00_ctl00_body_BreadCrumb1_RequiredFieldValidator2').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('ctl00_ctl00_body_BreadCrumb1_RequiredFieldValidator2'));
+}
+//]]>
+</script>
+</form>
+</body>
+</html>

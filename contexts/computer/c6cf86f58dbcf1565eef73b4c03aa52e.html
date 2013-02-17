@@ -1,0 +1,2486 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML+RDFa 1.0//EN" "http://www.w3.org/MarkUp/DTD/xhtml-rdfa-1.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" itemscope itemtype="http://schema.org/Article">
+<head>
+<meta http-equiv="Cache-control" content="private">
+<link href="https://plus.google.com/100292833634918081724" rel="publisher" />
+	<title>  Dual Boot Your Pre-Installed Windows 7 Computer with XP - How-To Geek</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta property="fb:page_id" content="65878196434" />
+	<meta name="verify-v1" content="WiU7236KQY8e6jcxePbZscPXDuMvJ3b9ydseGd4G5AE=" />
+
+	<meta name="ROBOTS" content="INDEX, FOLLOW" />
+	<meta name="REVISIT-AFTER" content="1 DAYS" />
+	<link rel="alternate" type="application/rss+xml" title="How-To Geek RSS Feed" href="http://feeds.howtogeek.com/HowToGeek" />
+			<meta itemprop="name" name="title" content="Dual Boot Your Pre-Installed Windows 7 Computer with XP" />
+		<meta itemprop="description" name="description" content="So you got your shiny new pre-installed Windows 7 computer over the holidays, but you want to have trusty XP standing by in a dual boot setup. Today we’ll walk through creating a new partition in Windows 7 then installing XP on it." />
+		<meta property="og:image" content="http://cdn.howtogeek.com/thumbcache/140/160/a5c04e52dd06854a57f6c67938e70146/wp-content/uploads/2010/01/sshot20100106203631.png" />
+		<link rel="image_src" href="http://cdn.howtogeek.com/thumbcache/140/160/a5c04e52dd06854a57f6c67938e70146/wp-content/uploads/2010/01/sshot20100106203631.png" />
+	
+	<link rel="stylesheet" media="print" href="http://cdn.howtogeek.com/public/css/print.css?1343870406" type="text/css" />
+	<link rel="stylesheet" href="http://cdn.howtogeek.com/public/css/howtogeek.css?1343870406" type="text/css" />
+	<link rel="shortcut icon" href="http://cdn.howtogeek.com/favicon.ico" type="image/x-icon" />
+
+		<!--[if lte IE 8]>
+	<link rel="stylesheet" type="text/css" href="http://cdn.howtogeek.com/public/css/htgIE.css?1343870406" />
+	<![endif]-->
+	<!--[if lte IE 7]>
+	<link rel="stylesheet" type="text/css" href="http://cdn.howtogeek.com/public/css/ie_hacks.css?1343870406" />
+	<![endif]-->
+		
+			<script type='text/javascript'>var statsUrl = '/public/stats.php?id=8790&1352224620';</script>
+		<script type="text/javascript" src="http://cdn.howtogeek.com/public/js/jquery.min.js?upd=1343870406"></script>
+		<script type="text/javascript" src="/public/js/howtogeek.js?upd=1343870406"></script>
+
+	<link rel='shortlink' href='http://www.howtogeek.com/?p=8790' />
+<link rel='canonical' href='http://www.howtogeek.com/howto/8790/dual-boot-your-pre-installed-windows-7-computer-with-xp/' />
+
+ <script type='text/javascript'>
+var googletag = googletag || {};
+googletag.cmd = googletag.cmd || [];
+(function() {
+var gads = document.createElement('script');
+gads.async = true;
+gads.type = 'text/javascript';
+var useSSL = 'https:' == document.location.protocol;
+gads.src = (useSSL ? 'https:' : 'http:') + 
+'//www.googletagservices.com/tag/js/gpt.js';
+var node = document.getElementsByTagName('script')[0];
+node.parentNode.insertBefore(gads, node);
+})();
+</script>
+
+<script type='text/javascript'>
+googletag.cmd.push(function() {
+googletag.defineSlot('/10518929/tmnp.howtogeek', [[300, 250],[300,600]], 'div-gpt-ad-1342044737928-1').addService(googletag.pubads());
+googletag.defineSlot('/10518929/tmnp.howtogeek', [[728,90], [970,66], [970,90], [970,250]], 'div-gpt-ad-1342044737928-2').addService(googletag.pubads());
+googletag.defineSlot('/10518929/tmnp.howtogeek', [[1,1]], 'div-gpt-ad-1342044737928-5').addService(googletag.pubads());
+googletag.defineSlot('/10518929/tmnp.howtogeek-btf', [[160, 600], [120,600]], 'div-gpt-ad-1342044737928-12').addService(googletag.pubads());
+googletag.defineSlot('/10518929/tmnp.howtogeek-btf', [[728,90], [970,66], [970,90], [970,250]], 'div-gpt-ad-1342044737928-14').addService(googletag.pubads());
+googletag.enableServices();
+});
+</script>
+</head>
+<body class='v3' >
+<center id="top728ad" style="height:90px">
+<!-- tmnp.howtogeek 728x90 ATF -->
+<div id='div-gpt-ad-1342044737928-2'>
+<script type='text/javascript'>
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1342044737928-2'); });
+</script>
+</div>
+</center>
+<script type="text/javascript"> 
+(function() { 
+if (document.referrer.indexOf('search?') > -1 || document.referrer.indexOf('q=') > -1){
+  var ARTICLE_URL = 'http://www.howtogeek.com/howto/8790/dual-boot-your-pre-installed-windows-7-computer-with-xp/'; 
+  var CONTENT_ID = 'everything'; // Optional or leave empty 
+  document.write( 
+    '<scr'+'ipt '+ 
+    'src="//survey.g.doubleclick.net/survey?site=5438007'+ 
+    '&amp;url='+encodeURIComponent(ARTICLE_URL)+ 
+    (CONTENT_ID ? '&amp;cid='+encodeURIComponent(CONTENT_ID) : '')+ 
+    '&amp;random='+(new Date).getTime()+ 
+    '" type="text/javascript">'+'\x3C/scr'+'ipt>'); 
+}
+})(); 
+</script> 
+<div id="doc4" class="yui-t7">
+	<div id="hd"></div>		
+	<div id="bd">
+		<div id='htgHeader'>
+			<div class="topBar">
+				<div class="topBarLeft">
+					<ul class="htgTopBarLeftLinks">
+	<li><a href="/">HOW-TO</a></li>
+<li><a href="/news/">NEWS</a></li>
+<li><a href="/forum/">FORUMS</a></li>
+</ul>				</div>
+				<div class="topBarRight">
+					<div class='userLinks'></div>
+				</div>
+				<div style="clear:both;"></div>
+			</div>
+			<div style='clear:both'></div>
+			<div class='logo'>
+				<h1 id='printH1'>How-To Geek</h1><a href='http://www.howtogeek.com/' class='home'><img src='http://cdn.howtogeek.com/public/images/blank.gif' alt='How-To Geek' title='How-To Geek' /></a>
+				<style type='text/css'>
+#htgHeader .logo .boxes a .win8box {width:525px;height:117px;border-bottom:2px solid #333;border-right:2px solid #333;
+		background:url(http://www.howtogeek.com/geekers/up/sshot5091557c2c957.jpg) no-repeat;
+		
+		}
+#htgHeader .logo .boxes {width:525px;height:117px;padding-right:20px;}
+#htgHeader .logo .boxes a .win8box:hover
+{
+	-moz-box-shadow:1px 2px 5px 2px #222;
+	-webkit-box-shadow:1px 2px 5px 2px #222;
+	box-shadow:1px 2px 5px 2px #222;
+	-ms-filter:"progid:DXImageTransform.Microsoft.Shadow(Strength=6, Direction=180, Color='#000000')";
+	filter:"progid:DXImageTransform.Microsoft.Shadow(Strength=6, Direction=180, Color='#000000')";
+}
+
+</style>
+<div class='boxes'>
+	<a href="http://www.howtogeek.com/g/windows8book-skybox">
+		<div class="win8box">
+			
+		</div>
+	</a>
+</div>
+							</div>
+		</div>
+		<div class='yui-g' id='htgNavBar'>
+			<ul>
+	<li><a href='/'>Home</a></li>
+	<li><a href='/t/features/'>Features</a></li>
+	<li>
+		<a href='#' class='arrow'>Categories</a>
+		<div class='subMenu'>
+			<ul>
+				<li><h2><a href='/tag/windows-7/'>Windows 7</a></h2></li>
+				<li><h2><a href='/tag/windows-vista/'>Windows Vista</a></h2></li>
+				<li><h2><a href='/tag/windows/'>Windows XP</a></h2></li>
+			</ul>
+			<ul>
+				<li><h2><a href='/tag/linux/'>Linux / Ubuntu</a></h2></li>
+				<li><h2><a href='/tag/malware/'>Malware</a></h2></li>
+				<li><h2><a href='/tag/microsoft-office/'>Office</a></h2></li>
+			</ul>
+			<ul>
+				<li><h2><a href='/tag/internet/'>Web Browsing</a></h2></li>
+				<li><h2><a href='/tag/desktop-fun/'>Desktop Fun</a></h2></li>
+				<li><h2><a href='/tag/the-geek-blog/'>Miscellaneous</a></h2></li>
+			</ul>
+		</div>
+	</li>
+	<li><a href="/help/">Get Computer Help</a></li>
+</ul>			<div class='search'></div>
+			<div class='userLinks'></div>
+			<div style='clear:both'></div>
+		</div>
+		<div class='yui-g' id='headerpanel'></div>
+<div class='yui-ge'>
+	<div class='yui-u first'>
+		<div class='content' id='htgArticle'>
+			<h1 id='printHeader' style='display:none'>How-To Geek</h1>
+			<!-- abovepost -->
+						<div class='thepost' id='post-8790'>
+				<div style="width:650px;margin-bottom:10px;margin-top:-30px;min-height:30px;">
+										<div style="clear:both;"></div>
+				</div>
+												
+
+				<h2><a href="http://www.howtogeek.com/howto/8790/dual-boot-your-pre-installed-windows-7-computer-with-xp/" rel='bookmark' title="Dual Boot Your Pre-Installed Windows 7 Computer with XP">Dual Boot Your Pre-Installed Windows 7 Computer with XP</a></h2>
+
+
+				
+				<div class='thecontent'>
+					<!-- google_ad_section_start -->
+					<p>So you got your shiny new pre-installed Windows 7 computer over the holidays, but you want to have trusty XP standing by in a dual boot setup. Today we’ll walk through creating a new partition in Windows 7 then installing XP on it.</p>
+<p>In this process we are going to shrink some free space on the Windows 7 hard drive to allocate toward a new partition. Make sure to take a moment and decide how much space to use for the XP partition. Make sure you have enough space on your hard drive for files you’ll be adding to each. </p>
+<p><strong>Create a New Partition</strong></p>
+<p>The first thing we need to do is create a new partition on the Windows 7 machine. Luckily we can do it without any 3rd party software. To begin, click on Start and type either <em>partition</em> or <em>disk management</em> into the search box and at the top of the menu click on <em>Create and format hard disk partitions</em>.</p>
+<p><img style="border-bottom: 0px; border-left: 0px; display: inline; border-top: 0px; border-right: 0px" title="sshot-2010-01-06-[20-36-31]" border="0" alt="sshot-2010-01-06-[20-36-31]" src="http://www.howtogeek.com/wp-content/uploads/2010/01/sshot20100106203631.png" width="439" height="504"> </p>
+<p>The Disk Management window opens, and from here we need to free up space on the (C:) drive Windows 7 is installed on. Right-click on the drive and select <em>Shrink Volume. </em>&nbsp;</p>
+<p><img style="border-right-width: 0px; display: inline; border-top-width: 0px; border-bottom-width: 0px; border-left-width: 0px" title="2dual" border="0" alt="2dual" src="http://www.howtogeek.com/wp-content/uploads/2010/01/2dual.png" width="639" height="654"> </p><div id='p402_premium' class='p402_premium'><p>A window pops up showing the drive is being queried for available space.</p>
+<p><img style="border-right-width: 0px; display: inline; border-top-width: 0px; border-bottom-width: 0px; border-left-width: 0px" title="3dual" border="0" alt="3dual" src="http://www.howtogeek.com/wp-content/uploads/2010/01/3dual.png" width="419" height="131">&nbsp;</p>
+<p>Now enter the amount of space you want to shrink the volume. You’re shown the total size of the disk and the amount of size that is available to shrink. In this example we’re freeing up 40GB of space.</p>
+<p><img style="border-right-width: 0px; display: inline; border-top-width: 0px; border-bottom-width: 0px; border-left-width: 0px" title="4dual" border="0" alt="4dual" src="http://www.howtogeek.com/wp-content/uploads/2010/01/4dual.png" width="494" height="342"> </p>
+<p>After the process completes you’ll see the new Unallocated space. Right-click that and select <em>New Simple Volume</em>.</p>
+<p><img style="border-right-width: 0px; display: inline; border-top-width: 0px; border-bottom-width: 0px; border-left-width: 0px" title="5dual" border="0" alt="5dual" src="http://www.howtogeek.com/wp-content/uploads/2010/01/5dual.png" width="639" height="654"> </p>
+<p>The New Simple Volume Wizard launches which is a straight forward process. When you get to the Format Partition section, NTFS is selected by default as the file system and you can leave that as is. You might want to rename the Volume label something else like “XP Partition” so it’s easier to identify when installing XP. Also you’ll probably want to make sure to check <em>Perform a Quick Format. </em></p>
+<p><img style="border-right-width: 0px; display: inline; border-top-width: 0px; border-bottom-width: 0px; border-left-width: 0px" title="6dual" border="0" alt="6dual" src="http://www.howtogeek.com/wp-content/uploads/2010/01/6dual.png" width="541" height="427"> </p>
+<p>After the format is complete you will see the new volume as a healthy partition listed.</p>
+<p><img style="border-right-width: 0px; display: inline; border-top-width: 0px; border-bottom-width: 0px; border-left-width: 0px" title="7dual" border="0" alt="7dual" src="http://www.howtogeek.com/wp-content/uploads/2010/01/7dual.png" width="565" height="551"> </p>
+<p>Now when you go into My Computer you’ll see the the new disk and notice that space has been taken away from the (C:) drive Windows 7 is installed on.</p>
+<p><img style="border-right-width: 0px; display: inline; border-top-width: 0px; border-bottom-width: 0px; border-left-width: 0px" title="8dual" border="0" alt="8dual" src="http://www.howtogeek.com/wp-content/uploads/2010/01/8dual.png" width="337" height="177"> </p>
+<p><strong>Install XP on the New Partition</strong></p>
+<p>Now that you know how to create a new partition on your Windows 7 machine, it’s time to install XP on it. Here we’re installing XP Professional on the new partition. Boot from the XP installation disk and start the install process. </p>
+<p><img style="border-right-width: 0px; display: inline; border-top-width: 0px; border-bottom-width: 0px; border-left-width: 0px" title="10dual" border="0" alt="10dual" src="http://www.howtogeek.com/wp-content/uploads/2010/01/10dual.png" width="601" height="423"> </p>
+<p>When it comes to choosing a partition, make sure you select the one you created using the steps above. In this example we made a 10GB partition for the XP install.</p>
+<p><img style="border-right-width: 0px; display: inline; border-top-width: 0px; border-bottom-width: 0px; border-left-width: 0px" title="11dual" border="0" alt="11dual" src="http://www.howtogeek.com/wp-content/uploads/2010/01/11dual.png" width="640" height="362"> </p>
+<p>If the partition you created was already formatted as NTFS you can leave it, or you can choose the FAT file system if you want.&nbsp; </p>
+<p><img style="border-right-width: 0px; display: inline; border-top-width: 0px; border-bottom-width: 0px; border-left-width: 0px" title="12dual" border="0" alt="12dual" src="http://www.howtogeek.com/wp-content/uploads/2010/01/12dual.png" width="640" height="363"> </p>
+<p>Basically you continue through as if you were doing a clean install on any hard drive. </p>
+<p><img style="border-right-width: 0px; display: inline; border-top-width: 0px; border-bottom-width: 0px; border-left-width: 0px" title="13dual" border="0" alt="13dual" src="http://www.howtogeek.com/wp-content/uploads/2010/01/13dual.png" width="594" height="425"> </p>
+<p><strong>Create Boot Loader</strong></p>
+<p>Once installation of XP is successful you can now go through and install the latest Microsoft Updates and drivers. You will undoubtedly notice that the machine is booting directly into XP at this time. This is due to XP writing it’s bootloader over Windows 7’s. To get both XP and Windows 7 as an option at the boot screen you can use the free utility EasyBCD 1.72 or their new 2.0 Beta.</p>
+<p><img style="border-right-width: 0px; display: inline; border-top-width: 0px; border-bottom-width: 0px; border-left-width: 0px" title="sshot-2010-01-04-[23-04-48]" border="0" alt="sshot-2010-01-04-[23-04-48]" src="http://www.howtogeek.com/wp-content/uploads/2010/01/sshot20100104230448.png" width="599" height="519">&nbsp;</p>
+<p>VistaBootPRO 3.3 <em>(free version)</em> will still work too which you can download <a href="http://www.softpedia.com/get/System/OS-Enhancements/VistaBootPRO.shtml">here</a>. VistaBootPRO is now called DualBootPRO and is no longer free, it’s $9.95 for a single user license.</p>
+<p><img style="border-bottom: 0px; border-left: 0px; display: inline; border-top: 0px; border-right: 0px" title="16dueal" border="0" alt="16dueal" src="http://www.howtogeek.com/wp-content/uploads/2010/01/16dueal.png" width="546" height="496"> </p>
+<p> After getting the bootloader back you should see both XP and Windows 7 as options in the Windows Boot Manager.</p>
+<p><img style="border-right-width: 0px; display: inline; border-top-width: 0px; border-bottom-width: 0px; border-left-width: 0px" title="21dual" border="0" alt="21dual" src="http://www.howtogeek.com/wp-content/uploads/2010/01/21dual.png" width="640" height="403"> </p>
+<p><strong>Conclusion</strong></p>
+<p>If you want to set a default OS on your dual boot system, check out <a href="http://www.howtogeek.com/howto/windows-vista/easily-set-default-os-in-a-windows-vista-and-xp-dual-boot-setup/">The Geek’s tutorial</a> on how to set it up. To download the EasyBCD 2.0 Beta, you’ll need to register with the NeoSmart Technologies Forum first. If you’re hesitant to try out Beta software, EasyBCD 1.7.2 is also free and will still work as well.&nbsp; Of course there are other ways of creating a dual boot system, but this is the method I have been using and it’s simple and effective. </p>
+<p><a href="http://neosmart.net/forums/showthread.php?t=642">EasyBCD 2.0 Beta <em>(Forum Registration Required)</em></a></p>
+</div><script type="text/javascript">try { _402_Show(); } catch(e) {}</script>				<!-- google_ad_section_end -->
+				</div>
+								<div style='clear:both;height:5px;'></div>
+
+				<div class='adSystem_ads'>
+<div class='htgWidget' id='htgWidget_9'>
+	<a href='#' class='hideWidget' title='Click to hide'>Don't show again X</a>
+	<table width="98%" border=0>
+<tr>
+
+<td align="left" valign="top" >
+   <p style="color: rgb(51, 51, 51); font-size: 150%; font-weight: bold;padding-top:22px;padding-bottom: 5px;">Subscribe</p>
+</td>
+<td align="left" valign="top" width="70%" style="padding-left:30px;">
+   <p style="color: rgb(51, 51, 51); font-size: 150%; font-weight: bold;padding-top:22px;padding-left:10px; padding-bottom: 5px;">Daily Email Updates</p>
+</td>
+</tr>
+<tr>
+<td align="left" valign="top" >
+<ul>
+<li style="list-style: disc;margin-left: 20px;margin-bottom: 4px;text-decoration: underline;"><a rel='nofollow' href="http://twitter.com/howtogeeknews">Follow on Twitter</a></li>
+<li style="list-style: disc;margin-left: 20px;margin-bottom: 4px;text-decoration: underline;"><a rel='nofollow' href="http://facebook.com/thehowtogeek">Follow on Facebook</a></li>
+<li style="list-style: disc;margin-left: 20px;margin-bottom: 4px;text-decoration: underline;"><a rel='nofollow' href="http://feeds.howtogeek.com/howtogeek">Subscribe with RSS</a></li></ul>
+</td>
+<td align="left" valign="top" width="70%" style="padding-left:30px;">
+				<p style="text-align:left;clear:both;padding-left:10px;padding-right:5px;">You can get our how-to articles in your inbox each day for free. Just enter your email below:</p><br/>
+				<form action="http://www.aweber.com/scripts/addlead.pl" method="post">
+					<input type="hidden" value="1330843370" name="meta_web_form_id"/>
+					<input type="hidden" value="" name="meta_split_id"/>
+					<input type="hidden" value="howtogeek-daily" name="unit"/>
+					<input type="hidden" name="redirect" value="http://www.howtogeek.com/thanks-for-subscribing/" id="redirect_e6be32bde398d686707a7cddd123c4d3" />
+					<input type="hidden" value="" name="meta_redirect_onlist"/>
+					<input type="hidden" value="articlewidget" name="meta_adtracking"/>
+					<input type="hidden" value="1" name="meta_message"/>
+					<input type="hidden" value="from" name="meta_required"/>
+					<input type="hidden" value="0" name="meta_forward_vars"/>
+					<table align=center>
+						<tr>
+							<td style="padding: 4px;">Email:</td>
+							<td style="padding: 4px;"><input type="text" size="40" value="" name="from" style="width:230px;font-size: 13px; height: 22px;padding:4px;"/></td>
+<td align="right"><input style="padding:8px;" type="submit" value="Subscribe!" name="submit"/></td>
+						</tr>
+					
+</table>
+</td>
+
+</tr>
+</table>
+				</form></div>
+	<div style='clear:both'></div>
+</div>				<div style="clear:both;"></div>
+				
+				<div class='articleExtras' >
+					<div style="width:300px;float:left;">
+						<ul class='info'>
+						<li>By <a href="http://www.howtogeek.com/author/mysticgeek/" title="Posts by Mysticgeek" rel="author">Mysticgeek</a> on 01/7/10</li>
+						<li></li></ul>
+					</div>
+					<div style="width:300px;float:right;">
+						<ul class='sharinglinks'>
+						</ul>
+					</div>
+					<div style='clear:both'></div>
+				</div>				
+				<div style='clear:both;'></div>
+
+								<div class='featured' id='related-table'></div>
+				<div style='clear:both;'></div>
+				
+				<div style="width:650px;margin-bottom:5px;margin-top:5px;">
+					<script>TmnAdsense.display(options = {'adsbyposition':'topleft','adsbyColor':'000000','width':630,'ad_width':170,'max_ads':3,'col_margin':55,'titleFontSize':17,'titleFontColor':'003371','adFontFamily':'arial','titleMarginBottom':0,'descFontSize':12,'descFontColor':'000000','linkFontSize':10,'linkFontColor':'000000','channel_id':'4956229975'});</script>					<div style="clear:both;"></div>
+				</div>				
+
+
+
+				<div class="contsep"></div>
+			</div>
+
+			<div id='commentsWrap' post='8790' replyto='0'>
+				
+<!-- You can start editing here. -->
+
+<h3 id="comments">Comments <span id="commentnumber">(154)</span></h3>
+<ol class="commentlist">
+		<li class="comment-def" id="comment-82796">
+		<div class="commentmetadata date"><a href="#comment-82796" title="">January 7, 2010 11:16 am</a>  </div>
+		<div class="commentauthor">
+			<div class="ca1"><img src="/public/images/defaultavatar.png" alt="" width="25px" height="25px" /></div>
+			<div class="ca2">moosh101</div>
+		</div>
+		<div style="clear:both;"></div>
+		<div class="commenttext"><p>Greetings. Good post.  </p>
+<p>A note about resizing volumes and 3rd Party Disk Defragmentation Software, such as Diskeeper, etc.  While the Windows Disk Management tool requires the &#8216;Virtual Disk&#8217; Service to run if you want to view basic volume information, if you want to use the tool to resize your volumes you also need the Windows default &#8216;Disk Defragmenter&#8217; service running.  This service is often switched off, or set to disabled, when 3rd Party Disk Defragmentation Software is installed.  </p>
+<p>You can set the Windows default &#8216;Disk Defragmenter&#8217; service to &#8216;Manual&#8217; and it will start only as needed.</p>
+<p>Good luck,</p>
+<p>Shane.</p>
+</div>
+			</li>
+	<li class="comment-alt" id="comment-82798">
+		<div class="commentmetadata date"><a href="#comment-82798" title="">January 7, 2010 11:42 am</a>  </div>
+		<div class="commentauthor">
+			<div class="ca1"><img src="/public/images/defaultavatar.png" alt="" width="25px" height="25px" /></div>
+			<div class="ca2">Cam</div>
+		</div>
+		<div style="clear:both;"></div>
+		<div class="commenttext"><p>What if we wanted to use GRUB? Could one use GParted/Knoppix (or another LiveCD) to set that up?</p>
+</div>
+			</li>
+	<li class="comment-def" id="comment-82802">
+		<div class="commentmetadata date"><a href="#comment-82802" title="">January 7, 2010 1:42 pm</a>  </div>
+		<div class="commentauthor">
+			<div class="ca1"><img src="/public/images/defaultavatar.png" alt="" width="25px" height="25px" /></div>
+			<div class="ca2">Energokinetic</div>
+		</div>
+		<div style="clear:both;"></div>
+		<div class="commenttext"><p>I was waiting for a post like this because i have a question, already did this 2 months ago to dual boot Windows Vista and 7 but now i want to delete the partition of Windows Vista, should i just delete the volume of Vista from Disk management? I asked on the forums before but i didn&#8217;t receive a clear answer.</p>
+</div>
+			</li>
+	<li class="comment-alt" id="comment-82821">
+		<div class="commentmetadata date"><a href="#comment-82821" title="">January 7, 2010 7:41 pm</a>  </div>
+		<div class="commentauthor">
+			<div class="ca1"><img src="/public/images/defaultavatar.png" alt="" width="25px" height="25px" /></div>
+			<div class="ca2">Kyle</div>
+		</div>
+		<div style="clear:both;"></div>
+		<div class="commenttext"><p>Geek,<br />
+Is it possible to do this same process to test a pc for errors in the hardware and/or software?  Like let&#8217;s say I want to test an antivirus without an effect I have been experiencing in the past (windows update not working and resulting in myself having to re-install the operating system).</p>
+</div>
+			</li>
+	<li class="comment-def" id="comment-82830">
+		<div class="commentmetadata date"><a href="#comment-82830" title="">January 8, 2010 12:38 am</a>  </div>
+		<div class="commentauthor">
+			<div class="ca1"><img src="/public/images/defaultavatar.png" alt="" width="25px" height="25px" /></div>
+			<div class="ca2">GFGFHFGF</div>
+		</div>
+		<div style="clear:both;"></div>
+		<div class="commenttext"><p>Don&#8217;t be ridiculous. Who DUAL BOOTS? Use a Virtual machine&#8230;much easier and convienient and better on your system.</p>
+</div>
+			</li>
+	<li class="comment-alt" id="comment-82855">
+		<div class="commentmetadata date"><a href="#comment-82855" title="">January 8, 2010 10:22 am</a>  </div>
+		<div class="commentauthor">
+			<div class="ca1"><img src="/public/images/defaultavatar.png" alt="" width="25px" height="25px" /></div>
+			<div class="ca2">TommyB</div>
+		</div>
+		<div style="clear:both;"></div>
+		<div class="commenttext"><p>Inre:  GFGFHFGF,</p>
+<p>I will probably have to DUAL BOOT because I tried to set up a VM using my HP recovery disks and since the VM creates its own motherboard, BIOS etc., XP won&#8217;t install.  I verified this thru HP.  I did copy another XP from another machine with disk2vhd and it did install but of course wants to validate.  I&#8217;m afraid to try to validate it as I still will use XP on the other machine.</p>
+</div>
+			</li>
+	<li class="comment-def" id="comment-82864">
+		<div class="commentmetadata date"><a href="#comment-82864" title="">January 8, 2010 1:11 pm</a>  </div>
+		<div class="commentauthor">
+			<div class="ca1"><img src="/public/images/defaultavatar.png" alt="" width="25px" height="25px" /></div>
+			<div class="ca2">Roi</div>
+		</div>
+		<div style="clear:both;"></div>
+		<div class="commenttext"><p>@Energokinetic<br />
+Yeah if you are sure you do not need anything off your Vista partition, you can just right click it and delete it. Then if you want to add that space to the Windows 7 partition, right click the Win7 partition and click &#8220;Extend Partition&#8221;. Then choose all the available space it gives you.</p>
+</div>
+			</li>
+	<li class="comment-alt" id="comment-82868">
+		<div class="commentmetadata date"><a href="#comment-82868" title="">January 8, 2010 3:00 pm</a>  </div>
+		<div class="commentauthor">
+			<div class="ca1"><img src="/public/images/defaultavatar.png" alt="" width="25px" height="25px" /></div>
+			<div class="ca2">MariJewel</div>
+		</div>
+		<div style="clear:both;"></div>
+		<div class="commenttext"><p>Great! Thank you for posting this data. At least I know now how to dual boot a pre-installed Windows 7 computer with an XP operating system.</p>
+</div>
+			</li>
+	<li class="comment-def" id="comment-82888">
+		<div class="commentmetadata date"><a href="#comment-82888" title="">January 8, 2010 11:25 pm</a>  </div>
+		<div class="commentauthor">
+			<div class="ca1"><img src="/public/images/defaultavatar.png" alt="" width="25px" height="25px" /></div>
+			<div class="ca2">anand singh</div>
+		</div>
+		<div style="clear:both;"></div>
+		<div class="commenttext"><p>Ok, its nice and well good. Can you help in the way where the use of your BCD software is not in use.</p>
+<p>We have already virtualization in windows7 compatible with hardware existance so, there we can work in both xp and win7 eviornment. If we have dual booting then I want to shift my programs to win xp to win7 or win7 to winxp.</p>
+<p>Plz sort out.</p>
+</div>
+			</li>
+	<li class="comment-alt" id="comment-82914">
+		<div class="commentmetadata date"><a href="#comment-82914" title="">January 9, 2010 9:47 am</a>  </div>
+		<div class="commentauthor">
+			<div class="ca1"><img src="/public/images/defaultavatar.png" alt="" width="25px" height="25px" /></div>
+			<div class="ca2">alan</div>
+		</div>
+		<div style="clear:both;"></div>
+		<div class="commenttext"><p>em i have a problem. i have installed xp but then when the computer restarts again it comes up with an error message &#8220;Error loading operating system&#8221; what can i do to fix this problem. any help is apreciated</p>
+</div>
+			</li>
+	<li class="comment-def" id="comment-82994">
+		<div class="commentmetadata date"><a href="#comment-82994" title="">January 10, 2010 9:18 pm</a>  </div>
+		<div class="commentauthor">
+			<div class="ca1"><img src="/public/images/defaultavatar.png" alt="" width="25px" height="25px" /></div>
+			<div class="ca2">Rahul Thilakan</div>
+		</div>
+		<div style="clear:both;"></div>
+		<div class="commenttext"><p>This is a super option for computer users.<br />
+But if we 1st install older versions of Windows then install newer version there is no probes in the boot process.<br />
+If any body want to install other OS like like Linux, Just make a 5GB free space then install this largest free space.<br />
+Try it this is the better way.</p>
+</div>
+			</li>
+	<li class="comment-alt" id="comment-83343">
+		<div class="commentmetadata date"><a href="#comment-83343" title="">January 17, 2010 6:01 pm</a>  </div>
+		<div class="commentauthor">
+			<div class="ca1"><img src="/public/images/defaultavatar.png" alt="" width="25px" height="25px" /></div>
+			<div class="ca2">John P</div>
+		</div>
+		<div style="clear:both;"></div>
+		<div class="commenttext"><p>Alan, I have read this is an issue if XP is installed after Win7.  Have you found a solution ?<br />
+This post seems a little easy compared to all others I have extensively read on dual booting.<br />
+Apparrently you need XP on first then put Win7 on.</p>
+</div>
+			</li>
+	<li class="comment-def" id="comment-83353">
+		<div class="commentmetadata date"><a href="#comment-83353" title="">January 17, 2010 11:45 pm</a>  </div>
+		<div class="commentauthor">
+			<div class="ca1"><img src="/public/images/defaultavatar.png" alt="" width="25px" height="25px" /></div>
+			<div class="ca2">John P</div>
+		</div>
+		<div style="clear:both;"></div>
+		<div class="commenttext"><p>OK, have done it all, but not quite as simple and straight forward as that posted (although a good attempt).  The trick is, if possible, install XP first !  If not, you have to be able to boot into Win7 before EasyBCD can be installed and executed.  Try a restore from the Win7 cd, and you will have to restore 3 to 4 times before you can boot to Win7 from the HDD.  Goodluck all.</p>
+</div>
+			</li>
+	<li class="comment-alt" id="comment-84395">
+		<div class="commentmetadata date"><a href="#comment-84395" title="">February 5, 2010 11:00 am</a>  </div>
+		<div class="commentauthor">
+			<div class="ca1"><img src="/public/images/defaultavatar.png" alt="" width="25px" height="25px" /></div>
+			<div class="ca2">Shanaka</div>
+		</div>
+		<div style="clear:both;"></div>
+		<div class="commenttext"><p>Thanks,,,,good post</p>
+<p>After i created partition from windows 7 restart the pc and i had boot from Xp disk.but after setup is loading it displays blue screen with some problems.therefore i could not install Xp.anyone have idea?do you have any idea please e-mail me.(shanaka.divakera@yahoo.com)</p>
+<p>thnx</p>
+</div>
+			</li>
+	<li class="comment-def" id="comment-84455">
+		<div class="commentmetadata date"><a href="#comment-84455" title="">February 6, 2010 4:47 am</a>  </div>
+		<div class="commentauthor">
+			<div class="ca1"><img src="/public/images/defaultavatar.png" alt="" width="25px" height="25px" /></div>
+			<div class="ca2">alan</div>
+		</div>
+		<div style="clear:both;"></div>
+		<div class="commenttext"><p>in addition to my last post i have been told by someone else that i will need to install a bootloader before i put on my second operating system is this true or can i just install xp first then install 7 on my other partion then put in my bootloader</p>
+</div>
+			</li>
+	<li class="comment-alt" id="comment-84488">
+		<div class="commentmetadata date"><a href="#comment-84488" title="">February 6, 2010 5:01 pm</a>  </div>
+		<div class="commentauthor">
+			<div class="ca1"><img src="/public/images/defaultavatar.png" alt="" width="25px" height="25px" /></div>
+			<div class="ca2">John P</div>
+		</div>
+		<div style="clear:both;"></div>
+		<div class="commenttext"><p>Hello Shanaka,<br />
+did you create a partition from within Win7 to load XP onto before you booted up with XP CD for the install ?  What &#8216;problems&#8217; were there om the blue screen ?</p>
+</div>
+			</li>
+	<li class="comment-def" id="comment-84490">
+		<div class="commentmetadata date"><a href="#comment-84490" title="">February 6, 2010 5:06 pm</a>  </div>
+		<div class="commentauthor">
+			<div class="ca1"><img src="/public/images/defaultavatar.png" alt="" width="25px" height="25px" /></div>
+			<div class="ca2">John P</div>
+		</div>
+		<div style="clear:both;"></div>
+		<div class="commenttext"><p>Hi Allen,<br />
+you can restore whatever bootloader of the first operating system you installed by simply putting taht disk in and booting off it and doing a repair AFTER both operating systems have been installed.<br />
+Mine is working fine and has no issues whatsoever. (I installed Win7 then XP)<br />
+I have also now dual booted Windows Homeserver with XP, was a little more difficult, but is possible and works well.</p>
+</div>
+			</li>
+	<li class="comment-alt" id="comment-84533">
+		<div class="commentmetadata date"><a href="#comment-84533" title="">February 7, 2010 6:29 pm</a>  </div>
+		<div class="commentauthor">
+			<div class="ca1"><img src="/public/images/defaultavatar.png" alt="" width="25px" height="25px" /></div>
+			<div class="ca2">junus</div>
+		</div>
+		<div style="clear:both;"></div>
+		<div class="commenttext"><p>I did follow througt the step beside, i have already an empty e partition while installing win7. I install the win-xp. The easy bcd could not run under win-xp, so i did restore the win-7 as John P above said. I run the easy bcd, and restore the bootloader but nothing happen, the boot process still does not give any dua boot alternative. Any suggestions?<br />
+Junus Supardi</p>
+</div>
+			</li>
+	<li class="comment-def" id="comment-84537">
+		<div class="commentmetadata date"><a href="#comment-84537" title="">February 7, 2010 11:18 pm</a>  </div>
+		<div class="commentauthor">
+			<div class="ca1"><img src="/public/images/defaultavatar.png" alt="" width="25px" height="25px" /></div>
+			<div class="ca2">John P</div>
+		</div>
+		<div style="clear:both;"></div>
+		<div class="commenttext"><p>I take it that now your system boots into Win 7 only junus ?<br />
+If you correctly configured easybcd then the following should show&#8230;</p>
+<p>First, you’ll need to right click on Computer and select Properties:</p>
+<p>Next, click Advanced System Settings</p>
+<p>Now click on the Settings button under Startup and Recovery</p>
+<p>And just select the operating system you want to use from the drop down menu.</p>
+<p>If it&#8217;s not there then XP is probably not seen in easybcd.</p>
+<p>In Easybcd, did you go to Add/Remove entries and add an entry Type Windows NT/2K/XP ?<br />
+Add it and save.  Then goto Change settings and change default OS (the default boot one) and timeout to wait. This timeout can be edited thru windows msconfig later if yu wanna change it.  Goodluck  and hope this helps.</p>
+</div>
+			</li>
+	<li class="comment-alt" id="comment-84655">
+		<div class="commentmetadata date"><a href="#comment-84655" title="">February 10, 2010 6:12 am</a>  </div>
+		<div class="commentauthor">
+			<div class="ca1"><img src="/public/images/defaultavatar.png" alt="" width="25px" height="25px" /></div>
+			<div class="ca2">Matt</div>
+		</div>
+		<div style="clear:both;"></div>
+		<div class="commenttext"><p>Hi all,<br />
+I&#8217;m having a little difficulty getting XP to boot properly. I have followed all of the steps, and there is even an entry for it in EasyBCD (and in the location John P describes above). When I select it from the boot menu, however, it says it can&#8217;t find the bootloader for XP, and suggests that I should put in the disk and restore it. Of course if I were to do that, it would mean my Windows 7 loader wouldn&#8217;t work anymore, correct?<br />
+Anyone have any ideas on how to fix this?</p>
+<p>Thanks,<br />
+Matt</p>
+</div>
+			</li>
+	<li class="comment-def" id="comment-84781">
+		<div class="commentmetadata date"><a href="#comment-84781" title="">February 12, 2010 9:48 am</a>  </div>
+		<div class="commentauthor">
+			<div class="ca1"><img src="/public/images/defaultavatar.png" alt="" width="25px" height="25px" /></div>
+			<div class="ca2">Louis</div>
+		</div>
+		<div style="clear:both;"></div>
+		<div class="commenttext"><p>I have seen it addressed here but not a working answer. I have 7 installed and want to also have a dual boot capability for XP (as many of my old programs wont run on 64bit)  I set up the partition and all is good. I use the XP boot cd and it inspects my system but I get the frozen blue error screen saying the system shut down to protect etc etc.<br />
+From what Im reading, you can retro install&#8230;cant install a lower version of the OS.  Are there any work arounds for this problem? Many thanks in advance<br />
+Louis</p>
+</div>
+			</li>
+</ol><div id='hideComments'><ol class="commentlist">	<li class="comment-alt" id="comment-84825">
+		<div class="commentmetadata date"><a href="#comment-84825" title="">February 13, 2010 6:30 am</a>  </div>
+		<div class="commentauthor">
+			<div class="ca1"><img src="/public/images/defaultavatar.png" alt="" width="25px" height="25px" /></div>
+			<div class="ca2">anton</div>
+		</div>
+		<div style="clear:both;"></div>
+		<div class="commenttext"><p>I have a same problem as Louis.<br />
+Thanks</p>
+</div>
+			</li>
+	<li class="comment-def" id="comment-84924">
+		<div class="commentmetadata date"><a href="#comment-84924" title="">February 15, 2010 8:36 am</a>  </div>
+		<div class="commentauthor">
+			<div class="ca1"><img src="/public/images/defaultavatar.png" alt="" width="25px" height="25px" /></div>
+			<div class="ca2">taber big</div>
+		</div>
+		<div style="clear:both;"></div>
+		<div class="commenttext"><p>well i had xp on disk0 already wch was master disk and installed win 7 on seperate disk1 wch was a slave. bt the real prob started when goin in bios and selecting boot device as disk1, the win7 os started scan disk cdrive where xp os was and truncated the whole drive wch was unusable and i could not retrive the data. luckily i lost only a few data as i had taken backup recently. so had to format the disk0 and install xp again. i deleted win 7 fm disk1 and installed win 98 wch was earlier. so any comments on where did i go wrong, becow i want to still install win7 and have dual boot with xp</p>
+</div>
+			</li>
+	<li class="comment-alt" id="comment-86258">
+		<div class="commentmetadata date"><a href="#comment-86258" title="">March 2, 2010 2:28 pm</a>  </div>
+		<div class="commentauthor">
+			<div class="ca1"><img src="/public/images/defaultavatar.png" alt="" width="25px" height="25px" /></div>
+			<div class="ca2">martin</div>
+		</div>
+		<div style="clear:both;"></div>
+		<div class="commenttext"><p>dear sir i have windows 7 preinstalled with my new pc, i was happy before my old games wouldnt play on windows 7 then i heard about dual-booting with xp, so i could run my new pc for games on xp, anyway i created a partition in windows7 ready for my xp disk, so i boot from xp disk ,its all fine as setup is loading files, then setup is starting windows , suddenly a blue screen error stops the the xp disk in its tracks, im very worried please help and try to make it simple as im still a beginner</p>
+</div>
+			</li>
+	<li class="comment-def" id="comment-86797">
+		<div class="commentmetadata date"><a href="#comment-86797" title="">March 9, 2010 1:49 pm</a>  </div>
+		<div class="commentauthor">
+			<div class="ca1"><img src="/public/images/defaultavatar.png" alt="" width="25px" height="25px" /></div>
+			<div class="ca2">Dane</div>
+		</div>
+		<div style="clear:both;"></div>
+		<div class="commenttext"><p>I think i messed up&#8230; for some reason, I can boot windows 7, but not XP. it just boots directly into windows 7. no os choices menu. HALP!</p>
+</div>
+			</li>
+	<li class="comment-alt" id="comment-87827">
+		<div class="commentmetadata date"><a href="#comment-87827" title="">March 20, 2010 12:22 pm</a>  </div>
+		<div class="commentauthor">
+			<div class="ca1"><img src="/public/images/defaultavatar.png" alt="" width="25px" height="25px" /></div>
+			<div class="ca2">Réplika</div>
+		</div>
+		<div style="clear:both;"></div>
+		<div class="commenttext"><p>I still use xp, on my pc, microsoft doesn&#8217;t support sp1 anymore so I think to use windows 7 now, but ı will have to change my pc to use new software</p>
+</div>
+			</li>
+	<li class="comment-def" id="comment-87858">
+		<div class="commentmetadata date"><a href="#comment-87858" title="">March 20, 2010 9:45 pm</a>  </div>
+		<div class="commentauthor">
+			<div class="ca1"><img src="/public/images/defaultavatar.png" alt="" width="25px" height="25px" /></div>
+			<div class="ca2">Ric P</div>
+		</div>
+		<div style="clear:both;"></div>
+		<div class="commenttext"><p>Hi<br />
+I&#8217;m running a Sony Vaio All-in-one computer with vista upgraded to Win 7,I also have a USB hard drive that has Windows XP on it.  Can I run both systems by setting the Bios  to boot from usb first, then dualbooting either system, if so could you give me step by step instructions or point me in the right direction or am l clutching at straws</p>
+</div>
+			</li>
+	<li class="comment-alt" id="comment-89178">
+		<div class="commentmetadata date"><a href="#comment-89178" title="">April 3, 2010 5:46 pm</a>  </div>
+		<div class="commentauthor">
+			<div class="ca1"><img src="/public/images/defaultavatar.png" alt="" width="25px" height="25px" /></div>
+			<div class="ca2">Andy</div>
+		</div>
+		<div style="clear:both;"></div>
+		<div class="commenttext"><p>Is it true that Windows 7 Home Premium 64-bit will not allow any other OS on the computer. That&#8217;s what I have and would like to either replace it or put Windows XP on it too. Any idea out there? I would appreciate any help from you guys. Do you think that my situation is hopeless?<br />
+Andy.<br />
+E-mail: <a href="mailto:manyika@juno.com">manyika@juno.com</a></p>
+</div>
+			</li>
+	<li class="comment-def" id="comment-91344">
+		<div class="commentmetadata date"><a href="#comment-91344" title="">May 4, 2010 1:46 am</a>  </div>
+		<div class="commentauthor">
+			<div class="ca1"><img src="/public/images/defaultavatar.png" alt="" width="25px" height="25px" /></div>
+			<div class="ca2">Larry</div>
+		</div>
+		<div style="clear:both;"></div>
+		<div class="commenttext"><p>tryed the above method went well till install xp.<br />
+Error stoped instll to protect computer from damage.<br />
+error acpi.sys<br />
+any ideas</p>
+</div>
+			</li>
+	<li class="comment-alt" id="comment-91607">
+		<div class="commentmetadata date"><a href="#comment-91607" title="">May 7, 2010 2:18 pm</a>  </div>
+		<div class="commentauthor">
+			<div class="ca1"><img src="/public/images/defaultavatar.png" alt="" width="25px" height="25px" /></div>
+			<div class="ca2">Kalle</div>
+		</div>
+		<div style="clear:both;"></div>
+		<div class="commenttext"><p>Do I have to shrink the system drive or can I shrink another drive?<br />
+How big do u recommd that I make the new partition?</p>
+</div>
+			</li>
+	<li class="comment-def" id="comment-91653">
+		<div class="commentmetadata date"><a href="#comment-91653" title="">May 8, 2010 7:22 am</a>  </div>
+		<div class="commentauthor">
+			<div class="ca1"><img src="/public/images/defaultavatar.png" alt="" width="25px" height="25px" /></div>
+			<div class="ca2">Dan</div>
+		</div>
+		<div style="clear:both;"></div>
+		<div class="commenttext"><p>Can Any one please Help me with this?</p>
+<p>I did all the partition stuff and checked it twice. but when I go to install XP no partitions appears at the blue screen where your to select a partition. not even the C: where my Win 7 is and works fine?</p>
+<p>WTF???</p>
+</div>
+			</li>
+	<li class="comment-alt" id="comment-92232">
+		<div class="commentmetadata date"><a href="#comment-92232" title="">May 18, 2010 2:04 pm</a>  </div>
+		<div class="commentauthor">
+			<div class="ca1"><img src="/public/images/defaultavatar.png" alt="" width="25px" height="25px" /></div>
+			<div class="ca2">Steve</div>
+		</div>
+		<div style="clear:both;"></div>
+		<div class="commenttext"><p>No drives appear because you need to load third party SATA drivers in order for XP to see the newer drives.  Hit F3 when prompted during setup.  Problem I have been having with that though is XP looks for the driver on drive A only.  Kinda sucks when most machines don&#8217;t come with floppies anymore.</p>
+</div>
+			</li>
+	<li class="comment-def" id="comment-92527">
+		<div class="commentmetadata date"><a href="#comment-92527" title="">May 21, 2010 10:38 pm</a>  </div>
+		<div class="commentauthor">
+			<div class="ca1"><img src="/public/images/defaultavatar.png" alt="" width="25px" height="25px" /></div>
+			<div class="ca2">jim</div>
+		</div>
+		<div style="clear:both;"></div>
+		<div class="commenttext"><p>About six months ago I followed the instructions for dual booting with Vista and XP and all went well.  I have a new computer with Win 7, followed all the instructions but after reboot the screen only shows Windows 7 and Ramdisk Options. I think this is the partion Windows 7 makes named System Reserve.  VistaBootPro and EasyBCD does not show XP only Windows 7 and the System Reserve. Any help would be appreciated.</p>
+</div>
+			</li>
+	<li class="comment-alt" id="comment-93011">
+		<div class="commentmetadata date"><a href="#comment-93011" title="">May 29, 2010 8:34 pm</a>  </div>
+		<div class="commentauthor">
+			<div class="ca1"><img src="/public/images/defaultavatar.png" alt="" width="25px" height="25px" /></div>
+			<div class="ca2">Khaled</div>
+		</div>
+		<div style="clear:both;"></div>
+		<div class="commenttext"><p>Man You Are The Best One Who Explain this Method You are Professional</p>
+</div>
+			</li>
+	<li class="comment-def" id="comment-93028">
+		<div class="commentmetadata date"><a href="#comment-93028" title="">May 30, 2010 9:26 am</a>  </div>
+		<div class="commentauthor">
+			<div class="ca1"><img src="/public/images/defaultavatar.png" alt="" width="25px" height="25px" /></div>
+			<div class="ca2">Nash</div>
+		</div>
+		<div style="clear:both;"></div>
+		<div class="commenttext"><p>Ive tried this. My machine got Fcked.<br />
+Its better not to Dual boot.<br />
+Windows 7 is pretty good. XP is good too. But Dual booting makes the computer slower.<br />
+Easy BCD isnt a very good software.</p>
+</div>
+			</li>
+	<li class="comment-alt" id="comment-93053">
+		<div class="commentmetadata date"><a href="#comment-93053" title="">May 30, 2010 10:39 pm</a>  </div>
+		<div class="commentauthor">
+			<div class="ca1"><img src="/public/images/defaultavatar.png" alt="" width="25px" height="25px" /></div>
+			<div class="ca2">Michel</div>
+		</div>
+		<div style="clear:both;"></div>
+		<div class="commenttext"><p>I tried these steps with Vista boot pro. I can now only boot to Windows 7 now. Wierd. What can I do now?</p>
+</div>
+			</li>
+	<li class="comment-def" id="comment-93115">
+		<div class="commentmetadata date"><a href="#comment-93115" title="">June 1, 2010 6:09 am</a>  </div>
+		<div class="commentauthor">
+			<div class="ca1"><img src="/public/images/defaultavatar.png" alt="" width="25px" height="25px" /></div>
+			<div class="ca2">GT</div>
+		</div>
+		<div style="clear:both;"></div>
+		<div class="commenttext"><p>Had the same problem as Larry but I don&#8217;t even get the &#8220;welcome to setup&#8221; screen . Trying to dual boot in order to solve a few compatability issues with a couple of older games I have. I have dual hard drives so I&#8217;m not using any partitions. Any ideas?</p>
+</div>
+			</li>
+	<li class="comment-alt" id="comment-93712">
+		<div class="commentmetadata date"><a href="#comment-93712" title="">June 9, 2010 8:41 am</a>  </div>
+		<div class="commentauthor">
+			<div class="ca1"><img src="/public/images/defaultavatar.png" alt="" width="25px" height="25px" /></div>
+			<div class="ca2">Mehul</div>
+		</div>
+		<div style="clear:both;"></div>
+		<div class="commenttext"><p>i installed win xp on pre installed win7 after that i installed as per the instructions easybcd 2.0 beta built 99 when i run it then i got message the application failed to initialise properly (0xc0000135). click ok to trminate the application. what should i do now to run easy bcd</p>
+</div>
+			</li>
+	<li class="comment-def" id="comment-93815">
+		<div class="commentmetadata date"><a href="#comment-93815" title="">June 10, 2010 1:57 pm</a>  </div>
+		<div class="commentauthor">
+			<div class="ca1"><img src="/public/images/defaultavatar.png" alt="" width="25px" height="25px" /></div>
+			<div class="ca2">jim</div>
+		</div>
+		<div style="clear:both;"></div>
+		<div class="commenttext"><p>After a while of trying to install Win7 first with no progress i decided to install XP first and make two partions. This worked for me. Booting gives me a choice of Win7 or earlier version. Hope this helps.</p>
+</div>
+			</li>
+	<li class="comment-alt" id="comment-93828">
+		<div class="commentmetadata date"><a href="#comment-93828" title="">June 10, 2010 8:10 pm</a>  </div>
+		<div class="commentauthor">
+			<div class="ca1"><img src="/public/images/defaultavatar.png" alt="" width="25px" height="25px" /></div>
+			<div class="ca2">Mehul</div>
+		</div>
+		<div style="clear:both;"></div>
+		<div class="commenttext"><p>i got the problem fixed by installing .net 2.0 framework</p>
+</div>
+			</li>
+	<li class="comment-def" id="comment-94953">
+		<div class="commentmetadata date"><a href="#comment-94953" title="">June 25, 2010 2:30 pm</a>  </div>
+		<div class="commentauthor">
+			<div class="ca1"><img src="/public/images/defaultavatar.png" alt="" width="25px" height="25px" /></div>
+			<div class="ca2">ShaveR</div>
+		</div>
+		<div style="clear:both;"></div>
+		<div class="commenttext"><p>;<br />
+;Warning: Boot.ini is used on Windows XP and earlier operating systems.<br />
+;Warning: Use BCDEDIT.exe to modify Windows Vista boot options.<br />
+;<br />
+[boot loader]<br />
+timeout=15<br />
+default=multi(0)disk(0)rdisk(0)partition(1)\WINDOWS<br />
+[operating systems]<br />
+multi(0)disk(0)rdisk(0)partition(1)\WINDOWS=&#8221;Microsoft Windows XP Professional&#8221; /NOEXECUTE=OPTIN /FASTDETECT /TUTag=671V4S /Kernel=TUKernel.exe<br />
+multi(0)disk(0)rdisk(0)partition(1)\WINDOWS=&#8221;Microsoft Windows XP Professional (TuneUp Backup)&#8221; /NOEXECUTE=OPTIN /FASTDETECT /TUTag=671V4S-BAK</p>
+</div>
+			</li>
+	<li class="comment-alt" id="comment-95278">
+		<div class="commentmetadata date"><a href="#comment-95278" title="">June 30, 2010 9:48 pm</a>  </div>
+		<div class="commentauthor">
+			<div class="ca1"><img src="/public/images/defaultavatar.png" alt="" width="25px" height="25px" /></div>
+			<div class="ca2">ASIM</div>
+		</div>
+		<div style="clear:both;"></div>
+		<div class="commenttext"><p>hi<br />
+i have done all this fucked<br />
+its fucking great<br />
+and working well<br />
+thanks for the post :)</p>
+</div>
+			</li>
+	<li class="comment-def" id="comment-96027">
+		<div class="commentmetadata date"><a href="#comment-96027" title="">July 10, 2010 10:55 pm</a>  </div>
+		<div class="commentauthor">
+			<div class="ca1"><img src="/public/images/defaultavatar.png" alt="" width="25px" height="25px" /></div>
+			<div class="ca2">Ben-JA-Min</div>
+		</div>
+		<div style="clear:both;"></div>
+		<div class="commenttext"><p>Dualbooting is so freaking hard, and i want to know why i tell the disc management thing to shrink volume and the max i can shrink is like 5GB, when its a 750GB Drive, and probably has around 600 GB left on it.</p>
+<p>BTW, i put my XP disc in while computer it booting up and it ignors it completly</p>
+</div>
+			</li>
+	<li class="comment-alt" id="comment-96028">
+		<div class="commentmetadata date"><a href="#comment-96028" title="">July 10, 2010 10:56 pm</a>  </div>
+		<div class="commentauthor">
+			<div class="ca1"><img src="/public/images/defaultavatar.png" alt="" width="25px" height="25px" /></div>
+			<div class="ca2">Ben-JA-Min</div>
+		</div>
+		<div style="clear:both;"></div>
+		<div class="commenttext"><p>BTW, HELP please. really need to install XP to help older things to run.</p>
+</div>
+			</li>
+	<li class="comment-def" id="comment-96369">
+		<div class="commentmetadata date"><a href="#comment-96369" title="">July 15, 2010 9:52 am</a>  </div>
+		<div class="commentauthor">
+			<div class="ca1"><img src="/public/images/defaultavatar.png" alt="" width="25px" height="25px" /></div>
+			<div class="ca2">Ron</div>
+		</div>
+		<div style="clear:both;"></div>
+		<div class="commenttext"><p>&#8216;elp, I have just bought shiny new E-machines with pre-installed Windows 7. As with Vista, I don&#8217;t like it a lot, much prefer my old XP.<br />
+I followed your instructions to partiton, but when it came to show it the new volume showed as Healthy(Logical drive) not Healthy (Primary Partition).<br />
+Tried to install XP on to it, got message&#8211;Setup could not continue newer version of Windows already installed.<br />
+ Can you help please. I do not have a setup disc for W 7.</p>
+</div>
+			</li>
+	<li class="comment-alt" id="comment-96692">
+		<div class="commentmetadata date"><a href="#comment-96692" title="">July 20, 2010 10:11 am</a>  </div>
+		<div class="commentauthor">
+			<div class="ca1"><img src="/public/images/defaultavatar.png" alt="" width="25px" height="25px" /></div>
+			<div class="ca2">Les Springs</div>
+		</div>
+		<div style="clear:both;"></div>
+		<div class="commenttext"><p>A startup disk doesn&#8217;t come with pre-installed Win7 computers, so one option is to create a Win7 System Repair Disk.</p>
+<p>Go to your Windows 7:<br />
+Start / Control Panel / System and Security / Backup and Restore / Create A System Repair Disk.</p>
+<p>Use it if things go astray while trying to create a dual boot system.</p>
+</div>
+			</li>
+	<li class="comment-def" id="comment-96741">
+		<div class="commentmetadata date"><a href="#comment-96741" title="">July 21, 2010 7:02 am</a>  </div>
+		<div class="commentauthor">
+			<div class="ca1"><img src="/public/images/defaultavatar.png" alt="" width="25px" height="25px" /></div>
+			<div class="ca2">Roberto</div>
+		</div>
+		<div style="clear:both;"></div>
+		<div class="commenttext"><p>I think I wasn&#8217;t careful following the instructions.</p>
+<p>I have a Samsung r580 (500GB) with Windows 7. I shrunk one of the partitions then from Windows XP installer CD I installed on the unallocated 50GB disk space (I didn&#8217;t created the New Volume E: as suggested on this HowTo).</p>
+<p>As expected, Now my system boots directly into Windows XP, but the other partitions are not visible anymore!! none of the partition software I have tried seems to detect them, it&#8217;s just like now I have a 50GB disk and nothing else.</p>
+<p>The closest to a solution seems to be EASEUS Partition Master; which at least it seems to detect most of the files from the lost partitions.</p>
+<p>Many thanks in advance.</p>
+</div>
+			</li>
+	<li class="comment-alt" id="comment-96832">
+		<div class="commentmetadata date"><a href="#comment-96832" title="">July 22, 2010 4:19 am</a>  </div>
+		<div class="commentauthor">
+			<div class="ca1"><img src="/public/images/defaultavatar.png" alt="" width="25px" height="25px" /></div>
+			<div class="ca2">Ben</div>
+		</div>
+		<div style="clear:both;"></div>
+		<div class="commenttext"><p>however, if users want to use xp but  not win7, so people may want to format the drive C: and leave E: only for others uses, like storage movie etc in drive c:? I did it but I couldn&#8217;t format the drive C:? why? and how can I do so, if users can do? what will happen if I format the drive C:?</p>
+<p>*****previously, I use the command &#8220;bcdedit&#8221; remove the win7, so there was no boot management for dual os.</p>
+</div>
+			</li>
+	<li class="comment-def" id="comment-96972">
+		<div class="commentmetadata date"><a href="#comment-96972" title="">July 23, 2010 3:58 pm</a>  </div>
+		<div class="commentauthor">
+			<div class="ca1"><img src="/public/images/defaultavatar.png" alt="" width="25px" height="25px" /></div>
+			<div class="ca2">Antosha Khadaroo</div>
+		</div>
+		<div style="clear:both;"></div>
+		<div class="commenttext"><p>With regards to creating a dual boot for a computer preinstalled with windows 7 with xp.  Can this same process be used for a laptop?</p>
+</div>
+			</li>
+	<li class="comment-alt" id="comment-97761">
+		<div class="commentmetadata date"><a href="#comment-97761" title="">August 2, 2010 5:31 pm</a>  </div>
+		<div class="commentauthor">
+			<div class="ca1"><img src="/public/images/defaultavatar.png" alt="" width="25px" height="25px" /></div>
+			<div class="ca2">Babalola Olusayo</div>
+		</div>
+		<div style="clear:both;"></div>
+		<div class="commenttext"><p>Geek, Pls, I&#8217;m getting blue screen error trying to load XP setup on dv6 2112sa after creating the partition as directed. Is this a function of the XP cd or is it a thing with the laptop. What in your opinion should I do. Pls this is urgent. Thanks</p>
+</div>
+			</li>
+	<li class="comment-def" id="comment-98250">
+		<div class="commentmetadata date"><a href="#comment-98250" title="">August 8, 2010 4:15 pm</a>  </div>
+		<div class="commentauthor">
+			<div class="ca1"><img src="/public/images/defaultavatar.png" alt="" width="25px" height="25px" /></div>
+			<div class="ca2">Pablo Picaso</div>
+		</div>
+		<div style="clear:both;"></div>
+		<div class="commenttext"><p>Like many others I am getting a BSoD. I followed the above directions completely and it worked up until I did a reboot and tried to install XP. It loads all of the generic drivers and then when it goes to the windows installation screen the BSoD comes up.</p>
+<p>I really want to get XP running on my new Dell Inspiron 1545. It came preloaded with Win7 Home Premium 64 Bit, which will not several of the older 32 bit programs I use for image editing and web design at work. </p>
+<p>The technical details from the BSoD.</p>
+<p>&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;-</p>
+<p>A problem has been detected and windows has been shut down to prevent damage to your computer.</p>
+<p>If this is the first time you&#8217;ve seen this stop error screen, restart your computer. If this screen appears again, follow these steps:</p>
+<p>Check for viruses on your computer. Remove any newly installed hard drives or hard drive controllers. Check your hard drive to make sure it is properly configured and terminated.<br />
+Run CHKDSK /F to check for hard drive corruption, and then restart your computer.</p>
+<p>Technical information:</p>
+<p>*** STOP: 0x0000007B (0xF78D2524, 0xC0000034, 0&#215;00000000, 0&#215;00000000)</p>
+<p>&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;-</p>
+<p>Please help me&#8230; I really need to get this thing dual boot ASAP.</p>
+<p>Thanks,<br />
+Paul</p>
+</div>
+			</li>
+	<li class="comment-alt" id="comment-98488">
+		<div class="commentmetadata date"><a href="#comment-98488" title="">August 11, 2010 9:11 am</a>  </div>
+		<div class="commentauthor">
+			<div class="ca1"><img src="/public/images/defaultavatar.png" alt="" width="25px" height="25px" /></div>
+			<div class="ca2">Sam E</div>
+		</div>
+		<div style="clear:both;"></div>
+		<div class="commenttext"><p>Pablo Picaso  !!! i got the same problem but i used another XP pro Cd with SP3 and it worked just fine. try another XP</p>
+</div>
+			</li>
+	<li class="comment-def" id="comment-99358">
+		<div class="commentmetadata date"><a href="#comment-99358" title="">August 21, 2010 7:53 am</a>  </div>
+		<div class="commentauthor">
+			<div class="ca1"><img src="/public/images/defaultavatar.png" alt="" width="25px" height="25px" /></div>
+			<div class="ca2">Jonathan N</div>
+		</div>
+		<div style="clear:both;"></div>
+		<div class="commenttext"><p>I have a question, if i have windows 7 preinstalled on my computer but do not actually want to use it but want to use windows xp, can i just give windows xp almost all of the hard drive when i split it?</p>
+</div>
+			</li>
+	<li class="comment-alt" id="comment-100058">
+		<div class="commentmetadata date"><a href="#comment-100058" title="">August 28, 2010 12:09 am</a>  </div>
+		<div class="commentauthor">
+			<div class="ca1"><img src="/public/images/defaultavatar.png" alt="" width="25px" height="25px" /></div>
+			<div class="ca2">COMALite J</div>
+		</div>
+		<div style="clear:both;"></div>
+		<div class="commenttext"><p>Another way to dual-boot on most modern PCs is to install a second hard drive, then use the BIOS Boot Settings to switch which drive you boot from. Most modern BIOSes will let you call up a boot menu by pressing some key combination after powering up or resetting, and allow you to boot from any installed hard drive, as well as from floppy (if installed), CD/DVD, USB drive, etc.</p>
+<p>This way, you don’t have to mess with boot sectors, editing BOOT.INI, or any of that stuff. Just install Windows 7 (or whatever) to one drive, and XP (or whatever) to another. The two drives will be visible from both OSes, so you can have data shared between the two.</p>
+<p>One performance-boosting tip is to use the other drive for the Virtual Memory paging file, for instance: if Drive C: has XP and Drive D: has Windows 7, then use Drive D: for XP’s paging, and C: for Windows 7’s paging. This way, the Virtual Memory paging isn’t working the same hard drive heads and data channels that the OS and software are, so when physical RAM gets used up and Virtual Memory kicks in, the resulting performance degradation is greatly mitigated since there’s much less drive head motion.</p>
+</div>
+			</li>
+	<li class="comment-def" id="comment-100119">
+		<div class="commentmetadata date"><a href="#comment-100119" title="">August 29, 2010 5:08 am</a>  </div>
+		<div class="commentauthor">
+			<div class="ca1"><img src="/public/images/defaultavatar.png" alt="" width="25px" height="25px" /></div>
+			<div class="ca2">Elliot</div>
+		</div>
+		<div style="clear:both;"></div>
+		<div class="commenttext"><p>my computer is DV7-3180us HP Windows 7 Home premium 64 bit it came installed</p>
+<p>I want to Dual boot and ad XP 32 bit. I keep getting a blue? Screen of Death.it wont let me ad Xp. is there any way around this help ps thanks</p>
+<p>cam any body tell me WHY ??????????? no has answer the WHY QUESTION for 7 people</p>
+</div>
+			</li>
+	<li class="comment-alt" id="comment-100136">
+		<div class="commentmetadata date"><a href="#comment-100136" title="">August 29, 2010 1:53 pm</a>  </div>
+		<div class="commentauthor">
+			<div class="ca1"><img src="/public/images/defaultavatar.png" alt="" width="25px" height="25px" /></div>
+			<div class="ca2">Joe Shmoe</div>
+		</div>
+		<div style="clear:both;"></div>
+		<div class="commenttext"><p>It&#8217;s because he took the money for his software and ran. Besides, he can&#8217;t hold every idiots hand through this process.</p>
+</div>
+			</li>
+	<li class="comment-def" id="comment-100304">
+		<div class="commentmetadata date"><a href="#comment-100304" title="">August 31, 2010 9:36 am</a>  </div>
+		<div class="commentauthor">
+			<div class="ca1"><img src="/public/images/defaultavatar.png" alt="" width="25px" height="25px" /></div>
+			<div class="ca2">COMALite J</div>
+		</div>
+		<div style="clear:both;"></div>
+		<div class="commenttext"><p>Elliot, you need to provide more info.</p>
+<p>When, exactly, does the Blue Screen of Death appear? When booting into XP? When booting into Win7? After booting into one of those but when trying to do something like logging in or running an important program? Be as specific as you can.</p>
+<p>Does it happen when booting into Safe Mode? Did you try that? Do you know how to get into Safe Mode? (Press [F8] at the OS selection screen when booting — that’s one of the “advanced options” that that key gives you the option to select.)</p>
+<p>What, exactly, does the Blue Screen of Death say? Yes, all of those numbers really do mean something, and actually are important. Write them down and post them.</p>
+<p>While I doubt that this is something solvable in this forum, it definitely isn’t solvable without more detailed information, including all of the above.</p>
+</div>
+			</li>
+	<li class="comment-alt" id="comment-100550">
+		<div class="commentmetadata date"><a href="#comment-100550" title="">September 2, 2010 7:49 am</a>  </div>
+		<div class="commentauthor">
+			<div class="ca1"><img src="/public/images/defaultavatar.png" alt="" width="25px" height="25px" /></div>
+			<div class="ca2">Karan M</div>
+		</div>
+		<div style="clear:both;"></div>
+		<div class="commenttext"><p>Thank you so much for the info, I was about to format 6 netbooks I bought for my staff at aurusit.com.</p>
+<p>Phew, thank goodness this can be done without format!!</p>
+</div>
+			</li>
+	<li class="comment-def" id="comment-100641">
+		<div class="commentmetadata date"><a href="#comment-100641" title="">September 3, 2010 7:53 am</a>  </div>
+		<div class="commentauthor">
+			<div class="ca1"><img src="/public/images/defaultavatar.png" alt="" width="25px" height="25px" /></div>
+			<div class="ca2">ram</div>
+		</div>
+		<div style="clear:both;"></div>
+		<div class="commenttext"><p>i have windows 7 and i install xp in other drive, but dual boot option is not coming directly boot in xp, how to work dual boot.</p>
+</div>
+			</li>
+	<li class="comment-alt" id="comment-101575">
+		<div class="commentmetadata date"><a href="#comment-101575" title="">September 14, 2010 8:18 am</a>  </div>
+		<div class="commentauthor">
+			<div class="ca1"><img src="/public/images/defaultavatar.png" alt="" width="25px" height="25px" /></div>
+			<div class="ca2">Answer</div>
+		</div>
+		<div style="clear:both;"></div>
+		<div class="commenttext"><p>XP does not support SATA drives fully so you need a driver which you can slipstream into XP or use a floppy (maybe USB haven&#8217;t checked). The key is knowing which driver is required for your drive[s] controller.</p>
+<p>Win7 pre-installed boot from CD with XP inserted will result in the following error message as XP cannot see any hard drives.</p>
+<p>———————————————————————————————————————————-</p>
+<p>A problem has been detected and windows has been shut down to prevent damage to your computer.</p>
+<p>If this is the first time you’ve seen this stop error screen, restart your computer. If this screen appears again, follow these steps:</p>
+<p>Check for viruses on your computer. Remove any newly installed hard drives or hard drive controllers. Check your hard drive to make sure it is properly configured and terminated.<br />
+Run CHKDSK /F to check for hard drive corruption, and then restart your computer.</p>
+<p>Technical information:</p>
+<p>*** STOP: 0?0000007B (0xF78D2524, 0xC0000034, 0?00000000, 0?00000000)</p>
+<p>———————————————————————————————————————————</p>
+</div>
+			</li>
+	<li class="comment-def" id="comment-102175">
+		<div class="commentmetadata date"><a href="#comment-102175" title="">September 20, 2010 12:59 pm</a>  </div>
+		<div class="commentauthor">
+			<div class="ca1"><img src="/public/images/defaultavatar.png" alt="" width="25px" height="25px" /></div>
+			<div class="ca2">Raj</div>
+		</div>
+		<div style="clear:both;"></div>
+		<div class="commenttext"><p>Anyone successfully installed XP dual boot on Win 7 Home Premium 64 Bit laptop?<br />
+I want to follow the instructions but it seems like many of you having issues. please advise.</p>
+</div>
+			</li>
+	<li class="comment-alt" id="comment-102292">
+		<div class="commentmetadata date"><a href="#comment-102292" title="">September 21, 2010 2:47 pm</a>  </div>
+		<div class="commentauthor">
+			<div class="ca1"><img src="/public/images/defaultavatar.png" alt="" width="25px" height="25px" /></div>
+			<div class="ca2">Glen</div>
+		</div>
+		<div style="clear:both;"></div>
+		<div class="commenttext"><p>I&#8217;ve been trying to set up dual boot for the last day. I&#8217;m using a Win7 Home Premium 64 Bit laptop. It&#8217;s been successful, up to the point where I restarted my computer and tried to choose the Windows 7 option. It goes through the start up animation and I get BSoD, so now I can&#8217;t boot into XP or Win7 since the bootloader for XP was written over. I don&#8217;t understand why this happens since none of the files have been changed since I began the process, unless easyBCD screwed up the bootloader&#8230;</p>
+<p>Also, when I was in XP I was installing a few drivers and apparently the drivers were installing to the wrong partition, a partition with only 200mb of space, so I couldn&#8217;t install many of them. I looked in the registry and program files path is fine..</p>
+</div>
+			</li>
+	<li class="comment-def" id="comment-102765">
+		<div class="commentmetadata date"><a href="#comment-102765" title="">September 26, 2010 11:53 am</a>  </div>
+		<div class="commentauthor">
+			<div class="ca1"><img src="/public/images/defaultavatar.png" alt="" width="25px" height="25px" /></div>
+			<div class="ca2">aaa</div>
+		</div>
+		<div style="clear:both;"></div>
+		<div class="commenttext"><p>this is done in under virtual machine</p>
+<p>&#8230;..<br />
+s</p>
+</div>
+			</li>
+	<li class="comment-alt" id="comment-102918">
+		<div class="commentmetadata date"><a href="#comment-102918" title="">September 28, 2010 12:20 pm</a>  </div>
+		<div class="commentauthor">
+			<div class="ca1"><img src="/public/images/defaultavatar.png" alt="" width="25px" height="25px" /></div>
+			<div class="ca2">Terry</div>
+		</div>
+		<div style="clear:both;"></div>
+		<div class="commenttext"><p>I read on Microsoft&#8217;s site @ <a href="http://support.microsoft.com/kb/926185" rel="nofollow">http://support.microsoft.com/kb/926185</a> that a dual boot configuration with Win XP and Win 7 will result in XP overwriting all the latter&#8217;s System Restore points without the appropriate Registry hacks.</p>
+</div>
+			</li>
+	<li class="comment-def" id="comment-102949">
+		<div class="commentmetadata date"><a href="#comment-102949" title="">September 28, 2010 6:14 pm</a>  </div>
+		<div class="commentauthor">
+			<div class="ca1"><img src="/public/images/defaultavatar.png" alt="" width="25px" height="25px" /></div>
+			<div class="ca2">Chuck</div>
+		</div>
+		<div style="clear:both;"></div>
+		<div class="commenttext"><p>I&#8217;m trying to set up a dual boot on my new HP laptop that came with Windows7 Home Premium installed.  I have a legitimate Windows XP Home disk, and I&#8217;ve set up a 40GB partition on the 250 GB SATA drive as instructed above.  When I boot off the XP disk, I get the error message: &#8220;If this is the first time you’ve seen this stop error screen, restart your computer. If this screen appears again, follow these steps:&#8221; There are no errors in the drive, and I&#8217;ve removed the virus and firewall programs.</p>
+<p>You state above that XP can&#8217;t recognize the SATA drive. How do I get the drivers you refer to,  and how would I use them?  I don&#8217;t have any idea how I would &#8220;slipstream&#8221; the drivers, as you mention. Maybe I&#8217;ve bitten off more that I can deal with?</p>
+<p>The computer specs are:<br />
+  HP Pavillion Model dv6t-2100<br />
+  Product VV451AV<br />
+  3GB DDR3 Memory<br />
+  250GB 7200 RPM SATA Hard Drive</p>
+<p>Thanks for any help you can provide.</p>
+</div>
+			</li>
+	<li class="comment-alt" id="comment-102989">
+		<div class="commentmetadata date"><a href="#comment-102989" title="">September 29, 2010 12:20 am</a>  </div>
+		<div class="commentauthor">
+			<div class="ca1"><img src="/public/images/defaultavatar.png" alt="" width="25px" height="25px" /></div>
+			<div class="ca2">John</div>
+		</div>
+		<div style="clear:both;"></div>
+		<div class="commenttext"><p>Chuck,</p>
+<p>I feel your pain my brother.  I also have a new HP.  Unfortunately, you are wasting your time here.  If you read all these threads, you will see that these replies have been going on for months and many have no good results.  I suggest you try other forums or consider giving up.  I wrote a request here <a href="http://www.techsupportforum.com/hardware-support/driver-support/517300-dual-boot-xp-pro-windows-7-home-premium.html" rel="nofollow">http://www.techsupportforum.com/hardware-support/driver-support/517300-dual-boot-xp-pro-windows-7-home-premium.html</a> a couple of days ago.  It has been getting many hits but no good replies.<br />
+1) Google nLite and download for free to be able to &#8220;slipstream&#8221;<br />
+2) Finding those SATA drivers are rough enough not to mention all the problems people have posted here.  My goal was to complete this today but I have failed so I will not look into this again for another month.  Too many projects!</p>
+<p>Good Luck,<br />
+John</p>
+</div>
+			</li>
+	<li class="comment-def" id="comment-103033">
+		<div class="commentmetadata date"><a href="#comment-103033" title="">September 29, 2010 10:46 am</a>  </div>
+		<div class="commentauthor">
+			<div class="ca1"><img src="/public/images/defaultavatar.png" alt="" width="25px" height="25px" /></div>
+			<div class="ca2">John</div>
+		</div>
+		<div style="clear:both;"></div>
+		<div class="commenttext"><p>Chuck and others,<br />
+VirtualBox is a free shell that you can run and have your XP at the same time as your Windows 7 or Vista.  It works pretty good but I wanted to run Jane&#8217;s F-15 (a 1998 game) so I could have duels with my son and it was non workable in VirtualBox but all other applications worked as if I had a separate Windows XP desktop.<br />
+John</p>
+</div>
+			</li>
+	<li class="comment-alt" id="comment-103049">
+		<div class="commentmetadata date"><a href="#comment-103049" title="">September 29, 2010 12:24 pm</a>  </div>
+		<div class="commentauthor">
+			<div class="ca1"><img src="/public/images/defaultavatar.png" alt="" width="25px" height="25px" /></div>
+			<div class="ca2">Chuck</div>
+		</div>
+		<div style="clear:both;"></div>
+		<div class="commenttext"><p>John,</p>
+<p>Thanks for the response.  </p>
+<p>The computer I&#8217;m using for this message has three 80GB SATA drives, and is a dual-boot system with Windows XP Home and Windows XP Pro 64 bit.  I normally boot on XP Home, and all the drives show.</p>
+<p>If I look at the drivers for the SATA drives, they all show the same two items:<br />
+  C:\WINDOWS\system32\DRIVERS\disk.sys<br />
+  C:\WINDOWS\system32\DRIVERS\PartMgr.sys</p>
+<p>When I try to install XP on the HP laptop part way through the initial setup there is a window that says that if I need to install SCSI drivers, etc, I should press F6 (I think).  Would this be the point that I could install those drivers, assuming that they are the ones that would work?  And would I need to make folders for them, or do they go to the correct place automatically?</p>
+<p>Things are seldom as simple as one would hope.</p>
+</div>
+			</li>
+	<li class="comment-def" id="comment-103052">
+		<div class="commentmetadata date"><a href="#comment-103052" title="">September 29, 2010 12:38 pm</a>  </div>
+		<div class="commentauthor">
+			<div class="ca1"><img src="/public/images/defaultavatar.png" alt="" width="25px" height="25px" /></div>
+			<div class="ca2">Brad</div>
+		</div>
+		<div style="clear:both;"></div>
+		<div class="commenttext"><p>I have successfully installed a Win7 64bit with XP 32bit using most of the detail and the EasyBCD.  One issue I had installing XP is that it couldnt find a HD and would BSoD during the XP CD installer.  I went into the BIOS and changed the SATA emulation from AHCI to IDE.  Then I was able to install XP on my newly created partition.</p>
+<p>One thing I didnt like about this process is that Win7 creates a small partition and when XP was installed, it saw both Win7 partitions and installed on drive E. (C: Small Partition, D: WIN7 Partition, E: XP Partition).  All this means is that you have to be carefull when installing programs to change the drive letters to E.  Windows 7 is fine for its drives.</p>
+<p>It is true that if you install XP first, then Win7, the install process is easier(at least the boot loader part).  What made it easier for me though is I have valid media and CD-keys for both OS so even if it did screw up, I could reinstall it.</p>
+</div>
+			</li>
+	<li class="comment-alt" id="comment-103064">
+		<div class="commentmetadata date"><a href="#comment-103064" title="">September 29, 2010 2:02 pm</a>  </div>
+		<div class="commentauthor">
+			<div class="ca1"><img src="/public/images/defaultavatar.png" alt="" width="25px" height="25px" /></div>
+			<div class="ca2">Chuck</div>
+		</div>
+		<div style="clear:both;"></div>
+		<div class="commenttext"><p>Here&#8217;s what HP says; I probably should have checked this first.</p>
+<p>&#8220;Reasons not to try a dual-boot system<br />
+While documentation on how to use dual-booting may be available on the web, HP does not support computers that have been set up in a dual-boot configuration. The dual-boot requires hardware drivers for both operating systems, and HP does not provide drivers for components that were not designed for the specific operating system. Such a configuration change may require you to reinstall the original software image when troubleshooting possible software and hardware issues with technical support.<br />
+Additionally, even if you could find some generic third-party drivers that would allow you to setup a dual-boot configuration on your notebook, you should consider the size of your hard drive. Each operating system takes up a considerable amount of space on the hard drive. Installing more than one OS may limit the amount of space that you have available for other applications, which will degrade performance.&#8221;</p>
+</div>
+			</li>
+	<li class="comment-def" id="comment-103423">
+		<div class="commentmetadata date"><a href="#comment-103423" title="">October 2, 2010 3:25 pm</a>  </div>
+		<div class="commentauthor">
+			<div class="ca1"><img src="/public/images/defaultavatar.png" alt="" width="25px" height="25px" /></div>
+			<div class="ca2">Lizzie</div>
+		</div>
+		<div style="clear:both;"></div>
+		<div class="commenttext"><p>Hi<br />
+I have successfully loaded a triple boot system (XP/Vista/Win7 &#8211; yeah don&#8217;t ask why.  Stupid programs)  on my dv8t with 2 500 GB hard drives (Win7/Vista on one &#8211; XP/Data on the other)  My only problem was that everytime Win7 created a restore point, I would have to reload the NTLDR for XP and hal.dll.  For some reason these 2 files keep getting screwed up.  </p>
+<p>I am trying to load XP first on the hard drive so that this won&#8217;t happen, but since I don&#8217;t have a Win7 OS disk, just the restore disks, I am having problems getting it to work.  Any suggestions? </p>
+<p>Oh, and as for the HP issue, you can always keep a clean Win7 HD that you can switch out if you need to call the help desks.  HDs are getting so cheap.  Keep it in an enclosure and it can double as a clone backup.  </p>
+<p>For all those HP users, there is a user forum on this issue at the HP website, but it is not HP moderated? Anyway, they have a lot of the drivers you need for the HP laptops.  </p>
+<p>2 things that helped tremendously also &#8211; the nlite with SATA drivers slipstreamed and Unknown Device Identifier.  Both helped tremendously and are freeware.</p>
+</div>
+			</li>
+	<li class="comment-alt" id="comment-103537">
+		<div class="commentmetadata date"><a href="#comment-103537" title="">October 4, 2010 10:31 am</a>  </div>
+		<div class="commentauthor">
+			<div class="ca1"><img src="/public/images/defaultavatar.png" alt="" width="25px" height="25px" /></div>
+			<div class="ca2">Alex</div>
+		</div>
+		<div style="clear:both;"></div>
+		<div class="commenttext"><p>Managed to do this today, XP on a pre installed Windows 7 machine.  I had to use EasyBCD 2 to add an XP entry to the boot sequence before the XP install.  Thanks very much!</p>
+</div>
+			</li>
+	<li class="comment-def" id="comment-103843">
+		<div class="commentmetadata date"><a href="#comment-103843" title="">October 7, 2010 7:44 am</a>  </div>
+		<div class="commentauthor">
+			<div class="ca1"><img src="/public/images/defaultavatar.png" alt="" width="25px" height="25px" /></div>
+			<div class="ca2">justin just in check</div>
+		</div>
+		<div style="clear:both;"></div>
+		<div class="commenttext"><p>hello, any one can clear my doubt. </p>
+<p>questions:</p>
+<p>-when i insert the windows xp cd?</p>
+<p>-can the dual boot support win7 64-bit properly i mean (100%) without any problem</p>
+<p>- i really afraid to do this , but i wan&#8217;t to play my heavy duty games in win xp only , ??? because the windows 7 is primer for my pc i do alll things in my win 7 instead of  xp</p>
+<p>i want to install win xp because i onlly want to play games freely. </p>
+<p>any one have a answer or tried this method on win7 64-bit in a dell laptop </p>
+<p>please,please,please&#8230;&#8230;&#8230; </p>
+<p>mail to me: <a href="mailto:enquiry95media@live.com.my">enquiry95media@live.com.my</a> </p>
+<p>thanks, to who help me!!!!!!!</p>
+</div>
+			</li>
+	<li class="comment-alt" id="comment-104507">
+		<div class="commentmetadata date"><a href="#comment-104507" title="">October 14, 2010 2:11 am</a>  </div>
+		<div class="commentauthor">
+			<div class="ca1"><img src="/public/images/defaultavatar.png" alt="" width="25px" height="25px" /></div>
+			<div class="ca2">Vincent</div>
+		</div>
+		<div style="clear:both;"></div>
+		<div class="commenttext"><p>So&#8230;</p>
+<p>After reading this and tryiung this, I think I know what is teh boggle with may people not being able to launch into XP&#8230;</p>
+<p>Like others, I started with Win 7 on the laptop.</p>
+<p>I shrunk th partition and added another, and loaded XP (yes, if you have a SATA drive, it needs to be changed in your bios to &#8220;compatible&#8221; to be seen in XP).</p>
+<p>The computer booted to XP like a charm.</p>
+<p>Then, I used EasyBCD, and wham, My Win 7 is back.</p>
+<p>But if I use the dual boot to go to XP, no luck.</p>
+<p>The problem is that Win 7 creates a &#8220;System Reserved&#8221; partition of 10 MB.</p>
+<p>Win7 igores it and does not assoign a drive letter.</p>
+<p>XP sees it, assigns a drive letter ( c:) and throws the required boot files for XP on that stupid little 10MB partition.</p>
+<p>As a result, no success.</p>
+<p>I wish I had a solution&#8230;  I think I will just load VMware and run XP in that to get done what I wanted.</p>
+</div>
+			</li>
+	<li class="comment-def" id="comment-104860">
+		<div class="commentmetadata date"><a href="#comment-104860" title="">October 17, 2010 5:42 pm</a>  </div>
+		<div class="commentauthor">
+			<div class="ca1"><img src="/public/images/defaultavatar.png" alt="" width="25px" height="25px" /></div>
+			<div class="ca2">wuchen_pa@yahoo.com</div>
+		</div>
+		<div style="clear:both;"></div>
+		<div class="commenttext"><p>STOP!!  Don&#8217;t do this process.  </p>
+<p>It is in error at the last step!  The EasyBCD tool doesn&#8217;t work in XP, and following this process, only XP will boot right now.  So, I no longer can access my Win7 because I can&#8217;t boot into it.  I&#8217;m afraid to try to find a Win 7 disk to repair the boot for 7 because some folks have stated it breaks both instances.</p>
+<p>This is some shit though, I&#8217;ve spent two days trying to get this to work.  FIX YOUR INSTRUCTIONS or pull them down.</p>
+<p>&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;<br />
+Create Boot Loader</p>
+<p>Once installation of XP is successful you can now go through and install the latest Microsoft Updates and drivers. You will undoubtedly notice that the machine is booting directly into XP at this time. This is due to XP writing it’s bootloader over Windows 7’s. To get both XP and Windows 7 as an option at the boot screen you can use the free utility EasyBCD 1.72 or their new 2.0 Beta.</p>
+</div>
+			</li>
+	<li class="comment-alt" id="comment-105931">
+		<div class="commentmetadata date"><a href="#comment-105931" title="">October 27, 2010 8:49 am</a>  </div>
+		<div class="commentauthor">
+			<div class="ca1"><img src="/public/images/defaultavatar.png" alt="" width="25px" height="25px" /></div>
+			<div class="ca2">Don</div>
+		</div>
+		<div style="clear:both;"></div>
+		<div class="commenttext"><p>I think some Notebook are dedicated to Windows 7 nowadays. I tried directly installed a Windows XP on my Notebook. After the boot up on my installation i got a blue screen regarding on Hardware compatibility on XP. My Harddisk can&#8217;t recognized XP on my System .</p>
+</div>
+			</li>
+	<li class="comment-def" id="comment-106073">
+		<div class="commentmetadata date"><a href="#comment-106073" title="">October 27, 2010 10:49 pm</a>  </div>
+		<div class="commentauthor">
+			<div class="ca1"><img src="/public/images/defaultavatar.png" alt="" width="25px" height="25px" /></div>
+			<div class="ca2">Deb</div>
+		</div>
+		<div style="clear:both;"></div>
+		<div class="commenttext"><p>OK &#8211; have done everything without a hitch UNTIL it comes to installing XP, I get to the &#8216;setup is starting windows&#8217; and then nothing&#8230;&#8230;.as in it goes no further.????<br />
+I have XP home edition &#8211; is this the problem???? Do I have to have professional???? I am getting increasingly frustrated by this whole bloody microsoft nonsense &#8211; sob!<br />
+I wish my old computer didn&#8217;t Kark it, and I wish I hadn&#8217;t bought this new pc and I AM NOT buying a new scanner etc because NOTHING is compatible with windows 7, including my blood glucose monitoring software&#8230;&#8230;.sighhhhh (just venting, sorry)</p>
+</div>
+			</li>
+	<li class="comment-alt" id="comment-106209">
+		<div class="commentmetadata date"><a href="#comment-106209" title="">October 28, 2010 6:39 pm</a>  </div>
+		<div class="commentauthor">
+			<div class="ca1"><img src="/public/images/defaultavatar.png" alt="" width="25px" height="25px" /></div>
+			<div class="ca2">jason</div>
+		</div>
+		<div style="clear:both;"></div>
+		<div class="commenttext"><p>easy as can be thanks</p>
+</div>
+			</li>
+	<li class="comment-def" id="comment-106236">
+		<div class="commentmetadata date"><a href="#comment-106236" title="">October 28, 2010 11:00 pm</a>  </div>
+		<div class="commentauthor">
+			<div class="ca1"><img src="/public/images/defaultavatar.png" alt="" width="25px" height="25px" /></div>
+			<div class="ca2">Monkey21st</div>
+		</div>
+		<div style="clear:both;"></div>
+		<div class="commenttext"><p>If you get Blue Screen after installing XP or get Blue Screen when trying to install Win XP on new PC or laptops because Win XP CD does not have SATA drivers for the SATA Controller for SATA drives. You need to provide SATA drivers during XP installation or go in bios change AHCI to IDE in order for XP to work on newer computers that use SATA controller.</p>
+<p>Short answer for blue screening when trying to install Win XP on computers with SATA controller due no SATA drivers for that specific SATA controller on Win XP CD.</p>
+</div>
+			</li>
+	<li class="comment-alt" id="comment-106237">
+		<div class="commentmetadata date"><a href="#comment-106237" title="">October 28, 2010 11:11 pm</a>  </div>
+		<div class="commentauthor">
+			<div class="ca1"><img src="/public/images/defaultavatar.png" alt="" width="25px" height="25px" /></div>
+			<div class="ca2">Monkey21st</div>
+		</div>
+		<div style="clear:both;"></div>
+		<div class="commenttext"><p>&#8220;&#8221;"&#8221;"Don</p>
+<p>I think some Notebook are dedicated to Windows 7 nowadays. I tried directly installed a Windows XP on my Notebook. After the boot up on my installation i got a blue screen regarding on Hardware compatibility on XP. My Harddisk can’t recognized XP on my System .&#8221;"&#8221;"&#8221;</p>
+<p>&#8220;&#8221;"Deb</p>
+<p>OK – have done everything without a hitch UNTIL it comes to installing XP, I get to the ’setup is starting windows’ and then nothing…….as in it goes no further.????<br />
+I have XP home edition – is this the problem???? Do I have to have professional???? I am getting increasingly frustrated by this whole bloody microsoft nonsense – sob!<br />
+I wish my old computer didn’t Kark it, and I wish I hadn’t bought this new pc and I AM NOT buying a new scanner etc because NOTHING is compatible with windows 7, including my blood glucose monitoring software…….sighhhhh (just venting, sorry)&#8221;"&#8221;</p>
+<p>If you get Blue Screen after installing XP or get Blue Screen when trying to install Win XP on new PC or laptops because Win XP CD does not have SATA drivers for the SATA Controller for SATA drives. You need to provide SATA drivers during XP installation or go in bios change AHCI to IDE in order for XP to work on newer computers that use SATA controller.</p>
+<p>Short answer for blue screening when trying to install Win XP on computers with SATA controller due no SATA drivers for that specific SATA controller on Win XP CD.</p>
+<p>go to your computer manufacturer website and download the SATA drivers, put the drivers on USB flash or floppy, provide the SATA drivers during Win XP installation if you want to use AHCI or go in to bios change AHCI to IDE then you don&#8217;t need to provide SATA drivers when installing Win XP.</p>
+<p>I have done this so many times.</p>
+</div>
+			</li>
+	<li class="comment-def" id="comment-106362">
+		<div class="commentmetadata date"><a href="#comment-106362" title="">October 29, 2010 4:58 pm</a>  </div>
+		<div class="commentauthor">
+			<div class="ca1"><img src="/public/images/defaultavatar.png" alt="" width="25px" height="25px" /></div>
+			<div class="ca2">Larry</div>
+		</div>
+		<div style="clear:both;"></div>
+		<div class="commenttext"><p>I have a problem,it is,I own and can register a win xp pro media(english) and a win 7 home(german).can I put them both on one harddisk?,and will they work?Now have them both on .,can´t use any e-mail on the xp,but I can on the win 7 .What did I do wrong? first I put on the xp,then 7.</p>
+</div>
+			</li>
+	<li class="comment-alt" id="comment-107716">
+		<div class="commentmetadata date"><a href="#comment-107716" title="">November 11, 2010 10:03 am</a>  </div>
+		<div class="commentauthor">
+			<div class="ca1"><img src="/public/images/defaultavatar.png" alt="" width="25px" height="25px" /></div>
+			<div class="ca2">Karen Spindler</div>
+		</div>
+		<div style="clear:both;"></div>
+		<div class="commenttext"><p>I had successfully set up dual boot win7/xp but then last night i expanded the disk volume to get more space for the xp installation.  Now Windows xp won&#8217;t boot, I get the &#8220;hal.dll missing or corrupted&#8221;.  What do I need to do in order to make the expanded volume boot xp?  I am thinking that I need to use the xp disk and run a repair?  Or can I just run &#8220;fixboot&#8221; from the recovery console?  I don&#8217;t see a boot.ini file in the xp root any more, maybe that is what is wrong?  Thanks for any help&#8230;..</p>
+</div>
+			</li>
+	<li class="comment-def" id="comment-108016">
+		<div class="commentmetadata date"><a href="#comment-108016" title="">November 13, 2010 11:15 am</a>  </div>
+		<div class="commentauthor">
+			<div class="ca1"><img src="/public/images/defaultavatar.png" alt="" width="25px" height="25px" /></div>
+			<div class="ca2">nsikub</div>
+		</div>
+		<div style="clear:both;"></div>
+		<div class="commenttext"><p>I think this process depends on what version of Windows 7 you&#8217;re using. I have Win 7 Home Premium 64-bit. I followed through the steps quite okay, however just before creating a new partition as illustrated I got a message &#8221; The operation you selected will convert the selected physical disk(s) into a dynamic disk(s). If you convert the disk(s) to dynamic you will not be able to start installed operating systems from any volume on the disk(s) (except the current boot volume. Are you sure you want to continue?&#8221;</p>
+<p>I stopped right there. I hear many people have damaged good hard disks as a result of saying &#8216;yes&#8217;. Continuing with this process if using Win 7 Home Premium 64 bit could have serious implications as changes made are semi-permanent, which require special software to reverse. Win 7 Home Premium 64 bit is limited to 4 primary partitions and creating extra partitions without careful planning could cause you unnecessary heartaches. I find this article misleading please think twice before you follow these steps or at least be sure about the exact version of Win 7 this procedure relates to?</p>
+</div>
+			</li>
+	<li class="comment-alt" id="comment-109914">
+		<div class="commentmetadata date"><a href="#comment-109914" title="">December 1, 2010 1:57 am</a>  </div>
+		<div class="commentauthor">
+			<div class="ca1"><img src="/public/images/defaultavatar.png" alt="" width="25px" height="25px" /></div>
+			<div class="ca2">Gary</div>
+		</div>
+		<div style="clear:both;"></div>
+		<div class="commenttext"><p>The reason some of you are having problems with this new partition is possibly because you told windows 7 to place an operating system (OS) on it during the partition creation process within windows 7.  The new &#8220;xp&#8221; partition needs to be blank within widows 7, before you reboot the computer with the xp disk.  Be sure to select this new partition for the xp install.  Good luck.</p>
+</div>
+			</li>
+	<li class="comment-def" id="comment-110227">
+		<div class="commentmetadata date"><a href="#comment-110227" title="">December 3, 2010 5:05 pm</a>  </div>
+		<div class="commentauthor">
+			<div class="ca1"><img src="/public/images/defaultavatar.png" alt="" width="25px" height="25px" /></div>
+			<div class="ca2">Stefan</div>
+		</div>
+		<div style="clear:both;"></div>
+		<div class="commenttext"><p>Can anyone help me ?? I installed Windows XP SP3 and when i install EasyBCD the executable gives an error. Help, i must access my Windows 7 again</p>
+</div>
+			</li>
+	<li class="comment-alt" id="comment-110648">
+		<div class="commentmetadata date"><a href="#comment-110648" title="">December 7, 2010 9:52 pm</a>  </div>
+		<div class="commentauthor">
+			<div class="ca1"><img src="/public/images/defaultavatar.png" alt="" width="25px" height="25px" /></div>
+			<div class="ca2">Mark</div>
+		</div>
+		<div style="clear:both;"></div>
+		<div class="commenttext"><p>Two questions&#8230;.</p>
+<p>1) How to I change AHCI to IDE in my BIOS to allow my XP install to see the SATA drives?  I have American Megatrends BIOS and I do not see this parameter anywhere?</p>
+<p>2) How do you &#8220;slipstream&#8221; in the SATA drivers when XP install is loading?</p>
+<p>Thanks</p>
+<p>Mark</p>
+</div>
+			</li>
+	<li class="comment-def" id="comment-112068">
+		<div class="commentmetadata date"><a href="#comment-112068" title="">December 18, 2010 4:27 am</a>  </div>
+		<div class="commentauthor">
+			<div class="ca1"><img src="/public/images/defaultavatar.png" alt="" width="25px" height="25px" /></div>
+			<div class="ca2">Giulio</div>
+		</div>
+		<div style="clear:both;"></div>
+		<div class="commenttext"><p>Hey everything worked fine for me, I can dual boot but I only have 1 problem on xp how to set up wifi? There is no wifi in network connection and when I press set up a connection it says that I haven&#8217;t set up my hardware can anybody help me?</p>
+</div>
+			</li>
+	<li class="comment-alt" id="comment-112069">
+		<div class="commentmetadata date"><a href="#comment-112069" title="">December 18, 2010 4:33 am</a>  </div>
+		<div class="commentauthor">
+			<div class="ca1"><img src="/public/images/defaultavatar.png" alt="" width="25px" height="25px" /></div>
+			<div class="ca2">giulio</div>
+		</div>
+		<div style="clear:both;"></div>
+		<div class="commenttext"><p>hey cna anybody help me i can setup wifi connefction in my laptop (win xp) everything worked fine, the instalation, etc but i have a problem, the setup connection says that i have&#8217;nt configure my hardware and i dont know how to do it can anybody help me?</p>
+</div>
+			</li>
+	<li class="comment-def" id="comment-112215">
+		<div class="commentmetadata date"><a href="#comment-112215" title="">December 19, 2010 6:12 am</a>  </div>
+		<div class="commentauthor">
+			<div class="ca1"><img src="/public/images/defaultavatar.png" alt="" width="25px" height="25px" /></div>
+			<div class="ca2">kian</div>
+		</div>
+		<div style="clear:both;"></div>
+		<div class="commenttext"><p>hi,</p>
+<p>i had follow all the instruction and finish dual botting my laptop</p>
+<p>however after dual botting xp on window 7, i am unable to access to my internal wireless modem.</p>
+<p>anyone can help me??</p>
+</div>
+			</li>
+	<li class="comment-alt" id="comment-112408">
+		<div class="commentmetadata date"><a href="#comment-112408" title="">December 20, 2010 9:16 pm</a>  </div>
+		<div class="commentauthor">
+			<div class="ca1"><img src="/public/images/defaultavatar.png" alt="" width="25px" height="25px" /></div>
+			<div class="ca2">Mark</div>
+		</div>
+		<div style="clear:both;"></div>
+		<div class="commenttext"><p>Hi All,</p>
+<p>My question maybe simple but probably difficult.  I have a Dell desktop which has XP Home preloaded (recovery discs created for the dell).  As it is pretty old &#8211; 6 years- I have brought a HP desktop which has Win 7 Home preloaded (I have created the recovery discs).  I wish to install the XP HDD into my HP desktop and switch between OS on startup.</p>
+<p>Can I do this without much drama or is using a usb external hdd caddy a better option? If anyone can advise this would be great.</p>
+</div>
+			</li>
+	<li class="comment-def" id="comment-112420">
+		<div class="commentmetadata date"><a href="#comment-112420" title="">December 21, 2010 12:17 am</a>  </div>
+		<div class="commentauthor">
+			<div class="ca1"><img src="/public/images/defaultavatar.png" alt="" width="25px" height="25px" /></div>
+			<div class="ca2">Vincent Pua</div>
+		</div>
+		<div style="clear:both;"></div>
+		<div class="commenttext"><p>If you install win xp &amp; appear error blue screen using dell laptop, you may check the bios setting to make sure your sata harddisk is in IDE Mode.<br />
+I tried &amp; it is work. As a general knowledge, this is motherboad setting issue.</p>
+</div>
+			</li>
+	<li class="comment-alt" id="comment-112533">
+		<div class="commentmetadata date"><a href="#comment-112533" title="">December 21, 2010 11:21 pm</a>  </div>
+		<div class="commentauthor">
+			<div class="ca1"><img src="/public/images/defaultavatar.png" alt="" width="25px" height="25px" /></div>
+			<div class="ca2">Bryan1998</div>
+		</div>
+		<div style="clear:both;"></div>
+		<div class="commenttext"><p>A problem has been detected and windows has been shut down to prevent damage to your computer.</p>
+<p>If this is the first time you’ve seen this stop error screen, restart your computer. If this screen appears again, follow these steps:</p>
+<p>Check for viruses on your computer. Remove any newly installed hard drives or hard drive controllers. Check your hard drive to make sure it is properly configured and terminated.<br />
+Run CHKDSK /F to check for hard drive corruption, and then restart your computer.</p>
+<p>Technical information:</p>
+<p>*** STOP: 0?0000007B (0xF78D2524, 0xC0000034, 0?00000000, 0?00000000)</p>
+<p>Same thing&#8230; over and OVER again.</p>
+<p>Any help?</p>
+</div>
+			</li>
+	<li class="comment-def" id="comment-112600">
+		<div class="commentmetadata date"><a href="#comment-112600" title="">December 22, 2010 12:43 pm</a>  </div>
+		<div class="commentauthor">
+			<div class="ca1"><img src="/public/images/defaultavatar.png" alt="" width="25px" height="25px" /></div>
+			<div class="ca2">Bryan1998</div>
+		</div>
+		<div style="clear:both;"></div>
+		<div class="commenttext"><p>Nevermind. I fixed it.</p>
+</div>
+			</li>
+	<li class="comment-alt" id="comment-112601">
+		<div class="commentmetadata date"><a href="#comment-112601" title="">December 22, 2010 12:45 pm</a>  </div>
+		<div class="commentauthor">
+			<div class="ca1"><img src="/public/images/defaultavatar.png" alt="" width="25px" height="25px" /></div>
+			<div class="ca2">Bryan1998</div>
+		</div>
+		<div style="clear:both;"></div>
+		<div class="commenttext"><p>How to do it:</p>
+<p>Go into the bios sand look for SATA setiings.  Then turn SATA (ACHI) to IDE.</p>
+<p>There. Done!</p>
+</div>
+			</li>
+	<li class="comment-def" id="comment-112826">
+		<div class="commentmetadata date"><a href="#comment-112826" title="">December 24, 2010 3:42 am</a>  </div>
+		<div class="commentauthor">
+			<div class="ca1"><img src="/public/images/defaultavatar.png" alt="" width="25px" height="25px" /></div>
+			<div class="ca2">RonB</div>
+		</div>
+		<div style="clear:both;"></div>
+		<div class="commenttext"><p>I tried to dual boot XP on a p6610f PC.</p>
+</div>
+			</li>
+	<li class="comment-alt" id="comment-112827">
+		<div class="commentmetadata date"><a href="#comment-112827" title="">December 24, 2010 3:55 am</a>  </div>
+		<div class="commentauthor">
+			<div class="ca1"><img src="/public/images/defaultavatar.png" alt="" width="25px" height="25px" /></div>
+			<div class="ca2">RonB</div>
+		</div>
+		<div style="clear:both;"></div>
+		<div class="commenttext"><p>The easyBCD software would not run on XP. XP is only option which would start up automatically.</p>
+<p>Ran repairs and even full restores several times and cannot get Win 7 to boot up. Even went to command prompt and bootfix options listed on the forums, but Win 7 still can&#8217;t boot up. (XP doesn&#8217;t show up since running the repairs. Basically the repairs make XP not come up, but causes win 7 to come up with errors.</p>
+</div>
+			</li>
+	<li class="comment-def" id="comment-113097">
+		<div class="commentmetadata date"><a href="#comment-113097" title="">December 27, 2010 2:32 pm</a>  </div>
+		<div class="commentauthor">
+			<div class="ca1"><img src="/public/images/defaultavatar.png" alt="" width="25px" height="25px" /></div>
+			<div class="ca2">Parus</div>
+		</div>
+		<div style="clear:both;"></div>
+		<div class="commenttext"><p>check the link ziaulhak.blogspot.com</p>
+</div>
+			</li>
+	<li class="comment-alt" id="comment-113239">
+		<div class="commentmetadata date"><a href="#comment-113239" title="">December 28, 2010 9:40 pm</a>  </div>
+		<div class="commentauthor">
+			<div class="ca1"><img src="/public/images/defaultavatar.png" alt="" width="25px" height="25px" /></div>
+			<div class="ca2">jolin</div>
+		</div>
+		<div style="clear:both;"></div>
+		<div class="commenttext"><p>Actually, recently I&#8217;ve found another way to speed up my poor PC, the software &#8220;tuneup360&#8243;. It’s very easy to handle and of course very powerful, my friends and I all use it now, maybe you can have a try.</p>
+</div>
+			</li>
+	<li class="comment-def" id="comment-113497">
+		<div class="commentmetadata date"><a href="#comment-113497" title="">December 30, 2010 5:31 pm</a>  </div>
+		<div class="commentauthor">
+			<div class="ca1"><img src="/public/images/defaultavatar.png" alt="" width="25px" height="25px" /></div>
+			<div class="ca2">Saksham</div>
+		</div>
+		<div style="clear:both;"></div>
+		<div class="commenttext"><p>Easybcd rocks! Just saved my arse.</p>
+</div>
+			</li>
+	<li class="comment-alt" id="comment-113815">
+		<div class="commentmetadata date"><a href="#comment-113815" title="">January 3, 2011 10:58 am</a>  </div>
+		<div class="commentauthor">
+			<div class="ca1"><img src="/public/images/defaultavatar.png" alt="" width="25px" height="25px" /></div>
+			<div class="ca2">Aashish Vaghela</div>
+		</div>
+		<div style="clear:both;"></div>
+		<div class="commenttext"><p>Hello HTG folks !<br />
+I must tell you that you people are doing a really good job. Keep it up !</p>
+<p>However, just like many other sites, this site lacks one major factor.<br />
+Social Networking Integration. I wanted to share many of the articles with my NOT-SO-TECHIE friends on Facebook. However, I can&#8217;t. So please see if you can integrate the functionality to share these articles such that they can be posted on Facebook or Twitter, etc.</p>
+<p>Thanks.<br />
+Aashish</p>
+</div>
+			</li>
+	<li class="comment-def" id="comment-114129">
+		<div class="commentmetadata date"><a href="#comment-114129" title="">January 5, 2011 11:11 pm</a>  </div>
+		<div class="commentauthor">
+			<div class="ca1"><img src="/public/images/defaultavatar.png" alt="" width="25px" height="25px" /></div>
+			<div class="ca2">SRB</div>
+		</div>
+		<div style="clear:both;"></div>
+		<div class="commenttext"><p>I just built a new i5 based box and installed WIN7-64 Pro and for many of the same reasons expressed here I wanted to install XP for dual boot.   I have read a years worth of frustration in these posts and will now do some serious consideration before proceeding.  Back in the late 80s or early 90s IBM had dual boot setup and it was a piece of cake to run OS/2 and Windows on the same machine&#8230;..times change I guess&#8230;good luck to you all.    If I figure it out, I will come back and share the answer</p>
+</div>
+			</li>
+	<li class="comment-alt" id="comment-114722">
+		<div class="commentmetadata date"><a href="#comment-114722" title="">January 11, 2011 6:18 pm</a>  </div>
+		<div class="commentauthor">
+			<div class="ca1"><img src="/public/images/defaultavatar.png" alt="" width="25px" height="25px" /></div>
+			<div class="ca2">willythecat</div>
+		</div>
+		<div style="clear:both;"></div>
+		<div class="commenttext"><p>Have just found this interesting thread, have signed up as it looks a good site, but have come it at the end of loads of questions. So sorry if this has been already asked.<br />
+I am currently running XP and have always fancied having a go with W7, but for sure, not getting rid of XP. Funnily enough, my C drive is already partitioned (into C and D) so l assume l can skip a lot lot of the origian tutorial?. I have XP on the C drive and films on the D drive.<br />
+If l move all of these &#8220;films&#8221; to my F drive, can l then just go ahead and install W7 on the D drive?</p>
+</div>
+			</li>
+	<li class="comment-def" id="comment-115775">
+		<div class="commentmetadata date"><a href="#comment-115775" title="">January 21, 2011 1:06 pm</a>  </div>
+		<div class="commentauthor">
+			<div class="ca1"><img src="/public/images/defaultavatar.png" alt="" width="25px" height="25px" /></div>
+			<div class="ca2">matty</div>
+		</div>
+		<div style="clear:both;"></div>
+		<div class="commenttext"><p>does it need windows xp cd or&#8230;what?</p>
+</div>
+			</li>
+	<li class="comment-alt" id="comment-115878">
+		<div class="commentmetadata date"><a href="#comment-115878" title="">January 23, 2011 5:11 am</a>  </div>
+		<div class="commentauthor">
+			<div class="ca1"><img src="/public/images/defaultavatar.png" alt="" width="25px" height="25px" /></div>
+			<div class="ca2">harpinder</div>
+		</div>
+		<div style="clear:both;"></div>
+		<div class="commenttext"><p>i just want to ask that is it necessary to install windows xp after windows7</p>
+</div>
+			</li>
+	<li class="comment-def" id="comment-117597">
+		<div class="commentmetadata date"><a href="#comment-117597" title="">February 10, 2011 8:18 pm</a>  </div>
+		<div class="commentauthor">
+			<div class="ca1"><img src="/public/images/defaultavatar.png" alt="" width="25px" height="25px" /></div>
+			<div class="ca2">Paola</div>
+		</div>
+		<div style="clear:both;"></div>
+		<div class="commenttext"><p>Hello. I am trying to install Windows XP on my Windows7 netbook. I have a problem:</p>
+<p>When I get to the screen after it loads and I agree to the terms, there is a screen sayingthat I am required to insert a previous version of windows XP to validate that I am currently using a previous version of Windows XP(windows 98 and so on). It does not want to install unless I insert the disk and I cannot purchase it because how will I know if it will work? Dont make me anyways, I dont have the money.</p>
+<p>Information:<br />
+1) I had to set my mode to IDE mode on bios otherwise it would not recognize ANY OF THE DRIVES and not load to the terms of service screen.<br />
+2) I am not able to disable SATA as I heard asus bios menu does not allow.<br />
+3) I have windows 7 regular first version I assume as I do not have a HP computer and it is not glossy like the pro, ultimate, and the other versions.</p>
+<p>Please help. Anybody, dont leave this question if u know the answer.</p>
+<p>I am also posting on forums if you want to know,</p>
+</div>
+			</li>
+	<li class="comment-alt" id="comment-118365">
+		<div class="commentmetadata date"><a href="#comment-118365" title="">February 16, 2011 6:30 pm</a>  </div>
+		<div class="commentauthor">
+			<div class="ca1"><img src="/public/images/defaultavatar.png" alt="" width="25px" height="25px" /></div>
+			<div class="ca2">GURUPhil</div>
+		</div>
+		<div style="clear:both;"></div>
+		<div class="commenttext"><p>tha absolute BEST WAY to dual or triple boot is to have each OS on it&#8217;s own hard drive. select the boot drive at bootup. too easy. too simple<br />
+i have been donig it like this for many years and it eliminates all the dramas.</p>
+</div>
+			</li>
+	<li class="comment-def" id="comment-118544">
+		<div class="commentmetadata date"><a href="#comment-118544" title="">February 17, 2011 4:48 pm</a>  </div>
+		<div class="commentauthor">
+			<div class="ca1"><img src="/public/images/defaultavatar.png" alt="" width="25px" height="25px" /></div>
+			<div class="ca2">Luka</div>
+		</div>
+		<div style="clear:both;"></div>
+		<div class="commenttext"><p>I tryed doing this but i fucked up everything, sended the machine for repairing, the dude there said you cant install xp on 2nd partition if you have win 7 cuz bios doesnt work that way or somethin i dont know how u did it</p>
+</div>
+			</li>
+	<li class="comment-alt" id="comment-119225">
+		<div class="commentmetadata date"><a href="#comment-119225" title="">February 24, 2011 6:35 am</a>  </div>
+		<div class="commentauthor">
+			<div class="ca1"><img src="/public/images/defaultavatar.png" alt="" width="25px" height="25px" /></div>
+			<div class="ca2">baz</div>
+		</div>
+		<div style="clear:both;"></div>
+		<div class="commenttext"><p>Im planning to dual boot win7 (ult) and xp mce.<br />
+I own a caddy system, i plan to just load each OS onto a caddy drive and slide whatever one i require in to the pc.</p>
+<p>Then i dont have to screw around with the bios selecting boot drives etc.</p>
+<p>Only takes 2 seconds to slide the carrier out and 2 more to put the prefered one in.</p>
+<p>DOnt bother dual booting with a single drive &#8211; its not worth the headaches that will arise as you accidently delete required files whilst cleaning up the current OS.</p>
+<p>Luka &#8211; dont believe what shops tell you, most of them know very little.</p>
+</div>
+			</li>
+	<li class="comment-def" id="comment-119741">
+		<div class="commentmetadata date"><a href="#comment-119741" title="">February 28, 2011 8:23 pm</a>  </div>
+		<div class="commentauthor">
+			<div class="ca1"><img src="/public/images/defaultavatar.png" alt="" width="25px" height="25px" /></div>
+			<div class="ca2">matrini</div>
+		</div>
+		<div style="clear:both;"></div>
+		<div class="commenttext"><p>I tried your dual boot solution as to creating a partition and loading xp pro.  That all worked fine but xp does not see my network card.  I don&#8217;t have internet or network. What can I do.</p>
+</div>
+			</li>
+	<li class="comment-alt" id="comment-120229">
+		<div class="commentmetadata date"><a href="#comment-120229" title="">March 4, 2011 12:42 am</a>  </div>
+		<div class="commentauthor">
+			<div class="ca1"><img src="/public/images/defaultavatar.png" alt="" width="25px" height="25px" /></div>
+			<div class="ca2">Jonatha Almeida</div>
+		</div>
+		<div style="clear:both;"></div>
+		<div class="commenttext"><p>Guys the tutorial rocks! Great job man! I was searching for this for a long time!<br />
+But as many peoples here I&#8217;ve my doubts too.<br />
+I&#8217;m a newbie with that, so sorry for any futures gaffes.</p>
+<p>My problem is too boot the CD/DVD XP Installer not at all, so even I can make some steps of the XP instalation, but always appears to me a message when PC&#8217;s restarted.</p>
+<p>Theres one times that appears that some file, called PartMgr.sys cannot be copied. But when I tried for the 2nd time, it works as well. But the problem that I quoted before still occurring that is the CD/DVD boot don&#8217;t keep the XP instalation. Appear a black screen, saying something like: &#8220;Error Disk, Press Ctrl+alt+Del to restart&#8221;, also appears like some strangers letters or numbers. So, it means that it don&#8217;t works, so when I restart and when I take the installation CD of Windows XP, the same message appears and my old Windows 7 will not boot normally, but I have the DVD installation of Windows 7, then I use the System Restore tool and my Win 7 is back to work. I&#8217;m using Windows 7 Ultimate, but I still need of the Widnows XP in the same machine / hard disc.</p>
+<p>I think that something was not setting on motherboard bios setup, or may be the Windows XP don&#8217;t recognize the SATA/HD drives, floppy things, I don&#8217;t know&#8230; And it can be after this istallation Windows 7 don&#8217;t recognize files of the XP, &#8217;cause I read in the MS site that would be better if we install older versions 1st then after older versions (Win X, Win Vista, Win 7). I&#8217;m basing on what I read on the Internet, but I know that is possible install randomly, because I saw people getting it successfully here, right?</p>
+<p>Can anybody help me with that?<br />
+mail me please: <a href="mailto:jonasthasan@hotmail.com">jonasthasan@hotmail.com</a></p>
+</div>
+			</li>
+	<li class="comment-def" id="comment-120297">
+		<div class="commentmetadata date"><a href="#comment-120297" title="">March 4, 2011 1:29 pm</a>  </div>
+		<div class="commentauthor">
+			<div class="ca1"><img src="/public/images/defaultavatar.png" alt="" width="25px" height="25px" /></div>
+			<div class="ca2">AtulExpert</div>
+		</div>
+		<div style="clear:both;"></div>
+		<div class="commenttext"><p>very nice post&#8230;&#8230;&#8230;.i am going for it right now&#8230;&#8230;&#8230;&#8230;&#8230;&#8230;&#8230;&#8230;..thanx</p>
+</div>
+			</li>
+	<li class="comment-alt" id="comment-120467">
+		<div class="commentmetadata date"><a href="#comment-120467" title="">March 6, 2011 2:01 am</a>  </div>
+		<div class="commentauthor">
+			<div class="ca1"><img src="/public/images/defaultavatar.png" alt="" width="25px" height="25px" /></div>
+			<div class="ca2">Jonatha Almeida</div>
+		</div>
+		<div style="clear:both;"></div>
+		<div class="commenttext"><p>Hello guys!</p>
+<p>As I said this tutorial rox! Better than this, I can&#8217;t find words&#8230;<br />
+BTW, after long time trying to make it go sucessful, I got it, thanks to God and HowtoGeek too!<br />
+I do many crazy things during the steps given in the tutorial and many others that I read on the internet.<br />
+HowToGeek was the best that I&#8217;ve ever read about this stuff!<br />
+All my problems are gone now&#8230;</p>
+<p>Just so you guys know I&#8217;ve been trying this for a long time in my Desktop / PC. I don&#8217;t know how it works fine now, because always when I tried to dualboot nothing going well &#8217;till today.</p>
+<p>I hope that others guys can do that too. I swear I can, most important you can!</p>
+<p>If anybody have same problem that I, or have some doubts how I got it, just mail me or chat with me: <a href="mailto:jonasthasan@hotmail.com">jonasthasan@hotmail.com</a></p>
+</div>
+			</li>
+	<li class="comment-def" id="comment-120472">
+		<div class="commentmetadata date"><a href="#comment-120472" title="">March 6, 2011 3:50 am</a>  </div>
+		<div class="commentauthor">
+			<div class="ca1"><img src="/public/images/defaultavatar.png" alt="" width="25px" height="25px" /></div>
+			<div class="ca2">Jonatha Almeida</div>
+		</div>
+		<div style="clear:both;"></div>
+		<div class="commenttext"><p>Brows&#8230; It&#8217;s keeping going well&#8230; Awesome!!!!</p>
+<p>But, I can&#8217;t find my local network&#8230; Internet works fine, otherwise I was not writing it!<br />
+I need to be able to share and receive a signal from the printer&#8217;s of PC MASTER, that is, the microcomputer where the printer is installed.<br />
+Win XP to recognize the other PCs, I guess, but it asks for a username and password, which I do not know what it is! When it is in the Windows 7 I just joint to the WORKGROUP with a password showed in my display when I ask for it.</p>
+<p>I try for many ways, but without success.Dudes&#8230; It&#8217;s keeping going well&#8230; Awesome!!!!</p>
+<p>But, I can&#8217;t find my local network&#8230; Internet works fine, otherwise I was not writing it!<br />
+I need to be able to share and receive a signal from the printer&#8217;s of PC MASTER, that is, the microcomputer where the printer is installed.<br />
+Win XP to recognize the other PCs, I guess, but it asks for a username and password, which I do not know what it is! When it is in the Windows 7 I just join to the WORKGROUP.</p>
+<p>I try for many ways, but without success. Someone can help to Setting up Windows XP and Windows 7?</p>
+<p>Remember that is the same machine that I made dualboot (WINDOWS XP e WINDOWS 7), but even this I changed the IP address for silly reasons&#8230; just to do not have future issues!</p>
+<p>What I need to do to my local network (files and printers appears in Windows XP together with a Wiindows 7 Ultimate version?)</p>
+</div>
+			</li>
+	<li class="comment-alt" id="comment-120544">
+		<div class="commentmetadata date"><a href="#comment-120544" title="">March 6, 2011 9:35 pm</a>  </div>
+		<div class="commentauthor">
+			<div class="ca1"><img src="/public/images/defaultavatar.png" alt="" width="25px" height="25px" /></div>
+			<div class="ca2">Jonatha Almeida</div>
+		</div>
+		<div style="clear:both;"></div>
+		<div class="commenttext"><p>Sorry for my comments&#8230; the problem above isn&#8217;t a problem anymore, but anothers starts to coming up, like my Control Panel, it&#8217;s show me in a dialog box that was Disabled. I even don&#8217;t do that, how could it happen?</p>
+<p>I&#8217;m back to speak &#8217;cause other comments that I post wasn&#8217;t posted for the admins of the site, but everyone that want my help to make it possible, you&#8217;re free to send me any questions that you have.</p>
+<p>I managed to dual boot with Windows XP with Windows 7 already installed through the tutorial HowToGeek!</p>
+<p><a href="mailto:jonasthasan@hotmail.com">jonasthasan@hotmail.com</a></p>
+</div>
+			</li>
+	<li class="comment-def" id="comment-120719">
+		<div class="commentmetadata date"><a href="#comment-120719" title="">March 8, 2011 6:00 pm</a>  </div>
+		<div class="commentauthor">
+			<div class="ca1"><img src="/public/images/defaultavatar.png" alt="" width="25px" height="25px" /></div>
+			<div class="ca2">M. Free</div>
+		</div>
+		<div style="clear:both;"></div>
+		<div class="commenttext"><p>So far I haven&#8217;t see a mention of just restoring XP complete disk image from a TrueImage backup on the second partition and then running the software to setup dual boot. Do I first have to do an XP install and then run the TrueImage restore, or just restore the TrueImage backup. My plan is to buy a laptop with Win7 already installed.</p>
+<p>M.Free</p>
+</div>
+			</li>
+	<li class="comment-alt" id="comment-120929">
+		<div class="commentmetadata date"><a href="#comment-120929" title="">March 10, 2011 12:58 am</a>  </div>
+		<div class="commentauthor">
+			<div class="ca1"><img src="/public/images/defaultavatar.png" alt="" width="25px" height="25px" /></div>
+			<div class="ca2">Migs</div>
+		</div>
+		<div style="clear:both;"></div>
+		<div class="commenttext"><p>hi all</p>
+<p>what brand of notebook was this tested, i have a sony vaio notebook with preinstalled windows 7, when i try to install the windows xp, i have error occurred during the installation of windows xp (blue screen), and hard disk not detected, can any one help me? thank you very much</p>
+<p>i will to install dual os it might help me.</p>
+<p>thank you all</p>
+</div>
+			</li>
+	<li class="comment-def" id="comment-121219">
+		<div class="commentmetadata date"><a href="#comment-121219" title="">March 11, 2011 6:26 pm</a>  </div>
+		<div class="commentauthor">
+			<div class="ca1"><img src="/public/images/defaultavatar.png" alt="" width="25px" height="25px" /></div>
+			<div class="ca2">Kevin</div>
+		</div>
+		<div style="clear:both;"></div>
+		<div class="commenttext"><p>@Migs, the process is quite simple, xp doesnt have the vaio&#8217;s drivers, I fixed mine by doing this<br />
+<a href="http://www.sevenforums.com/tutorials/72185-sata-drivers-slipstream-into-windows-xp-cd.html" rel="nofollow">http://www.sevenforums.com/tutorials/72185-sata-drivers-slipstream-into-windows-xp-cd.html</a></p>
+</div>
+			</li>
+	<li class="comment-alt" id="comment-121275">
+		<div class="commentmetadata date"><a href="#comment-121275" title="">March 12, 2011 10:17 am</a>  </div>
+		<div class="commentauthor">
+			<div class="ca1"><img src="/public/images/defaultavatar.png" alt="" width="25px" height="25px" /></div>
+			<div class="ca2">matt</div>
+		</div>
+		<div style="clear:both;"></div>
+		<div class="commenttext"><p>alright, to those of you who are getting bsod&#8217;s its because XP doesn&#8217;t support your drivers (you&#8217;ll need the drivers from your supplier. e.g. Dell) in my case i havent done this yet because im afraid to get a bsod and not be a able to switch back to windows 7. but by question is if i can just install XP over windows 7 without having the original windows 7 disk.</p>
+<p>Windows 7 is already installed<br />
+Want to install XP but all the tutorials say i need to boot to the windows 7 disk and hit repair<br />
+But i dont have the original windows 7 disk, can i just put the installer for FreeBSD on a flash drive and then plug it in while im on XP and then install it and add windows 7 to the boot menu?</p>
+</div>
+			</li>
+	<li class="comment-def" id="comment-123178">
+		<div class="commentmetadata date"><a href="#comment-123178" title="">March 16, 2011 8:39 am</a>  </div>
+		<div class="commentauthor">
+			<div class="ca1"><img src="/public/images/defaultavatar.png" alt="" width="25px" height="25px" /></div>
+			<div class="ca2">Aes</div>
+		</div>
+		<div style="clear:both;"></div>
+		<div class="commenttext"><p>@Matt</p>
+<p>I don&#8217;t know if this is allowed here, but crack it! I use a pirate windows for long long years, nothing bad has happened &#8217;til now&#8230; a thousand people do that! Do you too!<br />
+ My dualboot also works correctly!</p>
+<p>Download a crack of windows 7 now!</p>
+</div>
+			</li>
+	<li class="comment-alt" id="comment-125286">
+		<div class="commentmetadata date"><a href="#comment-125286" title="">March 30, 2011 2:59 pm</a>  </div>
+		<div class="commentauthor">
+			<div class="ca1"><img src="/public/images/defaultavatar.png" alt="" width="25px" height="25px" /></div>
+			<div class="ca2">anjym</div>
+		</div>
+		<div style="clear:both;"></div>
+		<div class="commenttext"><p>slt a tous jè un blèm su mn portable é vtre ède mè précieuse,voila actub j&#8217;utilise win XP sp3 at g vsdrè installé un dual boot avec win7,de toute mè recherche cè seulman win7 é l&#8217;on fè un dual boot avec xp alors gs8 a votre écoute</p>
+</div>
+			</li>
+	<li class="comment-def" id="comment-127159">
+		<div class="commentmetadata date"><a href="#comment-127159" title="">April 12, 2011 4:59 am</a>  </div>
+		<div class="commentauthor">
+			<div class="ca1"><img src="/public/images/defaultavatar.png" alt="" width="25px" height="25px" /></div>
+			<div class="ca2">saket</div>
+		</div>
+		<div style="clear:both;"></div>
+		<div class="commenttext"><p>thnx dude&#8230;&#8230;.i was just searching for the name of softy&#8230;&#8230;i got it &#8220;easyBCD&#8221;<br />
+thnku vry much</p>
+</div>
+			</li>
+	<li class="comment-alt" id="comment-127608">
+		<div class="commentmetadata date"><a href="#comment-127608" title="">April 14, 2011 10:23 pm</a>  </div>
+		<div class="commentauthor">
+			<div class="ca1"><img src="/public/images/defaultavatar.png" alt="" width="25px" height="25px" /></div>
+			<div class="ca2">George</div>
+		</div>
+		<div style="clear:both;"></div>
+		<div class="commenttext"><p>That was very helpfull. You are great. Thnaks a lot</p>
+</div>
+			</li>
+	<li class="comment-def" id="comment-128535">
+		<div class="commentmetadata date"><a href="#comment-128535" title="">April 22, 2011 5:22 pm</a>  </div>
+		<div class="commentauthor">
+			<div class="ca1"><img src="/public/images/defaultavatar.png" alt="" width="25px" height="25px" /></div>
+			<div class="ca2">Gianfranco</div>
+		</div>
+		<div style="clear:both;"></div>
+		<div class="commenttext"><p>Somebody can help me please? I have a 10&#8243; e-machines notebook with Windows 7 installed,  without a  DVD drive.  I use an external DVD drive connected trough the USB port. I&#8217;m been able to create a new partition on my HD, but when I try to install XP, the HD is not recognized, so I&#8217;m unable to go ahead with the installation of XP. Thanks</p>
+</div>
+			</li>
+	<li class="comment-alt" id="comment-128966">
+		<div class="commentmetadata date"><a href="#comment-128966" title="">April 26, 2011 3:36 pm</a>  </div>
+		<div class="commentauthor">
+			<div class="ca1"><img src="/public/images/defaultavatar.png" alt="" width="25px" height="25px" /></div>
+			<div class="ca2">Jim Hajny</div>
+		</div>
+		<div style="clear:both;"></div>
+		<div class="commenttext"><p>I am running windows 7 home premium 64 bit and am wondering if I can install windows xp? and does the xp version have to be a 64bit as well?</p>
+</div>
+			</li>
+	<li class="comment-def" id="comment-129398">
+		<div class="commentmetadata date"><a href="#comment-129398" title="">April 28, 2011 12:27 pm</a>  </div>
+		<div class="commentauthor">
+			<div class="ca1"><img src="/public/images/defaultavatar.png" alt="" width="25px" height="25px" /></div>
+			<div class="ca2">Manjunath Hiremath</div>
+		</div>
+		<div style="clear:both;"></div>
+		<div class="commenttext"><p>Hi, I am manjunath, I too have the same problem as the above one. I am running windows 7 home basic 64 bit and am wondering if I can install windows xp? and does the xp version have to be a 64bit as well?</p>
+<p>Please Let me know Should i Install a x64 version of XP?</p>
+</div>
+			</li>
+	<li class="comment-alt" id="comment-129545">
+		<div class="commentmetadata date"><a href="#comment-129545" title="">April 28, 2011 11:19 pm</a>  </div>
+		<div class="commentauthor">
+			<div class="ca1"><img src="/public/images/defaultavatar.png" alt="" width="25px" height="25px" /></div>
+			<div class="ca2">Just a Nobody</div>
+		</div>
+		<div style="clear:both;"></div>
+		<div class="commenttext"><p>@ Manjunath, &amp; Jim</p>
+<p>No, the XP installation can either be 32 or 64 bit irrespective of whether the 7/Vista installation is 32 or 64 bit :)</p>
+</div>
+			</li>
+	<li class="comment-def" id="comment-129550">
+		<div class="commentmetadata date"><a href="#comment-129550" title="">April 28, 2011 11:30 pm</a>  </div>
+		<div class="commentauthor">
+			<div class="ca1"><img src="/public/images/defaultavatar.png" alt="" width="25px" height="25px" /></div>
+			<div class="ca2">Just a Nobody</div>
+		</div>
+		<div style="clear:both;"></div>
+		<div class="commenttext"><p>@ Gianfranco</p>
+<p>Try the &#8220;fdisk /mbr&#8221; command&#8230; next u got to do a &#8220;scandisc /all&#8221; on ur harddrive.</p>
+<p>And i hope, u formated ur hdd on NTFS :)</p>
+<p>First, open your computer case and check to see if you have a IDE or a SATA dvd/rw drive. If its IDE , go into your BIOS and find your SATA Harddrive configuration change that to either ATA/PATA or Legacy (make sure you save your changes) Reboot and you should be good to go.</p>
+<p>1. Hit f2/f8 (or something similar) during boot&#8230;</p>
+<p>2. Goto sata operation&#8230;</p>
+<p>3. Change from Raid/Autodetect/AHCI</p>
+<p>4. To&#8230; Raid Autodetect/ATA</p>
+</div>
+			</li>
+	<li class="comment-alt" id="comment-130786">
+		<div class="commentmetadata date"><a href="#comment-130786" title="">May 7, 2011 8:14 am</a>  </div>
+		<div class="commentauthor">
+			<div class="ca1"><img src="/public/images/defaultavatar.png" alt="" width="25px" height="25px" /></div>
+			<div class="ca2">arun882</div>
+		</div>
+		<div style="clear:both;"></div>
+		<div class="commenttext"><p>is it possible to use a portable hard-drive instead of a partition? (i dont really want to partition my 1tb HDD due to the risks attached) also i have an old vista machine and im wondering if it is possible to copy the data from the vista HDD to a portable HDD to be used on my 7 machine</p>
+</div>
+			</li>
+	<li class="comment-def" id="comment-131017">
+		<div class="commentmetadata date"><a href="#comment-131017" title="">May 9, 2011 4:12 pm</a>  </div>
+		<div class="commentauthor">
+			<div class="ca1"><img src="/public/images/defaultavatar.png" alt="" width="25px" height="25px" /></div>
+			<div class="ca2">fatfishjeff</div>
+		</div>
+		<div style="clear:both;"></div>
+		<div class="commenttext"><p>COMALite J said:</p>
+<p>Another way to dual-boot on most modern PCs is to install a second hard drive, then use the BIOS Boot Settings to switch which drive you boot from. Most modern BIOSes will let you call up a boot menu by pressing some key combination after powering up or resetting, and allow you to boot from any installed hard drive, as well as from floppy (if installed), CD/DVD, USB drive, etc.</p>
+<p>This way, you don’t have to mess with boot sectors, editing BOOT.INI, or any of that stuff. Just install Windows 7 (or whatever) to one drive, and XP (or whatever) to another. The two drives will be visible from both OSes, so you can have data shared between the two.</p>
+<p>One performance-boosting tip is to use the other drive for the Virtual Memory paging file, for instance: if Drive C: has XP and Drive D: has Windows 7, then use Drive D: for XP’s paging, and C: for Windows 7’s paging. This way, the Virtual Memory paging isn’t working the same hard drive heads and data channels that the OS and software are, so when physical RAM gets used up and Virtual Memory kicks in, the resulting performance degradation is greatly mitigated since there’s much less drive head motion.&#8221;</p>
+<p>My question is would you install the old HD as a slave or a Master.or how&#8230;Thanks</p>
+</div>
+			</li>
+	<li class="comment-alt" id="comment-133321">
+		<div class="commentmetadata date"><a href="#comment-133321" title="">May 27, 2011 6:43 pm</a>  </div>
+		<div class="commentauthor">
+			<div class="ca1"><img src="/public/images/defaultavatar.png" alt="" width="25px" height="25px" /></div>
+			<div class="ca2">Jon</div>
+		</div>
+		<div style="clear:both;"></div>
+		<div class="commenttext"><p>I installed Windows 7 on the computer I just built but have since discovered some programs don&#8217;t work or are really slow. Since, they suggest that you install XP before Windows 7 on a dual boot machine I installed virtual XP. This is so slow it&#8217;s almost useless.. Any suggestions?</p>
+</div>
+			</li>
+	<li class="comment-def" id="comment-133493">
+		<div class="commentmetadata date"><a href="#comment-133493" title="">May 30, 2011 3:44 am</a>  </div>
+		<div class="commentauthor">
+			<div class="ca1"><img src="/public/images/defaultavatar.png" alt="" width="25px" height="25px" /></div>
+			<div class="ca2">BOBBO</div>
+		</div>
+		<div style="clear:both;"></div>
+		<div class="commenttext"><p>have set up a new partition but when trying to boot from xp disk it does not go to set up screen but starts to load xp no option to select where to install my question is how can i get the set up screen and be able to load to new partition have a dual boot with 7 on 2 separate drives  and works fine can anyone help ?</p>
+</div>
+			</li>
+	<li class="comment-alt" id="comment-133713">
+		<div class="commentmetadata date"><a href="#comment-133713" title="">May 31, 2011 5:52 pm</a>  </div>
+		<div class="commentauthor">
+			<div class="ca1"><img src="/public/images/defaultavatar.png" alt="" width="25px" height="25px" /></div>
+			<div class="ca2">unknown</div>
+		</div>
+		<div style="clear:both;"></div>
+		<div class="commenttext"><p>I have the blue screen too&#8230;</p>
+<p>Two option :</p>
+<p>1. Change your hard drive option to IDE in bios &#8230; </p>
+<p>2. or install xp first and then install 7  easy and fast way&#8230; work for me.</p>
+</div>
+			</li>
+	<li class="comment-def" id="comment-135247">
+		<div class="commentmetadata date"><a href="#comment-135247" title="">June 14, 2011 6:53 pm</a>  </div>
+		<div class="commentauthor">
+			<div class="ca1"><img src="/public/images/defaultavatar.png" alt="" width="25px" height="25px" /></div>
+			<div class="ca2">Someone</div>
+		</div>
+		<div style="clear:both;"></div>
+		<div class="commenttext"><p>I followed this procedure but now my disks are recognized as &#8220;Dynamic Disks&#8221; instead of primary and I don&#8217;t know how to undo that</p>
+</div>
+			</li>
+	<li class="comment-alt" id="comment-135850">
+		<div class="commentmetadata date"><a href="#comment-135850" title="">June 20, 2011 9:51 am</a>  </div>
+		<div class="commentauthor">
+			<div class="ca1"><img src="/public/images/defaultavatar.png" alt="" width="25px" height="25px" /></div>
+			<div class="ca2">param</div>
+		</div>
+		<div style="clear:both;"></div>
+		<div class="commenttext"><p>you can download easybcd 2.0 beta using mediaget without registration</p>
+</div>
+			</li>
+	<li class="comment-def" id="comment-136428">
+		<div class="commentmetadata date"><a href="#comment-136428" title="">June 23, 2011 8:10 am</a>  </div>
+		<div class="commentauthor">
+			<div class="ca1"><img src="/public/images/defaultavatar.png" alt="" width="25px" height="25px" /></div>
+			<div class="ca2">Manohar Singh</div>
+		</div>
+		<div style="clear:both;"></div>
+		<div class="commenttext"><p>I m installing win xp on win 7 on same drive but after installation system is booting with win xp . no option is coming for chose any os. plz help</p>
+</div>
+			</li>
+	<li class="comment-alt" id="comment-136643">
+		<div class="commentmetadata date"><a href="#comment-136643" title="">June 23, 2011 1:31 pm</a>  </div>
+		<div class="commentauthor">
+			<div class="ca1"><img src="/public/images/defaultavatar.png" alt="" width="25px" height="25px" /></div>
+			<div class="ca2">chris</div>
+		</div>
+		<div style="clear:both;"></div>
+		<div class="commenttext"><p>Hi I have tried this and followed it to the letter, but when I try to install XP after unpacking it crahes to a blue screen???</p>
+</div>
+			</li>
+	<li class="comment-def" id="comment-137602">
+		<div class="commentmetadata date"><a href="#comment-137602" title="">June 30, 2011 7:23 am</a>  </div>
+		<div class="commentauthor">
+			<div class="ca1"><img src="/public/images/defaultavatar.png" alt="" width="25px" height="25px" /></div>
+			<div class="ca2">Don</div>
+		</div>
+		<div style="clear:both;"></div>
+		<div class="commenttext"><p>This did not work for me on my windows 7 home premium 64 bit. creating the partition was easy enough, but once i tried to install xp pro on the new partition it loaded drivers and said it was rebooting. once it rebooted it prompted press any key to boot from cd or dvd. then five dots came up and the whole procedure locked up and would not respond to any key or even control, alt, delete. I had to reset manually then it would not boot to windows 7 after removing the xp op disk. I had to run a system repair, just to get windows 7 to boot.. Is there anyone out there that really knows how to run a dual  boot with just one hard drive?</p>
+</div>
+			</li>
+	<li class="comment-alt" id="comment-139009">
+		<div class="commentmetadata date"><a href="#comment-139009" title="">July 12, 2011 9:33 pm</a>  </div>
+		<div class="commentauthor">
+			<div class="ca1"><img src="/public/images/defaultavatar.png" alt="" width="25px" height="25px" /></div>
+			<div class="ca2">BigYin</div>
+		</div>
+		<div style="clear:both;"></div>
+		<div class="commenttext"><p>Hi Peeps.</p>
+<p>I think this site might give you a more in-depth answer as to why XP and Win 7 does not work.</p>
+<p><a href="http://www.ocztechnologyforum.com/forum/showthread.php?59024-Alignment-and-why-it-s-important&#038;p=406863&#038;viewfull=1#post406863" rel="nofollow">http://www.ocztechnologyforum.com/forum/showthread.php?59024-Alignment-and-why-it-s-important&#038;p=406863&#038;viewfull=1#post406863</a></p>
+<p>It&#8217;s a lot more helpful than this one.</p>
+<p><a href="http://support.microsoft.com/kb/919529" rel="nofollow">http://support.microsoft.com/kb/919529</a></p>
+<p>Mr Bill Gates has eventually found an Employee who knows his 1024 times table.</p>
+<p>I am still trying to get my head round how to install XP Pro 64bit and Win 7 64 Bit with the new system, as XP seems to overide the boot section, meaning you revert back to the Old Sector 63 problem.</p>
+<p>I only found this out because I am adding a OCZ Revodrive 120gb PCI-e rev 2 x4 as my main HD.</p>
+<p>I have multi-booted XP Pro 32/64 bit for the past X many years, and have managed to install Win 7 Ultimate 64 bit, but not working with the new alignment.</p>
+<p>I was already using 3 OS Partitions, created by Paragon Partition Manager,  Drive C: XP Pro 64 bit,  Drive D: XP Pro 32 bit,  Drive E: XP Pro 32 bit only for Internet use.</p>
+<p>The reason being if somehow Drive E: Internet Drive became corruput, I can still use Drive C: or D: to correct the problem, *&amp;^%%$&amp;* script kiddies. </p>
+<p>With the above 3 OS in place I simply installed Win 7 Ultimate 64 bit on Drive D: Formating XP Pro 32 bit with Win 7 on the Install.</p>
+<p>There were a few teething problems, win 7 freezing, but, upping my RAM from 2gb of Joe Bloggs Systems inc, to 4gb of Corsair XMS DDR2 6400 helped but I still had Win 7 Freezing, using 8gb of Corsair XMS DDR2 6400 work&#8217;s a treat, but also had to change the pagefile on Drive D: to 12,228kb and re-format Drive Z: (pagefile Drive) to 16,384kb.</p>
+<p>I have not installed the OCZ Revodrive as yet, as this is going into my New/Old System, Asus PK5 Premium Wifi-AP, Core 2 Extreme QX6850 3.3Ghz using stock multiplyer, Corsair XMS DDR2 6400 8gb, ATI Radeon 5870 1gb GPU, Corsair Hydro H70 HSF, 4 x WD 2tb Caviar Black HDD, Enermax EGX1000EWL PSU, housed in a Coolermaster Cosmos S (sore point, coolermaster after sales are ****, stay well clear of them, they put products on the market they know are faulty, and you cannot get the parts you require, unless you use their outlet in the Netherlands or Germany, I wish now I&#8217;d gone for my 1st choice Silverstone TJ07B-W, but, you learn by your mistakes.</p>
+<p>Sorry about that, ***^&amp;*&amp;^ Coolermaster, Antec 193 are spot on.</p>
+<p>Anyhow, I hope the above links, if they work, are of help, I&#8217;ll try and post any more info I find and how the New/Old build is going.</p>
+<p>Best regards</p>
+<p>BigYin</p>
+</div>
+			</li>
+	<li class="comment-def" id="comment-139184">
+		<div class="commentmetadata date"><a href="#comment-139184" title="">July 13, 2011 11:34 pm</a>  </div>
+		<div class="commentauthor">
+			<div class="ca1"><img src="/public/images/defaultavatar.png" alt="" width="25px" height="25px" /></div>
+			<div class="ca2">bigyin</div>
+		</div>
+		<div style="clear:both;"></div>
+		<div class="commenttext"><p>Hi There Mr Moderator.</p>
+<p>I take it you do not like an outsider telling you how to Multi-Boot XP and Win 7.</p>
+<p>I take it you do not know about the ALIGNMENT THAT IS NEEDED TO RUN THEM, AND THAT SINCE XP&#8217;S FLOORED FORMATTING AT SECTION 63 ETC. YOU NEED TO RUN VISTA/ WIN 7 ETC TO FORAMT THE HARD DRIVE TO PERFORM CORRECTLY.</p>
+<p>Well, more fool you, I take you are aware of the phrase, &#8220;You can fool some of the People&#8221; etc,etc,etc.</p>
+<p>I take it this is an American Thread????</p>
+<p>Ran By ?????</p>
+<p>Oh, by the way, Have you had a look at the links I posted last night???</p>
+<p>Do You UNDERSTAND THEM.</p>
+<p>I THINK NOT.</p>
+<p>IF YOU ARE GOING TO RUN A SITE/FORUM CALLED &#8220;HOW TO GEEK&#8221; YOU SHOULD AT LEAST HAVE THE QUALIFICATIONS/EXPERIENCE TO RUN IT WITH AN IN DEPTH KNOWLEDGE OF THE SUBJECT YOU ARE COMMENTING ON, NOT JUST TRYING TO BE A BIG HEADED GEEK WHO DOES NOT HAVE THE FIRST CLUE OF WHAT YOU OR YOUR MEMBERS ARE TALKING ABOUT.</p>
+<p>BUT THEN AGAIN MS WINDOWS HAS BEEN WRITTEN BY&#8230;&#8230;&#8230;&#8230;MR BILL GATES, WHO IS&#8230;&#8230;</p>
+<p>If you want to contact me, you have my email address, but, I don&#8217;t think you will, because I HAVE POINTED OUT WHERE ALL YOUR MEMBERS ARE GOING WRONG, AND YOU DON&#8217;T HAVE A CLUE WHAT YOU ARE TALKING ABOUT.</p>
+<p>Best regards</p>
+<p>BigYin</p>
+</div>
+			</li>
+	<li class="comment-alt" id="comment-139422">
+		<div class="commentmetadata date"><a href="#comment-139422" title="">July 15, 2011 10:27 pm</a>  </div>
+		<div class="commentauthor">
+			<div class="ca1"><img src="/public/images/defaultavatar.png" alt="" width="25px" height="25px" /></div>
+			<div class="ca2">BigYin</div>
+		</div>
+		<div style="clear:both;"></div>
+		<div class="commenttext"><p>HMMMMMMM</p>
+<p>You post the reply??? before you post the ORIGINAL ONE?????</p>
+<p>There&#8217;s logic in there Somewhere, but I&#8217;m afraid I can&#8217;t get my head around that one???</p>
+<p>There again, I&#8217;ve ever only seen the TV program on SKY claiming that President Kennedy was shot from the front by a sniper hidden in the drain under the curb (gutter? &#8211; translation from UK to USA &#8211; to aid the disposal of rain water/melted snow etc) once???</p>
+<p>The back of his head was burnt-in on the photos (the back of his head was black, no detail in the shadow area) thus, was it photo enhancing (Adobe Photoshop was not available then) or something??????</p>
+<p>Best regards</p>
+<p>BigYin</p>
+</div>
+			</li>
+	<li class="comment-def" id="comment-139523">
+		<div class="commentmetadata date"><a href="#comment-139523" title="">July 17, 2011 8:38 am</a>  </div>
+		<div class="commentauthor">
+			<div class="ca1"><img src="/public/images/defaultavatar.png" alt="" width="25px" height="25px" /></div>
+			<div class="ca2">Someone</div>
+		</div>
+		<div style="clear:both;"></div>
+		<div class="commenttext"><p>I have a problem. I tried to boot WIndows XP, but I probably did a full install. I tried to get EasyBCD, but I don&#8217;t have internet connection. I tried connecting, but I was not able to. I then pressed F8 to go to the boot loader, but I only had WIndows XP. To get out of the situation I tried to change my OS to Ubuntu, until I saw that I still have all of my Windows 7 files on the C:\ drive when I pressed &#8220;Try Ubuntu&#8221;. I previously went to the C:\ drive in Windows XP and saw two files (bootmgr and another file). What do I do?</p>
+</div>
+			</li>
+	<li class="comment-alt" id="comment-141268">
+		<div class="commentmetadata date"><a href="#comment-141268" title="">August 1, 2011 1:21 pm</a>  </div>
+		<div class="commentauthor">
+			<div class="ca1"><img src="/public/images/defaultavatar.png" alt="" width="25px" height="25px" /></div>
+			<div class="ca2">Doc Rizk</div>
+		</div>
+		<div style="clear:both;"></div>
+		<div class="commenttext"><p>Here&#8217;s my story and I am in desperate need of help ASAP!<br />
+I have an audio interface that doesn&#8217;t &#8220;play&#8221; nice with Win 7 64-bit, but I&#8217;m almost positive it&#8217;ll work well within XP. The problem is, randomly during using my M-Audio ProjectMix I/O (firewire), the signal to the board will drop out. First the audio and then the m-audio control interface will lock up. This happens at random intervals, sometime 10 min and sometimes 2 hours but hardly reliable and required a full system restart. I have come to realize, after many hours of research, that even though they said it is compatible with Win 7, it actually isnt. I tried every last suggestion from them and spent even more money beyond the $1200 i paid for the board in attempts to fix this issue. Not to mention M-Audio has not even replied to ONE of my inquiries on their forum because i believe they wont admit it isn&#8217;t compatible. Anyway, I digress&#8230;</p>
+<p>So now my new struggle is getting my PC to install XP. I have read literally every forum and tutorial on the web and I understand the process, i think. I&#8217;ve made a partition on C: but also have another drive available for the install. I load the XP start up with no problem and it installs all the drivers and when it goes to start Windows, i get a BSOD stating that there may be an issue with my hardware&#8230; to run chkdsk&#8230;. remove any new hardware&#8230; etc. I have tried removing the Firewire card i installed, the wireless card, the main hard drive (win 7) and the secondary drive (empty). From my research is seems to be that the proper SATA or RAID driver isnt being installed for XP. At least that&#8217;s what i gather. I have tried slip streaming the sata drivers on HP Forum and choosing only the 32 bit and XP drivers. Ive tried including every driver in that bundle at once, leaving out the Intel drivers and inserting even only the AMD drivers. All of these lead me to a black screen before the setup even runs stating line 1xxxxx of the INF file \i386\txtsetup.sif is invalid. I CAN NOT find any driver that is specific to either my MB or my PC. Every day i go without this equipment working is another day im not making music or money. Someone please help!!!! I have also tried running XP in Virtual PC but that wont work considering you cant access any firewire devices or ports. Wondering if XP Mode is the same basis as a virtual computer or worth upgrading for????</p>
+<p>Specs:<br />
+HP e9220y<br />
+Win 7 64-bit Home Premium (w/ hopefully XP Pro SP2)<br />
+AMD Phenom II X4 2.6 GHz<br />
+8 GB RAM<br />
+(2) Western Digital 1TB hard drives (WD10EADS)(one which holds Win 7 along with a XP Partition and another i just bought which only has my system backup)</p>
+<p>ATI Radeon HD 4350 graphics card<br />
+Vantec FW 800/400 PCI-e card (Texas Instrument chipset)<br />
+M-Audio ProjectMix I/O (Firewire)</p>
+<p>Motherboard specs:<br />
+Foxconn Aloe<br />
+H-RS780-uATX</p>
+<p>Chipset: 785G<br />
+Socket: AM3<br />
+Product #: NY553AA-ABA<br />
+Build ID: 94NAV6PrA3<br />
+BIOS: AMI v. 5.05</p>
+</div>
+			</li>
+	<li class="comment-def" id="comment-141989">
+		<div class="commentmetadata date"><a href="#comment-141989" title="">August 7, 2011 6:42 pm</a>  </div>
+		<div class="commentauthor">
+			<div class="ca1"><img src="/public/images/defaultavatar.png" alt="" width="25px" height="25px" /></div>
+			<div class="ca2">AB</div>
+		</div>
+		<div style="clear:both;"></div>
+		<div class="commenttext"><p>The illustration is explicit, i have found it very informative and it has worked for me, thanks!</p>
+</div>
+			</li>
+	<li class="comment-alt" id="comment-143367">
+		<div class="commentmetadata date"><a href="#comment-143367" title="">August 19, 2011 1:00 pm</a>  </div>
+		<div class="commentauthor">
+			<div class="ca1"><img src="/public/images/defaultavatar.png" alt="" width="25px" height="25px" /></div>
+			<div class="ca2">ningappa</div>
+		</div>
+		<div style="clear:both;"></div>
+		<div class="commenttext"><p>xp dose&#8217;nt take boot  in duel system sying error massage a problem detected and windows has been shutdown to prevent damage ur computer</p>
+</div>
+			</li>
+	<li class="comment-def" id="comment-143648">
+		<div class="commentmetadata date"><a href="#comment-143648" title="">August 22, 2011 1:16 pm</a>  </div>
+		<div class="commentauthor">
+			<div class="ca1"><img src="/public/images/defaultavatar.png" alt="" width="25px" height="25px" /></div>
+			<div class="ca2">Zordana</div>
+		</div>
+		<div style="clear:both;"></div>
+		<div class="commenttext"><p>What happens if you want to put XP on your spare drive and not the C Drive please is it the same, ie: install XP then Win7? I  don&#8217;t really want to uninstall Win7 if i don&#8221;t have to.</p>
+</div>
+			</li>
+	<li class="comment-alt" id="comment-143889">
+		<div class="commentmetadata date"><a href="#comment-143889" title="">August 24, 2011 10:02 am</a>  </div>
+		<div class="commentauthor">
+			<div class="ca1"><img src="/public/images/defaultavatar.png" alt="" width="25px" height="25px" /></div>
+			<div class="ca2">SUKHI</div>
+		</div>
+		<div style="clear:both;"></div>
+		<div class="commenttext"><p>This did not work for me on my windows 7 home premium 64 bit. creating the partition was easy enough, but once i tried to install xp pro on the new partition it loaded drivers and said it was rebooting. once it rebooted it prompted press any key to boot from cd or dvd. then five dots came up and the whole procedure locked up and would not respond to any key or even control, alt, delete. I had to reset manually then it would not boot to windows 7 after removing the xp op disk. I had to run a system repair, just to get windows 7 to boot.. Is there anyone out there that really knows how to run a dual boot with just one hard drive</p>
+</div>
+			</li>
+	<li class="comment-def" id="comment-145146">
+		<div class="commentmetadata date"><a href="#comment-145146" title="">September 5, 2011 4:35 am</a>  </div>
+		<div class="commentauthor">
+			<div class="ca1"><img src="/public/images/defaultavatar.png" alt="" width="25px" height="25px" /></div>
+			<div class="ca2">sami</div>
+		</div>
+		<div style="clear:both;"></div>
+		<div class="commenttext"><p>heloo<br />
+     my pc 64bit processor athlon .3500 amd . i used visual box but not install window server 2008 64 bit why please help me</p>
+</div>
+			</li>
+	<li class="comment-alt" id="comment-145208">
+		<div class="commentmetadata date"><a href="#comment-145208" title="">September 5, 2011 4:59 pm</a>  </div>
+		<div class="commentauthor">
+			<div class="ca1"><img src="/public/images/defaultavatar.png" alt="" width="25px" height="25px" /></div>
+			<div class="ca2">sscadjunct</div>
+		</div>
+		<div style="clear:both;"></div>
+		<div class="commenttext"><p>When I formatted the new partition, it is labeled as a Logical Drive, not Primary Drive. When I try to install XP, I get a message stating the installation was blocked due to a compatability problem. Any suggestions?</p>
+</div>
+			</li>
+	<li class="comment-def" id="comment-147797">
+		<div class="commentmetadata date"><a href="#comment-147797" title="">September 23, 2011 5:28 pm</a>  </div>
+		<div class="commentauthor">
+			<div class="ca1"><img src="/public/images/defaultavatar.png" alt="" width="25px" height="25px" /></div>
+			<div class="ca2">MagicFingers</div>
+		</div>
+		<div style="clear:both;"></div>
+		<div class="commenttext"><p>Hello. I am installing XP Pro on a friend&#8217;s HP Windows 7 system to make it dual-bootable.  I&#8217;ve gotten lots of good information fron, and some bad or incomplete.  I partitioned the space for XP, made it a &#8220;Simple&#8221; volume, formatted it and tried installing XP Pro SP3.  I got BSOD STOP 0007B like most people because I don&#8217;t have the SATA drivers.  I cannot find the SATA drivers for this HP system anywhere!  So, I changed the BIOS SATA detect to IDE and was able to install XP.  Trouble is/was that the special &#8220;C&#8221; partition in HP system got overwritten with XP boot.ini, etc, and you can&#8217;t get it back to boot Win7.  I bought a Win7 64bit ISO and got it to boot and after much trouble, got Windows 7 to boot again.</p>
+<p>Of course, I need to run EasyBCD to make it dual boot.  I&#8217;m unclear what to put in in it to make XP the second boot OS.  That entry, &#8220;Windows NT/2k/XP&#8221; doesn&#8217;t look right.  Don&#8217;t I need to describe what partition it is in?  fyi, Win7 is in partition 2 and XP is in partition 4, even though the drive letters might show C or E for Win 7 and &#8220;J&#8221; for XP.</p>
+<p>One problem I THINK I saw was that after changing the BIOS to IDE, I think that stopped Win 7 from booting, so I changed it back in trying to get Win 7 to beeo again, and I think it helped.  Does anyone know if I am supposed to leave that set to IDE(ATA) or back to ACHI?  If it is ACHI, will XP not work any more?<br />
+Thanks</p>
+</div>
+			</li>
+	<li class="comment-alt" id="comment-147808">
+		<div class="commentmetadata date"><a href="#comment-147808" title="">September 23, 2011 8:15 pm</a>  </div>
+		<div class="commentauthor">
+			<div class="ca1"><img src="/public/images/defaultavatar.png" alt="" width="25px" height="25px" /></div>
+			<div class="ca2">MagicFingers</div>
+		</div>
+		<div style="clear:both;"></div>
+		<div class="commenttext"><p>EasyBCD &#8211; I did ADD Entry and selected Windows NT/2K/XP/2K3, and &#8220;Add Entry.  Verified that both Win 7 and Win XP entries were in the file.  Then selected &#8220;Bootloader Deployment&#8221; from the left side and clicked &#8220;Write MBR&#8221; button.  It seemed to work ok.  But when I rebooted, I did NOT get the bootup menu screen with the 2 bootup options.  It just booted to Win 7.<br />
+I went and changed the BIOS to IDE for the SATA drive, then tried to boot.  it didn&#8217;t work and would boot to neither OS!  Changed it back to AHCI, did a &#8220;Repair&#8221; and got Win 7 booting again.</p>
+<p>In Easy BCD, tried reading all the help and manually selecting the drive where XP is, and it gave me an &#8220;easyLdr&#8221; startup file for XP.  Tried to do &#8220;Write MBR&#8221; but it says It can&#8217;t write to an unmounted drive and I would have to add a drive letter to my path.  What path?  There is nowhere I can edit anything to add a drive letter.</p>
+<p>Finally, at the screen where you do a &#8220;Write MBR&#8221;, under it is a button that says &#8220;Install BCD&#8221;  Their help files don&#8217;t explicity say what this is for.  Do I need to click that after &#8220;Write BCD?<br />
+How do I get past the &#8220;WriteMBR&#8221; unmounted drive error now?</p>
+<p>&#8220;Install BCD&#8221; SEEMS like something I really needed to do, but now can&#8217;t?</p>
+</div>
+			</li>
+	<li class="comment-def" id="comment-148580">
+		<div class="commentmetadata date"><a href="#comment-148580" title="">September 29, 2011 4:02 pm</a>  </div>
+		<div class="commentauthor">
+			<div class="ca1"><img src="/public/images/defaultavatar.png" alt="" width="25px" height="25px" /></div>
+			<div class="ca2">MagicFingers</div>
+		</div>
+		<div style="clear:both;"></div>
+		<div class="commenttext"><p>Got XP booting by deleting the BCD and re-creating it, used BCD fix and repair too.<br />
+Found several of the drivers that were missing: Video, Sound, Ethernet, but still need SATA drivers.<br />
+It IS connecting to the internet now, hardwired to my wireless box. (Don&#8217;t ask)<br />
+I have to boot Win 7 with the BIOS SATA set to ACHI, and change it to IDE before booting to XP.<br />
+Does anyone know where to find the SATA drivers for this HP system?  And how to install them when XP is running in IDE mode?</p>
+</div>
+			</li>
+	<li class="comment-alt" id="comment-149240">
+		<div class="commentmetadata date"><a href="#comment-149240" title="">October 5, 2011 12:48 am</a>  </div>
+		<div class="commentauthor">
+			<div class="ca1"><img src="/public/images/defaultavatar.png" alt="" width="25px" height="25px" /></div>
+			<div class="ca2">cybersnipe</div>
+		</div>
+		<div style="clear:both;"></div>
+		<div class="commenttext"><p>Cheers for this info, worked like a charm. Dual booting Win7 Ultimate 32bit and XP Pro 32bit.</p>
+</div>
+			</li>
+	<li class="comment-def" id="comment-150427">
+		<div class="commentmetadata date"><a href="#comment-150427" title="">October 14, 2011 2:03 am</a>  </div>
+		<div class="commentauthor">
+			<div class="ca1"><img src="/public/images/defaultavatar.png" alt="" width="25px" height="25px" /></div>
+			<div class="ca2">Mekbib</div>
+		</div>
+		<div style="clear:both;"></div>
+		<div class="commenttext"><p>I have done it Thanks a lot keep up z help</p>
+</div>
+			</li>
+	<li class="comment-alt" id="comment-167113">
+		<div class="commentmetadata date"><a href="#comment-167113" title="">November 8, 2011 11:00 pm</a>  </div>
+		<div class="commentauthor">
+			<div class="ca1"><img src="/public/images/defaultavatar.png" alt="" width="25px" height="25px" /></div>
+			<div class="ca2">david</div>
+		</div>
+		<div style="clear:both;"></div>
+		<div class="commenttext"><p>i don&#8217;t want 32 bit or 64 bit shyte&#8230;.why?????  because it don&#8217;t run the one ****ing game i like!</p>
+</div>
+			</li>
+</ol>
+</div><div id='loadMoreWrap'><input type='button' id='loadMoreComments' value='Load More Comments' /></div>
+
+<div style="clear:both;"></div>
+<div id="commentclosed">
+	<h3>Comments are closed on this post.</h3>
+	<p>If you'd like to continue the discussion on this topic, you can do so at our forum.<br/><br/><br/><a href="/forum/">Go to the Forum</a></p>
+	<div style="clear:both;"></div>
+</div>
+
+
+
+
+
+			</div>
+            			<div style="clear:both;"></div>
+		</div>
+	</div>
+	<div class="yui-u">
+		<div class='sidebar'>
+	<style>
+	.catcloud a {display:inline!important;}
+	#relatedVideoTable td {padding-bottom:10px;}
+	</style>
+
+
+	<div style='width:300px;min-height:20px;'>
+		<div id='ns_ad3' style='min-width:300px;min-height:250px;'><!-- tmnp.howtogeek 300x250 ATF -->
+<div id='div-gpt-ad-1342044737928-1'>
+<script type='text/javascript'>
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1342044737928-1'); });
+</script>
+</div></div>
+	</div>
+
+				<div style="text-align:left;width:298px;background-color:#FEFFED;border-radius:6px;padding:0px;padding-bottom:10px;border:1px solid #CCC;border-top:1px solid #CCC;margin-bottom:10px;margin-top:10px;">
+				<p style="color: rgb(51, 51, 51); font-size: 150%; font-weight: bold;padding-top:12px;padding-left:10px; padding-bottom: 5px;">Daily Email Updates</p>
+				<p style="text-align:left;clear:both;padding-left:10px;padding-right:5px;">You can get our how-to articles in your inbox each day for free. Just enter your email below:</p><br/>
+				<form action="http://www.aweber.com/scripts/addlead.pl" method="post">
+					<fieldset>
+					<input type="hidden" value="1357186873" name="meta_web_form_id"/>
+					<input type="hidden" value="" name="meta_split_id"/>
+					<input type="hidden" value="howtogeek-daily" name="unit"/>
+					<input type="hidden" id="redirect_e4db1606a84c007a4b26df0e9b3a904c" value="http://www.howtogeek.com/thanks-for-subscribing/" name="redirect"/>
+					<input type="hidden" value="" name="meta_redirect_onlist"/>
+					<input type="hidden" value="belowarticle" name="meta_adtracking"/>
+					<input type="hidden" value="1" name="meta_message"/>
+					<input type="hidden" value="from" name="meta_required"/>
+					<input type="hidden" value="0" name="meta_forward_vars"/>
+					</fieldset>
+					<table style="text-align:center;margin-left:10px;">
+						<tbody><tr>
+							<td colspan="2"></td>
+						</tr>
+						<tr>
+							<td style="padding: 4px;">Email:</td>
+							<td style="padding: 4px;"><input type="text" size="20" value="" name="from" style="width:200px;font-size: 13px; height: 22px;"/></td>
+						</tr>
+						<tr>
+							<td colspan="2"></td>
+						</tr>
+						<tr>
+							<td align="right" colspan="2"><input style="padding:8px;" type="submit" value="Subscribe!" name="submit"/></td>
+						</tr>
+					</tbody></table>
+					
+				</form>
+			</div><br />		<div class="htgauthorbox">
+			<h4><span>Meet the Author</span></h4>
+			<div class="htgauthorbio">
+				<p>Mysticgeek is a huge rock music fan, and he's always on the lookout for more Friday Fun.					
+				
+								</p>
+			</div>
+			<img src="http://www.howtogeek.com/wp-content/authors/mysticgeek-2.png" alt="" />			<br style='clear:both' />
+		</div>
+
+		
+			<div class="htgsidelinksbox">
+				<p class="boxtitle">Recent Articles</p>
+				<ul class="rp">
+						<li><a href='http://www.howtogeek.com/128189/toolbar-cleaner-strips-toolbars-add-ons-and-browser-helper-objects/' title='Toolbar Cleaner Strips Toolbars, Add-ons, and Browser Helper Objects'>Toolbar Cleaner Strips Toolbars, Add-ons, and Browser Helper Objects</a></li>
+	<li><a href='http://www.howtogeek.com/128167/social-media-for-pets-comic/' title='Social Media for Pets [Comic]'>Social Media for Pets [Comic]</a></li>
+	<li><a href='http://www.howtogeek.com/128185/tesla-coil-fights-combines-electricity-and-choreography-video/' title='Tesla Coil Fights Combines Electricity and Choreography [Video]'>Tesla Coil Fights Combines Electricity and Choreography [Video]</a></li>
+	<li><a href='http://www.howtogeek.com/128182/6-ways-windows-8-is-more-secure-than-windows-7/' title='6 Ways Windows 8 Is More Secure Than Windows 7'>6 Ways Windows 8 Is More Secure Than Windows 7</a></li>
+	<li><a href='http://www.howtogeek.com/128115/geek-comic-for-november-6th-she-keeps-changing-the-game/' title='Geek Comic for November 6th &ndash; She Keeps Changing the Game'>Geek Comic for November 6th &ndash; She Keeps Changing the Game</a></li>
+				</ul>
+			</div>
+
+						<div class="htgsidelinksbox">
+				<p class="boxtitle">Related Articles</p>
+				<ul class="rp">
+					<li><a href="http://www.howtogeek.com/102432/the-best-articles-for-creating-a-dual-boot-pd-or-tablet/" rel="bookmark" title="Permanent Link: The Best Articles for Creating a Dual-Boot PC or Tablet">The Best Articles for Creating a Dual-Boot PC or Tablet</a></li><li><a href="http://www.howtogeek.com/howto/ubuntu/reinstall-ubuntu-grub-bootloader-after-windows-wipes-it-out/" rel="bookmark" title="Permanent Link: Reinstall Ubuntu Grub Bootloader After Windows Wipes it Out">Reinstall Ubuntu Grub Bootloader After Windows Wipes it Out</a></li><li><a href="http://www.howtogeek.com/94596/dual-boot-a-galaxy-tablet-with-honeycomb-and-ubuntu/" rel="bookmark" title="Permanent Link: Dual Boot a Galaxy Tab with Honeycomb and Ubuntu">Dual Boot a Galaxy Tab with Honeycomb and Ubuntu</a></li><li><a href="http://www.howtogeek.com/howto/ubuntu/set-windows-as-default-os-when-dual-booting-ubuntu/" rel="bookmark" title="Permanent Link: Set Windows as Default OS when Dual Booting Ubuntu">Set Windows as Default OS when Dual Booting Ubuntu</a></li><li><a href="http://www.howtogeek.com/howto/windows-vista/easily-set-default-os-in-a-windows-vista-and-xp-dual-boot-setup/" rel="bookmark" title="Permanent Link: Easily Set Default OS in a Windows 7 / Vista and XP Dual-boot Setup">Easily Set Default OS in a Windows 7 / Vista and XP Dual-boot Setup</a></li>				</ul>
+			</div>
+			
+
+
+
+		<div style="clear:both;"></div>
+				<div style="width:300px;min-height:20px;margin-top:30px;">
+			<div style="width:160px;text-align:center;margin-left:auto;margin-right:auto;">
+				<!-- tmnp.howtogeek 160x600 BTF -->
+<div id='div-gpt-ad-1342044737928-12'>
+<script type='text/javascript'>
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1342044737928-12'); });
+</script>
+</div>				<div style="padding-top:10px;"></div>
+			</div>
+			
+																	
+			
+			<div style="clear:both;"></div>
+		</div>
+				
+		
+</div>
+	</div>
+</div>
+
+<div class="yui-g">
+	<div style="padding-top:20px;margin-top:210px;margin-bottom:10px;min-height:115px;text-align:center;width:750px;margin-left:15px;">
+		<div id="ns_ad8">
+			<div style="padding-bottom:15px;margin-left:120px;width:720px;">
+				<!-- tmnp.howtogeek 728x90 BTF -->
+<div id='div-gpt-ad-1342044737928-14'>
+<script type='text/javascript'>
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1342044737928-14'); });
+</script>
+</div>			</div>
+			<div style="clear:both;"></div>
+			<div style="width:100%"></div>
+			<div style="clear:both;"></div>
+		</div>
+	</div>
+
+
+			<div class="yui-g"></div>
+		</div>
+		<div class='footer' id='ft'>
+	<div style="width:10%;float:left;">
+		<div style="font-size:120%;font-weight:bold;color:#555;padding-bottom:10px;">Categories</div>
+		<ul id="popul2" class="bottomul2" style="margin-left:0px;">
+			<li><a href="/tag/windows-7/">Windows 7</a></li>
+<li><a href="http://www.howtogeek.com/tag/windows8/" target="_top">Windows 8</a></li>
+<li><a href="/tag/windows-vista/">Windows Vista</a></li>
+<li><a href="/tag/windows/">Windows XP</a></li>
+<li><a href="/tag/malware/">Malware &amp; Viruses</a></li>
+<li><a href="/tag/microsoft-office/">Microsoft Office</a></li>
+<li><a href="/tag/internet/">Web Browsing</a></li>
+<li><a href="/tag/linux/">Linux</a></li>
+<li><a href="/tag/desktop-fun">Desktop Fun</a></li>
+<li><a href="/archived/">Archived</a></li>
+<li><a href="/tag/the-geek-blog/">Other&#8230;</a></li>
+		</ul>
+		<div style='clear:both'></div>
+	</div>
+
+	<div style="width:20%;float:left;border-left:1px solid #CCC;padding-left:10px;margin-left:10px;">
+		<div style="font-size:120%;font-weight:bold;color:#555;padding-bottom:10px;">Getting Started</div>
+		<ul class="bottomul">
+			<li><a href="/help/">How to Get Computer Help</a></li>
+<li><a href="/t/features/">Feature Articles</a></li>
+<li><a href="/forum/">Get Help on our Forums</a></li>
+<li><a href="/tag/news/">News</a></li>
+<li><a href="http://toolsgeek.com">ToolsGeek [Useful Online Tools]</a></li>
+<li><a href="http://cookingwiki.org" title="Cooking Tips, Guides, Techniques, and Recipes">Cooking Wiki</a></li>
+		</ul>
+	</div>
+
+	<div style="width:18%;float:left;border-left:1px solid #CCC;padding-left:10px;margin-left:10px;">
+		<div style="font-size:120%;font-weight:bold;color:#555;padding-bottom:10px;">About How-To Geek</div>
+		<ul class="bottomul">
+			<li><a href="/about/">About Us</a></li>
+<li><a href="/contact/">Contact Us</a></li>
+<li><a href="http://www.techmedianetwork.com/advertisers.html">Advertising</a></li>
+<li><a href="/privacy-policy/">Privacy Policy</a></li>
+<li><a href="/disclaimers/">Disclaimers</a></li>
+<li><a href="http://www.howtogeek.com/howto/the-geek-blog/how-to-geek-comment-policy/">Comment Policy</a></li>
+<li><a href="/resumes/">Write for How-To Geek</a></li>
+		</ul>
+	</div>
+	<div style="width:25%;float:left;border-left:1px solid #CCC;padding-left:10px;margin-left:10px;">
+		<div style="font-size:120%;font-weight:bold;color:#555;padding-bottom:10px;">What Is That Process?</div>
+		<table id="proclistfoot">
+			<tr>
+				<td valign='top'>
+					<a href="/howto/windows-vista/what-is-svchostexe-and-why-is-it-running/">svchost.exe</a><br/>
+					<a href="/howto/windows-vista/what-is-juschedexe-and-why-is-it-running/">jusched.exe</a><br/>
+					<a href="/howto/windows-vista/what-is-dwmexe-and-why-is-it-running/">dwm.exe</a><br/>
+					<a href="/howto/windows-vista/what-is-ctfmonexe-and-why-is-it-running/">ctfmon.exe</a><br/>
+					<a href="/howto/windows-vista/what-are-wmpnscfgexe-and-wmpnetwkexe-and-why-are-they-running/">wmpnetwk.exe</a><br/>
+					<a href="/howto/6456/what-is-mdnsresponder.exe-bonjour-and-how-can-i-uninstall-or-remove-it/">mDNSResponder.exe</a>
+					<a href="/howto/windows-vista/what-is-dpupdchkexe-and-why-is-it-running/">Dpupdchk.exe</a><br/>
+					<a href="/howto/windows-vista/what-is-adobe_updaterexe-and-why-is-it-running/">Adobe_Updater.exe</a><br/>
+					<a href="/howto/28450/what-is-searchindexer.exe-and-why-is-it-running/">SearchIndexer.exe</a>
+				</td>
+				<td valign='top'>
+					<a href="/howto/windows-vista/what-are-wmpnscfgexe-and-wmpnetwkexe-and-why-are-they-running/">wmpnscfg.exe</a><br/>
+					<a href="/howto/windows-vista/what-is-rundll32exe-and-why-is-it-running/">rundll32.exe</a><br/>
+					<a href="/wiki/Wfcrun32.exe">wfcrun32.exe</a><br/>
+					<a href="/wiki/Ipoint.exe">Ipoint.exe</a><br/>
+					<a href="/wiki/Itype.exe">Itype.exe</a><br/>
+					<a href="/howto/30348/what-are-wlidsvc.exe-and-wlidsvcm.exe-and-why-are-they-running/">wlidsvc.exe</a>
+					<a href="/wiki/Wfica32.exe">Wfica32.exe</a><br/>
+					<a href="/wiki/Mobsync.exe">Mobsync.exe</a><br/>
+					<a href="/howto/4996/what-is-conhost.exe-and-why-is-it-running/">conhost.exe</a><br/>
+				</td>
+			</tr>
+		</table>
+		<div style="clear:both;"></div>
+	</div>
+	<div style="width:180px;float:left;">
+		<div style="font-size:120%;font-weight:bold;color:#555;padding-bottom:10px;">Get Our Book</div>
+		<ul id="popul2" class="bottomul2" style="margin-left:0px;">
+				<a href='http://www.howtogeek.com/g/windows8book-footer'><img src='http://www.howtogeek.com/geekers/up/sshot50927dcde2588.jpg' border='0' /></a>
+		</ul>
+		<div style='clear:both'></div>
+	</div>	
+	
+	<div style='clear:both'></div><br />
+	<div class='copyright'>Copyright &copy; 2006-2012 HowToGeek.com.&nbsp; All Rights Reserved.</div>
+</div>	</div></div>
+	                    
+
+
+                                         
+                                             
+<!-- Begin comScore Tag -->
+<script>
+var csDocDomain = document.location.href;
+ document.write(unescape("%3Cscript src='" + (document.location.protocol == "https:" ? "https://sb" : "http://b")
++ ".scorecardresearch.com/beacon.js' %3E%3C/script%3E"));
+</script>
+
+<script>
+ COMSCORE.beacon({
+  c1:2,
+  c2:"6035753",
+  c3:"6035753",
+  c4:csDocDomain,
+  c5:"Technology - News",
+  c6:"",
+  c15:""
+ });
+</script>
+<noscript>
+ <img src="http://b.scorecardresearch.com/b?c1=2&c2=6035753&c3=6035753&c4=http://www.howtogeek.com&c5=Technology - News&c6=&c15=&cv=1.3&cj=1" style="display:none" width="0" height="0" alt="" />
+</noscript>
+<!-- End comScore Tag -->
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-1113647-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+<script type="text/javascript" src="http://tags.crwdcntrl.net/c/505/cc.js"></script>
+<script type="text/javascript" language="javascript">LOTCC.bcp();</script>
+  	
+<!-- tmnp.howtogeek 1x1 ATF -->
+<div id='div-gpt-ad-1342044737928-5'>
+<script type='text/javascript'>
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1342044737928-5'); });
+</script>
+</div>
+
+
+
+
+<!-- Quantcast Tag -->
+<script type="text/javascript">
+var _qevents = _qevents || [];
+
+(function() {
+var elem = document.createElement('script');
+elem.src = (document.location.protocol == "https:" ? "https://secure" : "http://edge") + ".quantserve.com/quant.js";
+elem.async = true;
+elem.type = "text/javascript";
+var scpt = document.getElementsByTagName('script')[0];
+scpt.parentNode.insertBefore(elem, scpt);
+})();
+
+_qevents.push({
+qacct:"p-e1gWzoEHleH1I"
+});
+</script>
+
+<noscript>
+<div style="display:none;">
+<img src="//pixel.quantserve.com/pixel/p-e1gWzoEHleH1I.gif" border="0" height="1" width="1" alt="Quantcast"/>
+</div>
+</noscript>
+<!-- End Quantcast tag -->
+
+</body>
+</html>
+<!-- Dynamic page generated in 0.575 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2012-11-06 12:57:01 -->
+<!-- super cache -->

@@ -1,0 +1,890 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="UTF-8"><script language="JavaScript">
+   var _U = "undefined";
+   var g_HttpRelativeWebRoot = "/content/";
+   var SSContributor = false;
+   var SSForceContributor = false;
+   var SSHideContributorUI = false;
+   var ssUrlPrefix   = "/";
+   var g_navNode_Path = new Array();
+       g_navNode_Path[0] = '1';
+       g_navNode_Path[1] = '2289';
+   var g_ssSourceNodeId = "2289";
+   var g_ssSourceSiteId = "UOW_Main";
+   var g_strLanguageId = "en";
+</script>
+<script type="text/javascript" src="/content/resources/wcm/sitestudio/wcm.toggle.js"></script>
+
+
+
+  <script id="ssInfo" type="text/xml" warning="DO NOT MODIFY!">
+    <ssinfo >
+    <fragmentinstance  id="fragment1" fragmentid="uow_css" library="server:FRAG_STYLESHEETS">
+      
+    </fragmentinstance>
+    <fragmentinstance  id="fragment2" fragmentid="uow_search" library="server:FRAG_SEARCH">
+      
+    </fragmentinstance>
+    <fragmentinstance  id="fragment3" fragmentid="frag_breadcrumb" library="server:FRAG_BREADCRUMB">
+    </fragmentinstance>
+    <fragmentinstance  id="fragment4" fragmentid="footer" library="server:FRAG_FOOTER">
+    </fragmentinstance>
+    <fragmentinstance  id="fragment5" fragmentid="frag_javascript" library="server:FRAG_JAVASCRIPT">
+      
+    </fragmentinstance>
+    <fragmentinstance  id="fragment6" fragmentid="frag_navigation" library="server:FRAG_NAVIGATION">
+    </fragmentinstance>
+    <fragmentinstance  id="fragment7" fragmentid="FRAG_SITE_STUDIO_MANAGER" library="server:FRAG_SITE_STUDIO_MANAGER">
+    </fragmentinstance>
+    <fragmentinstance  id="fragment8" fragmentid="frag_top_links" library="server:FRAG_TOP_LINKS">
+      
+    </fragmentinstance>
+    <fragmentinstance  id="fragment9" fragmentid="frag_contrib_info" library="server:FRAG_CONTRIB_INFO">
+      
+    </fragmentinstance>
+    <region  id="region1" name="region1" flags="11111111000" metadata="xPdfwTemplateType%3AisHidden%3Dtrue%26xReadOnly%3AisHidden%3Dtrue%26xInhibitUpdate%3AisHidden%3Dtrue%26xForceFolderSecurity%3AisHidden%3Dtrue%26xHidden%3AisHidden%3Dtrue%26xPdfwTemplateID%3AisHidden%3Dtrue%26xCollectionID%3AisHidden%3Dtrue%26xDiscussionCount%3AisHidden%3Dtrue%26xDiscussionType%3AisHidden%3Dtrue%26xTemplateType%3AisHidden%3Dtrue%26xProfileTrigger%3AisHidden%3Dtrue%26xSubType%3AisHidden%3Dtrue%26xWebsiteObjectType%3AisHidden%3Dtrue%26xWebsites%3AisHidden%3Dtrue%26xWikiPageName%3AisHidden%3Dtrue%26xDoxNo%3AisHidden%3Dtrue%26xApprovedBy%3AisHidden%3Dtrue%26xApprovedDate%3AisHidden%3Dtrue%26xDoxRelated%3AisHidden%3Dtrue%26xDoxContacts%3AisHidden%3Dtrue%26xCaption%3AisHidden%3Dtrue%26xTrashDeleteName%3AisHidden%3Dtrue%26xTranMaster%3AisHidden%3Dtrue%26xTrashDeleteLoc%3AisHidden%3Dtrue%26xTrashDeleter%3AisHidden%3Dtrue%26xTrashDeleteDate%3AisHidden%3Dtrue%26xTranLanguage%3AisHidden%3Dtrue%26xIdcLanguage%3AisHidden%3Dtrue%26xDontShowInListsForWebsites%3AisHidden%3Dtrue%26xSSFileName%3AisHidden%3Dtrue" dccommand="ssIncInlineDynamicConversion(SS_DATAFILE)">
+        <element  id="region1_element3" name="subsiteBanner" label="Subsite Banner - Promotional Content" type="2" flags="110000000000000011100011111000000000000000000000000000000001000000000000000000000000000000000000" fragmentid="frag_banner" library="server:FRAG_SUBSITE_BANNER">
+          
+			
+      <element  id="0" name="readMore" label="The Read More button - not always required" type="1" flags="000000000000000011100000000000000000000000000011000101000011000000000000000000000000000000000000">
+          
+        <height >150px</height>
+        <validate  docname="SS_DEFAULT_VALIDATION_SCRIPT" language="javascript" methodname="fnSSVDefaultWysiwygValidation" paramtype="html">
+          <parameters ><parameter ></parameter><parameter ></parameter><parameter ></parameter><parameter >true</parameter><parameter >true</parameter><parameter >true</parameter></parameters>
+        </validate>
+      </element>
+      <element  id="1" name="bannerTitle" label="Banner Title - The heading for your banner item" type="6" flags="111110000000000000000000000000000000000000001100000000000001000000000000000000000000000000000000">
+          
+        <height >150px</height>
+      </element>
+      <element  id="2" name="bannerBlurb" label="Banner Blurb - A short summary of the banner item" type="6" flags="111110000000000000000000000000000000000000001100000000000001000000000000000000000000000000000000">
+          
+        <height >200px</height>
+      </element>
+      <element  id="3" name="bannerImage" label="Banner Image URL - Just include path to image" type="6" flags="111110000000000000000000000000000000000000001100000000000001000000000000000000000000000000000000">
+          
+        <height >150px</height>
+      </element>
+		
+          <height >200px</height>
+          <linktoregioncontent  createnewxml="true" createnewnative="false" choosemanaged="true" chooselocal="false" choosenone="false">
+            <choosemanagedquerytext  corecontentonly="FALSE">
+              <![CDATA[xWebsiteObjectType <Matches> `Data File` <OR> xWebsiteObjectType <Matches> `Native Document`]]>
+            </choosemanagedquerytext>
+            <defaultmetadata >
+              <![CDATA[dDocType%3Dweb%26dDocTitle%3DInsert+title+here...%26dSecurityGroup%3DPublic%26xReadOnly%3DFALSE%26xInhibitUpdate%3DFALSE%26xForceFolderSecurity%3DFALSE%26xHidden%3DFALSE%26xDiscussionCount%3D0%26xDiscussionType%3DN%2FA%26xProfileTrigger%3Dwebpage%26xSubType%3DWEB%26xTrashDeleteLoc%3D0%26xIdcLanguage%3D0%26xPromote%3DNo]]>
+            </defaultmetadata>
+          </linktoregioncontent>
+          <validate  docname="SS_DEFAULT_VALIDATION_SCRIPT" language="javascript" methodname="fnSSVDefaultStaticListValidation" paramtype="html">
+            <parameters ><parameter ></parameter><parameter ></parameter></parameters>
+          </validate>
+        </element>
+      <element  id="region1_element2" name="selltitle" label="Banner" type="6" flags="1111100000000000111000000000000000000000000010110000000000010000">
+        <height >100px</height>
+      </element>
+      
+        <element  id="region1_element1" name="sell1" label="Main Content" type="1" flags="111111101111111111110000000000000000000000001011001111110011000000011000000000000000000000000000">
+          <classes  fullselectors="TRUE">
+            <class >.left</class>
+            <class >.right</class>
+            <class >.text-left</class>
+            <class >.text-center</class>
+            <class >.text-right</class>
+            <class >.border_0</class>
+            <class >.border_1</class>
+            <class >.tableLayout</class>
+            <class >.boxYellow</class>
+            <class >.boxRed</class>
+            <class >.boxBlue</class>
+            <class >.boxGrey</class>
+            <class >.boxGreen</class>
+            <class >.boxPurple</class>
+            <class >.boxOrange</class>
+            <class >.boxGreenGrey</class>
+            <class >.boxTeal</class>
+            <class >.boxSilver</class>
+            <class >.img-border</class>
+          </classes>
+          <linktoregioncontent  createnewxml="true" createnewnative="false" choosemanaged="true" chooselocal="false" choosenone="false">
+            <choosemanagedquerytext  corecontentonly="FALSE">
+              <![CDATA[xWebsiteObjectType <Matches> `Data File` <OR> xWebsiteObjectType <Matches> `Native Document`]]>
+            </choosemanagedquerytext>
+            <defaultmetadata >
+              <![CDATA[dDocType%3Dweb%26dDocTitle%3DInsert+title+here...%26dSecurityGroup%3DPublic%26xReadOnly%3DFALSE%26xInhibitUpdate%3DFALSE%26xForceFolderSecurity%3DFALSE%26xHidden%3DFALSE%26xDiscussionCount%3D0%26xDiscussionType%3DN%2FA%26xProfileTrigger%3Dwebpage%26xSubType%3DWEB%26xTrashDeleteLoc%3D0%26xIdcLanguage%3D0%26xPromote%3DNo]]>
+            </defaultmetadata>
+          </linktoregioncontent>
+        </element>
+      <switchregioncontent  createnewxml="true" createnewnative="false" choosemanaged="true" chooselocal="false" choosenone="true">
+        <createnewnativedoctypes >
+          <![CDATA[.doc,.xls,.ppt]]>
+        </createnewnativedoctypes>
+        <choosemanagedquerytext  corecontentonly="FALSE">
+          <![CDATA[xSubType <Matches> `SUB`]]>
+        </choosemanagedquerytext>
+        <defaultmetadata >
+          <![CDATA[dDocType%3DSiteElement%26dDocTitle%3DInsert+title+here...%26dSecurityGroup%3DWebAsset%26xReadOnly%3DFALSE%26xInhibitUpdate%3DFALSE%26xForceFolderSecurity%3DFALSE%26xHidden%3DFALSE%26xDiscussionCount%3D0%26xDiscussionType%3DN%2FA%26xProfileTrigger%3Dsiteelement%26xSubType%3DSUB%26xTrashDeleteLoc%3D0%26xIdcLanguage%3D0%26xPromote%3DNo]]>
+        </defaultmetadata>
+      </switchregioncontent>
+    </region>
+    <region  id="region2" name="region2" flags="11111111000" metadata="" dccommand="ssIncInlineDynamicConversion(SS_DATAFILE)">
+      <element  id="region2_element1" name="directlinks" label="Direct Links" type="2" flags="1100000000000000111000111110000000000000000000010000000000100000" fragmentid="frag_quick_links" library="server:FRAG_QUICK_LINKS">
+        
+			
+      <element  id="0" name="Link" label="Quick Link" type="1" flags="111110000000000011100000000000000000000000001111000001001010000000000000000000000000000000000000">
+          
+        <validate  docname="SS_DEFAULT_VALIDATION_SCRIPT" language="javascript" methodname="fnSSVDefaultWysiwygValidation" paramtype="html">
+          <parameters ><parameter ></parameter><parameter ></parameter><parameter ></parameter><parameter >false</parameter><parameter >true</parameter><parameter >false</parameter></parameters>
+        </validate>
+      </element>
+		
+        <linktoregioncontent  createnewxml="true" createnewnative="false" choosemanaged="true" chooselocal="false" choosenone="false">
+          <choosemanagedquerytext  corecontentonly="FALSE">
+            <![CDATA[xWebsiteObjectType <Matches> `Data File` <OR> xWebsiteObjectType <Matches> `Native Document`]]>
+          </choosemanagedquerytext>
+        </linktoregioncontent>
+      </element>
+      <switchregioncontent  createnewxml="true" createnewnative="false" choosemanaged="true" chooselocal="false" choosenone="true">
+        <choosemanagedquerytext  corecontentonly="FALSE">
+          <![CDATA[xSubType <matches> `DRL`]]>
+        </choosemanagedquerytext>
+        <defaultmetadata >
+          <![CDATA[dDocType%3DSiteElement%26dDocTitle%3DInsert+title+here...%26dSecurityGroup%3DWebAsset%26xReadOnly%3DFALSE%26xInhibitUpdate%3DFALSE%26xForceFolderSecurity%3DFALSE%26xHidden%3DFALSE%26xDiscussionCount%3D0%26xDiscussionType%3DN%2FA%26xProfileTrigger%3Dsiteelement%26xSubType%3DDRL%26xTrashDeleteLoc%3D0%26xIdcLanguage%3D0%26xPromote%3DNo]]>
+        </defaultmetadata>
+      </switchregioncontent>
+    </region>
+    <region  id="region3" name="region3" flags="11111111000" metadata="" dccommand="ssIncInlineDynamicConversion(SS_DATAFILE)">
+        <element  id="region3_element1" name="footer" label="Footer" type="1" flags="111110001000000001101100000000000000000000001101000001111010000000000000000000000000000000000000">
+          <tags >
+            <tag >P</tag>
+          </tags>
+          <linktoregioncontent  createnewxml="true" createnewnative="false" choosemanaged="true" chooselocal="false" choosenone="false">
+            <choosemanagedquerytext  corecontentonly="FALSE">
+              <![CDATA[xWebsiteObjectType <Matches> `Data File` <OR> xWebsiteObjectType <Matches> `Native Document`]]>
+            </choosemanagedquerytext>
+          </linktoregioncontent>
+          <validate  docname="SS_DEFAULT_VALIDATION_SCRIPT" language="javascript" methodname="fnSSVDefaultWysiwygValidation" paramtype="html">
+            <parameters ><parameter ></parameter><parameter ></parameter><parameter ></parameter><parameter >true</parameter><parameter >false</parameter><parameter >false</parameter></parameters>
+          </validate>
+        </element>
+      <switchregioncontent  createnewxml="true" createnewnative="false" choosemanaged="true" chooselocal="true" choosenone="true">
+        <choosemanagedquerytext  corecontentonly="FALSE">
+          <![CDATA[xSubType <MATCHES> `FTR`]]>
+        </choosemanagedquerytext>
+        <defaultmetadata >
+          <![CDATA[dDocType%3DSiteElement%26dDocTitle%3DInsert+title+here...%26dSecurityGroup%3DWebAsset%26xReadOnly%3DFALSE%26xInhibitUpdate%3DFALSE%26xForceFolderSecurity%3DFALSE%26xHidden%3DFALSE%26xDiscussionCount%3D0%26xDiscussionType%3DN%2FA%26xProfileTrigger%3Dsiteelement%26xSubType%3DFTR%26xTrashDeleteLoc%3D0%26xIdcLanguage%3D0%26xPromote%3DNo]]>
+        </defaultmetadata>
+      </switchregioncontent>
+    </region>
+    <region  id="region4" name="region4" flags="11111111000" metadata="" dccommand="ssIncInlineDynamicConversion(SS_DATAFILE)">
+        <element  id="region4_element1" name="featured_content" label="Region for featured content, automatically styled." type="2" flags="110000000000000011100011111000000000000000000011000000000011000000000000000000000000000000000000" fragmentid="frag_featured_content" library="server:FRAG_FEATURED_CONTENT">
+          
+			
+      <element  id="0" name="Title" label="Title" type="6" flags="111110000000000000000000000000000000000000001100000000000000000000000000000000000000000000000000">
+          
+        <validate  docname="SS_DEFAULT_VALIDATION_SCRIPT" language="javascript" methodname="fnSSVDefaultPlainTextValidation" paramtype="html">
+          <parameters ><parameter ></parameter><parameter ></parameter><parameter ></parameter><parameter >true</parameter></parameters>
+        </validate>
+      </element>
+      <element  id="1" name="Body" label="Body" type="1" flags="111111111111111111111100000000000000000000001111001110111010000000000000000000000000000000000000">
+          
+        <validate  docname="SS_DEFAULT_VALIDATION_SCRIPT" language="javascript" methodname="fnSSVDefaultWysiwygValidation" paramtype="html">
+          <parameters ><parameter ></parameter><parameter ></parameter><parameter ></parameter><parameter >true</parameter><parameter >true</parameter><parameter >true</parameter></parameters>
+        </validate>
+      </element>
+		
+          <description >A static list to manage multiple featured content items</description>
+          <height >200px</height>
+          <linktoregioncontent  createnewxml="true" createnewnative="false" choosemanaged="true" chooselocal="false" choosenone="false">
+            <choosemanagedquerytext  corecontentonly="FALSE">
+              <![CDATA[xWebsiteObjectType <Matches> `Data File` <OR> xWebsiteObjectType <Matches> `Native Document`]]>
+            </choosemanagedquerytext>
+            <defaultmetadata >
+              <![CDATA[dDocType%3Dweb%26dDocTitle%3DInsert+title+here...%26dSecurityGroup%3DPublic%26dDocAccount%3Dweb%26xReadOnly%3DFALSE%26xInhibitUpdate%3DFALSE%26xForceFolderSecurity%3DFALSE%26xHidden%3DFALSE%26xDiscussionCount%3D0%26xDiscussionType%3DN%2FA%26xProfileTrigger%3Dwebpage%26xSubType%3DWEB%26xTrashDeleteLoc%3D0%26xIdcLanguage%3D0%26xPromote%3DNo]]>
+            </defaultmetadata>
+          </linktoregioncontent>
+          <validate  docname="SS_DEFAULT_VALIDATION_SCRIPT" language="javascript" methodname="fnSSVDefaultStaticListValidation" paramtype="html">
+            <parameters ><parameter ></parameter><parameter ></parameter></parameters>
+          </validate>
+        </element>
+      
+        
+        <element  id="region4_element2" name="promoContent" label="Sticky Promotional Content" type="2" flags="110000000000000011100011111000000000000000000011000000000011000000000000000000000000000000000000" fragmentid="frag_promo_content" library="server:FRAG_PROMO_CONTENT">
+          
+			
+      <element  id="0" name="Title" label="Title" type="6" flags="111110000000000000000000000000000000000000001000000000000001000000000000000000000000000000000000">
+          
+        <height >150px</height>
+      </element>
+      <element  id="1" name="Body" label="Body" type="1" flags="111111111111111111111100000000000000000000001111001100111011000000000000000000000000000000000000">
+          
+        <height >250px</height>
+        <validate  docname="SS_DEFAULT_VALIDATION_SCRIPT" language="javascript" methodname="fnSSVDefaultWysiwygValidation" paramtype="html">
+          <parameters ><parameter ></parameter><parameter ></parameter><parameter ></parameter><parameter >true</parameter><parameter >true</parameter><parameter >true</parameter></parameters>
+        </validate>
+      </element>
+		
+          <height >150px</height>
+          <linktoregioncontent  createnewxml="true" createnewnative="false" choosemanaged="true" chooselocal="true" choosenone="false">
+            <choosemanagedquerytext  corecontentonly="FALSE">
+              <![CDATA[xWebsiteObjectType <Matches> `Data File` <OR> xWebsiteObjectType <Matches> `Native Document`]]>
+            </choosemanagedquerytext>
+            <defaultmetadata >
+              <![CDATA[dDocType%3Dweb%26dDocTitle%3DInsert+title+here...%26dSecurityGroup%3DPublic%26dDocAccount%3Dweb%26xReadOnly%3DFALSE%26xInhibitUpdate%3DFALSE%26xForceFolderSecurity%3DFALSE%26xHidden%3DFALSE%26xDiscussionCount%3D0%26xDiscussionType%3DN%2FA%26xProfileTrigger%3Dwebpage%26xSubType%3DWEB%26xTrashDeleteLoc%3D0%26xIdcLanguage%3D0%26xPromote%3DNo]]>
+            </defaultmetadata>
+          </linktoregioncontent>
+          <validate  docname="SS_DEFAULT_VALIDATION_SCRIPT" language="javascript" methodname="fnSSVDefaultStaticListValidation" paramtype="html">
+            <parameters ><parameter ></parameter><parameter ></parameter></parameters>
+          </validate>
+        </element>
+      
+        
+        <element  id="region4_element3" name="featureRight" label="Feature Article - Right" type="2" flags="110000000000000011100011111000000000000000000011000000000010000000000000000000000000000000000000" fragmentid="frag_feature_content_rgt" library="server:FRAG_FEATURED_RIGHT">
+          
+			
+      <element  id="0" name="Title" label="Title" type="6" flags="1111100000000000000000000000000000000000000011000000000000000000000000000000">
+          
+      </element>
+      <element  id="1" name="Body" label="Body" type="1" flags="111111111111111111111100000000000000000000001111001101111010000000000000000000000000000000000000">
+          
+        <validate  docname="SS_DEFAULT_VALIDATION_SCRIPT" language="javascript" methodname="fnSSVDefaultWysiwygValidation" paramtype="html">
+          <parameters ><parameter ></parameter><parameter ></parameter><parameter ></parameter><parameter >true</parameter><parameter >true</parameter><parameter >true</parameter></parameters>
+        </validate>
+      </element>
+		
+          <linktoregioncontent  createnewxml="true" createnewnative="false" choosemanaged="true" chooselocal="false" choosenone="false">
+            <choosemanagedquerytext  corecontentonly="FALSE">
+              <![CDATA[xWebsiteObjectType <Matches> `Data File` <OR> xWebsiteObjectType <Matches> `Native Document`]]>
+            </choosemanagedquerytext>
+            <defaultmetadata >
+              <![CDATA[dDocType%3Dweb%26dDocTitle%3DInsert+title+here...%26dSecurityGroup%3DPublic%26dDocAccount%3Dweb%26xReadOnly%3DFALSE%26xInhibitUpdate%3DFALSE%26xForceFolderSecurity%3DFALSE%26xHidden%3DFALSE%26xDiscussionCount%3D0%26xDiscussionType%3DN%2FA%26xProfileTrigger%3Dwebpage%26xSubType%3DWEB%26xTrashDeleteLoc%3D0%26xIdcLanguage%3D0%26xPromote%3DNo]]>
+            </defaultmetadata>
+          </linktoregioncontent>
+          <validate  docname="SS_DEFAULT_VALIDATION_SCRIPT" language="javascript" methodname="fnSSVDefaultStaticListValidation" paramtype="html">
+            <parameters ><parameter ></parameter><parameter ></parameter></parameters>
+          </validate>
+        </element>
+      <switchregioncontent  createnewxml="true" createnewnative="false" choosemanaged="true" chooselocal="false" choosenone="true">
+        <choosemanagedquerytext  corecontentonly="FALSE">
+          <![CDATA[xSubType <MATCHES> `SFC`]]>
+        </choosemanagedquerytext>
+        <defaultmetadata >
+          <![CDATA[dDocType%3DSiteElement%26dDocTitle%3DInsert+title+here...%26dSecurityGroup%3DWebAsset%26xReadOnly%3DFALSE%26xInhibitUpdate%3DFALSE%26xForceFolderSecurity%3DFALSE%26xHidden%3DFALSE%26xDiscussionCount%3D0%26xDiscussionType%3DN%2FA%26xProfileTrigger%3Dsiteelement%26xSubType%3DSFC%26xTrashDeleteLoc%3D0%26xIdcLanguage%3D0%26xPromote%3DNo]]>
+        </defaultmetadata>
+      </switchregioncontent>
+    </region>
+  </ssinfo>
+  </script>
+<title> Faculty of Health & Behavioural Sciences @ UOW</title>
+<!-- SS_BEGIN_SNIPPET(fragment1,stylesheets)--><link href="/content/groups/webasset/@web/documents/siteelement/css_uow_base.css" rel="stylesheet" type="text/css" media="screen" />
+<link href="/content/groups/webasset/@web/documents/siteelement/css_uow_subsite.css" rel="stylesheet" type="text/css" media="screen" />
+<!--[if lte IE 7]>
+<link href="/content/groups/webasset/@web/documents/siteelement/css_uow_ie7.css" rel="stylesheet" type="text/css" media="screen" />
+<![endif]--><link href="/content/groups/webasset/@web/documents/siteelement/css_uow_colorbox.css" type="text/css" media="screen" rel="stylesheet" />
+<link href="/content/groups/webasset/@web/documents/siteelement/css_print.css" type="text/css" media="print" rel="stylesheet" />
+			<!-- SS_END_SNIPPET(fragment1,stylesheets)-->
+<!-- SS_BEGIN_SNIPPET(fragment5,javascript)-->				<script type="text/javascript" src="/content/groups/webasset/@web/documents/siteelement/js_jquery.js"></script>
+<script type="text/javascript" src="/content/groups/webasset/@web/documents/siteelement/js_jquery_plugin_cycle.js"></script>
+<script type="text/javascript" src="/content/groups/webasset/@web/documents/siteelement/js_jquery_plugin_clearinput.js"></script>
+<script type="text/javascript" src="/content/groups/webasset/@web/documents/siteelement/js_jquery_plugin_colorbox.js"></script>
+<script type="text/javascript" src="/content/groups/webasset/@web/documents/siteelement/js_jquery_plugin_sspng.js"></script>
+<script type="text/javascript" src="/content/groups/webasset/@web/documents/siteelement/js_jquery_plugin_wizard.js"></script>
+<script type="text/javascript" src="/content/groups/webasset/@web/documents/siteelement/js_jquery_plugin_validate.js"></script>
+<script type="text/javascript" src="/content/groups/webasset/@web/documents/siteelement/js_jquery_plugin_tools.js"></script>
+<script type="text/javascript" src="/server/ga.js"></script>
+
+<script type="text/javascript">
+// This code is only included if nodeId = 1.
+$(function() {
+     // Gogo IE6 Hacks
+	$("body").fixPng();
+
+	// This does the search box input magic.
+	$("#searchbox").clearingInput();
+
+	// This does the gallery magic for the content pages.
+	$("a[rel='gallery']").colorbox({
+		maxWidth:'800',
+		maxHeight:'600'
+	});
+	
+	var megaMenu = $('#megamenu');
+    var megaSubMenu = $('.dropmenu');
+	var timer;
+
+    megaSubMenu.css('display', 'none');
+
+	var searchFocus = false;
+	var mouseOut = false;
+	
+    megaMenu.mouseenter(function () {
+    	mouseOut = false;
+        clearTimeout(timer);
+		timer = setTimeout(function () {
+            megaSubMenu.stop(true, true).slideDown(300);
+        }, 300);
+    });
+    
+	$('#searchbox').focus(function(){
+		searchFocus = true;
+		$(this).css('color', '#000');
+	});
+	
+	
+	$('#searchbox').blur(function(){
+		searchFocus = false;
+		$(this).css('color', '#999');
+		if(mouseOut){
+			clearTimeout(timer);
+			timer = setTimeout(function () {
+				megaSubMenu.stop(true, true).slideUp(300);
+			}, 300);
+		}
+	});
+	
+    megaMenu.mouseleave(function () {
+    	mouseOut = true;
+		clearTimeout(timer);
+		timer = setTimeout(function () {
+			if(!searchFocus) {
+				megaSubMenu.stop(true, true).slideUp(300);
+			}
+		}, 300);
+    });
+	
+	//create case insensitive version of ':contains()' called ':iContains'
+	jQuery.expr[':'].iContains = function(a,i,m){
+		 return jQuery(a).text().toUpperCase().indexOf(m[3].toUpperCase())>=0;
+	};
+	
+	//on key up refine list	
+	$("#searchbox").keyup(function(){		
+		var bsearchlen = $("#searchbox").val().length;
+		var sField = $("#searchbox").val().split(" ");
+
+		$(".dropmenu .omega li a").parent().css("display", "none");
+		
+		for(var i=0; i<sField.length; i++) {
+			$(".dropmenu .omega li a:iContains('"+sField[i].toUpperCase()+"')").each(function(ind){
+				if(ind < 5)
+					$(this).parent().css("display", "block");
+			});
+		}
+	});
+});
+
+</script>
+				
+			<!-- SS_END_SNIPPET(fragment5,javascript)-->
+<!-- SS_BEGIN_SNIPPET(fragment7,ssm_setup)-->			<!-- SS_END_SNIPPET(fragment7,ssm_setup)-->
+
+
+<meta name="dc.docname" content="UOW024443">
+<meta name="dc.lastreview" content="">
+<meta name="dc.date.modified" scheme="ISO8601" content="2012-10-19" />
+<meta name="dc.title" content="HBS featured content" />
+<meta name="dc.contributor" content="hallingu" />
+<meta name="dc.account" content="web/health" />
+<meta name="dc.type.documentType" content="SFC" />
+<meta name="dc.format" scheme="IMT" content="text/html" />
+<meta name="dc.language" content="en-au" />
+
+
+</head>
+<body class="uow">
+<div id="wrap">
+<div id="header" class="container_24 clearfix">
+    <div id="uowlogo"><a href="/index.html"><img src="/content/groups/webasset/@web/documents/siteelement/img_logo_uow.png" alt="University of Wollongong" title="University of Wollongong"></a></div>
+    <ul id="top-links">
+      <li><a href="/sitemap/index.html">Site Map</a></li>
+      <li><a href="/about/campusmap/index.html">Campus Map</a></li>
+      <li><a href="/directory/atoz/index.html">A to Z Index</a></li>
+      <li><a href="https://intranet.uow.edu.au/"><strong>Staff Intranet</strong></a></li>
+      <li class="omega"><a href="/about/contacts/index.html"><strong>Contacts</strong></a></li>
+    </ul>
+    <div id="megamenu" class="grid_24">
+      <ul class="mainmenu">
+        <li class="alpha"><a href="/future/index.html"><img src="/content/groups/webasset/@web/documents/siteelement/future_students_menu.png" alt="Future Students"></a></li>
+        <li><a href="/student/index.html"><img src="/content/groups/webasset/@web/documents/siteelement/current_students_menu.png" alt="Current Students" ></a></li>
+        <li><a href="/research/index.html"><img src="/content/groups/webasset/@web/documents/siteelement/research_menu.png" alt="Research"></a></li>
+        <li><a href="/alumni/index.html"><img src="/content/groups/webasset/@web/documents/siteelement/alumni_menu.png" alt="Alumni"></a></li>
+        <li><a href="/engage/index.html"><img src="/content/groups/webasset/@web/documents/siteelement/business_community_menu.png" alt="Business &amp; Community"></a></li>
+        <li><a href="http://media.uow.edu.au/index.html?ssSourceSiteId=UOW_Main"><img src="/content/groups/webasset/@web/documents/siteelement/news_media_menu.png" alt="News &amp; Media"></a></li>
+        <li id="search" class="omega">
+          <form action="http://search.uow.edu.au/search" method="get">
+            <input type="text" name="q" id="searchbox" value="SEARCH" />
+            <input type="submit" name="search_button" value="Search"/>
+            <input type="hidden" name="site" value="default_collection" />
+            <input type="hidden" name="proxystylesheet" value="default_frontend" />
+            <input type="hidden" name="output" value="xml_no_dtd" />
+            <input type="hidden" name="client" value="default_frontend" />
+          </form>
+        </li>
+      </ul>
+    	<div class="dropmenu">
+<table cellspacing="1" cellpadding="0">
+  <tr>
+    
+	<td class="alpha"><ul>
+		<li><a onClick="javascript: pageTracker._trackPageview('internal-links/mega-menu/future/home');" href="/future/index.html">Future Students Home</a></li>
+		<li><a href="/future/international/index.html" onClick="javascript: pageTracker._trackPageview('internal-links/mega-menu/future/international');">International Students</a></li>
+		<li><a onClick="javascript: pageTracker._trackPageview('internal-links/mega-menu/future/highschool');" href="/future/school/index.html">High School Students</a></li>
+		<li><a onClick="javascript: pageTracker._trackPageview('internal-links/mega-menu/future/postgrad');" href="/future/postgrad/index.html">Postgrad Students</a></li>
+		<li><a onClick="javascript: pageTracker._trackPageview('internal-links/mega-menu/future/direct');" href="/future/direct/index.html">Direct Applicants</a></li>
+		<li><a onClick="javascript: pageTracker._trackPageview('internal-links/mega-menu/future/accommodation');" href="/about/accommodation/index.html">Accommodation</a></li>
+		<li><a onClick="javascript: pageTracker._trackPageview('internal-links/mega-menu/scholarships/mature');" href="/about/scholarships/index.html">Scholarships</a></li>
+	</ul></td>
+	
+	
+    
+	<td><ul>
+		<li><a href="/student/index.html" onClick="javascript: pageTracker._trackPageview('internal-links/mega-menu/student/home');">Current Students Home</a></li>
+		<li><a onClick="javascript: pageTracker._trackPageview('internal-links/mega-menu/student/timetables');" href="/student/timetables/index.html">Timetables</a></li>
+		<li><a href="/student/dates/index.html" onClick="javascript: pageTracker._trackPageview('internal-links/mega-menu/student/dates');">Session Dates</a></li>
+		<li><a onClick="javascript: pageTracker._trackPageview('internal-links/mega-menu/student/it');" href="/its/index.html">IT Services</a></li>
+		<li><a onClick="javascript: pageTracker._trackPageview('internal-links/mega-menu/student/graduation');" href="/student/graduation/index.html">Graduation</a></li>
+		<li><a onClick="javascript: pageTracker._trackPageview('internal-links/mega-menu/student/scholarships');" href="/about/scholarships/index.html">Scholarships</a></li>
+		<li><a href="/student/finances/index.html" onClick="javascript: pageTracker._trackPageview('internal-links/mega-menu/student/fees');">Fees</a></li>
+	</ul></td>
+	
+	
+    
+	<td><ul>
+		<li><a onClick="javascript: pageTracker._trackPageview('internal-links/mega-menu/research/home');" href="/research/index.html">Research Home</a></li>
+		<li><a onClick="javascript: pageTracker._trackPageview('internal-links/mega-menu/research/strengths');" href="/research/strengths/index.html">Research Strengths</a></li>
+		<li><a onClick="javascript: pageTracker._trackPageview('internal-links/mega-menu/research/rsc');" href="/research/rsc/index.html">Research Student Centre</a></li>
+		<li><a onClick="javascript: pageTracker._trackPageview('internal-links/mega-menu/research/rso');" href="/research/rso/index.html">Research Services Office</a></li>
+		<li><a onClick="javascript: pageTracker._trackPageview('internal-links/mega-menu/research/commercial');" href="/research/icr/index.html">Innovation &amp; Commercial Research</a></li>
+		<li><a onClick="javascript: pageTracker._trackPageview('internal-links/mega-menu/research/supervisors');" href="/research/rsc/supervisor/index.html">Supervisors</a></li>
+		<li><a onClick="javascript: pageTracker._trackPageview('internal-links/mega-menu/research/grants');" href="/research/researchgrants/index.html">Grants</a></li>
+	</ul></td>
+	
+	
+    
+	<td><ul>
+		<li><a onClick="javascript: pageTracker._trackPageview('internal-links/mega-menu/alumni/home');" href="/alumni/index.html">Alumni Home</a></li>
+		<li><a onClick="javascript: pageTracker._trackPageview('internal-links/mega-menu/alumni/update-details');" href="/alumni/new-contact/index.html">Update Your Details</a></li>
+		<li><a onClick="javascript: pageTracker._trackPageview('internal-links/mega-menu/alumni/profiles');" href="/alumni/alumnistories/index.html">Alumni Profiles</a></li>
+		<li><a onClick="javascript: pageTracker._trackPageview('internal-links/mega-menu/alumni/benefits');" href="/alumni/benefits/index.html">Benefits Programs</a></li>
+		<li><a onClick="javascript: pageTracker._trackPageview('internal-links/mega-menu/alumni/faqs');" href="/alumni/faq/index.html">Alumni FAQs</a></li>
+		<li><a onClick="javascript: pageTracker._trackPageview('internal-links/mega-menu/alumni/bookshop');" href="/alumni/bookshop/index.html">Alumni Bookshop</a></li>
+		<li><a onClick="javascript: pageTracker._trackPageview('/internal-links/mega-menu/alumni/events');" href="/alumni/alumnievents/index.html">Alumni Events</a></li>
+	</ul></td>
+	
+	
+    
+	<td><ul>
+		<li><a onClick="javascript: pageTracker._trackPageview('internal-links/mega-menu/business-community/business-home');" href="/engage/index.html">Business Home</a></li>
+		<li><a onClick="javascript: pageTracker._trackPageview('internal-links/mega-menu/business-community/community-home');" href="/about/community/index.html">Community Home</a></li>
+		<li><a onClick="javascript: pageTracker._trackPageview('internal-links/mega-menu/business-community/newsletters');" href="/about/community/newsletters/index.html">Community Newsletter</a></li>
+		<li><a onClick="javascript: pageTracker._trackPageview('internal-links/mega-menu/business-community/grants');" href="/about/community/cegs/index.html">Engagement Grants</a></li>
+		<li><a onClick="javascript: pageTracker._trackPageview('internal-links/mega-menu/business-community/tours');" href="/about/community/tours/index.html">Campus Tours</a></li>
+		<li><a onClick="javascript: pageTracker._trackPageview('internal-links/mega-menu/business-community/work-with-uow');" href="/engage/workwithuow/index.html">Working with UOW</a></li>
+		<li><a onClick="javascript: pageTracker._trackPageview('internal-links/mega-menu/business-community/international-partnerships');" href="/engage/international/index.html">International Partnerships</a></li>
+	</ul></td>
+	
+    
+    
+	<td><ul>
+		<li><a href="http://media.uow.edu.au/index.html" onClick="javascript: pageTracker._trackPageview('internal-links/mega-menu/news-media/home');">News & Media Home</a></li>
+		<li><a onClick="javascript: pageTracker._trackPageview('internal-links/mega-menu/news-media/latest');" href="http://media.uow.edu.au/news/index.html?ssSourceSiteId=UOW_Main">Latest News</a></li>
+		<li><a onClick="javascript: pageTracker._trackPageview('internal-links/mega-menu/news-media/media-release');" href="http://media.uow.edu.au/releases/index.html?ssSourceSiteId=UOW_Main">Media Releases</a></li>
+		<li><a href="http://www.skills.itc.com.au/" onClick="javascript: pageTracker._trackPageview('internal-links/mega-menu/news-media/database-expertise');">Database of Expertise</a></li>
+		<li><a onClick="javascript: pageTracker._trackPageview('internal-links/mega-menu/news-media/contact');" href="http://media.uow.edu.au/contact/index.html?ssSourceSiteId=UOW_Main">Contact Media</a></li>
+		<li><a onClick="javascript: pageTracker._trackPageview('internal-links/mega-menu/news-media/subscribe');" href="http://media.uow.edu.au/newsdirect/index.html?ssSourceSiteId=UOW_Main">Subscribe</a></li>
+	</ul></td>
+	
+	
+	
+    <td class="omega">
+    	<h6>Popular Searches:</h6>
+    	<ul>
+			<li><a target="" href="http://search.uow.edu.au/search?q=library&amp;btnG.x=0&amp;btnG.y=0&amp;btnG=Search&amp;proxystylesheet=default_frontend&amp;output=xml_no_dtd&amp;client=default_frontend&amp;sort=date%3AD%3AL%3Ad1&amp;oe=UTF-8&amp;ie=UTF-8&amp;ud=1&amp;exclude_apps=1&amp;site=default_collection">Library</a></li>
+			<li><a target="" href="http://search.uow.edu.au/search?q=sols&amp;proxystylesheet=default_frontend&amp;output=xml_no_dtd&amp;client=default_frontend&amp;sort=date%3AD%3AL%3Ad1&amp;oe=UTF-8&amp;ie=UTF-8&amp;ud=1&amp;exclude_apps=1&amp;site=default_collection">SOLS</a></li>
+			<li><a target="" href="http://search.uow.edu.au/search?q=Course+Handbook&amp;btnG.x=0&amp;btnG.y=0&amp;btnG=Search&amp;proxystylesheet=default_frontend&amp;output=xml_no_dtd&amp;client=default_frontend&amp;sort=date%3AD%3AL%3Ad1&amp;oe=UTF-8&amp;ie=UTF-8&amp;ud=1&amp;exclude_apps=1&amp;site=default_collection">Course Handbook</a></li>
+			<li><a target="" href="http://search.uow.edu.au/search?q=campus+map&amp;proxystylesheet=default_frontend&amp;output=xml_no_dtd&amp;client=default_frontend&amp;sort=date%3AD%3AL%3Ad1&amp;oe=UTF-8&amp;ie=UTF-8&amp;ud=1&amp;exclude_apps=1&amp;site=default_collection">Campus Map</a></li>
+			<li><a target="" href="http://search.uow.edu.au/search?q=accommodation&amp;btnG.x=0&amp;btnG.y=0&amp;btnG=Search&amp;proxystylesheet=default_frontend&amp;output=xml_no_dtd&amp;client=default_frontend&amp;sort=date%3AD%3AL%3Ad1&amp;oe=UTF-8&amp;ie=UTF-8&amp;ud=1&amp;exclude_apps=1&amp;site=default_collection">Accommodation</a></li>
+			<li style="display:none;"><a target="" href="http://search.uow.edu.au/search?q=unishop&amp;proxystylesheet=default_frontend&amp;output=xml_no_dtd&amp;client=default_frontend&amp;sort=date%3AD%3AL%3Ad1&amp;oe=UTF-8&amp;ie=UTF-8&amp;ud=1&amp;exclude_apps=1&amp;site=default_collection">Unishop</a></li>
+			<li style="display:none;"><a target="" href="http://search.uow.edu.au/search?q=referencing&amp;search_button=Search&amp;site=default_collection&amp;proxystylesheet=default_frontend&amp;output=xml_no_dtd&amp;client=default_frontend">Referencing</a></li>
+			<li style="display:none;"><a target="" href="http://search.uow.edu.au/search?q=parking&amp;proxystylesheet=default_frontend&amp;output=xml_no_dtd&amp;client=default_frontend&amp;sort=date%3AD%3AL%3Ad1&amp;oe=UTF-8&amp;ie=UTF-8&amp;ud=1&amp;exclude_apps=1&amp;site=default_collection">Parking</a></li>
+			<li style="display:none;"><a href="http://search.uow.edu.au/search?q=pass&amp;btnG=Search&amp;search_button=Search&amp;proxystylesheet=default_frontend&amp;output=xml_no_dtd&amp;client=default_frontend&amp;sort=date%3AD%3AL%3Ad1&amp;entqr=3&amp;oe=UTF-8&amp;ie=UTF-8&amp;ud=1&amp;site=default_collection&amp;filter=s" target="">PASS</a></li>
+			<li style="display:none;"><a target="" href="http://www.uow.edu.au/engage/glenifferbrae/index.html">Gleniffer Brae</a></li>
+			<li style="display:none;"><a target="" href="http://search.uow.edu.au/search?q=Commerce&amp;search_button.x=0&amp;search_button.y=0&amp;site=default_collection&amp;proxystylesheet=default_frontend&amp;output=xml_no_dtd&amp;client=default_frontend">Commerce</a></li>
+			<li style="display:none;"><a target="" href="http://search.uow.edu.au/search?q=Timetable&amp;btnG.x=0&amp;btnG.y=0&amp;btnG=Search&amp;proxystylesheet=default_frontend&amp;output=xml_no_dtd&amp;client=default_frontend&amp;sort=date%3AD%3AL%3Ad1&amp;oe=UTF-8&amp;ie=UTF-8&amp;ud=1&amp;exclude_apps=1&amp;site=default_collection">Timetable</a></li>
+			<li style="display:none;"><a target="" href="http://search.uow.edu.au/search?q=oweek&amp;proxystylesheet=default_frontend&amp;output=xml_no_dtd&amp;client=default_frontend&amp;sort=date%3AD%3AL%3Ad1&amp;entqr=3&amp;oe=UTF-8&amp;ie=UTF-8&amp;ud=1&amp;site=default_collection">O Week</a></li>
+			<li style="display:none;"><a target="" href="http://search.uow.edu.au/search?q=orientation&amp;proxystylesheet=default_frontend&amp;output=xml_no_dtd&amp;client=default_frontend&amp;sort=date%3AD%3AL%3Ad1&amp;entqr=3&amp;oe=UTF-8&amp;ie=UTF-8&amp;ud=1&amp;site=default_collection">Orientation</a></li>
+			<li style="display:none;"><a target="" href="http://search.uow.edu.au/search?q=edstart&amp;proxystylesheet=default_frontend&amp;output=xml_no_dtd&amp;client=default_frontend&amp;sort=date%3AD%3AL%3Ad1&amp;oe=UTF-8&amp;ie=UTF-8&amp;ud=1&amp;exclude_apps=1&amp;site=default_collection">EdStart</a></li>
+			<li style="display:none;"><a target="" href="http://search.uow.edu.au/search?q=key+dates&amp;btnG.x=0&amp;btnG.y=0&amp;btnG=Search&amp;proxystylesheet=default_frontend&amp;output=xml_no_dtd&amp;client=default_frontend&amp;sort=date%3AD%3AL%3Ad1&amp;oe=UTF-8&amp;ie=UTF-8&amp;ud=1&amp;exclude_apps=1&amp;site=default_collection">Key Dates</a></li>
+			<li style="display:none;"><a target="" href="http://search.uow.edu.au/search?q=URAC&amp;btnG.x=0&amp;btnG.y=0&amp;btnG=Search&amp;proxystylesheet=default_frontend&amp;output=xml_no_dtd&amp;client=default_frontend&amp;sort=date%3AD%3AL%3Ad1&amp;oe=UTF-8&amp;ie=UTF-8&amp;ud=1&amp;exclude_apps=1&amp;site=default_collection">URAC</a></li>
+			<li style="display:none;"><a target="" href="http://search.uow.edu.au/search?q=exam&amp;search_button=Search&amp;site=default_collection&amp;proxystylesheet=default_frontend&amp;output=xml_no_dtd&amp;client=default_frontend">exam</a></li>
+			<li style="display:none;"><a target="" href="http://search.uow.edu.au/search?q=ielts&amp;proxystylesheet=default_frontend&amp;output=xml_no_dtd&amp;client=default_frontend&amp;sort=date%3AD%3AL%3Ad1&amp;oe=UTF-8&amp;ie=UTF-8&amp;ud=1&amp;exclude_apps=1&amp;site=default_collection">IELTS</a></li>
+			<li style="display:none;"><a target="" href="http://search.uow.edu.au/search?q=engineering&amp;proxystylesheet=default_frontend&amp;output=xml_no_dtd&amp;client=default_frontend&amp;sort=date%3AD%3AL%3Ad1&amp;oe=UTF-8&amp;ie=UTF-8&amp;ud=1&amp;exclude_apps=1&amp;site=default_collection">Engineering</a></li>
+			<li style="display:none;"><a target="" href="http://search.uow.edu.au/search?q=Student+Central&amp;proxystylesheet=default_frontend&amp;output=xml_no_dtd&amp;client=default_frontend&amp;sort=date%3AD%3AL%3Ad1&amp;oe=UTF-8&amp;ie=UTF-8&amp;ud=1&amp;exclude_apps=1&amp;site=default_collection">Student Central</a></li>
+			<li style="display:none;"><a target="" href="http://search.uow.edu.au/search?q=janison&amp;proxystylesheet=default_frontend&amp;output=xml_no_dtd&amp;client=default_frontend&amp;sort=date%3AD%3AL%3Ad1&amp;oe=UTF-8&amp;ie=UTF-8&amp;ud=1&amp;exclude_apps=1&amp;site=default_collection&amp;btnG.x=51&amp;btnG.y=23">Janison</a></li>
+			<li style="display:none;"><a target="" href="http://search.uow.edu.au/search?q=education&amp;proxystylesheet=default_frontend&amp;output=xml_no_dtd&amp;client=default_frontend&amp;sort=date%3AD%3AL%3Ad1&amp;oe=UTF-8&amp;ie=UTF-8&amp;ud=1&amp;exclude_apps=1&amp;site=default_collection">Education</a></li>
+			<li style="display:none;"><a target="" href="http://search.uow.edu.au/search?q=graduation&amp;proxystylesheet=default_frontend&amp;output=xml_no_dtd&amp;client=default_frontend&amp;sort=date%3AD%3AL%3Ad1&amp;oe=UTF-8&amp;ie=UTF-8&amp;ud=1&amp;exclude_apps=1&amp;site=default_collection">Graduation</a></li>
+			<li style="display:none;"><a target="" href="http://search.uow.edu.au/search?q=psychology&amp;proxystylesheet=default_frontend&amp;output=xml_no_dtd&amp;client=default_frontend&amp;sort=date%3AD%3AL%3Ad1&amp;oe=UTF-8&amp;ie=UTF-8&amp;ud=1&amp;exclude_apps=1&amp;site=default_collection">Psychology</a></li>
+			<li style="display:none;"><a target="" href="http://search.uow.edu.au/search?q=arts&amp;proxystylesheet=default_frontend&amp;output=xml_no_dtd&amp;client=default_frontend&amp;sort=date%3AD%3AL%3Ad1&amp;oe=UTF-8&amp;ie=UTF-8&amp;ud=1&amp;exclude_apps=1&amp;site=default_collection">Arts</a></li>
+			<li style="display:none;"><a target="" href="http://search.uow.edu.au/search?q=summer+session+&amp;proxystylesheet=default_frontend&amp;output=xml_no_dtd&amp;client=default_frontend&amp;sort=date%3AD%3AL%3Ad1&amp;oe=UTF-8&amp;ie=UTF-8&amp;ud=1&amp;exclude_apps=1&amp;site=default_collection">Summer Session</a></li>
+			<li style="display:none;"><a href="http://search.uow.edu.au/search?q=wifi&amp;site=default_collection&amp;proxystylesheet=default_frontend&amp;output=xml_no_dtd&amp;client=default_frontend" target="">wifi</a></li>
+			<li style="display:none;"><a target="" href="http://search.uow.edu.au/search?q=staff+directory&amp;proxystylesheet=default_frontend&amp;output=xml_no_dtd&amp;client=default_frontend&amp;sort=date%3AD%3AL%3Ad1&amp;oe=UTF-8&amp;ie=UTF-8&amp;ud=1&amp;exclude_apps=1&amp;site=default_collection">Staff Directory</a></li>
+			<li style="display:none;"><a target="" href="http://search.uow.edu.au/search?q=scholarships&amp;proxystylesheet=default_frontend&amp;output=xml_no_dtd&amp;client=default_frontend&amp;sort=date%3AD%3AL%3Ad1&amp;oe=UTF-8&amp;ie=UTF-8&amp;ud=1&amp;exclude_apps=1&amp;site=default_collection">Scholarships</a></li>
+			<li style="display:none;"><a target="" href="http://search.uow.edu.au/search?q=unicentre&amp;proxystylesheet=default_frontend&amp;output=xml_no_dtd&amp;client=default_frontend&amp;sort=date%3AD%3AL%3Ad1&amp;oe=UTF-8&amp;ie=UTF-8&amp;ud=1&amp;exclude_apps=1&amp;site=default_collection">UniCentre</a></li>
+			<li style="display:none;"><a target="" href="http://search.uow.edu.au/search?q=careers&amp;proxystylesheet=default_frontend&amp;output=xml_no_dtd&amp;client=default_frontend&amp;sort=date%3AD%3AL%3Ad1&amp;oe=UTF-8&amp;ie=UTF-8&amp;ud=1&amp;exclude_apps=1&amp;site=default_collection">Careers</a></li>
+			<li style="display:none;"><a target="" href="http://search.uow.edu.au/search?q=subject+timetable&amp;proxystylesheet=default_frontend&amp;output=xml_no_dtd&amp;client=default_frontend&amp;sort=date%3AD%3AL%3Ad1&amp;oe=UTF-8&amp;ie=UTF-8&amp;ud=1&amp;exclude_apps=1&amp;site=default_collection">Subject Timetable</a></li>
+			<li style="display:none;"><a target="" href="http://search.uow.edu.au/search?q=law&amp;proxystylesheet=default_frontend&amp;output=xml_no_dtd&amp;client=default_frontend&amp;sort=date%3AD%3AL%3Ad1&amp;oe=UTF-8&amp;ie=UTF-8&amp;ud=1&amp;exclude_apps=1&amp;site=default_collection">Law</a></li>
+			<li style="display:none;"><a target="" href="http://search.uow.edu.au/search?q=career&amp;proxystylesheet=default_frontend&amp;output=xml_no_dtd&amp;client=default_frontend&amp;sort=date%3AD%3AL%3Ad1&amp;oe=UTF-8&amp;ie=UTF-8&amp;ud=1&amp;exclude_apps=1&amp;site=default_collection">Career</a></li>
+			<li style="display:none;"><a target="" href="http://search.uow.edu.au/search?q=jobs&amp;proxystylesheet=default_frontend&amp;output=xml_no_dtd&amp;client=default_frontend&amp;sort=date%3AD%3AL%3Ad1&amp;oe=UTF-8&amp;ie=UTF-8&amp;ud=1&amp;exclude_apps=1&amp;site=default_collection">Jobs</a></li>
+			<li style="display:none;"><a target="" href="http://search.uow.edu.au/search?q=fees&amp;proxystylesheet=default_frontend&amp;output=xml_no_dtd&amp;client=default_frontend&amp;sort=date%3AD%3AL%3Ad1&amp;oe=UTF-8&amp;ie=UTF-8&amp;ud=1&amp;exclude_apps=1&amp;site=default_collection">Fees</a></li>
+			<li style="display:none;"><a target="" href="http://search.uow.edu.au/search?q=fees&amp;proxystylesheet=default_frontend&amp;output=xml_no_dtd&amp;client=default_frontend&amp;sort=date%3AD%3AL%3Ad1&amp;oe=UTF-8&amp;ie=UTF-8&amp;ud=1&amp;exclude_apps=1&amp;site=default_collection">Staffmail</a></li>
+			<li style="display:none;"><a target="" href="http://search.uow.edu.au/search?q=email&amp;proxystylesheet=default_frontend&amp;output=xml_no_dtd&amp;client=default_frontend&amp;sort=date%3AD%3AL%3Ad1&amp;oe=UTF-8&amp;ie=UTF-8&amp;ud=1&amp;exclude_apps=1&amp;site=default_collection">UOWmail</a></li>
+			<li style="display:none;"><a target="" href="http://search.uow.edu.au/search?q=border+authentication&amp;proxystylesheet=default_frontend&amp;output=xml_no_dtd&amp;client=default_frontend&amp;sort=date%3AD%3AL%3Ad1&amp;oe=UTF-8&amp;ie=UTF-8&amp;ud=1&amp;exclude_apps=1&amp;site=default_collection">Border Authentication</a></li>
+			<li style="display:none;"><a target="" href="http://search.uow.edu.au/search?q=web+kiosk&amp;proxystylesheet=default_frontend&amp;output=xml_no_dtd&amp;client=default_frontend&amp;sort=date%3AD%3AL%3Ad1&amp;oe=UTF-8&amp;ie=UTF-8&amp;ud=1&amp;exclude_apps=1&amp;site=default_collection">Web Kiosk</a></li>
+			<li style="display:none;"><a target="" href="http://search.uow.edu.au/search?q=quota&amp;proxystylesheet=default_frontend&amp;output=xml_no_dtd&amp;client=default_frontend&amp;sort=date%3AD%3AL%3Ad1&amp;oe=UTF-8&amp;ie=UTF-8&amp;ud=1&amp;exclude_apps=1&amp;site=default_collection">Quota</a></li>
+			<li style="display:none;"><a target="" href="http://search.uow.edu.au/search?q=college&amp;proxystylesheet=default_frontend&amp;output=xml_no_dtd&amp;client=default_frontend&amp;sort=date%3AD%3AL%3Ad1&amp;oe=UTF-8&amp;ie=UTF-8&amp;ud=1&amp;exclude_apps=1&amp;site=default_collection">College</a></li>
+			<li style="display:none;"><a target="" href="http://search.uow.edu.au/search?q=mail&amp;proxystylesheet=default_frontend&amp;output=xml_no_dtd&amp;client=default_frontend&amp;sort=date%3AD%3AL%3Ad1&amp;oe=UTF-8&amp;ie=UTF-8&amp;ud=1&amp;exclude_apps=1&amp;site=default_collection">Mail</a></li>
+			<li style="display:none;"><a target="" href="http://search.uow.edu.au/search?q=email&amp;proxystylesheet=default_frontend&amp;output=xml_no_dtd&amp;client=default_frontend&amp;sort=date%3AD%3AL%3Ad1&amp;oe=UTF-8&amp;ie=UTF-8&amp;ud=1&amp;exclude_apps=1&amp;site=default_collection">Email</a></li>
+			<li style="display:none;"><a target="" href="http://search.uow.edu.au/search?q=exchange&amp;proxystylesheet=default_frontend&amp;output=xml_no_dtd&amp;client=default_frontend&amp;sort=date%3AD%3AL%3Ad1&amp;oe=UTF-8&amp;ie=UTF-8&amp;ud=1&amp;exclude_apps=1&amp;site=default_collection">Exchange</a></li>
+			<li style="display:none;"><a target="" href="http://search.uow.edu.au/search?q=enrolment&amp;proxystylesheet=default_frontend&amp;output=xml_no_dtd&amp;client=default_frontend&amp;sort=date%3AD%3AL%3Ad1&amp;oe=UTF-8&amp;ie=UTF-8&amp;ud=1&amp;exclude_apps=1&amp;site=default_collection">Enrolment</a></li>
+			<li style="display:none;"><a target="" href="http://search.uow.edu.au/search?q=uniadvice&amp;proxystylesheet=default_frontend&amp;output=xml_no_dtd&amp;client=default_frontend&amp;sort=date%3AD%3AL%3Ad1&amp;oe=UTF-8&amp;ie=UTF-8&amp;ud=1&amp;exclude_apps=1&amp;site=default_collection">UniAdvice</a></li>
+			<li style="display:none;"><a target="" href="http://search.uow.edu.au/search?q=creative+arts&amp;proxystylesheet=default_frontend&amp;output=xml_no_dtd&amp;client=default_frontend&amp;sort=date%3AD%3AL%3Ad1&amp;oe=UTF-8&amp;ie=UTF-8&amp;ud=1&amp;exclude_apps=1&amp;site=default_collection">Creative Arts</a></li>
+			<li style="display:none;"><a target="" href="http://search.uow.edu.au/search?q=general+schedule&amp;proxystylesheet=default_frontend&amp;output=xml_no_dtd&amp;client=default_frontend&amp;sort=date%3AD%3AL%3Ad1&amp;oe=UTF-8&amp;ie=UTF-8&amp;ud=1&amp;exclude_apps=1&amp;site=default_collection">General Schedule</a></li>
+			<li style="display:none;"><a target="" href="http://search.uow.edu.au/search?q=careers+central+&amp;proxystylesheet=default_frontend&amp;output=xml_no_dtd&amp;client=default_frontend&amp;sort=date%3AD%3AL%3Ad1&amp;oe=UTF-8&amp;ie=UTF-8&amp;ud=1&amp;exclude_apps=1&amp;site=default_collection">Careers Central</a></li>
+			<li style="display:none;"><a target="" href="http://search.uow.edu.au/search?q=change+password&amp;proxystylesheet=default_frontend&amp;output=xml_no_dtd&amp;client=default_frontend&amp;sort=date%3AD%3AL%3Ad1&amp;oe=UTF-8&amp;ie=UTF-8&amp;ud=1&amp;exclude_apps=1&amp;site=default_collection">Change Password</a></li>
+			<li style="display:none;"><a target="" href="http://search.uow.edu.au/search?q=session+dates&amp;proxystylesheet=default_frontend&amp;output=xml_no_dtd&amp;client=default_frontend&amp;sort=date%3AD%3AL%3Ad1&amp;oe=UTF-8&amp;ie=UTF-8&amp;ud=1&amp;exclude_apps=1&amp;site=default_collection">Session Dates</a></li>
+			<li style="display:none;"><a target="" href="http://search.uow.edu.au/search?q=bonus+points&amp;proxystylesheet=default_frontend&amp;output=xml_no_dtd&amp;client=default_frontend&amp;sort=date%3AD%3AL%3Ad1&amp;oe=UTF-8&amp;ie=UTF-8&amp;ud=1&amp;exclude_apps=1&amp;site=default_collection">Bonus Points</a></li>
+			<li style="display:none;"><a target="" href="http://search.uow.edu.au/search?q=unimovies&amp;proxystylesheet=default_frontend&amp;output=xml_no_dtd&amp;client=default_frontend&amp;sort=date%3AD%3AL%3Ad1&amp;oe=UTF-8&amp;ie=UTF-8&amp;ud=1&amp;exclude_apps=1&amp;site=default_collection">UniMovies</a></li>
+		</ul></td>
+	
+  </tr>
+</table>
+</div>
+    </div>
+    <div class='submenu grid_24'>
+      <span id="connect-header" class="left">Connect: UOW a world of opportunity</span>
+      <ul class="right">
+        <li class="alpha"><a class="menu" href="/about/index.html"><img src="/content/groups/webasset/@web/documents/siteelement/about_uow_menu.png" alt="About UOW"></a>
+          	
+<ul>
+<li><a onClick="javascript: pageTracker._trackPageview('internal-links/about-menu/abouthome');" href="/about/index.html">About UOW Home</a></li>
+<li><a onClick="javascript: pageTracker._trackPageview('internal-links/about-menu/library');" href="http://www.library.uow.edu.au/index.html?ssSourceSiteId=UOW_Main">Library</a></li>
+<li><a onClick="javascript: pageTracker._trackPageview('internal-links/about-menu/getting-to-uow');" href="/transport/index.html">Getting to UOW</a></li>
+<li><a onClick="javascript: pageTracker._trackPageview('internal-links/about-menu/campuses');" href="/about/campuses/index.html">Campuses</a></li>
+<li><a onClick="javascript: pageTracker._trackPageview('internal-links/about-menu/learning-teaching');" href="/about/teaching/index.html">Learning &amp; Teaching</a></li>
+<li><a onClick="javascript: pageTracker._trackPageview('internal-links/about-menu/accommodation');" href="/about/accommodation/index.html">Accommodation</a></li>
+<li><a onClick="javascript: pageTracker._trackPageview('internal-links/about-menu/policy-directory');" href="/about/policy/index.html">Policy Directory</a></li>
+<li><a onClick="javascript: pageTracker._trackPageview('internal-links/about-menu/environment');" href="/about/environment/index.html">Environment</a></li>
+</ul>
+
+
+        </li>
+        <li><a class="menu" href="/about/faculties/index.html"><img src="/content/groups/webasset/@web/documents/siteelement/faculties_menu.png" alt="Faculties"></a>
+          
+          	
+<ul>
+<li><a href="/arts/index.html" onClick="javascript: pageTracker._trackPageview('internal-links/faculties-menu/arts');">Faculty of Arts</a></li>
+<li><a href="/commerce/index.html" onClick="javascript: pageTracker._trackPageview('internal-links/faculties-menu/commerce');">Faculty of Commerce</a></li>
+<li><a href="/crearts/index.html" onClick="javascript: pageTracker._trackPageview('internal-links/faculties-menu/creative-arts');">Faculty of Creative Arts</a></li>
+<li><a href="/educ/index.html" onClick="javascript: pageTracker._trackPageview('internal-links/faculties-menu/education');">Faculty of Education</a></li>
+<li><a onClick="javascript: pageTracker._trackPageview('internal-links/faculties-menu/engineering');" href="/eng/index.html">Faculty of Engineering</a></li>
+<li><a onClick="javascript: pageTracker._trackPageview('internal-links/faculties-menu/hbs');" href="/health/index.html">Faculty of Health&nbsp;&amp; Behavioural Sciences</a></li>
+<li><a href="/informatics/index.html" onClick="javascript: pageTracker._trackPageview('internal-links/faculties-menu/informatics');">Faculty of Informatics</a></li>
+<li><a href="/law/index.html" onClick="javascript: pageTracker._trackPageview('internal-links/faculties-menu/law');">Faculty of Law</a></li>
+<li><a href="/science/index.html" onClick="javascript: pageTracker._trackPageview('internal-links/faculties-menu/science');">Faculty of Science</a></li>
+<li><a href="/gsm/index.html" onClick="javascript: pageTracker._trackPageview('internal-links/faculties-menu/gsm');">Graduate School of Medicine</a></li>
+<li><a onClick="javascript: pageTracker._trackPageview('internal-links/faculties-menu/ihmri');" href="http://ihmri.uow.edu.au/index.html?ssSourceSiteId=UOW_Main">IHMRI</a></li>
+<li><a href="http://smart.uow.edu.au/index.html?ssSourceSiteId=UOW_Main" onClick="javascript: pageTracker._trackPageview('internal-links/faculties-menu/smart');">SMART Infrastructure Facility</a></li>
+<li><a onClick="javascript: pageTracker._trackPageview('internal-links/faculties-menu/sbs');" href="/business/index.html">Sydney Business School</a></li>
+</ul>
+
+
+        </li>
+        <li class="omega"><a href="/services/index.html"><img src="/content/groups/webasset/@web/documents/siteelement/services_facilities_menu.png" alt="Services &amp; Facilities"></a></li>
+      </ul>
+    </div>
+  </div>
+<div id="content-box" class="clearfix container_24">
+    <div id="content" class="clearfix grid_24">
+    	<div id="breadcrumb"><!-- SS_BEGIN_SNIPPET(fragment3,breadcrumb)--><a href="/index.html">Home</a>
+> Faculty of Health & Behavioural Sciences
+			<!-- SS_END_SNIPPET(fragment3,breadcrumb)--></div>
+    <div id="page-title">Faculty of Health & Behavioural Sciences</div>
+      <div id="column-left" class="grid_5 alpha">
+        <div id="column-left-top"><!-- SS_BEGIN_SNIPPET(fragment6,navigation)-->
+	
+		
+														
+				
+				<h4 style="cursor:pointer;" onClick="$(this).toggleClass('open');$(this).next().toggle();">About the Faculty</h4>
+	      			<div id="category1" style="display:none;"><noscript></div><div id="category1"></noscript>
+	        		<ul class="navLinks">
+				<li><a href="/health/about/index.html" target="_self">About Our Staff</a>
+					
+			</li>
+		
+				<li><a href="/health/contact_details/index.html" target="_self">Contact Details</a>
+					
+			</li>
+		
+				<li><a href="/health/archives/index.html" target="_self">Archives</a>
+					
+			</li>
+		
+				</ul></div>
+				<h4 style="cursor:pointer;" onClick="$(this).toggleClass('open');$(this).next().toggle();">Academic Schools</h4>
+	      			<div id="category2" style="display:none;"><noscript></div><div id="category2"></noscript>
+	        		<ul class="navLinks">
+				<li><a href="/health/healthsciences/index.html" target="_self">School of Health Sciences</a>
+					
+			</li>
+		
+				<li><a href="/health/nursing/index.html" target="_self">School of Nursing, Midwifery & Indigenous Health</a>
+					
+			</li>
+		
+				<li><a href="/health/psyc/index.html" target="_self">School of Psychology</a>
+					
+			</li>
+		
+				</ul></div>
+				<h4 style="cursor:pointer;" onClick="$(this).toggleClass('open');$(this).next().toggle();">Research</h4>
+	      			<div id="category3" style="display:none;"><noscript></div><div id="category3"></noscript>
+	        		<ul class="navLinks">
+				<li><a href="/health/research-overview/index.html" target="_self">Research Overview</a>
+					
+			</li>
+		
+				<li><a href="/health/news/index.html" target="_self">News</a>
+					
+			</li>
+		
+				<li><a href="/health/grants-awards/index.html" target="_self">Grants & Awards</a>
+					
+			</li>
+		
+				<li><a href="/health/staffresources/index.html" target="_self">Staff Profiles</a>
+					
+			</li>
+		
+				<li><a href="/health/researchunits/index.html" target="_self">Research Units</a>
+					
+			</li>
+		
+				<li><a href="https://misprd.uow.edu.au/ris_public/WebObjects/RISPublic.woa/wa/Publications/publications?group=49" target="_self">Searchable Publications List</a>
+					
+			</li>
+		
+				</ul></div>
+				<h4 style="cursor:pointer;" onClick="$(this).toggleClass('open');$(this).next().toggle();">Information for Students</h4>
+	      			<div id="category4" style="display:none;"><noscript></div><div id="category4"></noscript>
+	        		<ul class="navLinks">
+				<li><a href="/health/hbs_central/index.html" target="_self">HBS Central</a>
+					
+			</li>
+		
+				<li><a href="/health/graduatequalities/index.html" target="_self">Graduate Qualities</a>
+					
+			</li>
+		
+				<li><a href="/health/sharp/index.html" target="_self">Student Health Alliance for Rural Populations (SHARP)</a>
+					
+			</li>
+		
+				<li><a href="http://www.uow.edu.au/handbook/yr2012/ug/hbs/index.html" target="_self">Undergraduate Courses</a>
+					
+			</li>
+		
+				<li><a href="/health/honours/index.html" target="_self">Honours</a>
+					
+			</li>
+		
+				<li><a href="http://www.uow.edu.au/handbook/yr2012/pg/hbs/index.html" target="_self">Postgraduate Courses</a>
+					
+			</li>
+		
+				<li><a href="/health/pgradresearch/index.html" target="_self">Postgraduate Research</a>
+					
+			</li>
+		
+				<li><a href="/health/PoliciesandProcedures/index.html" target="_self">Policies and Guidelines</a>
+					
+			</li>
+		
+				</ul></div>
+				<h4 style="cursor:pointer;" onClick="$(this).toggleClass('open');$(this).next().toggle();">Services & Support</h4>
+	      			<div id="category5" style="display:none;"><noscript></div><div id="category5"></noscript>
+	        		<ul class="navLinks">
+				<li><a href="/health/safehands/index.html" target="_self">SafeHandS</a>
+					
+			</li>
+		
+				<li><a href="/health/resrchteachinglabsintlnk/index.html" target="_self">Clinical Centres & Laboratories</a>
+					
+			</li>
+		
+				</ul></div>
+				<h4 style="cursor:pointer;" onClick="$(this).toggleClass('open');$(this).next().toggle();">Information for Staff</h4>
+	      			<div id="category6" style="display:none;"><noscript></div><div id="category6"></noscript>
+	        		<ul class="navLinks">
+				<li><a href="/health/finance-forms/index.html" target="_self">Finance and Forms</a>
+					
+			</li>
+		
+				<li><a href="/health/ITSupport/index.html" target="_self">IT and Technical Support</a>
+					
+			</li>
+		
+				<li><a href="https://intranet.uow.edu.au/hbs/index.html" target="_self">Information for Staff</a>
+					
+			</li>
+		<script type="text/javascript">
+			$(document).ready(function(){
+				$("#category1").toggle().prev().toggleClass('open');
+			});
+		</script>
+	</ul></div>
+
+			<!-- SS_END_SNIPPET(fragment6,navigation)--></div>
+        <div id="column-left-btm"><!-- SS_BEGIN_OPENREGIONMARKER(region2)-->
+
+<!-- SS_END_OPENREGIONMARKER(region2)-->
+        <!-- SS_BEGIN_SNIPPET(fragment9,contrib_r2_quicklinks)-->			<!-- SS_END_SNIPPET(fragment9,contrib_r2_quicklinks)-->
+        <!-- SS_BEGIN_SNIPPET(region2_element1,quick_links)-->	<h6 id="h6-related">Related Links</h6>
+	<ul id="related-links">
+	<li><a href="ssNODELINK/126">About the University</a></li>
+	<li><a href="ssNODELINK/86">Research</a></li>
+	<li><a href="http://www-library.uow.edu.au/">Library</a></li>
+	<li><a href="ssNODELINK/2">IT Services</a></li>
+	<li><a href="http://webevents.uow.edu.au/">Events Calendar</a></li>
+	<li><a href="ssNODELINK/1086">eLearning@UOW</a></li>
+	<li><a href="http://www.uow.edu.au/student/">SOLS</a></li>
+	</ul>
+			<!-- SS_END_SNIPPET(region2_element1,quick_links)-->
+        <!-- SS_BEGIN_CLOSEREGIONMARKER(region2)--><!-- SS_END_CLOSEREGIONMARKER(region2)--></div>
+      </div>
+      <div id="column-main" class="grid_14"><!-- SS_BEGIN_SNIPPET(fragment9,contrib_r1_content)-->			<!-- SS_END_SNIPPET(fragment9,contrib_r1_content)-->
+      <!--SS_BEGIN_OPENREGIONMARKER(region1)-->
+
+<!--SS_END_OPENREGIONMARKER(region1)-->
+      <!-- SS_BEGIN_SNIPPET(region1_element3,banner_item)-->        <div id="subsite-banner" class="grid_14 alpha omega">
+          <div id="row1" class="grid_14 alpha omega" style="background:url(/content/groups/webasset/@web/@health/documents/siteelement/uow063602.jpg) center 0 no-repeat;">
+            <div id="row2" class="grid_14 alpha omega">
+              <h2>Health &#38; Behavioural Sciences</h2>
+            </div>
+            <div id="row3" class="grid_14 alpha omega">
+              <p>The Faculty of Health &#38; Behavioural Sciences includes three Schools, each of which offers a range of undergraduate and postgraduate programs. The Faculty also supports a variety of research areas.</p>
+            </div>
+          </div>
+        </div>
+			<!-- SS_END_SNIPPET(region1_element3,banner_item)-->
+      <!--SS_BEGIN_ELEMENT(region1_element2)--><h1>Welcome</h1><!--SS_END_ELEMENT(region1_element2)-->
+      <!--SS_BEGIN_ELEMENT(region1_element1)--><p>The&#160;Faculty of Health and Behavioural Sciences is comprised of&#160;three Schools, School of Health Sciences; School of Nursing, Midwifery and Indigenous Health; and School of Psychology. Each of these schools offers a range of undergraduate and postgraduate programs designed to meet the needs of a diverse student population. The Faculty employs modern technology and best practice teaching methods essential to the development of quality education.</p><!--SS_END_ELEMENT(region1_element1)-->
+      <!--SS_BEGIN_CLOSEREGIONMARKER(region1)--><!--SS_END_CLOSEREGIONMARKER(region1)-->
+      <!-- SS_BEGIN_OPENREGIONMARKER(region4)-->
+
+<!-- SS_END_OPENREGIONMARKER(region4)-->
+      <!-- SS_BEGIN_SNIPPET(fragment9,contrib_r4_feature)-->			<!-- SS_END_SNIPPET(fragment9,contrib_r4_feature)-->
+      <!-- SS_BEGIN_SNIPPET(region4_element1,featured_content)-->	<div id="column-main-left" class="grid_7 alpha">
+		<div class="content-box">
+			<h4>Grant Successes</h4>
+			<div class="content-box-bg"><p style="text-align: center"><strong>NHMRC Successes</strong></p><p style="text-align: center">Congratulations to Associate Professor Chao Deng (CIA) and Professor Xu-Feng Huang (CIB) who were successful in obtaining a large NHMRC &nbsp;grant for their project titled &nbsp;&quot;Roles of muscarinic M3 receptors in antipsychoticinduced metabolic side-effects: prevention and&nbsp;treatment of antipsychotic-induced insulin dysregulation&quot;.&nbsp;&nbsp;</p><p style="text-align: center">Congratulations&nbsp;also&nbsp;to Dr Deborah Apthorp, School of Psychology, who has been awarded an NHMRC Australian Clinical Fellowship to work (with Rodney Croft) on the project &quot;Effects of electromagnetic radiation on visual processing.</p><hr /><p style="text-align: center"><a target="_blank" href="http://media.uow.edu.au/news/UOW134015.html "><img alt="Community Engagement Grants" src="/content/groups/public/@web/@health/documents/mm/uow134247.jpg" /></a></p></div>
+		</div>
+		<div class="content-box">
+			<h4>Short Courses and Resources</h4>
+			<div class="content-box-bg"><p style=" text-align: center;"><img src="/content/groups/public/@web/@health/@dementia/documents/mm/uow106076.jpg" border="0" alt="Dementia small logo + Aus Govt logo" /><br />
+<a href="ssNODELINK/9267" target="_blank">Dementia Education Online</a></p></div>
+		</div>
+	</div>
+		<div id="column-main-right" class="grid_7 omega">
+		<div class="content-box">
+		<h4>News and Media</h4>
+		<div class="content-box-bg"><p style="text-align: center"><a target="_blank" href="http://media.uow.edu.au/news/UOW134193.html?ssSourceSiteId=UOW_Main"><img alt="Karen Charlton Media " src="/content/groups/public/@web/@health/documents/mm/uow134243.jpg" /></a></p><p style="text-align: center"><a target="_blank" href="http://media.uow.edu.au/news/UOW133634.html"><img alt="GPs help address malnutrition" src="/content/groups/public/@web/@health/documents/mm/uow133692.jpg" /></a></p><p style="text-align: center"><a target="_blank" href="http://media.uow.edu.au/news/UOW133298.html?ssSourceSiteId=UOW_Main"><img alt="Aged Care Teaching Announcement" src="/content/groups/public/@web/@health/documents/mm/uow133300.jpg" /></a></p></div>
+		</div>
+		</div>
+			<!-- SS_END_SNIPPET(region4_element1,featured_content)-->  
+      </div>
+      <div id="column-right" class="grid_5 omega">
+      <!-- SS_BEGIN_SNIPPET(region4_element2,promo_content)-->	<div id="column-right-top">
+	<div class="promo-content">
+		<div class="promo-content-bg"><p><a target="_blank" href="ssLINK/UOW049666"><img alt="Scholarships &amp; Grants" src="/content/groups/public/@web/@health/documents/mm/uow134023.jpg" /></a></p><p><a target="_blank" href="ssLINK/UOW110828"><img alt="FAQs" src="/content/groups/public/@web/@health/documents/mm/uow134022.jpg" /></a></p><p><a target="_blank" href="ssLINK/UOW103967"><img alt="Conferences &amp; Seminars" src="/content/groups/public/@web/@health/documents/mm/uow133702.jpg" /></a></p><p><a target="_blank" href="ssLINK/UOW058846"><img alt="Photo Gallery" src="/content/groups/public/@web/@health/documents/mm/uow134024.jpg" /></a></p><p><a target="_blank" href="ssNODELINK/7529"><img alt="Be Safe @ UOW" src="/content/groups/public/@web/@health/documents/mm/uow134025.jpg" /></a></p></div>
+	</div>
+	<div class="promo-content">
+		<h4 class="promo-header">Need Help?</h4>
+		<div class="promo-content-bg"><p><a href="ssLINK/UOW024548"><strong>HBS Central</strong></a> is the first point of contact for all students seeking information regarding the Faculty of Health &amp; Behavioural Sciences.<br />Monday-Friday 9am-5pm<br />E: <a href="mailto:hbs_central@uow.edu.au">hbs_central@uow.edu.au<br /></a>P: +61 2 4221 3492</p></div>
+	</div>
+	<div class="promo-content">
+		<h4 class="promo-header">Noticeboard</h4>
+		<div class="promo-content-bg"><p><a target="_blank" href="http://www.uow.edu.au/student/feedback/index.html"><img alt="Feedback@UOW logo CS" style="border-bottom: 0px; border-left: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; border-top: 0px; border-right: 0px; padding-top: 0px" src="/content/groups/public/@web/@studentcentral/documents/mm/uow069177.gif" /></a></p></div>
+	</div>
+	</div>
+			<!-- SS_END_SNIPPET(region4_element2,promo_content)-->
+       <!-- SS_BEGIN_SNIPPET(region4_element3,featured_content_rgt)-->			<!-- SS_END_SNIPPET(region4_element3,featured_content_rgt)-->
+      	<!-- SS_BEGIN_CLOSEREGIONMARKER(region4)--><!-- SS_END_CLOSEREGIONMARKER(region4)-->
+	  </div>
+    </div>
+  </div>
+<div id="footer" class="container_24 clearfix">
+		<div class="grid_6"> 
+			<img src="/content/groups/webasset/@web/documents/siteelement/uow_footer_heading.png" alt="University of Wollongong">
+			<div class="address">
+				<p>Wollongong NSW 2522<br>
+					Australia</p>
+				<p>Phone: 1300 367 869<br>
+					International: +61 2 4221 3218<br>
+					Switchboard: +61 2 4221 3555</p>
+				<a href="http://www.uow.edu.au/about/contacts/ask/" id="ask_question_btn" class="black_btn"><img src="/content/groups/webasset/@web/documents/siteelement/ask_a_question.png" alt="Ask a question"></a>
+			</div>
+		</div>
+		<div class="grid_6">
+			<img src="/content/groups/webasset/@web/documents/siteelement/links_footer_heading.gif" alt="links">
+    			
+<ul>
+<li><a onClick="javascript: pageTracker._trackPageview('internal-links/footer/timetables');" href="/student/timetables/index.html">Timetables</a></li>
+<li><a onClick="javascript: pageTracker._trackPageview('internal-links/footer/course-handbook');" href="/handbook/index.html">Course Handbook</a></li>
+<li><a onClick="javascript: pageTracker._trackPageview('internal-links/footer/session-dates');" href="/student/dates/index.html">Session Dates</a></li>
+<li><a onClick="javascript: pageTracker._trackPageview('internal-links/footer/student-it-support');" href="/student/it/index.html">Student IT Support</a></li>
+<li><a onClick="javascript: pageTracker._trackPageview('internal-links/footer/campus-map');" href="/about/campusmap/index.html">Campus Map</a></li>
+<li><a onClick="javascript: pageTracker._trackPageview('internal-links/footer/enrolment');" href="/student/exams/index.html">Exams</a></li>
+<li><a onClick="javascript: pageTracker._trackPageview('internal-links/footer/unishop');" href="http://unishop.uow.edu.au/">UniShop</a></li>
+<li><a onClick="javascript: pageTracker._trackPageview('internal-links/footer/orientation');" href="/student/graduation/index.html">Graduation</a></li>
+</ul>
+
+
+		</div>
+		<div class="grid_6">
+			<img src="/content/groups/webasset/@web/documents/siteelement/services_footer_heading.gif" alt="Services">
+    			
+<ul>
+<li><a onClick="javascript: pageTracker._trackPageview('internal-links/footer/library');" href="http://www.library.uow.edu.au/index.html?ssSourceSiteId=UOW_Main">Library</a></li>
+<li><a onClick="javascript: pageTracker._trackPageview('internal-links/footer/employment');" href="http://employment.uow.edu.au/index.html?ssSourceSiteId=UOW_Main">Employment at UOW</a></li>
+<li><a onClick="javascript: pageTracker._trackPageview('internal-links/footer/its');" href="/its/index.html">Information Technology Services</a></li>
+<li><a onClick="javascript: pageTracker._trackPageview('internal-links/footer/security-and-safety');" href="/about/security/index.html">Security &amp; Safety</a></li>
+<li><a onClick="javascript: pageTracker._trackPageview('internal-links/footer/urac');" href="http://www.urac.com.au/">Recreation &amp; Aquatic</a></li>
+<li><a onClick="javascript: pageTracker._trackPageview('internal-links/footer/unicentre');" href="ssNODELINK/3207">UniCentre</a></li>
+<li><a href="http://www.itcltd.com.au/" onClick="javascript: pageTracker._trackPageview('internal-links/footer/itc');">ITC Limited</a></li>
+<li><a href="http://www.innovationcampus.com.au/" onClick="javascript: pageTracker._trackPageview('internal-links/footer/innovation-campus');">Innovation Campus</a></li>
+</ul>
+
+
+		</div>
+		<div class="grid_6">
+			<img src="/content/groups/webasset/@web/documents/siteelement/connect_social_footer_heading.png" alt="Connect:Social" >
+			<ul class="social">
+				<li><a href="http://now.uow.edu.au/connect/socialmedia/index.html?ssSourceSiteId=UOW_Main" onClick="javascript: pageTracker._trackPageview('internal-links/footer/connect-social');"><img src="/content/groups/webasset/@web/documents/siteelement/social_btn.png" alt="social media"></a></li>
+				<li><a href="/about/awards/index.html" onClick="javascript: pageTracker._trackPageview('internal-links/footer/awards-rankings');" class="black_btn" id="awards_rankings_btn"><img src="/content/groups/webasset/@web/documents/siteelement/awards_rankings_btn.png" alt="Awards and Rankings"></a></li>
+				<li><a href="http://now.uow.edu.au/index.html?ssSourceSiteId=UOW_Main" onClick="javascript: pageTracker._trackPageview('internal-links/footer/events');" class="black_btn" id="events_btn"><img src="/content/groups/webasset/@web/documents/siteelement/events_btn.png" alt="Events"></a></li>
+			</ul>
+		</div>
+		<div class="copyright container_24 left"> Copyright &copy; 2011 University of Wollongong. CRICOS Provider No: 00102E | <a href="/about/privacy/index.html">Privacy</a> | <a href="/about/disclaimer/index.html">Disclaimer &amp; Copyright Info</a> | <a href="http://www.uow.edu.au/about/brand/web/index.html">Website Information</a> | <a href="/sitemap/index.html">Site Map</a></div>
+</div> 
+<!-- SS_BEGIN_SNIPPET(fragment7,ssm_display)-->			<!-- SS_END_SNIPPET(fragment7,ssm_display)-->
+<!-- SS_BEGIN_SNIPPET(fragment5,google_analytics)--><script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-4147908-1");
+pageTracker._setDomainName("uow.edu.au");
+pageTracker._initData();
+pageTracker._trackPageview(); 
+</script>
+			<!--SS_END_SNIPPET(fragment5,google_analytics)-->
+</div>
+</body>
+</html>

@@ -1,0 +1,311 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><script type="text/javascript">
+   var _U = "undefined";
+   var g_HttpRelativeWebRoot = "/prod/";
+   var SSContributor = false;
+   var SSForceContributor = false;
+   var SSHideContributorUI = false;
+   var ssUrlPrefix = "../";
+   
+   var ssUrlType = "2";
+   
+   var g_navNode_Path = new Array();
+       g_navNode_Path[0] = '2514';
+       g_navNode_Path[1] = '15793';
+   var g_ssSourceNodeId = "15793";
+   var g_ssSourceSiteId = "OITWEB";
+</script>
+<script type="text/javascript" src="../prod/websites/OITWEB/sitenavigationfunctions.js" id="SSNavigationFunctionsScript"></script>
+<script type="text/javascript" src="../prod/websites/OITWEB/sitenavigation.js" id="SSNavigationScript"></script>
+
+<script type="text/javascript">
+	var g_strLanguageId = "en";
+</script>
+	<script type="text/javascript" src="../prod/resources/wcm/sitestudio/wcm.toggle.js"></script>
+	<script type="text/javascript" src="../prod/resources/sitestudio/ssajax/ssajax.js"></script>
+
+
+<meta name="date" content="2012-08-29" />
+<title>Campus Computer Labs</title>  
+<link rel="stylesheet" href="../prod/fragments/oit_common/lib/css/template.css" type="text/css" media="all" />
+<link rel="stylesheet" href="../prod/fragments/oit_common/lib/css/reset.css" type="text/css" media="all" />
+<link rel="stylesheet" href="../prod/fragments/oit_common/lib/css/text.css" type="text/css" media="all" />
+<link rel="stylesheet" href="../prod/fragments/oit_common/lib/css/optional.css" type="text/css" media="all" />
+<link rel="stylesheet" href="../prod/fragments/oit_common/lib/css/umart.css" type="text/css" media="all" />
+<link rel="stylesheet" href="../prod/fragments/oit_common/lib/css/print.css" type="text/css" media="print" />
+<link rel="stylesheet" href="../prod/fragments/oit_service_sites_css/service_sites.css" type="text/css" media="all" />
+<script type="text/javascript" src="http://oit.umn.edu/js/jquery.effects.core.js"></script> <!-- Added by Jordan Slominski (6-8-2012) -->
+  <script type="text/javascript" src="http://oit.umn.edu/js/jquery.ui.core.min.js"></script> <!-- Added by Jordan Slominski (6-8-2012) -->
+  <script type="text/javascript" src="http://oit.umn.edu/js/jquery.ui.widget.min.js"></script> <!-- Added by Jordan Slominski (6-8-2012) -->
+  <script type="text/javascript" src="http://oit.umn.edu/js/jquery.ui.accordion.min.js"></script> <!-- Added by Jordan Slominski (6-8-2012) -->
+  
+<!--SS_BEGIN_SNIPPET(region1_element2,head)-->
+				<script type="text/javascript" src="http://www.ihwy.com/labs/downloads/jquery-listnav/2.0/jquery.listnav.pack-2.0.js" charset="utf-8"></script>
+ 
+			<!--SS_END_SNIPPET(region1_element2,head)-->
+
+  <script type="text/javascript">
+  //<![CDATA[
+
+  jQuery(function ($) {
+    $("#filter").keyup(function () {
+        var filter = $(this).val(), count = 0;
+        $("#catalogList > li").each(function () {
+            if ($(this).text().search(new RegExp(filter, "i")) < 0) {
+                $(this).addClass("hidden");
+            } else {
+                $(this).removeClass("hidden");
+                count++;
+            }
+        });
+    });
+  });
+
+  $(document).ready(function() {
+    
+    $("ul#catalogList>li").tsort(".serviceTitle");
+
+    $('#catalogList').listnav({showCounts: false});
+    
+    $('.ln-letters>a').click(function (){
+        $('#filter').val('');
+        var filter = $('#filter').val(), count = 0;
+        $("#catalogList > li").each(function () {
+            if ($(this).text().search(new RegExp(filter, "i")) < 0) {
+                $(this).addClass("hidden");
+            } else {
+                $(this).removeClass("hidden");
+                count++;
+            }
+        });
+    });
+    
+    var sidebar_left_modules = $(".sidebar-left-nav").length;
+	for(i = 1; i <= sidebar_left_modules; i++) {
+		$("#sidebar-left-nav-" + i).accordion({ autoHeight: true, collapsible: true, active: false });
+	}
+    
+  });
+  //]]>
+  </script>
+
+</head>
+<body class="center">
+<script type="text/javascript">var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));</script>
+<script type="text/javascript">try {var pageTracker = _gat._getTracker("UA-5452794-4");pageTracker._trackPageview();} catch(err) {}</script>
+<div class="leftprint"><img height="55" hspace="10" width="216" alt="University of Minnesota" src="http://a.umn.edu/img/smMwdmk-001.gif" align="left" /></div>
+<div class="rightprint"><strong>Office of Information Technology (OIT)</strong><br />www.oit.umn.edu<br />oitweb@umn.edu</div>
+
+<div id="header">
+ <div id="campus_links">
+  <p>Campuses: </p>
+  <ul>
+   <li><a href="http://www.umn.edu">Twin Cities</a></li>
+   <li><a href="http://www.crk.umn.edu">Crookston</a></li>
+   <li><a href="http://www.d.umn.edu">Duluth</a></li>
+   <li><a href="http://www.morris.umn.edu">Morris</a></li>
+   <li><a href="http://www.r.umn.edu">Rochester</a></li>
+   <li><a href="http://www.umn.edu/campuses.php">Other Locations</a></li>
+  </ul>
+ </div> 
+ <div id="headerUofM">
+  <div id="logo_uofm"><a href="http://www.umn.edu/">Go to the U of M home page</a></div>
+  <div id="search_area">
+   <div id="search_nav"><a href="http://onestop.umn.edu/" id="btn_onestop">OneStop</a> <a href="https://www.myu.umn.edu/" id="btn_myu">myU</a></div>         
+   <div class="search">
+ 
+ 
+<form action="http://search.umn.edu/s/" method="get" name="gsearch" id="gsearch" title="Search Websites and People">
+<input class="right" type="text" id="search_field" name="q" value="Search Websites and People" title="Search text" onfocus="if (this.value == 'Search Websites and People') { this.value = ''; }" onblur="if (this.value == '') { this.value = 'Search Websites and People'; }" /> 
+<input type="image" class="search_btn" value="Search" alt="Submit Search" src="http://a.umn.edu/img/search_button-001.gif" /><input type="hidden" name="s" value="oit-oitkb" /><input type="hidden" name="u" value="1" />
+</form>  
+   </div> 
+  </div>
+ </div>
+</div>
+<!-- BEGIN OPTIONAL HORIZONTAL NAV-->
+<div id="header_sub">
+	<ul id="header_sub_nav">
+		<li class="tl_menu">
+			<span class="headerAudience"><a href="../students/index.htm">Students</a></span>
+			<div id="nav_cat1" class="dd_menu_top">
+				<ul class="dd_menu">
+					<li class="first"><a href="http://www.oit.umn.edu/computerlabs/">Computer Labs</a></li>	
+					<li><a href="http://www.oit.umn.edu/utools">Purchase Software</a></li>
+					<li><a href="http://www.oit.umn.edu/umart">Purchase Hardware</a></li>
+					<li><a href="http://www.mail.umn.edu/">Email</a></li>
+					<li><a href="http://www.oit.umn.edu/vpn">VPN</a></li>
+					<li><a href="http://www.oit.umn.edu/help">Technology Help</a></li>
+					<li><a href="http://www.oit.umn.edu/safe-computing">Safe Computing</a></li>
+					<li><a href="../students/index.htm">More Students...</a></li>
+				</ul>
+			</div>
+		</li>
+		<li class="tl_menu">
+			<span class="headerAudience"><a href="../staff/index.htm">Staff Members</a></span>
+			<div id="nav_cat2" class="dd_menu_top">
+				<ul class="dd_menu">
+					<li class="first"><a href="http://www.oit.umn.edu/utools">Purchase Software</a></li>
+					<li><a href="http://www.oit.umn.edu/umart">Purchase Hardware</a></li>
+					<li class="first"><a href="http://www.mail.umn.edu/">Email</a></li>
+					<li><a href="http://www.oit.umn.edu/vpn">VPN</a></li>
+					<li><a href="http://www.oit.umn.edu/help">Technology Help</a></li>
+					<li><a href="http://www.oit.umn.edu/safe-computing">Safe Computing</a></li>
+					<li><a href="../staff/index.htm">More Staff Members...</a></li>
+				</ul>
+			</div>
+		</li>
+		<li class="tl_menu">
+			<span class="headerAudience"><a href="../instructors-researchers/index.htm">Instructors &amp; Researchers</a></span>
+			<div id="nav_cat3" class="dd_menu_top">
+				<ul class="dd_menu">
+					<li class="first"><a href="http://www.mail.umn.edu/">Email</a></li>
+					<li><a href="http://www.oit.umn.edu/vpn">VPN</a></li>
+					<li><a href="http://www.oit.umn.edu/help">Technology Help</a></li>
+					<li><a href="http://www.oit.umn.edu/safe-computing">Safe Computing</a></li>
+						<li><a href="http://www.oit.umn.edu/umsurvey">UMSurvey</a></li>
+					<li><a href="http://www.oit.umn.edu/research-evaluation">Research & Evaluation Services</a></li>
+					<li><a href="http://www.oit.umn.edu/class-capture">Class Capture</a></li>
+					<li><a href="../instructors-researchers/index.htm">More Instructors &amp; Researchers...</a></li>
+				</ul>
+			</div>
+		</li>
+		<li class="tl_menu">
+			<span class="headerAudience">Alumni &amp; Visitors</span>
+			<div id="nav_cat4" class="dd_menu_top dd_last">	
+				<ul class="dd_menu">
+					<li class="first"><a href="http://www1.umn.edu/wireless">UofM Wireless</a></li>
+				</ul>
+			</div>
+		</li>
+	</ul>
+	<div class="unit">
+		<p><a href="../index.php">Office of Information Technology (OIT)</a></p>
+	</div>
+	<br class="clearabove" />
+</div>
+<script type="text/javascript" src="../prod/fragments/oit_common/lib/js/jquery-1.3.2.min.js"></script>
+<script type="text/javascript" src="../prod/fragments/oit_common/lib/js/jquery.jcarousel.pack.js" charset="utf-8"></script>
+<div id="col_2_8_8" class="container_12 grid_12">
+  	<div class="grid_2" id="main_nav_service_pages">
+	<h2>Overview</h2> <ul>     <li><a href="../computer-labs/locations-hours/index.htm" target="">Locations &amp; Hours</a></li>     <li><a href="../computer-labs/hardware/index.htm" target="">Hardware</a></li>     <li><a href="../computer-labs/software/index.htm" target="">Software</a></li>     <li><a href="../computer-labs/printing/index.htm" target="">Printing</a></li>     <li><a href="../computer-labs/scanning/index.htm" target="">Scanning</a></li> </ul> <h2>Help &amp; Support</h2> <ul>     <li><a href="../computer-labs/facility-reservations/index.htm" target="">Instructor Facility Reservations</a></li>     <li><a href="../computer-labs/software-requests/index.htm" target="">Instructor Software Requests</a></li>     <li><a href="../computer-labs/contact-information/index.htm" target="">Contact Information</a></li> </ul> <h2>About Us</h2> <ul>     <li><a href="../computer-labs/Policies/index.htm" target="">Policies</a></li>      </ul>
+</div>
+
+	<!--BEGIN CENTER COLUMN -->
+	<div class="grid_8" id="service_home">
+		<h1>Campus Computer Labs</h1> 
+		<div class="slideshow_control_option3">
+			<h2>Featured Services</h2> 
+		</div>
+		<div class="feature2">
+			<ul id="mycarousel" class="jcarousel-skin-tango">
+			
+			
+<li class="grid_2" ><img height="100" width="150" alt="Students at a circular computer table in the VoTech 230 computer lab" src="../prod/groups/oit/@pub/@oit/@web/documents/asset/oit_asset_186543.png" /></li>
+<li class="grid_2" ><h3>Managed Printing</h3><p>For information about&nbsp;OIT's campus-wide printing solutions visit <a href="../managed-printing/index.htm" target=""> Managed Printing.</a></p></li>
+<li class="grid_2" ><img height="100" width="150" alt="A large format printer printing a photo of a frog" src="../prod/groups/oit/@pub/@oit/@web/documents/asset/oit_asset_186545.png" /></li>
+<li class="grid_2" ><h3><a href="../computer-labs/printing/large-format/index.htm" target="">Large Format Printing</a></h3><p>You can print on 42 or 60 inches wide paper in <a href="../computer-labs/locations-hours/index.htm" target="">Coffman Union B060</a> for $4.50 per square foot.</p></li>
+<li class="grid_2" ><img height="103" width="150" alt="photo of the Coffey 50 learning space with computers at circular tables" src="../prod/groups/oit/@pub/@oit/@web/@evaluationresearch/documents/asset/oit_asset_183863.jpg" /></li>
+<li class="grid_2" ><h3>Future of the Labs</h3><p>Campuses worldwide are <a href="../research-evaluation/selected-research/learning-environments/index.htm" target="">rethinking the design of computer labs</a>, and so are we. Check back for updates.</p></li>
+<li class="grid_2" ><img height="100" width="150" alt="Recycling symbol: arrows pointing in a triangle shape" src="../prod/groups/oit/@pub/@oit/@web/documents/asset/oit_asset_186544.png" /></li>
+<li class="grid_2" ><h3>Go Green!</h3><p>Print cheaper, print greener by sending your print jobs to a <a href="../computer-labs/printing/laser-printing/index.htm" target="">duplex printer</a>.</p></li>
+
+
+
+			</ul>
+		</div>
+		<h2 class="tagline">State-of-the-Art Hardware, Software, Connections, Scanning, &amp; Printing</h2> 
+		<div class="homeContent"><p>The Office of Information Technology (OIT) manages numerous computer labs on the Twin Cities campus. Students from all colleges may drop in to use the computer labs during open hours, and instructors from all colleges may reserve them to teach classes during available times. This service offering is part of our <a href="../academic-spaces/index.htm" target="">Academic Technology Spaces</a> services.</p> <h3>The Blegen 90 Tech Stop is Open!</h3> <p>OIT and its partners remodeled the training and collaboration space in Blegen 90. It provides a unique atmosphere for both individual and group work, as well as a variety of services offered by OIT and its partners.</p> <p>Essentially, the space is a pilot space for OIT as we begin to rethink the design and purpose of traditional OIT computer labs on campus. The remodel was a research-based design intended to foster education and innovation through state-of-the-art space and services. OIT has partnered in consultation with several groups campuswide for their feedback and suggestions.</p> <p>The redesigned space is different than traditional computer labs in that it is more campus community-focused, rather than strictly student-focused. While students are still the primary clientele, the space serves faculty and staff, as well.</p> <h3>Drop in for a Wee Byte of Learning</h3> <p>Want to learn how to find free images, format bibliographies, or edit videos? Students, faculty, and staff are invited to participate in <a href="http://uttc.umn.edu/training/courses/learning-bytes/index.jsp">Technology Learning Bytes</a> (TLB),  30-minute  learning sessions on these and other topics. No cost, no registration. Attend, ask questions, and expand your skills! Location: <strong>Blegen 90</strong>.</p> <p><strong>There are no TLB sessions scheduled for this week. </strong></p></div>
+	</div>
+ <script type="text/javascript">
+$(document).ready(function() {
+    $("#mycarousel").jcarousel();
+}); 
+</script>	
+<!-- END CENTER COLUMN -->
+<!-- BEGIN RIGHT COLUMN -->
+	<div class="grid_2" id="service_news">
+		<h3>Latest News</h3> 
+		
+<ul>
+<li><h2>OIT expands walk-in help services</h2> <p>All Tech Stop and computer lab walk-in technology help locations provide assistance for students, faculty, and staff to receive face-to-face technology consultations and support. Follow the link for <a href="http://blog.lib.umn.edu/oit/news/2011/08/oit_expands_walk-in_help_servi.html" target="">more information and a list of services provided</a>.</p></li>
+
+<li><h2>Printing tip</h2> <p>If you are printing several large images in a single file consider printing one page at a time.&nbsp; For more printing tips and answers to additional questions visit the <a href="../help/index.html" target="">Technology Help</a> page, or call (612) 301-4357.</p></li>
+
+<li><h2>Introducing Video iMacs (<a href="../prod/groups/oit/@pub/@oit/@web/@complabs/documents/multimedia/oit_multimedia_277305.pdf" target="">PDF</a>)</h2> <p>27&quot; iMacs are excellent for manipulating pictures, sound and video with Apples iLife '11 suite.&nbsp; <br />Now available in the Walter 103, Coffman B060, and Vocational &amp; Technical Education 220/230 computer labs.</p></li>
+
+<li><h2>VoiceOver Available on All Macs</h2> <p><a href="http://www.apple.com/accessibility/voiceover/" target="">VoiceOver</a>, Apple's utility to make it easier for the blind and those with low-vision to use a computer, is available on all of the Mac's in the computer labs.&nbsp; VoiceOver can be turned on by using the system preference panel, universal access or by holding the command and F5 keys down simultaneously. <br /> Please bring your own earphones.</p></li>
+
+<li><h2>Kiosk Upgrades</h2><p>New <a href="http://lighthouse.micro.umn.edu/kiosk/" target="">communication kiosk</a> cabinets with a touch screen interface are now on campus thanks to a partnership between the CLA Student Technology Fee Committee and OIT.</p></li>
+</ul>
+
+
+		
+		<h3>Quick Links</h3>
+		<ul>
+		<li><a href="https://mail.umn.edu">Web-Based Email</a></li>
+		</ul>
+		
+		
+		
+		<h3>Related Links</h3>
+		<ul>
+		<li><a href="../managed-printing/index.htm" target="">Managed Printing</a></li>
+		</ul>
+		
+
+	</div>
+<!-- END RIGHT COLUMN -->
+
+
+</div>
+
+  <!--BEGIN OPTIONAL UNIT FOOTER -->
+
+  <div class="grid_12" id="unit_footer_oit">
+    <ul class="unit_about_links">
+      <li><a href="http://www.oit.umn.edu/about">About Us</a></li>
+
+      <li><a href="http://www.oit.umn.edu/planning-strategy">Planning &amp; Strategy</a></li>
+
+      <li><a href="https://wiki.umn.edu/bin/viewauth/OITInternal">Intranet (Restricted)</a></li>
+      
+       <li><a href="http://www.policy.umn.edu/Policies/it/index.htm">Policies</a></li>
+
+      <li><a href="http://www.oit.umn.edu/security">Security</a></li>
+      
+      <li><a href="mailto:oitweb@umn.edu">Website Comments</a></li>
+    </ul>
+
+    <ul class="unit_footer_links">
+     
+
+      <!--<li><a href="http://www.systemstatus.umn.edu">System Status</a></li>-->
+
+     
+    </ul>
+  </div><!--END OPTIONAL UNIT FOOTER -->
+
+<!-- BEGIN UofM FOOTER -->
+<div class="grid_7 alpha" id="footer_inner">
+    <ul class="copyright"><li>&copy; 2009-2011 Regents of the University of Minnesota. All rights reserved.</li>
+    <li>The University of Minnesota is an equal opportunity educator and employer</li>
+    <li>Last modified on August 29, 2012</li></ul>
+</div>
+    <div class="grid_5 omega" id="footer_right">
+    <ul class="footer_links">
+    <li>Twin Cities Campus: </li>
+    <li><a href="http://www1.umn.edu/pts/">Parking &amp; Transportation</a></li>
+    <li><a href="http://www.umn.edu/twincities/maps/index.html">Maps &amp; Directions</a></li></ul>
+    <br class="clearabove" />
+    <ul class="footer_links"><li><a href="http://www.directory.umn.edu/">Directories</a></li>
+    <li><a href="http://www.umn.edu/twincities/contact/">Contact U of M</a></li>
+    <li><a href="http://www.privacy.umn.edu/">Privacy</a></li>
+    </ul>
+    <p>&nbsp;</p>
+<br class="clearabove" />
+</div>
+<!-- END UofM FOOTER -->
+</body>
+</html>

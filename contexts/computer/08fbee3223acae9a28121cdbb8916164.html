@@ -1,0 +1,1565 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd" >
+
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:media="http://search.yahoo.com/searchmonkey/media/"  xmlns:fb="http://www.facebook.com/2008/fbml" >
+<head id="ctl00_Head1" prefix="og: http://ogp.me/ns# docstoc-com: http://ogp.me/ns/apps/docstoc-com#"><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="description" property="dc:description" content="Computer Organization Topics covered: Course outline and schedule Introduction     General informationCourse          :Computer OrganizationInstructor      : Assoc. Prof. Abdulwahab AlSammakEmail           : sammaka@gmail.comLecture time    : Tuesday 9:00pm Ð 12:00 pm.Office hours    : By appointment.                  (I w" />
+<link rel="shortcut icon" type="image/x-icon" href="http://css.docstoc.com/i/ico/favicon.ico" />
+<link type="text/css" rel="stylesheet" href="http://css.docstoccdn.com/css/master_bundle.css?build=04879" />
+<link type="text/css" rel="stylesheet" href="http://css.docstoccdn.com/css/SocialBar.css?build=04879" />
+<link type="text/css" rel="stylesheet" href="http://css.docstoccdn.com/css/document_bundle.css?build=04879" />
+<link type="text/css" rel="stylesheet" href="http://css.docstoccdn.com/css/registration-overlay.css?build=04879" />
+<script type="text/javascript">
+var pageName='/Docs/Document-Detail-Google.aspx';
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-1289929-1']);
+_gaq.push(["_trackPageview","/docsFree/81261628/Computer-Organization"]);
+
+			var mpq = [];
+			var mpg = {};
+			mpq.init={};
+			mpq.track = function (arg1, arg2, arg3)
+			{
+
+				if (arg3 != undefined) arg3();
+			};
+			mpq.name_tag = { };
+			var mixpanel = {};
+mixpanel.init={};
+			mixpanel.track = function (arg1, arg2, arg3)
+			{
+
+				if (arg3 != undefined) arg3();
+			};
+			var mpmetrics = {};
+mpmetrics.init={};
+			mpmetrics.track = function (arg1, arg2, arg3)
+			{
+
+				if (arg3 != undefined) arg3();
+			};
+var MixPanel = {};
+var MixPanelLib ={};
+		</script>
+<script type="text/javascript" src="http://js.docstoccdn.com/js/master_bundle.js?build=04879"></script>
+<script type="text/javascript" src="http://js.docstoccdn.com/js/SocialBar.js?build=04879"></script>
+<script type="text/javascript" src="http://js.docstoccdn.com/js/document_bundle.js?build=04879"></script>
+<script type="text/javascript" src="http://js.docstoccdn.com/js/login-popup-download.js?build=04879"></script>
+<script type="text/javascript" src="http://js.docstoccdn.com/js/regflow/login-popup-flows.js?build=04879"></script>
+<script type="text/javascript">var CurrentUsername = '';
+var CurrentUserID = '-10';
+var CurrentGroupID = '171';
+var CurrentCampaignID = '473';
+</script>
+<script type="text/javascript">DocumentID = 81261628;DocumentUrl='http://www.docstoc.com/docs/81261628/Computer-Organization';DocumentOwnerID='15305835';DocumentOwnerUsername='amr24';DocumentFilename='lecture-1.ppt';DocumentType='ppt';DocumentTitle='Computer Organization';DocumentCategoryID=5;DocumentSubCategoryID=325;DocumentError=0;DocumentRotation=0;DocumentSubSubCategoryID=0;</script>
+<script type="text/javascript">
+            var PAGES;
+            function setPages(variable) {
+              PAGES = variable;
+            }
+            function getPages() {
+              return PAGES;
+            }
+            </script>
+
+<!-- start Mixpanel --><script type="text/javascript">(function(d,c){var a,b,g,e;a=d.createElement("script");a.type="text/javascript";a.async=!0;a.src=("https:"===d.location.protocol?"https:":"http:")+'//api.mixpanel.com/site_media/js/api/mixpanel.2.js';b=d.getElementsByTagName("script")[0];b.parentNode.insertBefore(a,b);c._i=[];c.init=function(a,d,f){var b=c;"undefined"!==typeof f?b=c[f]=[]:f="mixpanel";g="disable track track_pageview track_links track_forms register register_once unregister identify name_tag set_config".split(" ");
+for(e=0;e<g.length;e++)(function(a){b[a]=function(){b.push([a].concat(Array.prototype.slice.call(arguments,0)))}})(g[e]);c._i.push([a,d,f])};window.mixpanel=c})(document,[]);
+mixpanel.init("75875bbd2b8ab5a0042585aa22da8e6c");</script><!-- end Mixpanel --> 
+
+
+<link rel="shortcut icon" href="http://css.docstoccdn.com/i/IE9PinnedApp/icon.ico" type="image/x-icon" />    
+<meta name="application-name" content="docstoc" />
+<meta name="msapplication-tooltip" content="docstoc" />
+<meta name="msapplication-starturl" content="http://www.docstoc.com/IE9PinnedApp/" />
+<meta name="msapplication-task" content="name=Top Documents;action-uri=http://www.docstoc.com/documents/store/most-downloaded;icon-uri=http://css.docstoccdn.com/i/IE9PinnedApp/icon.ico" />
+<meta name="msapplication-task" content="name=Legal;action-uri=http://www.docstoc.com/documents/legal/most-downloaded;icon-uri=http://css.docstoccdn.com/i/IE9PinnedApp/icon.ico" />
+<meta name="msapplication-task" content="name=Business;action-uri=http://www.docstoc.com/documents/business/most-downloaded;icon-uri=http://css.docstoccdn.com/i/IE9PinnedApp/icon.ico" />
+<meta name="msapplication-task" content="name=Finance;action-uri=http://www.docstoc.com/documents/personal-finance/most-downloaded;icon-uri=http://css.docstoccdn.com/i/IE9PinnedApp/icon.ico" />
+<meta name="msapplication-task" content="name=Jobs &amp; Careers;action-uri=http://www.docstoc.com/documents/jobs-and-careers/most-downloaded;icon-uri=http://css.docstoccdn.com/i/IE9PinnedApp/icon.ico" />
+<script>    
+function syncJumplist(){
+    try
+    {
+        if (window.external.msIsSiteMode()) {
+            var s = document.createElement('script');
+            s.type = 'text/javascript';
+            s.async = true;
+            s.src = '/IE9PinnedApp/GetDocOfDay.aspx';
+            var x = document.getElementsByTagName('script')[0];
+            x.parentNode.insertBefore(s, x);
+        } 
+    } catch (e) {
+    }
+}
+if(window["$j"]){
+    $j(function() {
+        
+        syncJumplist();
+    });
+}else{
+    setTimeout(function(){syncJumplist();},1000);
+}
+</script><link rel="image_src" href="http://img.docstoccdn.com/thumb/100/81261628.png" />
+<meta name="title" property="media:title" content="Computer Organization" />
+<meta name="dc_creator" property="dc:creator" content="Amr Ghareeb Mohamed Al-qurany" />
+<link href="http://viewer.docstoc.com/?doc_id=81261628&mem_id=15305835&revision=139933205&showrelated=0&showotherdocs=0" name="media_presentation" rel="media:presentation" />
+<meta href="http://img.docstoccdn.com/thumb/100/81261628.png" name="media_thumbnail" rel="media:thumbnail" />
+<meta name="media_width" content="420" property="media:width"  />
+<meta name="media_height" content="280" property="media:height"  />
+<meta property="og:title" content="Computer Organization"/> <meta property="og:site_name" content="Docstoc.com"/> <meta property="og:description" content="Computer Organization Topics covered: Course outline and schedule Introduction     General informationCourse          :Computer OrganizationInstructor      : Assoc. Prof. Abdulwahab AlSammakEmail           : sammaka@gmail.comLecture time    : Tuesday 9:00pm Ð 12:00 pm.Office hours    : By appointment.                  (I w"/> <meta property="og:url" content="http://www.docstoc.com/docs/81261628/Computer-Organization"/> <meta property="og:image" content="http://img.docstoccdn.com/thumb/100/81261628.png"/> <meta property="fb:app_id" content="127594755061"/> <meta property="og:type" content="docstoc_com:document"/><title>
+	Computer Organization
+</title></head>
+<body id="body">
+<div id="fb-root"></div>
+<script type="text/javascript">
+	var fbHandleLogin = function () {
+		setTimeout(function () {
+			window.location = redirectUrl;
+		}, 1000);
+
+	};
+	window.fbAsyncInit = function () {
+		FB.init({
+			appId: 127594755061,
+			//channelUrl: '//www.docstoc.com/channel.html',
+			status: true,
+			cookie: true,
+			xfbml: true
+		});
+		FB.XFBML.parse();
+		FB.getLoginStatus(function (response) {
+			if (response.status === 'connected') {
+				if (CurrentUserID < 0) {
+					fbHandleLogin();
+				}
+
+			} else {
+				FB.Event.subscribe('auth.authResponseChange', function (response) {
+					if (response.authResponse) {
+						fbHandleLogin();
+					} else {
+						window.location = "/logout.ashx";
+					}
+				});
+			}
+		});
+
+		FB.Event.subscribe('edge.create', function (href, widget) {
+			var id = -10;
+			var session = FB.getSession();
+			if (session) {
+				id = session.uid;
+			}
+			$j.post("/docs/savelike.ashx?fb_id=" + id + "&url=" + href);
+		});
+
+
+
+	};
+	// Load the SDK Asynchronously
+	(function (d) {
+		var js, id = 'facebook-jssdk'; if (d.getElementById(id)) { return; }
+		js = d.createElement('script'); js.id = id; js.async = true;
+		js.src = "//connect.facebook.net/en_US/all.js";
+		d.getElementsByTagName('head')[0].appendChild(js);
+	} (document));
+</script>
+
+<form name="aspnetForm" method="post" action="/Docs/Document-Detail-Google.aspx?doc_id=81261628" id="aspnetForm">
+<div>
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUJOTkxOTMzNTQ5D2QWAmYPZBYCAgEPZBYCAgIPZBYCZg9kFgJmDxYCHgdWaXNpYmxlaGRkCcVB+DZuHELPZndQUhJWWv4PPwE=" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['aspnetForm'];
+if (!theForm) {
+    theForm = document.aspnetForm;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+<object id="didLoader" style="position:absolute;top:0;left:0;" width="1" height="1" type="application/x-shockwave-flash" data="http://swf.docstoc.com/swf/DIDLoader.169.www.swf"><param name="movie" value="http://swf.docstoc.com/swf/DIDLoader.169.www.swf"/><param name="allowScriptAccess" value="always" /><param name="FlashVars" value="doc_id=81261628&mem_id=15305835&showrelated=1&showotherdocs=1" /></object>
+
+ <div id="site-container">
+
+		<!-- google_ad_section_start(weight=ignore) -->
+		<div id="header">
+			<div id="logo" style="float: left;"><a href="/" title="docstoc: Documents for Small Business & Professionals" class="fleft nnav sp-logo" style="padding: 5px 5px 0px 5px; margin: 5px 5px 0px 5px;"></a><div class="nnav_logo_helper"><span class="nnav sp-logo_helper"></span></div><div class="fclear"></div></div><div id="login" style="float: right;"><div class="nnav_login_links" style="padding: 15px 5px 10px 10px; width: 400px; float: right; display: inline-block;"><a onclick="dsmetrics.track(new DSMActivity('user-nav-cart', '', dsmetrics.ActivityObjType.NotSet, 0, dsmetrics.ActivityActionType.Click, []));" style="position: relative; display: block; float: right;" href="https://www.docstoc.com/cart/"><span class="nnav sp-cart_icon"></span><div style="font-size: 10px; position: absolute; top: -10px; left: 18px;"></div></a><a onclick="dsmetrics.track(new DSMActivity('user-nav-register', '', dsmetrics.ActivityObjType.NotSet, 0, dsmetrics.ActivityActionType.Click, []));" class="rglnk" style="position: relative; display: block; float: right;" href="/login/?ref=header-reg&pt=16&register=1&ft=19" rel="nofollow">Register</a><a onclick="dsmetrics.track(new DSMActivity('user-nav-sign-in', '', dsmetrics.ActivityObjType.NotSet, 0, dsmetrics.ActivityActionType.Click, []));" style="position: relative; display: block; float: right;" href="/login/?ref=header-login&pt=16&ft=1&login=1&returnURL=http%3a%2f%2fwww.docstoc.com%2fDocs%2fDocument-Detail-Google.aspx%3fdoc_id%3d81261628" rel="nofollow"> Sign In</a><a style="position: relative; display: block; float: right; color: #3B5999;" href="javascript:void(0);" onclick="dsmetrics.track(new DSMActivity('user-nav-fb-login', '', dsmetrics.ActivityObjType.NotSet, 0, dsmetrics.ActivityActionType.Click, []));FB.login(function(response){},{scope:'email,publish_stream,offline_access,user_work_history,user_education_history,user_interests'})"><span class="nnav sp-facebook_icon" style="display: inline-block;"></span> login</a></div></div><div class="fclear"></div>	
+		</div>
+		<div class="nav-container">
+			<div class="nav-inner">
+				<div class="fleft nnav sp-nav_left"></div><div class="nnav_repeating" style="float: left; width: 98%;"><div style="padding: 5px;"><div style="float: left; position: relative; left: -5px;" class="nnav_links"><a class="fleft hvr" href="/" onclick="dsmetrics.track(new DSMActivity('home-tab', '', dsmetrics.ActivityObjType.NotSet, 0, dsmetrics.ActivityActionType.Click, []));">Home</a><div class="nnav sp-tab_seperator fleft"></div><div id="popnav_documents" style="position: relative;" class="fleft"><a class="fleft hvr" href="/documents/" onclick="dsmetrics.track(new DSMActivity('documents-tab', '', dsmetrics.ActivityObjType.NotSet, 0, dsmetrics.ActivityActionType.Click, []));">Documents</a><div class="nnav_popup" id="popnav_documents_extra"><a onclick="dsmetrics.track(new DSMActivity('documents-tab-dropdown', '', dsmetrics.ActivityObjType.NotSet, 0, dsmetrics.ActivityActionType.Click, [new DSMOtherInfo('cat_name', 'browse-all')]));" class="sas" href="/documents/">Browse All &#187;</a><div style="float: left; width: 150px;"><a onclick="dsmetrics.track(new DSMActivity('documents-tab-dropdown', '', dsmetrics.ActivityObjType.NotSet, 0, dsmetrics.ActivityActionType.Click, [new DSMOtherInfo('cat_name', 'all docs')]));" href="/documents">All Docs</a><a onclick="dsmetrics.track(new DSMActivity('documents-tab-dropdown', '', dsmetrics.ActivityObjType.NotSet, 0, dsmetrics.ActivityActionType.Click, [new DSMOtherInfo('cat_name', 'DocStore')]));" href="/documents/store">Docstore</a><a onclick="dsmetrics.track(new DSMActivity('documents-tab-dropdown', '', dsmetrics.ActivityObjType.NotSet, 0, dsmetrics.ActivityActionType.Click, [new DSMOtherInfo('cat_name', 'Legal')]));" href="/documents/legal">Legal</a><a onclick="dsmetrics.track(new DSMActivity('documents-tab-dropdown', '', dsmetrics.ActivityObjType.NotSet, 0, dsmetrics.ActivityActionType.Click, [new DSMOtherInfo('cat_name', 'Business')]));" href="/documents/business">Business</a><a onclick="dsmetrics.track(new DSMActivity('documents-tab-dropdown', '', dsmetrics.ActivityObjType.NotSet, 0, dsmetrics.ActivityActionType.Click, [new DSMOtherInfo('cat_name', 'Personal Finance')]));" href="/documents/personal-finance">Personal Finance</a><a onclick="dsmetrics.track(new DSMActivity('documents-tab-dropdown', '', dsmetrics.ActivityObjType.NotSet, 0, dsmetrics.ActivityActionType.Click, [new DSMOtherInfo('cat_name', 'Technology')]));" href="/documents/technology">Technology</a><a onclick="dsmetrics.track(new DSMActivity('documents-tab-dropdown', '', dsmetrics.ActivityObjType.NotSet, 0, dsmetrics.ActivityActionType.Click, [new DSMOtherInfo('cat_name', 'Education')]));" href="/documents/education">Education</a><a onclick="dsmetrics.track(new DSMActivity('documents-tab-dropdown', '', dsmetrics.ActivityObjType.NotSet, 0, dsmetrics.ActivityActionType.Click, [new DSMOtherInfo('cat_name', 'Jobs & Careers')]));" href="/documents/jobs-and-careers">Jobs & Careers</a><a onclick="dsmetrics.track(new DSMActivity('documents-tab-dropdown', '', dsmetrics.ActivityObjType.NotSet, 0, dsmetrics.ActivityActionType.Click, [new DSMOtherInfo('cat_name', 'Tax')]));" href="/documents/tax">Tax</a><a onclick="dsmetrics.track(new DSMActivity('documents-tab-dropdown', '', dsmetrics.ActivityObjType.NotSet, 0, dsmetrics.ActivityActionType.Click, [new DSMOtherInfo('cat_name', 'Real Estate')]));" href="/documents/real-estate">Real Estate</a><a onclick="dsmetrics.track(new DSMActivity('documents-tab-dropdown', '', dsmetrics.ActivityObjType.NotSet, 0, dsmetrics.ActivityActionType.Click, [new DSMOtherInfo('cat_name', 'Current Events')]));" href="/documents/current-events">Current Events</a></div><div style="float: left; width: 150px;"><a onclick="dsmetrics.track(new DSMActivity('documents-tab-dropdown', '', dsmetrics.ActivityObjType.NotSet, 0, dsmetrics.ActivityActionType.Click, [new DSMOtherInfo('cat_name', 'Politics & History')]));" href="/documents/politics-and-history">Politics & History</a><a onclick="dsmetrics.track(new DSMActivity('documents-tab-dropdown', '', dsmetrics.ActivityObjType.NotSet, 0, dsmetrics.ActivityActionType.Click, [new DSMOtherInfo('cat_name', 'Guides')]));" href="/documents/guides">Guides</a><a onclick="dsmetrics.track(new DSMActivity('documents-tab-dropdown', '', dsmetrics.ActivityObjType.NotSet, 0, dsmetrics.ActivityActionType.Click, [new DSMOtherInfo('cat_name', 'Science')]));" href="/documents/science">Science</a><a onclick="dsmetrics.track(new DSMActivity('documents-tab-dropdown', '', dsmetrics.ActivityObjType.NotSet, 0, dsmetrics.ActivityActionType.Click, [new DSMOtherInfo('cat_name', 'Entertainment')]));" href="/documents/entertainment">Entertainment</a><a onclick="dsmetrics.track(new DSMActivity('documents-tab-dropdown', '', dsmetrics.ActivityObjType.NotSet, 0, dsmetrics.ActivityActionType.Click, [new DSMOtherInfo('cat_name', 'Health & Fitness')]));" href="/documents/health-and-fitness">Health & Fitness</a><a onclick="dsmetrics.track(new DSMActivity('documents-tab-dropdown', '', dsmetrics.ActivityObjType.NotSet, 0, dsmetrics.ActivityActionType.Click, [new DSMOtherInfo('cat_name', 'Medicine')]));" href="/documents/medicine">Medicine</a><a onclick="dsmetrics.track(new DSMActivity('documents-tab-dropdown', '', dsmetrics.ActivityObjType.NotSet, 0, dsmetrics.ActivityActionType.Click, [new DSMOtherInfo('cat_name', 'Conferences')]));" href="/documents/conferences">Conferences</a><a onclick="dsmetrics.track(new DSMActivity('documents-tab-dropdown', '', dsmetrics.ActivityObjType.NotSet, 0, dsmetrics.ActivityActionType.Click, [new DSMOtherInfo('cat_name', 'Art & Literature')]));" href="/documents/art-and-literature">Art & Literature</a><a onclick="dsmetrics.track(new DSMActivity('documents-tab-dropdown', '', dsmetrics.ActivityObjType.NotSet, 0, dsmetrics.ActivityActionType.Click, [new DSMOtherInfo('cat_name', 'Lifestyle')]));" href="/documents/lifestyle">Lifestyle</a><a onclick="dsmetrics.track(new DSMActivity('documents-tab-dropdown', '', dsmetrics.ActivityObjType.NotSet, 0, dsmetrics.ActivityActionType.Click, [new DSMOtherInfo('cat_name', 'Travel')]));" href="/documents/travel">Travel</a><a onclick="dsmetrics.track(new DSMActivity('documents-tab-dropdown', '', dsmetrics.ActivityObjType.NotSet, 0, dsmetrics.ActivityActionType.Click, [new DSMOtherInfo('cat_name', 'Templates')]));" href="/documents/templates">Templates</a></div><div style="clear: both;"></div></div><div class="nnav sp-tab_seperator fleft"></div></div><div id="popnav_resources" style="position: relative;" class="fleft"><a class="fleft hvr" href="/resources/" onclick="dsmetrics.track(new DSMActivity('resources-tab', '', dsmetrics.ActivityObjType.NotSet, 0, dsmetrics.ActivityActionType.Click, []));">Resources</a><div class="nnav_popup" id="popnav_resources_extra"><a onclick="dsmetrics.track(new DSMActivity('resources-tab-dropdown', '', dsmetrics.ActivityObjType.NotSet, 0, dsmetrics.ActivityActionType.Click, [new DSMOtherInfo('cat_name', 'browse-all')]));" class="sas" href="/resources/">Browse All &#187;</a><a onclick="dsmetrics.track(new DSMActivity('resources-tab-dropdown', '', dsmetrics.ActivityObjType.NotSet, 0, dsmetrics.ActivityActionType.Click, [new DSMOtherInfo('cat_name', 'premium-documents')]));" href="/resources/premium-documents">Premium Documents</a><a onclick="dsmetrics.track(new DSMActivity('resources-tab-dropdown', '', dsmetrics.ActivityObjType.NotSet, 0, dsmetrics.ActivityActionType.Click, [new DSMOtherInfo('cat_name', 'document-packages')]));" href="/resources/document-packages">Document Packages</a><a onclick="dsmetrics.track(new DSMActivity('resources-tab-dropdown', '', dsmetrics.ActivityObjType.NotSet, 0, dsmetrics.ActivityActionType.Click, [new DSMOtherInfo('cat_name', 'articles')]));" href="/resources/articles">Articles</a><a onclick="dsmetrics.track(new DSMActivity('resources-tab-dropdown', '', dsmetrics.ActivityObjType.NotSet, 0, dsmetrics.ActivityActionType.Click, [new DSMOtherInfo('cat_name', 'videos')]));" href="/resources/videos/all">Videos</a></div><div class="nnav sp-tab_seperator fleft"></div></div><div id="popnav_upload" style="position: relative;" class="fleft"><a class="fleft hvr" href="/upload/" onclick="dsmetrics.track(new DSMActivity('upload-tab', '', dsmetrics.ActivityObjType.NotSet, 0, dsmetrics.ActivityActionType.Click, []));">Upload</a><div class="nnav_popup" id="popnav_upload_extra"><a href="/upload" onclick="dsmetrics.track(new DSMActivity('upload-tab-dropdown', '', dsmetrics.ActivityObjType.NotSet, 0, dsmetrics.ActivityActionType.Click, [new DSMOtherInfo('cat_name', 'share-documents')]));">Share Documents</a><a href="/sell" onclick="dsmetrics.track(new DSMActivity('upload-tab-dropdown', '', dsmetrics.ActivityObjType.NotSet, 0, dsmetrics.ActivityActionType.Click, [new DSMOtherInfo('cat_name', 'sell-documents')]));">Sell Documents</a></div><div class="nnav sp-tab_seperator fleft"></div></div><div id="popnav_premium" style="position: relative;" class="fleft nnav_repeating_blue"><a class="fleft" href="//premium.docstoc.com/subscribe" onclick="dsmetrics.track(new DSMActivity('premium-tab', '', dsmetrics.ActivityObjType.NotSet, 0, dsmetrics.ActivityActionType.Click, []));">Premium</a><div class="newText">NEW</div></div></div><div style="float: right; margin-top: 4px;"><a class="nnav_search_button" style="float: right; margin-left: 3px; " href="javascript:void(0);" onclick="newNavDoSearch();" alt="Search"></a><input id="txtSearch" type="text" onkeypress="return handleEnter(event, newNavDoSearch);" class="nnav_search_input" value="search all documents" /><div id="popnav_searchcat" style="position: relative; " class="fright"><div id="nnav_search_label"><table style="width: 100%;" cellspacing="0" cellpadding="0"><tr><td>All Documents</td><td style="vertical-align: middle;" valign="middle" align="right"><span id="nnav_search_arrow" class="nnav sp-down_arrow_blue"></span></td></tr></table></div><div class="nnav_search_popup" id="popnav_searchcat_extra"><a href="javascript:void(0);" id="nnav_cat_0" onclick="newNavSelectCat(0);">All Documents</a><a href="javascript:void(0);" id="nnav_cat_24" onclick="newNavSelectCat(24);">DocStore</a><a href="javascript:void(0);" id="nnav_cat_1" onclick="newNavSelectCat(1);">Legal</a><a href="javascript:void(0);" id="nnav_cat_2" onclick="newNavSelectCat(2);">Business</a><a href="javascript:void(0);" id="nnav_cat_3" onclick="newNavSelectCat(3);">Personal Finance</a><a href="javascript:void(0);" id="nnav_cat_4" onclick="newNavSelectCat(4);">Technology</a><a href="javascript:void(0);" id="nnav_cat_5" onclick="newNavSelectCat(5);">Education</a><a href="javascript:void(0);" id="nnav_cat_9" onclick="newNavSelectCat(9);">Jobs & Careers</a><a href="javascript:void(0);" id="nnav_cat_10" onclick="newNavSelectCat(10);">Tax</a><a href="javascript:void(0);" id="nnav_cat_11" onclick="newNavSelectCat(11);">Real Estate</a><a href="javascript:void(0);" id="nnav_cat_12" onclick="newNavSelectCat(12);">Current Events</a><a href="javascript:void(0);" id="nnav_cat_13" onclick="newNavSelectCat(13);">Politics & History</a><a href="javascript:void(0);" id="nnav_cat_14" onclick="newNavSelectCat(14);">Guides</a><a href="javascript:void(0);" id="nnav_cat_15" onclick="newNavSelectCat(15);">Science</a><a href="javascript:void(0);" id="nnav_cat_16" onclick="newNavSelectCat(16);">Entertainment</a><a href="javascript:void(0);" id="nnav_cat_17" onclick="newNavSelectCat(17);">Health & Fitness</a><a href="javascript:void(0);" id="nnav_cat_18" onclick="newNavSelectCat(18);">Medicine</a><a href="javascript:void(0);" id="nnav_cat_19" onclick="newNavSelectCat(19);">Conferences</a><a href="javascript:void(0);" id="nnav_cat_20" onclick="newNavSelectCat(20);">Art & Literature</a><a href="javascript:void(0);" id="nnav_cat_21" onclick="newNavSelectCat(21);">Lifestyle</a><a href="javascript:void(0);" id="nnav_cat_22" onclick="newNavSelectCat(22);">Travel</a><a href="javascript:void(0);" id="nnav_cat_23" onclick="newNavSelectCat(23);">Templates</a></div></div><div class="fclear"></div></div></div></div><div class="fleft nnav sp-nav_right"></div><div class="fclear"></div>
+<script type="text/javascript">
+
+var newSearchCategory = 0;
+var newSearchShow = 0;
+function newNavSelectCat(id){
+	newSearchCategory = id;
+	var txt = jQuery('#nnav_cat_' + id).html();
+	jQuery('#nnav_search_label').html('<' + 'table style="width: 100%;" cellspacing="0" cellpadding="0"' + '><' + 'tr><' + 'td>' + txt + '<' + '/td' + '><' + 'td ' + 'style="vertical-align: middle;" valign="middle" align="right"' + '><' + 'span class="nnav sp-down_arrow_blue" id="nnav_search_arrow"><' + '/span' + '><' + '/td><' + '/tr><' + '/table>');
+	dsmetrics.track(new DSMActivity('search-nav-change-category', '', dsmetrics.ActivityObjType.NotSet, 0, dsmetrics.ActivityActionType.Click, [new DSMOtherInfo('cat_name', txt)]));
+}
+
+
+function newNavDoSearch(){
+	if($j('.nnav_search_input').val() == ''){
+		alert('You need to enter a Search Term first.');
+ $j('.nnav_search_input').val('').focus();
+}
+else
+{
+    var sto  = $j('.nnav_search_input').val();
+    if('search all documents' !=sto)
+    {
+        var stM  = sto.replace('-','~');
+        stM = $j.trim(stM);
+	    var url = '/search/' + stM + '?catid=' + newSearchCategory;
+
+
+
+    url += '';
+
+
+	    dsmetrics.track(new DSMActivity('search-nav-do-search', '', dsmetrics.ActivityObjType.NotSet, 0, dsmetrics.ActivityActionType.Click, [new DSMOtherInfo('search_term', stM )]));
+	    window.location = url;
+    }
+    else
+    {
+        $j('.nnav_search_input').val('').focus();
+        $j('.nnav_search_input').css({color:'#444'});
+    }
+}
+}
+
+    jQuery(document).ready(function() {
+
+    var nWidth = jQuery('.nav-inner').width();
+nWidth = nWidth * 1;
+jQuery('.nnav_repeating').width(nWidth - 11);
+//autocomplete
+$j('.nnav_search_input').autocomplete('/search/AutoComplete.ashx', { 
+			minChars    : 4,
+			max         : 8,
+			delay       : 50,
+			width       : '325px',
+			selectFirst : false,
+			cacheLength : 0
+		});
+
+//label on textbox
+jQuery('#txtSearch').click( function() {
+		if(jQuery('#txtSearch').val() == 'search all documents'){
+			jQuery('#txtSearch').val('');
+            $j('.nnav_search_input').css({color:'#444'});
+		}
+	});
+if($j('.nnav_search_input').val() =='search all documents')
+{
+    $j('.nnav_search_input').css({color:'#cccccc'});
+}
+
+//search category  
+jQuery('#popnav_searchcat').click( function() {
+		if(newSearchShow == 1){
+			jQuery('#popnav_searchcat_extra').slideUp();
+			newSearchShow = 0;
+			jQuery('#nnav_search_arrow').removeClass('sp-up_arrow_blue');
+			jQuery('#nnav_search_arrow').addClass('sp-down_arrow_blue');
+		}
+		else{
+			jQuery('#popnav_searchcat_extra').slideDown();
+			newSearchShow = 1;
+			jQuery('#nnav_search_arrow').removeClass('sp-down_arrow_blue');
+			jQuery('#nnav_search_arrow').addClass('sp-up_arrow_blue');
+		}
+	});
+$j(document).click(function(event) {
+    var target = $j(event.target);
+    if (target.parents('#popnav_searchcat').length == 0) {
+			jQuery('#popnav_searchcat_extra').slideUp();
+			newSearchShow = 0;
+			jQuery('#nnav_search_arrow').removeClass('sp-up_arrow_blue');
+			jQuery('#nnav_search_arrow').addClass('sp-down_arrow_blue');
+    }
+});
+
+//docstore  
+//document.getElementById('popnav_docstore').onmouseover=function() {
+//		this.className='nnav_hover fleft';
+//		document.getElementById('popnav_docstore_extra').style.display = 'block';
+//	};
+//document.getElementById('popnav_docstore').onmouseout=function() {
+//		this.className='fleft';
+//		document.getElementById('popnav_docstore_extra').style.display = 'none';
+//	};
+            
+
+//documents  
+document.getElementById('popnav_documents').onmouseover=function() {
+		this.className='nnav_hover fleft';
+		document.getElementById('popnav_documents_extra').style.display = 'block';
+	};
+document.getElementById('popnav_documents').onmouseout=function() {
+		this.className='fleft';
+		document.getElementById('popnav_documents_extra').style.display = 'none';
+	};
+
+//resources  
+document.getElementById('popnav_resources').onmouseover=function() {
+		this.className='nnav_hover fleft';
+		document.getElementById('popnav_resources_extra').style.display = 'block';
+	};
+document.getElementById('popnav_resources').onmouseout=function() {
+		this.className='fleft';
+		document.getElementById('popnav_resources_extra').style.display = 'none';
+	};
+
+//upload  
+document.getElementById('popnav_upload').onmouseover=function() {
+		this.className='nnav_hover fleft';
+		document.getElementById('popnav_upload_extra').style.display = 'block';
+	};
+document.getElementById('popnav_upload').onmouseout=function() {
+		this.className='fleft';
+		document.getElementById('popnav_upload_extra').style.display = 'none';
+	};
+
+    });
+</script>
+
+
+				
+			</div>
+		</div>
+		
+		<!-- google_ad_section_end -->
+	
+		<div id="content-body">
+			<div id="content-padding">
+			
+
+	
+		
+    
+    
+
+	<div class="lCol">
+        <div class="lColLiquid">
+            <script type="text/javascript">
+					var socialInfo = {
+						docTitle : "Computer Organization",
+						docURL : "http://www.docstoc.com/docs/81261628/Computer-Organization",
+						docType : "pdf",
+						docId : "81261628",
+						videoCode : ""
+					}
+					</script><div id="socialMediaIsland"></div>
+
+				<!-- google_ad_section_start -->
+				<div onclick="trackAd(16,0,2,'',1216,81261628,'');">
+<!-- ads spot 9 begins -->
+<div id="ad-spot9" style="margin-bottom:10px;text-align:center;display:none">
+  <img class="arrow" src="http://i.docstoc.com/ads/ad9_arrow.png#1" />
+  <strong>Get documents about "<span id="spot9kw">LLC Operating Agreement</span>" start here</strong>
+</div>
+<style>
+#ad-spot9 { font-size: 1.3em; font-style: italic; }
+#spot9kw { color:#19719D;font-style: normal; }
+#ad-spot9 IMG.arrow { display:block;float:right;border:none;margin: 0 125px .4em 0;width:89px;height:30px; }
+#ad1 .toplink { font-family:Arial Black;}
+#ad1 .ad_url, #ad1 .ad_text { font-family:palatino linotype;}
+#ad-spot6 .ad_url, #ad-spot6 .toplink, #ad-spot6 .ad_text { font-family:lucida console;}
+#ad-spot3 .toplink { font-family:Arial Black;}
+#ad-spot3 .ad_url, #ad1 .ad_text { font-family:palatino linotype;}
+.rCol {margin-top:10px;}
+.document-comments {margin:0px 0px 25px;}
+#ad-spot6 td {padding:1.5px;}
+</style>
+<script language='javascript'>
+       $j("#ad-spot9").ready(function () {
+             try {
+                    var ure = /[&?#]q=([^&#]+|$)/gi;
+                    var blankre = /^\s*$/i;
+                    var dre = /(?:\s+|^)[a-z]+\:\S+(?:\s+|$)/i;
+                                                                  var rre = /[+\-\"\'`]/gi;
+                    var res = ure.exec(document.referrer);
+                    var found = false;
+                    var kw = DocumentTitle;
+                    if (res != null && res.length > 1) {
+                           var s = unescape(res[1]);
+                           if (s != null && !blankre.test(s)) {
+                                 if (dre.test(s))
+                                        s = $j.trim(s.replace(dre, " "));
+                                  if (rre.test(s))
+                                        s = $j.trim(s.replace(rre, " "));
+                                 found = true;
+                                 kw = s;
+                           }
+                    }
+                    if (found == true) {
+                        $j("#spot9kw").html(kw);
+                       $j("#ad-spot9").css("display", "block");
+                   }
+             } catch (e) { }
+       });
+</script>
+<!-- ads spot 9 ends -->
+
+</div>
+
+            <div class="doc-header">
+                <div class="iconTitle">
+						  <div class="iconTitle-inner">
+								<div class = "docIcon ppt icon"></div>
+
+								<h1 id="PageDocTitle" class="english h1-free " style="padding-right:0px;">Computer Organization </h1>
+
+						  </div>
+					 </div>
+                <div id="download-button">
+<div><a onclick="openRegisterDownload(); return false;" href="#" id="btnDownload" class="frdoc-sp frdoc-sp-btn-download"></a></div>
+<div><a onclick="openRegisterPrint(); return false;" href="#" id="btnPrint" class="frdoc-sp frdoc-sp-btn-print"></a></div>
+
+</div>
+
+                <div class="clr"></div>
+            </div>
+            
+            <div class="doc-info" id="doc-info">
+
+
+                <div class="rCol">
+                    <div class="rColLiquid">
+                        
+                        <div class="document-comments">
+                            
+                        </div>
+                        <div onclick="trackAd(16,0,2,'',187,81261628,'');">
+<div class="adword" id="ad-spot6">
+
+</div>
+<style>.document-comments {margin:0px 0px 25px;}</style>
+</div>
+
+                    </div>
+                </div>
+                <div class="lCol">
+                    <div class="box box-user">
+                        <div class="title">Shared by: <span class="username"><a href="/profile/amr24">Amr Ghareeb Mohamed Al-qurany</a>
+</span></div>
+                    </div>
+                    <div class="box box-dual">
+                        <div class="unit line">
+                            <div class="title">Categories</div>
+<div class="values" id="categories"><a href="/documents/education" style="color:#BD8027;" title="Education">Education</a> > <a href="/documents/education/home-schooling" style="color:#BD8027;" title="Home Schooling">Home Schooling</a></div>
+
+                        </div>
+                        <div class="unit">
+                            <div class="title">Tags</div>
+<div class="values" id="tags"><a href="/search/computer-organization" title="Computer Organization">Computer Organization</a>, <a href="/search/computer-organization-and-architecture" title="computer organization and architecture">computer organization and architecture</a></div>
+
+                        </div>
+                    </div>
+                    <!-- google_ad_section_end -->
+                    <div class="box box-stats">-
+                        <div class="title">Stats</div>
+                        <dl id="document-stats">
+<dt>views:</dt><dd>114</dd>
+<dt>posted:</dt><dd>6/8/2011</dd>
+<dt>language:</dt><dd>English</dd>
+<dt>pages:</dt><dd>25</dd>
+</dl>
+
+                        <div class="clr"></div>
+                    </div>
+                    <div class="box-license"><div id="document-copyright" class="img-button">
+<div class="padding">
+<a href="http://www.creativecommons.org/licenses/publicdomain" target="_blank"><img src="http://i.docstoccdn.com/cc/icon_pd.gif" alt="Public Domain" /></a>
+<br />
+<a href="http://www.creativecommons.org/licenses/publicdomain" target="_blank">Public Domain</a>
+</div>
+</div>
+</div>
+                </div>
+                <div class="clr"></div>
+                
+            </div>
+            <div id="viewer-area-holder">
+					 <div id="viewer-area">
+					 	  <div onclick="trackAd(16,0,2,'',1241,81261628,'');">
+<script>
+/*-------------------------------------------------------------------------------------------------Start Google Ad-------------------------------------------------------------------------------------------------------------------------------*/
+var len = 0;
+function google_ad_request_done(ga) {
+	if (ga == null || ga.length == 0) { len = ga.length; return; }
+	len = ga.length;
+	var i = 0;
+	var s = "";
+	if (googleAdStyle == null) googleAdStyle = "";
+	var orientation = googleAdStyle.substring(0, 1);
+	var adbreak = (googleAdStyle.indexOf("line") >= 0) ? "<span style=\"text-decoration:none\">&nbsp; </span>" : "<br>";
+	var textbreak = (googleAdStyle.indexOf('_2') >= 0) ? "<br>" : " ";
+
+	if ($defined(ga[0].type) && ga[0].type != undefined && ga[0].type != null) {
+
+		if (ga[0].type == "flash") {
+
+			s += '<tr><td><object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000"' +
+			' codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,0,0" WIDTH="' +
+			google_ad.image_width + '" HEIGHT="' +
+			google_ad.image_height + '"> <PARAM NAME="movie" VALUE="' +
+			google_ad.image_url + '">' +
+			'<PARAM NAME="quality" VALUE="high">' +
+			'<PARAM NAME="wmode" VALUE="transparent">' +
+			'<PARAM NAME="AllowScriptAccess" VALUE="never">' +
+			'<EMBED src="' +
+			google_ad.image_url + '" WIDTH="' +
+			google_ad.image_width + '" HEIGHT="' +
+			google_ad.image_height +
+			'" TYPE="application/x-shockwave-flash"' +
+			' AllowScriptAccess="never" ' +
+			' PLUGINSPAGE="http://www.macromedia.com/go/getflashplayer"></EMBED></OBJECT></td>';
+
+
+		} else if (ga[0].type == "image") {
+
+			s += '<tr><td><a target="_blank" href="' +
+			ga[0].url + '" target="_top" title="go to ' +
+			ga[0].visible_url + '" onmouseout="window.status=\'\'" onmouseover="window.status=\'go to ' +
+			ga[0].visible_url + '\';return true"><img border="0" src="' +
+			ga[0].image_url + '"width="' +
+			ga[0].image_width + '"height="' +
+			ga[0].image_height + '"></a></td>';
+
+
+		} else if (ga[0].type == "html") {
+
+			s += '<tr><td>' +
+			ga[0].snippet + '</td>';
+
+		} else {
+
+			s+= '<tr><td><a target="_blank" class="adsByGoogle2" href="' + google_info.feedback_url + '">Ads by Google</a></td></tr>';
+
+			for (i = 0; i < len; i++) {
+				var ad = ga[i];
+				if (ad) {
+					var onClick = ' onclick="adClick(\'Docstoc Doc ' + googleAdChannel + '\',\'' + DocumentID + '\',\'' + ad.line1 + ' | ' + ad.visible_url + '\');" ';
+
+					var google_title = '<a target="_blank" class="toplink" onmouseover="javascript:window.status=\'' +
+						ad.visible_url + '\';return true;" onmouseout="javascript:window.status=\'\';return true;" href="' +
+						ad.url + '" ' + onClick + '>' +
+						ad.line1 + '</a>';
+
+					var google_text = '<span class="ad_text">' +
+						ad.line2 + textbreak + ad.line3 + '</span>';
+
+					var google_url = '<a target="_blank" class="ad_url" onmouseover="javascript:window.status=\'' +
+						ad.visible_url + '\';return true;" onmouseout="javascript:window.status=\'\';return true;" href="' +
+						ad.url + '" ' + onClick + '>' +
+						ad.visible_url + '</a>';
+
+					/* define ad lines above */
+
+					if (orientation == 'v') { s += '<tr>'; } /* if vertical ad */
+
+					s += '<td class="googAd">';
+
+					if (googleAdStyle.indexOf('order') >= 0) {
+						s += google_title + adbreak +
+							 google_url + adbreak +
+							 google_text;
+
+					} else if (googleAdStyle.indexOf('wrap') >= 0) {
+						s += google_title + '&nbsp; ' +
+							 google_text + '<br>' +
+							 google_url;
+
+					} else if (googleAdStyle.indexOf('cells') >= 0) {
+						s += '<table class="adcopy"><tr><td class="adtextlinks">' + google_title + '<br>' +
+							 google_url + '</td><td class="adtextlines">' +
+							 google_text + '</td></tr></table>';
+
+					} else if (googleAdStyle.indexOf('table') >= 0) {
+						if ( i % 2 == 0) {
+
+							s += '<tr><td class="adcol1">' + google_title + adbreak +
+								google_text + adbreak +
+								google_url + '</td>';
+							}
+
+						else {
+
+							s += '<td class="adcol2">' + google_title + adbreak +
+								google_text + adbreak +
+								google_url + '</td></tr>';
+						}
+
+					} else {
+
+						s += google_title + adbreak +
+							 google_text + adbreak +
+							 google_url;
+		
+					}
+
+					s += '</td>';
+
+					if (orientation == 'v') { s += '</tr>'; } /* if vertical ad */
+
+					if (ad.bidtype == "CPC") { googlePageSkip++; }
+				}
+			}
+		}
+	}
+	if (s != "") {
+		document.getElementById('ad1').innerHTML = '<table>' + s + '</tr></table>';
+		document.getElementById('ad1').style.display = 'block';
+	}
+	google_skip = googlePageSkip;
+
+	requestsDone++;
+	setTimeout(resizeViewer, 100);
+}
+
+/*-------------------------------------------------------------------------------------------------End Google Ad---------------------------------------------------------------------------------------------------------------------------------*/
+</script>
+
+<style>
+	#ad1 .ad_url {font-size:10pt;vertical-align:bottom;}
+	#ad1 .ad_text {font-size:10pt;line-height:12pt;vertical-align:bottom;}
+    #ad1 table {padding-bottom:5px;}
+    #ad1 td {padding:3px}
+	#ad1 .adsByGoogle2 {padding:0px;margin-bottom:-14px}
+        .adword1 {border:0 solid #CCC;margin:0px;width:100%;background:#fff;display:none;clear:both;}
+        div.adword1 a.toplink {display:block;} 
+</style>
+<div class="adword1" id="ad1"></div>
+<script type="text/javascript">
+loggedin = (window.CurrentUserID == undefined || CurrentUserID == -10) ? 0 : 1;
+
+if (loggedin == 0) {
+	google_ad_client = 'pub-7343870454215956';
+	google_ad_output = 'js';
+	google_max_num_ads = '5';
+	google_feedback = 'on';
+	googleAdStyle = 'v_line_order';
+	google_image_size = '468x60';
+	google_hints = document.title;
+	google_ad_type = 'text_html';
+	google_ad_channel="5056562550";
+	google_language = 'en';
+
+
+	randNum = Math.random();
+
+	if (randNum < 0.25) { /*--------WISEGEEK 2-------*/
+		var newStyle = "";
+		newStyle += "div.adword1 .googAd {font-family: Arial,Helvetica,sans-serif; padding: 10px; position: relative; width: 722px; height: 48px; } ";
+		newStyle += "div.adword1 .toplink {display: inline-block; width: 250px; }";
+		newStyle += "div.adword1 .ad_url {font-style: italic; font-size: 10pt; vertical-align: bottom; position: absolute; left: 4px; right: 0; display: inline-block; width: initial; margin: 8px 0 0 0; }";
+		newStyle += "div.adword1 .ad_text {font-size: 10pt; line-height: 12pt; vertical-align: bottom; display: inline-block; width: 360px; position: absolute; left: 280px; margin: -20px 0 0; }";
+		newStyle += "#ad1 .ad_text {font-size: 11pt; }";
+		document.write('<style>' + newStyle + '</style>');
+		google_ad_channel += '+9533323714';
+
+	} else if (randNum < 0.50) { /*--------WISEGEEK 3-------*/
+		var newStyle = "";
+		newStyle += "div.adword1 .googAd {font-family: Arial,Helvetica,sans-serif; padding: 10px; position: relative; width: 722px; height: 40px; } ";
+		newStyle += "div.adword1 .toplink {display: inline-block; width: 250px; }";
+		newStyle += "div.adword1 .ad_url {font-style: italic; font-size: 10pt; vertical-align: bottom; position: absolute; left: 4px; right: 0; display: inline-block; width: initial;  margin: 4px 0 0 0;}";
+		newStyle += "div.adword1 .ad_text {font-size: 10pt; line-height: 12pt; vertical-align: bottom; display: inline-block; width: 360px; position: absolute; left: 280px; margin: -20px 0 0 0; }";
+		newStyle += "#ad1 .ad_text {font-size: 11pt; }";
+		document.write('<style>' + newStyle + '</style>');
+		google_ad_channel += '+7307222601';
+
+	} else if (randNum < 0.75) { /*--------WISEGEEK 1 380 255 -------*/
+		var newStyle = "";
+		newStyle += "div.adword1 .googAd {font-family: Arial,Helvetica,sans-serif; padding: 10px; position: relative; width: 722px; height: 40px; } ";
+		newStyle += "div.adword1 .toplink {display: inline-block; width: 260px; }";
+		newStyle += "div.adword1 .ad_url {font-style: italic; font-size: 10pt; vertical-align: bottom; text-align: right; right: 0; position: absolute; display: inline-block; width: initial; margin: 0 0 0 0; }";
+		newStyle += "div.adword1 .ad_text {font-size: 10pt; line-height: 12pt; vertical-align: bottom; display: inline-block; width: 380px; position: absolute; left: 255px; margin: -18px 0 0; }";
+		newStyle += "#ad1 .ad_text {font-size: 11pt; }";
+		document.write('<style>' + newStyle + '</style>');
+		google_ad_channel += '+5974113529';
+
+	} else {
+		google_ad_channel += '+3534517204';
+
+	} 	
+	
+	
+	
+	document.write("<script type='text/javascript' src='http://pagead2.googlesyndication.com/pagead/show_ads.js'> <\/script>");
+}
+</script>
+</div>
+
+					 	  
+						  
+						  <div onclick="trackAd(16,0,2,'',1060,81261628,'');">
+<script type="text/javascript">var _ds_ads = [{type: 1, value:'http://i.docstoc.com/ads/ipv_dnl.swf'}
+];</script>
+</div>
+
+						  <!-- google_ad_section_start -->
+						  <a name="centerdoc"></a><div id="flashContainerParent">
+<script type="text/javascript">showDocumentDID(81261628,15305835,"ppt",139933205,0,100,544,false,false,1,1,'','','',2, '0','DSPreloader.169.www.swf','0','','','1',escape('{"ViewerButtonType":1,"ViewerButtonUrl":null,"ViewerButtonFunction":"openRegisterDownload"}'));</script>
+</div>
+<script type="text/javascript">
+setupFlashAds('4183437355','Computer Organization')
+</script>
+
+						  <!-- google_ad_section_end -->
+						  <div onclick="trackAd(16,0,2,'',21,81261628,'');">
+
+</div>
+
+						  <!-- in-viewer image ad -->
+						  
+					 </div>
+            </div>
+            <div style="clear:both;"></div>
+        </div>
+    </div>
+
+	<script type="text/javascript">
+		getEl('viewer-area').style.width = getEl('doc-info').clientWidth + 'px';
+	</script>
+	
+	<div class="rCol">
+		
+		<div onclick="trackAd(16,0,2,'',1101,81261628,'');">
+<script type='text/javascript' src='http://partner.googleadservices.com/gampad/google_service.js'>
+</script>
+<script type='text/javascript'>
+typeof(GS_googleAddAdSenseService)=="function" && typeof(GS_googleAddAdSenseService)=="function" && GS_googleAddAdSenseService("ca-pub-7343870454215956");
+typeof(GS_googleEnableAllServices)=="function" && GS_googleEnableAllServices();
+</script>
+<script type='text/javascript'>
+typeof(GA_googleAddSlot)=="function" && GA_googleAddSlot("ca-pub-7343870454215956", "Docstoc_House_300x250");
+</script>
+<script type='text/javascript'>
+typeof(GA_googleFetchAds)=="function" && GA_googleFetchAds();
+typeof(console)=="object" && console.log("Docstoc House Premium 300x250");
+</script>
+
+<div style="margin-bottom:10px;">
+	<!-- Docstoc_House_300x250 -->
+	<script type='text/javascript'>
+	typeof(GA_googleFillSlot)=="function" && GA_googleFillSlot("Docstoc_House_300x250");
+	</script>
+</div>
+</div>
+
+		<!-- div style="clear:both;"></div>
+		        <div class="fblikewrap">
+         <fb:like layout="standard" show_faces="true" width="250" action="recommend" colorscheme="light" ></fb:like>
+        </div -->
+		<div onclick="trackAd(16,0,2,'',293,81261628,'');">
+<div class="adword" id="ad-spot3">
+
+</div>
+</div>
+
+		<div class="fds-ur">
+</div>
+
+		<!-- google_ad_section_start -->
+		
+		<div class="docs-box-header">Related docs</div><div class="docs-box related-docs">
+<div class="doc">
+<a href="/docs/88326104/Computer-Organization-Computer-Organization" class="thumbIcon"><div class = "sideIcon docIcon pdf"></div></a>
+<div class="titleStats"><a class="title" href="/docs/88326104/Computer-Organization-Computer-Organization">Computer Organization Computer Organization</a>
+<div class="stats">
+Views: 9&nbsp;&nbsp;|&nbsp;&nbsp;Downloads: 0</div></div>
+<div class="clr"></div>
+</div>
+<div class="doc">
+<a href="/docs/71191391/COMPUTER-ORGANIZATION---PDF" class="thumbIcon"><div class = "sideIcon docIcon pdf"></div></a>
+<div class="titleStats"><a class="title" href="/docs/71191391/COMPUTER-ORGANIZATION---PDF">COMPUTER ORGANIZATION - PDF</a>
+<div class="stats">
+Views: 224&nbsp;&nbsp;|&nbsp;&nbsp;Downloads: 0</div></div>
+<div class="clr"></div>
+</div>
+<div class="doc">
+<a href="/docs/129527337/COMPUTER-ORGANIZATION---DOC" class="thumbIcon"><div class = "sideIcon docIcon doc"></div></a>
+<div class="titleStats"><a class="title" href="/docs/129527337/COMPUTER-ORGANIZATION---DOC">COMPUTER ORGANIZATION - DOC</a>
+<div class="stats">
+Views: 0&nbsp;&nbsp;|&nbsp;&nbsp;Downloads: 0</div></div>
+<div class="clr"></div>
+</div>
+<div class="doc">
+<a href="/docs/130739590/Computer-organization" class="thumbIcon"><div class = "sideIcon docIcon ppt"></div></a>
+<div class="titleStats"><a class="title" href="/docs/130739590/Computer-organization">Computer organization</a>
+<div class="stats">
+Views: 1&nbsp;&nbsp;|&nbsp;&nbsp;Downloads: 0</div></div>
+<div class="clr"></div>
+</div>
+<div class="doc">
+<a href="/docs/121155178/Computer-Organization" class="thumbIcon"><div class = "sideIcon docIcon pdf"></div></a>
+<div class="titleStats"><a class="title" href="/docs/121155178/Computer-Organization">Computer Organization</a>
+<div class="stats">
+Views: 41&nbsp;&nbsp;|&nbsp;&nbsp;Downloads: 2</div></div>
+<div class="clr"></div>
+</div>
+<div class="doc">
+<a href="/docs/125263088/Computer-Organization" class="thumbIcon"><div class = "sideIcon docIcon pdf"></div></a>
+<div class="titleStats"><a class="title" href="/docs/125263088/Computer-Organization">Computer Organization</a>
+<div class="stats">
+Views: 8&nbsp;&nbsp;|&nbsp;&nbsp;Downloads: 0</div></div>
+<div class="clr"></div>
+</div>
+<div class="doc">
+<a href="/docs/134821246/COMPUTER-ORGANIZATION" class="thumbIcon"><div class = "sideIcon docIcon pdf"></div></a>
+<div class="titleStats"><a class="title" href="/docs/134821246/COMPUTER-ORGANIZATION">COMPUTER ORGANIZATION</a>
+<div class="stats">
+Views: 8&nbsp;&nbsp;|&nbsp;&nbsp;Downloads: 4</div></div>
+<div class="clr"></div>
+</div>
+<div class="doc">
+<a href="/docs/122511991/Computer-Organization" class="thumbIcon"><div class = "sideIcon docIcon ppt"></div></a>
+<div class="titleStats"><a class="title" href="/docs/122511991/Computer-Organization">Computer Organization</a>
+<div class="stats">
+Views: 1&nbsp;&nbsp;|&nbsp;&nbsp;Downloads: 0</div></div>
+<div class="clr"></div>
+</div>
+<div class="doc">
+<a href="/docs/106534251/Computer-Organization" class="thumbIcon"><div class = "sideIcon docIcon ppt"></div></a>
+<div class="titleStats"><a class="title" href="/docs/106534251/Computer-Organization">Computer Organization</a>
+<div class="stats">
+Views: 7&nbsp;&nbsp;|&nbsp;&nbsp;Downloads: 0</div></div>
+<div class="clr"></div>
+</div>
+<div class="doc">
+<a href="/docs/74444716/Computer-Organization" class="thumbIcon"><div class = "sideIcon docIcon pdf"></div></a>
+<div class="titleStats"><a class="title" href="/docs/74444716/Computer-Organization">Computer Organization</a>
+<div class="stats">
+Views: 7&nbsp;&nbsp;|&nbsp;&nbsp;Downloads: 0</div></div>
+<div class="clr"></div>
+</div>
+<div class="doc">
+<a href="/docs/66113275/Computer-Organization" class="thumbIcon"><div class = "sideIcon docIcon ppt"></div></a>
+<div class="titleStats"><a class="title" href="/docs/66113275/Computer-Organization">Computer Organization</a>
+<div class="stats">
+Views: 117&nbsp;&nbsp;|&nbsp;&nbsp;Downloads: 0</div></div>
+<div class="clr"></div>
+</div>
+<div class="doc">
+<a href="/docs/81262057/Computer-Organization" class="thumbIcon"><div class = "sideIcon docIcon ppt"></div></a>
+<div class="titleStats"><a class="title" href="/docs/81262057/Computer-Organization">Computer Organization</a>
+<div class="stats">
+Views: 61&nbsp;&nbsp;|&nbsp;&nbsp;Downloads: 0</div></div>
+<div class="clr"></div>
+</div>
+<div class="doc">
+<a href="/docs/81261700/Computer-Organization" class="thumbIcon"><div class = "sideIcon docIcon ppt"></div></a>
+<div class="titleStats"><a class="title" href="/docs/81261700/Computer-Organization">Computer Organization</a>
+<div class="stats">
+Views: 31&nbsp;&nbsp;|&nbsp;&nbsp;Downloads: 0</div></div>
+<div class="clr"></div>
+</div>
+<div class="doc">
+<a href="/docs/89321312/Computer-Organization" class="thumbIcon"><div class = "sideIcon docIcon ppt"></div></a>
+<div class="titleStats"><a class="title" href="/docs/89321312/Computer-Organization">Computer Organization</a>
+<div class="stats">
+Views: 11&nbsp;&nbsp;|&nbsp;&nbsp;Downloads: 0</div></div>
+<div class="clr"></div>
+</div>
+<div class="doc">
+<a href="/docs/81262114/Computer-Organization" class="thumbIcon"><div class = "sideIcon docIcon ppt"></div></a>
+<div class="titleStats"><a class="title" href="/docs/81262114/Computer-Organization">Computer Organization</a>
+<div class="stats">
+Views: 57&nbsp;&nbsp;|&nbsp;&nbsp;Downloads: 0</div></div>
+<div class="clr"></div>
+</div>
+</div>
+
+       
+        
+		<!-- google_ad_section_end -->
+		<div onclick="trackAd(16,0,2,'',21,81261628,'');">
+
+</div>
+
+		<div class="docs-box-header">Other docs by <a href="/profile/amr24">Amr Ghareeb Mo...</a></div><div class="docs-box other-docs-by-user">
+<div class="doc">
+<a href="/docs/81262149/Computer-Organization" class="thumbIcon"><div class = "sideIcon docIcon ppt"></div></a>
+<div class="titleStats"><a class="title" href="/docs/81262149/Computer-Organization">Computer Organization</a>
+<div class="stats">
+Views: 47&nbsp;&nbsp;|&nbsp;&nbsp;Downloads: 0</div></div>
+<div class="clr"></div>
+</div>
+<div class="doc">
+<a href="/docs/81261828/Computer-Organization" class="thumbIcon"><div class = "sideIcon docIcon ppt"></div></a>
+<div class="titleStats"><a class="title" href="/docs/81261828/Computer-Organization">Computer Organization</a>
+<div class="stats">
+Views: 39&nbsp;&nbsp;|&nbsp;&nbsp;Downloads: 0</div></div>
+<div class="clr"></div>
+</div>
+<div class="doc">
+<a href="/docs/81262007/Computer-Organization" class="thumbIcon"><div class = "sideIcon docIcon ppt"></div></a>
+<div class="titleStats"><a class="title" href="/docs/81262007/Computer-Organization">Computer Organization</a>
+<div class="stats">
+Views: 56&nbsp;&nbsp;|&nbsp;&nbsp;Downloads: 0</div></div>
+<div class="clr"></div>
+</div>
+<div class="doc">
+<a href="/docs/81261700/Computer-Organization" class="thumbIcon"><div class = "sideIcon docIcon ppt"></div></a>
+<div class="titleStats"><a class="title" href="/docs/81261700/Computer-Organization">Computer Organization</a>
+<div class="stats">
+Views: 31&nbsp;&nbsp;|&nbsp;&nbsp;Downloads: 0</div></div>
+<div class="clr"></div>
+</div>
+<div class="doc">
+<a href="/docs/81261762/Computer-Organization" class="thumbIcon"><div class = "sideIcon docIcon ppt"></div></a>
+<div class="titleStats"><a class="title" href="/docs/81261762/Computer-Organization">Computer Organization</a>
+<div class="stats">
+Views: 35&nbsp;&nbsp;|&nbsp;&nbsp;Downloads: 0</div></div>
+<div class="clr"></div>
+</div>
+<div class="doc">
+<a href="/docs/81262114/Computer-Organization" class="thumbIcon"><div class = "sideIcon docIcon ppt"></div></a>
+<div class="titleStats"><a class="title" href="/docs/81262114/Computer-Organization">Computer Organization</a>
+<div class="stats">
+Views: 57&nbsp;&nbsp;|&nbsp;&nbsp;Downloads: 0</div></div>
+<div class="clr"></div>
+</div>
+<div class="doc">
+<a href="/docs/81261865/Computer-Organization" class="thumbIcon"><div class = "sideIcon docIcon ppt"></div></a>
+<div class="titleStats"><a class="title" href="/docs/81261865/Computer-Organization">Computer Organization</a>
+<div class="stats">
+Views: 46&nbsp;&nbsp;|&nbsp;&nbsp;Downloads: 1</div></div>
+<div class="clr"></div>
+</div>
+<div class="doc">
+<a href="/docs/81261628/Computer-Organization" class="thumbIcon"><div class = "sideIcon docIcon ppt"></div></a>
+<div class="titleStats"><a class="title" href="/docs/81261628/Computer-Organization">Computer Organization</a>
+<div class="stats">
+Views: 114&nbsp;&nbsp;|&nbsp;&nbsp;Downloads: 1</div></div>
+<div class="clr"></div>
+</div>
+<div class="doc">
+<a href="/docs/81262057/Computer-Organization" class="thumbIcon"><div class = "sideIcon docIcon ppt"></div></a>
+<div class="titleStats"><a class="title" href="/docs/81262057/Computer-Organization">Computer Organization</a>
+<div class="stats">
+Views: 61&nbsp;&nbsp;|&nbsp;&nbsp;Downloads: 0</div></div>
+<div class="clr"></div>
+</div>
+<div class="doc">
+<a href="/docs/81261903/Computer-Organization" class="thumbIcon"><div class = "sideIcon docIcon ppt"></div></a>
+<div class="titleStats"><a class="title" href="/docs/81261903/Computer-Organization">Computer Organization</a>
+<div class="stats">
+Views: 37&nbsp;&nbsp;|&nbsp;&nbsp;Downloads: 0</div></div>
+<div class="clr"></div>
+</div>
+</div>
+
+		<div onclick="trackAd(16,0,2,'',1105,81261628,'');">
+<script language="JavaScript">
+
+	function goPopAd() {
+                var goPopAdVersion = 4;
+		var PopAd;
+		if(getCookie("adunder") == null){
+			if(ua.indexOf("msie") >= 0) {
+				PopAd = window.open("http://www.docstoc.com/doc/docstoc_premium_ad.html",'PremHouse','width=577px,height=422px,toolbar=0,location=0,directories=0,status=0,menubar=0,scrollbars=0,resizable=false');
+				} else {
+				PopAd = window.open("http://www.docstoc.com/doc/docstoc_premium_ad.html",'PremHouse','width=582px,height=427px,toolbar=0,location=0,directories=0,status=0,menubar=0,scrollbars=0,resizable=false');
+			}
+
+			PopAd.blur();
+			window.focus();
+			setCookie("adunder",1,1);
+		}
+	}
+
+$j(document).ready(function() {
+
+  typeof(console)=="object" && console.log("goPopAd loading");
+
+	$j(".frdoc-sp-btn-download, .btn-downloadDoc, .frdoc-sp-btn-print, .download-now a.css-button").click( function() {
+		typeof(console)=="object" && console.log("goPopAd called 3");
+if($j && $j.browser && !$j.browser.mozilla) {
+		goPopAd();
+}
+	});
+
+});
+
+
+
+</script>
+</div>
+
+    </div>
+    
+	
+
+<div doc_id="81261628" id="regContainer"></div>
+
+
+
+ 
+<script type="text/javascript">
+	function RegisterDocStat(stat, doc_id, source) {
+		$j.ajax({
+			url: "/docstats?doc_id=" + doc_id + "&op=" + stat + "&source=" + source
+		});
+	}
+
+	$j(document).ready(function() {
+
+	    $j("#btnDownload").ensureClick(function () { RegisterDocStat('download', DocumentID, 'page'); });
+	    $j("#btnPrint").ensureClick(function () { RegisterDocStat('print', DocumentID, 'page'); });
+
+        //track download button
+        dsmetrics.click(jQuery("#download-button > div > a.frdoc-sp-btn-download"), "false", new DSMActivity("download-button", "", 6, 131, 8, [new DSMOtherInfo("doc_id", DocumentID)]));
+        //dsmetrics.click(jQuery("div.button > a > span.fdss-download").parent(), "false", new DSMActivity("download-button", "", 6, 131, 8, [new DSMOtherInfo("doc_id", DocumentID)]));
+
+        //track print button
+        dsmetrics.click(jQuery("#download-button > div > a.frdoc-sp-btn-print"), "false", new DSMActivity("print-button", "", 6, 131, 8, [new DSMOtherInfo("doc_id", DocumentID)]));
+        //dsmetrics.click(jQuery("div.button > a > span.fdss-print").parent(), "false", new DSMActivity("print-button", "", 6, 131, 8, [new DSMOtherInfo("doc_id", DocumentID)]));
+
+        //track edit button
+        //dsmetrics.click(jQuery("#download-button > div > a.frdoc-sp-btn-edit"), "false", new DSMActivity("edit-button", "", 2, 131, 14, [new DSMOtherInfo("doc_id", DocumentID)]));
+
+        //track share button
+        dsmetrics.click(jQuery("div.button > a > span.fdss-facebook").parent(), "false", new DSMActivity("share-button", "", 6, 131, 8, [new DSMOtherInfo("doc_id", DocumentID)]));
+
+        //track tweet button
+        dsmetrics.click(jQuery("div.button > a > span.fdss-twitter").parent(), "false", new DSMActivity("tweet-button", "", 6, 131, 8, [new DSMOtherInfo("doc_id", DocumentID)]));
+
+        //track embed button
+        dsmetrics.click(jQuery("div.button > a > span.fdss-embed").parent(), "false", new DSMActivity("embed-button", "", 6, 131, 8, [new DSMOtherInfo("doc_id", DocumentID)]));
+
+        //track bookmark button
+        dsmetrics.click(jQuery("div.button > a > span.fdss-bookmark").parent(), "false", new DSMActivity("bookmark-button", "", 6, 131, 8, [new DSMOtherInfo("doc_id", DocumentID)]));
+
+        //other docs title
+        jQuery.each(jQuery(".other-docs-by-user > div.doc > div > a.title"), function(eindex, evalue) {
+            var doc_url = jQuery(evalue).attr("href");
+            dsmetrics.click(jQuery(evalue), "false", new DSMActivity("other-docs-title", "", 6, 131, 8, [new DSMOtherInfo("doc_url", doc_url)]));
+        });
+
+        //other docs thumb
+        jQuery.each(jQuery(".other-docs-by-user > div.doc > a.thumbIcon"), function(eindex, evalue) {
+            var doc_url = jQuery(evalue).attr("href");
+            dsmetrics.click(jQuery(evalue), "false", new DSMActivity("other-docs-thumb", "", 6, 131, 8, [new DSMOtherInfo("doc_url", doc_url)]));
+        });
+
+        //related docs title
+        jQuery.each(jQuery(".related-docs > div.doc > div > a.title"), function(eindex, evalue) {
+            var doc_url = jQuery(evalue).attr("href");
+            dsmetrics.click(jQuery(evalue), "false", new DSMActivity("related-docs-title", "", 6, 131, 8, [new DSMOtherInfo("doc_url", doc_url)]));
+        });
+
+        //related docs thumb
+        jQuery.each(jQuery(".related-docs > div.doc > a.thumbIcon"), function(eindex, evalue) {
+            var doc_url = jQuery(evalue).attr("href");
+            dsmetrics.click(jQuery(evalue), "false", new DSMActivity("related-docs-thumb", "", 6, 131, 8, [new DSMOtherInfo("doc_url", doc_url)]));
+        });
+
+        //categories
+        jQuery.each(jQuery("#categories > a"), function(eindex, evalue) {
+            var obj = jQuery(evalue);
+            var cat_url = obj.attr("href");
+            var cat_name = obj.html();
+            dsmetrics.click(obj, "false", new DSMActivity("category-click", "", 6, 131, 8, [new DSMOtherInfo("cat_url", cat_url), new DSMOtherInfo("cat_name", cat_name)]));
+        });
+
+        //tags
+        jQuery.each(jQuery("#tags > a"), function(eindex, evalue) {
+            var obj = jQuery(evalue);
+            var tag_url = obj.attr("href");
+            var tag_name = obj.html();
+            dsmetrics.click(obj, "false", new DSMActivity("tag-click", "", 6, 131, 8, [new DSMOtherInfo("tag_url", tag_url), new DSMOtherInfo("tag_name", tag_name)]));
+        });
+
+   });
+</script>
+			
+			</div>
+		</div>
+		<div class="cls"></div><br />
+	
+	
+		<!-- google_ad_section_start(weight=ignore) -->
+			
+		<div id="footer-wrap2">
+				<div id="footer2">
+					<div id="foot-head"></div>
+					<div id="foot-main">
+						<div class="foot-corner spr-footer spr-footer-corner">
+						<div class="foot-social">
+
+							<a href="http://www.facebook.com/DocstocFB" title="Docstoc on Facebook"  rel="nofollow" class="spr-footer  spr-footer-fb"> </a>
+							<a href="http://twitter.com/docstoc" rel="nofollow" title="Docstoc on Twitter"  class="spr-footer  spr-footer-tw"> </a>
+							<a href="http://www.youtube.com/docstoctv" title="docstocTV Channel" rel="nofollow" class="spr-footer  spr-footer-yt"> </a>   
+							<a href="https://plus.google.com/103801755756812961700/posts" title="Docstoc on Google+"  rel="nofollow" class="spr-footer-gp"> </a>
+						</div>
+						</div>
+						<div class="foot-section">
+							<div class="foot-section-title">
+							About Us
+							</div>
+							<div class="foot-spacer"></div>
+							<ul class="foot-list">
+								<li><a href="/about/" rel="nofollow">What is Docstoc?</a></li>
+								<li><a href="/FAQ/" rel="nofollow">FAQs</a></li>
+								<li><a href="/contact/" rel="nofollow">Contact Us</a></li>
+								<li><a href="http://blog.docstoc.com/" rel="nofollow">Blog</a></li>
+								<li><a href="/jobs/" rel="nofollow">Join Our Team</a></li>
+								<li><a href="/feeds/rssfeed.aspx" rel="nofollow">RSS Feeds</a></li>							
+							</ul>
+						</div>
+						<div class="foot-section">
+							<div class="foot-section-title">
+							Products
+							</div>
+							<div class="foot-spacer"></div>
+							<ul class="foot-list">
+								<li><a href="http://premium.docstoc.com/subscribe" rel="nofollow">Docstoc Premium</a></li>
+								<li><a href="/premium/desktop" rel="nofollow">Docstoc Desktop</a></li>
+								<li><a href="http://www.license123.com" rel="nofollow">License123&trade;</a></li>
+								<li><a href="/customize/" rel="nofollow">Custom Docs</a></li>
+								<li><a href="/apps/" rel="nofollow">Mobile Apps</a></li>
+								<li><a href="/ipad/" rel="nofollow">Docstoc iPad</a></li>
+								<li><a href="/store/" rel="nofollow">Docstore</a></li>
+
+								
+							</ul>
+						</div>
+						<div class="foot-section">
+							<div class="foot-section-title">
+							Upload and Share
+							</div>
+							<div class="foot-spacer"></div>
+							<ul class="foot-list">
+								<li><a href="/publish-documents/" rel="nofollow">Why Upload?</a></li>
+								<li><a href="/embed-documents/">Embed Documents</a></li>
+								<li><a href="/oneclick/">Docstoc OneClick</a></li>
+								<li><a href="/sync/">Docstoc Sync</a></li>
+								<li><a href="http://platform.docstoc.com/" rel="nofollow">Docstoc API</a></li>	
+							</ul>
+						</div>
+						<div class="foot-section">
+							<div class="foot-section-title">
+							Legal
+							</div>
+							<div class="foot-spacer"></div>
+							<ul class="foot-list">
+								<li><a href="/Pages/Static.aspx?page_id=15">Docstoc Terms of Service</a></li>
+								<li><a href="/Pages/Static.aspx?page_id=102" rel="nofollow">DocStore Terms of Service</a></li>
+								<li><a href="/dmca/" rel="nofollow">Copyright</a></li>
+								<li><a href="/user/cmsstatic.aspx?page_id=100" rel="nofollow">DMCA Guidelines</a></li>
+								<li><a href="/Pages/Static.aspx?page_id=22" rel="nofollow">Privacy Policy</a></li>
+							</ul>
+						</div>
+						
+						<div style="clear:both;"></div>
+					</div>
+					<div id="foot-bottom">
+					<div class="foot-bottom-left">
+						<span>&copy; Docstoc<span style="font-size:11px">&reg;</span>  2011. All rights reserved. |  "Disclaimer: Legal information is not legal advice. " </span>
+                        <a href="javascript:void%20window.open('/Pages/Static.aspx?page_id=114&popup=true','TC','width=860,height=580,menubar=0,location=0,resizable=1,scrollbars=1,status=0')">Read More</a>
+					</div>
+					<div class="foot-bottom-right">
+						<a href="/">Home</a>
+						<a  href="/contact/" rel="nofollow">Contact</a>
+					</div>
+					<div style="clear:both;"></div>
+					</div>
+				</div>
+			</div>
+
+
+	
+		<!-- google_ad_section_end -->
+		
+	<br />
+</div>
+
+
+
+<script>
+/*-------------------------------------------------------------------------------------------------Start Google Ad-------------------------------------------------------------------------------------------------------------------------------*/
+var len = 0;
+function google_ad_request_done(ga) {
+	if (ga == null || ga.length == 0) { len = ga.length; return; }
+	len = ga.length;
+	var i = 0;
+	var s = "";
+	if (googleAdStyle == null) googleAdStyle = "";
+	var orientation = googleAdStyle.substring(0, 1);
+	var adbreak = (googleAdStyle.indexOf("line") >= 0) ? "<span style=\"text-decoration:none\">&nbsp; </span>" : "<br>";
+	var textbreak = (googleAdStyle.indexOf('_2') >= 0) ? "<br>" : " ";
+
+	if ($defined(ga[0].type) && ga[0].type != undefined && ga[0].type != null) {
+
+		if (ga[0].type == "flash") {
+
+			s += '<tr><td><object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000"' +
+			' codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,0,0" WIDTH="' +
+			google_ad.image_width + '" HEIGHT="' +
+			google_ad.image_height + '"> <PARAM NAME="movie" VALUE="' +
+			google_ad.image_url + '">' +
+			'<PARAM NAME="quality" VALUE="high">' +
+			'<PARAM NAME="wmode" VALUE="transparent">' +
+			'<PARAM NAME="AllowScriptAccess" VALUE="never">' +
+			'<EMBED src="' +
+			google_ad.image_url + '" WIDTH="' +
+			google_ad.image_width + '" HEIGHT="' +
+			google_ad.image_height +
+			'" TYPE="application/x-shockwave-flash"' +
+			' AllowScriptAccess="never" ' +
+			' PLUGINSPAGE="http://www.macromedia.com/go/getflashplayer"></EMBED></OBJECT></td>';
+
+
+		} else if (ga[0].type == "image") {
+
+			s += '<tr><td><a target="_blank" href="' +
+			ga[0].url + '" target="_top" title="go to ' +
+			ga[0].visible_url + '" onmouseout="window.status=\'\'" onmouseover="window.status=\'go to ' +
+			ga[0].visible_url + '\';return true"><img border="0" src="' +
+			ga[0].image_url + '"width="' +
+			ga[0].image_width + '"height="' +
+			ga[0].image_height + '"></a></td>';
+
+
+		} else if (ga[0].type == "html") {
+
+			s += '<tr><td>' +
+			ga[0].snippet + '</td>';
+
+		} else {
+
+			s+= '<tr><td><a target="_blank" class="adsByGoogle2" href="' + google_info.feedback_url + '">Ads by Google</a></td></tr>';
+
+			for (i = 0; i < len; i++) {
+				var ad = ga[i];
+				if (ad) {
+					var onClick = ' onclick="adClick(\'Docstoc Doc ' + googleAdChannel + '\',\'' + DocumentID + '\',\'' + ad.line1 + ' | ' + ad.visible_url + '\');" ';
+
+					var google_title = '<a target="_blank" class="toplink" onmouseover="javascript:window.status=\'' +
+						ad.visible_url + '\';return true;" onmouseout="javascript:window.status=\'\';return true;" href="' +
+						ad.url + '" ' + onClick + '>' +
+						ad.line1 + '</a>';
+
+					var google_text = '<span class="ad_text">' +
+						ad.line2 + textbreak + ad.line3 + '</span>';
+
+					var google_url = '<a target="_blank" class="ad_url" onmouseover="javascript:window.status=\'' +
+						ad.visible_url + '\';return true;" onmouseout="javascript:window.status=\'\';return true;" href="' +
+						ad.url + '" ' + onClick + '>' +
+						ad.visible_url + '</a>';
+
+					/* define ad lines above */
+
+					if (orientation == 'v') { s += '<tr>'; } /* if vertical ad */
+
+					s += '<td class="googAd">';
+
+					if (googleAdStyle.indexOf('order') >= 0) {
+						s += google_title + adbreak +
+							 google_url + adbreak +
+							 google_text;
+
+					} else if (googleAdStyle.indexOf('wrap') >= 0) {
+						s += google_title + '&nbsp; ' +
+							 google_text + '<br>' +
+							 google_url;
+
+					} else if (googleAdStyle.indexOf('cells') >= 0) {
+						s += '<table class="adcopy"><tr><td class="adtextlinks">' + google_title + '<br>' +
+							 google_url + '</td><td class="adtextlines">' +
+							 google_text + '</td></tr></table>';
+
+					} else if (googleAdStyle.indexOf('table') >= 0) {
+						if ( i % 2 == 0) {
+
+							s += '<tr><td class="adcol1">' + google_title + adbreak +
+								google_text + adbreak +
+								google_url + '</td>';
+							}
+
+						else {
+
+							s += '<td class="adcol2">' + google_title + adbreak +
+								google_text + adbreak +
+								google_url + '</td></tr>';
+						}
+
+					} else {
+
+						s += google_title + adbreak +
+							 google_text + adbreak +
+							 google_url;
+		
+					}
+
+					s += '</td>';
+
+					if (orientation == 'v') { s += '</tr>'; } /* if vertical ad */
+
+					if (ad.bidtype == "CPC") { googlePageSkip++; }
+				}
+			}
+		}
+	}
+	if (s != "") {
+		$(google_spot_id).innerHTML = '<table>' + s + '</tr></table>';
+		$(google_spot_id).style.display = 'block';
+	}
+	google_skip = googlePageSkip;
+
+	requestsDone++;
+	setTimeout(resizeViewer, 100);
+}
+
+/*-------------------------------------------------------------------------------------------------End Google Ad---------------------------------------------------------------------------------------------------------------------------------*/
+</script>
+
+<script type="text/javascript">
+
+if (window.loggedin == undefined || loggedin == 0) {
+
+google_spot_id = 'ad-spot6';
+google_ad_client = 'pub-7343870454215956';
+google_ad_output = 'js';
+google_feedback = 'on';
+google_image_size = '336x280';
+google_hints = document.title;
+google_ad_type = 'text_html';
+google_ad_channel="2191561729+8493335128+3327337023";
+google_language = 'en';
+google_max_num_ads = '4';
+googleAdStyle = 'v';
+
+document.write("<style>#ad-spot6 td {padding:1.5px;}</style>");
+
+	document.write('<script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js"> <\/script>');
+}
+</script>
+
+
+<script>
+/*-------------------------------------------------------------------------------------------------Start Google Ad-------------------------------------------------------------------------------------------------------------------------------*/
+var len = 0;
+function google_ad_request_done(ga) {
+	if (ga == null || ga.length == 0) { len = ga.length; return; }
+	len = ga.length;
+	var i = 0;
+	var s = "";
+	if (googleAdStyle == null) googleAdStyle = "";
+	var orientation = googleAdStyle.substring(0, 1);
+	var adbreak = (googleAdStyle.indexOf("line") >= 0) ? "<span style=\"text-decoration:none\">&nbsp; </span>" : "<br>";
+	var textbreak = (googleAdStyle.indexOf('_2') >= 0) ? "<br>" : " ";
+
+	if ($defined(ga[0].type) && ga[0].type != undefined && ga[0].type != null) {
+
+		if (ga[0].type == "flash") {
+
+			s += '<tr><td><object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000"' +
+			' codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,0,0" WIDTH="' +
+			google_ad.image_width + '" HEIGHT="' +
+			google_ad.image_height + '"> <PARAM NAME="movie" VALUE="' +
+			google_ad.image_url + '">' +
+			'<PARAM NAME="quality" VALUE="high">' +
+			'<PARAM NAME="wmode" VALUE="transparent">' +
+			'<PARAM NAME="AllowScriptAccess" VALUE="never">' +
+			'<EMBED src="' +
+			google_ad.image_url + '" WIDTH="' +
+			google_ad.image_width + '" HEIGHT="' +
+			google_ad.image_height +
+			'" TYPE="application/x-shockwave-flash"' +
+			' AllowScriptAccess="never" ' +
+			' PLUGINSPAGE="http://www.macromedia.com/go/getflashplayer"></EMBED></OBJECT></td>';
+
+
+		} else if (ga[0].type == "image") {
+
+			s += '<tr><td><a target="_blank" href="' +
+			ga[0].url + '" target="_top" title="go to ' +
+			ga[0].visible_url + '" onmouseout="window.status=\'\'" onmouseover="window.status=\'go to ' +
+			ga[0].visible_url + '\';return true"><img border="0" src="' +
+			ga[0].image_url + '"width="' +
+			ga[0].image_width + '"height="' +
+			ga[0].image_height + '"></a></td>';
+
+
+		} else if (ga[0].type == "html") {
+
+			s += '<tr><td>' +
+			ga[0].snippet + '</td>';
+
+		} else {
+
+			s+= '<tr><td><a target="_blank" class="adsByGoogle2" href="' + google_info.feedback_url + '">Ads by Google</a></td></tr>';
+
+			for (i = 0; i < len; i++) {
+				var ad = ga[i];
+				if (ad) {
+					var onClick = ' onclick="adClick(\'Docstoc Doc ' + googleAdChannel + '\',\'' + DocumentID + '\',\'' + ad.line1 + ' | ' + ad.visible_url + '\');" ';
+
+					var google_title = '<a target="_blank" class="toplink" onmouseover="javascript:window.status=\'' +
+						ad.visible_url + '\';return true;" onmouseout="javascript:window.status=\'\';return true;" href="' +
+						ad.url + '" ' + onClick + '>' +
+						ad.line1 + '</a>';
+
+					var google_text = '<span class="ad_text">' +
+						ad.line2 + textbreak + ad.line3 + '</span>';
+
+					var google_url = '<a target="_blank" class="ad_url" onmouseover="javascript:window.status=\'' +
+						ad.visible_url + '\';return true;" onmouseout="javascript:window.status=\'\';return true;" href="' +
+						ad.url + '" ' + onClick + '>' +
+						ad.visible_url + '</a>';
+
+					/* define ad lines above */
+
+					if (orientation == 'v') { s += '<tr>'; } /* if vertical ad */
+
+					s += '<td class="googAd">';
+
+					if (googleAdStyle.indexOf('order') >= 0) {
+						s += google_title + adbreak +
+							 google_url + adbreak +
+							 google_text;
+
+					} else if (googleAdStyle.indexOf('wrap') >= 0) {
+						s += google_title + '&nbsp; ' +
+							 google_text + '<br>' +
+							 google_url;
+
+					} else if (googleAdStyle.indexOf('cells') >= 0) {
+						s += '<table class="adcopy"><tr><td class="adtextlinks">' + google_title + '<br>' +
+							 google_url + '</td><td class="adtextlines">' +
+							 google_text + '</td></tr></table>';
+
+					} else if (googleAdStyle.indexOf('table') >= 0) {
+						if ( i % 2 == 0) {
+
+							s += '<tr><td class="adcol1">' + google_title + adbreak +
+								google_text + adbreak +
+								google_url + '</td>';
+							}
+
+						else {
+
+							s += '<td class="adcol2">' + google_title + adbreak +
+								google_text + adbreak +
+								google_url + '</td></tr>';
+						}
+
+					} else {
+
+						s += google_title + adbreak +
+							 google_text + adbreak +
+							 google_url;
+		
+					}
+
+					s += '</td>';
+
+					if (orientation == 'v') { s += '</tr>'; } /* if vertical ad */
+
+					if (ad.bidtype == "CPC") { googlePageSkip++; }
+				}
+			}
+		}
+	}
+	if (s != "") {
+		$(google_spot_id).innerHTML = '<table>' + s + '</tr></table>';
+		$(google_spot_id).style.display = 'block';
+	}
+	google_skip = googlePageSkip;
+
+	requestsDone++;
+	setTimeout(resizeViewer, 100);
+}
+
+/*-------------------------------------------------------------------------------------------------End Google Ad---------------------------------------------------------------------------------------------------------------------------------*/
+</script>
+<script type="text/javascript">
+
+if (window.loggedin == undefined || loggedin == 0) {
+
+	google_spot_id = 'ad-spot3';
+	google_ad_client = 'pub-7343870454215956';
+	google_ad_output = 'js';
+	google_max_num_ads = '5';
+	google_feedback = 'on';
+	googleAdStyle = 'v';
+	google_image_size = '160x600';
+	google_hints = document.title;
+	google_ad_type = 'text_html';
+	google_ad_channel="8493335128+4123938445+3243318210";
+	google_language = 'en';
+
+	document.write('<script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js"> <\/script>');
+}
+</script>
+<script type="text/javascript">
+(function() {
+ var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+ ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+ var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+var redirectUrl='/login/FacebookLogin.aspx?returnURL=http%3a%2f%2fwww.docstoc.com%2fDocs%2fDocument-Detail-Google.aspx%3fdoc_id%3d81261628';
+function FbRedirect() {var fburl='%2f%3fdoc_id%3d81261628%26download%3d1'; if(	$j('input#overload_premium').val()==1){fburl=''; }redirectUrl='/login/FacebookLogin.aspx?doc_id=81261628&pt=16&ft=11&popupLogin=1&returnURL='+fburl;}
+_qoptions={qacct:"p-07Zpl6-aPXQAI"};
+</script>
+<script type="text/javascript" src="http://edge.quantserve.com/quant.js"></script>
+<noscript><img src="http://pixel.quantserve.com/pixel/p-07Zpl6-aPXQAI.gif" style="display: none;" border="0" height="1" width="1" alt="Quantcast"/></noscript>
+
+<script type="text/javascript">    recordEndTime(); makeDD('ddTarget', 'ddDocuments', 'top'); makeDD('ddTargetMyDocs', 'ddMyDocs', 'top'); makeDD('ddTargetMyColl', 'ddMyColls', 'top');
+</script>
+<!--105 CurrentTime:11/6/2012 11:14:14 AM TimeSpan:00:00:00.0936024 -->
+
+
+<script type="text/javascript">
+//<![CDATA[
+initDSMetrics('{"FingerprintId":null,"DMA":"6f4922f45568161a8cdf4ad2299f6d23","City":"288a6430a6f57a76e823d74e0dd750d2","Region":"4dc1b469e5c13f47868c5fc0aea6d538","Country":"79cba1185463850dedba31f172f1dc5b","Fonts":null,"Plugins":null,"UserAgent":null,"IpAddress":"131.251.254.30","Resolution":null}', 'docstoc.com');//]]>
+</script>
+
+<script>
+	function onViewerEvent(obj)
+{
+	if(obj.eventType == "toolBarClick")
+	{
+		if(obj.data == "print")
+		{
+			dsmetrics.track(new DSMActivity("print-button", "", dsmetrics.ActivityObjType.Document, 131, dsmetrics.ActivityActionType.Click, []));
+		}
+		if(obj.data == "documentDownload")
+		{
+			dsmetrics.track(new DSMActivity("download-button", "", dsmetrics.ActivityObjType.Document, 131, dsmetrics.ActivityActionType.Click, []));
+		}
+	}
+}
+</script>
+<script type="text/javascript">SetH1Clickable("Computer Organization","/?doc_id=81261628&download=1");</script><script type="text/javascript">$j(document).ready(function() {
+		var authCookie = getCookie("docstoc.auth");
+		if (authCookie != null) {
+			openRegisterDownload = function() { document.location = "/?doc_id=81261628&download=1"; }
+			openRegisterPrint = function() { document.location = "/?doc_id=81261628&download=1"; }
+		}
+		});</script></form>
+
+
+
+
+
+
+</body>
+</html><script> var clientCountryName = "United Kingdom"; </script>

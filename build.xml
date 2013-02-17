@@ -1,0 +1,41 @@
+<project name="Bet" default="jar" basedir=".">
+	<description>PHD Project</description>
+	<!-- set global properties for this build -->
+	<property name="src" location="src" />
+	<property name="build" location="build_ant" />
+	<property name="dist" location="dist" />
+	<property name="classpath" location="libs" />
+	<property name="copy_classpath" location="dist/libs" />
+	<property name="output_file" location="dist/phdproject.jar" />
+	<property name="running_class" location="programs.AnonymizeLocationTags" />
+
+	<path id="classpath">
+		<fileset dir="${classpath}" includes="**/*.jar" />
+	</path>
+
+	<target name="init">
+		<tstamp />
+		<delete dir="${build}" />
+		<delete file="${output_file}" />
+		<mkdir dir="${build}" />
+	</target>
+
+	<target name="compile" depends="init" description="compile the source ">
+		<javac srcdir="" destdir="${build}" encoding="utf-8" classpathref="classpath">
+			<src path="${src}" />
+		</javac>
+	</target>
+
+	<target name="jar" depends="compile">
+		<copy todir="${copy_classpath}">
+			<fileset dir="${classpath}"/>
+		</copy>
+		<jar jarfile="${output_file}" basedir="${build}">
+			<manifest>
+				<attribute name="Main-Class" value="${running_class}" />
+				<attribute name="Class-Path" value="${manifest.class.path}" />
+			</manifest>
+		</jar>
+	</target>
+
+</project>

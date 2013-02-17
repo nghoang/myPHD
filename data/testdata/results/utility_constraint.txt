@@ -1,0 +1,189 @@
+ability, appearance, clarity, opacity, difficulty, nature, air
+ablation, catheterization, amputation, angioplasty, arthroscopy, debridement
+abnormality, saturation, situation, place, disorder
+abrasion, bleeding, bump, fracture, wound, lesion, illness
+abscess, hemoptysis
+absence, deficit, shortness, lack, deficiency
+access, floor
+accommodation, adjustment, recovery, transition, transfer, override, infusion, improvement
+acetaminophen, aspirin, codeine, morphine, acyclovir
+acetate, carbonate, phosphate
+acid, base, dimer
+activity, wear, assessment, stay, distribution, communication
+ad, body
+addendum, dictation, process, concern, set
+addition, input, middle, component, element, factor, function
+administration, treatment, duty, management
+admission, penetration
+age, disposition, fullness, strength, weakness
+agent, person
+agitation, anxiety, depression
+aid, assistance, protection
+airspace, form, time, space, quality
+albumin, ferritin, antibody, protein, sugar
+alcohol, milk
+alertness, attention, pattern, followup
+allergy, consciousness, thought
+allograft, muscle, graft, transplant, band
+alteration, episode, change, modification, case, movement, failure, success, contact, sound
+ammonium, water
+ampicillin, bacitracin, cephalosporin, ciprofloxacin
+amylase, lipase, phosphatase
+analysis, count, examination, investigation
+anion, stone
+ankle, knee
+antacid, drug
+apartment, block, area, spiral
+apex, peak, head, caput, neck, extremity, face, flank, region, septum
+appendectomy, cholecystectomy, endarterectomy, prostatectomy
+appetite, aspiration, pain
+appointment, call, resolution, view
+arrest, seizure
+artery, vein, vena, vessel, duct, tube, conduit, throat
+aspect, soil
+assay, evaluation, check, review, measure
+asthma, emphysema
+atelectasis, diverticulosis, stenosis, stricture, induration, endometriosis, infarct, infarction, fibrosis, neuropathy
+atorvastatin, simvastatin
+attempt, work, service, effort, control
+auscultation, hearing, sensation, touch, feeling
+axilla, sinus, oropharynx
+axis, quadrant, side
+b, lactobacillus
+balance, reduction
+bandage, patch
+barium, calcium
+baseline, scale, record
+batch, pack, hand, mass
+bathroom, cell
+bed, chest
+bedtime, morning, fall, day, night
+bid, response, challenge, explanation, speech
+blood, serum, lymph, pus, purulence
+bolus, goal, man, setup
+bone, skin, tendon
+border, surface
+bowel, liver, heart, pump, stomach, foot
+branch, department, company
+breakdown, gap, hold, relief, embolism
+breakfast, lunch, dinner, supper, course, meal, vitamin
+breast, tissue, lobe, rectum, shoulder, trunk
+breath, breathing, intake, reaction, healing, sweating, diaphoresis
+brother, family
+bypass, track
+cannula, catheter, drain, stent
+captopril, lisinopril
+carcinoma, lymphoma, sarcoma
+cardiologist, endocrinologist, hematologist, oncologist
+cardiology, neurology, oncology, ophthalmology
+cardiomyopathy, hypertension, hypotension, complaint
+care, procedure
+cc, liter, cord
+ceftazidime, ceftriaxone, cefuroxime, gentamicin
+center, eye, repair
+chemotherapy, correction, medication, radiation, hospitalization, therapy, irrigation
+chin, field, tract
+chlorhexidine, neomycin, iodine
+cigarette, tobacco
+circumflex, wedge, point
+claudication, prolapse, disability
+clearance, volume
+click, murmur
+clinic, hospital, unit
+cm, mm
+cocaine, methadone, diuretic
+code, prescription, infection, sign, indication, document
+collaboration, compliance
+colonoscopy, palpation, endoscopy, study
+condition, status, degree, level, stage, office, order, dependence
+confusion, flutter
+conjunctivae, mucosa
+consolidation, fusion
+contract, summary
+contraindication, reason, ground, life, event
+contrast, option
+conversion, decrease, increase
+cortisol, hydrocortisone, dexamethasone, triamcinolone, insulin
+coumadin, heparin
+couple, spray, minimum, drop
+coverage, gain, loss
+ct, ultrasound, imaging
+cycle, interim, rhythm, round, period
+dairy, lab, laboratory
+dc, pressure
+decubitus, presentation, node
+density, flow, frequency
+deviation, replacement
+dialysis, urinalysis
+diet, regime, projection, plan
+dig, tee, left
+dilatation, sleep
+diltiazem, nifedipine
+disease, growth, injury
+doctor, physician, nurse, lawyer
+drainage, removal
+drink, thigh
+duration, week, evening
+echocardiogram, video
+edema, enlargement, elevation, split
+effusion, impression, perspective, phase
+ejection, heave, stress
+electrolyte, food
+emergency, urgency
+emesis, vomiting, regurgitation, shock, flatus
+endocrine, mucus
+exam, post, test
+father, mother
+fatigue, somnolence
+female, male
+finger, toe
+firm, house
+fluid, sediment, inhibitor
+folate, thiamine, niacin
+forearm, leg
+future, intervention
+ga, oxygen
+glucose, number
+gm, mcg, gram
+half, quarter
+harvest, output, paper
+headache, inflammation
+healthcare, nursing
+hematemesis, stool, urine, vomitus
+hematocrit, speed
+history, yesterday
+hour, month, hr, minute
+husband, wife
+hydration, machine
+hyperthyroidism, hypothyroidism
+hypertrophy, pneumothorax
+imbalance, size
+inconvenience, malaise
+inhaler, nebulizer
+intubation, transfusion, perfusion
+lateral, release
+leaflet, mask, screen
+leak, mouth
+leukocytosis, purpura
+list, report
+load, temperature
+maneuver, support, onset
+metoprolol, nadolol
+money, tender
+monitoring, observation, telemetry
+nadir, problem
+norvasc, vasodilator
+nostril, orifice
+occlusion, stroke
+ocean, requirement
+orientation, placement, room
+outpatient, patient, trial
+panel, range
+phone, telephone
+progression, rash, series
+pulse, travel, wave, rebound
+recliner, wheelchair
+segment, spine
+staph, staphylococcus
+tablet, type
+visit, year

@@ -1,0 +1,2762 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<HTML xmlns='http://www.w3.org/1999/xhtml' xmlns:b='http://www.google.com/2005/gml/b' xmlns:data='http://www.google.com/2005/gml/data' xmlns:expr='http://www.google.com/2005/gml/expr'>
+<head>
+<meta content='Curves and Surfaces for Computer Graphics by David SalomonFree Slides Sharing' name='Description'/>
+<meta content='Curves and Surfaces for Computer Graphics by David SalomonFree Slides Sharing' name='Keywords'/>
+<meta content='LLzREimNLdaZXMHS17oGucPKDoB-dE7VpJQR9iUd1HE' name='google-site-verification'/>
+<META content='5bjkkDYFV0TX6mw7U3NegqOJhDk/hJ67wxlrDsJ/VLU=' name='verify-v1'></META>
+<meta content='Mk8F+apZYmNeI91ykHuW0m2U34GIKHRJAAFDsZOUjns=' name='verify-v1'/>
+<META content='184A97D59AA94F4584CC1BF531692460' name='msvalidate.01'></META>
+<META content='c912958fe454a7dc' name='y_key'></META>
+<META content='index, follow' name='msnbot'></META>
+<meta content='text/html; charset=UTF-8' http-equiv='Content-Type'/>
+<script type="text/javascript">(function() { var a=window,b="jstiming",d="tick";var e=function(c){this.t={};this.tick=function(c,p,h){h=void 0!=h?h:(new Date).getTime();this.t[c]=[h,p]};this[d]("start",null,c)},f=new e;a.jstiming={Timer:e,load:f};if(a.performance&&a.performance.timing){var g=a.performance.timing,j=a[b].load,k=g.navigationStart,l=g.responseStart;0<k&&l>=k&&(j[d]("_wtsrt",void 0,k),j[d]("wtsrt_","_wtsrt",l),j[d]("tbsd_","wtsrt_"))}
+try{var m=null;a.chrome&&a.chrome.csi&&(m=Math.floor(a.chrome.csi().pageT),j&&0<k&&(j[d]("_tbnd",void 0,a.chrome.csi().startE),j[d]("tbnd_","_tbnd",k)));null==m&&a.gtbExternal&&(m=a.gtbExternal.pageT());null==m&&a.external&&(m=a.external.pageT,j&&0<k&&(j[d]("_tbnd",void 0,a.external.startE),j[d]("tbnd_","_tbnd",k)));m&&(a[b].pt=m)}catch(n){};a.tickAboveFold=function(c){var i=0;if(c.offsetParent){do i+=c.offsetTop;while(c=c.offsetParent)}c=i;750>=c&&a[b].load[d]("aft")};var q=!1;function r(){q||(q=!0,a[b].load[d]("firstScrollTime"))}a.addEventListener?a.addEventListener("scroll",r,!1):a.attachEvent("onscroll",r);
+ })();</script>
+<meta content='true' name='MSSmartTagsPreventParsing'/>
+<meta content='blogger' name='generator'/>
+<link href='http://www.bkshare.org.in/favicon.ico' rel='icon' type='image/x-icon'/>
+<link href='http://www.bkshare.org.in/2009/05/curves-and-surfaces-for-computer.html' rel='canonical'/>
+<link rel="alternate" type="application/atom+xml" title="Free Slides Sharing - Atom" href="http://www.bkshare.org.in/feeds/posts/default" />
+<link rel="alternate" type="application/rss+xml" title="Free Slides Sharing - RSS" href="http://www.bkshare.org.in/feeds/posts/default?alt=rss" />
+<link rel="service.post" type="application/atom+xml" title="Free Slides Sharing - Atom" href="http://www.blogger.com/feeds/3940223671753845456/posts/default" />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://www.blogger.com/rsd.g?blogID=3940223671753845456" />
+<link rel="alternate" type="application/atom+xml" title="Free Slides Sharing - Atom" href="http://www.bkshare.org.in/feeds/556368443788695483/comments/default" />
+<!--[if IE]> <script> (function() { var html5 = ("abbr,article,aside,audio,canvas,datalist,details," + "figure,footer,header,hgroup,mark,menu,meter,nav,output," + "progress,section,time,video").split(','); for (var i = 0; i < html5.length; i++) { document.createElement(html5[i]); } try { document.execCommand('BackgroundImageCache', false, true); } catch(e) {} })(); </script> <![endif]-->
+<TITLE>Curves and Surfaces for Computer Graphics by David Salomon | Free Slides Sharing</TITLE>
+<link type='text/css' rel='stylesheet' href='//www.blogger.com/static/v1/widgets/1937454905-widget_css_bundle.css' />
+<link type="text/css" rel="stylesheet" href="//www.blogger.com/dyn-css/authorization.css?targetBlogID=3940223671753845456&zx=0fbd7cb4-43a0-450c-bf03-57255b678004"/>
+<style id='page-skin-1' type='text/css'><!--
+/*
+/* **************************
+Name: Forte
+Blogger by: http://Blogandweb.com
+Designer: http://wpthemesplugin.com/
+Date: Mar 08
+Distributed by: http://BTemplates.com
+*****************************
+*/
+#outer-wrapper {
+margin: 0px auto;
+padding: 0px;
+width: 894px;
+}
+#wrap2 {
+margin: 0px;
+padding: 0px 0px 1em;
+width: 894px;
+float: left;
+}
+#navbar-iframe {
+height:0px;
+visibility:hidden;
+display:none
+}
+/*-- (Generales) --*/
+body {
+margin: 0px;
+padding: 0px;
+font-family: Verdana, Arial, Times New Roman, sans-serif;
+font-size: 100%;
+color: #4E4E4E;
+background: #FFFFFF url(http://img137.imageshack.us/img137/2397/bgom9.png) repeat;
+}
+h1, h2, h3, h4, h5, h6 {
+font-family: Georgia, Times New Roman, Helvetica, sans-serif;
+letter-spacing: -0.05em;
+text-transform: capitalize;
+}
+blockquote {
+margin: 10px;
+padding: 8px 5px;
+clear: both;
+border-top: 1px solid #F1F4DF;
+border-bottom: 1px solid #F1F4DF;
+font-size: 12px;
+line-height: 19px;
+font-weight: bold;
+text-transform: capitalize;
+color: #000000;
+background: url(http://img137.imageshack.us/img137/5822/bgaltyn2.png) repeat;
+border-left: 3px solid #262626;
+}
+blockquote blockquote {
+margin: 5px;
+padding: 5px;
+clear: both;
+border-width: 0px;
+}
+a img {
+border:0px;
+}
+pre {
+margin: 8px 0px;
+padding: 0px;
+clear: both;
+width: 90%;
+overflow: scroll;
+font-family: Verdana, sans-serif, Arial;
+font-size: 1em;
+background: #FFFFFF;
+color: #000000;
+height: 60px;
+border: 1px solid #999999;
+}
+em {
+color: #000000;
+font-size: 11px;
+}
+blockquote p {
+margin: 0px;
+padding: 0px;
+}
+#main-wrapper {overflow:hidden;}
+.clear {clear:both;}
+#blog-pager-newer-link {float: left;}
+#blog-pager-older-link {float: right;}
+#blog-pager {text-align: center; }
+/*-- (Cabecera) --*/
+#header-wrapper {
+margin: 0px;
+padding: 0px;
+width: 894px;
+float: left;
+position: relative;
+}
+#header-inner {
+float: left;
+width: 400px;
+padding: 10px;
+}
+#titlewrapper {
+}
+#header-wrapper h1 {
+font-size: 1.5em;
+margin: 0px;
+padding: 0px;
+float: left;
+width: 400px;
+font-weight: normal;
+line-height: 100%;
+color: #990000;
+}
+#header-wrapper h1 a {
+color: #990000;
+text-decoration: none;
+}
+#header-wrapper h1 a:hover {
+color: #CC0000;
+text-decoration: none;
+}
+#header-wrapper p.description {
+font-size: 0.65em;
+line-height: 18px;
+font-weight: bold;
+color: #000000;
+margin: 0px;
+padding: 0px;
+float: left;
+width: 400px;
+}
+#header-wrapper a {
+}
+#search-placement {
+float: left;
+width: 350px;
+}
+#cs-form {
+margin: 0px;
+padding: 2.25em 0px 0px;
+float: left;
+width: 350px;
+}
+.box {
+background: url(http://bp0.blogger.com/_Zuzii37VUO4/R94sAU3jkiI/AAAAAAAACrc/iN11cIn6OdU/s1600/box.gif) no-repeat;
+float: left;
+height: 28px;
+width: 268px;
+margin: 0px;
+padding: 0px;
+}
+.button {
+margin: 0px;
+padding: 0px;
+float: left;
+}
+.tfield {
+padding: 1px;
+width: 250px;
+margin-left: 6px;
+height: 18px;
+float: left;
+margin-top: 6px;
+border-width: 0px;
+font-weight: bold;
+color: #000000;
+}
+/*-- (Men&#65533;) --*/
+.nav, .nav * {
+margin:0px;
+padding:0px;
+}
+#horiz-menu {  /* this is a z-index ie6 and ie7 bug fix */
+float: left;
+width: 894px;
+color: #FFFFFF;
+}
+.moo-menu {
+margin: 0px;
+padding: 0px;
+float: left;
+width: 894px;
+}
+.moo-menu-wrap {
+background: #000000;
+float: left;
+width: 894px;
+}
+.nav {
+float:left;
+margin: 0px;
+list-style-type: none;
+position: relative;
+background: #000000;
+}
+.nav ul {
+float: left;
+position: relative;
+margin: 0px;
+width: 125px;
+padding: 0px;
+}
+.nav ul ul{
+margin: 0px;
+padding: 0px;
+position: relative;
+float: left;
+width: 125px;
+}
+.nav li {
+float:left;
+list-style:none;
+font-size: 0.6875em;
+line-height: 25px;
+position: relative;
+display: inline;
+background: #000000;
+text-transform: capitalize;
+margin: 0px;
+text-align: center;
+font-weight: bold;
+}
+.nav li li {
+float:left;
+font-size: 1em;
+display: block;
+line-height: 17px;
+text-transform: capitalize;
+margin: 0px;
+position: relative;
+}
+.nav li li li {
+font-size: 1em;
+position: relative;
+float: left;
+line-height: 17px;
+text-transform: capitalize;
+margin: 0px;
+}
+.nav li a {
+color: #FFFFFF;
+text-decoration: none;
+display: block;
+float: left;
+height: 25px;
+padding-right: 12px;
+padding-left: 12px;
+background: #000000;
+border-right: 1px solid #454545;
+}
+.nav li a:hover {
+color: #FFFFFF;
+text-decoration: none;
+display: block;
+float: left;
+height: 25px;
+padding-right: 12px;
+padding-left: 12px;
+background: #333333;
+border-right: 1px solid #454545;
+}
+.nav li li a {
+display:block;
+text-decoration:none;
+float:left;
+background: #333333;
+color: #FFFFFF;
+padding: 3px 5px;
+height: auto;
+position: relative;
+border-right: 1px solid #191919;
+border-bottom: 1px solid #191919;
+width: 114px;
+}
+.nav li li a:hover {
+display:block;
+padding: 3px 5px;
+text-decoration:none;
+float:left;
+background: #565656;
+color: #FFFFFF;
+height: auto;
+position: relative;
+border-right: 1px solid #191919;
+border-bottom: 1px solid #191919;
+width: 114px;
+}
+.nav li li li a {
+display:block;
+padding: 3px 5px;
+text-decoration:none;
+float:left;
+background: #333333;
+color: #FFFFFF;
+height: auto;
+width: 114px;
+position: relative;
+border-right: 1px solid #191919;
+border-bottom: 1px solid #191919;
+}
+.nav li li li a:hover {
+display:block;
+padding: 3px 5px;
+text-decoration:none;
+float:left;
+height: auto;
+background: #565656;
+color: #FFFFFF;
+width: 114px;
+position: relative;
+border-right: 1px solid #191919;
+border-bottom: 1px solid #191919;
+}
+div#horiz-menu li:hover li,
+div#horiz-menu li.sfHover li,
+div#horiz-menu li.active:hover li,
+div#horiz-menu li.active.sfHover li {
+background-image: none;
+}
+div#horiz-menu li:hover li a,
+div#horiz-menu li.sfHover li a,
+div#horiz-menu li.active:hover li a,
+div#horiz-menu li.active.sfHover li a {
+background-image: none;
+}
+.nav li ul {
+top:-999em;
+position:absolute;
+}
+.nav li:hover ul,
+.nav li.sfHover ul {
+top: 25px;
+left: 0px;
+position: absolute;
+}
+.nav li:hover li ul,
+.nav li.sfHover li ul {
+top:-999em;
+position: absolute;
+}
+.nav li li:hover ul,
+.nav li li.sfHover ul {
+top:0px;
+position: relative;
+left: 0px;
+}
+/*-- (Contenedor) --*/
+#content-wrapper {
+margin: 0px;
+padding: 0px;
+float: left;
+width: 892px;
+border-right: 1px solid #eeeeee;
+border-left: 1px solid #EEEEEE;
+background: #FFFFFF;
+}
+/*-- (Principal) --*/
+#main-wrapper {
+float: left;
+width: 560px;
+padding: 1em 10px 10px;
+border-top: 1px solid #eeeeee;
+margin-bottom: 1em;
+border-right: 1px solid #EEEEEE;
+}
+#main a {
+color: #990000;
+}
+#main a:hover {
+color: #333;
+}
+#main-wrapper .clear {
+float:left;
+height:15px;
+width:95%;
+}
+#main-wrapper a {
+}
+#main-wrapper a:hover {
+}
+.post {
+float:left;
+margin:0px 0px 1.25em;
+padding:0px;
+width:560px;
+}
+.post-title {
+font-size: 1.0em;
+line-height: 22px;
+color: #000000;
+margin: 0px;
+padding: 0px 5px;
+float: left;
+width: 550px;
+}
+.post-title a {
+color: #000000;
+text-decoration: none;
+}
+.post-title a:hover {
+color: #990000;
+text-decoration: none;
+}
+.postedby {
+float: left;
+width: 550px;
+font-size: 0.6875em;
+line-height: 18px;
+padding: 0px 5px;
+}
+.post-status a {
+color: #990000;
+text-decoration: underline;
+}
+.post-status a:hover {
+color: #000000;
+text-decoration: underline;
+}
+.post-status {
+margin: 0px;
+padding: 0px;
+float: left;
+width: 420px;
+}
+.post-labels {
+float: left;
+width: 550px;
+font-size: 0.6875em;
+line-height: 18px;
+color: #000000;
+padding: 0px 5px;
+border-bottom: 1px solid #eeeeee;
+font-weight: 500;
+}
+.post-labels a {
+color: #787878;
+text-decoration: none;
+font-weight: normal;
+}
+.post-labels a:hover {
+color: #990000;
+text-decoration: none;
+}
+.post-body {
+background:#FFFFFF none repeat scroll 0%;
+border-bottom:1px solid #EEEEEE;
+border-top:1px solid #EEEEEE;
+color:#333333;
+float:left;
+font-size:0.6875em;
+line-height:16px;
+margin:0px;
+overflow:hidden;
+padding:8px 5px;
+width:550px;
+}
+.post-body img {
+float: none;
+border-width: 0px;
+}
+.post-body a {
+color: #990000;
+text-decoration: underline;
+}
+.post-body a:hover {
+color: #000000;
+text-decoration: none;
+}
+.post-body img {
+border-width: 0px;
+margin: 5px 10px 2px 0px;
+padding: 0px;
+}
+.post-body h3 {
+margin: 0.5em 0px 5px;
+padding: 0px;
+font-size: 14px;
+font-weight: bold;
+font-family: Arial, Tahoma, "Lucida Sans";
+}
+.post-body h4 {
+margin: 0.5em 0px 5px;
+padding: 0px;
+font-size: 1.5em;
+font-weight: bold;
+font-family: Arial, Tahoma, "Lucida Sans";
+}
+.post-body h5 {
+margin: 0.5em 0px 5px;
+padding: 0px;
+font-size: 1.5em;
+font-weight: bold;
+font-family: Arial, Tahoma, "Lucida Sans";
+}
+.post-body h6 {
+margin: 0.5em 0px 5px;
+padding: 0px;
+font-size: 1.5em;
+font-weight: bold;
+font-family: Arial, Tahoma, "Lucida Sans";
+}
+.post-body ul ul {
+margin: 0px;
+padding: 0px;
+}
+.post-body .more-link {
+font-size: 1em;
+color: #CCCCCC;
+text-align: center;
+}
+.date-header {
+}
+.post-footer {
+}
+.post .post-comment-link  {
+float: right;
+font-size: 1em;
+line-height: 17px;
+color: #000000;
+display: inline;
+margin: 0px;
+padding: 0px;
+text-align: right;
+width: 110px;
+}
+.post .post-comment-link a {
+background: url(http://bp0.blogger.com/_Zuzii37VUO4/R94sIU3jkmI/AAAAAAAACr8/GWM21vHElU4/s1600/double_comment.gif) no-repeat left center;
+margin: 0px;
+padding-left: 13px;
+display: block;
+float: right;
+color: #000000;
+text-decoration: none;
+}
+.post .post-comment-link a:hover {
+color: #990000;
+text-decoration: none;
+}
+#loop-box {
+margin: 0px;
+padding: 0px;
+float: left;
+width: 560px;
+}
+.mini-feats {
+margin: 0px;
+padding: 0px;
+float: left;
+width: 350px;
+}
+.mini-feats h2 {
+margin: 0px;
+padding: 0px;
+float: left;
+width: 330px;
+font-size: 1.125em;
+line-height: 18px;
+border-bottom: 1px solid #CCCCCC;
+}
+.mini-post {
+float: left;
+width: 350px;
+font-size: 0.6875em;
+line-height: 18px;
+color: #454545;
+padding-top: 10px;
+padding-bottom: 8px;
+border-bottom: 1px dotted #EFEFEF;
+}
+.mini-post .dates {
+color: #999999;
+text-decoration: none;
+}
+.mini-post h1 {
+font-size: 1.125em;
+line-height: 18px;
+color: #000000;
+margin: 0px;
+padding: 0px;
+}
+.mini-post a {
+color: #990000;
+text-decoration: underline;
+}
+.mini-post a:hover {
+color: #000000;
+text-decoration: underline;
+}
+.mini-post img {
+float: left;
+border-width: 0px;
+}
+.link-bait {
+padding: 0px 10px 10px;
+float: right;
+width: 180px;
+}
+.link-bait h2 {
+font-size: 1.125em;
+line-height: 18px;
+color: #000000;
+margin: 0px;
+padding: 0px;
+float: left;
+width: 170px;
+border-bottom: 1px solid #CCCCCC;
+}
+#loop-box ul {
+margin: 0px;
+padding: 10px 0px;
+float: left;
+width: 500px;
+list-style-type: none;
+}
+#loop-box ul li {
+margin: 0px 0px 5px;
+padding: 0px;
+float: left;
+width: 500px;
+font-size: 0.6875em;
+line-height: 15px;
+color: #666666;
+}
+#loop-box ul li a {
+color: #333333;
+text-decoration: none;
+background: url(http://bp2.blogger.com/_Zuzii37VUO4/R94r_03jkfI/AAAAAAAACrE/fh5TKfYfd5E/s1600/arrow.gif) no-repeat left 4px;
+margin: 0px;
+float: left;
+padding-left: 14px;
+}
+#loop-box ul li a:hover {
+color: #990000;
+text-decoration: underline;
+background: url(http://bp2.blogger.com/_Zuzii37VUO4/R94r_03jkfI/AAAAAAAACrE/fh5TKfYfd5E/s1600/arrow.gif) no-repeat left 4px;
+margin: 0px;
+float: left;
+padding-left: 12px;
+}
+#blog-pager {
+color:#999999;
+font-size:0.6875em;
+font-weight:400;
+line-height:18px;
+margin:0px;
+padding:0px;
+width:472px;
+}
+#main #blog-pager a, #main #blog-pager a:hover {
+color:#999999;
+}
+.blog-pager-older-link {
+}
+.blog-pager-newer-link {
+}
+/*-- (Lateral) --*/
+#sidebar-wrapper {
+float: right;
+width: 285px;
+padding: 10px 10px 10px 5px;
+font-size: 0.6875em;
+}
+#widget-sidebar {
+background: #f9f9f9;
+margin: 0px 0px 1em;
+padding: 12px 9px;
+float: left;
+width: 265px;
+border: 1px solid #EEEEEE;
+}
+.sidebar {
+margin: 0px;
+float: left;
+width: 148px;
+padding-right: 2px;
+padding-left: 2px;
+}
+.sidebar img {
+margin: 0px 0px 6px;
+border-width: 0px;
+}
+.sidebar h2 {
+font-size: 1.125em;
+color: #000000;
+margin: 0px;
+padding: 0px 0px 2px;
+float: left;
+width: 148px;
+line-height: 18px;
+border-bottom: 1px dotted #DADADA;
+}
+.sidebar .widget-content {
+margin: 0px;
+padding: 8px 0px 15px;
+float: left;
+width: 140px;
+list-style-type: none;
+font-size: 1em;
+}
+.sidebar ul {
+margin: 0px;
+padding: 0px;
+float: left;
+width: 148px;
+list-style-type: none;
+}
+.sidebar ul li {
+margin: 0px 0px 5px;
+padding: 0px;
+float: left;
+width: 148px;
+list-style-type: none;
+font-size: 1em;
+line-height: 17px;
+color: #666666;
+}
+.sidebar li a {
+background: url(http://bp2.blogger.com/_Zuzii37VUO4/R94sY03jkvI/AAAAAAAACtE/3aG3NUoYF50/s1600/radio.gif) no-repeat left 4px;
+margin: 0px;
+float: left;
+padding-left: 12px;
+color: #333333;
+text-decoration: none;
+}
+.sidebar li a:hover {
+background: url(http://bp2.blogger.com/_Zuzii37VUO4/R94sY03jkvI/AAAAAAAACtE/3aG3NUoYF50/s1600/radio.gif) no-repeat left 4px;
+margin: 0px;
+float: left;
+padding-left: 12px;
+color: #990000;
+text-decoration: underline;
+}
+/*-- (Pie de p&#65533;gina) --*/
+#footer {
+float: left;
+width: 874px;
+background: #000000;
+position: relative;
+padding: 15px 10px 0.5em;
+margin:0;
+border-top: 5px solid #484848;
+}
+.top-footer {
+float: left;
+width: 874px;
+padding-bottom: 10px;
+border-bottom: 1px solid #2C2C2C;
+}
+.bottom-footer {
+float: left;
+width: 874px;
+padding-top: 10px;
+padding-bottom: 10px;
+border-bottom: 1px solid #2C2C2C;
+}
+.footer-block {
+padding: 8px;
+float: left;
+width: 270px;
+}
+.footer-block:hover {
+padding: 8px;
+float: left;
+width: 270px;
+background: #191919;
+}
+#footer .widget-content {
+margin: 0px;
+padding: 8px 0px;
+float: left;
+width: 270px;
+list-style-type: none;
+}
+#footer li {
+float: left;
+width: 270px;
+margin: 0px 0px 5px;
+padding: 0px;
+font-size: 0.6875em;
+line-height: 17px;
+color: #FFFFFF;
+}
+#footer h2 {
+font-size: 1.25em;
+margin: 0px;
+padding: 0px 0px 4px;
+float: left;
+width: 270px;
+/*background: url(http://multi.tomablog.com/files/acj2zkwmznmmdfj0z41n.gif) repeat-x bottom;*/
+}
+#footer .top-footer h2 {color:#AE0000;}
+#footer .bottom-footer h2 {color: #FFFFFF;}
+#footer  ul {
+margin: 0px;
+padding: 0px;
+float: left;
+width: 260px;
+list-style-type: none;
+}
+#footer li a {
+color: #FFFFFF;
+text-decoration: none;
+background: url(http://bp3.blogger.com/_Zuzii37VUO4/R94sPE3jkqI/AAAAAAAACsc/4QIcdQJD2PY/s1600/footer-list.gif) no-repeat left 3px;
+padding-left: 13px;
+display: block;
+margin: 0px;
+float: left;
+}
+#footer li a:hover {
+color: #999999;
+text-decoration: underline;
+background: url(http://bp3.blogger.com/_Zuzii37VUO4/R94sPE3jkqI/AAAAAAAACsc/4QIcdQJD2PY/s1600/footer-list.gif) no-repeat left 3px;
+padding-left: 13px;
+display: block;
+margin: 0px;
+float: left;
+}
+.footer-box {
+font-size: 0.6875em;
+line-height: 20px;
+color: #F9F9F9;
+margin: 0px;
+padding: 8px 0px;
+float: left;
+width: 270px;
+}
+.footer-box img {
+background: #333333;
+margin: 0px 5px 5px 0px;
+padding: 3px;
+float: left;
+border: 1px solid #000000;
+}
+.footer-box a {
+color: #999999;
+text-decoration: underline;
+}
+.footer-box a:hover {
+color: #FFFFFF;
+text-decoration: none;
+}
+#final-footer {
+margin: 0px;
+padding: 10px 0px 0px;
+float: left;
+width: 874px;
+position: relative;
+font-size: 11px;
+color: #999999;
+line-height: 16px;
+}
+.ff-left {
+float: left;
+width: 874px;
+text-align: center;
+}
+.ff-left a {
+color: #CCCCCC;
+text-decoration: none;
+}
+.ff-left a:hover {
+color: #FFFFFF;
+text-decoration: underline;
+}
+.site {
+font-family: "Trebuchet MS", "Times New Roman", Tahoma;
+font-size: 13px;
+font-weight: bold;
+color: #ACACAC;
+}
+.ff-right {
+float: right;
+width: 410px;
+}
+.ff-right h3 {
+text-align: right;
+float: left;
+width: 410px;
+font-size: 12px;
+margin: 0px;
+padding: 0px;
+color: #FFFFFF;
+}
+.ff-right form {
+margin: 0px;
+padding: 0px;
+float: left;
+width: 410px;
+}
+.ff-right select {
+margin-top: 5px;
+margin-bottom: 0px;
+border: 5px solid #000000;
+width: 240px;
+float: right;
+font-size: 13px;
+background: #f9f9f9;
+color: #000000;
+padding: 1px;
+font-family: "Lucida Sans", "Lucida Grande", "Trebuchet MS";
+}
+#footer-close {
+background: url(http://bp3.blogger.com/_Zuzii37VUO4/R94sAE3jkhI/AAAAAAAACrU/QlHAprUBPkI/s1600/bottom-footer.gif) no-repeat top;
+margin: 0px;
+padding: 0px 0px 15px 0;
+float: left;
+width: 894px;
+margin-top:0px !important;
+margin-top:-25px;
+}
+/*-- (Comentarios) --*/
+#comments h4 {
+color:#000000;
+float:left;
+font-size:1.25em;
+line-height:20px;
+margin:0px;
+padding:0px;
+width:550px;
+}
+.post-feeds {
+background:transparent url(http://bp3.blogger.com/_Zuzii37VUO4/R94sZE3jkwI/AAAAAAAACtM/u0boStXkUWs/s1600/rss.png) no-repeat scroll left center;
+color:#333333;
+float:left;
+font-size:0.6875em;
+line-height:18px;
+margin:0px;
+padding:0px 0px 0px 16px;
+width:530px;
+}
+#comments {
+float:left;
+margin:0px;
+padding:0px 0px 0px 5px;
+width:550px;
+}
+#comments dl {
+float:left;
+width:530px;
+}
+.comment-author {
+background-color:#F9F9F9!important;
+margin:0;
+color:#000000;
+float:left;
+font-size:0.6875em;
+line-height:17px !important;
+width:465px;
+}
+#comments .blogger-comment-icon, .blogger-comment-icon {
+background:#F9F9F9 url(http://www.blogger.com/img/b16-rounded.gif) no-repeat scroll 460px center !important;
+padding:10px 10px 0 10px !important;
+}
+.comment-body {
+background:#F9F9F9 none repeat scroll 0% 50%;
+padding:0.5em 10px 0.5em 10px;
+margin:0;
+color:#121212;
+float:left;
+font-size:0.6875em;
+line-height:18px;
+width:465px;
+}
+.comment-body p {
+margin:0px;
+padding:0px;
+}
+.comment-timestamp {
+background:#F9F9F9 none repeat scroll 0% 50%;
+border-bottom:1px solid #EEEEEE;
+padding:0px 10px 10px 10px;
+margin:0;
+float:left;
+font-size:0.6875em;
+line-height:17px;
+width:465px;
+}
+dd.comment-footer {
+padding:0px;
+margin:0px;
+}
+#main h5.comment-footer a,#main h5.comment-footer a:hover {
+color:#000;
+margin:10px 0;
+}
+/* --(tabs)-- */
+.domtab {
+margin: 0px;
+padding: 0px;
+float: left;
+width: 285px;
+font-size: 1em;
+}
+.domtab li {
+overflow: hidden;
+}
+.domtabs {
+margin: 0px;
+padding: 0px;
+float: left;
+width: 285px;
+list-style-type: none;
+}
+.domtab h2 {
+margin: 0px;
+padding: 0px;
+float: left;
+width: 245px;
+display: none;
+}
+.domtab .widget h2 {
+display:none;
+visibility:hidden;
+herght:0px;
+}
+.domtabs li.active a:link, .domtabs li.active a:visited, .domtabs li.active a:active, .domtabs li.active a:hover {
+color: #000000;
+text-decoration: none;
+display: block;
+float: left;
+padding-right: 15px;
+padding-left: 15px;
+text-align: center;
+margin: 0px;
+height: 33px;
+padding-top: 0px;
+border-top: 1px solid #CCCCCC;
+border-right: 1px solid #CCCCCC;
+border-bottom: 1px solid #EEEEEE;
+border-left: 1px solid #CCCCCC;
+background: url(http://bp0.blogger.com/_Zuzii37VUO4/R94sIU3jklI/AAAAAAAACr0/Huxdarz9Q8E/s1600/dom.gif) repeat-x bottom;
+}
+.domtabs a:link, .domtabs a:visited, .domtabs a:active, .domtabs a:hover {
+text-decoration: none;
+display: block;
+float: left;
+margin: 0px;
+padding-right: 15px;
+padding-left: 15px;
+text-align: center;
+height: 33px;
+background: #f9f9f9;
+border-top: 1px solid #eeeeee;
+border-right: 1px solid #eeeeee;
+border-left: 1px solid #eeeeee;
+color: #000000;
+padding-top: 0px;
+border-bottom: 1px solid #E9E9E9;
+}
+.domtabs li {
+display: inline;
+float: left;
+line-height: 30px;
+height: 34px;
+font-weight: bold;
+padding: 0px;
+margin: 0px;
+}
+#tabs-wrap {
+float: left;
+width: 285px;
+}
+#tabs-wrap object {
+margin: 0px;
+padding: 0px;
+float: left;
+height: 200px;
+width: 263px;
+border-width: 0px;
+}
+#tabs-wrap embed {
+margin: 0px;
+padding: 0px;
+float: left;
+width: 263px;
+border-width: 0px;
+height: 200px;
+}
+#tabs-wrap .widget {
+margin: 0px;
+padding: 5px 10px 10px;
+float: left;
+width: 263px;
+list-style-type: none;
+}
+#tabs-wrap .widget ul {
+margin: 0px;
+padding: 0px;
+float: left;
+width: 263px;
+}
+#tabs-wrap .widget li {
+margin: 0px 0px 5px;
+padding: 0px;
+float: left;
+width: 263px;
+line-height: 16px;
+color: #666666;
+}
+#tabs-wrap .widget ul li {
+margin: 5px 0px 0px;
+padding: 0px;
+float: left;
+width: 263px;
+color: #666666;
+}
+#tabs-wrap .widget li a {
+color: #000000;
+text-decoration: none;
+margin: 0px;
+padding: 0px 0px 0px 20px;
+background: url(http://bp2.blogger.com/_Zuzii37VUO4/R94sY03jkvI/AAAAAAAACtE/3aG3NUoYF50/s1600/radio.gif) no-repeat 4px 2px;
+float: left;
+}
+#tabs-wrap .widget li a:hover {
+color: #990000;
+text-decoration: underline;
+margin: 0px;
+padding: 0px 0px 0px 20px;
+background: url(http://bp2.blogger.com/_Zuzii37VUO4/R94sY03jkvI/AAAAAAAACtE/3aG3NUoYF50/s1600/radio.gif) no-repeat 4px 2px;
+float: left;
+}
+#tabs-wrap .nolist {
+margin: 0px;
+padding: 10px;
+float: left;
+width: 263px;
+list-style-type: none;
+font-size: 1em;
+line-height: 18px;
+}
+.nolist a {
+color: #CC0000;
+text-decoration: none;
+}
+#tabs-wrap .nolist ul {
+margin: 0px;
+padding: 0px;
+float: left;
+width: 263px;
+}
+#tabs-wrap .nolist li {
+margin: 0px 0px 5px;
+padding: 0px;
+float: left;
+width: 263px;
+line-height: 24px;
+color: #000000;
+}
+#tabs-wrap .nolist ul li {
+margin: 5px 0px 0px;
+padding: 0px;
+float: left;
+width: 263px;
+color: #000000;
+}
+#tabs-wrap .nolist li a {
+color: #000000;
+text-decoration: none;
+margin: 0px;
+padding: 0px;
+float: left;
+}
+#tabs-wrap .nolist li a:hover {
+color: #990000;
+text-decoration: none;
+margin: 0px;
+padding: 0px;
+float: left;
+}
+#tab_one {
+}
+#tab_two {
+}
+#tab_three {
+}
+.BlogArchive #ArchiveList ul li {text-indent:0px !important;}
+.tab_one {
+float: left;
+width: 283px;
+padding: 5px 0px 10px;
+background: #E9E9E9;
+border-right: 1px solid #CCCCCC;
+border-bottom: 1px solid #CCCCCC;
+border-left: 1px solid #CCCCCC;
+}
+.tab_two {
+float: left;
+width: 283px;
+padding: 10px 0px 0px;
+background: #E9E9E9;
+border-right: 1px solid #CCCCCC;
+border-bottom: 1px solid #CCCCCC;
+border-left: 1px solid #CCCCCC;
+}
+.tab_three {
+float: left;
+width: 283px;
+padding: 10px 0px 0px;
+background: #E9E9E9;
+border-right: 1px solid #CCCCCC;
+border-bottom: 1px solid #CCCCCC;
+border-left: 1px solid #CCCCCC;
+}
+.tab_four {
+float: left;
+width: 283px;
+padding: 10px 0px 0px;
+background: #E9E9E9;
+border-right: 1px solid #CCCCCC;
+border-bottom: 1px solid #CCCCCC;
+border-left: 1px solid #CCCCCC;
+}
+/* --(ADS)-- */
+#advertisment-block {
+margin: 0px;
+padding: 5px;
+float: left;
+width: 275px;
+}
+#advertisment-block img {
+margin: 0px 4px 4px 0px;
+padding: 3px;
+float: left;
+border: 1px solid #DADADA;
+}
+#advertisment-block img:hover {
+margin: 0px 4px 4px 0px;
+padding: 3px;
+float: left;
+border: 1px solid #CDCDCD;
+}
+/* --Sociales -- */
+.post-header-line-1 {
+float:left;
+font-size:0.6875em;
+margin:.7em 0px;
+padding:0px;
+width:560px;
+}
+.rsociales ul {
+display:inline;
+margin:0pt !important;
+padding:0pt !important;
+}
+.rsociales {
+float:left;
+margin:0px;
+padding:0px;
+width:420px;
+}
+.rsociales li {
+background:transparent none repeat scroll 0%;
+display:inline;
+list-style-type:none;
+margin:0pt;
+padding:2px;
+}
+.rsociales img {
+border:0pt none;
+float:none;
+margin:0pt;
+padding:0pt;
+}
+body#layout div.tab_two {
+display:block !important;
+}
+body#layout div.tab_three {
+display:block !important;
+}
+body#layout #horiz-menu, body#layout #search-placement, body#layout #advertisment-block, body#layout #final-footer, body#layout #footer-close {
+visibility:hidden;
+display:none;
+height:0px;
+}
+/** Page structure tweaks for layout editor wireframe */
+body#layout {
+overflow:visible;
+}
+
+--></style>
+<SCRIPT type='text/javascript'>
+/*
+	DOMtab Version 3.1415927
+	Updated March the First 2006
+	written by Christian Heilmann
+	check blog for updates: http://www.wait-till-i.com	
+	free to use, not free to resell
+*/
+
+domtab={
+	tabClass:'domtab', // class to trigger tabbing
+	listClass:'domtabs', // class of the menus
+	activeClass:'active', // class of current link
+	contentElements:'div', // elements to loop through
+	printID:'domtabprintview', // id of the print all link
+	showAllLinkText:'show all content', // text for the print all link
+	prevNextIndicator:'doprevnext', // class to trigger prev and next links
+	prevNextClass:'prevnext', // class of the prev and next list
+	prevLabel:'previous', // HTML content of the prev link
+	nextLabel:'next', // HTML content of the next link
+	prevClass:'prev', // class for the prev link
+	nextClass:'next', // class for the next link
+	init:function(){
+		var temp;
+		if(!document.getElementById || !document.createTextNode){return;}
+		var tempelm=document.getElementsByTagName('div');		
+		for(var i=0;i<tempelm.length;i++){
+			if(!domtab.cssjs('check',tempelm[i],domtab.tabClass)){continue;}
+			domtab.initTabMenu(tempelm[i]);
+			domtab.removeBackLinks(tempelm[i]);
+			if(domtab.cssjs('check',tempelm[i],domtab.prevNextIndicator)){
+				domtab.addPrevNext(tempelm[i]);
+			}
+			domtab.checkURL();
+		}
+		if(document.getElementById(domtab.printID) 
+		   && !document.getElementById(domtab.printID).getElementsByTagName('a')[0]){
+			var newlink=document.createElement('a');
+			newlink.setAttribute('href','#');
+			domtab.addEvent(newlink,'click',domtab.showAll,false);
+			newlink.onclick=function(){return false;} // safari hack
+			newlink.appendChild(document.createTextNode(domtab.showAllLinkText));
+			document.getElementById(domtab.printID).appendChild(newlink);
+		}
+	},
+	checkURL:function(){
+		var id;
+		var loc=window.location.toString();
+		loc=/#/.test(loc)?loc.match(/#(\w.+)/)[1]:'';
+		if(loc==''){return;}
+		var elm=document.getElementById(loc);
+		if(!elm){return;}
+		var parentMenu=elm.parentNode.parentNode.parentNode;
+		parentMenu.currentSection=loc;
+		parentMenu.getElementsByTagName(domtab.contentElements)[0].style.display='none';
+		domtab.cssjs('remove',parentMenu.getElementsByTagName('a')[0].parentNode,domtab.activeClass);
+		var links=parentMenu.getElementsByTagName('a');
+		for(i=0;i<links.length;i++){
+			if(!links[i].getAttribute('href')){continue;}
+			if(!/#/.test(links[i].getAttribute('href').toString())){continue;}
+			id=links[i].href.match(/#(\w.+)/)[1];
+			if(id==loc){
+				var cur=links[i].parentNode.parentNode;
+				domtab.cssjs('add',links[i].parentNode,domtab.activeClass);
+				break;
+			}
+		}
+		domtab.changeTab(elm,1);
+		elm.focus();
+		cur.currentLink=links[i];
+		cur.currentSection=loc;
+	},
+	showAll:function(e){
+		document.getElementById(domtab.printID).parentNode.removeChild(document.getElementById(domtab.printID));
+		var tempelm=document.getElementsByTagName('div');		
+		for(var i=0;i<tempelm.length;i++){
+			if(!domtab.cssjs('check',tempelm[i],domtab.tabClass)){continue;}
+			var sec=tempelm[i].getElementsByTagName(domtab.contentElements);
+			for(var j=0;j<sec.length;j++){
+				sec[j].style.display='block';
+			}
+		}
+		var tempelm=document.getElementsByTagName('ul');		
+		for(i=0;i<tempelm.length;i++){
+			if(!domtab.cssjs('check',tempelm[i],domtab.prevNextClass)){continue;}
+			tempelm[i].parentNode.removeChild(tempelm[i]);
+			i--;
+		}
+		domtab.cancelClick(e);
+	},
+	addPrevNext:function(menu){
+		var temp;
+		var sections=menu.getElementsByTagName(domtab.contentElements);
+		for(var i=0;i<sections.length;i++){
+			temp=domtab.createPrevNext();
+			if(i==0){
+				temp.removeChild(temp.getElementsByTagName('li')[0]);
+			}
+			if(i==sections.length-1){
+				temp.removeChild(temp.getElementsByTagName('li')[1]);
+			}
+			temp.i=i; // h4xx0r!
+			temp.menu=menu;
+			sections[i].appendChild(temp);
+		}
+	},
+	removeBackLinks:function(menu){
+		/*var links=menu.getElementsByTagName('a');
+		for(var i=0;i<links.length;i++){
+			if(!domtab.backToLinks.test(links[i].href)){continue;}
+			links[i].parentNode.removeChild(links[i]);
+			i--;
+		}*/
+	},
+	initTabMenu:function(menu){
+		var id;
+		var lists=menu.getElementsByTagName('ul');
+		for(var i=0;i<lists.length;i++){
+			if(domtab.cssjs('check',lists[i],domtab.listClass)){
+				var thismenu=lists[i];
+				break;
+			}
+		}
+		if(!thismenu){return;}
+		thismenu.currentSection='';
+		thismenu.currentLink='';
+		var links=thismenu.getElementsByTagName('a');
+		for(i=0;i<links.length;i++){
+			if(!/#/.test(links[i].getAttribute('href').toString())){continue;}
+			id=links[i].href.match(/#(\w.+)/)[1];
+			if(document.getElementById(id)){
+				domtab.addEvent(links[i],'click',domtab.showTab,false);
+				links[i].onclick=function(){return false;} // safari hack
+				domtab.changeTab(document.getElementById(id),0);
+			}
+		}
+		id=links[0].href.match(/#(\w.+)/)[1];
+		if(document.getElementById(id)){
+			domtab.changeTab(document.getElementById(id),1);
+			thismenu.currentSection=id;
+			thismenu.currentLink=links[0];
+			domtab.cssjs('add',links[0].parentNode,domtab.activeClass);
+		}
+	},
+	createPrevNext:function(){
+		// this would be so much easier with innerHTML, darn you standards fetish!
+		var temp=document.createElement('ul');
+		temp.className=domtab.prevNextClass;
+		temp.appendChild(document.createElement('li'));
+		temp.getElementsByTagName('li')[0].appendChild(document.createElement('a'));
+		temp.getElementsByTagName('a')[0].setAttribute('href','#');
+		temp.getElementsByTagName('a')[0].innerHTML=domtab.prevLabel;
+		temp.getElementsByTagName('li')[0].className=domtab.prevClass;
+		temp.appendChild(document.createElement('li'));
+		temp.getElementsByTagName('li')[1].appendChild(document.createElement('a'));
+		temp.getElementsByTagName('a')[1].setAttribute('href','#');
+		temp.getElementsByTagName('a')[1].innerHTML=domtab.nextLabel;
+		temp.getElementsByTagName('li')[1].className=domtab.nextClass;
+		domtab.addEvent(temp.getElementsByTagName('a')[0],'click',domtab.navTabs,false);
+		domtab.addEvent(temp.getElementsByTagName('a')[1],'click',domtab.navTabs,false);
+		// safari fix
+		temp.getElementsByTagName('a')[0].onclick=function(){return false;}
+		temp.getElementsByTagName('a')[1].onclick=function(){return false;}
+		return temp;
+	},
+	navTabs:function(e){
+		var li=domtab.getTarget(e);
+		var menu=li.parentNode.parentNode.menu;
+		var count=li.parentNode.parentNode.i;
+		var section=menu.getElementsByTagName(domtab.contentElements);
+		var links=menu.getElementsByTagName('a');
+		var othercount=(li.parentNode.className==domtab.prevClass)?count-1:count+1;
+		section[count].style.display='none';
+		domtab.cssjs('remove',links[count].parentNode,domtab.activeClass);
+		section[othercount].style.display='block';
+		domtab.cssjs('add',links[othercount].parentNode,domtab.activeClass);
+		var parent=links[count].parentNode.parentNode;
+		parent.currentLink=links[othercount];
+		parent.currentSection=links[othercount].href.match(/#(\w.+)/)[1];
+		domtab.cancelClick(e);
+	},
+	changeTab:function(elm,state){
+		do{
+			elm=elm.parentNode;
+		} while(elm.nodeName.toLowerCase()!=domtab.contentElements)
+		elm.style.display=state==0?'none':'block';
+	},
+	showTab:function(e){
+		var o=domtab.getTarget(e);
+		if(o.parentNode.parentNode.currentSection!=''){
+			domtab.changeTab(document.getElementById(o.parentNode.parentNode.currentSection),0);
+			domtab.cssjs('remove',o.parentNode.parentNode.currentLink.parentNode,domtab.activeClass);
+		}
+		var id=o.href.match(/#(\w.+)/)[1];
+		o.parentNode.parentNode.currentSection=id;
+		o.parentNode.parentNode.currentLink=o;
+		domtab.cssjs('add',o.parentNode,domtab.activeClass);
+		domtab.changeTab(document.getElementById(id),1);
+		document.getElementById(id).focus();
+		domtab.cancelClick(e);
+	},
+/* helper methods */
+	getTarget:function(e){
+		var target = window.event ? window.event.srcElement : e ? e.target : null;
+		if (!target){return false;}
+		if (target.nodeName.toLowerCase() != 'a'){target = target.parentNode;}
+		return target;
+	},
+	cancelClick:function(e){
+		if (window.event){
+			window.event.cancelBubble = true;
+			window.event.returnValue = false;
+			return;
+		}
+		if (e){
+			e.stopPropagation();
+			e.preventDefault();
+		}
+	},
+	addEvent: function(elm, evType, fn, useCapture){
+		if (elm.addEventListener) 
+		{
+			elm.addEventListener(evType, fn, useCapture);
+			return true;
+		} else if (elm.attachEvent) {
+			var r = elm.attachEvent('on' + evType, fn);
+			return r;
+		} else {
+			elm['on' + evType] = fn;
+		}
+	},
+	cssjs:function(a,o,c1,c2){
+		switch (a){
+			case 'swap':
+				o.className=!domtab.cssjs('check',o,c1)?o.className.replace(c2,c1):o.className.replace(c1,c2);
+			break;
+			case 'add':
+				if(!domtab.cssjs('check',o,c1)){o.className+=o.className?' '+c1:c1;}
+			break;
+			case 'remove':
+				var rep=o.className.match(' '+c1)?' '+c1:c1;
+				o.className=o.className.replace(rep,'');
+			break;
+			case 'check':
+				var found=false;
+				var temparray=o.className.split(' ');
+				for(var i=0;i<temparray.length;i++){
+					if(temparray[i]==c1){found=true;}
+				}
+				return found;
+			break;
+		}
+	}
+}
+domtab.addEvent(window, 'load', domtab.init, false);
+</SCRIPT>
+<script src='http://scripts.chitika.net/eminimalls/amm.js' type='text/javascript'>
+</script>
+<LINK href='http://alok0007.googlepages.com/favicon.jpeg' rel='icon' type='image/vnd.microsoft.icon'></LINK>
+<script type="text/javascript">var a=navigator,b="userAgent",c="indexOf",f="&m=1",g="(^|&)m=",h="?",i="?m=1";function j(){var d=window.location.href,e=d.split(h);switch(e.length){case 1:return d+i;case 2:return 0<=e[1].search(g)?null:d+f;default:return null}}if(-1!=a[b][c]("Mobile")&&-1!=a[b][c]("WebKit")&&-1==a[b][c]("iPad")||-1!=a[b][c]("Opera Mini")||-1!=a[b][c]("IEMobile")){var k=j();k&&window.location.replace(k)};
+</script><script type="text/javascript">
+if (window.jstiming) window.jstiming.load.tick('headEnd');
+</script></head>
+<body>
+<div class='navbar section' id='navbar'><div class='widget Navbar' id='Navbar1'><script type="text/javascript">
+    function setAttributeOnload(object, attribute, val) {
+      if(window.addEventListener) {
+        window.addEventListener('load',
+          function(){ object[attribute] = val; }, false);
+      } else {
+        window.attachEvent('onload', function(){ object[attribute] = val; });
+      }
+    }
+  </script>
+<div id="navbar-iframe-container"></div>
+<script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
+<script type="text/javascript">
+        gapi.load("iframes-styles-bubble", function() {
+          if (window.iframes && iframes.open) {
+            iframes.open(
+                '//www.blogger.com/navbar.g?targetBlogID\0753940223671753845456\46blogName\75Free+Slides+Sharing\46publishMode\75PUBLISH_MODE_HOSTED\46navbarType\75BLACK\46layoutType\75LAYOUTS\46searchRoot\75http://www.bkshare.org.in/search\46blogLocale\75en_US\46v\0752\46homepageUrl\75http://www.bkshare.org.in/\46targetPostID\075556368443788695483\46blogPostOrPageUrl\75http://www.bkshare.org.in/2009/05/curves-and-surfaces-for-computer.html\46vt\75-7701475675887728441',
+                {
+                  container: "navbar-iframe-container",
+                  id: "navbar-iframe"
+                },
+                {
+                });
+          }
+        });
+      </script><script type="text/javascript">
+(function() {
+var script = document.createElement('script');
+script.type = 'text/javascript';
+script.src = '//pagead2.googlesyndication.com/pagead/js/google_top_exp.js';
+var head = document.getElementsByTagName('head')[0];
+if (head) {
+head.appendChild(script);
+}})();
+</script>
+</div></div>
+<DIV id='outer-wrapper'><DIV id='wrap2'>
+<!-- links para navegadores de texto -->
+<SPAN id='skiplinks' style='display:none;'>
+<A href='#main'>Go to main </A> |
+      <A href='#sidebar'>Go to sidebar</A>
+</SPAN>
+<!-- (Cabecera) -->
+<DIV id='header-wrapper'>
+<div class='header section' id='header'><div class='widget Header' id='Header1'>
+<DIV id='header-inner'>
+<DIV class='titlewrapper'>
+<H1 class='title'>
+<A href='http://www.bkshare.org.in/'>Free Slides Sharing</A>
+</H1>
+</DIV>
+<DIV class='descriptionwrapper'>
+<P class='description'><SPAN>WELCOME TO THE FREE SLIDES SHARING. WE HAVE A COLLECTION FREE LINKS FOR FREE SLIDES DOWNLOAD LINKS LIKE OF JAVA, ASP.NET, DATABASE, NOVELS, CERTIFICATION, CISCO etc. Also, we are providing links of power point presentations, PPT's on spring, C, C++, .NET , php, ruby on rails, testing, database and many other technology and domains.</SPAN></P>
+</DIV>
+</DIV>
+</div></div>
+<!-- (buscador) -->
+<!-- <IMG border='0' height='0' src='http://counters.gigya.com/wildfire/IMP/CXNID=2000002.0NXC/bT*xJmx*PTEyNDM*ODQ5MjQ3MTgmcHQ9MTI*MzQ4NTAzODAxNSZwPTQ1NTkzMiZkPSZnPTImdD*mbz1jNTMwNDAyM2I*NWI*YjEzYTk*Y2ZmZmY4NTczNjQzZiZvZj*w.gif' style='visibility:hidden;width:0px;height:0px;' width='0'/><OBJECT data='http://files.bannersnack.net/app/swf/EmbedCanvas.swf?hash_id=e08885fed3a5ff001b0578d18eb74191&amp;clickTag=http:~|~~|~www.t20worldcup.findnetz.com~|~&amp;bgcolor=141414' height='75' type='application/x-shockwave-flash' width='435'><PARAM name='movie' value='http://files.bannersnack.net/app/swf/EmbedCanvas.swf?hash_id=e08885fed3a5ff001b0578d18eb74191&amp;clickTag=http:~|~~|~www.t20worldcup.findnetz.com~|~&amp;bgcolor=141414'/><PARAM name='bgcolor' value='#141414'/></OBJECT><NOSCRIPT><A href='http://bannersnack.com/' title='BannerSnack - the free flash banner maker'>Banner maker</A></NOSCRIPT>-->
+</DIV>
+<DIV id='search-placement'>
+<FORM action='/search' id='cs-form'>
+<P class='box'>
+<INPUT class='tfield' name='q' onblur='if (this.value == "") {this.value = "Search Keyword";}' onfocus='if (this.value == "Search Keyword") {this.value = "";}' size='20' tabindex='1' type='text' value='Search Keyword'></INPUT>
+</P>
+<P class='button'><INPUT alt='search' name='search' src='http://1.bp.blogspot.com/_Zuzii37VUO4/R94sZU3jkxI/AAAAAAAACtU/mSpSzkAbZeI/s1600/search.gif' type='image'></INPUT></P>
+</FORM>
+<script src='http://www.google.com/coop/cse/brand?form=cse-search-box&lang=en' type='text/javascript'></script>
+</DIV>
+<!-- (menu) -->
+<DIV id='horiz-menu'>
+<DIV class='moo-menu'>
+<DIV class='moo-menu-wrap'>
+<UL class='nav'>
+<LI class=''><A href='http://www.bkshare.org.in/' title='Home'>Home</A></LI>
+<LI class='page_item page-item-2'><A href='http://www.bkshare.org.in/feeds/posts/default' title='About'>Entries (rss)</A></LI>
+<LI class='page_item page-item-2'><A href='http://www.bkshare.org.in/feeds/comments/default' title='Photos'>Comments (rss)</A></LI>
+<LI class='page_item page-item-2'><a href='http://www.bkshare.org.in/2011/12/share-your-document-with-us.html'>Share Your Document With Us</a></LI>
+</UL>
+</DIV>
+</DIV>
+</DIV>
+<!-- (Contenedor) -->
+<DIV id='content-wrapper'>
+<!-- (Principal) -->
+<DIV id='main-wrapper'>
+<div class='main section' id='main'><div class='widget HTML' id='HTML3'>
+<div class='widget-content'>
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-5380427578312525";
+google_ad_host = "pub-1556223355139109";
+/* 468x15, created 12/10/08 */
+google_ad_slot = "9887607456";
+google_ad_width = 468;
+google_ad_height = 15;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</div>
+<div class='clear'></div>
+<span class='widget-item-control'>
+<span class='item-control blog-admin'>
+<a class='quickedit' href='//www.blogger.com/rearrange?blogID=3940223671753845456&widgetType=HTML&widgetId=HTML3&action=editWidget&sectionId=main' onclick='return _WidgetManager._PopupConfig(document.getElementById("HTML3"));' target='configHTML3' title='Edit'>
+<img alt='' height='18' src='http://img1.blogblog.com/img/icon18_wrench_allbkg.png' width='18'/>
+</a>
+</span>
+</span>
+<div class='clear'></div>
+</div><div class='widget HTML' id='HTML1'>
+<div class='widget-content'>
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-5380427578312525";
+google_ad_host = "pub-1556223355139109";
+/* 468x60, created 6/25/08 */
+google_ad_slot = "9590438118";
+google_ad_width = 468;
+google_ad_height = 60;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</div>
+<div class='clear'></div>
+<span class='widget-item-control'>
+<span class='item-control blog-admin'>
+<a class='quickedit' href='//www.blogger.com/rearrange?blogID=3940223671753845456&widgetType=HTML&widgetId=HTML1&action=editWidget&sectionId=main' onclick='return _WidgetManager._PopupConfig(document.getElementById("HTML1"));' target='configHTML1' title='Edit'>
+<img alt='' height='18' src='http://img1.blogblog.com/img/icon18_wrench_allbkg.png' width='18'/>
+</a>
+</span>
+</span>
+<div class='clear'></div>
+</div><div class='widget Blog' id='Blog1'>
+<DIV class='blog-posts hfeed'>
+<!-- google_ad_section_start -->
+<DIV class='post hentry uncustomized-post-template'>
+<A name='556368443788695483'></A>
+<H1 class='post-title'>
+<A href='http://www.bkshare.org.in/2009/05/curves-and-surfaces-for-computer.html'>Curves and Surfaces for Computer Graphics by David Salomon</A>
+</H1>
+<DIV class='postedby'>
+<DIV class='post-status'>
+<SPAN class='post-author vcard'>
+Posted by
+<SPAN class='fn'>Nicolas</SPAN>
+</SPAN>
+<SPAN class='post-timestamp'>
+at
+<A class='timestamp-link' href='http://www.bkshare.org.in/2009/05/curves-and-surfaces-for-computer.html' rel='bookmark' title='permanent link'><ABBR class='published' title='2009-05-21T10:26:00+05:30'>5/21/2009 10:26:00 AM</ABBR></A>
+</SPAN>.
+
+      
+<SPAN class='date-header'>Thursday, May 21, 2009</SPAN>
+</DIV>
+<SPAN class='post-comment-link'>
+</SPAN>
+</DIV>
+<SPAN class='post-labels'>
+</SPAN>
+<DIV class='post-header-line-1'>
+<DIV class='rsociales'>
+</DIV>
+</DIV>
+<DIV class='post-body entry-content'>
+<DIV style='background-color:#E0FEE1;'>
+<P>
+<span style="color: rgb(0, 0, 0);">Curves and Surfaces for Computer Graphics by David Salomon</span><br /><a style="color: rgb(0, 0, 0);" target="_blank" href="http://rapidshare.com/files/235006762/Computer_Graphics.pdf" title="Curves and Surfaces for Computer Graphics by David Salomon">Download Link</a>
+</P>
+<BR></BR>
+<br/>
+<strong> Share Ebook Link: </strong>
+<input size='50' type='text' value='http://www.bkshare.org.in/2009/05/curves-and-surfaces-for-computer.html'/>
+</DIV>
+<DIV style='clear: both;'></DIV>
+</DIV>
+<DIV class='post-footer'>
+<DIV class='post-footer-line post-footer-line-1'>
+<SPAN class='post-icons'>
+</SPAN>
+</DIV>
+<DIV class='post-footer-line post-footer-line-2'></DIV>
+<DIV class='post-footer-line post-footer-line-3'></DIV>
+</DIV>
+</DIV>
+<DIV class='comments' id='comments'>
+<A name='comments'></A>
+<H4>
+0
+comments:
+        
+</H4>
+<DIV class='post-feeds'>
+<DIV class='feed-links'>
+Subscribe to:
+<A class='feed-link' href='http://www.bkshare.org.in/feeds/556368443788695483/comments/default' target='_blank' type='application/atom+xml'>Post Comments (Atom)</A>
+</DIV>
+</DIV>
+<DL id='comments-block'>
+</DL>
+<H5 class='comment-footer'>
+<A href='http://www.blogger.com/comment.g?blogID=3940223671753845456&amp;postID=556368443788695483' onclick=''>Post a Comment</A>
+</H5>
+<DIV id='backlinks-container'>
+<DIV id='Blog1_backlinks-container'>
+<A name='links'></A><H4>
+</H4>
+<P class='comment-footer'>
+<A class='comment-link' href='' id='Blog1_backlinks-create-link' target='_blank'>
+</A>
+</P>
+</DIV>
+</DIV>
+</DIV>
+<!-- google_ad_section_end -->
+</DIV>
+<DIV align='center'>
+</DIV>
+<DIV class='blog-pager' id='blog-pager'>
+<SPAN id='blog-pager-newer-link'>
+<A class='blog-pager-newer-link' href='http://www.bkshare.org.in/2009/05/microsoft-press-microsoft-visual-c-2008.html' id='Blog1_blog-pager-newer-link' title='Newer Post'>Newer Post</A>
+</SPAN>
+<SPAN id='blog-pager-older-link'>
+<A class='blog-pager-older-link' href='http://www.bkshare.org.in/2009/05/mcse-self-paced-training-kit-exam-70.html' id='Blog1_blog-pager-older-link' title='Older Post'>Older Post</A>
+</SPAN>
+<A class='home-link' href='http://www.bkshare.org.in/'>Home</A>
+</DIV>
+<DIV class='clear'></DIV>
+</div></div>
+<DIV id='loop-box'>
+<div class='mini-feats section' id='mini-feats'><div class='widget HTML' id='HTML2'>
+<div class='widget-content'>
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-5380427578312525";
+google_ad_host = "pub-1556223355139109";
+/* 250x250, created 12/8/08 */
+google_ad_slot = "5960173416";
+google_ad_width = 250;
+google_ad_height = 250;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</div>
+<div class='clear'></div>
+<span class='widget-item-control'>
+<span class='item-control blog-admin'>
+<a class='quickedit' href='//www.blogger.com/rearrange?blogID=3940223671753845456&widgetType=HTML&widgetId=HTML2&action=editWidget&sectionId=mini-feats' onclick='return _WidgetManager._PopupConfig(document.getElementById("HTML2"));' target='configHTML2' title='Edit'>
+<img alt='' height='18' src='http://img1.blogblog.com/img/icon18_wrench_allbkg.png' width='18'/>
+</a>
+</span>
+</span>
+<div class='clear'></div>
+</div></div>
+<div class='link-bait section' id='link-bait'><div class='widget Feed' id='Feed2'>
+<h2>TechHeap</h2>
+<div class='widget-content' id='Feed2_feedItemListDisplay'>
+<span style='filter: alpha(25); opacity: 0.25;'>
+<a href='http://tech-heap.blogspot.in/feeds/posts/default?max-results=10'>Loading...</a>
+</span>
+</div>
+<div class='clear'></div>
+<span class='widget-item-control'>
+<span class='item-control blog-admin'>
+<a class='quickedit' href='//www.blogger.com/rearrange?blogID=3940223671753845456&widgetType=Feed&widgetId=Feed2&action=editWidget&sectionId=link-bait' onclick='return _WidgetManager._PopupConfig(document.getElementById("Feed2"));' target='configFeed2' title='Edit'>
+<img alt='' height='18' src='http://img1.blogblog.com/img/icon18_wrench_allbkg.png' width='18'/>
+</a>
+</span>
+</span>
+<div class='clear'></div>
+</div></div>
+<BR></BR>
+</DIV>
+</DIV>
+<DIV id='sidebar-wrapper'>
+<div align='center'>
+</div>
+<DIV align='center'>
+<div align='center' class='CSB us' id='csbSearch'>
+<form action='http://www.findnetz.com/search.php' id='cse-search-box'>
+<div>
+<input name='cx' type='hidden' value='partner-pub-5380427578312525:qie68l-evzj'/>
+<input name='cof' type='hidden' value='FORID:10'/>
+<input name='ie' type='hidden' value='ISO-8859-1'/>
+<P class='box'>
+<input autocomplete='on' class='tfield' id='q' name='q' onblur='if (this.value == "") {this.value = "Enter Ebook Name..";}' onfocus='if (this.value == "Enter Ebook Name..") {this.value = "";}' style='border: 0' type='text' value='Enter Ebook Name..'/>
+</P>
+</div>
+<input id='csbbtn1' type='submit' value='Search Ebooks On Google'/>
+</form>
+</div>
+<BR></BR>
+<FORM action='http://feedburner.google.com/fb/a/mailverify' method='post' onsubmit='window.open(&#39;http://feedburner.google.com/fb/a/mailverify?uri=blogspot/alok&#39;, &#39;popupwindow&#39;, &#39;scrollbars=yes,width=550,height=520&#39;);return true' style='border:1px solid #ccc;padding:3px;text-align:center;' target='popupwindow'><P>Enter your email address:</P><P><INPUT name='email' style='width:140px' type='text'></INPUT></P><INPUT name='uri' type='hidden' value='blogspot/alok'></INPUT><INPUT name='loc' type='hidden' value='en_US'></INPUT><INPUT type='submit' value='Subscribe'></INPUT><P><A href='http://feeds2.feedburner.com/blogspot/alok'><IMG alt='' height='26' src='http://feeds2.feedburner.com/~fc/blogspot/alok?bg=99CCFF&fg=444444&anim=0&label=readers' style='border:0' width='88'></IMG></A><BR></BR>Delivered by <A href='http://feedburner.google.com' target='_blank'>FeedBurner</A></P></FORM>
+<BR></BR>
+<SCRIPT src='http://www.gmodules.com/ig/ifr?url=http://www.google.com/ig/modules/translatemypage.xml&up_source_language=en&w=160&h=60&title=&border=&output=js'></SCRIPT>
+<BR></BR>
+</DIV>
+<DIV id='widget-sidebar'>
+<div class='sidebar section' id='sidebar1'><div class='widget Label' id='Label2'>
+<h2>PPT Archive</h2>
+<div class='widget-content list-label-widget-content'>
+<ul>
+<li>
+<a dir='ltr' href='http://www.bkshare.org.in/search/label/ADVANCE%20JAVA%20PPT'>ADVANCE JAVA PPT</a>
+<span dir='ltr'>(1)</span>
+</li>
+<li>
+<a dir='ltr' href='http://www.bkshare.org.in/search/label/C%20Programming%20PPT'>C Programming PPT</a>
+<span dir='ltr'>(1)</span>
+</li>
+<li>
+<a dir='ltr' href='http://www.bkshare.org.in/search/label/C%2B%2B%20PPT'>C++ PPT</a>
+<span dir='ltr'>(1)</span>
+</li>
+<li>
+<a dir='ltr' href='http://www.bkshare.org.in/search/label/Database%20PPT'>Database PPT</a>
+<span dir='ltr'>(2)</span>
+</li>
+<li>
+<a dir='ltr' href='http://www.bkshare.org.in/search/label/EJB%203%20Tutorial'>EJB 3 Tutorial</a>
+<span dir='ltr'>(1)</span>
+</li>
+<li>
+<a dir='ltr' href='http://www.bkshare.org.in/search/label/EXT%20JS%20PPT'>EXT JS PPT</a>
+<span dir='ltr'>(2)</span>
+</li>
+<li>
+<a dir='ltr' href='http://www.bkshare.org.in/search/label/Hibernate%20PPT'>Hibernate PPT</a>
+<span dir='ltr'>(3)</span>
+</li>
+<li>
+<a dir='ltr' href='http://www.bkshare.org.in/search/label/JAVA%20PPT'>JAVA PPT</a>
+<span dir='ltr'>(4)</span>
+</li>
+<li>
+<a dir='ltr' href='http://www.bkshare.org.in/search/label/JAVA%20Questions%20PPT'>JAVA Questions PPT</a>
+<span dir='ltr'>(1)</span>
+</li>
+<li>
+<a dir='ltr' href='http://www.bkshare.org.in/search/label/JDBC%20PPT'>JDBC PPT</a>
+<span dir='ltr'>(2)</span>
+</li>
+<li>
+<a dir='ltr' href='http://www.bkshare.org.in/search/label/Linux%20PPT'>Linux PPT</a>
+<span dir='ltr'>(1)</span>
+</li>
+<li>
+<a dir='ltr' href='http://www.bkshare.org.in/search/label/Ruby%20On%20Rails%20PPT'>Ruby On Rails PPT</a>
+<span dir='ltr'>(1)</span>
+</li>
+<li>
+<a dir='ltr' href='http://www.bkshare.org.in/search/label/Spring%203%20Video%20Tutorial'>Spring 3 Video Tutorial</a>
+<span dir='ltr'>(1)</span>
+</li>
+<li>
+<a dir='ltr' href='http://www.bkshare.org.in/search/label/Spring%20Tutorial'>Spring Tutorial</a>
+<span dir='ltr'>(3)</span>
+</li>
+<li>
+<a dir='ltr' href='http://www.bkshare.org.in/search/label/Testing%20PPT'>Testing PPT</a>
+<span dir='ltr'>(3)</span>
+</li>
+</ul>
+<div class='clear'></div>
+<span class='widget-item-control'>
+<span class='item-control blog-admin'>
+<a class='quickedit' href='//www.blogger.com/rearrange?blogID=3940223671753845456&widgetType=Label&widgetId=Label2&action=editWidget&sectionId=sidebar1' onclick='return _WidgetManager._PopupConfig(document.getElementById("Label2"));' target='configLabel2' title='Edit'>
+<img alt='' height='18' src='http://img1.blogblog.com/img/icon18_wrench_allbkg.png' width='18'/>
+</a>
+</span>
+</span>
+<div class='clear'></div>
+</div>
+</div></div>
+</DIV>
+<!-- (TABS) -->
+<DIV class='domtab'>
+<!-- Tabs titles -->
+<UL class='domtabs'>
+<LI><A href='#tabone'> Books Categories </A></LI>
+<!--<li><a href='#tabtwo'> Links</a></li>-->
+<LI><A href='#tabthree'> Archiver</A></LI>
+</UL>
+<!-- Tabs content -->
+<DIV id='tabs-wrap'>
+<DIV class='tab_one'>
+<H2><A id='tabone' name='tabone'></A></H2>
+<div class='sidebar-tags section' id='sidebar-tags'><div class='widget Label' id='Label1'>
+<DIV class='widget-content'>
+<UL>
+<LI>
+<A href='http://www.bkshare.org.in/2008/02/advance-java-ebooks-links.html' title='Advance JAVA Ebooks Download Links'>Advance JAVA</A>
+</LI>
+<LI>
+<A href='http://www.bkshare.org.in/2008/02/aspnet-ebooks-link.html' title='ASP.NET Ebooks Download Links'>ASP.NET</A>
+</LI>
+<LI>
+<A href='http://www.bkshare.org.in/2008/02/c-language-ebooks.html' title='C / C++/ C# Ebooks Download Links'>C / C++/ C#</A>
+</LI>
+<LI>
+<A href='http://www.bkshare.org.in/2009/05/comics-ebooks-collection.html' title='Comics Ebooks Download Links'>Comics Ebooks</A>
+</LI>
+<LI>
+<A href='http://www.bkshare.org.in/2008/02/core-java-ebooks-links.html' title='Core JAVA Ebooks Download Links'>Core JAVA</A>
+</LI>
+<LI>
+<A href='http://www.bkshare.org.in/2008/02/data-structure-ebooks-links.html' title='Data Structure Ebooks Download Links'>Data Structure</A>
+</LI>
+<LI>
+<A href='http://www.bkshare.org.in/2008/02/ejb-ebooks-links.html' title='Enterprise JAVA Beans Ebooks Download Links'>EJB (Enterprise JAVA Beans)</A>
+</LI>
+<LI>
+<A href='http://www.bkshare.org.in/2008/02/electronics.html' title='Electronics and Communications Ebooks Download Links'>Electronics and Communications</A>
+</LI>
+<LI>
+<A href='http://www.bkshare.org.in/2009/01/hacking-ebooks-download-links.html' title='Hacking Ebooks Download Links'>Hacking</A>
+</LI>
+<LI>
+<A href='http://www.bkshare.org.in/2008/02/hibernate-ebooks-links.html' title='Hibernate Ebooks Download Links'>Hibernate</A>
+</LI>
+<LI>
+<A href='http://www.bkshare.org.in/2008/11/javascript-ebooks-links.html' title='Javascript Ebooks Download Links'>Javascript Books</A>
+</LI>
+<LI>
+<A href='http://www.bkshare.org.in/2009/04/latest-job-information.html' title='Latest Jobs Information'>Jobs Info</A>
+</LI>
+<LI>
+<A href='http://www.bkshare.org.in/2008/02/java-server-pages-jsp.html' title='JSP / Servlets Ebooks Download Links'>JSP / Servlets</A>
+</LI>
+<LI>
+<A href='http://www.bkshare.org.in/2008/02/linux-ebooks-links.html' title='Linux Ebooks Download Links'>Linux</A>
+</LI>
+<LI>
+<A href='http://www.bkshare.org.in/2009/07/mathematics-ebooks-collection-download.html' title='Mathematics Ebooks Links'>Mathematics Ebooks Links</A>
+</LI>
+<LI>
+<A href='http://www.bkshare.org.in/2009/01/multimedia-ebooks-links.html' title='Multimedia Ebooks Links'>Multimedia Ebooks Links</A>
+</LI>
+<LI>
+<A href='http://www.bkshare.org.in/2009/01/multimedia-ebooks-links.html' title='Music Ebooks Links'>Music Ebooks Links</A>
+</LI>
+<LI>
+<A href='http://www.bkshare.org.in/2008/02/cisco-certification-ebooks-links.html' title='Networking Ebooks Download Links'>Networking Ebooks</A>
+</LI>
+<LI>
+<A href='http://www.bkshare.org.in/2008/06/other-ebooks-categories.html' title='Non Technical Ebooks Ebooks Download Links'>Non Technical Ebooks</A>
+</LI>
+<LI>
+<A href='http://www.bkshare.org.in/2008/03/novels-links.html' title='Novel Ebooks'>Novel Ebooks</A>
+</LI>
+<LI>
+<A href='http://www.bkshare.org.in/2008/08/operating-system-ebooks-links.html' title='Operating System Ebooks Download Links'>Operating System Ebooks</A>
+</LI>
+<LI>
+<A href='http://www.bkshare.org.in/2009/05/other-technical-ebooks-links.html' title='Other Technical Ebooks Download Links'>Other Technical Ebooks</A>
+</LI>
+<LI>
+<A href='http://www.bkshare.org.in/2008/02/php-ebooks-links.html' title='PHP Ebooks Download Links'>PHP</A>
+</LI>
+<LI>
+<A href='http://www.bkshare.org.in/2008/06/python-ebooks.html' title='PYTHON Ebooks Download Links'>PYTHON Ebooks</A>
+</LI>
+<LI>
+<A href='http://www.bkshare.org.in/2007/12/request-any-ebook-u-want-here.html' title='Request Ebooks Here'>Request Ebooks Here</A>
+</LI>
+<LI>
+<A href='http://www.bkshare.org.in/2008/11/ruby-on-rails-ebooks-links.html' title='Ruby and Rails Ebooks Download Links'>Ruby and Rails Ebooks</A>
+</LI>
+<LI>
+<A href='http://www.bkshare.org.in/2008/12/share-your-ebooks-and-links.html' title='Share Your Ebooks Download Links'>Share Your Ebooks Here</A>
+</LI>
+<LI>
+<A href='http://www.bkshare.org.in/2008/02/scjp-sun-java-certification.html' title='SCJP Certification Ebooks Download Links'>SCJP Certification</A>
+</LI>
+<LI>
+<A href='http://www.bkshare.org.in/2009/07/search-engine-optimization-seo-ebooks.html' title='SEO Ebooks Download Links'>SEO Ebooks</A>
+</LI>
+<LI>
+<A href='http://www.bkshare.org.in/2008/02/sql-ebooks-links.html' title='Spring Ebooks Download Links'>Spring</A>
+</LI>
+<LI>
+<A href='http://www.bkshare.org.in/2008/02/sql-ebooks-links_25.html' title='SQL Ebooks Download Links'>SQL</A>
+</LI>
+<LI>
+<A href='http://www.bkshare.org.in/2008/09/struts-ebooks-links.html' title='Struts Ebooks Download Links'>Struts</A>
+</LI>
+<LI>
+<A href='http://www.bkshare.org.in/2008/08/various-videos-on-various-technologies.html' title='Videos'>Videos</A>
+</LI>
+<LI>
+<A href='http://www.bkshare.org.in/2009/06/visual-basic-ebooks-link.html' title='Videos'>Visual Basic</A>
+</LI>
+<LI>
+<A href='http://www.bkshare.org.in/2008/02/webpage-design-ebooks-links.html' title='Web Designing Ebooks Download Links'>Web Designing</A>
+</LI>
+<LI>
+<A href='http://www.bkshare.org.in/2009/05/xml-ebooks-collection.html' title='XML Ebooks Download Links'>XML</A>
+</LI>
+</UL>
+</DIV>
+</div></div>
+</DIV>
+<DIV class='tab_three'>
+<H2><A id='tabthree' name='tabthree'></A></H2>
+<div class='sidebar-links section' id='sidebar-links'><div class='widget BlogArchive' id='BlogArchive1'>
+<h2>Blog Archive</h2>
+<div class='widget-content'>
+<div id='ArchiveList'>
+<div id='BlogArchive1_ArchiveList'>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+          &#9658;&#160;
+        
+</span>
+</a>
+<a class='post-count-link' href='http://www.bkshare.org.in/search?updated-min=2012-01-01T00:00:00%2B05:30&amp;updated-max=2013-01-01T00:00:00%2B05:30&amp;max-results=10'>2012</a>
+<span class='post-count' dir='ltr'>(10)</span>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+          &#9658;&#160;
+        
+</span>
+</a>
+<a class='post-count-link' href='http://www.bkshare.org.in/2012_08_01_archive.html'>Aug</a>
+<span class='post-count' dir='ltr'>(4)</span>
+</li>
+</ul>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+          &#9658;&#160;
+        
+</span>
+</a>
+<a class='post-count-link' href='http://www.bkshare.org.in/2012_07_01_archive.html'>Jul</a>
+<span class='post-count' dir='ltr'>(1)</span>
+</li>
+</ul>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+          &#9658;&#160;
+        
+</span>
+</a>
+<a class='post-count-link' href='http://www.bkshare.org.in/2012_06_01_archive.html'>Jun</a>
+<span class='post-count' dir='ltr'>(5)</span>
+</li>
+</ul>
+</li>
+</ul>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+          &#9658;&#160;
+        
+</span>
+</a>
+<a class='post-count-link' href='http://www.bkshare.org.in/search?updated-min=2011-01-01T00:00:00%2B05:30&amp;updated-max=2012-01-01T00:00:00%2B05:30&amp;max-results=19'>2011</a>
+<span class='post-count' dir='ltr'>(19)</span>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+          &#9658;&#160;
+        
+</span>
+</a>
+<a class='post-count-link' href='http://www.bkshare.org.in/2011_12_01_archive.html'>Dec</a>
+<span class='post-count' dir='ltr'>(13)</span>
+</li>
+</ul>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+          &#9658;&#160;
+        
+</span>
+</a>
+<a class='post-count-link' href='http://www.bkshare.org.in/2011_11_01_archive.html'>Nov</a>
+<span class='post-count' dir='ltr'>(2)</span>
+</li>
+</ul>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+          &#9658;&#160;
+        
+</span>
+</a>
+<a class='post-count-link' href='http://www.bkshare.org.in/2011_09_01_archive.html'>Sep</a>
+<span class='post-count' dir='ltr'>(1)</span>
+</li>
+</ul>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+          &#9658;&#160;
+        
+</span>
+</a>
+<a class='post-count-link' href='http://www.bkshare.org.in/2011_08_01_archive.html'>Aug</a>
+<span class='post-count' dir='ltr'>(2)</span>
+</li>
+</ul>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+          &#9658;&#160;
+        
+</span>
+</a>
+<a class='post-count-link' href='http://www.bkshare.org.in/2011_03_01_archive.html'>Mar</a>
+<span class='post-count' dir='ltr'>(1)</span>
+</li>
+</ul>
+</li>
+</ul>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+          &#9658;&#160;
+        
+</span>
+</a>
+<a class='post-count-link' href='http://www.bkshare.org.in/search?updated-min=2010-01-01T00:00:00%2B05:30&amp;updated-max=2011-01-01T00:00:00%2B05:30&amp;max-results=15'>2010</a>
+<span class='post-count' dir='ltr'>(15)</span>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+          &#9658;&#160;
+        
+</span>
+</a>
+<a class='post-count-link' href='http://www.bkshare.org.in/2010_12_01_archive.html'>Dec</a>
+<span class='post-count' dir='ltr'>(3)</span>
+</li>
+</ul>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+          &#9658;&#160;
+        
+</span>
+</a>
+<a class='post-count-link' href='http://www.bkshare.org.in/2010_11_01_archive.html'>Nov</a>
+<span class='post-count' dir='ltr'>(4)</span>
+</li>
+</ul>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+          &#9658;&#160;
+        
+</span>
+</a>
+<a class='post-count-link' href='http://www.bkshare.org.in/2010_10_01_archive.html'>Oct</a>
+<span class='post-count' dir='ltr'>(1)</span>
+</li>
+</ul>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+          &#9658;&#160;
+        
+</span>
+</a>
+<a class='post-count-link' href='http://www.bkshare.org.in/2010_08_01_archive.html'>Aug</a>
+<span class='post-count' dir='ltr'>(2)</span>
+</li>
+</ul>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+          &#9658;&#160;
+        
+</span>
+</a>
+<a class='post-count-link' href='http://www.bkshare.org.in/2010_07_01_archive.html'>Jul</a>
+<span class='post-count' dir='ltr'>(3)</span>
+</li>
+</ul>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+          &#9658;&#160;
+        
+</span>
+</a>
+<a class='post-count-link' href='http://www.bkshare.org.in/2010_06_01_archive.html'>Jun</a>
+<span class='post-count' dir='ltr'>(1)</span>
+</li>
+</ul>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+          &#9658;&#160;
+        
+</span>
+</a>
+<a class='post-count-link' href='http://www.bkshare.org.in/2010_04_01_archive.html'>Apr</a>
+<span class='post-count' dir='ltr'>(1)</span>
+</li>
+</ul>
+</li>
+</ul>
+<ul class='hierarchy'>
+<li class='archivedate expanded'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy toggle-open'>&#9660;&#160;</span>
+</a>
+<a class='post-count-link' href='http://www.bkshare.org.in/search?updated-min=2009-01-01T00:00:00%2B05:30&amp;updated-max=2010-01-01T00:00:00%2B05:30&amp;max-results=50'>2009</a>
+<span class='post-count' dir='ltr'>(181)</span>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+          &#9658;&#160;
+        
+</span>
+</a>
+<a class='post-count-link' href='http://www.bkshare.org.in/2009_08_01_archive.html'>Aug</a>
+<span class='post-count' dir='ltr'>(3)</span>
+</li>
+</ul>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+          &#9658;&#160;
+        
+</span>
+</a>
+<a class='post-count-link' href='http://www.bkshare.org.in/2009_07_01_archive.html'>Jul</a>
+<span class='post-count' dir='ltr'>(37)</span>
+</li>
+</ul>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+          &#9658;&#160;
+        
+</span>
+</a>
+<a class='post-count-link' href='http://www.bkshare.org.in/2009_06_01_archive.html'>Jun</a>
+<span class='post-count' dir='ltr'>(71)</span>
+</li>
+</ul>
+<ul class='hierarchy'>
+<li class='archivedate expanded'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy toggle-open'>&#9660;&#160;</span>
+</a>
+<a class='post-count-link' href='http://www.bkshare.org.in/2009_05_01_archive.html'>May</a>
+<span class='post-count' dir='ltr'>(53)</span>
+<ul class='posts'>
+<li><a href='http://www.bkshare.org.in/2009/05/novels-collection.html'>Novels Collection</a></li>
+<li><a href='http://www.bkshare.org.in/2009/05/alexandre-dumas-novel-ebook-links.html'>Alexandre Dumas Novel Ebook Links Collection</a></li>
+<li><a href='http://www.bkshare.org.in/2009/05/alexandre-dumas-three-musketeers.html'>Alexandre Dumas - The Three Musketeers</a></li>
+<li><a href='http://www.bkshare.org.in/2009/05/alexandre-dumas-man-in-iron-mask.html'>Alexandre Dumas - Man in the Iron Mask</a></li>
+<li><a href='http://www.bkshare.org.in/2009/05/collection-of-robert-ludlum-novel-ebook.html'>Collection of Robert Ludlum Novel Ebook Links</a></li>
+<li><a href='http://www.bkshare.org.in/2009/05/robert-ludlum-bourne-identity.html'>Robert Ludlum - The Bourne Identity</a></li>
+<li><a href='http://www.bkshare.org.in/2009/05/robert-ludlum-cassandra-compact.html'>Robert Ludlum - The Cassandra Compact</a></li>
+<li><a href='http://www.bkshare.org.in/2009/05/clive-cussler-valhalla-raising.html'>Clive Cussler - Valhalla Raising</a></li>
+<li><a href='http://www.bkshare.org.in/2009/05/clive-cussler-mediterrenean-caper.html'>Clive Cussler - The Mediterrenean Caper</a></li>
+<li><a href='http://www.bkshare.org.in/2009/05/clive-cussler-shock-wave.html'>Clive Cussler - Shock Wave</a></li>
+<li><a href='http://www.bkshare.org.in/2009/05/clive-cussler-serpent.html'>Clive Cussler - Serpent</a></li>
+<li><a href='http://www.bkshare.org.in/2009/05/clive-cussler-raise-titanic.html'>Clive Cussler - Raise The Titanic</a></li>
+<li><a href='http://www.bkshare.org.in/2009/05/clive-cussler-inca-gold.html'>Clive Cussler - Inca Gold</a></li>
+<li><a href='http://www.bkshare.org.in/2009/05/clive-cussler-blue-and-gold.html'>Clive Cussler - Blue and Gold</a></li>
+<li><a href='http://www.bkshare.org.in/2009/05/clive-cussler-novel-ebook-links.html'>Clive Cussler Novel Ebook Links</a></li>
+<li><a href='http://www.bkshare.org.in/2009/05/dan-brown-vinci-code.html'>Dan Brown - The Vinci Code</a></li>
+<li><a href='http://www.bkshare.org.in/2009/05/dan-brown-digital-fortress.html'>Dan Brown - Digital Fortress</a></li>
+<li><a href='http://www.bkshare.org.in/2009/05/dan-brown-angels-and-demons.html'>Dan Brown -Angels and Demons</a></li>
+<li><a href='http://www.bkshare.org.in/2009/05/dan-brown-novels-collection.html'>Dan Brown Novels Collection</a></li>
+<li><a href='http://www.bkshare.org.in/2009/05/sql-for-mysql-developers.html'>SQL for MySQL Developers</a></li>
+<li><a href='http://www.bkshare.org.in/2009/05/wrox-professional-sql-server-2005.html'>Wrox Professional SQL Server 2005 Administration D...</a></li>
+<li><a href='http://www.bkshare.org.in/2009/05/wrox-professional-sql-server-2000.html'>Wrox Professional SQL Server 2000 Database Design</a></li>
+<li><a href='http://www.bkshare.org.in/2009/05/other-technical-ebooks-links.html'>Other Technical Ebooks links</a></li>
+<li><a href='http://www.bkshare.org.in/2009/05/comics-ebooks-collection.html'>Comics Ebooks Collection</a></li>
+<li><a href='http://www.bkshare.org.in/2009/05/professional-javascript-for-web.html'>Professional JavaScript for Web Developers 2nd</a></li>
+<li><a href='http://www.bkshare.org.in/2009/05/parallel-scientific-computing-in-c-and.html'>Parallel Scientific Computing in C and MPI by Geor...</a></li>
+<li><a href='http://www.bkshare.org.in/2009/05/archie-vol-1-no-558-aug-2005-comic.html'>Archie Vol 1 No 558 Aug 2005 Comic eBook-iNTENSiTY...</a></li>
+<li><a href='http://www.bkshare.org.in/2009/05/archie-vol1-no-559-oct-2005-comic-ebook.html'>Archie Vol.1 No. 559 Oct 2005 Comic eBook-Intensit...</a></li>
+<li><a href='http://www.bkshare.org.in/2009/05/web-designers-guide-to-adobe-photoshop.html'>Web Designers Guide to Adobe Photoshop Feb 2006</a></li>
+<li><a href='http://www.bkshare.org.in/2009/05/microsoft-press-microsoft-visual-c-2008.html'>Microsoft Press - Microsoft Visual C 2008 Express ...</a></li>
+<li><a href='http://www.bkshare.org.in/2009/05/curves-and-surfaces-for-computer.html'>Curves and Surfaces for Computer Graphics by David...</a></li>
+<li><a href='http://www.bkshare.org.in/2009/05/mcse-self-paced-training-kit-exam-70.html'>MCSE Self-Paced Training Kit (Exam 70-294)</a></li>
+<li><a href='http://www.bkshare.org.in/2009/05/chetan-bhagat-one-night-at-call-center.html'>Chetan Bhagat - One Night at The Call Center</a></li>
+<li><a href='http://www.bkshare.org.in/2009/05/chetan-bhagat-three-mistakes-of-my-life.html'>Chetan Bhagat - Three Mistakes Of my Life</a></li>
+<li><a href='http://www.bkshare.org.in/2009/05/adventure-of-missing-three-quartrs.html'>THE ADVENTURE OF MISSING THREE QUARTRS</a></li>
+<li><a href='http://www.bkshare.org.in/2009/05/adventure-of-charles-augustus-milverton.html'>THE ADVENTURE OF CHARLES AUGUSTUS MILVERTON</a></li>
+<li><a href='http://www.bkshare.org.in/2009/05/adventure-of-black-peter.html'>THE ADVENTURE OF BLACK PETER</a></li>
+<li><a href='http://www.bkshare.org.in/2009/05/xml-ebooks-collection.html'>XML ebooks Collection</a></li>
+<li><a href='http://www.bkshare.org.in/2009/05/xml-for-dummies-4th-edition.html'>XML for Dummies 4th Edition</a></li>
+<li><a href='http://www.bkshare.org.in/2009/05/professional-xml.html'>Professional XML</a></li>
+<li><a href='http://www.bkshare.org.in/2009/05/paulo-coelho-eleven-minutes-eng.html'>Paulo Coelho - Eleven Minutes Eng</a></li>
+<li><a href='http://www.bkshare.org.in/2009/05/paulo-coelho-alchemist.html'>Paulo Coelho-The Alchemist</a></li>
+<li><a href='http://www.bkshare.org.in/2009/05/paulo-coelho-zahir.html'>Paulo Coelho-The Zahir</a></li>
+<li><a href='http://www.bkshare.org.in/2009/05/collection-of-paulo-coelho-novel-ebooks.html'>Collection of Paulo Coelho Novel Ebooks</a></li>
+<li><a href='http://www.bkshare.org.in/2009/05/collection-of-salman-rashdie-ebooks.html'>Collection of Salman Rashdie Ebooks</a></li>
+<li><a href='http://www.bkshare.org.in/2009/05/salmanrushdie-fury.html'>SalmanRushdie: Fury</a></li>
+<li><a href='http://www.bkshare.org.in/2009/05/web-services-essentials.html'>Web Services Essentials</a></li>
+<li><a href='http://www.bkshare.org.in/2009/05/programmable-logic-controls-programming.html'>Programmable Logic Controls: Programming Methods A...</a></li>
+<li><a href='http://www.bkshare.org.in/2009/05/summer-training-for-bca-mca-be-and.html'>Summer Training for BCA, MCA, BE and other compute...</a></li>
+<li><a href='http://www.bkshare.org.in/2009/05/cisco-router-configuration-tutorial.html'>Cisco Router Configuration Tutorial</a></li>
+<li><a href='http://www.bkshare.org.in/2009/05/cisco-2800-series-integrated-services.html'>CISCO 2800 SERIES INTEGRATED SERVICES ROUTERS DATA...</a></li>
+<li><a href='http://www.bkshare.org.in/2009/05/ccna-cisco-ios-exam-router-commands.html'>CCNA Cisco IOS Exam Router Commands</a></li>
+<li><a href='http://www.bkshare.org.in/2009/05/secret-language-of-leadership-how.html'>The Secret Language of Leadership: How Leaders Ins...</a></li>
+</ul>
+</li>
+</ul>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+          &#9658;&#160;
+        
+</span>
+</a>
+<a class='post-count-link' href='http://www.bkshare.org.in/2009_04_01_archive.html'>Apr</a>
+<span class='post-count' dir='ltr'>(3)</span>
+</li>
+</ul>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+          &#9658;&#160;
+        
+</span>
+</a>
+<a class='post-count-link' href='http://www.bkshare.org.in/2009_03_01_archive.html'>Mar</a>
+<span class='post-count' dir='ltr'>(4)</span>
+</li>
+</ul>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+          &#9658;&#160;
+        
+</span>
+</a>
+<a class='post-count-link' href='http://www.bkshare.org.in/2009_02_01_archive.html'>Feb</a>
+<span class='post-count' dir='ltr'>(3)</span>
+</li>
+</ul>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+          &#9658;&#160;
+        
+</span>
+</a>
+<a class='post-count-link' href='http://www.bkshare.org.in/2009_01_01_archive.html'>Jan</a>
+<span class='post-count' dir='ltr'>(7)</span>
+</li>
+</ul>
+</li>
+</ul>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+          &#9658;&#160;
+        
+</span>
+</a>
+<a class='post-count-link' href='http://www.bkshare.org.in/search?updated-min=2008-01-01T00:00:00%2B05:30&amp;updated-max=2009-01-01T00:00:00%2B05:30&amp;max-results=50'>2008</a>
+<span class='post-count' dir='ltr'>(155)</span>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+          &#9658;&#160;
+        
+</span>
+</a>
+<a class='post-count-link' href='http://www.bkshare.org.in/2008_12_01_archive.html'>Dec</a>
+<span class='post-count' dir='ltr'>(11)</span>
+</li>
+</ul>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+          &#9658;&#160;
+        
+</span>
+</a>
+<a class='post-count-link' href='http://www.bkshare.org.in/2008_11_01_archive.html'>Nov</a>
+<span class='post-count' dir='ltr'>(9)</span>
+</li>
+</ul>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+          &#9658;&#160;
+        
+</span>
+</a>
+<a class='post-count-link' href='http://www.bkshare.org.in/2008_10_01_archive.html'>Oct</a>
+<span class='post-count' dir='ltr'>(4)</span>
+</li>
+</ul>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+          &#9658;&#160;
+        
+</span>
+</a>
+<a class='post-count-link' href='http://www.bkshare.org.in/2008_09_01_archive.html'>Sep</a>
+<span class='post-count' dir='ltr'>(9)</span>
+</li>
+</ul>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+          &#9658;&#160;
+        
+</span>
+</a>
+<a class='post-count-link' href='http://www.bkshare.org.in/2008_08_01_archive.html'>Aug</a>
+<span class='post-count' dir='ltr'>(14)</span>
+</li>
+</ul>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+          &#9658;&#160;
+        
+</span>
+</a>
+<a class='post-count-link' href='http://www.bkshare.org.in/2008_06_01_archive.html'>Jun</a>
+<span class='post-count' dir='ltr'>(19)</span>
+</li>
+</ul>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+          &#9658;&#160;
+        
+</span>
+</a>
+<a class='post-count-link' href='http://www.bkshare.org.in/2008_05_01_archive.html'>May</a>
+<span class='post-count' dir='ltr'>(1)</span>
+</li>
+</ul>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+          &#9658;&#160;
+        
+</span>
+</a>
+<a class='post-count-link' href='http://www.bkshare.org.in/2008_04_01_archive.html'>Apr</a>
+<span class='post-count' dir='ltr'>(17)</span>
+</li>
+</ul>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+          &#9658;&#160;
+        
+</span>
+</a>
+<a class='post-count-link' href='http://www.bkshare.org.in/2008_03_01_archive.html'>Mar</a>
+<span class='post-count' dir='ltr'>(19)</span>
+</li>
+</ul>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+          &#9658;&#160;
+        
+</span>
+</a>
+<a class='post-count-link' href='http://www.bkshare.org.in/2008_02_01_archive.html'>Feb</a>
+<span class='post-count' dir='ltr'>(44)</span>
+</li>
+</ul>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+          &#9658;&#160;
+        
+</span>
+</a>
+<a class='post-count-link' href='http://www.bkshare.org.in/2008_01_01_archive.html'>Jan</a>
+<span class='post-count' dir='ltr'>(8)</span>
+</li>
+</ul>
+</li>
+</ul>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+          &#9658;&#160;
+        
+</span>
+</a>
+<a class='post-count-link' href='http://www.bkshare.org.in/search?updated-min=2007-01-01T00:00:00%2B05:30&amp;updated-max=2008-01-01T00:00:00%2B05:30&amp;max-results=12'>2007</a>
+<span class='post-count' dir='ltr'>(12)</span>
+<ul class='hierarchy'>
+<li class='archivedate collapsed'>
+<a class='toggle' href='javascript:void(0)'>
+<span class='zippy'>
+
+          &#9658;&#160;
+        
+</span>
+</a>
+<a class='post-count-link' href='http://www.bkshare.org.in/2007_12_01_archive.html'>Dec</a>
+<span class='post-count' dir='ltr'>(12)</span>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class='clear'></div>
+<span class='widget-item-control'>
+<span class='item-control blog-admin'>
+<a class='quickedit' href='//www.blogger.com/rearrange?blogID=3940223671753845456&widgetType=BlogArchive&widgetId=BlogArchive1&action=editWidget&sectionId=sidebar-links' onclick='return _WidgetManager._PopupConfig(document.getElementById("BlogArchive1"));' target='configBlogArchive1' title='Edit'>
+<img alt='' height='18' src='http://img1.blogblog.com/img/icon18_wrench_allbkg.png' width='18'/>
+</a>
+</span>
+</span>
+<div class='clear'></div>
+</div>
+</div></div>
+</DIV>
+</DIV>
+</DIV>
+<!-- (ADS) -->
+<DIV id='advertisment-block'>
+<div class='sidebar-tags section' id='sidebar2'><div class='widget Poll' id='Poll1'>
+<DIV class='widget-content' id='widget-content'>
+<H2>What kind of free ebooks do you want to see more?</H2>
+<IFRAME allowtransparency='true' frameborder='0' height='300' name='poll-widget4249486927310068586' src='http://www.google.com/reviews/polls/display/4249486927310068586/blogger_template/run_app?hideq=true&purl=http://www.bkshare.org.in/' style='border:none; width:100%;'></IFRAME>
+<div class='clear'></div>
+<span class='widget-item-control'>
+<span class='item-control blog-admin'>
+<a class='quickedit' href='//www.blogger.com/rearrange?blogID=3940223671753845456&widgetType=Poll&widgetId=Poll1&action=editWidget&sectionId=sidebar2' onclick='return _WidgetManager._PopupConfig(document.getElementById("Poll1"));' target='configPoll1' title='Edit'>
+<img alt='' height='18' src='http://img1.blogblog.com/img/icon18_wrench_allbkg.png' width='18'/>
+</a>
+</span>
+</span>
+<div class='clear'></div>
+</DIV>
+</div></div>
+</DIV>
+<!-- google_ad_section_end -->
+</DIV>
+<DIV class='clear'></DIV>
+</DIV>
+<!-- fin de capa content-wrapper -->
+<!-- (Pie de p&#65533;gina) -->
+<!-- (Footer) -->
+<DIV id='footer'>
+<!-- This is the first block for the footer - Begin -->
+<!--<div class='top-footer'> <b:section class='footer-block' id='footer-block1' showaddelement='yes'/> <b:section class='footer-block' id='footer-block2' showaddelement='yes'/> <b:section class='footer-block' id='footer-block3' showaddelement='yes'/> </div>-->
+<!-- This is the second block for the footer - Begin -->
+<!--<div class='bottom-footer'> <b:section class='footer-block' id='footer-block4' showaddelement='yes'/> <b:section class='footer-block' id='footer-block5' showaddelement='yes'/> <b:section class='footer-block' id='footer-block6' showaddelement='yes'/> </div>-->
+<!-- This is the final block for the footer - Begin -->
+<DIV id='final-footer'>
+<DIV class='ff-left'><SPAN class='site'>&#169;2006-2008 <A href='http://www.bkshare.org.in/' style='text-decoration: none;'>Free Slides Sharing</A></SPAN><BR></BR>
+<STRONG>Disclaimer:</STRONG> This site is a search engine of ebooks on the Internet and does not store any files on its server. Please contact the content providers to delete copyright contents if any and email us, we'll remove relevant links or contents immediately.<BR></BR>
+<CENTER>
+<TABLE><TR><TD>
+</TD>
+<TD>
+<!-- Histats.com START -->
+<SCRIPT language='javascript' type='text/javascript'> 			  
+				 var s_sid = 244664;var st_dominio = 4; 
+				 var cimg = 107;var cwi =170;var che =20; 
+			 </SCRIPT>
+<SCRIPT language='javascript' src='http://s10.histats.com/js9.js' type='text/javascript'></SCRIPT>
+<NOSCRIPT><A href='http://www.histats.com' target='_blank'>
+<IMG alt='free tracking' border='0' src='http://s4.histats.com/stats/0.gif?244664&1'></IMG></A>
+</NOSCRIPT>
+<!-- Histats.com END -->
+</TD>
+</TR>
+<TR><TD>
+</TD>
+<td>
+<SCRIPT language='JavaScript' src='http://xslt.alexa.com/site_stats/js/t/a?url=http://www.bkshare.org.in' type='text/javascript'></SCRIPT>
+</td></TR>
+</TABLE>
+</CENTER>
+</DIV></DIV>
+</DIV><!-- (Termina footer) -->
+<DIV id='footer-close'></DIV>
+</DIV></DIV>
+<script type="text/javascript">
+if (window.jstiming) window.jstiming.load.tick('widgetJsBefore');
+</script><script type="text/javascript" src="//www.blogger.com/static/v1/widgets/2000000996-widgets.js"></script>
+<script type='text/javascript'>
+if (typeof(BLOG_attachCsiOnload) != 'undefined' && BLOG_attachCsiOnload != null) { window['blogger_templates_experiment_id'] = "templatesV1";window['blogger_blog_id'] = '3940223671753845456';BLOG_attachCsiOnload('item_'); }_WidgetManager._Init('//www.blogger.com/rearrange?blogID\x3d3940223671753845456','//www.bkshare.org.in/2009/05/curves-and-surfaces-for-computer.html','3940223671753845456');
+_WidgetManager._SetDataContext([{'name': 'blog', 'data': {'blogId': '3940223671753845456', 'bloggerUrl': 'http://www.blogger.com', 'title': 'Free Slides Sharing', 'pageType': 'item', 'url': 'http://www.bkshare.org.in/2009/05/curves-and-surfaces-for-computer.html', 'canonicalUrl': 'http://www.bkshare.org.in/2009/05/curves-and-surfaces-for-computer.html', 'canonicalHomepageUrl': 'http://www.bkshare.org.in/', 'homepageUrl': 'http://www.bkshare.org.in/', 'blogspotFaviconUrl': 'http://www.bkshare.org.in/favicon.ico', 'enabledCommentProfileImages': true, 'adultContent': false, 'disableAdSenseWidget': false, 'analyticsAccountNumber': '', 'searchLabel': '', 'searchQuery': '', 'pageName': 'Curves and Surfaces for Computer Graphics by David Salomon', 'pageTitle': 'Free Slides Sharing: Curves and Surfaces for Computer Graphics by David Salomon', 'encoding': 'UTF-8', 'locale': 'en-US', 'isPrivate': false, 'isMobile': false, 'isMobileRequest': false, 'mobileClass': '', 'isPrivateBlog': false, 'languageDirection': 'ltr', 'feedLinks': '\74link rel\75\42alternate\42 type\75\42application/atom+xml\42 title\75\42Free Slides Sharing - Atom\42 href\75\42http://www.bkshare.org.in/feeds/posts/default\42 /\76\n\74link rel\75\42alternate\42 type\75\42application/rss+xml\42 title\75\42Free Slides Sharing - RSS\42 href\75\42http://www.bkshare.org.in/feeds/posts/default?alt\75rss\42 /\76\n\74link rel\75\42service.post\42 type\75\42application/atom+xml\42 title\75\42Free Slides Sharing - Atom\42 href\75\42http://www.blogger.com/feeds/3940223671753845456/posts/default\42 /\76\n\74link rel\75\42EditURI\42 type\75\42application/rsd+xml\42 title\75\42RSD\42 href\75\42http://www.blogger.com/rsd.g?blogID\0753940223671753845456\42 /\76\n\74link rel\75\42alternate\42 type\75\42application/atom+xml\42 title\75\42Free Slides Sharing - Atom\42 href\75\42http://www.bkshare.org.in/feeds/556368443788695483/comments/default\42 /\76\n', 'meTag': '', 'openIdOpTag': '', 'imageSrcTag': '', 'latencyHeadScript': '\74script type\75\42text/javascript\42\76(function() { var a\75window,b\75\42jstiming\42,d\75\42tick\42;var e\75function(c){this.t\75{};this.tick\75function(c,p,h){h\75void 0!\75h?h:(new Date).getTime();this.t[c]\75[h,p]};this[d](\42start\42,null,c)},f\75new e;a.jstiming\75{Timer:e,load:f};if(a.performance\46\46a.performance.timing){var g\75a.performance.timing,j\75a[b].load,k\75g.navigationStart,l\75g.responseStart;0\74k\46\46l\76\75k\46\46(j[d](\42_wtsrt\42,void 0,k),j[d](\42wtsrt_\42,\42_wtsrt\42,l),j[d](\42tbsd_\42,\42wtsrt_\42))}\ntry{var m\75null;a.chrome\46\46a.chrome.csi\46\46(m\75Math.floor(a.chrome.csi().pageT),j\46\0460\74k\46\46(j[d](\42_tbnd\42,void 0,a.chrome.csi().startE),j[d](\42tbnd_\42,\42_tbnd\42,k)));null\75\75m\46\46a.gtbExternal\46\46(m\75a.gtbExternal.pageT());null\75\75m\46\46a.external\46\46(m\75a.external.pageT,j\46\0460\74k\46\46(j[d](\42_tbnd\42,void 0,a.external.startE),j[d](\42tbnd_\42,\42_tbnd\42,k)));m\46\46(a[b].pt\75m)}catch(n){};a.tickAboveFold\75function(c){var i\0750;if(c.offsetParent){do i+\75c.offsetTop;while(c\75c.offsetParent)}c\75i;750\76\75c\46\46a[b].load[d](\42aft\42)};var q\75!1;function r(){q||(q\75!0,a[b].load[d](\42firstScrollTime\42))}a.addEventListener?a.addEventListener(\42scroll\42,r,!1):a.attachEvent(\42onscroll\42,r);\n })();\74/script\076', 'mobileHeadScript': '', 'view': '', 'dynamicViewsCommentsSrc': '//www.blogblog.com/dynamicviews/4224c15c4e7c9321/js/comments.js', 'dynamicViewsScriptSrc': '//www.blogblog.com/dynamicviews/7728d91bbda5af3c'}}, {'name': 'skin', 'data': {'vars': {}, 'override': ''}}, {'name': 'view', 'data': {'classic': {'name': 'classic', 'url': '/?view\75classic'}, 'flipcard': {'name': 'flipcard', 'url': '/?view\75flipcard'}, 'magazine': {'name': 'magazine', 'url': '/?view\75magazine'}, 'mosaic': {'name': 'mosaic', 'url': '/?view\75mosaic'}, 'sidebar': {'name': 'sidebar', 'url': '/?view\75sidebar'}, 'snapshot': {'name': 'snapshot', 'url': '/?view\75snapshot'}, 'timeslide': {'name': 'timeslide', 'url': '/?view\75timeslide'}}}]);
+_WidgetManager._RegisterWidget('_HTMLView', new _WidgetInfo('HTML2', 'mini-feats', null, document.getElementById('HTML2'), {}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_BlogArchiveView', new _WidgetInfo('BlogArchive1', 'sidebar-links', null, document.getElementById('BlogArchive1'), {'languageDirection': 'ltr'}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_FeedView', new _WidgetInfo('Feed2', 'link-bait', null, document.getElementById('Feed2'), {'title': 'TechHeap', 'showItemDate': false, 'showItemAuthor': false, 'feedUrl': 'http://tech-heap.blogspot.in/feeds/posts/default?max-results\07510', 'numItemsShow': 5, 'loadingMsg': 'Loading...', 'openLinksInNewWindow': true}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_LabelView', new _WidgetInfo('Label1', 'sidebar-tags', null, document.getElementById('Label1'), {}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_LabelView', new _WidgetInfo('Label2', 'sidebar1', null, document.getElementById('Label2'), {}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_PollView', new _WidgetInfo('Poll1', 'sidebar2', null, document.getElementById('Poll1'), {}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_HeaderView', new _WidgetInfo('Header1', 'header', null, document.getElementById('Header1'), {}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_NavbarView', new _WidgetInfo('Navbar1', 'navbar', null, document.getElementById('Navbar1'), {}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_HTMLView', new _WidgetInfo('HTML3', 'main', null, document.getElementById('HTML3'), {}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_HTMLView', new _WidgetInfo('HTML1', 'main', null, document.getElementById('HTML1'), {}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_BlogView', new _WidgetInfo('Blog1', 'main', null, document.getElementById('Blog1'), {'cmtInteractionsEnabled': false, 'showBacklinks': true, 'postId': '556368443788695483', 'lightboxEnabled': true, 'lightboxModuleUrl': '//www.blogger.com/static/v1/jsbin/3339358681-lbx.js', 'lightboxCssUrl': '//www.blogger.com/static/v1/v-css/228702327-lightbox_bundle.css'}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_PageListView', new _WidgetInfo('PageList1', 'null', null, document.getElementById('PageList1'), {'title': 'Pages', 'links': [{'href': 'http://www.bkshare.org.in/', 'title': 'Home', 'isCurrentPage': false}], 'mobile': false}, 'displayModeFull'));
+</script>
+</body>
+</HTML>

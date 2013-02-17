@@ -1,0 +1,1349 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html itemscope itemtype="http://schema.org/Organization"
+    xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:og="http://opengraphprotocol.org/schema/"
+    xmlns:fb="http://www.facebook.com/2008/fbml"  >
+      <head prefix="og: http://ogp.me/ns# khanacademy:
+                        http://ogp.me/ns/apps/khanacademy#">
+        <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE8"/>
+        
+        <!--[if lte IE 7]><script src="/javascript/ie-warning.js"></script><script>window.onload=function(){e("/images/ie-warning/")}</script><![endif]-->
+        
+<script type="text/javascript">
+    // TODO: Sweep below into KA
+    // TODO: Change USERNAME var since it is actually the user's nickname
+    
+    var KA_VERSION = '1106-16a7ac880ec5.362968988978516470';
+    var FB_APP_ID = '160249463991765';
+    var USERNAME = '';
+
+    var KA = {
+        "FB_APP_NAMESPACE": "khanacademy",
+        
+        userProfileModel_: null,
+        getUserProfile: function() {
+            
+            return KA.userProfileModel_;
+        },
+        getUserID: function() {
+            
+            return null;
+            
+        },
+        currentServerTime: function() {
+            return 1352227960.60499;
+        },
+        topicTreeVersion: "438",
+        loginUrl: "/login?continue=%2Fscience%2Fcomputer-science%2Fv%2Fintroduction-to-programs-data-types-and-variables"
+    };
+</script>
+
+
+        
+
+        <title>Introduction to Programs Data Types and Variables | Computer Science |
+Khan Academy</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0;">
+        <meta name="description" content="Writing a basic program.  Basics of data types, variables and conditional statements" />
+        <meta name="keywords" content="" />
+
+        
+        <link rel="canonical" href="http://www.khanacademy.org/science/computer-science/v/introduction-to-programs-data-types-and-variables">
+
+        
+        
+            <meta name="fragment" content="!">
+        
+
+        <meta property="fb:app_id" content="160249463991765"/>
+        <meta property="fb:admins" content="100000121497109,1305017,100001572496923"/> 
+        <meta property="og:site_name" content="Khan Academy"/>
+        
+        
+        <meta property="og:type" content="video.other" />
+        <meta property="og:title" content="Introduction to Programs Data Types and Variables" />
+        <meta property="og:description" content="Writing a basic program.  Basics of data types, variables and conditional statements" />
+        <meta property="og:url" content="http://www.khanacademy.org/science/computer-science/v/introduction-to-programs-data-types-and-variables">
+        <meta property="og:image" content="http://img.youtube.com/vi/husPzLE6sZc/0.jpg" />
+        <meta property="og:video" content="http://www.youtube.com/v/husPzLE6sZc">
+        <meta property="og:video:type" content="application/x-shockwave-flash">
+
+
+        <meta name="twitter:site" content="@khanacademy">
+        
+        
+        <meta name="twitter:title" content="Khan Academy">
+        <meta name="twitter:description" content="With a library of over 3,000 videos covering everything from arithmetic to physics, finance, and history and hundreds of skills to practice, we&#39;re on a mission to help you learn what you want, when you want, at your own pace.">
+        <meta name="twitter:image" content="http://www.khanacademy.org/images/handtreehorizontal_facebook.png">
+        
+
+        <meta itemprop="name" content="Khan Academy">
+        <meta itemprop="description" content="Watch. Practice. Learn almost anything for free.">
+        <meta itemprop="image" content="http://www.khanacademy.org/images/khan-logo-vertical-transparent.png">
+        <link rel="shortcut icon" href="/favicon.ico?leaf">
+        <link rel="apple-touch-icon-precomposed" sizes="57x57" href="/images/apple-touch-icon-57x57-precomposed.png"/>
+        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/images/apple-touch-icon-72x72-precomposed.png"/>
+        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/images/apple-touch-icon-114x114-precomposed.png"/>
+        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/images/apple-touch-icon-144x144-precomposed.png"/>
+
+        
+            
+            
+            
+    
+    <!--[if (!IE)|(gte IE 8)]><!-->
+<link rel='stylesheet' type='text/css' href='http://khan-academy.appspot.com/stylesheets/shared-package/hashed-9ac0361654d8ee0083a60a30c679e57f.css'>
+<!--<![endif]-->
+<!--[if lte IE 7]>
+<link rel='stylesheet' type='text/css' href='http://khan-academy.appspot.com/stylesheets/shared-package/hashed-ed0facf277187d6c0fb60f386f34272f.css'>
+<![endif]-->
+    <!--[if (!IE)|(gte IE 8)]><!-->
+<link rel='stylesheet' type='text/css' href='http://khan-academy.appspot.com/stylesheets/bootstrap-grids-package/hashed-dc3a2502c2a547cff29a0041ae198cb7.css'>
+<!--<![endif]-->
+<!--[if lte IE 7]>
+<link rel='stylesheet' type='text/css' href='http://khan-academy.appspot.com/stylesheets/bootstrap-grids-package/hashed-dc3a2502c2a547cff29a0041ae198cb7.css'>
+<![endif]-->
+    <!--[if (!IE)|(gte IE 8)]><!-->
+<link rel='stylesheet' type='text/css' href='http://khan-academy.appspot.com/stylesheets/nav-package/hashed-15b3419eb3896ef64e49d51678945cf7.css'>
+<!--<![endif]-->
+<!--[if lte IE 7]>
+<link rel='stylesheet' type='text/css' href='http://khan-academy.appspot.com/stylesheets/nav-package/hashed-15b3419eb3896ef64e49d51678945cf7.css'>
+<![endif]-->
+    <!--[if (!IE)|(gte IE 8)]><!-->
+<link rel='stylesheet' type='text/css' href='http://khan-academy.appspot.com/stylesheets/tutorial-package/hashed-0bc22e78a992baf5e14c2f22b1fabe78.css'>
+<!--<![endif]-->
+<!--[if lte IE 7]>
+<link rel='stylesheet' type='text/css' href='http://khan-academy.appspot.com/stylesheets/tutorial-package/hashed-0bc22e78a992baf5e14c2f22b1fabe78.css'>
+<![endif]-->
+
+    
+    <style>
+    .tutorial-description .old-video-nav #prev-node,
+    .tutorial-description .old-video-nav #next-node {
+        display: none;
+    }
+    </style>
+
+    <!--[if (!IE)|(gte IE 8)]><!-->
+<link rel='stylesheet' type='text/css' href='http://khan-academy.appspot.com/stylesheets/video-package/hashed-d3ec3f2cc9f8af3194c4edd01cb775a0.css'>
+<!--<![endif]-->
+<!--[if lte IE 7]>
+<link rel='stylesheet' type='text/css' href='http://khan-academy.appspot.com/stylesheets/video-package/hashed-d3ec3f2cc9f8af3194c4edd01cb775a0.css'>
+<![endif]-->
+    <!--[if (!IE)|(gte IE 8)]><!-->
+<link rel='stylesheet' type='text/css' href='http://khan-academy.appspot.com/stylesheets/discussion-package/hashed-0c2c60777b0c9c32bdb942b3959fb3a5.css'>
+<!--<![endif]-->
+<!--[if lte IE 7]>
+<link rel='stylesheet' type='text/css' href='http://khan-academy.appspot.com/stylesheets/discussion-package/hashed-172492685840c4f7bbbe45f5562e2faa.css'>
+<![endif]-->
+    <!--[if (!IE)|(gte IE 8)]><!-->
+<link rel='stylesheet' type='text/css' href='http://khan-academy.appspot.com/stylesheets/moderation-package/hashed-cfd845417d8d29b7ed74a91fde8054bc.css'>
+<!--<![endif]-->
+<!--[if lte IE 7]>
+<link rel='stylesheet' type='text/css' href='http://khan-academy.appspot.com/stylesheets/moderation-package/hashed-cfd845417d8d29b7ed74a91fde8054bc.css'>
+<![endif]-->
+    
+
+    <!--[if (!IE)|(gte IE 8)]><!-->
+<link rel='stylesheet' type='text/css' href='http://khan-academy.appspot.com/stylesheets/exercises-package/hashed-29c35eba6bc0a18286b8b19118ecf613.css'>
+<!--<![endif]-->
+<!--[if lte IE 7]>
+<link rel='stylesheet' type='text/css' href='http://khan-academy.appspot.com/stylesheets/exercises-package/hashed-29c35eba6bc0a18286b8b19118ecf613.css'>
+<![endif]-->
+    <!--[if (!IE)|(gte IE 8)]><!-->
+<link rel='stylesheet' type='text/css' href='http://khan-academy.appspot.com/khan-exercises/css/hashed-34627dd6f62b156230b06a03512767aa.css'>
+<!--<![endif]-->
+<!--[if lte IE 7]>
+<link rel='stylesheet' type='text/css' href='http://khan-academy.appspot.com/khan-exercises/css/hashed-34627dd6f62b156230b06a03512767aa.css'>
+<![endif]-->
+
+            
+            <script type='text/javascript' src='http://khan-academy.appspot.com/javascript/shared-package/hashed-66c559277253fffc9ea4006ca296b372.js'></script><script type='text/javascript'>if (window.PackageManager) {PackageManager.setLoaded('shared');}</script>
+        
+
+        <script type="text/javascript">
+          PackageManager.registerDynamic('maps', 
+['/javascript/maps-package/hashed-9c7763106253e6ecd6fddc98aa1226fa.js'], 
+[]
+);
+        </script>
+
+        
+        
+        
+
+    <script type="text/javascript">
+      
+
+      window._gaq = window._gaq || [];_gaq.push(['_setAccount', 'UA-6742635-1']);
+      _gaq.push(['_setDomainName', '.khanacademy.org']);
+      _gaq.push(['_trackPageview']);
+      _gaq.push(['_trackPageLoadTime']);
+      
+      _gaq.push(['_setCustomVar', 1, 'User Type', 'New', 1 ]);
+      
+      
+
+      
+      _gaq.push(['ht._setAccount', 'UA-5033010-1']);
+      _gaq.push(['ht._setDomainName', '.khanacademy.org']);
+      _gaq.push(['ht._trackPageview']);
+
+      
+      window.mpq = [];
+      
+      window._initialPageTime = (new Date()).getTime(); // For page load time tracking</script>
+    </head>
+<!--[if lt IE 7]>  <body class="ie ie6 lte9 lte8 lte7"> <![endif]-->
+<!--[if IE 7]>     <body class="ie ie7 lte9 lte8 lte7"> <![endif]-->
+<!--[if IE 8]>     <body class="ie ie8 lte9 lte8"> <![endif]-->
+<!--[if IE 9]>     <body class="ie ie9 lte9"> <![endif]-->
+<!--[if gt IE 9]>  <body> <![endif]-->
+<!--[if !IE]><!--> <body> <!--<![endif]-->
+    <div id="outer-wrapper" class="clearfix">
+    <div class="notification-bar" style="display:none;">
+
+</div>
+<div class="notification-bar-spacer"></div>
+    
+    <div id="page-container">
+    <div id="page-container-inner">
+        
+        <div id="fb-root"></div>
+
+        
+        <script>document.writeln('<style scoped type="text/css">a[href="#"], .requires_script { visibility: visible; }</style>');</script>
+
+            <div id="goals-nav-container" style="display: none" class="ui-corner-bottom"></div>
+            <header>
+
+                <div id="top-header">
+                  
+                                      <div class="top-header-links">
+                        <span class="page_links" id="page_auth">
+                            <span id="goals-container"></span>
+                                <span id="user-info" class="badge-target">
+                                
+                                    
+                                    
+                                        <a class="nav-link" href="/login?continue=%2Fscience%2Fcomputer-science%2Fv%2Fintroduction-to-programs-data-types-and-variables">Log in</a>
+                                        <span class="separator"></span>
+                                        <a class="nav-link" href="/signup?continue=%2Fscience%2Fcomputer-science%2Fv%2Fintroduction-to-programs-data-types-and-variables">Sign up</a>
+                                    
+                                
+                                </span>
+                            <span class="separator"></span>
+                            <a href='/donate'
+                            
+                                class="nav-link "
+                            >
+                            Donate
+                            </a>
+                        </span>
+                        <div class="clear"></div>
+                        <div id="nav-and-search">
+                            <div class="sitewide-navigation">
+                                <nav>
+                                    <span class="links nav-subheader">
+                                        <span class="dropdown topic-browser-dropdown">
+                                            
+                                            <a href="/#browse" data-tag="Header" class="watch-link dropdown-toggle">Watch <span class="caret"></span></a>
+                                            
+                                            <a href="/exercisedashboard" data-tag="Header" class=" practice-link">Practice</a>
+                                            
+                                            <a href="/class_profile" data-tag="Header" class=" coach-link">Coach</a>
+                                            
+                                            <a href="/contribute" data-tag="Header" class=" contribute-link">Volunteer</a>
+                                            <a href="/about" data-tag="Header" class=" about-link">About</a>
+                                            <div style="clear: both"></div>
+                                            
+<ul class="topic-browser-menu dropdown-menu none-active" data-role="listview" data-inset="true">
+  
+    
+      <li class="level0 has-submenu">
+        <a  data-tag="TopicBrowserPulldown" class="menulink">Math
+        </a>
+        <div class="right-arrow"></div>
+        <ul class="dropdown-menu no-submenus">
+        
+          <li class="level1 "><a href="/math/arithmetic" data-tag="TopicBrowserPulldown" class="menulink">Arithmetic and Pre-Algebra</a></li>
+        
+          <li class="level1 "><a href="/math/algebra" data-tag="TopicBrowserPulldown" class="menulink">Algebra</a></li>
+        
+          <li class="level1 "><a href="/math/applied-math" data-tag="TopicBrowserPulldown" class="menulink">Applied Math</a></li>
+        
+          <li class="level1 "><a href="/math/geometry" data-tag="TopicBrowserPulldown" class="menulink">Geometry</a></li>
+        
+          <li class="level1 "><a href="/math/trigonometry" data-tag="TopicBrowserPulldown" class="menulink">Trigonometry</a></li>
+        
+          <li class="level1 "><a href="/math/probability" data-tag="TopicBrowserPulldown" class="menulink">Probability</a></li>
+        
+          <li class="level1 "><a href="/math/statistics" data-tag="TopicBrowserPulldown" class="menulink">Statistics</a></li>
+        
+          <li class="level1 "><a href="/math/precalculus" data-tag="TopicBrowserPulldown" class="menulink">Precalculus</a></li>
+        
+          <li class="level1 "><a href="/math/calculus" data-tag="TopicBrowserPulldown" class="menulink">Calculus</a></li>
+        
+          <li class="level1 "><a href="/math/differential-equations" data-tag="TopicBrowserPulldown" class="menulink">Differential Equations</a></li>
+        
+          <li class="level1 "><a href="/math/linear-algebra" data-tag="TopicBrowserPulldown" class="menulink">Linear Algebra</a></li>
+        
+          <li class="level1 "><a href="/math/brain-teasers" data-tag="TopicBrowserPulldown" class="menulink">Brain Teasers</a></li>
+        
+          <li class="level1 "><a href="/math/vi-hart" data-tag="TopicBrowserPulldown" class="menulink">Vi Hart</a></li>
+        
+        </ul>
+      </li>
+    
+  
+    
+      <li class="level0 has-submenu">
+        <a  data-tag="TopicBrowserPulldown" class="menulink">Science
+        </a>
+        <div class="right-arrow"></div>
+        <ul class="dropdown-menu no-submenus">
+        
+          <li class="level1 "><a href="/science/biology" data-tag="TopicBrowserPulldown" class="menulink">Biology</a></li>
+        
+          <li class="level1 "><a href="/science/chemistry" data-tag="TopicBrowserPulldown" class="menulink">Chemistry</a></li>
+        
+          <li class="level1 "><a href="/science/cosmology-and-astronomy" data-tag="TopicBrowserPulldown" class="menulink">Cosmology and Astronomy</a></li>
+        
+          <li class="level1 "><a href="/science/healthcare-and-medicine" data-tag="TopicBrowserPulldown" class="menulink">Healthcare and Medicine</a></li>
+        
+          <li class="level1 "><a href="/science/organic-chemistry" data-tag="TopicBrowserPulldown" class="menulink">Organic Chemistry</a></li>
+        
+          <li class="level1 "><a href="/science/physics" data-tag="TopicBrowserPulldown" class="menulink">Physics</a></li>
+        
+          <li class="level1 "><a href="/science/lebron-asks" data-tag="TopicBrowserPulldown" class="menulink">LeBron Asks</a></li>
+        
+          <li class="level1 "><a href="/science/mit-k12" data-tag="TopicBrowserPulldown" class="menulink">MIT+K12</a></li>
+        
+          <li class="level1 "><a href="/science/projects" data-tag="TopicBrowserPulldown" class="menulink">Projects</a></li>
+        
+        </ul>
+      </li>
+    
+  
+    
+      <li class="level0 has-submenu">
+        <a href="/cs" data-tag="TopicBrowserPulldown" class="menulink">Computer Science
+        </a>
+        <div class="right-arrow"></div>
+        <ul class="dropdown-menu no-submenus">
+        
+          <li class="level1 "><a href="/cs/tutorials/drawing" data-tag="TopicBrowserPulldown" class="menulink">Drawing</a></li>
+        
+          <li class="level1 "><a href="/cs/tutorials/programming-basics" data-tag="TopicBrowserPulldown" class="menulink">Programming Basics</a></li>
+        
+          <li class="level1 "><a href="/cs/tutorials/animation" data-tag="TopicBrowserPulldown" class="menulink">Animation</a></li>
+        
+          <li class="level1 "><a href="/cs/tutorials/user-interaction" data-tag="TopicBrowserPulldown" class="menulink">User Interaction</a></li>
+        
+        </ul>
+      </li>
+    
+  
+    
+      <li class="level0 has-submenu">
+        <a  data-tag="TopicBrowserPulldown" class="menulink">Finance &amp; Economics
+        </a>
+        <div class="right-arrow"></div>
+        <ul class="dropdown-menu no-submenus">
+        
+          <li class="level1 "><a href="/finance-economics/core-finance" data-tag="TopicBrowserPulldown" class="menulink">Core Finance</a></li>
+        
+          <li class="level1 "><a href="/finance-economics/valuation-and-investing" data-tag="TopicBrowserPulldown" class="menulink">Valuation and Investing</a></li>
+        
+          <li class="level1 "><a href="/finance-economics/venture-capital-and-capital-markets" data-tag="TopicBrowserPulldown" class="menulink">Venture Capital and Capital Markets</a></li>
+        
+          <li class="level1 "><a href="/finance-economics/credit-crisis" data-tag="TopicBrowserPulldown" class="menulink">Credit Crisis</a></li>
+        
+          <li class="level1 "><a href="/finance-economics/paulson-bailout" data-tag="TopicBrowserPulldown" class="menulink">Paulson Bailout</a></li>
+        
+          <li class="level1 "><a href="/finance-economics/geithner-plan" data-tag="TopicBrowserPulldown" class="menulink">Geithner Plan</a></li>
+        
+          <li class="level1 "><a href="/finance-economics/current-economics" data-tag="TopicBrowserPulldown" class="menulink">Current Economics</a></li>
+        
+          <li class="level1 "><a href="/finance-economics/banking-and-money" data-tag="TopicBrowserPulldown" class="menulink">Banking and Money</a></li>
+        
+          <li class="level1 "><a href="/finance-economics/currency" data-tag="TopicBrowserPulldown" class="menulink">Currency</a></li>
+        
+          <li class="level1 "><a href="/finance-economics/microeconomics" data-tag="TopicBrowserPulldown" class="menulink">Microeconomics</a></li>
+        
+          <li class="level1 "><a href="/finance-economics/macroeconomics" data-tag="TopicBrowserPulldown" class="menulink">Macroeconomics</a></li>
+        
+          <li class="level1 "><a href="/finance-economics/greek-debt-crisis" data-tag="TopicBrowserPulldown" class="menulink">Greek Debt Crisis</a></li>
+        
+        </ul>
+      </li>
+    
+  
+    
+      <li class="level0 has-submenu">
+        <a  data-tag="TopicBrowserPulldown" class="menulink">Humanities
+        </a>
+        <div class="right-arrow"></div>
+        <ul class="dropdown-menu no-submenus">
+        
+          <li class="level1 "><a href="/humanities/history" data-tag="TopicBrowserPulldown" class="menulink">History</a></li>
+        
+          <li class="level1 "><a href="/humanities/american-civics" data-tag="TopicBrowserPulldown" class="menulink">American Civics</a></li>
+        
+          <li class="level1 "><a href="/humanities/art-history" data-tag="TopicBrowserPulldown" class="menulink">Art History</a></li>
+        
+        </ul>
+      </li>
+    
+  
+    
+      <li class="level0 has-submenu">
+        <a  data-tag="TopicBrowserPulldown" class="menulink">Test Prep
+        </a>
+        <div class="right-arrow"></div>
+        <ul class="dropdown-menu no-submenus">
+        
+          <li class="level1 "><a href="/test-prep/sat-math" data-tag="TopicBrowserPulldown" class="menulink">SAT Math</a></li>
+        
+          <li class="level1 "><a href="/test-prep/gmat" data-tag="TopicBrowserPulldown" class="menulink">GMAT</a></li>
+        
+          <li class="level1 "><a href="/test-prep/cahsee" data-tag="TopicBrowserPulldown" class="menulink">CAHSEE</a></li>
+        
+          <li class="level1 "><a href="/test-prep/california-standards-test" data-tag="TopicBrowserPulldown" class="menulink">California Standards Test</a></li>
+        
+          <li class="level1 "><a href="/test-prep/competition-math" data-tag="TopicBrowserPulldown" class="menulink">Competition Math</a></li>
+        
+          <li class="level1 "><a href="/test-prep/iit-jee" data-tag="TopicBrowserPulldown" class="menulink">IIT JEE</a></li>
+        
+          <li class="level1 "><a href="/test-prep/singapore-math" data-tag="TopicBrowserPulldown" class="menulink">Singapore Math</a></li>
+        
+        </ul>
+      </li>
+    
+  
+    
+      <li class="level0"><a href="/talks-and-interviews" data-tag="TopicBrowserPulldown" class="menulink">Talks and Interviews</a></li>
+    
+  
+    
+      <li class="level0"><a href="/coach-res" data-tag="TopicBrowserPulldown" class="menulink">Coach Resources</a></li>
+    
+  
+  <li class="has-divider"><a href="/library" data-tag="TopicBrowserPulldownBrowse" class="menulink">Browse all videos</a></li>
+</ul>
+
+
+                                        </span>
+                                    </span>
+                                </nav>
+                            </div>
+                            <div id="search-box">
+                                <form class="page-search" action="/search">
+                                    <input id="search-input" type="text" placeholder="Search for a video or topic" name="page_search_query" value='' class="ui-corner-all placeholder simple-input search-input blur-on-esc" /><input type="submit" value=" " class="search-submit" />
+                                </form>
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                    </div>
+                    <div id="logo">
+                        
+                            
+                        
+                        <a id="logo-image" href="/" title="Take me home!" data-tag="Header"></a>
+                        <div id="stats">
+                            <span id="page_visitors">
+                                    <span id="page_num_visitors">
+                                        <!-- Content will get populated by javacript at end of page -->
+                                    </span>&nbsp;lessons delivered
+                            </span>
+                        </div>
+                    </div>
+                    <div class="clear"></div>
+                  
+                </div>
+
+
+                <nav id="page_sub_nav">
+                    
+                    <b></b>
+                    
+                </nav>
+                
+                
+
+                
+            </header>
+            
+            
+<article id="tutorial-page">
+    <div class="tutorial-nav docked-nav" data-khan-nav="true">
+        <div class="topic-nav-header">
+    
+    <a href="/science/computer-science" class="back-to-topic-page"><i class="icon-circle-arrow-left"></i> Topic page</a>
+    
+    <h2 class="title">Computer Science <i class="add-video content-editor icon-facetime-video" style="display: none;"></i>
+        <i class="add-exercise content-editor icon-star" style="display: none;"></i></h2>
+</div>
+
+<div class="topic-nav-content" data-khan-scroll="true">
+    <ol class="core">
+    
+        <li id="v/introduction-to-programs-data-types-and-variables" class="tutorial-nav-node video-node progress-container">
+            <a href="/science/computer-science/v/introduction-to-programs-data-types-and-variables" class="tutorial-router-link tab-link  clearfix">
+                
+<span class="progress-icon icon-video-node v133798248 "></span>
+
+
+                <span class="progress-title">Introduction to Programs Data Types and Variables</span>
+            </a>
+        </li>
+    
+        <li id="v/binary-numbers" class="tutorial-nav-node video-node progress-container">
+            <a href="/science/computer-science/v/binary-numbers" class="tutorial-router-link tab-link  clearfix">
+                
+<span class="progress-icon icon-video-node v65176942 "></span>
+
+
+                <span class="progress-title">Binary Numbers</span>
+            </a>
+        </li>
+    
+        <li id="v/python-lists" class="tutorial-nav-node video-node progress-container">
+            <a href="/science/computer-science/v/python-lists" class="tutorial-router-link tab-link  clearfix">
+                
+<span class="progress-icon icon-video-node v133798249 "></span>
+
+
+                <span class="progress-title">Python Lists</span>
+            </a>
+        </li>
+    
+        <li id="v/for-loops-in-python" class="tutorial-nav-node video-node progress-container">
+            <a href="/science/computer-science/v/for-loops-in-python" class="tutorial-router-link tab-link  clearfix">
+                
+<span class="progress-icon icon-video-node v133798250 "></span>
+
+
+                <span class="progress-title">For Loops in Python</span>
+            </a>
+        </li>
+    
+        <li id="v/while-loops-in-python" class="tutorial-nav-node video-node progress-container">
+            <a href="/science/computer-science/v/while-loops-in-python" class="tutorial-router-link tab-link  clearfix">
+                
+<span class="progress-icon icon-video-node v133798251 "></span>
+
+
+                <span class="progress-title">While Loops in Python</span>
+            </a>
+        </li>
+    
+        <li id="v/fun-with-strings" class="tutorial-nav-node video-node progress-container">
+            <a href="/science/computer-science/v/fun-with-strings" class="tutorial-router-link tab-link  clearfix">
+                
+<span class="progress-icon icon-video-node v134691533 "></span>
+
+
+                <span class="progress-title">Fun with Strings</span>
+            </a>
+        </li>
+    
+        <li id="v/writing-a-simple-factorial-program---python-2" class="tutorial-nav-node video-node progress-container">
+            <a href="/science/computer-science/v/writing-a-simple-factorial-program---python-2" class="tutorial-router-link tab-link  clearfix">
+                
+<span class="progress-icon icon-video-node v133798255 "></span>
+
+
+                <span class="progress-title">Writing a Simple Factorial Program. (Python 2)</span>
+            </a>
+        </li>
+    
+        <li id="v/stepping-through-the-factorial-program" class="tutorial-nav-node video-node progress-container">
+            <a href="/science/computer-science/v/stepping-through-the-factorial-program" class="tutorial-router-link tab-link  clearfix">
+                
+<span class="progress-icon icon-video-node v132660403 "></span>
+
+
+                <span class="progress-title">Stepping Through the Factorial Program</span>
+            </a>
+        </li>
+    
+        <li id="v/flowchart-for-the-factorial-program" class="tutorial-nav-node video-node progress-container">
+            <a href="/science/computer-science/v/flowchart-for-the-factorial-program" class="tutorial-router-link tab-link  clearfix">
+                
+<span class="progress-icon icon-video-node v132660406 "></span>
+
+
+                <span class="progress-title">Flowchart for the Factorial Program</span>
+            </a>
+        </li>
+    
+        <li id="v/python-3-not-backwards-compatible-with-python-2" class="tutorial-nav-node video-node progress-container">
+            <a href="/science/computer-science/v/python-3-not-backwards-compatible-with-python-2" class="tutorial-router-link tab-link  clearfix">
+                
+<span class="progress-icon icon-video-node v132660407 "></span>
+
+
+                <span class="progress-title">Python 3 Not Backwards Compatible with Python 2</span>
+            </a>
+        </li>
+    
+        <li id="v/defining-a-factorial-function" class="tutorial-nav-node video-node progress-container">
+            <a href="/science/computer-science/v/defining-a-factorial-function" class="tutorial-router-link tab-link  clearfix">
+                
+<span class="progress-icon icon-video-node v132660401 "></span>
+
+
+                <span class="progress-title">Defining a Factorial Function</span>
+            </a>
+        </li>
+    
+        <li id="v/diagramming-what-happens-with-a-function-call" class="tutorial-nav-node video-node progress-container">
+            <a href="/science/computer-science/v/diagramming-what-happens-with-a-function-call" class="tutorial-router-link tab-link  clearfix">
+                
+<span class="progress-icon icon-video-node v132660405 "></span>
+
+
+                <span class="progress-title">Diagramming What Happens with a Function Call</span>
+            </a>
+        </li>
+    
+        <li id="v/recursive-factorial-function" class="tutorial-nav-node video-node progress-container">
+            <a href="/science/computer-science/v/recursive-factorial-function" class="tutorial-router-link tab-link  clearfix">
+                
+<span class="progress-icon icon-video-node v132660402 "></span>
+
+
+                <span class="progress-title">Recursive Factorial Function</span>
+            </a>
+        </li>
+    
+        <li id="v/comparing-iterative-and-recursive-factorial-functions" class="tutorial-nav-node video-node progress-container">
+            <a href="/science/computer-science/v/comparing-iterative-and-recursive-factorial-functions" class="tutorial-router-link tab-link  clearfix">
+                
+<span class="progress-icon icon-video-node v132660404 "></span>
+
+
+                <span class="progress-title">Comparing Iterative and Recursive Factorial Functions</span>
+            </a>
+        </li>
+    
+        <li id="v/exercise---write-a-fibonacci-function" class="tutorial-nav-node video-node progress-container">
+            <a href="/science/computer-science/v/exercise---write-a-fibonacci-function" class="tutorial-router-link tab-link  clearfix">
+                
+<span class="progress-icon icon-video-node v133798252 "></span>
+
+
+                <span class="progress-title">Exercise - Write a Fibonacci Function</span>
+            </a>
+        </li>
+    
+        <li id="v/iterative-fibonacci-function-example" class="tutorial-nav-node video-node progress-container">
+            <a href="/science/computer-science/v/iterative-fibonacci-function-example" class="tutorial-router-link tab-link  clearfix">
+                
+<span class="progress-icon icon-video-node v133798256 "></span>
+
+
+                <span class="progress-title">Iterative Fibonacci Function Example</span>
+            </a>
+        </li>
+    
+        <li id="v/stepping-through-iterative-fibonacci-function" class="tutorial-nav-node video-node progress-container">
+            <a href="/science/computer-science/v/stepping-through-iterative-fibonacci-function" class="tutorial-router-link tab-link  clearfix">
+                
+<span class="progress-icon icon-video-node v133798253 "></span>
+
+
+                <span class="progress-title">Stepping Through Iterative Fibonacci Function</span>
+            </a>
+        </li>
+    
+        <li id="v/recursive-fibonacci-example" class="tutorial-nav-node video-node progress-container">
+            <a href="/science/computer-science/v/recursive-fibonacci-example" class="tutorial-router-link tab-link  clearfix">
+                
+<span class="progress-icon icon-video-node v133798254 "></span>
+
+
+                <span class="progress-title">Recursive Fibonacci Example</span>
+            </a>
+        </li>
+    
+        <li id="v/stepping-through-recursive-fibonacci-function" class="tutorial-nav-node video-node progress-container">
+            <a href="/science/computer-science/v/stepping-through-recursive-fibonacci-function" class="tutorial-router-link tab-link  clearfix">
+                
+<span class="progress-icon icon-video-node v134691531 "></span>
+
+
+                <span class="progress-title">Stepping Through Recursive Fibonacci Function</span>
+            </a>
+        </li>
+    
+        <li id="v/exercise---write-a-sorting-function" class="tutorial-nav-node video-node progress-container">
+            <a href="/science/computer-science/v/exercise---write-a-sorting-function" class="tutorial-router-link tab-link  clearfix">
+                
+<span class="progress-icon icon-video-node v134691530 "></span>
+
+
+                <span class="progress-title">Exercise - Write a Sorting Function</span>
+            </a>
+        </li>
+    
+        <li id="v/insertion-sort-algorithm" class="tutorial-nav-node video-node progress-container">
+            <a href="/science/computer-science/v/insertion-sort-algorithm" class="tutorial-router-link tab-link  clearfix">
+                
+<span class="progress-icon icon-video-node v134691529 "></span>
+
+
+                <span class="progress-title">Insertion Sort Algorithm</span>
+            </a>
+        </li>
+    
+        <li id="v/insertion-sort-in-python" class="tutorial-nav-node video-node progress-container">
+            <a href="/science/computer-science/v/insertion-sort-in-python" class="tutorial-router-link tab-link  clearfix">
+                
+<span class="progress-icon icon-video-node v134691532 "></span>
+
+
+                <span class="progress-title">Insertion Sort in Python</span>
+            </a>
+        </li>
+    
+        <li id="v/stepping-through-insertion-sort-function" class="tutorial-nav-node video-node progress-container">
+            <a href="/science/computer-science/v/stepping-through-insertion-sort-function" class="tutorial-router-link tab-link  clearfix">
+                
+<span class="progress-icon icon-video-node v134691534 "></span>
+
+
+                <span class="progress-title">Stepping Through Insertion Sort Function</span>
+            </a>
+        </li>
+    
+        <li id="v/simpler-insertion-sort-function" class="tutorial-nav-node video-node progress-container">
+            <a href="/science/computer-science/v/simpler-insertion-sort-function" class="tutorial-router-link tab-link  clearfix">
+                
+<span class="progress-icon icon-video-node v145846963 "></span>
+
+
+                <span class="progress-title">Simpler Insertion Sort Function</span>
+            </a>
+        </li>
+    
+    </ol>
+
+    
+</div>
+
+<script>
+    $(function() {
+        Tutorial.getNodeDataCache().resetInited([{"readableId": "introduction-to-programs-data-types-and-variables", "url": "/video/introduction-to-programs-data-types-and-variables", "id": "computer-science/v/introduction-to-programs-data-types-and-variables", "authorNicknames": ["Sal"], "youtubeId": "husPzLE6sZc", "videoKey": "ag5zfmtoYW4tYWNhZGVteXIOCxIFVmlkZW8Y6LLmPww", "transcriptAvailable": true, "topicKey": "ag5zfmtoYW4tYWNhZGVteXJmCxIFVG9waWMiKGJLbHpCVDhlTVh4YkpEWmVFZHlzNE5hT3dVT2FVbXJQdXVDYVJlcHEMCxIFVG9waWMiKGNXSFpLT0g3WTEzU28tbWZteG9RNFNNZEVXQjBhWWtCenl3SkFRb2QM", "page": 0}, {"readableId": "binary-numbers", "url": "/video/binary-numbers", "id": "computer-science/v/binary-numbers", "authorNicknames": ["Sal"], "youtubeId": "ry1hpm1GXVI", "videoKey": "ag5zfmtoYW4tYWNhZGVteXIOCxIFVmlkZW8Y7oqKHww", "transcriptAvailable": true, "topicKey": "ag5zfmtoYW4tYWNhZGVteXJmCxIFVG9waWMiKGJLbHpCVDhlTVh4YkpEWmVFZHlzNE5hT3dVT2FVbXJQdXVDYVJlcHEMCxIFVG9waWMiKGNXSFpLT0g3WTEzU28tbWZteG9RNFNNZEVXQjBhWWtCenl3SkFRb2QM", "page": 0}, {"readableId": "python-lists", "url": "/video/python-lists", "id": "computer-science/v/python-lists", "authorNicknames": ["Sal"], "youtubeId": "zEyEC34MY1A", "videoKey": "ag5zfmtoYW4tYWNhZGVteXIOCxIFVmlkZW8Y6bLmPww", "transcriptAvailable": true, "topicKey": "ag5zfmtoYW4tYWNhZGVteXJmCxIFVG9waWMiKGJLbHpCVDhlTVh4YkpEWmVFZHlzNE5hT3dVT2FVbXJQdXVDYVJlcHEMCxIFVG9waWMiKGNXSFpLT0g3WTEzU28tbWZteG9RNFNNZEVXQjBhWWtCenl3SkFRb2QM", "page": 0}, {"readableId": "for-loops-in-python", "url": "/video/for-loops-in-python", "id": "computer-science/v/for-loops-in-python", "authorNicknames": ["Sal"], "youtubeId": "9LgyKiq_hU0", "videoKey": "ag5zfmtoYW4tYWNhZGVteXIOCxIFVmlkZW8Y6rLmPww", "transcriptAvailable": true, "topicKey": "ag5zfmtoYW4tYWNhZGVteXJmCxIFVG9waWMiKGJLbHpCVDhlTVh4YkpEWmVFZHlzNE5hT3dVT2FVbXJQdXVDYVJlcHEMCxIFVG9waWMiKGNXSFpLT0g3WTEzU28tbWZteG9RNFNNZEVXQjBhWWtCenl3SkFRb2QM", "page": 0}, {"readableId": "while-loops-in-python", "url": "/video/while-loops-in-python", "id": "computer-science/v/while-loops-in-python", "authorNicknames": ["Sal"], "youtubeId": "D0Nb2Fs3Q8c", "videoKey": "ag5zfmtoYW4tYWNhZGVteXIOCxIFVmlkZW8Y67LmPww", "transcriptAvailable": true, "topicKey": "ag5zfmtoYW4tYWNhZGVteXJmCxIFVG9waWMiKGJLbHpCVDhlTVh4YkpEWmVFZHlzNE5hT3dVT2FVbXJQdXVDYVJlcHEMCxIFVG9waWMiKGNXSFpLT0g3WTEzU28tbWZteG9RNFNNZEVXQjBhWWtCenl3SkFRb2QM", "page": 0}, {"readableId": "fun-with-strings", "url": "/video/fun-with-strings", "id": "computer-science/v/fun-with-strings", "authorNicknames": ["Sal"], "youtubeId": "iZAtkS0F-Zo", "videoKey": "ag5zfmtoYW4tYWNhZGVteXIOCxIFVmlkZW8YzfWcQAw", "transcriptAvailable": true, "topicKey": "ag5zfmtoYW4tYWNhZGVteXJmCxIFVG9waWMiKGJLbHpCVDhlTVh4YkpEWmVFZHlzNE5hT3dVT2FVbXJQdXVDYVJlcHEMCxIFVG9waWMiKGNXSFpLT0g3WTEzU28tbWZteG9RNFNNZEVXQjBhWWtCenl3SkFRb2QM", "page": 0}, {"readableId": "writing-a-simple-factorial-program---python-2", "url": "/video/writing-a-simple-factorial-program---python-2", "id": "computer-science/v/writing-a-simple-factorial-program---python-2", "authorNicknames": ["Sal"], "youtubeId": "ZyYp1V84Xqc", "videoKey": "ag5zfmtoYW4tYWNhZGVteXIOCxIFVmlkZW8Y77LmPww", "transcriptAvailable": true, "topicKey": "ag5zfmtoYW4tYWNhZGVteXJmCxIFVG9waWMiKGJLbHpCVDhlTVh4YkpEWmVFZHlzNE5hT3dVT2FVbXJQdXVDYVJlcHEMCxIFVG9waWMiKGNXSFpLT0g3WTEzU28tbWZteG9RNFNNZEVXQjBhWWtCenl3SkFRb2QM", "page": 0}, {"readableId": "stepping-through-the-factorial-program", "url": "/video/stepping-through-the-factorial-program", "id": "computer-science/v/stepping-through-the-factorial-program", "authorNicknames": ["Sal"], "youtubeId": "dn9XjHz33O8", "videoKey": "ag5zfmtoYW4tYWNhZGVteXIOCxIFVmlkZW8Ys_mgPww", "transcriptAvailable": true, "topicKey": "ag5zfmtoYW4tYWNhZGVteXJmCxIFVG9waWMiKGJLbHpCVDhlTVh4YkpEWmVFZHlzNE5hT3dVT2FVbXJQdXVDYVJlcHEMCxIFVG9waWMiKGNXSFpLT0g3WTEzU28tbWZteG9RNFNNZEVXQjBhWWtCenl3SkFRb2QM", "page": 0}, {"readableId": "flowchart-for-the-factorial-program", "url": "/video/flowchart-for-the-factorial-program", "id": "computer-science/v/flowchart-for-the-factorial-program", "authorNicknames": ["Sal"], "youtubeId": "EiR6cf8Towc", "videoKey": "ag5zfmtoYW4tYWNhZGVteXIOCxIFVmlkZW8YtvmgPww", "transcriptAvailable": true, "topicKey": "ag5zfmtoYW4tYWNhZGVteXJmCxIFVG9waWMiKGJLbHpCVDhlTVh4YkpEWmVFZHlzNE5hT3dVT2FVbXJQdXVDYVJlcHEMCxIFVG9waWMiKGNXSFpLT0g3WTEzU28tbWZteG9RNFNNZEVXQjBhWWtCenl3SkFRb2QM", "page": 0}, {"readableId": "python-3-not-backwards-compatible-with-python-2", "url": "/video/python-3-not-backwards-compatible-with-python-2", "id": "computer-science/v/python-3-not-backwards-compatible-with-python-2", "authorNicknames": ["Sal"], "youtubeId": "WT-gS-8p7KA", "videoKey": "ag5zfmtoYW4tYWNhZGVteXIOCxIFVmlkZW8Yt_mgPww", "transcriptAvailable": true, "topicKey": "ag5zfmtoYW4tYWNhZGVteXJmCxIFVG9waWMiKGJLbHpCVDhlTVh4YkpEWmVFZHlzNE5hT3dVT2FVbXJQdXVDYVJlcHEMCxIFVG9waWMiKGNXSFpLT0g3WTEzU28tbWZteG9RNFNNZEVXQjBhWWtCenl3SkFRb2QM", "page": 0}, {"readableId": "defining-a-factorial-function", "url": "/video/defining-a-factorial-function", "id": "computer-science/v/defining-a-factorial-function", "authorNicknames": ["Sal"], "youtubeId": "JwO_25S_eWE", "videoKey": "ag5zfmtoYW4tYWNhZGVteXIOCxIFVmlkZW8YsfmgPww", "transcriptAvailable": true, "topicKey": "ag5zfmtoYW4tYWNhZGVteXJmCxIFVG9waWMiKGJLbHpCVDhlTVh4YkpEWmVFZHlzNE5hT3dVT2FVbXJQdXVDYVJlcHEMCxIFVG9waWMiKGNXSFpLT0g3WTEzU28tbWZteG9RNFNNZEVXQjBhWWtCenl3SkFRb2QM", "page": 0}, {"readableId": "diagramming-what-happens-with-a-function-call", "url": "/video/diagramming-what-happens-with-a-function-call", "id": "computer-science/v/diagramming-what-happens-with-a-function-call", "authorNicknames": ["Sal"], "youtubeId": "6qCQB8E5bkI", "videoKey": "ag5zfmtoYW4tYWNhZGVteXIOCxIFVmlkZW8YtfmgPww", "transcriptAvailable": true, "topicKey": "ag5zfmtoYW4tYWNhZGVteXJmCxIFVG9waWMiKGJLbHpCVDhlTVh4YkpEWmVFZHlzNE5hT3dVT2FVbXJQdXVDYVJlcHEMCxIFVG9waWMiKGNXSFpLT0g3WTEzU28tbWZteG9RNFNNZEVXQjBhWWtCenl3SkFRb2QM", "page": 0}, {"readableId": "recursive-factorial-function", "url": "/video/recursive-factorial-function", "id": "computer-science/v/recursive-factorial-function", "authorNicknames": ["Sal"], "youtubeId": "o920mj0NbhE", "videoKey": "ag5zfmtoYW4tYWNhZGVteXIOCxIFVmlkZW8YsvmgPww", "transcriptAvailable": true, "topicKey": "ag5zfmtoYW4tYWNhZGVteXJmCxIFVG9waWMiKGJLbHpCVDhlTVh4YkpEWmVFZHlzNE5hT3dVT2FVbXJQdXVDYVJlcHEMCxIFVG9waWMiKGNXSFpLT0g3WTEzU28tbWZteG9RNFNNZEVXQjBhWWtCenl3SkFRb2QM", "page": 0}, {"readableId": "comparing-iterative-and-recursive-factorial-functions", "url": "/video/comparing-iterative-and-recursive-factorial-functions", "id": "computer-science/v/comparing-iterative-and-recursive-factorial-functions", "authorNicknames": ["Sal"], "youtubeId": "kx6DfrYfWnQ", "videoKey": "ag5zfmtoYW4tYWNhZGVteXIOCxIFVmlkZW8YtPmgPww", "transcriptAvailable": true, "topicKey": "ag5zfmtoYW4tYWNhZGVteXJmCxIFVG9waWMiKGJLbHpCVDhlTVh4YkpEWmVFZHlzNE5hT3dVT2FVbXJQdXVDYVJlcHEMCxIFVG9waWMiKGNXSFpLT0g3WTEzU28tbWZteG9RNFNNZEVXQjBhWWtCenl3SkFRb2QM", "page": 0}, {"readableId": "exercise---write-a-fibonacci-function", "url": "/video/exercise---write-a-fibonacci-function", "id": "computer-science/v/exercise---write-a-fibonacci-function", "authorNicknames": ["Sal"], "youtubeId": "Bdbc1ZC-vhw", "videoKey": "ag5zfmtoYW4tYWNhZGVteXIOCxIFVmlkZW8Y7LLmPww", "transcriptAvailable": true, "topicKey": "ag5zfmtoYW4tYWNhZGVteXJmCxIFVG9waWMiKGJLbHpCVDhlTVh4YkpEWmVFZHlzNE5hT3dVT2FVbXJQdXVDYVJlcHEMCxIFVG9waWMiKGNXSFpLT0g3WTEzU28tbWZteG9RNFNNZEVXQjBhWWtCenl3SkFRb2QM", "page": 0}, {"readableId": "iterative-fibonacci-function-example", "url": "/video/iterative-fibonacci-function-example", "id": "computer-science/v/iterative-fibonacci-function-example", "authorNicknames": ["Sal"], "youtubeId": "94O_3QCvfqI", "videoKey": "ag5zfmtoYW4tYWNhZGVteXIOCxIFVmlkZW8Y8LLmPww", "transcriptAvailable": true, "topicKey": "ag5zfmtoYW4tYWNhZGVteXJmCxIFVG9waWMiKGJLbHpCVDhlTVh4YkpEWmVFZHlzNE5hT3dVT2FVbXJQdXVDYVJlcHEMCxIFVG9waWMiKGNXSFpLT0g3WTEzU28tbWZteG9RNFNNZEVXQjBhWWtCenl3SkFRb2QM", "page": 0}, {"readableId": "stepping-through-iterative-fibonacci-function", "url": "/video/stepping-through-iterative-fibonacci-function", "id": "computer-science/v/stepping-through-iterative-fibonacci-function", "authorNicknames": ["Sal"], "youtubeId": "-BE7FEouGeI", "videoKey": "ag5zfmtoYW4tYWNhZGVteXIOCxIFVmlkZW8Y7bLmPww", "transcriptAvailable": true, "topicKey": "ag5zfmtoYW4tYWNhZGVteXJmCxIFVG9waWMiKGJLbHpCVDhlTVh4YkpEWmVFZHlzNE5hT3dVT2FVbXJQdXVDYVJlcHEMCxIFVG9waWMiKGNXSFpLT0g3WTEzU28tbWZteG9RNFNNZEVXQjBhWWtCenl3SkFRb2QM", "page": 0}, {"readableId": "recursive-fibonacci-example", "url": "/video/recursive-fibonacci-example", "id": "computer-science/v/recursive-fibonacci-example", "authorNicknames": ["Sal"], "youtubeId": "urPVT1lymzU", "videoKey": "ag5zfmtoYW4tYWNhZGVteXIOCxIFVmlkZW8Y7rLmPww", "transcriptAvailable": true, "topicKey": "ag5zfmtoYW4tYWNhZGVteXJmCxIFVG9waWMiKGJLbHpCVDhlTVh4YkpEWmVFZHlzNE5hT3dVT2FVbXJQdXVDYVJlcHEMCxIFVG9waWMiKGNXSFpLT0g3WTEzU28tbWZteG9RNFNNZEVXQjBhWWtCenl3SkFRb2QM", "page": 0}, {"readableId": "stepping-through-recursive-fibonacci-function", "url": "/video/stepping-through-recursive-fibonacci-function", "id": "computer-science/v/stepping-through-recursive-fibonacci-function", "authorNicknames": ["Sal"], "youtubeId": "zg-ddPbzcKM", "videoKey": "ag5zfmtoYW4tYWNhZGVteXIOCxIFVmlkZW8Yy_WcQAw", "transcriptAvailable": true, "topicKey": "ag5zfmtoYW4tYWNhZGVteXJmCxIFVG9waWMiKGJLbHpCVDhlTVh4YkpEWmVFZHlzNE5hT3dVT2FVbXJQdXVDYVJlcHEMCxIFVG9waWMiKGNXSFpLT0g3WTEzU28tbWZteG9RNFNNZEVXQjBhWWtCenl3SkFRb2QM", "page": 0}, {"readableId": "exercise---write-a-sorting-function", "url": "/video/exercise---write-a-sorting-function", "id": "computer-science/v/exercise---write-a-sorting-function", "authorNicknames": ["Sal"], "youtubeId": "Qbl-RZS2-4g", "videoKey": "ag5zfmtoYW4tYWNhZGVteXIOCxIFVmlkZW8YyvWcQAw", "transcriptAvailable": true, "topicKey": "ag5zfmtoYW4tYWNhZGVteXJmCxIFVG9waWMiKGJLbHpCVDhlTVh4YkpEWmVFZHlzNE5hT3dVT2FVbXJQdXVDYVJlcHEMCxIFVG9waWMiKGNXSFpLT0g3WTEzU28tbWZteG9RNFNNZEVXQjBhWWtCenl3SkFRb2QM", "page": 0}, {"readableId": "insertion-sort-algorithm", "url": "/video/insertion-sort-algorithm", "id": "computer-science/v/insertion-sort-algorithm", "authorNicknames": ["Sal"], "youtubeId": "lCzQvQr8Utw", "videoKey": "ag5zfmtoYW4tYWNhZGVteXIOCxIFVmlkZW8YyfWcQAw", "transcriptAvailable": true, "topicKey": "ag5zfmtoYW4tYWNhZGVteXJmCxIFVG9waWMiKGJLbHpCVDhlTVh4YkpEWmVFZHlzNE5hT3dVT2FVbXJQdXVDYVJlcHEMCxIFVG9waWMiKGNXSFpLT0g3WTEzU28tbWZteG9RNFNNZEVXQjBhWWtCenl3SkFRb2QM", "page": 0}, {"readableId": "insertion-sort-in-python", "url": "/video/insertion-sort-in-python", "id": "computer-science/v/insertion-sort-in-python", "authorNicknames": ["Sal"], "youtubeId": "lEA31vHiry4", "videoKey": "ag5zfmtoYW4tYWNhZGVteXIOCxIFVmlkZW8YzPWcQAw", "transcriptAvailable": true, "topicKey": "ag5zfmtoYW4tYWNhZGVteXJmCxIFVG9waWMiKGJLbHpCVDhlTVh4YkpEWmVFZHlzNE5hT3dVT2FVbXJQdXVDYVJlcHEMCxIFVG9waWMiKGNXSFpLT0g3WTEzU28tbWZteG9RNFNNZEVXQjBhWWtCenl3SkFRb2QM", "page": 0}, {"readableId": "stepping-through-insertion-sort-function", "url": "/video/stepping-through-insertion-sort-function", "id": "computer-science/v/stepping-through-insertion-sort-function", "authorNicknames": ["Sal"], "youtubeId": "6pyeMmJTefg", "videoKey": "ag5zfmtoYW4tYWNhZGVteXIOCxIFVmlkZW8YzvWcQAw", "transcriptAvailable": true, "topicKey": "ag5zfmtoYW4tYWNhZGVteXJmCxIFVG9waWMiKGJLbHpCVDhlTVh4YkpEWmVFZHlzNE5hT3dVT2FVbXJQdXVDYVJlcHEMCxIFVG9waWMiKGNXSFpLT0g3WTEzU28tbWZteG9RNFNNZEVXQjBhWWtCenl3SkFRb2QM", "page": 0}, {"readableId": "simpler-insertion-sort-function", "url": "/video/simpler-insertion-sort-function", "id": "computer-science/v/simpler-insertion-sort-function", "authorNicknames": ["Sal"], "youtubeId": "hh3AkOGnnpE", "videoKey": "ag5zfmtoYW4tYWNhZGVteXIOCxIFVmlkZW8Ys-XFRQw", "transcriptAvailable": true, "topicKey": "ag5zfmtoYW4tYWNhZGVteXJmCxIFVG9waWMiKGJLbHpCVDhlTVh4YkpEWmVFZHlzNE5hT3dVT2FVbXJQdXVDYVJlcHEMCxIFVG9waWMiKGNXSFpLT0g3WTEzU28tbWZteG9RNFNNZEVXQjBhWWtCenl3SkFRb2QM", "page": 0}]);
+        Tutorial.Nav.setInitOptions({
+            models: [{"core": true, "exploreUrl": null, "keyId": 133798248, "nodeType": "video", "description": "Writing a basic program.  Basics of data types, variables and conditional statements", "title": "Introduction to Programs Data Types and Variables", "kind": "Video", "topicPath": "/science/computer-science/v/introduction-to-programs-data-types-and-variables", "practiceUrl": null, "id": "v/introduction-to-programs-data-types-and-variables", "progressKey": "v133798248"}, {"core": true, "exploreUrl": null, "keyId": 65176942, "nodeType": "video", "description": "Understanding how numbers are represented.  Introduction to binary numbers", "title": "Binary Numbers", "kind": "Video", "topicPath": "/science/computer-science/v/binary-numbers", "practiceUrl": null, "id": "v/binary-numbers", "progressKey": "v65176942"}, {"core": true, "exploreUrl": null, "keyId": 133798249, "nodeType": "video", "description": "Understanding the basics of lists in Python", "title": "Python Lists", "kind": "Video", "topicPath": "/science/computer-science/v/python-lists", "practiceUrl": null, "id": "v/python-lists", "progressKey": "v133798249"}, {"core": true, "exploreUrl": null, "keyId": 133798250, "nodeType": "video", "description": "Basics of for loops in Python", "title": "For Loops in Python", "kind": "Video", "topicPath": "/science/computer-science/v/for-loops-in-python", "practiceUrl": null, "id": "v/for-loops-in-python", "progressKey": "v133798250"}, {"core": true, "exploreUrl": null, "keyId": 133798251, "nodeType": "video", "description": "Seeing that a while loop can do the same thing as a for loop", "title": "While Loops in Python", "kind": "Video", "topicPath": "/science/computer-science/v/while-loops-in-python", "practiceUrl": null, "id": "v/while-loops-in-python", "progressKey": "v133798251"}, {"core": true, "exploreUrl": null, "keyId": 134691533, "nodeType": "video", "description": "Experimenting and seeing what we can do with strings", "title": "Fun with Strings", "kind": "Video", "topicPath": "/science/computer-science/v/fun-with-strings", "practiceUrl": null, "id": "v/fun-with-strings", "progressKey": "v134691533"}, {"core": true, "exploreUrl": null, "keyId": 133798255, "nodeType": "video", "description": "Writing a simple factorial program with a \"for\" loop", "title": "Writing a Simple Factorial Program. (Python 2)", "kind": "Video", "topicPath": "/science/computer-science/v/writing-a-simple-factorial-program---python-2", "practiceUrl": null, "id": "v/writing-a-simple-factorial-program---python-2", "progressKey": "v133798255"}, {"core": true, "exploreUrl": null, "keyId": 132660403, "nodeType": "video", "description": "Stepping through what happens when a user inputs a particular value into our factorial program", "title": "Stepping Through the Factorial Program", "kind": "Video", "topicPath": "/science/computer-science/v/stepping-through-the-factorial-program", "practiceUrl": null, "id": "v/stepping-through-the-factorial-program", "progressKey": "v132660403"}, {"core": true, "exploreUrl": null, "keyId": 132660406, "nodeType": "video", "description": "Flowchart  for the factorial program", "title": "Flowchart for the Factorial Program", "kind": "Video", "topicPath": "/science/computer-science/v/flowchart-for-the-factorial-program", "practiceUrl": null, "id": "v/flowchart-for-the-factorial-program", "progressKey": "v132660406"}, {"core": true, "exploreUrl": null, "keyId": 132660407, "nodeType": "video", "description": "Understanding why the example program would not run in Python 3 and how to fix it.", "title": "Python 3 Not Backwards Compatible with Python 2", "kind": "Video", "topicPath": "/science/computer-science/v/python-3-not-backwards-compatible-with-python-2", "practiceUrl": null, "id": "v/python-3-not-backwards-compatible-with-python-2", "progressKey": "v132660407"}, {"core": true, "exploreUrl": null, "keyId": 132660401, "nodeType": "video", "description": "Defining a function in Python", "title": "Defining a Factorial Function", "kind": "Video", "topicPath": "/science/computer-science/v/defining-a-factorial-function", "practiceUrl": null, "id": "v/defining-a-factorial-function", "progressKey": "v132660401"}, {"core": true, "exploreUrl": null, "keyId": 132660405, "nodeType": "video", "description": "Variable scope and function calls", "title": "Diagramming What Happens with a Function Call", "kind": "Video", "topicPath": "/science/computer-science/v/diagramming-what-happens-with-a-function-call", "practiceUrl": null, "id": "v/diagramming-what-happens-with-a-function-call", "progressKey": "v132660405"}, {"core": true, "exploreUrl": null, "keyId": 132660402, "nodeType": "video", "description": "Introduction to recursion.", "title": "Recursive Factorial Function", "kind": "Video", "topicPath": "/science/computer-science/v/recursive-factorial-function", "practiceUrl": null, "id": "v/recursive-factorial-function", "progressKey": "v132660402"}, {"core": true, "exploreUrl": null, "keyId": 132660404, "nodeType": "video", "description": "Comparing iterative and recursive factorial functions", "title": "Comparing Iterative and Recursive Factorial Functions", "kind": "Video", "topicPath": "/science/computer-science/v/comparing-iterative-and-recursive-factorial-functions", "practiceUrl": null, "id": "v/comparing-iterative-and-recursive-factorial-functions", "progressKey": "v132660404"}, {"core": true, "exploreUrl": null, "keyId": 133798252, "nodeType": "video", "description": "Introduction to the Fibonacci Sequence and a programming challenge", "title": "Exercise - Write a Fibonacci Function", "kind": "Video", "topicPath": "/science/computer-science/v/exercise---write-a-fibonacci-function", "practiceUrl": null, "id": "v/exercise---write-a-fibonacci-function", "progressKey": "v133798252"}, {"core": true, "exploreUrl": null, "keyId": 133798256, "nodeType": "video", "description": "One way to write a Fibonacci function iteratively", "title": "Iterative Fibonacci Function Example", "kind": "Video", "topicPath": "/science/computer-science/v/iterative-fibonacci-function-example", "practiceUrl": null, "id": "v/iterative-fibonacci-function-example", "progressKey": "v133798256"}, {"core": true, "exploreUrl": null, "keyId": 133798253, "nodeType": "video", "description": "Understanding how the iterative fibonacci function works for a particular example", "title": "Stepping Through Iterative Fibonacci Function", "kind": "Video", "topicPath": "/science/computer-science/v/stepping-through-iterative-fibonacci-function", "practiceUrl": null, "id": "v/stepping-through-iterative-fibonacci-function", "progressKey": "v133798253"}, {"core": true, "exploreUrl": null, "keyId": 133798254, "nodeType": "video", "description": "Using recursion to write a fibonacci function", "title": "Recursive Fibonacci Example", "kind": "Video", "topicPath": "/science/computer-science/v/recursive-fibonacci-example", "practiceUrl": null, "id": "v/recursive-fibonacci-example", "progressKey": "v133798254"}, {"core": true, "exploreUrl": null, "keyId": 134691531, "nodeType": "video", "description": "Understanding why and how the recursive Fibonacci function works", "title": "Stepping Through Recursive Fibonacci Function", "kind": "Video", "topicPath": "/science/computer-science/v/stepping-through-recursive-fibonacci-function", "practiceUrl": null, "id": "v/stepping-through-recursive-fibonacci-function", "progressKey": "v134691531"}, {"core": true, "exploreUrl": null, "keyId": 134691530, "nodeType": "video", "description": "Challenge to write a Python function that can sort a list in-place", "title": "Exercise - Write a Sorting Function", "kind": "Video", "topicPath": "/science/computer-science/v/exercise---write-a-sorting-function", "practiceUrl": null, "id": "v/exercise---write-a-sorting-function", "progressKey": "v134691530"}, {"core": true, "exploreUrl": null, "keyId": 134691529, "nodeType": "video", "description": "Visual description of the insertion sort algorithm", "title": "Insertion Sort Algorithm", "kind": "Video", "topicPath": "/science/computer-science/v/insertion-sort-algorithm", "practiceUrl": null, "id": "v/insertion-sort-algorithm", "progressKey": "v134691529"}, {"core": true, "exploreUrl": null, "keyId": 134691532, "nodeType": "video", "description": "Basic implementation of insertion sort algorithm", "title": "Insertion Sort in Python", "kind": "Video", "topicPath": "/science/computer-science/v/insertion-sort-in-python", "practiceUrl": null, "id": "v/insertion-sort-in-python", "progressKey": "v134691532"}, {"core": true, "exploreUrl": null, "keyId": 134691534, "nodeType": "video", "description": "Clarifying what \"break\" does and stepping through the insertion sort implementation", "title": "Stepping Through Insertion Sort Function", "kind": "Video", "topicPath": "/science/computer-science/v/stepping-through-insertion-sort-function", "practiceUrl": null, "id": "v/stepping-through-insertion-sort-function", "progressKey": "v134691534"}, {"core": true, "exploreUrl": null, "keyId": 145846963, "nodeType": "video", "description": "Simplifying the while loop for the Insertion Sort function", "title": "Simpler Insertion Sort Function", "kind": "Video", "topicPath": "/science/computer-science/v/simpler-insertion-sort-function", "practiceUrl": null, "id": "v/simpler-insertion-sort-function", "progressKey": "v145846963"}],
+            topic: {"topicPageUrl": "/science/computer-science", "id": "computer-science", "title": "Computer Science"}
+        });
+    });
+</script>
+    </div>
+
+    <div class="tutorial-content">
+        <div class="layers">
+            <div class="progress layer">
+                <div class="view-progress-bar ui-progressbar ui-widget ui-widget-content ui-corner-all">
+                    <div class="ui-progressbar-value ui-widget-header ui-corner-left ui-corner-right"></div>
+                </div>
+            </div>
+            <div class="content layer">
+                <div class="tutorial-description">
+                <div class="progress-stack-view stack"></div>
+<h2 class="title-header">
+    <span itemprop="name" class="title desktop-only">Introduction to Programs Data Types and Variables <i class="toggle-node-editor content-editor icon-cog" style="display: none;"></i></span>
+    
+    <span class="long-description" itemprop="description">Writing a basic program.  Basics of data types, variables and conditional statements</span>
+    
+</h2>
+<div class="old-video-nav">
+    
+    
+    <nav class="prev_next_nav desktop-only clearfix">
+        <label id="prev-node">
+        
+        </label>
+        <label id="next-node">
+        
+          <a rel=next href="/science/computer-science/v/binary-numbers" class="tutorial-router-link">
+            <b>Next</b>
+            <span class="title vid-progress">Binary Numbers</span>
+          </a>
+        
+        </label>
+    </nav>
+</div>
+                </div>
+                
+                <div class="tutorial-node-content">
+                    
+
+                    
+
+
+<div class="video" data-role="page" data-theme="b">
+    <div data-role="header" class="mobile-only">
+        <a href="#" data-rel="back" data-icon="arrow-l">Back</a>
+        <h2 class="video-title">Introduction to Programs Data Types and Variables</h2>
+        <a href="/" data-icon="home" data-iconpos="notext" data-direction="reverse"></a>
+    </div>
+    <div data-role="content" itemscope itemtype="http://schema.org/VideoObject">
+        <div class="video-container">
+            <div class="video-overlay desktop-only large-font"></div>
+            <div id="youtube_blocked" class="desktop-only"></div>
+            <div class="youtube-video">
+                <link itemprop="thumbnailUrl" href="http://img.youtube.com/vi/husPzLE6sZc/hqdefault.jpg">
+                <div class="player-container">
+                
+                    <iframe
+    class="player"
+    type="text/html"
+    width="100%"
+    height="480"
+    data-youtubeid="husPzLE6sZc"
+    src="http://www.youtube.com/embed/husPzLE6sZc?enablejsapi=1&wmode=transparent&modestbranding=1&rel=0&fs=1&showinfo=0"
+    frameborder="0"
+    allowfullscreen
+    webkitallowfullscreen
+    mozallowfullscreen
+ ></iframe>
+
+                
+                </div>
+                <div class="socrates-nav"></div>
+                <div class="subtitles-warning desktop-only">
+                    &lArr; Use this menu to view and help create subtitles for this video in many different languages.
+                    You'll probably want to hide YouTube's captions if using these subtitles.
+                </div>
+            </div>
+        </div>
+        <div>
+            <span class="video-footer">
+            
+                
+
+
+
+                <div class="discussion-container">
+    <div class="clear"></div>
+    
+<div class="video-discussion">
+    <div class="video-discussion-header">
+        <ul class="tabrow">
+            <li data-type="questions" class="tabitem selected">
+                <a href="javascript:void(0);">
+                    Questions
+                </a>
+            </li>
+            <li data-type="comments" class="tabitem">
+                <a href="javascript:void(0);">
+                    Tips &amp; Feedback
+                </a>
+            </li>
+        </ul>
+        <span class="discussion-list-sort">
+                <a data-value="1" class="selected"
+                    title="Most Voted"
+                    href="javascript:void(0);">Top</a>
+                <a data-value="2"
+                    title="Most Recent"
+                    href="javascript:void(0);">Recent</a>
+        </span>
+    </div>
+
+    <div class="tab questions-tab">
+        
+            <div class="ask-question">
+    <div class="question-guidelines post-guidelines alert alert-guideline" style="display: none;">
+    <table>
+        <tr>
+            <td class="guideline-cell">
+                <h4 class="guideline-header">
+                    Be specific, and indicate a time in the video:
+                </h4>
+                <div class="guideline-paragraph">
+                    <em class="guideline-example">
+                        At 5:31, how is the moon large enough to block the sun? Isn't the sun way larger?
+                    </em>
+                </div>
+            </td>
+            <td class="guideline-cell">
+                <h4 class="guideline-header">
+                    Have something that's not a question about this content?
+                </h4>
+                <ul class="guideline-items">
+                    <li>
+                        <a class="alert-link post-feedback-instead" href="javascript:void(0);">Post a tip or feedback</a>
+                    </li>
+                    <li>
+                        <a class="alert-link" href="http://www.reddit.com/r/Khan/">General discussion about the site</a>
+                    </li>
+                    <li>
+                        <a class="alert-link" href="http://khanacademy.org/reportissue?type=Defect">Report a technical problem with the site</a>
+                    </li>
+                    <li>
+                        Request a
+                        <a class="alert-link" href="https://khanacademy.wufoo.com/forms/suggest-a-topic">video</a> or
+                        <a class="alert-link" href="https://khanacademy.wufoo.com/forms/suggest-a-feature">feature</a>
+                    </li>
+                </ul>
+            </td>
+        </tr>
+    </table>
+    <div class="no-homework">
+        <h5 class="guideline-message">
+            This discussion area is not meant for answering homework questions.
+        </h5>
+    </div>
+</div>
+    <div class="question">
+        <textarea class="discussion-text" placeholder="Ask a question..."></textarea>
+        <div class="discussion-controls" style="display: none;">
+            <a href="#" class="discussion-cancel" tabindex="3">Cancel</a>
+            or
+            <input class="simple-button primary discussion-submit"
+                 type="button"
+                 value="Ask your question"
+                 tabindex="2" />
+        </div>
+    </div>
+</div>
+
+        
+        <div class="questions">
+            <div class="discussion-list">
+    
+    <h2 class="discussion-list-header">
+        <a href="discussion/"></a>
+
+        <span class="discussion-list-count hidden">
+            (<span class="discussion-list-count-value"></span> total)
+        </span>
+
+        
+    </h2>
+
+    <div class="discussion-list-content">
+        
+    </div>
+
+    
+    <input type="button"
+           class="simple-button discussion-list-more"
+           style="display:none"
+           
+           value="More">
+</div>
+
+        </div>
+    </div>
+
+    <div class="tab comments-tab" style="display: none;">
+        
+            <div class="post-feedback">
+    <div class="feedback-guidelines post-guidelines alert alert-guideline" style="display: none;">
+    <table>
+        <tr>
+            <td class="guideline-cell">
+                <h4 class="guideline-header">
+                    Share a tip
+                </h4>
+                <div class="guideline-paragraph">
+                    <em class="guideline-example">
+                        When naming a variable, it is okay to use most letters, but some are reserved, like 'e', which represents the value 2.7831...
+                    </em>
+                </div>
+                <h4 class="guideline-header">
+                    <br>
+                    Suggest a fix
+                </h4>
+                <div class="guideline-paragraph">
+                    <em class="guideline-example">
+                        At 2:33, Sal says "double bonds" but should say "single bonds."
+                    </em>
+                </div>
+            </td>
+            <td class="guideline-cell">
+                <h4 class="guideline-header">
+                    Have something that's not a tip or feedback about this content?
+                </h4>
+                <ul class="guideline-items">
+                    <li>
+                        <a class="alert-link ask-question-instead" href="javascript:void(0);">Ask a question</a>
+                    </li>
+                    <li>
+                        <a class="alert-link" href="http://www.reddit.com/r/Khan/">General discussion about the site</a>
+                    </li>
+                    <li>
+                        <a class="alert-link" href="http://khanacademy.org/reportissue?type=Defect">Report a technical problem with the site</a>
+                    </li>
+                    <li>
+                        Request a
+                        <a class="alert-link" href="https://khanacademy.wufoo.com/forms/suggest-a-topic">video</a> or
+                        <a class="alert-link" href="https://khanacademy.wufoo.com/forms/suggest-a-feature">feature</a>
+                    </li>
+                </ul>
+            </td>
+        </tr>
+    </table>
+    <div class="no-homework">
+        <h5 class="guideline-message">
+            This discussion area is not meant for answering homework questions.
+        </h5>
+    </div>
+</div>
+    <div class="comment">
+        <textarea class="discussion-text" placeholder="Post a tip or feedback..."></textarea>
+        <div class="discussion-controls" style="display: none;">
+            <a href="#" class="discussion-cancel" tabindex="3">Cancel</a>
+            or
+            <input class="simple-button primary discussion-submit"
+                 type="button"
+                 value="Post your tip or feedback"
+                 tabindex="2" />
+        </div>
+    </div>
+</div>
+        
+        <div class="comments"></div>
+    </div>
+
+    <div class="discussion-progress-bar" style="display:none"></div>
+</div>
+
+    <div class="discussion-guidelines">
+    
+    <div class="discussion-guidelines-header">Answer more questions</div>
+    <p>
+        Visit <a href="/science/computer-science/d">Community Questions</a>
+        to answer new questions in
+        <a href="/science/computer-science/d">Computer Science</a>.
+    </p>
+    <br>
+    
+
+    
+    <div class="discussion-guidelines-header">Discuss the site</div>
+        <p>
+            For general discussions about Khan Academy, visit
+            <a href="http://www.reddit.com/r/Khan/">
+            our Reddit discussion page</a>.
+        </p>
+    <br>
+    
+
+    <div class="discussion-guidelines-header">Get fancy</div>
+    <table class="discussion-guidelines-format-table">
+        <tr>
+        <td>
+            Accent your posts with *bold* or _italics_ and format `code`
+            <pre>```if (x < 0) {<br>    return;<br>}```</pre>
+        </td>
+        <td>
+            Accent your posts with <strong>bold</strong> or <i>italics</i> and format <code>code</code>
+            <pre><code>if (x < 0) {<br>    return;<br>}</pre></code>
+        </td>
+        </tr>
+    </table>
+    <br>
+
+    <div class="discussion-guidelines-header">Flag inappropriate posts</div>
+
+    <p>
+        Here are posts to avoid making. If you do encounter them, flag them for attention from our Guardians.
+    </p>
+
+    <div class="discussion-guidelines-subheader">abuse</div>
+    <ul>
+        <li>disrespectful or offensive</li>
+        <li>an advertisement</li>
+    </ul>
+
+    <div class="discussion-guidelines-subheader">not helpful</div>
+    <ul>
+        <li>low quality</li>
+        <li>not about the video topic</li>
+        <li>soliciting votes or seeking badges</li>
+        <li>a homework question</li>
+        <li>a duplicate answer</li>
+        <li>repeatedly making the same post</li>
+    </ul>
+
+    <div class="discussion-guidelines-subheader">wrong category</div>
+    <ul>
+        <li>a tip or feedback in Questions</li>
+        <li>a question in Tips & Feedback</li>
+        <li>an answer that should be its own question</li>
+    </ul>
+
+    <div class="discussion-guidelines-subheader">about the site</div>
+    <ul>
+        <li>
+            a question about Khan Academy
+            <div class="discussion-guidelines-link">(<a href="http://khanacademy.desk.com/">Visit our FAQ</a>)</div>
+        </li>
+        <li>a post about badges</li>
+        <li>
+            a technical problem with the site
+            <div class="discussion-guidelines-link">(<a href="http://khanacademy.org/reportissue?type=Defect">Report a problem</a>)</div>
+        </li>
+        <li>
+            a request for <a href="https://khanacademy.wufoo.com/forms/suggest-a-topic">videos</a> or <a href="https://khanacademy.wufoo.com/forms/suggest-a-feature">features</a>
+        </li>
+    </ul>
+</div>
+
+    <div class="clear"></div>
+</div>
+
+            
+            </span>
+            <div class="clearFloat"></div>
+        </div>
+    </div>
+</div>
+
+
+<div
+    id="container"
+    class="exercises-content-container visited-no-recolor "
+    style="overflow:hidden; display: none">
+</div>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</article>
+
+            <div id="end-of-page-spacer" style="height: 38px;">&nbsp;</div>
+
+    </div>
+    </div>
+    </div>
+    <div class="push"></div>
+    
+    
+    
+
+<footer id="footer" class="short">
+    <div id="leaves">
+        <div class="inner">
+        <div id="copyright" class="tiny" title="Version: 1106-16a7ac880ec5.362968988978516470">
+            <small>
+                &copy;2012
+                
+                <small>
+                <a style="padding:0;margin:0;text-decoration:none" href="https://plus.google.com/103970106103092409324?rel=author">+Khan</a>
+                </small>
+                
+                Academy&reg;
+            </small>
+            <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/us/" id="creative-commons-link"></a>
+        </div>
+        <span class="footer-links">
+            <a href="http://khanacademy.desk.com" data-tag="Footer" >Contact</a>
+            
+            <a href="/reportissue?type=Defect&issue_labels=" data-tag="Footer" id="report" >Report a Problem</a>
+            
+            <span class="sep">|</span>
+            <a href="/about/blog" data-tag="Footer" >Blog</a>
+            <a href="http://khanacademy.desk.com" id="faq-link" data-tag="Footer" >FAQ</a>
+            <span class="sep">|</span>
+            <a href="/careers" data-tag="Footer" >Careers</a>
+            <span class="sep">|</span>
+            <a href="/about/tos" title="Terms of Service" data-tag="Footer" >ToS</a>
+            <a href="/about/privacy-policy" title="Privacy Policy" data-tag="Footer" >Privacy Policy</a>
+            <span class="sep">|</span>
+            <a href="http://shop.khanacademy.org/" data-tag="Footer" >Store</a>
+            
+            <span class="sep">|</span>
+            
+<select id="language_picker">
+    
+        
+        
+        <option value="id" >Bahasa Indonesia</option>
+    
+        
+        
+        <option value="de" >Deutsch</option>
+    
+        
+        
+        <option value="en" selected="selected">English</option>
+    
+        
+        
+        <option value="es" >Español</option>
+    
+        
+        
+        <option value="fr" >Français</option>
+    
+        
+        
+        <option value="it" >Italiano</option>
+    
+        
+        
+        <option value="sw" >Kiswahili</option>
+    
+        
+        
+        <option value="no" >Norsk</option>
+    
+        
+        
+        <option value="pl" >Polski</option>
+    
+        
+        
+        <option value="pt" >Português</option>
+    
+        
+        
+        <option value="ru" >Pycc???</option>
+    
+        
+        
+        <option value="tr" >Türkçe</option>
+    
+        
+        
+        <option value="xh" >isiXhosa</option>
+    
+        
+        
+        <option value="el" >????????</option>
+    
+        
+        
+        <option value="bg" >?????????</option>
+    
+        
+        
+        <option value="uk" >??????????</option>
+    
+        
+        
+        <option value="he" >?????</option>
+    
+        
+        
+        <option value="ur" >????</option>
+    
+        
+        
+        <option value="ar" >???????</option>
+    
+        
+        
+        <option value="fa" >?????</option>
+    
+        
+        
+        <option value="bn" >?????</option>
+    
+        
+        
+        <option value="th" >???</option>
+    
+        
+        
+        <option value="cmn" >??</option>
+    
+</select>
+<script type="text/javascript">
+    $('#language_picker').change(function () {
+        var new_tag = $('#language_picker option:selected').attr('value');
+        window.location.href = '/intl/' + new_tag;
+    });
+</script>
+
+            <span class="small-social-links">
+                <span class="sep">|</span>
+                <a class="google-analytics-link-track youtube" onclick="_gaq.push(['_trackEvent', 'Click', 'Youtube-Subscribe-Header']);" href="http://www.youtube.com/khanacademy" title="Youtube"></a>
+                <a class="google-analytics-link-track twitter" onclick="_gaq.push(['_trackEvent', 'Click', 'Twitter-Follow-Header']);" href="http://twitter.com/khanacademy" title="Twitter"></a>
+                <a class="google-analytics-link-track facebook" onclick="_gaq.push(['_trackEvent', 'Click', 'Facebook-Join-Header']);" href="http://www.facebook.com/khanacademy" title="Facebook"></a>
+            </span>
+        </span>
+        </div>
+    </div>
+</footer>
+    
+
+    
+    
+
+
+    <script type='text/javascript' src='http://khan-academy.appspot.com/javascript/nav-package/hashed-506deae5d1c41f3363f62850ac366ac8.js'></script><script type='text/javascript'>if (window.PackageManager) {PackageManager.setLoaded('nav');}</script>
+    <script type='text/javascript' src='http://khan-academy.appspot.com/javascript/tutorial-package/hashed-598b98cb5757df8b449cd73f654490e8.js'></script><script type='text/javascript'>if (window.PackageManager) {PackageManager.setLoaded('tutorial');}</script>
+
+    
+    <script>
+    $(function() {
+        Tutorial.Nav.setInitOptions({
+            "contentID": "v/introduction-to-programs-data-types-and-variables",
+            //there is no need to pass all the preloaded questions into js because they are already there
+            "discussionParams": {"loggedIn": false, "expandAndAnswerAB": true, "communityQuestionsTitle": "Computer Science", "focusId": "introduction-to-programs-data-types-and-variables", "restrictPosting": false, "which": "video-questions", "focusKind": "video", "altReplyUIAB": false, "showAnswerBoxAB": false, "communityQuestionsUrl": "/science/computer-science/d", "isDeveloper": null},
+            "pseudoOld": ""
+        });
+    });
+    </script>
+
+
+<script type='text/javascript' src='http://khan-academy.appspot.com/javascript/video-package/hashed-4fb73ecf1f0e8c3a622958c158ac2e62.js'></script><script type='text/javascript'>if (window.PackageManager) {PackageManager.setLoaded('video');}</script>
+<script type='text/javascript' src='http://khan-academy.appspot.com/javascript/discussion-package/hashed-30dc2fd1f92cb2b9de20d39cec483f8d.js'></script><script type='text/javascript'>if (window.PackageManager) {PackageManager.setLoaded('discussion');}</script>
+<script type='text/javascript' src='http://khan-academy.appspot.com/javascript/moderation-package/hashed-035e1b95ebfba0284bfda35f07d45d6a.js'></script><script type='text/javascript'>if (window.PackageManager) {PackageManager.setLoaded('moderation');}</script>
+
+
+
+<script>
+
+PackageManager.registerDynamic('exercises', 
+['/javascript/exercises-package/hashed-3f88609c694b201cad761835424e3d07.js'], 
+[]
+);
+PackageManager.registerDynamic('exercise-content', 
+['/khan-exercises/hashed-6630c00b8421fbdec56afb05d97e4e6d.js'], 
+["exercises"]
+);
+
+$(function() {
+    Video.init({youtubeId: "husPzLE6sZc"});
+    Editor.init({
+        type: "video",
+        identifier: "introduction\u002Dto\u002Dprograms\u002Ddata\u002Dtypes\u002Dand\u002Dvariables"
+    });
+});
+</script>
+<script type="text/javascript">
+        
+        (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+        
+        
+
+        
+        
+    </script>
+    <script type="text/javascript">
+    $(function() {
+        HeaderTopicBrowser.init();
+    });
+    </script>
+    
+
+    
+    </body>
+</html>

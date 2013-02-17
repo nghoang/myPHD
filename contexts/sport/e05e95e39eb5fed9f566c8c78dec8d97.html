@@ -1,0 +1,2163 @@
+<!DOCTYPE html>
+<!--[if lte IE 7]> <html xmlns:fb="http://www.facebook.com/2008/fbml" xmlns:og="http://opengraphprotocol.org/schema/" class="ie7 lte8 lte9 " lang="en-au"> <![endif]-->
+<!--[if IE 8]> <html xmlns:fb="http://www.facebook.com/2008/fbml" xmlns:og="http://opengraphprotocol.org/schema/" class="ie8 lte8 lte9 " lang="en-au"> <![endif]-->
+<!--[if IE 9]> <html xmlns:fb="http://www.facebook.com/2008/fbml" xmlns:og="http://opengraphprotocol.org/schema/" class="ie9 lte9 " lang="en-au"> <![endif]-->
+<!--[if gt IE 9]> --> <html lang="en-au" class=""> <!--<![endif]-->
+<head>
+        <script type="text/javascript">
+        if (((document.domain.indexOf("smh.com.au") != -1) || (document.domain.indexOf("theage.com.au") != -1) ||
+                (document.domain.indexOf("watoday.com.au") != -1) ||
+                (document.domain.indexOf("brisbanetimes.com.au") != -1) ||
+                (document.domain.indexOf("canberratimes.com.au") != -1) ||
+                (document.domain.indexOf("essentialkids.com.au") != -1) ||
+                (document.domain.indexOf("essentialbaby.com.au") != -1) ||
+                (document.domain.indexOf("businessday.com.au") != -1)) && (isSmartPhone()) &&
+                (document.cookie.indexOf("iphone_redirect=false") == -1)) {
+            var currentLocation = document.location.href;
+            if (currentLocation.indexOf("www.") != -1 && currentLocation.indexOf("/lifestyle/cuisine") == -1) {
+                currentLocation = currentLocation.replace("www.", "m.");
+                window.location = currentLocation;
+            }
+        }
+
+        /**
+         * Returns a <code>Boolean</code> indicating whether or not the user agent represents a smart phone.
+         *
+         * @return True if the user agent represents a smart phone; otherwise false.
+         */
+        function isSmartPhone() {
+            var userAgent = navigator.userAgent
+            return ((matchesSmartPhoneUserAgentRegularExpressions(userAgent)) &&
+                    (!matchesTabletUserAgentRegularExpressions(userAgent)));
+        }
+
+        /**
+         * Returns a <code>Boolean</code> indicating whether or not the specified user agent represents a smart phone.
+         * If any of the regular expressions are updated then they should be updated in
+         * <code>SmartPhoneHelper.java</code>.
+         *
+         * @param userAgent User agent to test.
+         * @return True if the user agent represents a smart phone; otherwise false.
+         */
+        function matchesSmartPhoneUserAgentRegularExpressions(userAgent) {
+            var smartPhoneUserAgentRegularExpressions = ["^Mozilla/5.0.*iPhone.*", "^Mozilla/5.0.*iPod.*",
+                "^Mozilla/5.0.*Android [1-3].*", "^Mozilla/5.0.*SymbianOS/9.*", "^Mozilla/5.0.*Symbian/3.*",
+                "^Mozilla/5.0.*Mobile Safari/.*5[2-3][0-9].*", ".*Dolfin/[1-2].[0-9].*", "^Mozilla/[4-5].0.*Windows Phone OS 7.[0-5].*", "^Opera/9.*Android; Opera Mini.*"];
+            if ((userAgent) && (userAgent.length > 0)) {
+                var index = 0;
+                for (; index < smartPhoneUserAgentRegularExpressions.length; index++) {
+                    if (userAgent.match(smartPhoneUserAgentRegularExpressions[index])) {
+                        return true;
+                    }
+                }
+            }
+            return false;
+        }
+        /**
+         * Returns a <code>Boolean</code> indicating whether or not the specified user agent represents a tablet. If any
+         * of the regular expressions are updated then they should be updated in <code>SmartPhoneHelper.java</code>.
+         *
+         * @param userAgent User agent to test.
+         * @return True if the user agent represents a tablet; otherwise false.
+         */
+        function matchesTabletUserAgentRegularExpressions(userAgent) {
+            var tableUserAgentRegularExpressions = ["^Mozilla/5.0.*iPad.*", "^Mozilla/5.0.*GT-P1000.*",
+                "^Mozilla/5.0.*GT-P7500.*", "^Mozilla/5.0.*MZ601.*", "^Mozilla/5.0.*Transformer TF101.*"];
+            if ((userAgent) && (userAgent.length > 0)) {
+                var index = 0;
+                for (; index < tableUserAgentRegularExpressions.length; index++) {
+                    if (userAgent.match(tableUserAgentRegularExpressions[index])) {
+                        return true;
+                    }
+                }
+            }
+            return false;
+        }
+
+    </script>
+
+    <title>Sport News: AFL, Australian Open, Cricket, A-League, Socceroos</title>
+    <meta http-equiv="content-language" content="en" />
+<meta http-equiv="imagetoolbar" content="no" />
+    <link rel="canonical" href="http://www.theage.com.au/sport"/>
+<meta name="robots" content="noarchive,noodp" />
+<meta name="robots" content="ACAP allow-index" />
+<meta name="robots" content="ACAP allow-follow" />
+<meta name="robots" content="ACAP disallow-preserve" />
+<meta name="robots" content="ACAP allow-present prohibited-modification=annotation" />
+<meta name="description" content="" />
+<meta name="keywords" content="" />
+
+<link rel="shortcut icon" type="image/ico" href="/favicon.ico" />
+<meta name="application-name" content="The Age" />
+<meta name="msapplication-tooltip" content="Open The Age" />
+<meta name="msapplication-starturl" content="http://www.theage.com.au" />
+
+    <meta name="msapplication-task" content="name=National;action-uri=http://www.theage.com.au/national;icon-uri=http://www.theage.com.au/favicon.ico;" />
+    <meta name="msapplication-task" content="name=World;action-uri=http://www.theage.com.au/world;icon-uri=http://www.theage.com.au/favicon.ico;" />
+    <meta name="msapplication-task" content="name=Sport;action-uri=http://www.theage.com.au/sport;icon-uri=http://www.theage.com.au/favicon.ico;" />
+    <meta name="msapplication-task" content="name=Weather;action-uri=http://www.theage.com.au/weather;icon-uri=http://www.theage.com.au/favicon.ico;" />
+        
+
+                <link rel="stylesheet" type="text/css" media="screen,print" href="http://resources.theage.com.au/common/media-common-1.0/css/output/7.14.9/common.skin.news_min.css" />
+
+                <link rel="stylesheet" type="text/css" media="screen,print" href="http://resources.theage.com.au/common/media-common-1.0/css/output/7.14.9/common.skin.age_min.css" />
+
+                <link rel="stylesheet" type="text/css" media="screen,print" href="http://resources.theage.com.au/common/media-common-1.0/css/output/7.14.9/common.skin.sport_min.css" />
+
+                <link rel="stylesheet" type="text/css" media="screen,print" href="http://resources.theage.com.au/common/media-common-1.0/css/output/7.14.9/skin.promotions_min.css" />
+
+                <link rel="stylesheet" type="text/css" media="screen,print" href="http://resources.theage.com.au/common/media-common-1.0/css/output/7.14.9/common.skin.mysite_min.css" />
+
+
+<!-- Initialise Google Analytics event queue -->
+<script type="text/javascript">
+    var _gaq = _gaq || [];
+</script>
+</head>
+<body class="theage sport">
+    <script type="text/javascript">
+// <![CDATA[
+	document.body.className += " scriptable";
+// ]]>
+</script>
+
+    <a class="skipLink" href="#nav">Skip to navigation</a>
+<a class="skipLink" href="#content">Skip to content</a>
+<a class="skipLink" href="http://www.theage.com.au/siteguide/accessibility">Help using this website - Accessibility statement</a>
+
+            <esi:include src="/ugc/dock.html"/>
+        <esi:remove><div class="mySite" role="document" aria-live="polite" aria-relevant="additions removals" aria-atomic="true">
+    <div class="ms-toolbarWrap">
+        <div class="ms-toolbar clearfix">
+            <p class="hiddenWithJS alert"><em>JavaScript disabled.</em> Please enable JavaScript to use My News, My Clippings, My Comments and user settings.</p>
+<p><em>New <span class="hiddenVisually">feature</span></em> Personalise your news, save articles to read later and customise settings <a href="javascript:;" class="btn alt" title="View demo">View Demo</a></p>
+<em class="profile">Hi there!</em>
+<ul>
+    <li class="account secondLast"><a class="gaTrackable" href="https://theage.myfairfax.com.au/members/members/signup?channel_key=QeFV9eVnngJX9eFB2HyKgQ&callback_uri=http://www.theage.com.au/ugc/login.html" data-gaAction="Sign-up" data-gaCategory="MyMasthead" data-gaLabel="Dock Bar">Sign-up</a></li>
+    <li class="account last login"><a class="gaTrackable" href="https://theage.myfairfax.com.au/members/session/new?channel_key=QeFV9eVnngJX9eFB2HyKgQ&callback_uri=http://www.theage.com.au/ugc/login.html" data-gaAction="Login" data-gaCategory="MyMasthead" data-gaLabel="Dock Bar">Log in</a></li>
+</ul>
+<span class="beta">Beta <span class="hiddenVisually">version</span></span>
+<div id="ms-dialogLogin" class="dialogWrap hiddenVisually">
+    <div class="dialogContent main">
+        <p class="hiddenVisually">If you have trouble accessing our login form below, you can go to our <a href="https://theage.myfairfax.com.au/members/session/new?channel_key=QeFV9eVnngJX9eFB2HyKgQ&callback_uri=http://www.theage.com.au/ugc/login.html" title="This link will open in a new window" target="_parent">login page</a>.</p>
+        <iframe id="loginIframe" width="625" height="425" frameborder="0" scrolling="no" src="" data-dialogHref="https://theage.myfairfax.com.au/members/session/dialog?channel_key=QeFV9eVnngJX9eFB2HyKgQ&callback_uri=http://www.theage.com.au/ugc/login.html"></iframe>
+    </div>
+</div>    <div id="ms-dialogLoginPrompt" class="dialogWrap hiddenVisually">
+        <div class="dialogContent main">
+            <p class="hiddenVisually">If you have trouble accessing our login form below, you can go to our <a href="https://theage.myfairfax.com.au/members/session/new?channel_key=QeFV9eVnngJX9eFB2HyKgQ&callback_uri=http://www.theage.com.au/ugc/login.html" title="This link will open in a new window" target="_parent">login page</a>.</p>
+            <iframe id="loginPromptIframe" width="625" height="425" frameborder="0" scrolling="no" src="" data-dialogHref="https://theage.myfairfax.com.au/members/session/dialog?skin=prompt&channel_key=QeFV9eVnngJX9eFB2HyKgQ&callback_uri=http://www.theage.com.au/ugc/login.html"></iframe>
+        </div>
+    </div>
+        </div>
+    </div>
+</div></esi:remove>
+    <div data-brandTimezone="Australia/Melbourne"></div>
+
+
+
+    <div id="sponsorLink_cA-helmet" class="cA-helmet">
+    <div id="video-player-companion-ad-helmet"></div><!-- id:video-player-companion-ad-helmet -->
+</div><!-- id:sponsorLink_cA-helmet -->
+    <div class="outerWrap">
+        <div class="wrap cfix">
+            <div class="nN-whiteStrip">
+    <ul class="linksLeft" id="nN-whiteStrip-linksLeft">
+            <li id="whiteStrip-time"><em>5:38AM</em> Wednesday Nov 07, 2012</li>
+        <li id="whiteStrip-users" class="online last">    631
+ online now</li>
+            <li><a href="http://www.theage.com.au/todays-paper" title="See today's paper">See today's paper</a></li>
+        <li class="last"><a href="https://subscriptions.fairfax.com.au/landing/AGE/age_subscriptions.aspx?utm_source=Online&utm_medium=furl&utm_campaign=Homepage" title="Subscribe">Subscribe</a></li>
+
+</ul>
+    <a class="logo" href="http://www.fairfax.com.au/">Fairfax Media</a>
+        <ul class="linksRight">
+        
+<li><a href="http://www.theage.com.au" onclick="trackCode(this, 'ws-top');">The Age</a></li>
+                <li><a href="http://www.domain.com.au/" onclick="linktop(this);">Real Estate</a></li>
+                <li><a href="http://www.drive.com.au/" onclick="linktop(this);">Cars</a></li>
+                <li><a href="http://mycareer.com.au/" onclick="linktop(this);">Jobs</a></li>
+                <li><a href="http://www.rsvp.com.au/" onclick="linktop(this);">Dating</a></li>
+                <li><a href="https://membercentre.fairfax.com.au/NewsletterSubscription.aspx" onclick="linktop(this);">Newsletters</a></li>
+
+            <li class="hasDropdown last"><a href="javascript:;">More</a>
+                <ul>
+                            <li><a href="http://www.essentialbaby.com.au/" onclick="linktop(this);">Essential Baby</a></li>
+                            <li><a href="http://www.stayz.com.au/" onclick="linktop(this);">Stayz</a></li>
+                            <li><a href="http://www.investsmart.com.au/" onclick="linktop(this);">InvestSMART</a></li>
+                            <li><a href="http://www.tradingroom.com.au" onclick="linktop(this);">Trading Room</a></li>
+                            <li><a href="http://www.weatherzone.com.au/" onclick="linktop(this);">Weatherzone</a></li>
+                    <li class="last"><a onclick="linktop(this);" href="http://www.fairfax.com.au/">More sites &raquo;</a></li>
+                </ul>
+            </li>
+    </ul>
+
+</div><!-- class:nN-whiteStrip -->
+<!-- Header (class according to new HTML5 element 'header'; was 'masthead') (scope: network-wide) -->
+<div class="header span-24">
+        <div id="adspot-728x90,468x60-pos-1" class="ad"> <script type="text/javascript"> function getAdCookie(name) { var regex = new RegExp('(?:^|; )' + name + '=([^;]*)'); var value = regex.exec(document.cookie); if (value && value.length > 1) { value = decodeURIComponent(value[1]); } else { value = ""; } return value; } function getFrameDocument(fr) { var doc = fr.contentWindow || fr.contentDocument; if (doc && doc.document) { doc = doc.document; } return doc; } function closeDoc(doc) { doc.close(); } function closeOpenDocuments(openDocs) { for (var i=0;i< openDocs.length; i++) { closeDoc(getFrameDocument(document.getElementById(openDocs[i]))); } } function isIE() { return /msie/i.test(navigator.userAgent) && !/opera/i.test(navigator.userAgent); } function setHash (element, hash) { if(element.hash) { element.hash = element.hash + "," + hash; } else { element.hash = hash; } } function renderIFAd(holderID, adID, srcUrl, width, height, hash, bodyAttributes) { setHash(document.getElementById(holderID), hash); document.dcdAdsR.push(adID); if (ie) { var sizePart = srcUrl.substring(srcUrl.indexOf("sz=")+3); sizePart = sizePart.substring(0, sizePart.indexOf(";")); var multiSizes = sizePart.split(","); var minSize = multiSizes[0]; if (multiSizes.length > 1) { for(var i=1; i< multiSizes.length; i++) { if (minSize > multiSizes[i]) { minSize = multiSizes[i]; } } var sizeParts = minSize.toLowerCase().split("x"); width = sizeParts[0]; height = sizeParts[1]; srcUrl = srcUrl.replace(sizePart, minSize); } } document.write('<iframe id="' + adID + '" src="' + srcUrl + '" width="' + width + '" height="' + height + '" scrolling="no" marginheight="0" marginwidth="0" allowtransparency="true" frameborder="0"><\/iframe>'); } function renderJIFAd(holderID, adID, srcUrl, width, height, hash, bodyAttributes) { setHash(document.getElementById(holderID), hash); document.dcdAdsR.push(adID); document.write('<iframe id="' + adID + '" src="javascript: ;" width="' + width + '" height="' + height + '" scrolling="no" marginheight="0" marginwidth="0" allowtransparency="true" frameborder="0"><\/iframe>'); var body = '<html><head></head><body ' + bodyAttributes + '><scr' + 'ipt src="' + srcUrl + '"></sc' + 'ript></body></html>'; var fr = document.getElementById(adID); setHash(fr, hash); fr.body = body; var doc = getFrameDocument(fr); doc.open(); doc.write(body); setTimeout(function() {closeDoc(getFrameDocument(document.getElementById(adID)))}, 2000); } function renderIJAd(holderID, adID, srcUrl, hash) { document.dcdAdsAA.push(holderID); setHash(document.getElementById(holderID), hash); document.write('<scr' + 'ipt src="' + srcUrl + '" id="' + adID + '"></sc' + 'ript>'); } function renderJAd(holderID, adID, srcUrl, hash) { document.dcdAdsAA.push(holderID); setHash(document.getElementById(holderID), hash); document.dcdAdsH.push(holderID); document.dcdAdsI.push(adID); document.dcdAdsU.push(srcUrl); } function er_showAd() { var regex = new RegExp("externalReferrer=(.*?)(; |&|$)", "gi"); var value = regex.exec(document.cookie); if (value && value.length == 3) { var externalReferrer = value[1]; return (!FD.isInternalReferrer() || ((externalReferrer) && (externalReferrer > 0))); } return false; } function isHome() { var loc = "" + window.location; loc = loc.replace("//", ""); var tokens = loc.split("/"); if (tokens.length == 1) { return true; } else if (tokens.length == 2) { if (tokens[1].trim().length == 0) { return true; } } return false; } function checkAds(checkStrings) { var cs = checkStrings.split(","); for (var i=0;i< document.dcdAdsAA.length; i++) { var cAd = document.getElementById(document.dcdAdsAA[i]); document.dcdAdsAG.push(cAd.hash); for (var j=0; j<cs.length; j++) { var c = cs[j].trim(); if (c.length > 0 && cAd.innerHTML.indexOf(c)>0) { document.dcdAdsAI.push(cAd.hash); cAd.style.display ='none'; } } } if (!ie) { for (var i=0;i< document.dcdAdsR.length; i++) { var fr = document.getElementById(document.dcdAdsR[i]); if (fr) { document.dcdAdsAG.push(fr.hash); var doc = getFrameDocument(fr); for (var j=0; j<cs.length; j++) { var c = cs[j].trim(); if (c.length > 0 && doc.body.innerHTML.indexOf(c)>0) { document.dcdAdsAI.push(fr.hash); fr.style.display ='none'; } } } } } if (document.dcdAdsAI.length > 0 || document.dcdAdsAG.length > 0) { var pingServerParams = "i="; var sep = ""; for (var i=0;i< document.dcdAdsAI.length; i++) { pingServerParams += sep + document.dcdAdsAI[i]; sep = ","; } } document.pingServerAdParams = pingServerParams; } function pingAdStatus() { if (isHome ()) { return; } if (document.pingServerAdParams && document.pingServerAdParams.length > 0) { var pingServerUrl = "/action/pingServerAction?" + document.pingServerAdParams; var xmlHttp = null; try { xmlHttp = new XMLHttpRequest(); } catch(e) { try { xmlHttp = new ActiveXObject("Microsoft.XMLHttp"); } catch(e) { xmlHttp = null; } } if (xmlHttp != null) { xmlHttp.open( "GET", pingServerUrl, true); xmlHttp.send( null ); } } } function initAds(log) { for (var i=0;i< document.dcdAdsU.length; i++) { var shadowHolder = document.getElementById("adShD" + i); var targetHolder = document.getElementById(document.dcdAdsH[i]); if (shadowHolder && targetHolder) { var adNodes = new Array(); for (var j=0; j<shadowHolder.childNodes.length; j++) { var child = shadowHolder.childNodes[j]; if (child.nodeName.toLowerCase() != "script") { adNodes.push(child); } } for (var j=0; j<adNodes.length; j++) { targetHolder.appendChild(shadowHolder.removeChild(adNodes[j])); } } } if (er_showAd()) { for (var i=0;i< document.dcdAdsE.length; i++) { var erAd = document.getElementById(document.dcdAdsEH[i]); erAd.className = document.dcdAdsEC[i]; erAd.appendChild(document.dcdAdsE[i]); } } if (log) { console.log(document.igCount + "/" + document.tCount); } } document.refreshAds = function rAds(adID) { if (document.dcdAdsR) { document.dcdsAdsToClose = new Array(); for (var i=0;i< document.dcdAdsR.length; i++) { var fr = document.getElementById(document.dcdAdsR[i]); if (fr) { if (!ie) { if (!adID || adID =="*" || fr.parentNode.id==adID ) { var chNodes = new Array(); for (var j=0; j<fr.parentNode.childNodes.length; j++) { var child = fr.parentNode.childNodes[j]; if (!(child.nodeName.toLowerCase() == "script" || child.nodeName.toLowerCase() == "iframe")) { chNodes.push(child); } } for (var j=0; j<chNodes.length; j++) { chNodes[j].parentNode.removeChild(chNodes[j]); } var doc = getFrameDocument(fr); while (doc.childNodes.length > 0) { doc.removeChild(doc.childNodes[0]); } doc.open(); var newBody = fr.body; newBody = newBody.replace(";ord=", ";ord=" + Math.floor(100000000*Math.random())); doc.write(newBody); document.dcdsAdsToClose.push(fr.id); } } else { var newSrc = fr.src; newSrc = newSrc.replace(";ord=", ";ord=" + Math.floor(100000000*Math.random())); fr.src = newSrc; } } } if (document.dcdsAdsToClose.length > 0) { setTimeout(function() {closeOpenDocuments(document.dcdsAdsToClose)}, 500); } } }; var ie = isIE(); if(ie && typeof String.prototype.trim !== 'function') { String.prototype.trim = function() { return this.replace(/^\s+|\s+$/g, ''); }; } document.dcdAdsH = new Array(); document.dcdAdsI = new Array(); document.dcdAdsU = new Array(); document.dcdAdsR = new Array(); document.dcdAdsEH = new Array(); document.dcdAdsE = new Array(); document.dcdAdsEC = new Array(); document.dcdAdsAA = new Array(); document.dcdAdsAI = new Array(); document.dcdAdsAG = new Array(); document.dcdAdsToClose = new Array(); document.igCount = 0; document.tCount = 0; var dcOrd = Math.floor(100000000*Math.random()); document.dcAdsCParams = ""; var savValue = getAdCookie("sav"); if (savValue != null && savValue.length > 2) { document.dcAdsCParams = savValue + ";"; } </script> <script> renderJAd("adspot-728x90,468x60-pos-1", "dcAd-1", 'http://ad-apac.doubleclick.net/adj/onl.age.sport/sport/homepage;cat1=homepage;cat=sport;ctype=index;pos=1;dcopt=ist;' + document.dcAdsCParams +'sz=728x90,468x60;tile=1;ord=' + dcOrd + '?', 649107806); </script> <noscript> <a href='http://ad-apac.doubleclick.net/jump/onl.age.sport/sport/homepage;cat1=homepage;cat=sport;ctype=index;pos=1;dcopt=ist;sz=728x90,468x60;tile=1;ord=3.2289284E7?' target="_blank"> <img src='http://ad-apac.doubleclick.net/ad/onl.age.sport/sport/homepage;cat1=homepage;cat=sport;ctype=index;pos=1;dcopt=ist;sz=728x90,468x60;tile=1;ord=3.2289284E7?' border="0" alt=""> </a> </noscript> </div>
+
+    <p class="mh-logo"><a href="http://www.theage.com.au" title="The Age">The Age</a></p>
+            <h2><a href="http://www.theage.com.au/sport" title="Sport">Sport</a></h2>
+        <ul id="nav" role="navigation" >
+        
+                <li class=" hasDropdown realfooty">
+                    <a href="http://www.theage.com.au/afl" title="Real Footy">Real Footy</a>
+                            <ul>
+                                    <li class="first">
+                                        <a href="http://www.theage.com.au/afl" title="Real Footy">Real Footy</a>
+                                    </li>
+                                    <li>
+                                        <a href="http://www.theage.com.au/afl/afl-news" title="News">News</a>
+                                    </li>
+                                    <li>
+                                        <a href="http://livescores.theage.com.au/afl/ladder.html" title="Ladder">Ladder</a>
+                                    </li>
+                                    <li>
+                                        <a href="http://www.theage.com.au/afl/fixtures" title="Fixtures">Fixtures</a>
+                                    </li>
+                                    <li>
+                                        <a href="http://protipping.theage.com.au/" title="Tipping">Tipping</a>
+                                    </li>
+                                    <li>
+                                        <a href="http://www.theage.com.au/afl/blogs" title="Blogs">Blogs</a>
+                                    </li>
+                                    <li class="last">
+                                        <a href="http://livescores.theage.com.au/afl" title="Live Scores">Live Scores</a>
+                                    </li>
+                            </ul>
+                </li>
+                <li class=" hasDropdown ">
+                    <a href="http://www.theage.com.au/sport/cricket" title="Cricket">Cricket</a>
+                            <ul>
+                                    <li class="first">
+                                        <a href="http://livescores.theage.com.au/cricket/" title="Live scores">Live scores</a>
+                                    </li>
+                            </ul>
+                </li>
+                <li class=" hasDropdown a-league">
+                    <a href="http://www.theage.com.au/sport/soccer" title="Soccer">Soccer</a>
+                            <ul>
+                                    <li class="first">
+                                        <a href="http://www.theage.com.au/sport/a-league" title="A-League">A-League</a>
+                                    </li>
+                            </ul>
+                </li>
+                <li>
+                    <a href="http://www.theage.com.au/sport/horseracing" title="Horse Racing">Horse Racing</a>
+                </li>
+                <li>
+                    <a href="http://www.theage.com.au/sport/golf" title="Golf">Golf</a>
+                </li>
+                <li>
+                    <a href="http://www.theage.com.au/sport/motorsport" title="Motorsport">Motorsport</a>
+                </li>
+                <li>
+                    <a href="http://www.theage.com.au/sport/tennis" title="Tennis">Tennis</a>
+                </li>
+                <li class=" hasDropdown tourdefrance">
+                    <a href="http://www.theage.com.au/sport/cycling-age" title="Cycling">Cycling</a>
+                            <ul>
+                                    <li class="first">
+                                        <a href="http://www.theage.com.au/sport/cycling/tour-de-france-live" title="Tour De France">Tour De France</a>
+                                    </li>
+                            </ul>
+                </li>
+                <li class=" hasDropdown leaguehq">
+                    <a href="http://www.theage.com.au/rugby-league" title="NRL">NRL</a>
+                            <ul>
+                                    <li class="first">
+                                        <a href="http://www.theage.com.au/rugby-league" title="League HQ">League HQ</a>
+                                    </li>
+                                    <li>
+                                        <a href="http://www.theage.com.au/rugby-league/league-news" title="News">News</a>
+                                    </li>
+                                    <li>
+                                        <a href="http://livescores.theage.com.au/nrl/ladder.html" title="Ladder">Ladder</a>
+                                    </li>
+                                    <li>
+                                        <a href="http://www.theage.com.au/rugby-league/nrl-fixtures" title="Fixtures">Fixtures</a>
+                                    </li>
+                                    <li>
+                                        <a href="http://nrl.tipping.theage.com.au/" title="Tipping">Tipping</a>
+                                    </li>
+                                    <li class="last">
+                                        <a href="http://livescores.theage.com.au/nrl" title="Live Scores">Live Scores</a>
+                                    </li>
+                            </ul>
+                </li>
+                <li class=" hasDropdown rugbyheaven">
+                    <a href="http://www.theage.com.au/rugby-union" title="Union">Union</a>
+                            <ul>
+                                    <li class="first">
+                                        <a href="http://www.theage.com.au/rugby-union" title="Rugby Heaven">Rugby Heaven</a>
+                                    </li>
+                                    <li>
+                                        <a href="http://www.theage.com.au/rugby-union/union-news" title="News">News</a>
+                                    </li>
+                                    <li>
+                                        <a href="http://www.theage.com.au/rugby-union/super-rugby" title="Super Rugby">Super Rugby</a>
+                                    </li>
+                                    <li>
+                                        <a href="http://www.theage.com.au/rugby-union/rugby-world-cup" title="Rugby World Cup">Rugby World Cup</a>
+                                    </li>
+                                    <li>
+                                        <a href="http://www.theage.com.au/rugby-union/tri-nations" title="Tri Nations">Tri Nations</a>
+                                    </li>
+                                    <li>
+                                        <a href="http://www.theage.com.au/rugby-union/six-nations" title="Six Nations">Six Nations</a>
+                                    </li>
+                                    <li>
+                                        <a href="http://www.theage.com.au/rugby-union/club-rugby" title="Club &amp; Provincial">Club &amp; Provincial</a>
+                                    </li>
+                                    <li>
+                                        <a href="http://www.theage.com.au/rugby-union/international-rugby" title="International">International</a>
+                                    </li>
+                                    <li>
+                                        <a href="http://www.theage.com.au/rugby-union/calendar" title="Calendar">Calendar</a>
+                                    </li>
+                                    <li>
+                                        <a href="http://superrugby.tipping.theage.com.au/" title="Tipping">Tipping</a>
+                                    </li>
+                                    <li class="last">
+                                        <a href="http://livescores.theage.com.au/rugby" title="Live Scores">Live Scores</a>
+                                    </li>
+                            </ul>
+                </li>
+                <li class=" hasDropdown londonolympics">
+                    <a href="http://www.theage.com.au/sport/paralympics" title="Paralympics">Paralympics</a>
+                            <ul>
+                                    <li class="first">
+                                        <a href="http://www.theage.com.au/olympics" title="London Olympics">London Olympics</a>
+                                    </li>
+                            </ul>
+                </li>
+                <li>
+                    <a href="http://livescores.theage.com.au" title="Live Scores">Live Scores</a>
+                </li>
+                <li class=" hasDropdown athletics">
+                    <a href="http://www.theage.com.au/sport/" title="More">More</a>
+                            <ul>
+                                    <li class="first">
+                                        <a href="http://www.theage.com.au/sport/athletics" title="Athletics">Athletics</a>
+                                    </li>
+                                    <li>
+                                        <a href="http://www.theage.com.au/sport/basketball" title="Basketball">Basketball</a>
+                                    </li>
+                                    <li>
+                                        <a href="http://www.theage.com.au/sport/boxing" title="Boxing">Boxing</a>
+                                    </li>
+                                    <li>
+                                        <a href="http://www.theage.com.au/sport/netball" title="Netball">Netball</a>
+                                    </li>
+                                    <li>
+                                        <a href="http://www.theage.com.au/sport/swimming" title="Swimming">Swimming</a>
+                                    </li>
+                                    <li class="last">
+                                        <a href="http://www.theage.com.au/olympics" title="London Olympics">London Olympics</a>
+                                    </li>
+                            </ul>
+                </li>
+    </ul>
+
+        <p class="breadcrumb">
+        <span>You are here:</span>
+            <a href="http://www.theage.com.au" >Home</a>
+            <a href="http://www.theage.com.au/sport" class="last">Sport</a>
+    </p>
+
+        <div class="cN-searchBox cfix">
+        <form action="http://www.theage.com.au/execute_search.html" method="get">
+            <h2>Search age:</h2>
+            <label for="search">
+                <input type="text" name="text" id="search" placeholder='Search here...' onfocus="this.value='';" />
+            </label>
+            <h3>Search in:</h3>
+            <ul id="ddown" class="ddown">
+                <li><a class="selected" href="#">Sport</a>
+                    <div class="srch-wrap">
+                        <div></div>
+                        <ul class="cfix">
+                                <li class="first"><a href="#">theage.com.au</a></li>
+                                <li><a href="#">Web</a></li>
+                                <li><a href="#">Sport</a></li>
+                        </ul>
+                    </div><!-- class:srch-wrap -->
+                </li>
+            </ul>
+            <input type="hidden" name="ss" value="Sport" />
+            <input type="submit" class="btnSubmit" value="Search" />
+        </form>
+    </div><!-- class:cN-searchBox cfix -->
+
+</div>
+<!-- End component: Header -->
+
+            <div id="adspot-940x20-pos-1" style='display:none;' class="ad adPageTop"> </div>
+            
+            
+
+
+            <div id="content" class="span-16">
+                
+
+
+
+                
+                
+                
+
+                
+    <div  class="cN-storyImageLead media-image storySpecialFeature">
+                
+    <div class="media">
+<a title="From a ratbag to walking tall in life" href="http://www.theage.com.au/sport/horseracing/from-a-ratbag-to-walking-tall-in-life-20121106-28w69.html" > <img src="http://images.theage.com.au/2012/11/06/3774523/svSP_PREBBLE-620x0.jpg" width="620" alt="Brett Prebble"/> </a>    </div>
+
+        <div class="wof">
+            
+            <h3><a href="http://www.theage.com.au/sport/horseracing/from-a-ratbag-to-walking-tall-in-life-20121106-28w69.html" title="From a ratbag to walking tall in life">From a ratbag to walking tall in life</a></h3>
+            <p><cite><a href="http://www.theage.com.au/sport/by/Peter-Hanlon" title="Peter Hanlon">PETER HANLON</a></cite>
+                    Brett Prebble remembers a time when his was a name trainers didn't want to know.
+            </p>
+            
+
+                
+                
+                
+                
+        </div><!-- class:wof -->
+    </div><!-- class:cN-storyImageLead media-image storySpecialFeature -->
+    
+
+
+                <div id="emptyAdspot-620x45"></div><!-- id:emptyAdspot-620x45 -->
+                <div class="span-11">
+                    
+
+
+                            
+
+
+        
+
+        <h3 class="cT-strapHeading">
+            The Melbourne Cup
+            <span>
+
+</span>
+        </h3>
+                
+    <div class="cN-storyHeadlineLead cfix  ">
+            <h3><a href="http://www.theage.com.au/sport/horseracing/right-time-and-right-place-to-shoot-the-moon-20121106-28w6q.html" title="Right time and right place to shoot the moon">Right time and right place to shoot the moon</a></h3>
+                        <a href="http://www.theage.com.au/sport/horseracing/right-time-and-right-place-to-shoot-the-moon-20121106-28w6q.html" title="Right time and right place to shoot the moon"><img src="http://images.theage.com.au/2012/11/06/3774810/th-svCELEBRATE-90x60.jpg" width="90" height="60" alt="Brett Prebble celebrates his Cup-winning ride on Green Moon." /></a>
+
+            
+        <p>
+                <cite><a href="http://www.theage.com.au/sport/by/Greg-Baum" title="Greg Baum">GREG BAUM</a></cite>
+            What is too easily overlooked in the ever more hyperbolical prelude is that the Cup is first and last a horse race.
+        </p>
+        
+
+            
+    </div>
+        
+        
+    
+
+            <h3 class="cN-storyHeadlineOnly ">
+            <a href="http://www.theage.com.au/sport/horseracing/over-the-moon-20121106-28w6o.html" title="THE RACE Over the Moon"><b>THE RACE</b> Over the Moon</a>
+            </h3>
+            <h3 class="cN-storyHeadlineOnly ">
+            <a href="http://www.theage.com.au/sport/horseracing/fit-to-climb-the-mountain-but-bumped-by-americain-20121106-28w6l.html" title="THE INTERNATIONALS Fit to climb the mountain but bumped by Americain"><b>THE INTERNATIONALS</b> Fit to climb the mountain but bumped by Americain</a>
+            </h3>
+            <h3 class="cN-storyHeadlineOnly ">
+            <a href="http://www.theage.com.au/sport/horseracing/for-williams-the-gold-cup-runneth-over-20121106-28w68.html" title="THE OWNER For Williams, the gold Cup runneth over"><b>THE OWNER</b> For Williams, the gold Cup runneth over</a>
+            </h3>
+            <h3 class="cN-storyHeadlineOnly ">
+            <a href="http://www.theage.com.au/sport/horseracing/team-player-happy-to-share-stage-20121106-28w4j.html" title="THE TRAINER Team player happy to share stage"><b>THE TRAINER</b> Team player happy to share stage</a>
+            </h3>
+            <h3 class="cN-storyHeadlineOnly ">
+            <a href="http://www.theage.com.au/sport/horseracing/young-hoop-closes-in-on-riding-idol-20121106-28w4k.html" title="THE YOUNGSTER Young hoop closes in on riding idol"><b>THE YOUNGSTER</b> Young hoop closes in on riding idol</a>
+            </h3>
+            <h3 class="cN-storyHeadlineOnly ">
+            <a href="http://www.theage.com.au/sport/horseracing/gai-joyful-over-fiorentes-form-20121106-28w4g.html" title="THE RUNNER-UP Gai joyful over Fiorente's form"><b>THE RUNNER-UP</b> Gai joyful over Fiorente's form</a>
+            </h3>
+            <h3 class="cN-storyHeadlineOnly ">
+            <a href="http://www.theage.com.au/sport/horseracing/high-stakes-but-kelinni-toughs-it-out-20121106-28w6m.html" title="THE ALSO-RANS High stakes but Kelinni toughs it out"><b>THE ALSO-RANS</b> High stakes but Kelinni toughs it out</a>
+            </h3>
+            <h3 class="cN-storyHeadlineOnly ">
+            <a href="http://www.theage.com.au/sport/horseracing/failure-of-the-gallic-gogetters-20121106-28w6i.html" title="THE FRENCH Failure of the Gallic go-getters"><b>THE FRENCH</b> Failure of the Gallic go-getters</a>
+            </h3>
+            <h3 class="cN-storyHeadlineOnly ">
+            <a href="http://www.theage.com.au/sport/horseracing/an-official-lack-of-guts-adds-to-olivers-disgrace-20121106-28w6a.html" title="COMMENT An official lack of guts adds to Oliver's disgrace"><b>COMMENT</b> An official lack of guts adds to Oliver's disgrace</a>
+            </h3>
+            <h3 class="cN-storyHeadlineOnly ">
+            <a href="http://www.theage.com.au/sport/horseracing/nolen-earns-stewards-ire-20121106-28wmm.html" title="Nolen earns stewards' ire">Nolen earns stewards' ire</a>
+            </h3>
+            <h3 class="cN-storyHeadlineOnly ">
+            <a href="http://www.theage.com.au/victoria/oliver-facing-difficult-time-in-spotlight-20121106-28w6n.html" title="Oliver facing difficult time in spotlight">Oliver facing difficult time in spotlight</a>
+            </h3>
+            <h3 class="cN-storyHeadlineOnly ">
+            <a href="http://www.theage.com.au/sport/horseracing/unpretentious-brightens-hoops-day-20121106-28w6r.html" title="Unpretentious brightens hoop's day">Unpretentious brightens hoop's day</a>
+            </h3>
+            <h3 class="cN-storyHeadlineOnly ">
+            <a href="http://www.theage.com.au/sport/horseracing/europe-kudos-grows-20121106-28w67.html" title="Europe kudos grows">Europe kudos grows</a>
+            </h3>
+            <h3 class="cN-storyHeadlineOnly ">
+            <a href="http://www.theage.com.au/sport/horseracing/how-the-race-was-run-and-won-20121106-28wev.html" title="How the race was run and won">How the race was run and won</a>
+            </h3>
+            <h3 class="cN-storyHeadlineOnly last">
+            <a href="http://www.theage.com.au/sport/horseracing" title="MORE HORSE RACING NEWS"><b>MORE HORSE RACING NEWS</b></a>
+            </h3>
+
+        
+
+        <h3 class="cT-strapHeading">
+            Cricket
+            <span>
+
+</span>
+        </h3>
+                
+    <div class="cN-storyHeadlineLead cfix  ">
+            <h3><a href="http://www.theage.com.au/sport/cricket/take-me-on-warner-dares-proteas-20121106-28w55.html" title="Take me on, Warner dares Proteas">Take me on, Warner dares Proteas</a></h3>
+                        <a href="http://www.theage.com.au/sport/cricket/take-me-on-warner-dares-proteas-20121106-28w55.html" title="Take me on, Warner dares Proteas"><img src="http://images.theage.com.au/2012/11/06/3774352/th-svDWARNER-90x60.jpg" width="90" height="60" alt="Bring your fast men on: David Warner in the nets at the Gabba." /></a>
+
+            
+        <p>
+                <cite><a href="http://www.theage.com.au/sport/by/Chris-Barrett" title="Chris Barrett">CHRIS BARRETT</a></cite>
+            Test opener brazenly issues a challenge to South Africa's much-feted fast bowling trio.
+        </p>
+        
+
+            
+    </div>
+        
+        
+    
+
+            <h3 class="cN-storyHeadlineOnly ">
+            <a href="http://www.theage.com.au/sport/cricket/clarke-in-no-hurry-to-take-in-watson-20121106-28w53.html" title="Clarke in no hurry to take in Watson">Clarke in no hurry to take in Watson</a>
+            </h3>
+            <h3 class="cN-storyHeadlineOnly ">
+            <a href="http://www.theage.com.au/sport/cricket/ponting-wants-to-show-hes-got-his-mojo-back-20121106-28w54.html" title="Ponting wants to show he's got his mojo back">Ponting wants to show he's got his mojo back</a>
+            </h3>
+            <h3 class="cN-storyHeadlineOnly ">
+            <a href="http://www.theage.com.au/sport/cricket/quiney-callup-timely-reminder-for-fringe-vics-20121106-28w4i.html" title="Quiney call-up timely reminder for fringe Vics">Quiney call-up timely reminder for fringe Vics</a>
+            </h3>
+            <h3 class="cN-storyHeadlineOnly ">
+            <a href="http://www.theage.com.au/sport/cricket/howzat-for-a-spin-seeker-20121106-28vhs.html" title="Howzat for a spin seeker">Howzat for a spin seeker</a>
+            </h3>
+            <h3 class="cN-storyHeadlineOnly last">
+            <a href="http://www.theage.com.au/sport/cricket" title="MORE CRICKET NEWS"><b>MORE CRICKET NEWS</b></a>
+            </h3>
+
+        
+
+        <h3 class="cT-strapHeading">
+            Soccer
+            <span>
+
+</span>
+        </h3>
+                
+    <div class="cN-storyHeadlineLead cfix  ">
+            <h3><a href="http://www.theage.com.au/sport/a-league/victorys-best-hard-to-stop-postecoglou-20121106-28w2y.html" title="Victory's best hard to stop: Postecoglou">Victory's best hard to stop: Postecoglou</a></h3>
+                        <a href="http://www.theage.com.au/sport/a-league/victorys-best-hard-to-stop-postecoglou-20121106-28w2y.html" title="Victory's best hard to stop: Postecoglou"><img src="http://images.theage.com.au/2012/11/06/3774356/th-svPOSTECOGLOU-90x60.jpg" width="90" height="60" alt="Ange Postecoglou congratulates Marcos Flores after the game against Phoneix." /></a>
+
+            
+        <p>
+                
+            But Melbourne Victory coach says slack finish to 3-2 win over Phoenix was unacceptable.
+        </p>
+        
+
+            
+    </div>
+        
+        
+    
+
+            <h3 class="cN-storyHeadlineOnly last">
+            <a href="http://www.theage.com.au/sport/soccer" title="MORE SOCCER NEWS"><b>MORE SOCCER NEWS</b></a>
+            </h3>
+
+        
+
+        <h3 class="cT-strapHeading">
+            Motor Sport
+            <span>
+
+</span>
+        </h3>
+                
+    <div class="cN-storyHeadlineLead cfix  ">
+            <h3><a href="http://www.theage.com.au/sport/motorsport/gloves-are-off-in-race-to-the-title-20121106-28vzx.html" title="Gloves are off in race to the title">Gloves are off in race to the title</a></h3>
+                        <a href="http://www.theage.com.au/sport/motorsport/gloves-are-off-in-race-to-the-title-20121106-28vzx.html" title="Gloves are off in race to the title"><img src="http://images.theage.com.au/2012/11/06/3774357/th-svVETTEL-90x60.jpg" width="90" height="60" alt="Hats on: Fernando Alonso (left) and Sebastian Vettel after the Abu Dhabi Grand Prix. " /></a>
+
+            
+        <p>
+                <cite>David Coulthard</cite>
+            What a couple of races are coming up in the US and Brazil to decide this year's winner.
+        </p>
+        
+
+            
+    </div>
+        
+        
+    
+
+            <h3 class="cN-storyHeadlineOnly last">
+            <a href="http://www.theage.com.au/sport/motorsport" title="MORE MOTOR SPORT NEWS"><b>MORE MOTOR SPORT NEWS</b></a>
+            </h3>
+
+        
+
+        <h3 class="cT-strapHeading">
+            Rugby Union
+            <span>
+
+</span>
+        </h3>
+                
+    <div class="cN-storyHeadlineLead cfix  ">
+            <h3><a href="http://www.theage.com.au/rugby-union/union-news/deans-calls-for-super-player-rotation-20121106-28vzw.html" title="Deans calls for Super player rotation">Deans calls for Super player rotation</a></h3>
+                        <a href="http://www.theage.com.au/rugby-union/union-news/deans-calls-for-super-player-rotation-20121106-28vzw.html" title="Deans calls for Super player rotation"><img src="http://images.theage.com.au/2012/11/06/3774373/th-svWALLABIES-90x60.jpg" width="90" height="60" alt="Wallabies training" /></a>
+
+            
+        <p>
+                <cite><a href="http://www.theage.com.au/rugby-union/by/Georgina-Robinson" title="Georgina Robinson">GEORGINA ROBINSON</a></cite>
+            Wallabies coach's call to save Australian rugby from unprecedented ''carnage'' wrought by injuries.
+        </p>
+        
+
+            
+    </div>
+        
+        
+    
+
+            <h3 class="cN-storyHeadlineOnly last">
+            <a href="http://www.theage.com.au/rugby-union" title="MORE RUGBY UNION NEWS"><b>MORE RUGBY UNION NEWS</b></a>
+            </h3>
+
+        
+
+        <h3 class="cT-strapHeading">
+            Cycling
+            <span>
+
+</span>
+        </h3>
+                
+    <div class="cN-storyHeadlineLead cfix  ">
+            <h3><a href="http://www.theage.com.au/sport/cycling/race-fix-inquiry-20121106-28vzy.html" title="Race fix inquiry">Race fix inquiry</a></h3>
+                        <a href="http://www.theage.com.au/sport/cycling/race-fix-inquiry-20121106-28vzy.html" title="Race fix inquiry"><img src="http://images.theage.com.au/2012/11/06/3774354/th-svVINOKOUROV-90x60.jpg" width="90" height="60" alt="Alexandre Vinokourov holds his gold medal after he won the men's road race at the Olympic Games in London on July 28." /></a>
+
+            
+        <p>
+                <cite>Geneva</cite>
+            Probe begins into allegations that Olympic champion Alexandre Vinokourov bribed a rival.
+        </p>
+        
+
+            
+    </div>
+        
+        
+    
+
+            <h3 class="cN-storyHeadlineOnly last">
+            <a href="http://www.theage.com.au/sport/cycling" title="MORE CYCLING NEWS"><b>MORE CYCLING NEWS</b></a>
+            </h3>
+
+        
+
+        <h3 class="cT-strapHeading">
+            Boxing
+            <span>
+
+</span>
+        </h3>
+                
+    <div class="cN-storyHeadlineLead cfix  ">
+            <h3><a href="http://www.theage.com.au/sport/boxing/flintoff-pro-fight-a-joke-says-promoter-20121106-28wh8.html" title="Flintoff pro fight a joke, says promoter">Flintoff pro fight a joke, says promoter</a></h3>
+                        <a href="http://www.theage.com.au/sport/boxing/flintoff-pro-fight-a-joke-says-promoter-20121106-28wh8.html" title="Flintoff pro fight a joke, says promoter"><img src="http://images.theage.com.au/2012/11/06/3774698/th-svFLINTOFF-90x60.jpg" width="90" height="60" alt="Andrew Flintoff" /></a>
+
+            
+        <p>
+                <cite>London <small>12:01am</small></cite>
+            Claim former cricketer's maiden bout on November 30 would be an insult to the sport.
+        </p>
+        
+
+            
+    </div>
+        
+        
+    
+
+            <h3 class="cN-storyHeadlineOnly last">
+            <a href="http://www.theage.com.au/sport/boxing" title="MORE BOXING NEWS"><b>MORE BOXING NEWS</b></a>
+            </h3>
+
+        
+
+        <h3 class="cT-strapHeading">
+            Basketball
+            <span>
+
+</span>
+        </h3>
+                
+    <div class="cN-storyHeadlineLead cfix  ">
+            <h3><a href="http://www.theage.com.au/sport/basketball/knicks-repeat-thrashing-of-sixers-20121106-28wi6.html" title="Knicks repeat thrashing of Sixers">Knicks repeat thrashing of Sixers</a></h3>
+                        <a href="http://www.theage.com.au/sport/basketball/knicks-repeat-thrashing-of-sixers-20121106-28wi6.html" title="Knicks repeat thrashing of Sixers"><img src="http://images.theage.com.au/2012/11/06/3774699/th-svKNICKS-90x60.jpg" width="90" height="60" alt="Rasheed Wallace of the Knicks shoots over Lavoy Allen of the Sixers." /></a>
+
+            
+        <p>
+                <cite>Los Angeles <small>12:01am</small></cite>
+            Seven New York Knicks players reach double figures to crush the Philadelphia Sixers.
+        </p>
+        
+
+            
+    </div>
+        
+        
+    
+
+            <h3 class="cN-storyHeadlineOnly last">
+            <a href="http://www.theage.com.au/sport/basketball" title="MORE BASKETBALL NEWS"><b>MORE BASKETBALL NEWS</b></a>
+            </h3>
+
+        
+
+        <h3 class="cT-strapHeading">
+            Rugby League
+            <span>
+
+</span>
+        </h3>
+                
+    <div class="cN-storyHeadlineLead cfix  ">
+            <h3><a href="http://www.theage.com.au/rugby-league/league-news/johns-joins-manly-as-assistant-coach-20121106-28wiz.html" title="Johns joins Manly as assistant coach">Johns joins Manly as assistant coach</a></h3>
+                        <a href="http://www.theage.com.au/rugby-league/league-news/johns-joins-manly-as-assistant-coach-20121106-28wiz.html" title="Johns joins Manly as assistant coach"><img src="http://images.theage.com.au/2012/11/06/3774697/th-svAJOHNS-90x60.jpg" width="90" height="60" alt="Andrew Johns." /></a>
+
+            
+        <p>
+                <cite>Sydney <small>12:01am</small></cite>
+            League great will now work exclusively with the Sea Eagles across all grades.
+        </p>
+        
+
+            
+    </div>
+        
+        
+    
+
+            <h3 class="cN-storyHeadlineOnly last">
+            <a href="http://www.theage.com.au/rugby-league" title="MORE RUGBY LEAGUE NEWS"><b>MORE RUGBY LEAGUE NEWS</b></a>
+            </h3>
+
+        
+
+        <h3 class="cT-strapHeading">
+            American Football
+            <span>
+
+</span>
+        </h3>
+                
+    <div class="cN-storyHeadlineLead cfix  ">
+            <h3><a href="http://www.theage.com.au/sport/brees-stars-as-saints-defeat-eagles-20121106-28wl9.html" title="Brees stars as Saints defeat Eagles">Brees stars as Saints defeat Eagles</a></h3>
+                        <a href="http://www.theage.com.au/sport/brees-stars-as-saints-defeat-eagles-20121106-28wl9.html" title="Brees stars as Saints defeat Eagles"><img src="http://images.theage.com.au/2012/11/06/3774724/th-svBREES-90x60.jpg" width="90" height="60" alt="New Orleans quarterback Drew Brees drops back to pass during the game against Philadelphia." /></a>
+
+            
+        <p>
+                <cite>New Orleans <small>12:03am</small></cite>
+            Drew Brees throws two touchdown passes to lead New Orleans to a 28-13 win over Philadelphia.
+        </p>
+        
+
+            
+    </div>
+        
+        
+    
+
+
+        
+
+        <h3 class="cT-strapHeading">
+            More Sport
+            <span>
+
+</span>
+        </h3>
+                
+    <div class="cN-storyHeadlineLead cfix  ">
+            <h3><a href="http://www.theage.com.au/rugby-union/union-news/mitchell-cleared-of-misconduct-charges-wants-lions-job-back-20121106-28v5v.html" title="Mitchell cleared of misconduct charges">Mitchell cleared of misconduct charges</a></h3>
+                        <a href="http://www.theage.com.au/rugby-union/union-news/mitchell-cleared-of-misconduct-charges-wants-lions-job-back-20121106-28v5v.html" title="Mitchell cleared of misconduct charges, wants Lions job back"><img src="http://images.theage.com.au/2012/10/23/3736573/th_john_mitchell-90x60.jpg" width="90" height="60" alt="<p>" /></a>
+
+            
+        <p>
+                <cite><small>11:53am</small></cite>
+            <b>RUGBY UNION</b> Former All Blacks coach John Mitchell says he has been found not guilty of charges of misconduct and is demanding to be reinstated as head coach of the South African side.
+        </p>
+        
+
+            
+    </div>
+        
+        
+    
+
+                
+    <div class="cN-storyHeadlineLead cfix date ">
+            <h3><a href="http://www.theage.com.au/sport/basketball/new-guard-from-nba-for-tigers-20121105-28u49.html" title="New guard from NBA for Tigers">New guard from NBA for Tigers</a></h3>
+                        <a href="http://www.theage.com.au/sport/basketball/new-guard-from-nba-for-tigers-20121105-28u49.html" title="New guard from NBA for Tigers"><img src="http://images.theage.com.au/2012/06/04/3349175/th-anstey-90x60.jpg" width="90" height="60" alt="Chris Anstey." /></a>
+
+            
+        <p>
+                <cite>Roy Ward </cite>
+            <b>BASKETBALL</b> | Former NBA point guard Jonny Flynn the 'highest-profile import to play in the NBL'.
+        </p>
+        
+
+            
+    </div>
+        
+        
+    
+
+
+
+                    
+
+
+                </div><!-- class:span-11 -->
+                <div class="span-5 last">
+                            
+
+
+
+
+                
+    <div  class="cN-storyImageLead  media-image">
+                
+    <div class="media">
+<a class="play-video" title="Green Moon wins the Melbourne Cup" href="http://media.theage.com.au/national/selections/green-moon-wins-the-melbourne-cup-3770221.html" > <img src="http://images.theage.com.au/2012/11/06/3773403/wintime-180x120.jpg" width="180" alt="Green Moon wins the Melbourne Cup (Thumbnail)"/> <span class="size-med"> </span> </a>    </div>
+
+        <div class="wof">
+            
+            <h3><a href="http://media.theage.com.au/national/selections/green-moon-wins-the-melbourne-cup-3770221.html" title="Green Moon wins">Green Moon wins</a></h3>
+            <p>
+                    Lloyd Williams-owned Green Moon wins the Melbourne Cup.
+            </p>
+            
+
+                
+                
+                
+                
+        </div><!-- class:wof -->
+    </div><!-- class:cN-storyImageLead  media-image -->
+    
+
+                
+    <div  class="cN-storyImageLead  media-image">
+                
+    <div class="media">
+<a class="more-photos" title="Green Moon races to victory in Melbourne Cup" href="http://www.theage.com.au/photogallery/sport/horseracing/green-moon-races-to-victory-in-melbourne-cup-20121106-28vo1.html" > <img src="http://images.theage.com.au/2012/11/06/3773552/---th_green_moon10_20121106161025421262-180x120.jpg" width="180" alt="Green Moon."/> <span class="size-med"> </span> </a>    </div>
+
+        <div class="wof">
+            
+            <h3><a href="http://www.theage.com.au/photogallery/sport/horseracing/green-moon-races-to-victory-in-melbourne-cup-20121106-28vo1.html" title="Prebble's first">Prebble's first</a></h3>
+            <p>
+                    Brett Prebble gains his first win in the nation's biggest race.
+            </p>
+            
+
+                
+                
+                
+                
+        </div><!-- class:wof -->
+    </div><!-- class:cN-storyImageLead  media-image -->
+    
+
+                
+    <div  class="cN-storyImageLead  media-image">
+                
+    <div class="media">
+<a class="play-video" title="Mariners' masterclass stuns Sydney FC" href="http://media.theage.com.au/sport/sports-hq/mariners-masterclass-stuns-sydney-fc-3770530.html" > <img src="http://images.theage.com.au/2012/11/05/3770535/th-al4-180x120.jpg" width="180" alt="A-League"/> <span class="size-med"> </span> </a>    </div>
+
+        <div class="wof">
+            
+            <h3><a href="http://media.theage.com.au/sport/sports-hq/mariners-masterclass-stuns-sydney-fc-3770530.html" title="Sydney FC all at sea against Mariners">Sydney FC all at sea against Mariners</a></h3>
+            <p>
+                    Watch all the goals as Central Coast thrashed the Sky Blues 7-2.
+            </p>
+            
+
+                
+                
+                
+                
+        </div><!-- class:wof -->
+    </div><!-- class:cN-storyImageLead  media-image -->
+    
+
+                
+    <div  class="cN-storyImageLead  media-image">
+                
+    <div class="media">
+<a class="play-video" title="Fiveandahalfstar wins the Derby" href="http://media.theage.com.au/sport/horse-racing/fiveandahalfstar-wins-the-derby-3767179.html" > <img src="http://images.theage.com.au/2012/11/03/3767181/oliver32-180x120.jpg" width="180" alt="Fiveandahalfstar wins the Derby (Thumbnail)"/> <span class="size-med"> </span> </a>    </div>
+
+        <div class="wof">
+            
+            <h3><a href="http://media.theage.com.au/sport/horse-racing/fiveandahalfstar-wins-the-derby-3767179.html" title="Fiveandahalfstar wins">Fiveandahalfstar wins</a></h3>
+            <p>
+                    Damien Oliver guides $41 outsider home by a length and a half.
+            </p>
+            
+
+                
+                
+                
+                
+        </div><!-- class:wof -->
+    </div><!-- class:cN-storyImageLead  media-image -->
+    
+
+                
+    <div  class="cN-storyImageLead  media-image">
+                
+    <div class="media">
+<a class="play-video" title="Israel Folau quits AFL" href="http://media.theage.com.au/sport/sports-hq/israel-folau-quits-afl-3761363.html" > <img src="http://images.theage.com.au/2012/11/01/3761562/th-folaupresser-180x120.jpg" width="180" alt="Israel Folau announces his retirement from AFL with GWS Giants. "/> <span class="size-med"> </span> </a>    </div>
+
+        <div class="wof">
+            
+            <h3><a href="http://media.theage.com.au/sport/sports-hq/israel-folau-quits-afl-3761363.html" title="Israel Folau quits AFL">Israel Folau quits AFL</a></h3>
+            <p>
+                    <b>Video</b> Star player leaves GWS and looks to return to the NRL.
+            </p>
+            
+
+                
+                
+                
+                
+        </div><!-- class:wof -->
+    </div><!-- class:cN-storyImageLead  media-image -->
+    
+
+                
+    <div  class="cN-storyImageLead  media-image">
+                
+    <div class="media">
+<a class="play-video" title="Which teams benefit from the AFL draw?" href="http://media.theage.com.au/sport/afl-real-footy/which-teams-benefit-from-the-afl-draw-3757429.html" > <img src="http://images.theage.com.au/2012/10/31/3757431/draw32-180x120.jpg" width="180" alt="Which teams benefit from the draw? (Thumbnail)"/> <span class="size-med"> </span> </a>    </div>
+
+        <div class="wof">
+            
+            <h3><a href="http://media.theage.com.au/sport/afl-real-footy/which-teams-benefit-from-the-afl-draw-3757429.html" title="AFL draw: the winners">AFL draw: the winners</a></h3>
+            <p>
+                    Rohan Connolly looks at winners and losers from the 2013 draw.
+            </p>
+            
+
+                
+                
+                
+                
+        </div><!-- class:wof -->
+    </div><!-- class:cN-storyImageLead  media-image -->
+    
+
+                
+    <div  class="cN-storyImageLead  media-image">
+                
+    <div class="media">
+<a class="play-video" title="Melbourne tanked from the top" href="http://media.theage.com.au/sport/afl-real-footy/melbourne-tanked-from-the-top-3756874.html" > <img src="http://images.theage.com.au/2012/10/31/3757140/1_1031melbourne_320-180x120.jpg" width="180" alt="Melbourne tanked from the top (Thumbnail)"/> <span class="size-med"> </span> </a>    </div>
+
+        <div class="wof">
+            
+            <h3><a href="http://media.theage.com.au/sport/afl-real-footy/melbourne-tanked-from-the-top-3756874.html" title="Dees tanked from top">Dees tanked from top</a></h3>
+            <p>
+                    AFL finds secret meeting involving senior Demons directed policy.
+            </p>
+            
+
+                
+                
+                
+                
+        </div><!-- class:wof -->
+    </div><!-- class:cN-storyImageLead  media-image -->
+    
+
+                
+    <div  class="cN-storyImageLead  media-image">
+                
+    <div class="media">
+<a class="more-photos" title="Cup raiders at Werribee" href="http://www.theage.com.au/photogallery/sport/horseracing/cup-raiders-at-werribee-20121031-28jfu.html" > <img src="http://images.theage.com.au/2012/10/31/3757702/th-waterhouse-fiorente-180x120.jpg" width="180" alt="Fiorente."/> <span class="size-med"> </span> </a>    </div>
+
+        <div class="wof">
+            
+            <h3><a href="http://www.theage.com.au/photogallery/sport/horseracing/cup-raiders-at-werribee-20121031-28jfu.html" title="Raiders at Werribee">Raiders at Werribee</a></h3>
+            <p>
+                    International Melbourne Cup raiders go through final preparations.
+            </p>
+            
+
+                
+                
+                
+                
+        </div><!-- class:wof -->
+    </div><!-- class:cN-storyImageLead  media-image -->
+    
+
+                
+    <div  class="cN-storyImageLead  media-image">
+                
+    <div class="media">
+<a class="more-photos" title="The Spring Carnival moves to Flemington" href="http://www.theage.com.au/photogallery/sport/horseracing/the-spring-carnival-moves-to-flemington-20121029-28f4w.html" > <img src="http://images.theage.com.au/2012/10/29/3752120/cup17thumbnail-20121029154042429846-180x120.jpg" width="180" alt="1965 Melbourne Cup presentation. [From Left] Owner (wearing glasses and holding the Cup) with trainer Bart Cummings, the winning horse 'Light Fingers' and jockey Roy Higgins. Pic taken on Melbourne Cup Day 2 Nov 1965. Date filed: 02-11-1965 Neg no: W 13254"/> <span class="size-med"> </span> </a>    </div>
+
+        <div class="wof">
+            
+            <h3><a href="http://www.theage.com.au/photogallery/sport/horseracing/the-spring-carnival-moves-to-flemington-20121029-28f4w.html" title="The best of Flemington">The best of Flemington</a></h3>
+            <p>
+                    Pictorial highlights of the Melbourne Cup carnival through history.
+            </p>
+            
+
+                
+                
+                
+                
+        </div><!-- class:wof -->
+    </div><!-- class:cN-storyImageLead  media-image -->
+    
+
+                
+    <div  class="cN-storyImageLead  media-image">
+                
+    <div class="media">
+<a class="more-photos" title="Australian First Test team" href="http://www.theage.com.au/photogallery/sport/cricket/australian-first-test-team-20121029-28esj.html" > <img src="http://images.theage.com.au/2012/10/29/3751653/th-wbCRICwade2-180x120.jpg" width="180" alt="Australian Test team."/> <span class="size-med"> </span> </a>    </div>
+
+        <div class="wof">
+            
+            <h3><a href="http://www.theage.com.au/photogallery/sport/cricket/australian-first-test-team-20121029-28esj.html" title="Australian Test team">Australian Test team</a></h3>
+            <p>
+                    Youth and experience mingle in the squad to face South Africa.
+            </p>
+            
+
+                
+                
+                
+                
+        </div><!-- class:wof -->
+    </div><!-- class:cN-storyImageLead  media-image -->
+    
+
+                
+    <div  class="cN-storyImageLead  media-image">
+                
+    <div class="media">
+<a class="play-video" title="AFL trade period wrap" href="http://media.theage.com.au/sport/afl-real-footy/afl-trade-period-wrap-3746606.html" > <img src="http://images.theage.com.au/2012/10/26/3746608/th-Tradeperiod-180x120.jpg" width="180" alt="Trade Period Wrap"/> <span class="size-med"> </span> </a>    </div>
+
+        <div class="wof">
+            
+            <h3><a href="http://media.theage.com.au/sport/afl-real-footy/afl-trade-period-wrap-3746606.html" title="AFL trade period wrap">AFL trade period wrap</a></h3>
+            <p>
+                    <b>Video</b> Michael Gleeson and Emma Quayle analyse all the key moves.
+            </p>
+            
+
+                
+                
+                
+                
+        </div><!-- class:wof -->
+    </div><!-- class:cN-storyImageLead  media-image -->
+    
+
+                
+    <div  class="cN-storyImageLead  media-image">
+                
+    <div class="media">
+<a class="more-photos" title="Geelong Cup 2012" href="http://www.theage.com.au/photogallery/sport/horseracing/geelong-cup-2012-20121024-28560.html" > <img src="http://images.theage.com.au/2012/10/25/3741156/320_geelongcup-180x120.jpg" width="180" alt="Geelong Cup"/> <span class="size-med"> </span> </a>    </div>
+
+        <div class="wof">
+            
+            <h3><a href="http://www.theage.com.au/photogallery/sport/horseracing/geelong-cup-2012-20121024-28560.html" title="Geelong Cup 2012">Geelong Cup 2012</a></h3>
+            <p>
+                    Hemlines tugged south earlier in the day left to the forces of gravity.
+            </p>
+            
+
+                
+                
+                
+                
+        </div><!-- class:wof -->
+    </div><!-- class:cN-storyImageLead  media-image -->
+    
+
+                
+    <div  class="cN-storyImageLead  media-image">
+                
+    <div class="media">
+<a class="play-video" title="Tippett's defection part of a 'secret deal'" href="http://media.theage.com.au/sport/sports-hq/tippetts-defection-part-of-a-secret-deal-3737952.html" > <img src="http://images.theage.com.au/2012/10/24/3737954/tippett32-180x120.jpg" width="180" alt="Tippett's defection part of a secret deal with Adelaide (Thumbnail)"/> <span class="size-med"> </span> </a>    </div>
+
+        <div class="wof">
+            
+            <h3><a href="http://media.theage.com.au/sport/sports-hq/tippetts-defection-part-of-a-secret-deal-3737952.html" title="Tippett's secret deal">Tippett's secret deal</a></h3>
+            <p>
+                    Adelaide Crows confess to secret arrangement with key forward.
+            </p>
+            
+
+                
+                
+                
+                
+        </div><!-- class:wof -->
+    </div><!-- class:cN-storyImageLead  media-image -->
+    
+
+                
+    <div  class="cN-storyImageLead  media-image last">
+                
+    <div class="media">
+<a class="play-video" title="Tour de France route announced" href="http://media.theage.com.au/sport/sports-hq/tour-de-france-route-announced-3741104.html" > <img src="http://images.theage.com.au/2012/10/25/3741106/TH-241012037-TOURREADY_1351-180x120.jpg" width="180" alt="Tour de France route announced (Thumbnail)"/> <span class="size-med"> </span> </a>    </div>
+
+        <div class="wof">
+            
+            <h3><a href="http://media.theage.com.au/sport/sports-hq/tour-de-france-route-announced-3741104.html" title="Tour de France route">Tour de France route</a></h3>
+            <p>
+                    The centenary  route looks suited to the climbers.
+            </p>
+            
+
+                
+                
+                
+                
+        </div><!-- class:wof -->
+    </div><!-- class:cN-storyImageLead  media-image last -->
+    
+
+
+        
+
+
+
+
+
+        
+
+
+
+
+
+        
+
+
+
+
+
+        
+
+
+
+
+
+        
+
+
+
+
+
+
+                </div><!-- class:span-5 last -->
+            </div><!-- id:content -->
+            <div class="aside span-8 last">
+                
+
+
+                
+
+
+
+                
+
+
+                
+                    
+
+                <div id="adspot-300x600,300x250-pos-1" class="ad"> <small>Advertisement</small> <script> renderJAd("adspot-300x600,300x250-pos-1", "dcAd-3", 'http://ad-apac.doubleclick.net/adj/onl.age.sport/sport/homepage;cat1=homepage;cat=sport;ctype=index;pos=1;' + document.dcAdsCParams +'sz=300x600,300x250;tile=3;ord=' + dcOrd + '?', 133703001); </script> <noscript> <a href='http://ad-apac.doubleclick.net/jump/onl.age.sport/sport/homepage;cat1=homepage;cat=sport;ctype=index;pos=1;sz=300x600,300x250;tile=3;ord=3.2289284E7?' target="_blank"> <img src='http://ad-apac.doubleclick.net/ad/onl.age.sport/sport/homepage;cat1=homepage;cat=sport;ctype=index;pos=1;sz=300x600,300x250;tile=3;ord=3.2289284E7?' border="0" alt=""> </a> </noscript> </div>
+                <!-- add solar quotes for all Environment sections -->
+                
+
+            <a href="http://twitter.com/#!/theagesport">
+<img src="http://images.theage.com.au/2011/10/18/2698463/sport_twitter_300x50.gif" width="300" height="50" alt="The Age From The Track Twitter" style="display:block;border-bottom:1px solid #ccc;padding:0;margin:0 0 10px 0;"><b>Follow <i>The Age </i>Sport on Twitter</b></a>
+            <p>
+<a href="http://images.theage.com.au/file/2012/11/04/3768499/2012-melbourne-cup-sweep.pdf">
+<img src="http://images.smh.com.au/2010/11/01/2018448/melb-cup-sweep-promo.gif" width="300" height="80" alt="Melbourne Cup sweep 2012" style="display:block;border-bottom:1px solid #ccc;padding:0;margin:0 0 10px 0;"></a>
+            <br>
+<a href="http://www.thecity2sea.com.au/">
+<img src="http://images.theage.com.au/2012/08/02/3522541/City2Sea2012-300x70.jpg?rand=1343894455547" width="300" height="70" alt="City to Sea" style="display:block;border-bottom:1px solid #ccc;padding:0;margin:0 0 10px 0;"></a>
+            <p>
+<a href="http://theage.digitaleditions.com.au/theform/">
+<img src="http://images.theage.com.au/2010/04/30/1398522/rhs_formguide_300.gif" width="300" height="50" alt="The Age racing form guide" style="display:block;border-bottom:1px solid #ccc;padding:0;margin:0 0 10px 0;"></a>
+            <br>
+<a href="http://www.allenandunwin.com/default.aspx?page=94&book=9781743313176">
+<img src="http://images.theage.com.au/2012/11/02/3765274/thegamebook_300.jpg?rand=1351840305854" width="300" height="70" alt="The Game" style="display:block;border-bottom:1px solid #ccc;padding:0;margin:0 0 10px 0;"></a>
+
+                    <div class="cS-latestVideo">
+        <h3>Sports HQ Video <a href="http://media.theage.com.au/video-sports-hq/sports-hq">More video</a></h3>
+        <div class="media-video" id="video-player-latest">
+            <div id="video-player-latest-player" class="videoWrap"></div><!-- id:video-player-latest-player -->
+            <div class="fdVideoWof accessibleWof">
+                <h4>Tomic found guilty</h4>
+                <p>Tomic admits off court controversy has taken a toll on him both professionally and personally.</p>
+            </div><!-- class:fdVideoWof accessibleWof -->
+            <ul class="span-5">
+                    <li>
+                                <a class="play-video " href="http://media.theage.com.au/sport/sports-hq/live-call-of-the-card-3770268.html" title="LIVE: Call of the Card"><img src="http://images.theage.com.au/2012/11/05/3770269/Call-of-the-Card_bg-92x52.jpg" width="92" height="52" alt="Live: Call of thecards (Video Thumbnail)" /><span class="size-sml">Click to play video</span></a>
+
+                        <p><a href="http://media.theage.com.au/sport/sports-hq/live-call-of-the-card-3770268.html">LIVE: Call of the Card</a></p>
+                    </li>
+                    <li>
+                                <a class="play-video " href="http://media.theage.com.au/sport/sports-hq/mariners-masterclass-stuns-sydney-fc-3770530.html" title="Mariners' masterclass stuns Sydney FC"><img src="http://images.theage.com.au/2012/11/05/3770534/vd-al4-92x52.jpg" width="92" height="52" alt="A-League" /><span class="size-sml">Click to play video</span></a>
+
+                        <p><a href="http://media.theage.com.au/sport/sports-hq/mariners-masterclass-stuns-sydney-fc-3770530.html">Mariners' masterclass stuns Sydney FC</a></p>
+                    </li>
+                    <li>
+                                <a class="play-video " href="http://media.theage.com.au/national/selections/green-moon-wins-the-melbourne-cup-3770221.html" title="Green Moon wins the Melbourne Cup"><img src="http://images.theage.com.au/2012/11/06/3773402/winwide-92x52.jpg" width="92" height="52" alt="Green Moon wins the Melbourne Cup (Video Thumbnail)" /><span class="size-sml">Click to play video</span></a>
+
+                        <p><a href="http://media.theage.com.au/national/selections/green-moon-wins-the-melbourne-cup-3770221.html">Green Moon wins the Melbourne Cup</a></p>
+                    </li>
+            </ul>
+        </div><!-- id:video-player-latest -->
+    </div><!-- class:cS-latestVideo -->
+
+
+
+
+    <!-- A cookie is set in order to check if it is possible to set cookies. Since the poll relies on cookies being
+    enabled, if no cookies have been currently set, then the server side check to see if cookies are enabled will fail,
+    so it is necessary to attempt to set a cookie. -->
+            <div class="cS-poll cfix pollContainer" data-expiryDate="1352415600120" data-pollId="3772883" data-isPollInsideArticle="true" data-numberOfComments=0>
+                <script type="text/javascript">
+    document.cookie = "checkIfCookiesEnabled=cookiesEnabled; path=/";
+</script>
+
+                <h3 class="heading">Sport Poll</h3>
+                <p><strong>What will be the result of the Australia-South Africa Test series?</strong></p>
+                    <div class="panels pollQuestions">
+        <form method="post" action="http://feedback.theage.com.au/action/voteForAPoll" name="poll" data-validatable="true">
+            <fieldset>
+                <input type="hidden" name="pollId" value="3772883"/>
+                <input type="hidden" name="indexUrlPath" value="http://www.theage.com.au/sport#poll"/>
+                <legend>Poll form</legend>
+                <ul>
+                    <li>
+                            <span class="error">Please select an answer.</span>
+                        <label><input type="radio" name="id" value="25506" data-validations="radioChecked" data-singleError="true"/> South Africa 3-0</label>
+                    </li>
+                    <li>
+                        <label><input type="radio" name="id" value="25507" data-validations="radioChecked" data-singleError="true"/> Australia 3-0</label>
+                    </li>
+                    <li>
+                        <label><input type="radio" name="id" value="25508" data-validations="radioChecked" data-singleError="true"/> South Africa 2-1</label>
+                    </li>
+                    <li>
+                        <label><input type="radio" name="id" value="25509" data-validations="radioChecked" data-singleError="true"/> Australia 2-1</label>
+                    </li>
+                    <li>
+                        <label><input type="radio" name="id" value="25510" data-validations="radioChecked" data-singleError="true"/> South Africa 2-0</label>
+                    </li>
+                    <li>
+                        <label><input type="radio" name="id" value="25511" data-validations="radioChecked" data-singleError="true"/> Australia 2-0</label>
+                    </li>
+                    <li>
+                        <label><input type="radio" name="id" value="25512" data-validations="radioChecked" data-singleError="true"/> South Africa 1-0</label>
+                    </li>
+                    <li>
+                        <label><input type="radio" name="id" value="25513" data-validations="radioChecked" data-singleError="true"/> Australia 1-0</label>
+                    </li>
+                    <li>
+                        <label><input type="radio" name="id" value="25514" data-validations="radioChecked" data-singleError="true"/> Drawn series 0-0</label>
+                    </li>
+                    <li>
+                        <label><input type="radio" name="id" value="25515" data-validations="radioChecked" data-singleError="true"/> Drawn series 1-1</label>
+                    </li>
+                    <li class="submit">
+                        <input type="submit" value="Vote" />
+                        <a class="viewResult" href="#viewResult">View results</a>
+                    </li>
+                </ul>
+            </fieldset>
+        </form>
+    </div><!-- class:panels pollQuestions -->
+    
+                <div class="panels pollResults">
+    <dl class="pollBars">
+            <dt>South Africa 3-0</dt>
+        <dd><p style="width: 14%;"><span>14%</span></p></dd>
+        <dt>Australia 3-0</dt>
+        <dd><p style="width: 6%;"><span>6%</span></p></dd>
+        <dt>South Africa 2-1</dt>
+        <dd><p style="width: 22%;"><span>22%</span></p></dd>
+        <dt>Australia 2-1</dt>
+        <dd><p style="width: 24%;"><span>24%</span></p></dd>
+        <dt>South Africa 2-0</dt>
+        <dd><p style="width: 10%;"><span>10%</span></p></dd>
+        <dt>Australia 2-0</dt>
+        <dd><p style="width: 3%;"><span>3%</span></p></dd>
+        <dt>South Africa 1-0</dt>
+        <dd><p style="width: 2%;"><span>2%</span></p></dd>
+        <dt>Australia 1-0</dt>
+        <dd><p style="width: 1%;"><span>1%</span></p></dd>
+        <dt>Drawn series 0-0</dt>
+        <dd><p style="width: 0%;"><span>0%</span></p></dd>
+        <dt>Drawn series 1-1</dt>
+        <dd><p style="width: 18%;"><span>18%</span></p></dd>
+</dl>
+    <p class="total">Total votes: <span>776</span>.</p>
+</div>
+                <div class="panels pollCookiesNotEnabled">
+    <strong>Would you like to vote?</strong>
+    <p>You will need Cookies enabled to use our Voting Feature.</p>
+</div>
+<noscript>
+    <strong>Would you like to vote?</strong>
+    <p>You will need Javascript enabled to use our Voting Feature.</p>
+</noscript>
+
+                <p class="close">Poll closes in <span>3 days</span>.</p>
+                <div>
+                    
+    <p class="comments">
+            <a href="http://www.theage.com.au/polls/sport/cricket/a-testing-question-20121106-28v6b.html#comments"><em>Be the first to comment</em></a>
+    </p>
+
+                        <p class="add hidden"><a href="http://www.theage.com.au/polls/sport/cricket/a-testing-question-20121106-28v6b.html#comments">Add yours</a></p>
+                </div>
+                <!-- cT-disclaimer (nested component) -->
+    <div class="cT-disclaimer">
+        <p class="statement">Disclaimer:</p>
+        <p>These polls are not scientific and reflect the opinion only of visitors who have chosen to participate.</p>
+    </div>
+
+                    <h4>Related coverage</h4>
+        <h3 class="cN-storyHeadlineOnly">
+            <a href="http://www.theage.com.au/sport/cricket/howzat-for-a-spin-seeker-20121106-28vhs.html">Howzat for a spin seeker</a>
+        </h3>
+        <h3 class="cN-storyHeadlineOnly">
+            <a href="http://www.theage.com.au/sport/cricket/ponting-wants-to-show-hes-got-his-mojo-back-20121106-28w54.html">Ponting wants to show he's got his mojo back</a>
+        </h3>
+        <h3 class="cN-storyHeadlineOnly">
+            <a href="http://www.theage.com.au/sport/cricket/take-me-on-warner-dares-proteas-20121106-28w55.html">Take me on, Warner dares Proteas</a>
+        </h3>
+
+            </div><!-- class:cS-poll cfix pollContainer -->
+            <div class="cS-poll cfix pollContainer" data-expiryDate="1354021200550" data-pollId="3761213" data-isPollInsideArticle="true" data-numberOfComments=32>
+                <script type="text/javascript">
+    document.cookie = "checkIfCookiesEnabled=cookiesEnabled; path=/";
+</script>
+
+                <h3 class="heading">Sport Poll</h3>
+                <p><strong>Has Israel Folau made the right call to quit the AFL?</strong></p>
+                    <div class="panels pollQuestions">
+        <form method="post" action="http://feedback.theage.com.au/action/voteForAPoll" name="poll" data-validatable="true">
+            <fieldset>
+                <input type="hidden" name="pollId" value="3761213"/>
+                <input type="hidden" name="indexUrlPath" value="http://www.theage.com.au/sport#poll"/>
+                <legend>Poll form</legend>
+                <ul>
+                    <li>
+                            <span class="error">Please select an answer.</span>
+                        <label><input type="radio" name="id" value="25458" data-validations="radioChecked" data-singleError="true"/> Yes</label>
+                    </li>
+                    <li>
+                        <label><input type="radio" name="id" value="25459" data-validations="radioChecked" data-singleError="true"/> No</label>
+                    </li>
+                    <li class="submit">
+                        <input type="submit" value="Vote" />
+                        <a class="viewResult" href="#viewResult">View results</a>
+                    </li>
+                </ul>
+            </fieldset>
+        </form>
+    </div><!-- class:panels pollQuestions -->
+    
+                <div class="panels pollResults">
+    <dl class="pollBars">
+            <dt>Yes</dt>
+        <dd><p style="width: 88%;"><span>88%</span></p></dd>
+        <dt>No</dt>
+        <dd><p style="width: 12%;"><span>12%</span></p></dd>
+</dl>
+    <p class="total">Total votes: <span>12999</span>.</p>
+</div>
+                <div class="panels pollCookiesNotEnabled">
+    <strong>Would you like to vote?</strong>
+    <p>You will need Cookies enabled to use our Voting Feature.</p>
+</div>
+<noscript>
+    <strong>Would you like to vote?</strong>
+    <p>You will need Javascript enabled to use our Voting Feature.</p>
+</noscript>
+
+                <p class="close">Poll closes in <span>21 days</span>.</p>
+                <div>
+                    
+    <p class="comments">
+            <a href="http://www.theage.com.au/polls/afl/folau-20121101-28m65.html#comments"><em>Comments</em> <span>32</span></a>
+    </p>
+
+                        <p class="add hidden"><a href="http://www.theage.com.au/polls/afl/folau-20121101-28m65.html#comments">Add yours</a></p>
+                </div>
+                <!-- cT-disclaimer (nested component) -->
+    <div class="cT-disclaimer">
+        <p class="statement">Disclaimer:</p>
+        <p>These polls are not scientific and reflect the opinion only of visitors who have chosen to participate.</p>
+    </div>
+
+                    <h4>Related coverage</h4>
+        <h3 class="cN-storyHeadlineOnly">
+            <a href="http://www.theage.com.au/afl/afl-news/folau-quits-afl-eels-lie-in-wait-20121101-28m3m.html">Folau quits AFL, Eels lie in wait</a>
+        </h3>
+
+            </div><!-- class:cS-poll cfix pollContainer -->
+
+
+    
+    
+    <div class="cS-photoGalleryLinks cfix">
+        <h3>Sport Photos</h3>
+        <ul>
+                        <li>
+                            <a href="http://www.theage.com.au/photogallery/sport/horseracing/green-moon-races-to-victory-in-melbourne-cup-20121106-28vo1.html">
+                                    <img src="http://images.theage.com.au/2012/11/06/3773552/---th_green_moon10_20121106161025421262-90x60.jpg" width="89" height="60" alt="Green Moon."/>
+                            </a>
+                            <p><a href="http://www.theage.com.au/photogallery/sport/horseracing/green-moon-races-to-victory-in-melbourne-cup-20121106-28vo1.html">Green Moon races to victory in Melbourne Cup</a></p>
+                        </li>
+                        <li>
+                            <a href="http://www.theage.com.au/photogallery/sport/horseracing/melbourne-cup-2012-20121106-28uwg.html">
+                                    <img src="http://images.theage.com.au/2012/11/06/3773956/Colourthumb-20121106190919216907-90x60.jpg" width="89" height="60" alt="Melbourne Cup 2012.Racegoers at the Birdcage. 6 November 2012.
+Photo:EDDIE JIM. The Age."/>
+                            </a>
+                            <p><a href="http://www.theage.com.au/photogallery/sport/horseracing/melbourne-cup-2012-20121106-28uwg.html">Melbourne Cup 2012</a></p>
+                        </li>
+                        <li>
+                            <a href="http://www.theage.com.au/photogallery/sport/horseracing/derby-day-2012-20121103-28qln.html">
+                                    <img src="http://images.theage.com.au/2012/11/03/3767251/DP_DerbyDayTH-20121103171633705109-90x60.jpg" width="89" height="60" alt="VRC Derby Day Flemington , Spring"/>
+                            </a>
+                            <p><a href="http://www.theage.com.au/photogallery/sport/horseracing/derby-day-2012-20121103-28qln.html">Derby Day 2012</a></p>
+                        </li>
+                        <li>
+                            <a href="http://www.theage.com.au/photogallery/sport/a-league/melbourne-had-no-heart-20121102-28owr.html">
+                                    <img src="http://images.theage.com.au/2012/11/02/3766425/H-Aleagueth-20121102225423875897-90x60.jpg" width="89" height="60" alt="Leo GIBBS no 13 in action during the Western Sydney Wanderers vs The Melbourne Heart at Parramatta Stadium
+Photography Brendan Esposito
+smh,2nd november,2012"/>
+                            </a>
+                            <p><a href="http://www.theage.com.au/photogallery/sport/a-league/melbourne-had-no-heart-20121102-28owr.html">Melbourne had no heart</a></p>
+                        </li>
+                        <li>
+                            <a href="http://www.theage.com.au/photogallery/sport/australian-boat-race--sydney-university-vs-melbourne-university-20121102-28oxb.html">
+                                    <img src="http://images.theage.com.au/2012/11/02/3765434/H-Rowingthu-20121102183132450757-90x60.jpg" width="89" height="60" alt="Sydney University womens 8, trains on Sydney Harbour for this Sundays race against Melb Uni. Photo: Peter Rae Tuesday 30 October 2012."/>
+                            </a>
+                            <p><a href="http://www.theage.com.au/photogallery/sport/australian-boat-race--sydney-university-vs-melbourne-university-20121102-28oxb.html">Australian Boat Race</a></p>
+                        </li>
+                        <li>
+                            <a href="http://www.theage.com.au/photogallery/sport/the-foolish-of-flemington-20121101-28lko.html">
+                                    <img src="http://images.theage.com.au/2012/11/01/3760459/cupfansthumbnail-20121101105459842659-90x60.jpg" width="89" height="60" alt="Spring Carnival 1982 nun"/>
+                            </a>
+                            <p><a href="http://www.theage.com.au/photogallery/sport/the-foolish-of-flemington-20121101-28lko.html">The Foolish of Flemington</a></p>
+                        </li>
+        </ul>
+    </div><!-- class:cS-photoGalleryLinks cfix -->
+    
+
+
+
+
+    <div class="cN-articles ">
+            <h3 class="cT-strapHeading">
+                Sport newsletter
+                <span>
+
+</span>
+            </h3>
+            
+            <!-- cN-story -->
+<div class="cN-story cfix ">
+    <div class="wof">
+        <h3>
+                <a href="https://membercentre.fairfax.com.au/NewsletterSubscription.aspx" title="Sign up now">Sign up now</a>
+        </h3>
+                <p>Get all the latest Sport news delivered to your inbox every week</p>
+            
+    </div>
+</div>
+
+            
+    </div><!-- class:cN-articles  -->
+
+
+
+                <div id="adspot-300x250-pos-2" class="ad"> <small>Advertisement</small> <script type="text/javascript"> if (ie) { renderIFAd("adspot-300x250-pos-2", "dcAd-1-4", "http://ad-apac.doubleclick.net/adi/onl.age.sport/sport/homepage;cat1=homepage;cat=sport;ctype=index;pos=2;" + document.dcAdsCParams + "sz=300x250;tile=4;ord=" + dcOrd + "?", 300, 250, -377728623); } else { renderJIFAd("adspot-300x250-pos-2","dcAd-1-4", "http://ad-apac.doubleclick.net/adj/onl.age.sport/sport/homepage;cat1=homepage;cat=sport;ctype=index;pos=2;" + document.dcAdsCParams + "sz=300x250;tile=4;ord=" + dcOrd + "?", 300, 250, -377728623, ""); } </script> <noscript> <iframe id="dcAd-1-4" src="http://ad-apac.doubleclick.net/adi/onl.age.sport/sport/homepage;cat1=homepage;cat=sport;ctype=index;pos=2;sz=300x250;tile=4;ord=3.2289284E7?" width='300' height='250' scrolling="no" marginheight="0" marginwidth="0" allowtransparency="true" frameborder="0"> </iframe> </noscript> </div>
+                
+
+
+                
+            </div><!-- class:aside span-8 last -->
+            <!-- Footer fN-footerNetwork (class according to new HTML5 element 'footer'; scope: network-wide) -->
+<div class="footer span-24" role="contentinfo">
+    
+    <div class="c5 classifieds cfix">
+                            <div class="s1 cAge">
+                            <!-- Campaign ID: 1262237 -->
+                            <h2><a title="Video" class="gaTrackable" data-gaAction="RainbowStrip Click" data-gaCategory="RainbowStrip" href="http://www.theage.com.au">Video</a></h2>
+                                        <div class="puff">
+                                                <a href="http://media.smh.com.au/life-and-style/beauty/beauty-basics-foundation-3660910.html" rel="nofollow" class="gaTrackable" data-gaAction="RainbowStrip Click" data-gaCategory="RainbowStrip"  >
+    <img src="http://images.theage.com.au/2012/10/18/3724053/rainbow-beauty-172x115.jpg" width="172" alt="Rainbow beauty."/></a>
+
+                                            <h5><a href="http://media.smh.com.au/life-and-style/beauty/beauty-basics-foundation-3660910.html" rel="nofollow" title="beautybasics:foundationtipsandtricks" class="gaTrackable" data-gaAction="RainbowStrip Click" data-gaCategory="RainbowStrip">Beauty Basics: Foundation tips and tricks</a></h5>
+                                        </div><!-- class:puff -->
+                                        <ul><li class="lAge"><a href="http://www.theage.com.au" class="gaTrackable" data-gaAction="RainbowStrip Click" data-gaCategory="RainbowStrip">Theage.com.au</a></li>
+                                        <li><a href="http://media.theage.com.au/entertainment/red-carpet" class="gaTrackable" data-gaAction="RainbowStrip Click" data-gaCategory="RainbowStrip">Entertainment and Red Carpet</a></li>
+                                        <li><a href="http://media.theage.com.au/sport/sports-hq" class="gaTrackable" data-gaAction="RainbowStrip Click" data-gaCategory="RainbowStrip">Latest Sports videos</a></li>
+                                        <li><a href="http://media.theage.com.au/national/breaking-news" class="gaTrackable" data-gaAction="RainbowStrip Click" data-gaCategory="RainbowStrip">Breaking news videos</a></li>
+                                </ul>
+                        </div><!-- class:s1 cAge -->
+                        <div class="s2 cMycareer">
+                            <!-- Campaign ID: 1262243 -->
+                            <h2><a title="Jobs" class="gaTrackable" data-gaAction="RainbowStrip Click" data-gaCategory="RainbowStrip" href="http://www.mycareer.com.au">Jobs</a></h2>
+                                        <div class="puff">
+                                                <a href="http://jobflip.mycareer.com.au//?s=777&s_rid=rainbow:strip:fairfax" rel="nofollow" class="gaTrackable" data-gaAction="RainbowStrip Click" data-gaCategory="RainbowStrip"  >
+    <img src="http://images.theage.com.au/2012/10/11/3705244/12MYC_MI072_Online-ads_172x115_R2-172x115.jpg" width="172" alt="Fancy a New Job Title & the Chance to Win $5,000?"/></a>
+
+                                            <h5><a href="http://jobflip.mycareer.com.au//?s=777&s_rid=rainbow:strip:fairfax" rel="nofollow" title="fancyanewjobtitle&thechancetowin$5,000cash?" class="gaTrackable" data-gaAction="RainbowStrip Click" data-gaCategory="RainbowStrip">Fancy a New Job Title & the Chance to Win $5,000 Cash?</a></h5>
+                                        </div><!-- class:puff -->
+                                        <ul><li class="lMycareer"><a href="http://www.mycareer.com.au" class="gaTrackable" data-gaAction="RainbowStrip Click" data-gaCategory="RainbowStrip">Mycareer.com.au</a></li>
+                                        <li><a href="https://mycareer.myfairfax.com.au/members/members/signup?channel_key=u5fCbJhuZzgNF96Li1gl1w&callback_uri=http://mycareer.com.au" class="gaTrackable" data-gaAction="RainbowStrip Click" data-gaCategory="RainbowStrip">Sign up to the new MyCareer</a></li>
+                                        <li><a href="http://mycareer.com.au/tools/createJobAlert" class="gaTrackable" data-gaAction="RainbowStrip Click" data-gaCategory="RainbowStrip">Personalise your Job Alerts</a></li>
+                                        <li><a href="http://mycareer.com.au/jobs/sector.aspx?s_rid=smh:rainbowstrip:bullet3:Australia" class="gaTrackable" data-gaAction="RainbowStrip Click" data-gaCategory="RainbowStrip">1,000's of Jobs in Australia</a></li>
+                                </ul>
+                        </div><!-- class:s2 cMycareer -->
+                        <div class="s3 cDomain">
+                            <!-- Campaign ID: 1262244 -->
+                            <h2><a title="Real Estate" class="gaTrackable" data-gaAction="RainbowStrip Click" data-gaCategory="RainbowStrip" href="http://www.domain.com.au">Real Estate</a></h2>
+                                        <div class="puff">
+                                                <a href="http://www.domain.com.au/Public/HomeAlertSetup.aspx?utm_source=spring2012&utm_medium=banner&utm_campaign=competition" rel="nofollow" class="gaTrackable" data-gaAction="RainbowStrip Click" data-gaCategory="RainbowStrip"  >
+    <img src="http://images.theage.com.au/2012/10/24/3737957/dominate_homealertcomp-172x115.jpg" width="172" alt="$1,000 to be won each week with Domain"/></a>
+
+                                            <h5><a href="http://www.domain.com.au/Public/HomeAlertSetup.aspx?utm_source=spring2012&utm_medium=banner&utm_campaign=competition" rel="nofollow" title="win$1,000withdomainhomealerts" class="gaTrackable" data-gaAction="RainbowStrip Click" data-gaCategory="RainbowStrip">Win $1,000 with Domain Home Alerts</a></h5>
+                                        </div><!-- class:puff -->
+                                        <ul><li class="lDomain"><a href="http://www.domain.com.au" class="gaTrackable" data-gaAction="RainbowStrip Click" data-gaCategory="RainbowStrip">Domain.com.au</a></li>
+                                        <li><a href="http://www.domain.com.au/" class="gaTrackable" data-gaAction="RainbowStrip Click" data-gaCategory="RainbowStrip">Buy real estate</a></li>
+                                        <li><a href="http://www.domain.com.au/planner  " class="gaTrackable" data-gaAction="RainbowStrip Click" data-gaCategory="RainbowStrip">Plan your property inspections </a></li>
+                                        <li><a href="http://www.homepriceguide.com.au/Products/Product.aspx?ProductID=7 " class="gaTrackable" data-gaAction="RainbowStrip Click" data-gaCategory="RainbowStrip">Nice house - can you afford it? </a></li>
+                                </ul>
+                        </div><!-- class:s3 cDomain -->
+                        <div class="s4 cStayz">
+                            <!-- Campaign ID: 1262246 -->
+                            <h2><a title="Holiday Rentals" class="gaTrackable" data-gaAction="RainbowStrip Click" data-gaCategory="RainbowStrip" href="http://www.stayz.com.au">Holiday Rentals</a></h2>
+                                        <div class="puff">
+                                                <a href="http://www.stayz.com.au/pet-friendly-accommodation/vic" rel="nofollow" class="gaTrackable" data-gaAction="RainbowStrip Click" data-gaCategory="RainbowStrip"  >
+    <img src="http://images.theage.com.au/2010/09/14/1926427/RB_DogonBeach-172x115.jpg" width="172" alt="Find pet friendly accommodation on Stayz"/></a>
+
+                                            <h5><a href="http://www.stayz.com.au/pet-friendly-accommodation/vic" rel="nofollow" title="findaholidaythatwelcomespetstoo!" class="gaTrackable" data-gaAction="RainbowStrip Click" data-gaCategory="RainbowStrip">Find a holiday that welcomes pets too!</a></h5>
+                                        </div><!-- class:puff -->
+                                        <ul><li class="lStayz"><a href="http://www.stayz.com.au" class="gaTrackable" data-gaAction="RainbowStrip Click" data-gaCategory="RainbowStrip">Stayz.com.au</a></li>
+                                        <li><a href="http://www.stayz.com.au/accommodation/vic/great-ocean-road" class="gaTrackable" data-gaAction="RainbowStrip Click" data-gaCategory="RainbowStrip">Great Ocean Road holidays</a></li>
+                                        <li><a href="http://www.stayz.com.au/accommodation/qld/gold-coast" class="gaTrackable" data-gaAction="RainbowStrip Click" data-gaCategory="RainbowStrip">Gold Coast getaways</a></li>
+                                        <li><a href="http://www.stayz.com.au/pet-friendly-accommodation" class="gaTrackable" data-gaAction="RainbowStrip Click" data-gaCategory="RainbowStrip">Pet-friendly accommodation</a></li>
+                                </ul>
+                        </div><!-- class:s4 cStayz -->
+                        <div class="s5 cEssentialBaby">
+                            <!-- Campaign ID: 1262252 -->
+                            <h2><a title="Essential Baby" class="gaTrackable" data-gaAction="RainbowStrip Click" data-gaCategory="RainbowStrip" href="http://www.essentialbaby.com.au">Essential Baby</a></h2>
+                                        <div class="puff">
+                                                <a href="http://www.essentialbaby.com.au/pregnancy/pregnancy-health/tori-spelling-my-daughter-saved-my-life-20121106-28uww.html#utm_source=FD&utm_medium=rainbow&utm_campaign=tori" rel="nofollow" class="gaTrackable" data-gaAction="RainbowStrip Click" data-gaCategory="RainbowStrip"  >
+    <img src="http://images.theage.com.au/2012/11/06/3772692/tori-spelling-172x115.jpg" width="172" alt="tori-spelling"/></a>
+
+                                            <h5><a href="http://www.essentialbaby.com.au/pregnancy/pregnancy-health/tori-spelling-my-daughter-saved-my-life-20121106-28uww.html#utm_source=FD&utm_medium=rainbow&utm_campaign=tori" rel="nofollow" title="torispelling:mydaughtersavedmylife" class="gaTrackable" data-gaAction="RainbowStrip Click" data-gaCategory="RainbowStrip"> Tori Spelling: 'My daughter saved my life'</a></h5>
+                                        </div><!-- class:puff -->
+                                        <ul><li class="lEssentialBaby"><a href="http://www.essentialbaby.com.au" class="gaTrackable" data-gaAction="RainbowStrip Click" data-gaCategory="RainbowStrip">Essentialbaby.com.au</a></li>
+                                        <li><a href="http://www.essentialbaby.com.au/conception/ovulation-calculator#utm_source=FD&utm_medium=rainbow&utm_campaign=ovulationcalculator" class="gaTrackable" data-gaAction="RainbowStrip Click" data-gaCategory="RainbowStrip">Ovulation calculator</a></li>
+                                        <li><a href="http://www.essentialbaby.com.au/pregnancy/baby-names#utm_source=FD&utm_medium=rainbow&utm_campaign=babynamefinder" class="gaTrackable" data-gaAction="RainbowStrip Click" data-gaCategory="RainbowStrip">Baby names</a></li>
+                                        <li><a href="http://www.essentialbaby.com.au/pregnancy/due-date-calculator#utm_source=FD&utm_medium=rainbow&utm_campaign=duedatecalculator" class="gaTrackable" data-gaAction="RainbowStrip Click" data-gaCategory="RainbowStrip">Due Date Calculator</a></li>
+                                </ul>
+                        </div><!-- class:s5 cEssentialBaby -->
+</div><!-- class:c5 classifieds cfix -->
+
+
+    <div class="fN-affiliateStrip">
+	<h2>Compare and Save</h2>
+    <div class="cN-tabPages affiliateStrip cfix">
+        <p class="access">Skip to:</p>
+        <ul class="nav" role="navigation">
+            <li class="tab-1 selected"><a id="link-tab-1" href="#tab-1">Best Deals</a></li>
+            <li class="tab-2"><a id="link-tab-2" data-remote="true" data-remote-url="/action/displayComponent?name=au.com.fairfaxdigital.common.media.webapp.ui.StaticIncludeComponent&designVersionName=media-common-1.0&params=tab-cands-2.html" href="#tab-2">Mobile</a></li>
+            <li class="tab-3"><a id="link-tab-3" data-remote="true" data-remote-url="/action/displayComponent?name=au.com.fairfaxdigital.common.media.webapp.ui.StaticIncludeComponent&designVersionName=media-common-1.0&params=tab-cands-3.html" href="#tab-3">Broadband</a></li>
+            <li class="tab-4"><a id="link-tab-4" data-remote="true" data-remote-url="/action/displayComponent?name=au.com.fairfaxdigital.common.media.webapp.ui.StaticIncludeComponent&designVersionName=media-common-1.0&params=tab-cands-4.html" href="#tab-4">Home Loans</a></li>
+            <li class="tab-5"><a id="link-tab-5" data-remote="true" data-remote-url="/action/displayComponent?name=au.com.fairfaxdigital.common.media.webapp.ui.StaticIncludeComponent&designVersionName=media-common-1.0&params=tab-cands-5.html" href="#tab-5">Credit Cards</a></li>
+            <li class="tab-6"><a id="link-tab-6" data-remote="true" data-remote-url="/action/displayComponent?name=au.com.fairfaxdigital.common.media.webapp.ui.StaticIncludeComponent&designVersionName=media-common-1.0&params=tab-cands-6.html" href="#tab-6">Low Rate Cards</a></li>
+            <li class="tab-7"><a id="link-tab-7" data-remote="true" data-remote-url="/action/displayComponent?name=au.com.fairfaxdigital.common.media.webapp.ui.StaticIncludeComponent&designVersionName=media-common-1.0&params=tab-cands-7.html" href="#tab-7">Rewards Cards</a></li>
+            <li class="tab-8"><a id="link-tab-8" data-remote="true" data-remote-url="/action/displayComponent?name=au.com.fairfaxdigital.common.media.webapp.ui.StaticIncludeComponent&designVersionName=media-common-1.0&params=tab-cands-8.html" href="#tab-8">Savings Accts</a></li>
+            <li class="tab-9"><a id="link-tab-9" data-remote="true" data-remote-url="/action/displayComponent?name=au.com.fairfaxdigital.common.media.webapp.ui.StaticIncludeComponent&designVersionName=media-common-1.0&params=tab-cands-9.html" href="#tab-9">Term Deposits</a></li>
+            <li class="tab-10 last"><a id="link-tab-10" data-remote="true" data-remote-url="/action/displayComponent?name=au.com.fairfaxdigital.common.media.webapp.ui.StaticIncludeComponent&designVersionName=media-common-1.0&params=tab-cands-10.html" href="#tab-10">Loans</a></li>
+        </ul>
+
+        <div id="tab-1" class="tab selected cfix" aria-live="polite">
+            <h3>Check out today's best deals</h3>
+            <div class="one">
+                <h3><a href="http://compare.theage.com.au/credit-cards?mpp_tab=5&utm_source=CS_front&utm_medium=CnS&utm_campaign=CC_Zerofee" class="gaTrackable" data-gaAction="1" data-gaCategory="CompareSave" data-gaLabel="1">Cheap Credit Cards</a></h3>
+                <a href="http://compare.theage.com.au/credit-cards?mpp_tab=5&utm_source=CS_front&utm_medium=CnS&utm_campaign=CC_Zerofee" class="gaTrackable" data-gaAction="1" data-gaCategory="CompareSave" data-gaLabel="1"><img src="http://images.theage.com.au/compareandsave/cs-cc-0-annual-fee.png" width="60" height="50" /></a>
+                <p><a href="http://compare.theage.com.au/credit-cards?mpp_tab=5&utm_source=CS_front&utm_medium=CnS&utm_campaign=CC_Zerofee" class="gaTrackable" data-gaAction="1" data-gaCategory="CompareSave" data-gaLabel="1">Say NO to credit card fees! Compare fee-free cards.</a></p>
+                <span></span>
+                <p class="links"><a href="http://compare.theage.com.au/credit-cards?mpp_tab=5&utm_source=CS_front&utm_medium=CnS&utm_campaign=CC_Zerofee" class="gaTrackable" data-gaAction="1" data-gaCategory="CompareSave" data-gaLabel="1">Zero Fee Cards</a></p>
+            </div>
+            <div class="two">
+                <h3><a href="http://compare.theage.com.au/home-loans?utm_source=CS_front&utm_medium=CnS&utm_campaign=HL_547generic" class="gaTrackable" data-gaAction="1" data-gaCategory="CompareSave" data-gaLabel="2">Top Home Loans</a></h3>
+                <a href="http://compare.theage.com.au/home-loans?utm_source=CS_front&utm_medium=CnS&utm_campaign=HL_547generic" class="gaTrackable" data-gaAction="1" data-gaCategory="CompareSave" data-gaLabel="2"><img src="http://images.theage.com.au/compareandsave/cs-hl-547.png" width="60" height="50" /></a>
+                <p><a href="http://compare.theage.com.au/home-loans?utm_source=CS_front&utm_medium=CnS&utm_campaign=HL_547generic" class="gaTrackable" data-gaAction="1" data-gaCategory="CompareSave" data-gaLabel="2">Make your own rate cut. Compare loans from 5.47%.</a></p>
+                <span></span>
+                <p class="links"><a href="http://compare.theage.com.au/home-loans?utm_source=CS_front&utm_medium=CnS&utm_campaign=HL_547generic" class="gaTrackable" data-gaAction="1" data-gaCategory="CompareSave" data-gaLabel="2">Lowest Rates</a></p>
+            </div>
+            <div class="three">
+                <h3><a href="http://compare.theage.com.au/home-loans?mpp_tab=3&utm_source=CS_front&utm_medium=CnS&utm_campaign=HL_fixed" class="gaTrackable" data-gaAction="1" data-gaCategory="CompareSave" data-gaLabel="3">Time to Fix?</a></h3>
+                <a href="http://compare.theage.com.au/home-loans?mpp_tab=3&utm_source=CS_front&utm_medium=CnS&utm_campaign=HL_fixed" class="gaTrackable" data-gaAction="1" data-gaCategory="CompareSave" data-gaLabel="3"><img src="http://images.theage.com.au/compareandsave/cs-time-to-fix-2.png" width="60" height="50" /></a>
+                <p><a href="http://compare.theage.com.au/home-loans?mpp_tab=3&utm_source=CS_front&utm_medium=CnS&utm_campaign=HL_fixed" class="gaTrackable" data-gaAction="1" data-gaCategory="CompareSave" data-gaLabel="3">Fixed home loan rates hit record lows. Compare now!</a></p>
+                <span></span>
+                <p class="links"><a href="http://compare.theage.com.au/home-loans?mpp_tab=3&utm_source=CS_front&utm_medium=CnS&utm_campaign=HL_fixed" class="gaTrackable" data-gaAction="1" data-gaCategory="CompareSave" data-gaLabel="3">Fixed Rate Loans</a></p>
+            </div>
+            <div class="four">
+                <h3><a href="http://mobile-phones.theage.com.au/MobilePhones/Virgin-Mobile-5-Months-Half-Price?utm_source=Widget_Fairfax_SMH_CompareAndSave&utm_medium=referral&utm_campaign=5_Months_-_Half_Price" class="gaTrackable" data-gaAction="1" data-gaCategory="CompareSave" data-gaLabel="4">5 Months - Half Price</a></h3>
+                <a href="http://mobile-phones.theage.com.au/MobilePhones/Virgin-Mobile-5-Months-Half-Price?utm_source=Widget_Fairfax_SMH_CompareAndSave&utm_medium=referral&utm_campaign=5_Months_-_Half_Price" class="gaTrackable" data-gaAction="1" data-gaCategory="CompareSave" data-gaLabel="4"><img src="http://images.theage.com.au/compareandsave/mobile_160x70_0512_5x_halfprice.jpg" width="60" height="50" /></a>
+                <p><a href="http://mobile-phones.theage.com.au/MobilePhones/Virgin-Mobile-5-Months-Half-Price?utm_source=Widget_Fairfax_SMH_CompareAndSave&utm_medium=referral&utm_campaign=5_Months_-_Half_Price" class="gaTrackable" data-gaAction="1" data-gaCategory="CompareSave" data-gaLabel="4">Online only deal means savings of up to $222</a></p>
+                <span></span>
+                <p class="links"><a href="http://mobile-phones.theage.com.au/MobilePhones/Virgin-Mobile-5-Months-Half-Price?utm_source=Widget_Fairfax_SMH_CompareAndSave&utm_medium=referral&utm_campaign=5_Months_-_Half_Price" class="gaTrackable" data-gaAction="1" data-gaCategory="CompareSave" data-gaLabel="4">5 Months at 50% Off</a></p>
+            </div>
+            <div class="five">
+                <h3><a href="http://mobile-phones.theage.com.au/MobilePhones/iPhone-Plans?utm_source=Widget_Fairfax_SMH_CompareAndSave&utm_medium=referral&utm_campaign=iPhone_5_Plans" class="gaTrackable" data-gaAction="1" data-gaCategory="CompareSave" data-gaLabel="5">iPhone 5 Plans</a></h3>
+                <a href="http://mobile-phones.theage.com.au/MobilePhones/iPhone-Plans?utm_source=Widget_Fairfax_SMH_CompareAndSave&utm_medium=referral&utm_campaign=iPhone_5_Plans" class="gaTrackable" data-gaAction="1" data-gaCategory="CompareSave" data-gaLabel="5"><img src="http://images.theage.com.au/compareandsave/mobile_160x70_0912_iph5b.jpg" width="60" height="50" /></a>
+                <p><a href="http://mobile-phones.theage.com.au/MobilePhones/iPhone-Plans?utm_source=Widget_Fairfax_SMH_CompareAndSave&utm_medium=referral&utm_campaign=iPhone_5_Plans" class="gaTrackable" data-gaAction="1" data-gaCategory="CompareSave" data-gaLabel="5">New stock available, compare plans now...</a></p>
+                <span></span>
+                <p class="links"><a href="http://mobile-phones.theage.com.au/MobilePhones/iPhone-Plans?utm_source=Widget_Fairfax_SMH_CompareAndSave&utm_medium=referral&utm_campaign=iPhone_5_Plans" class="gaTrackable" data-gaAction="1" data-gaCategory="CompareSave" data-gaLabel="5">iPhone 5 Plans</a></p>
+            </div>
+        </div>
+
+        <div id="tab-2" class="tab cfix" aria-live="polite">
+        </div>
+
+        <div id="tab-3" class="tab cfix" aria-live="polite">
+        </div>
+
+        <div id="tab-4" class="tab cfix" aria-live="polite">
+        </div>
+
+        <div id="tab-5" class="tab cfix" aria-live="polite">
+        </div>
+
+        <div id="tab-6" class="tab cfix" aria-live="polite">
+        </div>
+
+        <div id="tab-7" class="tab cfix" aria-live="polite">
+        </div>
+
+        <div id="tab-8" class="tab cfix" aria-live="polite">
+        </div>
+
+        <div id="tab-9" class="tab cfix" aria-live="polite">
+        </div>
+
+        <div id="tab-10" class="tab cfix" aria-live="polite">
+        </div>
+
+    </div>
+</div>
+        
+<!-- Reader's most viewed -->
+<div class="c5 top5 cfix">
+    <h2 class="cfix">Readers' most viewed</h2>
+
+            <div class="s1 lBT">
+                <a href="http://www.brisbanetimes.com.au">Most viewed articles on Brisbane Times</a>
+                <h5>Top 5 <a href="http://www.brisbanetimes.com.au/sport">Sport</a> articles</h5>
+    <ol>
+            <li><a href="http://www.brisbanetimes.com.au/sport/horseracing/live-coverage-melbourne-cup-day-20121105-28sxc.html" title="Live coverage: Melbourne Cup Day" style="">Live coverage: Melbourne Cup Day</a></li>
+            <li><a href="http://www.brisbanetimes.com.au/sport/horseracing/melbourne-cup-2012-how-they-finished-20121106-28vmn.html" title="Melbourne Cup 2012: How they finished" style="">Melbourne Cup 2012: How they finished</a></li>
+            <li><a href="http://www.brisbanetimes.com.au/sport/horseracing/green-moon-wins-melbourne-cup-20121106-28vkx.html" title="Green Moon wins Melbourne Cup" style="">Green Moon wins Melbourne Cup</a></li>
+            <li><a href="http://www.brisbanetimes.com.au/sport/horseracing/melbourne-cup-first-four-payout-sets-new-record-20121106-28vuu.html" title="Melbourne Cup first four payout sets new record" style="">Melbourne Cup first four payout sets new record</a></li>
+            <li><a href="http://www.brisbanetimes.com.au/sport/horseracing/lunar-eclipse-blots-out-rest-of-the-field-20121106-28wbs.html" title="Lunar eclipse blots out rest of the field" style="">Lunar eclipse blots out rest of the field</a></li>
+    </ol>
+
+            </div>
+            <div class="s2 lWAToday">
+                <a href="http://www.watoday.com.au">Most viewed articles on WA Today</a>
+                <h5>Top 5 <a href="http://www.watoday.com.au/sport">Sport</a> articles</h5>
+    <ol>
+            <li><a href="http://www.watoday.com.au/sport/horseracing/live-coverage-melbourne-cup-day-20121105-28sxc.html" title="Live coverage: Melbourne Cup Day" style="">Live coverage: Melbourne Cup Day</a></li>
+            <li><a href="http://www.watoday.com.au/sport/horseracing/melbourne-cup-2012-how-they-finished-20121106-28vmn.html" title="Melbourne Cup 2012: How they finished" style="">Melbourne Cup 2012: How they finished</a></li>
+            <li><a href="http://www.watoday.com.au/sport/horseracing/green-moon-wins-melbourne-cup-20121106-28vkx.html" title="Green Moon wins Melbourne Cup" style="">Green Moon wins Melbourne Cup</a></li>
+            <li><a href="http://www.watoday.com.au/sport/horseracing/right-decision-to-keep-oliver-on-cup-favourite-owner-20121106-28uud.html" title="'Right decision' to keep Oliver on Cup favourite: owner" style="">'Right decision' to keep Oliver on Cup favourite: owner</a></li>
+            <li><a href="http://www.watoday.com.au/sport/horseracing/melbourne-cup-first-four-payout-sets-new-record-20121106-28vuu.html" title="Melbourne Cup first four payout sets new record" style="">Melbourne Cup first four payout sets new record</a></li>
+    </ol>
+
+            </div>
+            <div class="s3 lSmh">
+                <a href="http://www.smh.com.au">Most viewed articles on The Sydney Morning Herald</a>
+                <h5>Top 5 <a href="http://www.smh.com.au/sport">Sport</a> articles</h5>
+    <ol>
+            <li><a href="http://www.smh.com.au/sport/horseracing/live-coverage-melbourne-cup-day-20121105-28sxc.html" title="Live coverage: Melbourne Cup Day" style="">Live coverage: Melbourne Cup Day</a></li>
+            <li><a href="http://www.smh.com.au/sport/horseracing/green-moon-wins-melbourne-cup-20121106-28vkx.html" title="Green Moon wins Melbourne Cup" style="">Green Moon wins Melbourne Cup</a></li>
+            <li><a href="http://www.smh.com.au/sport/horseracing/melbourne-cup-2012-how-they-finished-20121106-28vmn.html" title="Melbourne Cup 2012: How they finished" style="">Melbourne Cup 2012: How they finished</a></li>
+            <li><a href="http://www.smh.com.au/sport/horseracing/right-decision-to-keep-oliver-on-cup-favourite-owner-20121106-28uud.html" title="'Right decision' to keep Oliver on Cup favourite: owner" style="">'Right decision' to keep Oliver on Cup favourite: owner</a></li>
+            <li><a href="http://www.smh.com.au/sport/cycling/uci-investigating-bribe-claim-against-olympic-champion-20121106-28v6d.html" title="UCI investigating 'bribe' claim against Olympic champion" style="">UCI investigating 'bribe' claim against Olympic champion</a></li>
+    </ol>
+
+            </div>
+            <div class="s4 lCanberratimes">
+                <a href="http://www.canberratimes.com.au">Most viewed articles on Canberra Times</a>
+                <h5>Top 5 <a href="http://www.canberratimes.com.au/sport">Sport</a> articles</h5>
+    <ol>
+            <li><a href="http://www.canberratimes.com.au/sport/horseracing/live-coverage-melbourne-cup-day-20121105-28sxc.html" title="Live coverage: Melbourne Cup Day" style="">Live coverage: Melbourne Cup Day</a></li>
+            <li><a href="http://www.canberratimes.com.au/sport/horseracing/green-moon-wins-melbourne-cup-20121106-28vkx.html" title="Green Moon wins Melbourne Cup" style="">Green Moon wins Melbourne Cup</a></li>
+            <li><a href="http://www.canberratimes.com.au/sport/horseracing/melbourne-cup-2012-how-they-finished-20121106-28vmn.html" title="Melbourne Cup 2012: How they finished" style="">Melbourne Cup 2012: How they finished</a></li>
+            <li><a href="http://www.canberratimes.com.au/sport/horseracing/right-decision-to-keep-oliver-on-cup-favourite-owner-20121106-28uud.html" title="'Right decision' to keep Oliver on Cup favourite: owner" style="">'Right decision' to keep Oliver on Cup favourite: owner</a></li>
+            <li><a href="http://www.canberratimes.com.au/sport/horseracing/hoof-oil-and-water-wash-away-the-gloss-20121106-28wnj.html" title="Hoof oil and water wash away the gloss" style="">Hoof oil and water wash away the gloss</a></li>
+    </ol>
+
+            </div>
+            <div class="s5 lAge">
+                <a href="http://www.theage.com.au">Most viewed articles on The Age</a>
+                <h5>Top 5 <a href="http://www.theage.com.au/sport">Sport</a> articles</h5>
+    <ol>
+            <li><a href="http://www.theage.com.au/sport/horseracing/live-coverage-melbourne-cup-day-20121105-28sxc.html" title="Live coverage: Melbourne Cup Day" style="">Live coverage: Melbourne Cup Day</a></li>
+            <li><a href="http://www.theage.com.au/sport/horseracing/green-moon-wins-melbourne-cup-20121106-28vkx.html" title="Green Moon wins Melbourne Cup" style="">Green Moon wins Melbourne Cup</a></li>
+            <li><a href="http://www.theage.com.au/sport/horseracing/right-decision-to-keep-oliver-on-cup-favourite-owner-20121106-28uud.html" title="'Right decision' to keep Oliver on Cup favourite: owner" style="">'Right decision' to keep Oliver on Cup favourite: owner</a></li>
+            <li><a href="http://www.theage.com.au/sport/horseracing/melbourne-cup-2012-how-they-finished-20121106-28vmn.html" title="Melbourne Cup 2012: How they finished" style="">Melbourne Cup 2012: How they finished</a></li>
+            <li><a href="http://www.theage.com.au/sport/horseracing/over-the-moon-20121106-28w6o.html" title="Over the Moon" style="">Over the Moon</a></li>
+    </ol>
+
+            </div>
+</div>
+
+            <div id="adspot-728x90,468x60-pos-2" class="ad"> <script> renderJAd("adspot-728x90,468x60-pos-2", "dcAd-5", 'http://ad-apac.doubleclick.net/adj/onl.age.sport/sport/homepage;cat1=homepage;cat=sport;ctype=index;pos=2;' + document.dcAdsCParams +'sz=728x90,468x60;tile=5;ord=' + dcOrd + '?', 929184031); </script> <noscript> <a href='http://ad-apac.doubleclick.net/jump/onl.age.sport/sport/homepage;cat1=homepage;cat=sport;ctype=index;pos=2;sz=728x90,468x60;tile=5;ord=3.2289284E7?' target="_blank"> <img src='http://ad-apac.doubleclick.net/ad/onl.age.sport/sport/homepage;cat1=homepage;cat=sport;ctype=index;pos=2;sz=728x90,468x60;tile=5;ord=3.2289284E7?' border="0" alt=""> </a> </noscript> </div>
+        <ul class="fSectionLinks cfix">
+            <li ><a href="http://www.theage.com.au/" title="The Age Home">The Age Home</a></li>
+            <li ><a href="http://www.theage.com.au/victoria" title="Victoria">Victoria</a></li>
+            <li ><a href="http://www.theage.com.au/national" title="National">National</a></li>
+            <li ><a href="http://www.theage.com.au/world" title="World">World</a></li>
+            <li ><a href="http://www.theage.com.au/environment" title="Environment">Environment</a></li>
+            <li ><a href="http://www.theage.com.au/opinion" title="Opinion">Opinion</a></li>
+            <li ><a href="http://www.theage.com.au/business" title="Business">Business</a></li>
+            <li ><a href="http://www.theage.com.au/technology" title="Technology">Technology</a></li>
+            <li ><a href="http://www.theage.com.au/digital-life" title="Digital Life">Digital Life</a></li>
+            <li ><a href="http://www.theage.com.au/entertainment/" title="Entertainment">Entertainment</a></li>
+            <li ><a href="http://www.theage.com.au/lifestyle" title="Life &amp; Style">Life &amp; Style</a></li>
+            <li ><a href="http://www.theage.com.au/travel" title="Travel">Travel</a></li>
+            <li ><a href="http://www.theage.com.au/drive" title="Cars">Cars</a></li>
+            <li ><a href="http://www.theage.com.au/executive-style" title="Exec Style">Exec Style</a></li>
+            <li ><a href="http://www.theage.com.au/sport" title="Sport">Sport</a></li>
+            <li class="last"><a href="http://www.theage.com.au/weather/" title="Weather">Weather</a></li>
+    </ul>
+
+    <!-- Footer masthead links and copyright -->
+<div class="fMastheadLinks cfix">
+        <ul class="span-4 cfix">
+        <li class="first"><h5>The Age</h5></li>
+            <li><a href="http://www.theage.com.au/siteguide/" title="Sitemap">Sitemap</a></li>
+            <li><a href="http://about.theage.com.au/" title="About Us">About Us</a></li>
+            <li><a href="http://www.theage.com.au/support/" title="Contact Us">Contact Us</a></li>
+            <li><a href="http://adcentre.fairfaxdigital.com.au/network/website.dot?id=6826" title="Advertise With Us">Advertise With Us</a></li>
+            <li><a href="http://www.theage.com.au/am/" title="AM Today">AM Today</a></li>
+            <li><a href="http://newsstore.theage.com.au/apps/newsSearch.ac?/index.html" title="Last 8 days">Last 8 days</a></li>
+            <li><a href="http://www.theage.com.au/text/" title="Text Version">Text Version</a></li>
+            <li><a href="http://www.theage.com.au/siteguide/accessibility" title="Site Accessibility Guide">Site Accessibility Guide</a></li>
+    </ul>
+
+        <ul class="span-4 cfix">
+        <li class="first"><h5>Connect</h5></li>
+            <li><a href="http://m.theage.com.au" title="Mobile Site">Mobile Site</a></li>
+            <li><a href="http://www.theage.com.au/interactive/ipad-app-landing/" title="The AGE for iPad">The AGE for iPad</a></li>
+            <li><a href="https://theage.digitaleditions.com.au/index.php" title="Digital Edition">Digital Edition</a></li>
+            <li><a href="http://www.theage.com.au/interactive/iphone-app-landing/" title="iPhone App">iPhone App</a></li>
+            <li><a href="http://www.theage.com.au/rssheadlines" title="RSS">RSS</a></li>
+            <li><a href="http://www.facebook.com/theageAustralia" title="Facebook">Facebook</a></li>
+            <li><a href="http://twitter.com/theage" title="Twitter">Twitter</a></li>
+            <li><a href="http://www.linkedin.com/today/theage.com.au" title="LinkedIn">LinkedIn</a></li>
+    </ul>
+
+        <ul class="span-4 cfix">
+        <li class="first"><h5>Products & Services</h5></li>
+            <li><a href="http://subscribe.theage.com.au/" title="Subscribe">Subscribe</a></li>
+            <li><a href="https://subscriptions.fairfax.com.au/landing/AGE/age_subscriptions.aspx" title="Manage My Subscription">Manage My Subscription</a></li>
+            <li><a href="http://subscribers.theage.com.au/index.php" title="Subscriber Benefits">Subscriber Benefits</a></li>
+            <li><a href="http://www.goodguides.com.au/melbourne/" title="Good Food Guide">Good Food Guide</a></li>
+            <li><a href="http://www.theageshop.com.au/" title="The Age Shop">The Age Shop</a></li>
+            <li><a href="http://www.theage.com.au/newsletters/subscription.html" title="Newsletters">Newsletters</a></li>
+    </ul>
+
+        <ul class="span-4 cfix">
+        <li class="first"><h5>Classifieds</h5></li>
+            <li><a href="http://www.advertisers.com.au" title="Place an Ad">Place an Ad</a></li>
+            <li><a href="http://www.stayz.com.au/" title="Accommodation">Accommodation</a></li>
+            <li><a href="http://www.drive.com.au/" title="Cars">Cars</a></li>
+            <li><a href="http://www.rsvp.com.au/" title="Dating">Dating</a></li>
+            <li><a href="http://mycareer.com.au/" title="Jobs">Jobs</a></li>
+            <li><a href="http://apm.com.au/" title="Property Price Data">Property Price Data</a></li>
+            <li><a href="http://www.domain.com.au/" title="Real Estate">Real Estate</a></li>
+            <li><a href="http://www.buyandsell.com.au/?utm_source=TheAge&utm_medium=HomeFooterLink&utm_campaign=Buy%2Band%2BSell" title="Buy and Sell">Buy and Sell</a></li>
+            <li><a href="http://tributes.theage.com.au/obituaries/theage-au/?utm_source=TheAge&utm_medium=HomeFooterLink&utm_campaign=The%2BAge%2BTributes" title="Tributes">Tributes</a></li>
+            <li><a href="http://celebrations.theage.com.au/celebration/theage-au/?utm_source=TheAge&utm_medium=HomeFooterLink&utm_campaign=The%2BAge%2BCelebrations " title="Celebrations">Celebrations</a></li>
+    </ul>
+
+        <ul class="span-4 cfix">
+        <li class="first"><h5>Fairfax Media</h5></li>
+            <li><a href="https://membercentre.fairfax.com.au/" title="Member Centre">Member Centre</a></li>
+            <li><a href="http://www.fairfax.com.au/conditions" title="Conditions of Use">Conditions of Use</a></li>
+            <li><a href="http://www.fairfax.com.au/privacy" title="Privacy Policy">Privacy Policy</a></li>
+            <li><a href="http://newsstore.fairfax.com.au/apps/newsSearch.ac?sy=nstore" title="News Store Archive">News Store Archive</a></li>
+            <li><a href="http://www.fairfaxsyndication.com/" title="Photo Sales">Photo Sales</a></li>
+            <li><a href="http://consumer.fairfaxsyndication.com/C.aspx?VP3=ViewBox_VPage&ALID=2ITHRGMNCNCN&CT=Album" title="Purchase Front Pages">Purchase Front Pages</a></li>
+            <li><a href="http://www.fairfaxsyndication.com/" title="Fairfax Syndication">Fairfax Syndication</a></li>
+            <li><a href="http://www.fairfaxevents.com.au/" title="Fairfax Events">Fairfax Events</a></li>
+            <li><a href="http://careers.fairfax.com.au/home.asp" title="Fairfax Careers">Fairfax Careers</a></li>
+            <li><a href="http://www.presscouncil.org.au/what-we-do/" title="Press Council">Press Council</a></li>
+    </ul>
+
+</div>
+<!-- This comment fixes IE6's logo problem. Might be temporary until we've got content below this point -->
+    <div class="nN-footerLinks">
+	<a href="http://www.fairfaxdigital.com.au" class="logo">Fairfax Media</a>
+	<div>
+        <h3>Our Sites</h3>
+    <ul>
+            <li class="first">
+                <a title="The Sydney Morning Herald" href="http://www.smh.com.au/">The Sydney Morning Herald</a>
+            </li>
+            <li>
+                <a title="The Age" href="http://www.theage.com.au/">The Age</a>
+            </li>
+            <li>
+                <a title="MyCareer" href="http://mycareer.com.au/">MyCareer</a>
+            </li>
+            <li>
+                <a title="Domain" href="http://www.domain.com.au/">Domain</a>
+            </li>
+            <li>
+                <a title="Drive" href="http://www.drive.com.au/">Drive</a>
+            </li>
+            <li>
+                <a title="RSVP" href="http://www.rsvp.com.au/">RSVP</a>
+            </li>
+            <li>
+                <a title="Essential Baby" href="http://www.essentialbaby.com.au/">Essential Baby</a>
+            </li>
+            <li>
+                <a title="InvestSMART" href="http://www.investsmart.com.au/">InvestSMART</a>
+            </li>
+            <li>
+                <a title="APM" href="http://apm.com.au/">APM</a>
+            </li>
+            <li>
+                <a title="Stayz" href="http://www.stayz.com.au/">Stayz</a>
+            </li>
+            <li>
+                <a title="Weatherzone" href="http://www.weatherzone.com.au/">Weatherzone</a>
+            </li>
+            <li>
+                <a title="The Vine" href="http://www.thevine.com.au/">The Vine</a>
+            </li>
+    </ul>
+
+        <h3>Our Partners</h3>
+    <ul>
+            <li class="first">
+                <a title="Business" href="http://www.business.com.au/">Business</a>
+            </li>
+            <li>
+                <a title="Fitness" href="http://www.fitness.com.au/">Fitness</a>
+            </li>
+            <li>
+                <a title="Horse" href="http://www.horse.com.au/">Horse</a>
+            </li>
+            <li>
+                <a title="Jogging" href="http://www.jogging.com.au/">Jogging</a>
+            </li>
+            <li>
+                <a title="Lawyers" href="http://www.lawyers.com.au/">Lawyers</a>
+            </li>
+            <li>
+                <a title="Mechanics" href="http://www.mechanics.com.au/">Mechanics</a>
+            </li>
+            <li>
+                <a title="Credit Cards" href="http://www.creditcards.com.au/">Credit Cards</a>
+            </li>
+            <li>
+                <a title="Wine" href="http://www.wine.com.au/">Wine</a>
+            </li>
+            <li>
+                <a title="Wedding" href="http://www.wedding.com.au/">Wedding</a>
+            </li>
+            <li>
+                <a title="Wine" href="http://www.wine.com.au/">Wine</a>
+            </li>
+    </ul>
+
+    </div>
+    <cite>Copyright &copy; 2012 Fairfax Media</cite>
+</div>
+        <div class="Kampyle" data-kampyleFormId="43614" data-kampyleSiteCode="8954894">
+        <a id="kampylink" class="k_static" href="http://www.kampyle.com/feedback_form/ff-feedback-form.php?site_code=8954894&lang=en&form_id=43614" target="kampyleWindow">
+            <img src="http://resources.theage.com.au/theage/media-common-1.0/images/feedback-button.gif" alt="Feedback Form" style="border:0"/>
+        </a>
+    </div><!-- class:Kampyle -->
+
+</div>
+  
+<!-- End fN-footerNetwork -->
+            <div id="adspot-1x1" style='display:none;' class="ad"> </div>
+            <div id="adspot-1x11" style='display:none;' class="ad"> </div>
+        </div><!-- class:wrap cfix -->
+    </div><!-- class:outerWrap -->
+            <script type="text/javascript" src="http://resources.theage.com.au/common/media-common-1.0/js/fdjsf/output/7.14.9/fd_min.js"></script>
+
+            <script type="text/javascript" src="http://resources.theage.com.au/common/media-common-1.0/js/fdjsf/output/7.14.9/fd.registrars_min.js"></script>
+
+    <div data-brandName="theage"></div>
+        <script type="text/javascript" src="http://resources.theage.com.au/common/media-common-1.0/js/fdjsf/output/7.14.9/fd.videoplayer_min.js"></script>
+
+
+
+            <script type="text/javascript" src="http://resources.theage.com.au/common/media-common-1.0/js/fdjsf/output/7.14.9/fd.registrars.mymasthead_min.js"></script>
+
+    <script type="text/javascript">
+    (function() {
+        
+    })();
+</script>
+    <script type="text/javascript">
+    (function() {
+        
+    })();
+</script>
+    <script type="text/javascript">
+    (function() {
+                (function() {
+        FD.addVideoPlayer(new FD.VideoPlayer({
+            "adServerUrl": "http://ad-apac.doubleclick.net/pfadx/vid.age/news/nationalnews;channel=news;show=nationalnews;ctype=rhs;cat3=network10;sz=4x1,4x2;dcmt=text/html;ord=557293",
+            "assetId": "3771233",
+            "divId": "video-player-latest",
+            "playerId": "video-player-latest-player",
+            "playerType": "Index_rhs",
+            "postPlay": ""
+        }, {
+            "flashplayer": "http://resources.theage.com.au/common/media-common-1.0/swf/jwplayer/player.swf",
+            "height": 170,
+            "playlist": [
+    {
+            "levels": [
+                    {
+                        "bitrate": "921",
+                        "file": "http://mediadownload2.f2.com.au/flash/media/2012/11/05/3771233/3771233_high.mp4"
+                    },
+                    {
+                        "bitrate": "606",
+                        "file": "http://mediadownload2.f2.com.au/flash/media/2012/11/05/3771233/3771233_low.mp4"
+                    },
+                    {
+                        "bitrate": "595",
+                        "file": "http://mediadownload2.f2.com.au/flash/media/2012/11/05/3771233/3771233_mid.mp4"
+                    }
+            ],
+            "image": "http://images.theage.com.au/2012/11/05/3771234/Tomic_bg-190x107.jpg",
+        "title": "Tomic found guilty"
+    }
+],
+"plugins": {
+    "googima": {
+        "ad": {
+                    "ad0": {
+            "position": "pre",
+            "tag": "http://ad-apac.doubleclick.net/pfadx/vid.age/news/nationalnews;channel=news;show=nationalnews;ctype=rhs;cat3=network10;sz=4x1,4x2;dcmt=text/html;ord=557293",
+            "targets": ["video-player-companion-ad-mrec", "video-player-companion-ad-gutter", "video-player-companion-ad-helmet"],
+            "type": "graphical_full_slot"
+        }
+
+        }
+    },
+    "timeslidertooltipplugin-2": {}
+},
+            "skin": "http://resources.theage.com.au/common/media-common-1.0/swf/jwplayer/nacht.zip",
+            "width": 300
+        }, {
+            "ga": {
+    "channel": "News",
+    "duration": "045",
+    "headline": "Tomic found guilty",
+    "referrer": "",
+    "playerType": "Index_rhs",
+    "showName": "National News"
+}
+,
+            "nielsen": {
+    "brand": "age",
+        "c6": "b12",
+    "duration": "045",
+    "ou": "video/news/national-news",
+    "vc": "vc-age-Video_News-Index_rhs-Video_National_News-Unknown-Network_Ten,_Kelly_Bergsma-3771233-Tomic_found_guilty-00:00:45"
+}
+        }));
+     })();
+
+
+    })();
+</script>
+    
+    <script src="http://maps.googleapis.com/maps/api/js?client=gme-fairfax&sensor=false&channel=theagecomau" type="text/javascript"></script>
+        <script type="text/javascript" src="http://resources.theage.com.au/common/media-common-1.0/js/fdjsf/output/7.14.9/fd.registrars.googlemap_min.js"></script>
+
+    <div class="hidden" id="adShD0"> <script type="text/javascript"> if (0 < document.dcdAdsU.length) { document.write('<scr' + 'ipt type="text\/javascript" id="' + document.dcdAdsI[0] + '" src="' + document.dcdAdsU[0] + '"><\/scr' + 'ipt>'); } </script> </div> <div class="hidden" id="adShD1"> <script type="text/javascript"> if (1 < document.dcdAdsU.length) { document.write('<scr' + 'ipt type="text\/javascript" id="' + document.dcdAdsI[1] + '" src="' + document.dcdAdsU[1] + '"><\/scr' + 'ipt>'); } </script> </div> <div class="hidden" id="adShD2"> <script type="text/javascript"> if (2 < document.dcdAdsU.length) { document.write('<scr' + 'ipt type="text\/javascript" id="' + document.dcdAdsI[2] + '" src="' + document.dcdAdsU[2] + '"><\/scr' + 'ipt>'); } </script> </div> <div class="hidden" id="adShD3"> <script type="text/javascript"> if (3 < document.dcdAdsU.length) { document.write('<scr' + 'ipt type="text\/javascript" id="' + document.dcdAdsI[3] + '" src="' + document.dcdAdsU[3] + '"><\/scr' + 'ipt>'); } </script> </div> <div class="hidden" id="adShD4"> <script type="text/javascript"> if (4 < document.dcdAdsU.length) { document.write('<scr' + 'ipt type="text\/javascript" id="' + document.dcdAdsI[4] + '" src="' + document.dcdAdsU[4] + '"><\/scr' + 'ipt>'); } </script> </div> <div class="hidden" id="adShD5"> <script type="text/javascript"> if (5 < document.dcdAdsU.length) { document.write('<scr' + 'ipt type="text\/javascript" id="' + document.dcdAdsI[5] + '" src="' + document.dcdAdsU[5] + '"><\/scr' + 'ipt>'); } </script> </div> <script type="text/javascript"> initAds(false); checkAds("817-grey.gif"); window.setTimeout('pingAdStatus()', 10000); </script>
+    
+<!-- START Google Analytics Tracking -->
+<script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-22700242-2']);
+    _gaq.push(['_setDomainName', '.theage.com.au']);
+    _gaq.push(['_addIgnoredRef', 'theage.com.au']);
+    _gaq.push(['_setAllowAnchor', true]);
+    _gaq.push(['_setCustomVar', 1, 'Section', 'sport', 3]);
+    _gaq.push(['_setCustomVar', 2, 'Sub-Section', '', 3]);
+    _gaq.push(['_setCustomVar', 3, 'Byline', '', 3]);
+    _gaq.push(['_setCustomVar', 4, 'Page Type', 'Index', 3]);
+    _gaq.push(['_setAllowAnchor', true]);
+    _gaq.push(['_setCampaignCookieTimeout', 1209600000]);
+    // Check whether the user is logged in.
+    var loggedIn = false;
+    if (window["FD"]) {
+        loggedIn = FD.isLoggedIn();
+    }
+    if (loggedIn) {
+        _gaq.push(['_setCustomVar', 5, 'Login Status', 'Logged In', 2]);
+    } else {
+        _gaq.push(['_setCustomVar', 5, 'Login Status', ' ', 2]);
+    }
+    _gaq.push(['_trackPageview']);
+    (function() {
+        var ga = document.createElement('script');
+        ga.type = 'text/javascript';
+        ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(ga, s);
+    })();
+</script>
+<!-- END Google Analytics Tracking -->
+
+<!-- START Nielsen Online SiteCensus V6.0 -->
+<!-- COPYRIGHT 2009 Nielsen Online -->
+<script type="text/javascript" src="//secure-au.imrworldwide.com/v60.js"></script>
+<script type="text/javascript">
+    var pvar = {cid:"f2", content:"TheAge-sport-index", server:"secure-au"};
+    var trac = nol_t(pvar);
+    trac.record().post();
+    window.s_pageName = "age:index:sport:";
+</script>
+<noscript>
+    <div>
+        <img src="//secure-au.imrworldwide.com/cgi-bin/m?ci=f2&amp;cg=0&amp;cc=1&amp;ts=noscript" width="1" height="1" alt=""/>
+    </div>
+</noscript>
+<!-- END Nielsen Online SiteCensus V6.0 -->
+    <script type="text/javascript">
+	if (window["FD"]) {
+		/**
+		 * Initiates the client side asset view tracking component (self executing).
+		 */
+		(function() {
+			FD.pingServerWithSuccessCallback("875104", "Index", "Sport", FD.updateWhiteStrip);
+		})();
+	}
+</script>
+
+<!-- FFX analytics stuff -->
+
+
+
+<script>
+    var _fmaq = _fmaq || [];
+    _fmaq.push(["_trackEvent", [
+        ["event", "view"],
+        ["system", "DCDS"],
+        ["site", "theage"],
+        ["assetCategory", "Sport"],
+        ["asset", "875104"],
+        ["title", "Sport"],
+        ["assetType", "Index"]
+    ]]);
+
+    var _fma_options = {};
+
+    (function () {
+        var fma_script = document.createElement('script');
+        fma_script.src = 'http://resources.fairfax.com.au/js/track/1.0/track.min.js';
+        fma_script.setAttribute('async', 'true');
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(fma_script, s);
+    })();
+</script>
+
+
+    <script type="text/javascript">
+        var cX_ffx_customParameters = cX_ffx_customParameters || {};
+        if (!cX_ffx_customParameters.ffx_contentid) {
+            cX_ffx_customParameters.ffx_contentid = 'dcds_875104';
+        }
+    </script>
+    <div id="cX-root" style="display:none"></div>
+    <script type="text/javascript">
+        var cX = cX || {}; cX.callQueue = cX.callQueue || [];
+        cX.callQueue.push(['setAccountId', '9222289450909507098']);
+        cX.callQueue.push(['setSiteId', '9222289450909507099']);
+        if (cX_ffx_customParameters) {
+            cX.callQueue.push(['setCustomParameters', cX_ffx_customParameters]);
+        }
+        cX.callQueue.push(['sendPageViewEvent']);
+    </script>
+    <script type="text/javascript">
+        (function() { try { var scriptEl = document.createElement('script'); scriptEl.type = 'text/javascript'; scriptEl.async = 'async';
+            scriptEl.src = ('https:' == document.location.protocol) ? 'https://scdn.cxense.com/cx.js' : 'http://cdn.cxense.com/cx.js';
+            var targetEl = document.getElementsByTagName('script')[0]; targetEl.parentNode.insertBefore(scriptEl, targetEl); } catch (e) {};} ());
+    </script>
+
+
+            <script src="http://platform.twitter.com/widgets.js" type="text/javascript"></script>
+        <script src="http://widgets.twimg.com/j/2/widget.js" type="text/javascript"></script>
+    <div data-boomerangSegment="132489"></div>
+        <script type="text/javascript" src="http://resources.theage.com.au/common/media-common-1.0/js/fdjsf/output/7.14.9/fd.registrars.social_min.js"></script>
+
+    
+          
+
+       <script type="text/javascript" src="http://secure-au.imrworldwide.com/cgi-bin/j?ci=rj0091-bt-homepage&amp;se=1&amp;te=0"> </script>
+
+
+ 
+
+    
+</body>
+</html>

@@ -1,0 +1,165 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="it" xml:lang="it">
+<head>
+<base href="http://www.mussidamusica.it/forum/"/>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta http-equiv="content-language" content="it" />
+<meta http-equiv="content-style-type" content="text/css" />
+<meta http-equiv="imagetoolbar" content="no" />
+<meta name="title" content="Informazione" />
+<meta name="description" lang="it" content="Informazione : Forum di discussione su lezioni, esercizi e brani di Chitarra, Batteria, Tastiere e Pianoforte, Teoria e Armonia di Mussida Musica Editore" />
+<meta name="keywords"    content="tastiere, pianoforte, teoria, mussida, editore, musica, batteria, armonia, brani, discussione, forum, lezioni, informazione, esercizi, chitarra" />
+<meta name="category"    content="general" />
+<meta name="robots"      content="index,follow" />
+<meta name="distribution" content="global" />
+<meta name="resource-type" content="document" />
+<meta name="copyright" content="Mussida Musica Editore" />
+<link rel="alternate" type="application/rss+xml" title="RSS Feed" href="http://www.mussidamusica.it/forum/rss/rss.xml" />
+<link rel="alternate" type="application/rss+xml" title="Channel list" href="http://www.mussidamusica.it/forum/rss/" />
+<title>Informazione - Mussida Musica Editore</title>
+
+<link rel="stylesheet" href="./styles/hestia/theme/stylesheet.css" type="text/css" />
+
+<!--[if IE 7]>
+<link rel="stylesheet" type="text/css" href="./styles/hestia/theme/ie7.css" />
+<![endif]-->
+
+<script type="text/javascript">
+// <![CDATA[
+
+
+function popup(url, width, height, name)
+{
+	if (!name)
+	{
+		name = '_popup';
+	}
+
+	window.open(url.replace(/&amp;/g, '&'), name, 'height=' + height + ',resizable=yes,scrollbars=yes,width=' + width);
+	return false;
+}
+
+function jumpto()
+{
+	var page = prompt('Inserisci il numero della pagina alla quale vuoi andare.:', '');
+	var perpage = '';
+	var base_url = '';
+
+	if (page !== null && !isNaN(page) && page > 0)
+	{
+		document.location.href = base_url.replace(/&amp;/g, '&') + '&start=' + ((page - 1) * perpage);
+	}
+}
+
+/**
+* Find a member
+*/
+function find_username(url)
+{
+	popup(url, 760, 570, '_usersearch');
+	return false;
+}
+
+/**
+* Mark/unmark checklist
+* id = ID of parent container, name = name prefix, state = state [true/false]
+*/
+function marklist(id, name, state)
+{
+	var parent = document.getElementById(id);
+	if (!parent)
+	{
+		eval('parent = document.' + id);
+	}
+
+	if (!parent)
+	{
+		return;
+	}
+
+	var rb = parent.getElementsByTagName('input');
+	
+	for (var r = 0; r < rb.length; r++)
+	{
+		if (rb[r].name.substr(0, name.length) == name)
+		{
+			rb[r].checked = state;
+		}
+	}
+}
+
+
+if(navigator.userAgent && navigator.userAgent.indexOf('Mac OS X') > 0)
+{
+	document.write('<link rel="stylesheet" href="./styles/hestia/theme/mac.css" type="text/css" />');
+}
+
+// ]]>
+</script>
+</head>
+<body class="ltr">
+
+<a name="top"></a>
+
+<div id="logo-row">
+    <div id="logo-left">
+        <div id="logo-right">
+            			<a id="link_sito" href="http://www.mussidamusica.it/">Mussida Musica Editore</a>
+			<a id="link_forum" href="http://www.mussidamusica.it/forum/">Mussida Forum</a>
+            <div id="logo-clear"></div>
+        </div>
+    </div>
+</div>
+<div class="navrow">
+    <a href="./ucp.php?mode=register&amp;sid=90ef21498fd1064c790c59db12f206c0">Iscriviti</a> &#8226;     <a href="./faq.php?sid=90ef21498fd1064c790c59db12f206c0">FAQ</a>
+     &#8226; <a href="./search.php?sid=90ef21498fd1064c790c59db12f206c0">Cerca</a> &#8226; <a href="./ucp.php?mode=login&amp;sid=90ef21498fd1064c790c59db12f206c0">Login</a></div>
+<div id="content">
+<table border="0" cellspacing="0" cellpadding="0" width="100%" id="maintable" align="center">
+<tr>
+	<td id="contentrow">
+
+	<p class="searchbar">
+		<span style="float: left;"><a href="./search.php?search_id=unanswered&amp;sid=90ef21498fd1064c790c59db12f206c0">Messaggi senza risposta</a> | <a href="./search.php?search_id=active_topics&amp;sid=90ef21498fd1064c790c59db12f206c0">Argomenti attivi</a></span>
+			</p>
+	
+	<br style="clear: both;" />
+
+	<table class="tablebg breadcrumb" width="100%" cellspacing="0" cellpadding="0" style="margin-top: 5px;">
+	<tr>
+		<td class="row1">
+			<p class="breadcrumbs"><a href="http://www.mussidamusica.it/forum/">Indice</a></p>
+			<p class="datetime">Tutti gli orari sono UTC +1 ora [ <abbr title="Ora legale in vigore">ora legale</abbr> ]</p>
+		</td>
+	</tr>
+	</table>
+	<br />
+<div class="block-start"><div class="cap-div"><div class="cap-left"><div class="cap-right">Informazione&nbsp;</div></div></div><table class="tablebg" width="100%" cellspacing="0">
+<tr> 
+	<td class="row1" align="center"><br /><p class="gen">LÕargomento richiesto non esiste.</p><br /></td>
+</tr>
+</table>
+<div class="block-end-left"><div class="block-end-right"></div></div></div>
+<br clear="all" />
+
+<table class="tablebg breadcrumb" width="100%" cellspacing="0" cellpadding="0" style="margin-top: 5px;">
+	<tr>
+		<td class="row1">
+			<p class="breadcrumbs"><a href="http://www.mussidamusica.it/forum/">Indice</a></p>
+			<p class="datetime">Tutti gli orari sono UTC +1 ora [ <abbr title="Ora legale in vigore">ora legale</abbr> ]</p>
+		</td>
+	</tr>
+	</table>
+<div id="wrapfooter">
+		<span class="copyright">
+	Powered by <a href="http://www.phpbb.com/">phpBB</a> &copy; 2000, 2002, 2005, 2007 phpBB Group.
+	<br />Designed by <a href="http://www.stsoftware.biz/">Vjacheslav Trushkin</a> for <a href="http://www.freeforums.org" title="Free Forum Hosting">Free Forum</a>/<a href="http://www.divisioncore.com">DivisionCore</a>.
+	<br />Traduzione Italiana <a href="http://www.phpbb.it/">phpBB.it</a><br /><a href="http://www.phpbb-seo.com/" title="Search Engine Optimization"><img src="http://www.mussidamusica.it/forum/images/phpbb-seo.png" alt="phpBB SEO"/></a></span>
+</div>
+
+	</td>
+</tr>
+</table>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,176 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Add Site, Add Url free web directory- Health &gt; Mental Health  </title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="/templates/BlueTheme/style/main.css" />
+<!--  
+<script type="text/javascript" src="/libs/moodalbox/js/mootools.js"></script>
+<script type="text/javascript" src="/libs/moodalbox/js/moodalbox.js"></script>
+<link rel="stylesheet" href="/libs/moodalbox/css/moodalbox.css" type="text/css" media="screen" />
+-->
+</head>
+<body><script type="text/javascript">
+
+
+function increase_height() {
+   height = parseInt(document.getElementById('slide').style.marginTop);
+   if (height<110) {
+      document.getElementById('slide').style.marginTop = eval(height+2)+"px";
+      setTimeout("increase_height()",0.0001);
+   } else {
+      document.getElementById('panel').style.zIndex = 200;
+   }
+}
+
+function decrease_height() {
+   height = parseInt(document.getElementById('slide').style.marginTop);
+   document.getElementById('panel').style.zIndex = -1;
+   if (height>0) {
+      document.getElementById('slide').style.marginTop = eval(height-2)+"px";
+      setTimeout("decrease_height()",0.0001);
+   }
+}
+
+function show_panel() {
+  
+   height = parseInt(document.getElementById('slide').style.marginTop);
+   if (height>0) {
+      decrease_height();
+   } else {
+      increase_height();
+   }
+   return false;
+}
+
+function ajaxFunction()
+{
+
+var xmlHttp;
+
+try
+  {
+  // Firefox, Opera 8.0+, Safari
+  xmlHttp=new XMLHttpRequest();
+  }
+catch (e)
+  {
+  // Internet Explorer
+  try
+    {
+    xmlHttp=new ActiveXObject("Msxml2.XMLHTTP");
+    }
+  catch (e)
+    {
+    try
+      {
+      xmlHttp=new ActiveXObject("Microsoft.XMLHTTP");
+      }
+    catch (e)
+      {
+      alert("Your browser does not support AJAX!");
+      return false;
+      }
+    }
+  }
+  xmlHttp.onreadystatechange=function()
+    {
+    if(xmlHttp.readyState==4)
+      {
+      }
+    }
+   var url = "http://www.dirbit.com/update_session.php";
+
+   xmlHttp.open("POST", url, false);
+   xmlHttp.setRequestHeader( 
+    'Content-Type', 
+    'application/x-www-form-urlencoded; charset=UTF-8' 
+); 
+   xmlHttp.send('url='+window.location);
+  }
+</script>
+</script>
+<div class="header" style="height: auto; background: transparent;">
+<div class="center" style="background: transparent;">
+<div id="panel" style="z-index: -1;">
+<form method="post" action="/login.php" onsubmit="ajaxFunction();">
+<table border="0" align="center" width="40%" style="padding-top: 10px; padding-bottom: 10px; z-index: -1; height: 0px" id="panel_table" >
+<tr>
+</tr>
+<tr>
+<td>User:</td>
+<td>
+<input type="text" name="user" value="" size="20" maxlength="25" class="text" />
+</td>
+<td>Password:</td>
+<td>
+<input type="password" name="pass" value="" size="20" maxlength="25" class="text" />
+</td>
+<td><input type="submit" name="submit" value="Login" class="btn" /></td>
+</tr>
+<tr>
+<td colspan="5" style="text-align: left;">
+<input type="checkbox" name="rememberMe">&nbsp;&nbsp; Keep me logged in.
+</td>        
+</tr>
+<tr>
+<td colspan="5" style="text-align: right;">
+<a rel="nofollow" href="/profile.php?mode=register" title="Register">Register</a>
+&nbsp;|&nbsp;
+<a rel="nofollow" href="/profile.php?mode=sendpassword" title="Recover your password">I forgot my password</a>
+</td>
+</tr>
+</table>
+</form>
+</div>
+<p class="slide" style="z-idex: 100; margin-top: 0px;" id="slide" >
+<a rel="nofollow" href="" class="btn-slide" onclick="show_panel(); return false;">Login</a>
+&nbsp;|&nbsp;
+<a rel="nofollow" href="/profile.php?mode=register" title="Register new user">Register</a>
+</p>
+</div></div>
+<div style="clear: both;"></div>
+<div class="header">
+<a rel="nofollow" href="/"><img class="headerLogo" src="/templates/BlueTheme/images/logo.gif" alt="logo" border="0" /></a>
+<img class="headerRight" src="/templates/BlueTheme/images/h-right.gif" alt="border" />
+<form class="headerSearch" action="/index.php" method="get">
+<label class="searchLabel">Search:</label>
+<input class="searchInput" type="text" name="search" maxlength="250" value="" />
+<div class="searchBtn">
+<button class="searchBtnCenter" type="submit"></button>
+</div>
+</form>
+</div>
+<div class="center"><div class="hMenuContainer"><img style="float:left;" src="/templates/BlueTheme/images/nav-left.gif" alt="border left" /><img style="float:right;" src="/templates/BlueTheme/images/nav-right.gif" alt="border right" /><div class="hMenu"><img src="/templates/BlueTheme/images/nav-div.gif" alt="menu separator" /><a rel="nofollow" href="/submit.php?c=305" title="Submit your link to the directory">Submit Link</a><img src="/templates/BlueTheme/images/nav-div.gif" alt="menu separator" /><a rel="nofollow" href="/index.php?list=latest" title="Browse latest submitted links">Latest Links</a><img src="/templates/BlueTheme/images/nav-div.gif" alt="menu separator" /><a rel="nofollow" href="/contact.php" title="Contact directory owner">Contact</a><img src="/templates/BlueTheme/images/nav-div.gif" alt="menu separator" /><a rel="nofollow" href="/rss.php?c=305&amp;s=H&amp;p=1">RSS</a><img src="/templates/BlueTheme/images/nav-div.gif" alt="menu separator" /></div></div></div><div class="path"><a href="/" style="font-weight: bold;">Add Site, Add Url free web directory</a> &raquo; <a href="/Health/" >Health</a> &raquo; Mental Health</div><div class="center1"><div class="leftContainer">
+<div class="box">
+<div class="boxTopLeft">Alexa Traffic</div>
+<div class="boxMiddleLeft">		 <h3>Alexa Traffic</h3>
+<div><center><img src="http://pr.prchecker.info/getpr.php?codex=aHR0cDovL3d3dy5kaXJiaXQuY29t&tag=3" alt="Free Page Rank Tool" style="border:0;" /><br></br>
+<a href="http://www.alexa.com/siteinfo/www.dirbit.com" rel="nofollow"><SCRIPT type='text/javascript' language='JavaScript' src='http://xslt.alexa.com/site_stats/js/t/b?url=www.dirbit.com'></SCRIPT></a></center></div>
+<br />
+</div>
+<div class="boxBottomLeft"></div>
+</div>			<br/>	
+</div><div class="centerContainer"><div class="centerTopContainer"><img style="float:left;" src="/templates/BlueTheme/images/centerTopLeft.gif" alt="top left corner" /><img style="float:right;" src="/templates/BlueTheme/images/centerTopRight.gif" alt="top right corner" /><span class="centerTopLabel"></span></div><div class="centerMiddleContainer"><h3>Parent Category: <span id="main_title">Mental Health</span></h3><div style="float: right"></div><div align="center" id="main_desc"></div><br/><br/><p>Person's physical health is a standard, a person's mental health is also standard. However, people's psychological health standards less than the standard of people's physical health is specific and objective. Learn to master the mental health definition of great significance for enhancing and maintaining people's health. Mastered the human health standards as a basis control, mental health self-diagnosis. Own psychological state of a certain standard of mental health has a certain distance, it is targeted to strengthen the mental exercise, in order to achieve the level of mental health. If you find that seriously deviate from the standard of mental health of their own mental state, it is necessary to seek medical attention in a timely manner, so that early diagnosis and early treatment.</p>
+<p>Mental health, better self-control and maintain a psychological balance, to self-esteem, self-love, self-confident and have self-knowledge. Mental health education is an important part of health education ", it is a culture of physical and mental health social citizenship for the purpose, through the use of health management, campus environment, the functional improvement of the environment-based improvement of the human environment compatible to teachers and students in two subjects, science, health, professional guidance. The new health education in schools, the construction of specialized health guidance Room (psychological consulting rooms), equipped with professional counselors long-term in the school for the creation of psychological courses and extracurricular activities to guide the healthy psychological development of students. At the same time, the creation of "family chat room, to open the channel for the connection of affection, and paved a smooth way for the healthy growth of the students.</p><br /><div id="links"></div> <div align="center">  No Links In This Category<a rel="nofollow" href="/submit.php?id=305"> Add A Link Today.</a></div><br /><script type="text/javascript">/* <![CDATA[ */var root = '';
+
+      var a = document.getElementsByTagName("a");
+
+      for(i = 0; i< a.length; i++)
+
+         if(a[i].id != '')
+
+            a[i].onclick = count_link;
+
+      function count_link() {
+
+         i = new Image();
+
+         i.src= root+'/cl.php?id='+this.id;
+
+         return true;
+
+      }
+
+      /* ]]> */</script><div style="clear: both"></div></div><div class="centerBottomContainer"><img style="float:left;" src="/templates/BlueTheme/images/centerBottomLeft.gif" alt="bottom corner left" /><img style="float:right;" src="/templates/BlueTheme/images/centerBottomRight.gif" alt="bottom corner right" /></div></div><div class="rightContainer">
+</div><div style="clear: both; height: 30px;"></div></div><div class="footer"><img style="float:left;" src="/templates/BlueTheme/images/f-left.gif" alt="border left" /><img style="float:right;" src="/templates/BlueTheme/images/f-right.gif" alt="border right" /><span class="copyr">Copyright © 2002-2012 <a href="http://www.dirbit.com">Add Url Free Web Directory</a><span></div><script type="text/javascript">var sc_project=8187054;var sc_invisible=1;var sc_security="20e0a279";</script><script type="text/javascript" src="http://www.statcounter.com/counter/counter.js"></script></body></html>

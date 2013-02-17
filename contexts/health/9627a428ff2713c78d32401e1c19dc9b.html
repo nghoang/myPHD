@@ -1,0 +1,587 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Improving Health Literacy | Health.gov (ODPHP)</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="description" content="Resources on improving online and offline health literacy. Find health literacy and health information related resources, tools, research and reports." />
+<meta name="keywords" content="health literacy, improving health literacy, health education, health information, health literacy online, heath tools, health reports, health research" />
+
+
+<link href="/css/style.css" rel="stylesheet" type="text/css" />
+<link href="/css/print.css" rel="stylesheet" type="text/css" media="print" />
+
+<!--[if IE 6]>
+<style>
+#nav ul li a {display:block; float:left; text-align:center; padding:8px 0px 8px 0px; font-weight:bold;}
+#nav ul li a.first { line-height:2.4em; padding-bottom:7px;}
+#topShadow { width:993px; height:4px; position:absolute; z-index:5; background:url(../images/2010/nav_top_shadow.png) no-repeat; }
+img, div { behavior: url(/images/2010/iepngfix.htc) }
+
+</style>
+
+<script type="text/javascript" src="/images/2010/iepngfix_tilebg.js"></script> 
+
+<![endif]-->
+
+<!--[if IE 7]>
+<style>
+</style>
+<![endif]--><!-- call to latest version of jquery -->
+<script src="/js/jquery-1.4.2.min.js" type="text/javascript"></script> 
+<!-- call to nav tabs plugin -->
+<script src="/js/jquery.easytabs.js" type="text/javascript"></script>
+
+<!-- uses skipnav class to hide accessibility links when js is enabled; when js is disabled, class is not added, and the h2s and return to top links appear in page -->
+<script type="text/javascript">  $(document).ready( function(){
+$('#top1').addClass('skipnav');
+$('#top2').addClass('skipnav');
+$('#top3').addClass('skipnav');
+$('#top4').addClass('skipnav');
+
+$('#h2Hidden1').addClass('hiddenH2');
+$('#h2Hidden2').addClass('hiddenH2');
+$('#h2Hidden3').addClass('hiddenH2');
+$('#h2Hidden4').addClass('hiddenH2');
+
+
+//opens external sites in a new window and adds exit icon graphic dynamically
+$(".external").removeAttr("target");
+
+$(".external").append("<img class='exiticon' src='/images/2010/exit_disclaimer.png' alt='External Link: You are leaving Health.gov' title='External Link: You are leaving Health.gov'>");
+
+$(function(){
+    $('a.external').click(function(){
+        window.open(this.href);
+        return false;
+    });
+});
+
+
+//opens .gov pages in a new window
+$(".gov").removeAttr("target");
+
+$(function(){
+    $('a.gov').click(function(){
+        window.open(this.href);
+        return false;
+    });
+});
+
+
+} );
+
+//Accordion used on past pubs
+$(document).ready(function() {
+	 
+	//ACCORDION BUTTON ACTION (ON CLICK DO THE FOLLOWING)
+	$('.accordionButton').click(function() {
+
+		//REMOVE THE ON CLASS FROM ALL BUTTONS
+		$('.accordionButton').removeClass('on');
+		
+		  
+		//NO MATTER WHAT WE CLOSE ALL OPEN SLIDES
+	 	$('.accordionContent').slideUp('normal');
+   
+		//IF THE NEXT SLIDE WASN'T OPEN THEN OPEN IT
+		if($(this).next().is(':hidden') == true) {
+			
+			//ADD THE ON CLASS TO THE BUTTON
+			$(this).addClass('on');
+			$(this).removeClass('off');
+			  
+			//OPEN THE SLIDE
+			$(this).next().slideDown('normal');
+			
+		 } 
+		  
+	 });
+	  
+	
+	/*** REMOVE IF MOUSEOVER IS NOT REQUIRED ***/
+	
+	//ADDS THE .OVER CLASS FROM THE STYLESHEET ON MOUSEOVER 
+	$('.accordionButton').mouseover(function() {
+		$(this).addClass('over');
+		
+	//ON MOUSEOUT REMOVE THE OVER CLASS
+	}).mouseout(function() {
+		$(this).removeClass('over');										
+	});
+	
+	/*** END REMOVE IF MOUSEOVER IS NOT REQUIRED ***/
+	
+	
+	/********************************************************************************************************************
+	CLOSES ALL S ON PAGE LOAD
+	********************************************************************************************************************/	
+	$('.accordionContent').hide();
+
+});
+
+ 
+</script>
+<noscript>
+<style>
+a.external { padding-right:14px; background:url(/images/2010/exit_disclaimer.png) no-repeat right; }
+</style>
+</noscript>
+
+<!-- initiates the Tab navigation -->
+<script type="text/javascript"> 
+	$(document).ready(function(){ $('#tab-container').easytabs(); });
+</script>
+</head>
+
+
+<body>
+
+
+<a class="skipnav" href="#topicMainContent">Skip to main content</a>
+<a class="skipnav" href="#sectionNav">Skip to section navigation</a>
+
+<div id="containerOuter">
+<div id="container">
+
+<div id="header"><a href="/"><img class="logo" src="/images/2010/healthgov_logo.png" alt="Health.gov. Improve Health. Learn How." title="Health.gov. Improve Health. Learn How." width="289" height="105" hspace="0" vspace="0" border="0" /></a>
+<div class="clear"></div>
+</div><!-- /header -->
+
+<div class="print">
+<img src="/images/2010/healthgov_logo_print.jpg" alt="Health.gov logo" />
+</div>
+
+<div id="nav">
+<div id="topShadow"></div>
+<ul>
+<li ><a class="first" href="/">Home</a></li>
+<li><a class="second current" href="/communication/Default.asp">Health Communication, <br />
+  Health Literacy &amp; e-Health</a></li>
+<li><a class="third" href="/paguidelines">Physical Activity<br />
+  Guidelines</a></li>
+<li><a class="fourth" href="/dietaryguidelines/">Dietary<br />
+  Guidelines</a></li>
+<li><a class="lastLink" href="/nhic/">National Health<br />
+  Information Center</a></li>
+</ul>
+</div><!--/nav -->
+
+<div id="containerMainOuter">
+<div id="containerSecondaryInner">
+
+
+<div id="breadcrumbs">
+<ul>
+<li class="first"><a href="/Default.asp">Home</a></li>
+
+<li>&raquo; <a href="/communication/Default.asp">Health Communication, Health Literacy and e-Health</a></li>
+
+<li>&raquo; Health Literacy</li>
+
+</ul>
+</div><!-- /breadcrumbs -->
+
+<div id="sectionNav">
+<a class="top topComm" href="/communication/resources/">Health Communication &raquo;</a>
+<a class="middle middleCurrent" href="/communication/literacy/">Health Literacy &raquo;</a>
+<a class="middle" href="/communication/ehealth/">e-Health &raquo;</a>
+<a class="middle" href="/communication/healthypeople/">Healthy People Health Communication and
+Health<br />IT Topic Area &raquo;</a>
+<div id="litPhoto"></div>
+
+</div><!-- /sectionNav -->
+
+<div id="topicMainContent">
+<h1 id="top">Health Literacy</h1>
+
+<div id="pancon1">
+<div id="tab-container">
+		  <ul class="tabular">
+		    <li class="first"><a href="#overview">Overview</a></li>
+
+		    <li class="second"><a href="#tools">Tools</a></li>
+
+		    <li class="third"><a href="#reports">Reports &amp; Research</a></li>
+
+            <li class="fourth"><a href="#resources">Related Resources</a></li>
+
+		  </ul>
+
+		  <div class="panel-container">
+		    <div id="overview">
+            	<a id="overvw"></a>
+            	<h2 id="h2Hidden1">Overview</h2>
+                <h3>What is health literacy?</h3>
+                
+                <div class="healthLiteracyRightCol">
+                
+                <img class="photo" src="/images/2010/literacy_overview_woman.jpg" width="300" height="225" alt="Woman reading medication information" />
+                
+<!--                <div class="nationalAction">
+                        <div class="nationalActionRedOuter">
+                        <div class="nationalActionWhiteInner">
+                        <div class="nationalActionTitleText">National Action Plan<br />
+to Improve Health Literacy
+<div class="clear"></div>
+</div>
+						<div class="clear"></div>
+						</div>
+                        </div>
+                        
+                        <p>Improving health literacy is a priority for the Nation and is critical to reducing health care costs and improving health and quality of life. The <a href="/communication/HLActionPlan/"><strong>National Action Plan to Improve Health Literacy</strong></a> lays out a multi-sector effort to create a society that:</p>
+                        
+                        
+                        <ul>
+                        <li>Provides everyone with access to accurate and actionable health information</li>
+        
+                        <li>Delivers person-centered health information and services</li>
+        
+                        <li>Supports lifelong learning and skills to promote good health.</li>
+        
+                        </ul> 
+                    </div>
+				
+				-->
+				
+					<div class="nationalAction">
+                                                
+                        <p>HHS recently released an article in <em>Health Affairs</em>, entitled <a href="http://content.healthaffairs.org/cgi/content/full/31/2/434?ijkey=HfkOgU2splhhQ&keytype=ref&siteid=healthaff" class="external" target="_blank">&ldquo;New Federal Policy Initiatives to Boost Health Literacy Can Help the Nation Move Beyond the Cycle of Costly &lsquo;Crisis Care.&rsquo;&rdquo;</a> The article outlines what the Department is doing to improve healthy literacy rates nationwide, and how we have brought health literacy to a tipping point through health policy milestones, including:</p>
+						<ul>
+						<li>The healthcare reform law,</li>
+						<li>The National Action Plan to Improve Healthy Literacy, and</li>
+						<li>The Plain Writing Act of 2010.</li>
+						</ul>
+
+					</div>
+                
+                </div>
+                
+                <p>
+                Health literacy is the capacity to obtain, process, and understand basic health information and services needed to make appropriate health decisions.</p>
+                
+
+                
+                <h3>Why is health literacy important?</h3>
+                
+						
+                
+                <p>Nearly 9 out of 10 adults have difficulty using the everyday health information that is routinely available in health care facilities, retail outlets, media, and communities.<sup><a href="#one">1,</a></sup><sup><a href="#two">2,</a></sup><sup><a href="#three">3</a></sup> Limited health literacy is associated with <!--worse--> poorer health outcomes and higher health care costs.<sup><a href="#four">4</a></sup></p>
+                
+						
+                
+                <p>Limited health literacy affects people&#8217;s ability to:</p>
+                
+                <ul>
+                <li>Search for and use health information</li>
+
+                 <li>Adopt healthy behaviors</li>
+
+                 <li>Act on important public health alerts.</li>
+
+                </ul>
+                
+                
+                
+                <p>There are a number of Federal resources to help health and communication professionals improve health literacy, including the <em><a href="/communication/HLActionPlan/">National Action Plan to Improve Health Literacy</a></em>, <em><a href="/healthliteracyonline/">Health Literacy Online: A Guide to Writing and Designing Easy-to-Use Health Web Sites</a></em> and the <em><a href="/communication/literacy/quickguide/">Quick Guide to Health Literacy</a></em>. These resources and many others are included in the tools, reports and research, and related resources sections.</p>
+                
+                <div class="clear"></div>
+                
+                <div class="footnotesSection">
+                <h3>Footnotes</h3>
+                
+                <p><a id="one"></a><sup>1</sup> Nielsen-Bohlman, L., Panzer, A. M., &amp; Kindig, D. A. (Eds.). (2004). <em>Health Literacy: A Prescription to End cConfusion.</em> Washington, DC: National Academies Press.</p>
+                
+                <p><a id="two"></a><sup>2</sup> Kutner, M., Greenberg, E., Jin, Y., &amp; Paulsen, C. (2006). <em>The Health Literacy of America&#8217;s Adults: Results From the 2003 National Assessment of Adult Literacy (NCES 2006-483).</em> Washington, DC: U.S. Department of Education, National Center for Education Statistics.</p>
+                
+                <p><a id="three"></a><sup>3</sup> Rudd, R. E., Anderson, J. E., Oppenheimer, S., &amp; Nath, C. (2007). Health literacy: An update of public health and medical literature. In J. P. Comings, B. Garner, &amp; C. Smith. (Eds.), <em>Review of Adult Learning and Literacy</em> (vol. 7) (pp 175Ð204). Mahwah, NJ: Lawrence Erlbaum Associates.</p>
+                
+                <p><a id="four"></a><sup>4</sup> Berkman, N. D., DeWalt, D. A., Pignone, M. P., Sheridan, S. L., Lohr, K. N., Lux, L., et al. (2004). <em>Literacy and Health Outcomes</em> (AHRQ Publication No. 04-E007-2). Rockville, MD: Agency for Healthcare Research and Quality.</p>
+                </div>
+                
+
+		    <p id="top1"><a href="#top">Return to Top</a></p>
+            </div>
+            
+		    <div id="tools">
+				<h2 id="h2Hidden2">Tools</h2>
+                <ul class="links">
+
+
+                  
+                
+                
+                <li><a href="/healthliteracyonline/">Health Literacy Online: A Guide to Writing and Designing Easy-to-Use Health Web Sites</a>
+                <span>The Office of Disease Prevention and Health Promotion (ODPHP) has written a research-based how-to guide for creating health Web sites and Web content for the millions of Americans with limited literacy skills and limited experience using the Web. </span>
+                </li>
+ 
+                <li><a href="/healthliteracyonline/Twitter_Chat_Guide.pdf">Health Literacy Online Supplement: A Guide To Hosting a Twitter Chat</a>
+                <span>The Office of Disease Prevention and Health Promotion (ODPHP) has developed a guide for organizations interested in hosting a Twitter chat. The guide draws from @healthfinder&rsquo;s success hosting regular Twitter chats. Use the guide to choose a chat topic, create a moderator&rsquo;s guide, and promote the chat to Twitter users.</span>
+                </li>
+               
+                
+                <li><a href="/communication/literacy/quickguide/">Quick Guide to Health Literacy</a>
+                <span>This guide, written by ODPHP, provides a basic overview of key health literacy concepts, techniques for improving health literacy, examples of health literacy best practices, and suggestions for addressing health literacy in organizations.</span>
+                </li>
+
+                <li><a href="/communication/literacy/olderadults/default.asp">Quick Guide to Health Literacy and Older Adults</a>
+                <span>This guide builds on the information presented in the Quick Guide to Health Literacy with strategies and suggestions for communicating clearly with older adults. </span>
+                </li>
+                
+
+
+
+                <li><a href="http://www.cdc.gov/healthmarketing/pdf/Simply_Put_082010.pdf" class="gov" target="_blank">Simply Put: A Guide for Creating Easy-to-Understand Materials [PDF &#8211; 1.86MB]</a>
+                <span>The guidance in Simply Put helps you transform complicated scientific and technical information into communication materials your audiences can relate to and understand. The guide provides practical ways to organize information and use language and visuals. This guide will be useful for creating fact sheets, FAQ&rsquo;s, brochures, booklets, pamphlets, and other materials, including web content.</span>
+                </li>
+                
+                
+                <li><a href="http://www.ahrq.gov/populations/sahlsatool.htm" class="gov" target="_blank">Health Literacy Measurement Tools</a>
+                <span>AHRQ-funded researchers have developed two tools to measure an aspect of health literacy&#8212;individuals&rsquo; reading comprehension in a medical context. These tools can be used for research, clinical, or program planning purposes.</span>
+                </li>              
+
+                <li><a href="http://www.cdc.gov/healthliteracy/PlanAct/Steps/Introduction.html" class="gov" target="_blank">Steps to Developing an Organizational Plan</a>
+                <span>Every organization involved in health information and services needs its own health literacy plan. This resource will lead you through the steps to help you write a plan for your organization.</span>
+                </li>  
+
+                <li><a href="/communication/literacy/Making%20HealthLiteracyReal.pdf">Making Health Literacy Real: The Beginnings of My Organization&rsquo;s Plan for Action<br />
+[PDF &#8211; 211KB]</a>	
+                <span>This easy-to-use template from the Centers for Disease Control and Prevention (CDC) helps individuals get started in developing a plan to change organizational and professional practices to improve health literacy.</span>
+                </li>
+
+                <li><a href="/communication/literacy/sampleplan.htm">Sample Action Plan To Improve Health Literacy</a>
+                <span>The plan can be used as a guide for national, state, county, and community health organizations committed to improving health literacy. The sample plan includes both action steps and specific measurable objectives to be used for evaluation. </span>
+                </li>
+
+                <li><a href="http://nihseniorhealth.gov/toolkit/toolkit.html" class="gov" target="_blank"><!--Toolkit for Trainers: Teaching Older Adults How to Find Health Information on the Internet-->Helping Older Adults Search for Health Information Online: A Toolkit for Trainers</a>
+                <span>This resource, developed by the National Institute on Aging, contains free, easy-to-use materials for trainers to help older adults find reliable, up-to-date online health information on their own.</span>
+                </li>
+
+                <li><a href="/communication/literacy/powerpoint/default.htm"><!--Health Literacy Overview: Power Point Slides-->Health Literacy: What You Need To Know and What You Can Do About It</a>
+                <span>This PowerPoint presentation provides an overview of health literacy, why it is important, how the Government is addressing it, and strategies for improving health literacy.</span>
+                </li>
+
+                <li><a href="http://www2a.cdc.gov/TCEOnline/registration/detailpage.asp?res_id=2074" class="gov" target="_blank"><!-- Centers for Disease Control and Prevention,-->Health Literacy for Public Health Professionals Web-based Training</a>
+                <span>This online course from the CDC was designed to educate public health professionals on their role in promoting health literacy by introducing the concept of public health literacy.</span>
+                </li>
+                
+                <li><a href="http://www.ahrq.gov/qual/pharmlit/" class="gov" target="_blank">AHRQ Pharmacy Health Literacy Assessment Tool</a>
+                <span>AHRQ had developed a tool for pharmacies to evaluate and improve communications with patients and between staff members. Although the assessment is designed for pharmacies, it can be adapted for use in non-pharmacy environments.</span>
+                </li>
+                
+                <li><a href="http://www.hrsa.gov/publichealth/healthliteracy/" class="gov" target="_blank">HRSA Unified Health Communication Course Addressing Health Literacy, Cultural Competency, and Limited English Proficiency</a>
+                <span>This course helps participants improve patient communication skills and implement patient-centered communication practices. There is an option to take the course for professional education credit.</span>
+                </li>
+
+                <li><a href="http://guides.lib.umich.edu/healthliteracy" class="external" target="_blank"><!-- University of Michigan, Taubman Health Sciences Library, -->Improving Health Literacy: Your Communications Toolkit</a>
+                <span>This online toolkit from the University of Michigan is a work in progress, with new information, research, training programs, tools, multimedia resources, and links constantly being added.</span>
+                </li>
+                
+                <li><a href="http://www.fda.gov/downloads/AboutFDA/ReportsManualsForms/Reports/UCM268069.pdf" class="gov" target="_blank">Communicating Risk and Benefits: An Evidence-Based User&rsquo;s Guide [PDF &#8211; 3.1MB]</a>
+                <span>Effective risk communication is essential to the well-being of any organization and those people who depend on it. Ineffective communication can cost lives, money, and reputations. <em>Communicating Risks and Benefits: An Evidence-Based User&rsquo;s Guide</em> provides the scientific foundations for effective communication.</span>
+                </li>
+
+                <li><a href="http://www.ahrq.gov/populations/lepguide/" class="gov" target="_blank">Improving Patient Safety Systems for Patients With Limited English Proficiency: A Guide for Hospitals</a>
+                <span>From the Agency for Healthcare Research and Quality (AHRQ) and the Department of Defense, this tool helps hospital leaders learn how to identify, report, monitor, and prevent medical errors among patients with Limited English Proficiency (LEP).</span>
+                </li>
+
+                <li><a href="http://www.ahrq.gov/teamsteppstools/lep/index.html" class="gov" target="_blank">TeamSTEPPS&reg; Limited English Proficiency (LEP) module</a>
+                <span>From the Agency for Healthcare Research and Quality (AHRQ) and the Department of Defense, this module provides an evidence-based teamwork system to reduce medical errors for patients with Limited English Proficiency (LEP).</span>
+                </li>
+<!--
+                <li><a href="http://www.nlm.nih.gov/medlineplus/evaluatinghealthinformation.html" class="gov" target="_blank">National Institutes of Health, National Institute on Aging, Helping Older Adults Search for Health Information Online: A Toolkit for Trainers</a></li> -->
+
+                </ul>
+                
+                
+				<p id="top2"><a href="#top">Return to Top</a></p>
+		    </div>
+		    <div id="reports">
+            	<h2 id="h2Hidden3">Reports &amp; Research</h2>
+                <ul class="links">
+				
+				<li><a href="http://content.healthaffairs.org/cgi/content/full/31/2/434?ijkey=4c1tO0MPuF51Q&keytype=ref&siteid=healthaff" class="external" target="_blank">New Federal Policy Initiatives To Boost Health Literacy Can Help The Nation Move Beyond The Cycle Of Costly &lsquo;Crisis Care&rsquo; (2012)</a>
+				<span>This article from <em>Health Affairs</em> outlines what the Department of Health and Human Services is doing to improve healthy literacy rates nationwide, and how we have brought health literacy to a tipping point through health policy milestones, including the healthcare reform law, the National Action Plan to Improve Healthy Literacy, and the Plain Writing Act of 2010.</span>
+				</li>
+                
+                <li><a href="/communication/literacy/issuebrief/">Issue Brief:  America&rsquo;s Health Literacy: Why We Need Accessible Health Information (2008)</a>
+                <span>This brief summarizes key findings and presents some policy implications of the 2003 National Assessment of Adult Literacy (NAAL) and the first national assessment of health literacy.
+                </span>
+                </li>
+
+                <li><a href="http://www.ama-assn.org/ama1/pub/upload/mm/367/hl_report_2008.pdf" class="external" target="_blank">Assessing the Nation&#8217;s Health Literacy: Key Concepts and Findings of the National Assessment of Adult Literacy (2008) [PDF &#8211; 2.0MB]</a>
+                <span>This document details health literacy results from the landmark 2003 NAAL, the Nation&rsquo;s most comprehensive measure of adult literacy in more than a decade.
+                </span>
+                </li>
+
+                <li><a href="http://www.surgeongeneral.gov/topics/healthliteracy/toc.html" class="gov" target="_blank">Proceedings of the Surgeon General&#8217;s Workshop on Improving Health Literacy (2006)</a>
+                <span>This report documents the Surgeon General&rsquo;s Workshop on Improving Health Literacy, held on September 7, 2006. The goal of the workshop was to present the state of the science in the field of health literacy from a variety of perspectives, including those of health care organizations and providers, the research community, and educators. </span>
+                </li>
+
+                <li><a href="/communication/literacy/TownHall/default.htm">Health Literacy Town Hall Meeting Notes (2007&#8211;2008)</a>
+                <span>These notes detail the proceedings of four town hall meetings, which offered participants the opportunity to explore promising practices and lessons learned in improving health literacy. Findings from the meetings shaped the development of the National Action Plan To Improve Health Literacy.  </span>
+                </li>
+
+                <li><a href="http://odphp.osophs.dhhs.gov/pubs/prevrpt/Volume19/issue4pr.htm" class="gov" target="_blank">Prevention Report: Focus on Health Literacy (HHS 2005)</a>
+                <span>This report explores the connection between health literacy and good health as well as barriers to and steps for improving health literacy.</span>
+                </li>
+
+                <li><a href="/communication/literacy/plainlanguage/default.htm">Issue Brief: Plain Language: A Promising Strategy for Clearly Communicating Health Information and Improving Health Literacy (2005)</a>
+                <span>This issue brief describes why plain language is a promising strategy for clearly communicating health information and improving health literacy.</span>
+                </li>
+
+                <li><a href="http://www.ahrq.gov/clinic/epcsums/litsum.htm" class="gov" target="_blank">Literacy and Health Outcomes (AHRQ 2004)</a>
+                <span>This report from the Agency for Healthcare Research and Quality (AHRQ) summarizes the results of studies on the relationship between literacy and health outcomes, and it provides evidence-based approaches to improving the health of people with limited literacy.</span>
+                </li>
+
+                <li><a href="http://www.iom.edu/Reports/2004/Health-Literacy-A-Prescription-to-End-Confusion.aspx" class="external" target="_blank">A Prescription To End Confusion (IOM 2004)</a>  
+                <span>This landmark report by the Institute of Medicine (IOM) explores health literacy, details the consequences of poor health literacy, and provides potential ways to improve health literacy.</span>
+                </li>
+
+                <li><a href="http://nces.ed.gov/pubsearch/pubsinfo.asp?pubid=2006483" class="gov" target="_blank">The Health Literacy of America&#8217;s Adults: Results from the 2003 National Assessment of Adult Literacy (2006)</a>
+                <span>This is the first release of NAAL health literacy results. The results are based on assessment tasks designed specifically to measure the health literacy of adults living in the United States.</span>
+<ul>
+                <li><a href="http://nces.ed.gov/pubsearch/pubsinfo.asp?pubid=2006471" class="gov" target="_blank">Key Concepts and Features of the 2003 NAAL (2005)</a></li>
+
+                
+                <li><a href="/communication/literacy/NAALResults/">Presentation of NAAL Health Literacy Results, Dr. Grover J. (Russ) Whitehurst (2006)</a></li>
+
+                <li><a href="http://nces.ed.gov/pubsearch/pubsinfo.asp?pubid=2006470" class="gov" target="_blank">A First Look at the Literacy of America&#8217;s Adults in the 21st Century (2005)</a></li>
+</ul>
+                
+                <li><a href="http://odphp.osophs.dhhs.gov/projects/healthcomm/objective2.htm" class="gov" target="_blank">Health Literacy Chapter in <em>Communicating Health: Priorities and Strategies for Progress</em> (2003)</a>
+                <span>This chapter comes from the Action Plan To Achieve the Health Communication Objectives in Healthy People 2010 and details issues relating to measuring improvement, influencing change, and developing solutions to address limited health literacy.</span>
+                </li>
+
+                <li><a href="http://www.aafp.org/fpm/2006/0900/p73.html" class="external" target="_blank"><!-- American Academy of Family Physicians, Family Practice Management, -->Improving Communication With Older Patients: Tips From the Literature (2006)</a>
+                <span>This article provides specific steps that physicians and their staffs can take to improve communication with older adults.</span>
+                </li>
+
+                <li><a href="http://www.ncbi.nlm.nih.gov/pmc/articles/PMC2605042/" class="gov" target="_blank"><em>Journal of the Medical Library Association</em>, The Journey Project: A Case Study in Providing Health Information to Mitigate Health Disparities (2009)</a>
+                <span>This article details the results of an intervention designed to improve health disparities by creating a staff position that combines social work and health library science to assist patients.</span>
+                </li>
+
+                <li><a href="http://www.cdc.gov/healthmarketing/healthliteracy/reports/olderadults.pdf" class="gov" target="_blank"><!-- Centers for Disease Control and Prevention, -->Improving Health Literacy for Older Adults (2009) [PDF &#8211; 1.97MB]</a>
+                <span>This report summarizes presentations from the December 6&#8211;7, 2007, meeting of the Expert Panel on Improving Health Literacy.</span>
+                </li>
+
+                <li><a href="http://www.nih.gov/icd/od/ocpl/resources/healthliteracyresearch.htm" class="gov" target="_blank"><!--National Institutes of Health, -->Research Underway in Health Literacy Supported by NIH</a>
+                <span>This page lists all health literacy research projects being conducted with funds from the National Institutes of Health (NIH).</span>
+                </li>
+
+                </ul>
+
+                
+				<p id="top3"><a href="#top">Return to Top</a></p>
+		    </div>
+            
+           	<div id="resources">
+            	<h2 id="h2Hidden4">Related Resources</h2>
+                <ul class="links">
+                <li><a href="/communication/HLActionPlan/">National Action Plan To Improve Health Literacy</a>
+                <span>The National Action Plan To Improve Health Literacy seeks to engage organizations, professionals, policymakers, communities, individuals, and families in a linked, multisector effort to improve health literacy.</span>                </li>
+
+                <li><a href="http://www.healthypeople.gov/2020/topicsobjectives2020/overview.aspx?topicid=18" class="gov" target="_blank">Healthy People: Health Communication and Health IT Objectives</a>
+                <span>Healthy People provides science-based, 10-year national objectives for improving the use, quality, and accessibility of health communication and health IT. </span>                </li>
+
+                <li><a href="/communication/literacy/HealthLiteracyResourcesFactSheet.pdf">Health Literacy Resources Fact Sheet [PDF &#8211; 105KB]</a>
+                <span>This ready-to-print fact sheet from CDC provides a list of quality health literacy trainings, standards, reports, and assessment tools.</span>                </li>
+
+                <li><a href="http://www.ahrq.gov/browse/hlitix.htm" class="gov" target="_blank">AHRQ Health Literacy and Cultural Competency Web Site</a>
+                <span>Individuals can sign up to receive articles, grant announcements, and the latest reports, tools, and resources. </span>                </li>
+
+
+                <li><a href="http://www.nih.gov/clearcommunication/" class="gov" target="_blank">Clear Communication: an NIH Health Literacy Initiative</a>
+                <span>This resource focuses on the various programs and resources that NIH has developed to improve communication between consumers and health professionals.</span>                </li>
+
+
+                <li><a href="http://www.cdc.gov/healthliteracy/" class="gov" target="_blank">Health Literacy: Accurate, Accessible and Actionable Health Information for All</a>
+                <span>This CDC Web site provides information and tools to learn about health literacy, find online trainings, develop a health literacy improvement plan, create easy-to-understand materials, and find methods to evaluate health literacy.</span>                </li>
+
+
+                <li><a href="http://www.cdc.gov/healthmarketing/healthliteracy/" class="gov" target="_blank">Health Literacy at CDC</a>
+                <span>This fact sheet covers the basics of health literacy and provides links to trainings, reports, and resources.</span>                </li>
+
+                <li><a href="http://www.nlm.nih.gov/medlineplus/healthliteracy.html" class="gov" target="_blank">National Library of Medicine&#8217;s MedlinePlus: Health Literacy</a>
+                <span>This consumer-friendly site provides a list of helpful resources to assist consumers in improving their own health literacy.</span>                </li>
+
+                <li><a href="http://www.nlm.nih.gov/pubs/cbm/healthliteracybarriers.html" class="gov" target="_blank">National Library of Medicine Health Literacy Bibliography</a>
+                <span>This bibliography examines some of the barriers that may need to be addressed when designing health literacy strategies.</span>                </li>
+
+                <li><a href="http://www.nlm.nih.gov/services/health_literacy.html" class="gov" target="_blank">National Library of Medicine&#8217;s Search and Health Literacy Information Resources</a>
+                <span>This search resource lists citations to health literacy articles in English-language journals and Web sites.</span>                </li>
+
+                <li><a href="http://www.nlm.nih.gov/medlineplus/evaluatinghealthinformation.html" class="gov" target="_blank">National Library of Medicine&rsquo;s MedlinePlus: Evaluating Health Information</a>
+                <span>This consumer-friendly site provides basic strategies to improve health and media literacy.</span>                </li>
+
+                <li><a href="http://nnlm.gov/outreach/consumer/hlthlit.html" class="gov" target="_blank">National Network of Libraries of Medicine: Health Literacy</a>
+                <span>This page provides an overview of health literacy, its impact, and the role of the consumer health librarian. It also lists a number of resources, organizations, and listservs.</span>                </li>
+
+                <li><a href="https://www.thinkculturalhealth.hhs.gov/" class="gov" target="_blank">Office of Minority Health: Think Cultural Health</a>
+                <span>This site offers a number of cultural competency resources for health professionals.</span>                </li>
+
+                <li><a href="http://www.plainlanguage.gov/" class="gov" target="_blank">PlainLanguage.gov</a>
+                <span>Users can review Federal plain language guidelines, view examples, and discover tools and resources on this site.</span>                </li>
+                
+                <li><a href="http://www.healthcare.gov/prevention/nphpphc/strategy/index.html">National Prevention Strategy</a> <span>The National Prevention Strategy is a comprehensive plan to increase the number of Americans who are healthy at every stage of life. It recognizes that good health comes not just from receiving quality medical care, but also from positive changes in an individual&#8217;s environment. Improving health literacy is a key component of the National Prevention Strategy.</span></li>
+
+                <li><a href="http://www.nal.usda.gov/fnic/pubs/bibs/edu/health_literacy.pdf" class="gov" target="_blank">National Agricultural Library <!--(USDA)--> Health Literacy Resource List for Educators (March 2007) [PDF &#8211; 155KB]</a>
+                <span>This publication is a collection of health literacy resources, tools for developing and evaluating materials, and sources of easy-to-read nutrition materials.</span>                </li>
+
+                <li><a href="http://aspe.hhs.gov/health/blueprint/" class="gov" target="_blank">Prevention: A Blueprint for Action</a>
+                <span>The plan details a number of action steps to improve health in the United States as outlined in the <em>HealthierUS Initiative</em>, including health literacy and messaging.</span>                </li>
+
+                <li><a href="http://www.read-able.com/" class="external" target="_blank">read-able.com: The Readability Test Tool
+                </a>
+                <span>The Readability Test Tool provides a quick and easy way to test the readability of a Web page or text.</span>                </li>
+
+                <li><a href="http://www.healthliteracymissouri.org/library/" class="external" target="_blank">Health Literacy Missouri<!--, Reference--> Library</a>
+                <span>This library is a collection of references to articles, books, Web sites, and other materials on health literacy from major health databases and indexes, the Internet, and other sources.</span>                </li>
+
+                <li><a href="/communication/literacy/ResourcesShared.doc"><!--National Institutes of Health, National Library of Medicine, MedlinePlus, Evaluating Health Information-->Resources Shared by Participants During the October 7, 2010, Health Literacy Twitter Chat Hosted by healthfinder.gov [DOC &#8211; 49KB ]</a>
+                <span>This list of health literacy resources was generated by participants in a Health Literacy Twitter Chat and includes links to information from the Federal Government and non-Government organizations.</span>                </li>
+                </ul>
+                
+                
+				<p id="top4"><a href="#top">Return to Top</a></p>
+		    </div>
+            
+		  </div>
+
+		</div>
+        </div><!-- /pancon1 -->
+
+
+<p class="smaller">This graphic notice,<img class='exiticon' src='/images/2010/exit_disclaimer.png' alt='External Link: You are leaving Health.gov' title='External Link: You are leaving Health.gov'>, means that you are leaving the ODPHP/Health Communication site and entering a non-Federal Web site. <a href="/communication/exitdisclaimer.asp#external">View full disclaimer</a>.</p>
+
+
+</div><!-- /topicMainContent -->
+
+
+
+
+<div class="clear"></div></div><!-- /containerSecondaryInner --><div class="clear"></div>
+<div id="footer"><div id="footerBar"><div id="hhslogo"><a href="http://www.hhs.gov"><img src="/images/2010/hhs_footer_left.jpg" alt="U.S. Department of Health and Humane Services logo" title="U.S. Department of Health and Humane Services logo" width="333" height="41" border="0" /></a></div>
+<div id="hhslink"><a href="http://www.hhs.gov"><img src="/images/2010/hhs_footer_right.jpg" alt="Link to www.hhs.gov" title="Link to www.hhs.gov" width="115" height="30" border="0" /></a></div></div>
+<div id="footerContent">
+<div id="odphp"><p>This site is coordinated by the Office of Disease Prevention and Health Promotion, Office of the Assistant Secretary for Health, Office of the Secretary, U.S. Department of Health and Human Services.</p>
+<p>Office of Disease Prevention and Health Promotion <br />
+Voice (240) 453-8280, Fax (240) 453-8282</p>
+
+  <a href="http://www.usa.gov/"><img src="/images/2010/usagov_logo.jpg" alt="USA.gov" title="USA.gov logo" width="84" height="29" border="0" /></a></div>
+<div id="footerlinks"><p><a href="http://www.hhs.gov/Accessibility.html">Accessibility</a> <span>|</span> <a href="http://www.hhs.gov/Privacy.html">Privacy Policy</a> <span>|</span> <a href="http://www.hhs.gov/foia/">Freedom of Information Act</a><br />
+<a href="/plugins.asp">Viewers &amp; Players</a> <span>|</span>  <a href="mailto:info@nhic.org">Comments and Suggestions</a><br />
+Last updated: <em><strong>11/6/2012</strong></em></p></div>
+<div class="clear"></div>
+</div>
+<div class="clear"></div>
+
+</div><!-- /footer -->
+
+
+<div class="print">
+<p>&nbsp;</p>
+<p>This site is coordinated by the Office of Disease Prevention and Health Promotion, Office of the Assistant Secretary for Health, Office of the Secretary, U.S. Department of Health and Human Services.</p>
+
+</div>
+</div><!-- /containerMainOuter --><div class="clear"></div></div><!-- /container --><div class="clear"></div></div><!-- /containerOuter --></body>
+</html>

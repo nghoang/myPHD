@@ -1,0 +1,2005 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<title>comp.lang.awk FAQ</title>
+<meta name="description" content="comp.lang.awk FAQ"/>
+<meta name="robots" content="index, follow" />
+
+
+<link rel="stylesheet" type="text/css" href="http://www.faqs.org/style/faqs.css" />
+<script type="text/javascript" src="http://www.faqs.org/style/rs.js"></script>
+<script type="text/javascript" src="http://www.faqs.org/utils.js"></script>
+<style type="text/css">
+#hsublogo,#navigation{display:none;}
+.left {float:left;margin-left:20%;height:40px;}
+.right {float:right;margin-right:20%;height:40px;}
+.hr4 { clear: both;}
+.fHdrs {background:#EAEAEA;padding-left:10px;margin:0px;overflow-x:auto;max-width:100%;}
+.fHdrs pre {margin-top:0px;}
+span.mfaq {color:#888;font-weight:bold;}
+</style>
+<style type="text/css">.Comments_messagebox {text-align:center;color:#C52525;background-color:#FFEAEA;border:1px dotted #DB8686;width:100%;padding:10px;margin-left:auto;margin-right:auto;margin-bottom:15px;}#Comments_form input { margin-left:10px;margin-right:10px;margin-top:5px;display:block;width:150px;}#Comments_form textarea { margin-left:10px;display:block;width:95%;height:140px;}#Comments_form div.Comments_name {float:left;}#Comments_form div.Comments_mail {float:left;position:relative;}#Comments_form div.Comments_showmail {margin-left:8px;color:gray;font-size:8pt;}#Comments_form div.Comments_text {clear:left;}#Comments_form div.Comments_captcha { float:left;}#Comments_form img.Comments_captcha { margin-left:10px;margin-top:15px;border:1px solid #BCC6D6;padding:2px;}#Comments_form .Comments_showmail label {display:inline;margin:2px;width:auto;}#Comments_form .Comments_showmail input {display:inline;margin:0px;width:auto;border:none;background-color:transparent;}div.Comments_form {width:96%; padding:10px 20px; margin: auto;}div.Comments_commentsbox {width:100%;margin:auto;padding:8px;margin-bottom:8px;line-height:normal;}#Comments_section h4 {margin-top:0px;margin-bottom:0px;}div.Comments_comment {width:96%; border-top: 4px solid #C4DAE5; border-right: 1px solid #E8F1F7; border-left: 1px solid #E8F1F7; padding:2px; padding-top:8px;  margin: auto; background-repeat:repeat-x;background-position:top;margin-bottom:12px; background-color:#FBFBFB;}div.Comments_comment div.Comments_info {height:28px;overflow:hidden;position:relative;top:-17px;}div.Comments_comment div.Comments_link  { z-index:2;text-align:center;width:13px;position:relative;left:5px;top:-17px;}div.Comments_comment a.Comments_link   { font-family:Tahoma,Arial;font-weight:bold;text-decoration:none;color:#CC0000;font-size:7pt;border:none;}div.Comments_comment div.Comments_balloon { z-index:1;width:23px;height:21px;position:relative;top:0px;}div.Comments_comment div.Comments_date {float:right;font-family:Tahoma,Arial;font-size:7pt;color:gray;display:inline;position:relative;top:-20px;left:-7px;}div.Comments_comment div.Comments_moderate {float:right;display:inline;position:relative;top:-19px;left:-2px;}div.Comments_comment div.Comments_user { font-family:Tahoma,Arial;font-size:8pt;display:inline;position:relative;top:-19px;left:29px;}div.Comments_comment div.Comments_user a { font-weight:bold;text-decoration:none;color:#006699; }div.Comments_comment div.Comments_text { margin-left:30px;color:#666666;position:relative;top:-10px;font-size:96%;}div.Comments_comment div.Comments_clear {clear:both;line-height:1px;height:1px;display:inline;}div.Comments_comment {background-image:url('/images/comments.back.1.png')}div.Comments_comment_alt {background-image:url('/images/comments.back.2.png')}#qaComments {text-align:left;}</style><script language="JavaScript" type="text/javascript">
+//<![CDATA[
+function confirmModerate(url,num){
+  url = url + '?Comments[do]=mod&Comments[id]=' + num + '#Comments_' + num;
+  if (confirm('Do you want to report this comment as inappropriate?')) location.href=url;
+  return 0;
+}
+function validate_form(frm) {
+  var value = '';
+  var errFlag = new Array();
+  _qfMsg = '';
+
+  value = frm.elements['Comments[name]'].value;
+  if (value == '' && !errFlag['name']) {
+    errFlag['name'] = true;
+    _qfMsg = _qfMsg + '\n - Please enter your name';
+  }
+
+  value = frm.elements['Comments[captcha]'].value;
+  if (value == '' && !errFlag['captcha']) {
+    errFlag['captcha'] = true;
+    _qfMsg = _qfMsg + '\n - Please enter Security Code';
+	}
+
+  value = frm.elements['Comments[mail]'].value;
+  if (value == '' && !errFlag['mail']) {
+    errFlag['mail'] = true;
+    _qfMsg = _qfMsg + '\n - Please enter your e-mail';
+  }
+  var regex = /^((\"[^\"\f\n\r\t\v\b]+\")|([\w\!\#\$\%\&'\*\+\-\~\/\^\`\|\{\}]+(\.[\w\!\#\$\%\&'\*\+\-\~\/\^\`\|\{\}]+)*))@((\[(((25[0-5])|(2[0-4][0-9])|([0-1]?[0-9]?[0-9]))\.((25[0-5])|(2[0-4][0-9])|([0-1]?[0-9]?[0-9]))\.((25[0-5])|(2[0-4][0-9])|([0-1]?[0-9]?[0-9]))\.((25[0-5])|(2[0-4][0-9])|([0-1]?[0-9]?[0-9])))\])|(((25[0-5])|(2[0-4][0-9])|([0-1]?[0-9]?[0-9]))\.((25[0-5])|(2[0-4][0-9])|([0-1]?[0-9]?[0-9]))\.((25[0-5])|(2[0-4][0-9])|([0-1]?[0-9]?[0-9]))\.((25[0-5])|(2[0-4][0-9])|([0-1]?[0-9]?[0-9])))|((([A-Za-z0-9\-])+\.)+[A-Za-z\-]+))$/;
+  if (value != '' &&!regex.test(value) && !errFlag['mail']) {
+    errFlag['mail'] = true;
+    _qfMsg = _qfMsg + '\n - E-mail address format is invalid';
+  }
+
+  value = frm.elements['Comments[text]'].value;
+  if (value == '' && !errFlag['text']) {
+    errFlag['text'] = true;
+    _qfMsg = _qfMsg + '\n - Please enter your comment';
+  }
+  if (value.length<50 && !errFlag['text']) {
+    errFlag['text'] = true;
+    _qfMsg = _qfMsg + '\n - Comment is too short (50 characters min.)';
+  }
+  if (value.length>4000 && !errFlag['text']) {
+    errFlag['text'] = true;
+    _qfMsg = _qfMsg + '\n - Comment is too long (4000 characters max)';
+  }
+
+  if (_qfMsg != '') {
+    _qfMsg = 'Invalid information entered:' + _qfMsg + '\nPlease correct these fields.';
+    alert(_qfMsg);
+    return false;
+  }
+  return true;
+}
+
+//]]>
+</script><script type="text/javascript" src="/tools.js"></script>
+<script type="text/javascript">
+(function() {
+var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+po.src = 'https://apis.google.com/js/plusone.js';
+var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+})();
+</script>
+</head>
+
+<body>
+
+<script type="text/javascript">
+    function hAll() {
+        var hM = document.getElementById('headersMain');
+        var hA = document.getElementById('headersFull');
+        hM.style.display = 'none';
+        hM.style.visibility = 'hidden';
+        hA.style.display = 'block';
+        hA.style.visibility = 'visible';
+    }
+    function hMain() {
+        var hM = document.getElementById('headersMain');
+        var hA = document.getElementById('headersFull');
+        hA.style.display = 'none';
+        hA.style.visibility = 'hidden';
+        hM.style.display = 'block';
+        hM.style.visibility = 'visible';
+    }
+
+    function fChange() {
+        var f = document.getElementById('fontSelect');
+        var i = f.selectedIndex;
+        document.getElementById('faqText').style.fontFamily = f.options[i].value;
+    }
+   
+    
+
+</script>
+
+
+<!-- header -->
+<div id="hbar"></div>
+<div id="body" style="padding:0px;width:100%;text-align:center;">
+	<div id="page">
+
+	<div id="hwelcome" style='position:static;top:0px;width:100%;text-align:center;'>
+
+
+	<div id="header" style='float:left;top:0px;width:206px;height:142px;border: 1px dashed #ccc;border-left:none;border-top:none;'>
+		<div id="hsearch"></div>
+		<div id="hlogo"><a href="http://www.faqs.org/" style='border:none;'><img src="/images/faqs.png" alt="faqs.org"></a></div>
+		<div id="hsublogo"><h1 style='line-height:100%;'>comp.lang.awk FAQ</h1></div>
+
+<table style='border:0px;height:56px;width:200px;'><tr><td style='padding-left:5px;'><g:plusone size='medium'></g:plusone></td><td>
+<iframe src="http://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fwww.faqs.org%2Ffaqs%2Ftest%2Fyolo%2Ffaq%2Fpart1%2F&amp;layout=button_count&amp;show_faces=true&amp;width=400&amp;action=like&amp;font&amp;colorscheme=light&amp;heig$
+scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:150px; height:20px;" allowTransparency="true"></iframe>
+</td></tr></table>
+
+
+        Font: <select id="fontSelect" autocomplete='off' onchange='fChange();'>        
+        <option selected>Monospace</option>
+        <option>Arial</option>
+        <option>Verdana</option>
+        <option>Tahoma</option>
+        <option>Times New Roman</option>
+        <option>Helvetica</option>
+        <option>Comic Sans MS</option>
+        </select>
+
+						
+	</div>
+
+<!-- SEARCH -->	
+<div style='float:right;padding:4px;top:0px;width:285px;'>		
+<div style='padding-bottom:10px;'>
+<ul style="margin:0px;padding:0px; list-style: none;">
+<h2 style='margin:0px;'>Search the FAQ Archives</h2><li>
+<form action='http://www.faqs.org/faqs/faqresults.html' id='cse-search-box'>
+  <div>
+    <input type='hidden' name='cx' value='012585674615115756003:0rnper8ld_o' />
+    <input type='hidden' name='cof' value='FORID:11' />
+    <input type='hidden' name='ie' value='UTF-8' />
+    <input type='hidden' name='hq' value='more:faqs' />
+    <input type='text' name='q' size='24' style='width:180px;'/>
+
+    <input type='submit' name='sa' value='Search FAQs' style='width:90px;padding:0px;'/>
+  </div>
+</form>
+<script type='text/javascript' src='http://www.google.com/coop/cse/brand?form=cse-search-box&lang=en'></script>
+</li>
+</ul>
+</div>
+<small>
+<a rel="NOFOLLOW EXTERNAL" href="http://www.faqs.org/faqs/by-archive-name.html#3">3</a> - <a rel="NOFOLLOW EXTERNAL" href="http://www.faqs.org/faqs/by-archive-name.html#A">A</a> - <a rel="NOFOLLOW EXTERNAL" href="http://www.faqs.org/faqs/by-archive-name.html#B">B</a> - <a href="http://www.faqs.org/faqs/by-archive-name.html#C">C</a> - <a rel="NOFOLLOW EXTERNAL" href="http://www.faqs.org/faqs/by-archive-name.html#D">D</a> - <a rel="NOFOLLOW EXTERNAL" href="http://www.faqs.org/faqs/by-archive-name.html#E">E</a> - <a href="http://www.faqs.org/faqs/by-archive-name.html#F">F</a> - <a rel="NOFOLLOW EXTERNAL" href="http://www.faqs.org/faqs/by-archive-name.html#G">G</a> - <a rel="NOFOLLOW EXTERNAL" href="http://www.faqs.org/faqs/by-archive-name.html#H">H</a> - <a href="http://www.faqs.org/faqs/by-archive-name.html#I">I</a> - <a rel="NOFOLLOW EXTERNAL" href="http://www.faqs.org/faqs/by-archive-name.html#J">J</a> - <a rel="NOFOLLOW EXTERNAL" href="http://www.faqs.org/faqs/by-archive-name.html#K">K</a> - <a href="http://www.faqs.org/faqs/by-archive-name.html#L">L</a> - <a rel="NOFOLLOW EXTERNAL" href="http://www.faqs.org/faqs/by-archive-name.html#M">M</a>
+<br/><a rel="NOFOLLOW EXTERNAL" href="http://www.faqs.org/faqs/by-archive-name.html#N">N</a> - <a href="http://www.faqs.org/faqs/by-archive-name.html#O">O</a> - <a rel="NOFOLLOW EXTERNAL" href="http://www.faqs.org/faqs/by-archive-name.html#P">P</a> - <a rel="NOFOLLOW EXTERNAL" href="http://www.faqs.org/faqs/by-archive-name.html#Q">Q</a> - <a href="http://www.faqs.org/faqs/by-archive-name.html#R">R</a> - <a rel="NOFOLLOW EXTERNAL" href="http://www.faqs.org/faqs/by-archive-name.html#S">S</a> - <a rel="NOFOLLOW EXTERNAL" href="http://www.faqs.org/faqs/by-archive-name.html#T">T</a> - <a href="http://www.faqs.org/faqs/by-archive-name.html#U">U</a> - <a rel="NOFOLLOW EXTERNAL" href="http://www.faqs.org/faqs/by-archive-name.html#V">V</a> - <a rel="NOFOLLOW EXTERNAL" href="http://www.faqs.org/faqs/by-archive-name.html#W">W</a> - <a href="http://www.faqs.org/faqs/by-archive-name.html#X">X</a> - <a rel="NOFOLLOW EXTERNAL" href="http://www.faqs.org/faqs/by-archive-name.html#Y">Y</a> - <a rel="NOFOLLOW EXTERNAL" href="http://www.faqs.org/faqs/by-archive-name.html#Z">Z</a>
+</small>
+</div>
+<!-- /SEARCH -->
+	
+	<div style='padding-left:285px;padding-right:285px;'>
+	<img src="/images/library.jpg" alt="faqs.org - Internet FAQ Archives" style="width: 150px; height: 62px;">	
+	<h1 style='margin:0px;padding:0px;'>comp.lang.awk FAQ</h1>
+	<small style='margin:0px;font-size:0.75em;'><i></i></small><br />
+
+	<!-- FAQ HDR --><SMALL><STRONG>[ <a href='/faqs/'>Usenet FAQs</a> | <a href='/contrib/'>Web FAQs</a> | <a href='/docs/'>Documents</a> | <a href='/rfcs/'>RFC Index</a>  | <a href='/people-search/'>People Search</a> | <a href='/patents/'>Patents</a> | <a href='/abstracts/'>Abstracts</a> | <a href='http://www.city-data.com/neighborhood/'>Neighborhoods</a>  ] </STRONG></SMALL>
+
+	    
+    </div>  
+    </div>
+    
+    <div id="navigation">faqs.org</div>				
+	<div id="content" style='margin:0px;padding:0px;'>
+
+<!-- /header -->
+
+
+<div id="fmaincolumn" style="padding:0px;clear:both;margin:0px;">
+
+<table style="margin: 0px auto; width: 100%;"><tbody><tr>
+<td class="fmtable" style="border: medium none; width: 75%;" valign="top">
+<div class='fHdrs' style='text-align:left;'>
+<b>Archive-name:</b> computer-lang/awk/faq
+<br/><b>Author:</b> awkfaq@locutus.ofB.ORG (Russell Schulz)
+<br/><b>Comp-lang-awk-archive-name:</b> faq
+<br/><b>Posting-Frequency:</b> biweekly
+<br/><b>Last-modified:</b> 2002-May-23
+<br/><b>Posting-Via:</b> news.demon.net (mail2news)
+<br/><b>Not-Posting-Via:</b> my connectivity provider who doesn't do news for uucp now
+<br/><b>Not-Posting-Via-The-Cable-Modem-Because:</b> I don't want to
+<br/><br/></div>
+<div id='headersMain' class='fHdrs' style='display:block;visibility:visible;'><pre>
+<a href='javascript:hAll();'>View all headers</a></pre></div>
+<div class='fHdrs' id='headersFull' style='display:none;visibility:hidden;'><pre>
+Path: senator-bedfellow.mit.edu!bloom-beacon.mit.edu!howland.erols.net!peer-feed.news.demon.net.MISMATCH!kibo.news.demon.net!news.demon.co.uk!demon!mail2news.demon.co.uk!not-for-mail
+From: awkfaq@locutus.ofB.ORG
+Newsgroups: <A REL='NOFOLLOW EXTERNAL' HREF="http://groups.google.com/group/comp.lang.awk" target="new">comp.lang.awk</A>,<A REL='NOFOLLOW EXTERNAL' HREF="http://groups.google.com/group/comp.answers" target="new">comp.answers</A>,<A REL='NOFOLLOW EXTERNAL' HREF="http://groups.google.com/group/news.answers" target="new">news.answers</A>
+Subject: <A REL='NOFOLLOW EXTERNAL' HREF="http://groups.google.com/group/comp.lang.awk" target="new">comp.lang.awk</A> FAQ
+Followup-To: <A REL='NOFOLLOW EXTERNAL' HREF="http://groups.google.com/group/comp.lang.awk" target="new">comp.lang.awk</A>
+Date: 24 Jun 2002 11:00:00 -0600
+Organization: Private System, Edmonton, AB, Canada
+Approved: news-answers-request@MIT.EDU
+Expires: 25 Jul 2002 12:00:00 GMT
+Message-ID: &lt;<A REL='NOFOLLOW EXTERNAL' HREF="http://groups.google.com/groups?selm=20020624.awkfaq.01@locutus.ofB.ORG" target="new">20020624.awkfaq.01@locutus.ofB.ORG</A>&gt;
+Reply-To: <A HREF="mailto:awkfaq@locutus.ofB.ORG">awkfaq@locutus.ofB.ORG</A>
+Summary: FAQ (Frequently Asked Questions) about the awk programming language
+X-Trace: mail2news.demon.co.uk 1024941429 mail2news:28030 mail2news mail2news.demon.co.uk
+X-Complaints-To: abuse@demon.net
+X-Mail2News-Path: news.demon.net!scanner.worldgate.ca!alpha3.uucp!locutus.ofb.org
+User-Agent: trivdb (uufree)
+Lines: 1720
+Xref: senator-bedfellow.mit.edu comp.lang.awk:21243 comp.answers:50448 news.answers:232951
+
+<a href='javascript:hMain();'>View main headers</a></pre></div>
+<div align='center' style='background:#CCF;'><font face='Arial'>See reader questions & answers on this topic! - <a href='#qaComments'>Help others by sharing your knowledge</a></font></div><pre id='faqText'>
+Frequently Asked Questions == FAQ
+
+The FAQ list for <A REL='NOFOLLOW EXTERNAL' HREF="http://groups.google.com/group/comp.lang.awk" target="new">comp.lang.awk</A> can be found on the Internet:
+  &lt;<A REL='NOFOLLOW EXTERNAL' HREF="ftp://rtfm.mit.edu/pub/usenet/comp.lang.awk/faq">ftp://rtfm.mit.edu/pub/usenet/comp.lang.awk/faq</A>&gt;
+  &lt;<A REL='NOFOLLOW EXTERNAL' HREF="http://www.faqs.org/faqs/computer-lang/awk/faq/">http://www.faqs.org/faqs/computer-lang/awk/faq/</A>&gt;
+
+A version reformatted for PalmPilot may be found at
+  &lt;<A REL='NOFOLLOW EXTERNAL' HREF="http://www.castagnetto.org/download.php?fname=awkfaq.zip">http://www.castagnetto.org/download.php?fname=awkfaq.zip</A>&gt;
+
+An Italian translation may be found at
+  &lt;http://www.geocities.com/Eureka/Plaza/7153/i-awk-faq.html&gt;
+  [error 1999-Jul-20]
+
+
+========================================================================
+
+Contents:
+
+   1. Disclaimer
+   2. Spam
+   3. Can you answer my awk question?
+   4. How can I add a FAQ and its answer to the FAQ list?
+   5. What is awk?
+   6. What well-maintained awk-compatible languages are there?
+     6.1 nawk
+     6.2 gawk
+     6.3 mawk
+     6.4 tawk
+     6.5 mksawk
+     6.6 awkcc
+     6.7 awk2c
+     6.8 a2p
+     6.9 awka
+   7. Where can I buy awk?
+     7.1 AT&amp;T (awk, awkcc)
+     7.2 Thompson Automation (tawk)
+     7.3 MKS (awk, can generate standalone interpreted .exe)
+   8. Where can I get awk for free?  For what platforms?
+     8.0 meta-answer
+     8.1 the one true awk
+     8.2 gawk
+       8.2.1 gawk precompiled for MS-DOS or OS/2
+       8.2.2 gawk precompiled for Macintosh
+       8.2.3 gawk precompiled for Risc OS on Acorn
+       8.2.4 jgawk (Japanese gawk)
+       8.2.5 gawk.dll
+     8.3 mawk
+     8.4 awk2c
+     8.5 awka
+     8.6 awk in scheme
+     8.98 various old binary-only distributions for MSDOS
+     8.99 awkcc
+   9. Why would anyone still use awk instead of perl?
+  10. How can I learn awk?
+  11. What are some other awk resources?
+  12. How do I report a bug in gawk?
+  13. What's wrong with gawk on Digital's OSF/1?
+  14. How can I access shell or environment variables in an awk script?
+    14.1 Environment variables in general
+    14.2 Unix Shell Quoting
+    14.3 ENVIRON and "env"|getline
+    14.4 exporting environment variables back to the parent process
+  15. Is there an easy way to determine if you have oawk or nawk?
+  16. How does awk deal with multiple files?
+    16.0 Version warning
+    16.1 How can awk test for the existence of a file?
+    16.2 How can I get awk to read multiple files?
+    16.3 How can I tell from which file my input is coming?
+    16.4 How can I get awk to open multiple files (selected at runtime)?
+    16.5 How can I treat the first file specially?
+    16.6 How can I explicitly pass in a filename to treat specially?
+  17. How many elements were created by split()?
+  18. How can I split a string into characters?
+  19. Why does SunOS/Solaris awk behave oddly?
+  20. How do I have dynamic-width printf strings, like C?
+  21. Why doesn't "\\$" behave like /\\$/ ?  Why don't parentheses match?
+  22. What is awk's exit code?
+  23. How can I get awk to be case-insensitive?
+  24. How can I force a numeric/non-numeric comparison?
+  25. Why does { FS=":"; print $1 } not split the first record?
+  26. Did ^ and $ and . change in gawk?
+  27. Why doesn't awk 'begin {...}' work?
+  28. Why does awk 'BEGIN { print 6 " " -22 }' lose the space?
+  29. How do I take advantage of gawk's networking support?
+  98. Miscellaneous
+  99. Credits
+
+
+========================================================================
+
+1. Disclaimer
+
+Read at your own risk.  The current, previous, or original authors
+make no claim as to fitness for any purpose or absence of any errors,
+and offer no warranty.  Do not eat.
+
+
+========================================================================
+
+2. Spam
+
+you wouldn't believe how much spam I get to this address.
+
+
+========================================================================
+
+3. Can you answer my awk question?
+
+Probably not.  Please don't mail it to me.
+
+Read the FAQ, and the materials pointed to by it, and if you can't find
+an answer there, by all means post to the newsgroup.
+
+If you need help posting, see &lt;<A REL='NOFOLLOW EXTERNAL' HREF="http://groups.google.com/">http://groups.google.com/</A>&gt; among others.
+
+A FAQ list is intended to reduce traffic on a newsgroup, not eliminate it.
+
+
+========================================================================
+
+4. How can I add a FAQ and its answer to the FAQ list?
+
+Mail BOTH of them to me.  Then I can add them to the FAQ and it should
+help people who have that same question later, as well as everyone who
+reads the group, because they won't see it asked and answered so often.
+
+I do not work on this FAQ every day, but I will try to get updates
+incorporated in a timely manner.
+
+Of course, don't mail me my entire FAQ!  I already have a copy!  There
+are copies available all over the web that I could use if I lost mine!
+I pay for my access; don't you?
+
+  
+========================================================================
+
+5. What is awk?
+
+awk is a programming language, named after its three original authors:
+
+  Alfred V. Aho
+  Brian W. Kernighan
+  Peter J. Weinberger
+
+they write:
+
+``
+  Awk is a convenient and expressive programming language that can be
+  applied to a wide variety of computing and data-manipulation tasks.
+''
+
+the title of the book uses `AWK', but the contents of the book
+use `awk' (except at the beginning of sentences, as above).  I
+will attempt to do the same (except perhaps at the beginning of
+sentences, as above).
+
+most implementations of awk are interpreters which read your awk
+source program and parse it and act on it directly.
+
+some vendors have developed awk compilers which will produce an
+`executable' that may be run stand-alone -- thus, the end user
+does not have access to the source code.  there are also various
+awk-&gt;C converters which allow you to achieve the same
+functionality (by compiling the resulting C code later).
+
+one of the most popular compilers, from Thompson Automation,
+continues to be the subject of many positive posts in the group.
+
+  [
+    I don't really want to start a reviews section, but it may be
+    appropriate.  I think it's of general interest, and a good thing
+    for the FAQ, but I don't want to be given any grief by a negative
+    review I didn't write just because I'm distributing it.
+
+    if you have a review you'd like me to put a pointer to, please
+    inform me -- I already have some pointers of this form listed.
+  ]
+
+<A REL='NOFOLLOW EXTERNAL' HREF="http://groups.google.com/group/comp.lang.awk" target="new">comp.lang.awk</A> is not particularly about sed; for sed discussion, see
+the sed FAQ (and other documents) for answers to common questions and
+group recommendations:
+
+  &lt;http://www.dbnet.ece.ntua.gr/~george/sed/sedfaq.html&gt;
+  &lt;http://www.wollery.demon.co.uk/sed_faq.txt&gt;
+
+  &lt;<A REL='NOFOLLOW EXTERNAL' HREF="http://www.student.northpark.edu/pemente/sed/index.htm">http://www.student.northpark.edu/pemente/sed/index.htm</A>&gt;
+  &lt;<A REL='NOFOLLOW EXTERNAL' HREF="http://www.student.northpark.edu/pemente/sed/sedfaq.html">http://www.student.northpark.edu/pemente/sed/sedfaq.html</A>&gt;
+  &lt;<A REL='NOFOLLOW EXTERNAL' HREF="http://www.student.northpark.edu/pemente/sed/sed1line.txt">http://www.student.northpark.edu/pemente/sed/sed1line.txt</A>&gt;
+
+this all seems unrelated to AWK Engineering AG at &lt;<A REL='NOFOLLOW EXTERNAL' HREF="http://www.awk.ch/">http://www.awk.ch/</A>&gt;.
+
+
+========================================================================
+
+6. What well-maintained awk-compatible languages are there?
+
+  6.1 nawk
+    AT&amp;T's `new awk' -- probably nobody uses the `old awk' anymore.
+    interpreter
+    might NOT be well-maintained
+
+  6.2 gawk
+    from the GNU project
+    interpreter
+
+  6.3 mawk
+    from Michael Brennan
+    interpreter
+
+  6.4 tawk
+    from Thompson Automation
+    interpreter
+    compiler
+    MS-Windows DLL
+
+  6.5 mksawk
+    interpreter
+    compiler
+    from Mortice Kern Systems (MKS)
+
+    an old version of mksawk is shipped as `nawk' on Ultrix and
+    OSF/1.
+
+  6.6 awkcc
+    translator to C
+    might NOT be well-maintained
+
+  6.7 Brian Kernighan's awkc++
+    translator to C++
+    experimental
+    &lt;<A REL='NOFOLLOW EXTERNAL' HREF="http://cm.bell-labs.com/cm/cs/who/bwk/awkc++.ps">http://cm.bell-labs.com/cm/cs/who/bwk/awkc++.ps</A>&gt;
+
+  6.8 awk2c
+    translator to C
+    uses GNU awk libraries extensively, and is subject to GPL
+    might NOT be well-maintained
+
+  6.9 a2p
+    translator to Perl
+    comes with Perl
+    didn't used to handle multiple concatenations:  e.g., var="x" "y" "z"
+      -&gt; must be in pairs:  e.g.,  var=( "x" "y" ) "z"
+    didn't used to handle redirection:  e.g., { print("data") &gt; "filename" }
+      -&gt; no known workaround
+
+  6.10 awka
+    translator to C (comes with library)
+    based on mawk
+    subject to GPL
+    &lt;<A REL='NOFOLLOW EXTERNAL' HREF="http://awka.sourceforge.net/">http://awka.sourceforge.net/</A>&gt;
+
+
+========================================================================
+
+7. Where can I buy awk?
+
+7.1 AT&amp;T (awk, awkcc)
+
+  _The AWK Programming Language_ says:
+    phone
+      +1 201 522 6900 [is this number still valid?]
+    and login as `guest'.
+
+  &lt;http://www.unipress.com/att/new/awk.html&gt;
+  &lt;http://www.unipress.com/att/new/awkcc.html&gt;
+
+  these versions might NOT be well-maintained
+
+  they might also have the old `99 fields' limitation
+
+7.2 Thompson Automation (tawk)
+
+  &lt;<A REL='NOFOLLOW EXTERNAL' HREF="http://www.tasoft.com/tawk.html">http://www.tasoft.com/tawk.html</A>&gt;
+
+  Thompson Automation Software
+  5616 SW Jefferson
+  Portland, OR   97221
+  USA
+
+  North America: 800-944-0139
+  Phone: +1 503 224 1639
+  Fax: +1 503 224 3230
+
+7.3 MKS (awk, can generate standalone interpreted .exe)
+
+  &lt;http://www.mks.ca/solution/tk/&gt;
+
+  Mortice Kern Systems
+  185 Columbia Street W
+  Waterloo, ON
+  N2L 5Z5
+  Canada
+
+  North America: 800-265-2797
+  Phone: +1 519 884 2251
+  Fax: +1 519 884 8861
+
+
+========================================================================
+
+8. Where can I get awk for free?  For what platforms?
+
+  8.0 meta-answer
+    Obtaining Awk and Perl
+    &lt;<A REL='NOFOLLOW EXTERNAL' HREF="http://www.crossmyt.com/hc/htmlchek/awk-perl.html">http://www.crossmyt.com/hc/htmlchek/awk-perl.html</A>&gt;
+
+  8.1 the one true awk
+    &lt;<A REL='NOFOLLOW EXTERNAL' HREF="http://cm.bell-labs.com/who/bwk/">http://cm.bell-labs.com/who/bwk/</A>&gt;
+    &lt;<A REL='NOFOLLOW EXTERNAL' HREF="http://plan9.bell-labs.com/who/bwk/">http://plan9.bell-labs.com/who/bwk/</A>&gt;
+    &lt;<A REL='NOFOLLOW EXTERNAL' HREF="ftp://netlib.bell-labs.com/netlib/research/awk.bundle.Z">ftp://netlib.bell-labs.com/netlib/research/awk.bundle.Z</A>&gt;
+      [ appears to no longer be available via ftp 1997/Oct/23 ]
+
+    This is the version of awk described in "The Awk Programming Language",
+    by A. V. Aho, B. W. Kernighan, and P. J. Weinberger
+    (Addison-Wesley, 1988, ISBN 0-201-07981-X).
+    Changes, mostly bug fixes, are listed in FIXES.
+
+      8.1.1 the one true awk precompiled for Win32 is available from the
+      locations in 8.1; MS-DOS and OS/2 executables are available in the
+      GNUish collection:
+
+        &lt;<A REL='NOFOLLOW EXTERNAL' HREF="http://www.simtel.net/simtel.net/">http://www.simtel.net/simtel.net/</A>&gt;
+        &lt;<A REL='NOFOLLOW EXTERNAL' HREF="ftp://ftp.simtel.net/pub/simtelnet/gnu/gnuish">ftp://ftp.simtel.net/pub/simtelnet/gnu/gnuish</A>&gt;
+
+  8.2 gawk
+    NOTE:  gawk 3.0.2 had a per-record memory leak which was fixed
+      for gawk 3.0.3 .
+
+    &lt;<A REL='NOFOLLOW EXTERNAL' HREF="ftp://ftp.gnu.org/gnu/gawk/">ftp://ftp.gnu.org/gnu/gawk/</A>&gt;
+    e.g.,
+      &lt;<A REL='NOFOLLOW EXTERNAL' HREF="ftp://ftp.gnu.org/gnu/gawk/gawk-3.1.0.tar.gz">ftp://ftp.gnu.org/gnu/gawk/gawk-3.1.0.tar.gz</A>&gt;
+
+      8.2.1 gawk precompiled for MS-DOS, Win32, or OS/2
+
+        The djgpp collection contains a 32-bit DOS gawk, along with
+        many GNU utilities which may be useful with gawk (djgpp ports
+        understand long filenames on Windows 95):
+
+        &lt;<A REL='NOFOLLOW EXTERNAL' HREF="http://www.simtel.net/simtel.net/">http://www.simtel.net/simtel.net/</A>&gt;
+        &lt;ftp://ftp.simtel.net/pub/simtelnet/gnu/djgpp/v2gnu/&gt;
+          (look for gwk*.zip)
+
+        32-bit DOS (djgpp), Win32, and 16-bit OS/2 and DOS versions are
+        part of the GNUish project:
+
+        &lt;<A REL='NOFOLLOW EXTERNAL' HREF="http://www.simtel.net/simtel.net/">http://www.simtel.net/simtel.net/</A>&gt;
+        &lt;ftp://ftp.simtel.net/pub/simtelnet/gnu/gnuish/&gt;
+        &lt;http://wuarchive.wustl.edu/systems/msdos/gnuish/&gt; [error 1998/Apr/16]
+        &lt;http://simtel.coast.net/SimTel/gnu/gnuish.html&gt; [defunct]
+
+        32-bit OS/2, Win32, and DOS (emx) versions:
+
+        &lt;http://www.leo.org/pub/comp/os/os2/leo/gnu/script/gnuawk.zip&gt; (DE)
+        &lt;ftp://ftp-os2.cdrom.com/pub/os2/lang/&gt;              (US)
+
+        32-bit Win32 version (cygwin)
+
+        &lt;<A REL='NOFOLLOW EXTERNAL' HREF="http://www.cygwin.com/">http://www.cygwin.com/</A>&gt;
+
+        (CygWin requires some `buy in' to the CygWin Way -- this may not
+        affect you, or it may make your life much easier, or it may break
+        some small things you currently do.  In particular, I have been
+        bitten by CRLF-vs-LF issues and no-drive-letters issues.)
+
+      8.2.2 gawk precompiled for Macintosh
+
+        &lt;<A REL='NOFOLLOW EXTERNAL' HREF="ftp://ftp.funet.fi/pub/mac/programming/gawk.sit">ftp://ftp.funet.fi/pub/mac/programming/gawk.sit</A>&gt;
+        &lt;ftp://ezinfo.ethz.ch/mac/programming/&gt; [note trailing .]
+        &lt;ftp://ftp.uwtc.washington.edu/pub/Mac/Programming/&gt;
+        &lt;<A REL='NOFOLLOW EXTERNAL' HREF="ftp://ftp.eos.hokudai.ac.jp/pub/mac/util/Gawk/">ftp://ftp.eos.hokudai.ac.jp/pub/mac/util/Gawk/</A>&gt;
+        &lt;<A REL='NOFOLLOW EXTERNAL' HREF="ftp://ftp.cs.tu-berlin.de/pub/mac/lang/MPW/">ftp://ftp.cs.tu-berlin.de/pub/mac/lang/MPW/</A>&gt;
+
+      8.2.3.1 gawk 3.0.3 for Risc OS (versions &gt;= 3.1) on Acorn
+        Binary ported by J.Kortink, available from
+        &lt;<A REL='NOFOLLOW EXTERNAL' HREF="http://www.inter.nl.net/users/J.Kortink/">http://www.inter.nl.net/users/J.Kortink/</A>&gt;
+        Wimp front end available from
+        &lt;<A REL='NOFOLLOW EXTERNAL' HREF="http://www.wraith.u-net.com/soft.html">http://www.wraith.u-net.com/soft.html</A>&gt;
+
+      8.2.3.2 gawk 3.0.4 for Risc OS on Acorn
+        Binary (with extensions) ported by Gavin Wraith, available from
+        &lt;http://www.wraith.u-net.com/arc/Gawk304.arc &gt;
+
+      8.2.4 jgawk (Japanese gawk)
+        &lt;<A REL='NOFOLLOW EXTERNAL' HREF="ftp://ftp.eos.hokudai.ac.jp/pub/mac/util/jgawk/">ftp://ftp.eos.hokudai.ac.jp/pub/mac/util/jgawk/</A>&gt;
+        &lt;ftp://ftp.fu-berlin.de/mac/mirrors/info-mac/text/&gt;
+
+      8.2.5 gawk.dll
+        &lt;<A REL='NOFOLLOW EXTERNAL' HREF="http://www.walkerj.muc.de/">http://www.walkerj.muc.de/</A>&gt;
+          old Gawk 2.15.2 (from 1995) plus extensions
+          + read/Write functions for INI files
+          + read-only functions for DBF files
+          this is a _16-bit_ DLL, unfortunately without thunks
+          works with Win3.1x, plus Win9x _from 16-bit callers_
+          intermittent pointer problems with complex regexs
+
+  8.3 mawk
+    NOTE:  do not use mawk 1.3.2 (a one-character change yields 1.3.3)
+      due to an obscure (and rarely-appearing) regex problem.
+
+    &lt;ftp://ftp.whidbey.net/pub/brennan/&gt;
+      e.g.,
+      &lt;ftp://ftp.whidbey.net/pub/brennan/&gt;
+
+      8.3.1 mawk 1.3.3 for Risc OS on Acorn
+        Binary (with extensions) ported by Gavin Wraith, available from
+        &lt;http://www.wraith.u-net.com/arc/Mawk133.arc&gt;
+
+  8.4 awk2c
+    &lt;<A REL='NOFOLLOW EXTERNAL' HREF="ftp://sunsite.unc.edu/pub/Linux/utils/text/awk2c050.tgz">ftp://sunsite.unc.edu/pub/Linux/utils/text/awk2c050.tgz</A>&gt;
+
+  8.5 awka
+    &lt;<A REL='NOFOLLOW EXTERNAL' HREF="http://awka.sourceforge.net/">http://awka.sourceforge.net/</A>&gt;
+
+  8.6 awk in scheme
+    &lt;<A REL='NOFOLLOW EXTERNAL' HREF="http://charles.lehalle.free.fr/tools.html">http://charles.lehalle.free.fr/tools.html</A>&gt;
+
+  8.98 various old binary-only distributions for MSDOS
+    &lt;ftp://ftp.sunsite.org.uk/Mirrors/simtel.coast.net/coast/msdos/awk/&gt;
+    &lt;<A REL='NOFOLLOW EXTERNAL' HREF="http://www.simtel.net/pub/msdos/txtutl/">http://www.simtel.net/pub/msdos/txtutl/</A>&gt;
+
+  8.99 awkcc [unknown]
+    previous versions of this FAQ mentioned a file on MKS' web site.
+    Neil Mahoney spent some time examining it and discovered it is
+    just a package BUILT with awkcc, not awkcc itself.  eventually,
+    this notice will be removed.
+
+some of Neil's explorations are interesting for those looking
+for the real awkcc:
+
+Get file copied to my Sun 4 file system (where I do most of my work)
+
+$ ls -l awkcc
+-rw-r--r--  1 neilm        1827 May 20 11:20 README
+-rw-r--r--  1 neilm        1378 May 20 11:20 awk.h
+-rwxr-xr-x  1 neilm         118 May 20 11:20 awkcc.sh
+-rw-r--r--  1 neilm         824 May 20 11:20 dollars.h
+-rw-r--r--  1 neilm        3858 May 20 11:20 ear.h
+-rw-r--r--  1 neilm         993 May 20 11:20 hash.h
+-rw-r--r--  1 neilm        1707 May 20 11:20 header.h
+-rw-r--r--  1 neilm      103468 May 20 11:21 libAWK.a
+-rw-r--r--  1 neilm        4136 May 20 11:20 specassign.h
+-rw-r--r--  1 neilm       14467 May 20 11:20 unipen.c
+-rw-r--r--  1 neilm         275 May 20 11:20 y.tab.h
+
+Looking good!
+
+$ awkcc.sh
+fix errors found by run
+$ awkcc.sh
+
+no awkcc executable... what is this ?
+-rwxr-xr-x  1 neilm      106496 May 20 11:21 uniparse
+
+$ head -20 README
+
+        ##############################################
+        To compile the UNIPEN 1.0 parser, run awkcc.sh
+        ##############################################
+
+The following files are from the awkcc package,
+provided by Chris Ramming (<A HREF="mailto:jcr@research.att.com">jcr@research.att.com</A>),
+Copyright (c) 1991 AT&amp;T.
+All Rights Reserved
+
+awk.h                              awkcc.sh
+copyright                          dollars.h
+ear.h                              hash.h
+header.h                           libAWK.a
+specassign.h                       y.tab.h
+
+The file unipen.c is machine generated c code from the unipen.awk
+parser, using the awkcc package.
+Copyright (c) 1994 - I. Guyon, AT&amp;T Bell Labs.
+
+#  DISCLAIMER:                        #
+
+
+========================================================================
+
+9. Why would anyone still use awk instead of perl?
+
+  a valid question, since awk is a subset of perl (functionally, not
+  necessarily syntactically); also, the authors of perl have usually
+  known awk (and sed, and C, and a host of other Unix tools) very well,
+  and still decided to move on.
+
+  there are some things that perl has built-in support for that almost
+  no version of awk can do without great difficulty (if at all); if you
+  need to do these things, there may be no choice to make.  for instance,
+  no reasonable person would try to write a web server in awk instead
+  of using perl or even C, if the actual socket programming has to be
+  written in traditional awk.  however, gawk 3.1.0's /inet and ftwalk's
+  built-in networking primitives may remove this particular limitation.
+
+  however, there are some things in awk's favor compared to perl:
+
+  - awk is simpler (especially important if deciding which to learn first)
+  - awk syntax is far more regular (another advantage for the beginner,
+    even without considering syntax-highlighting editors)
+  - you may already know awk well enough for the task at hand
+  - you may have only awk installed
+  - awk can be smaller, thus much quicker to execute for small programs
+  - awk variables don't have `$' in front of them :-)
+  - clear perl code is better than unclear awk code; but NOTHING comes
+    close to unclear perl code
+
+  Tom Christiansen wrote in Message-ID: &lt;3766d75e@cs.colorado.edu&gt;
+  &gt; Awk is a venerable, powerful, elegant, and simple tool that everyone
+  &gt; should know.  Perl is a superset and child of awk, but has much more
+  &gt; power that comes at expense of sacrificing some of that simplicity.
+
+
+========================================================================
+
+10. How can I learn awk?
+
+  The commercial vendors of DOS versions (MKS and Thompson) each have
+  their own well written books with examples.  [available separately?]
+
+  English Book:
+
+      _The AWK Programming Language_, by Aho, Kernighan and Weinberger,
+      who invented the language.  Published by Addison-Wesley.  Lots of
+      good material in not a lot of space.  A little out of date
+      with regard to POSIX awk.
+
+      ISBN 0-201-07981-X
+
+      &lt;<A REL='NOFOLLOW EXTERNAL' HREF="http://cm.bell-labs.com/cm/cs/awkbook/">http://cm.bell-labs.com/cm/cs/awkbook/</A>&gt;
+      &lt;<A REL='NOFOLLOW EXTERNAL' HREF="http://cseng.aw.com/book/0,3828,020107981X,00.html">http://cseng.aw.com/book/0,3828,020107981X,00.html</A>&gt;
+        [ text looks mangled at the beginning ]
+
+  English Book:
+
+      Effective Awk Programming
+      ISBN 0-596-00070-7 (third edition)
+
+      &lt;<A REL='NOFOLLOW EXTERNAL' HREF="http://www.oreilly.com/catalog/awkprog3/">http://www.oreilly.com/catalog/awkprog3/</A>&gt;
+        (includes link to DocBook source)
+      &lt;<A REL='NOFOLLOW EXTERNAL' HREF="http://www.gnu.org/manual/gawk">http://www.gnu.org/manual/gawk</A>&gt;
+
+      Russell recommends buying the book instead of trying to print it
+      all out, for three reasons:
+
+        1. it's probably cheaper than using your own toner and paper.
+
+        2. some money goes back to help further development, both to
+           Arnold Robbins (only if you buy from ORA) and the Free
+           Software Foundation (if you buy from either ORA or the FSF).
+
+        3. it helps convince publishers that we _like_ having full
+           documentation available on-line (e.g., for searching), but
+           will still pay for a compact, bound copy.
+
+      information, including an errata list, is on the web site.
+
+
+      older editions, historical interest only:
+
+      _Effective AWK Programming_ by Arnold Robbins.  Published by
+      SSC (+1 206-FOR-UNIX, &lt;<A REL='NOFOLLOW EXTERNAL' HREF="http://www.ssc.com/">http://www.ssc.com/</A>&gt;,
+      &lt;<A HREF="mailto:sales@ssc.com">mailto:sales@ssc.com</A>&gt;).  Also published by the FSF as
+      "The GNU AWK User's Guide"; Texinfo source is included with
+      the gawk distribution, so you can also print this yourself.
+
+      A highly-praised reference card is also included.
+
+      ISBN 1-57831-000-8 (second edition)
+
+      &lt;<A REL='NOFOLLOW EXTERNAL' HREF="http://www.ssc.com/ssc/eap/">http://www.ssc.com/ssc/eap/</A>&gt;
+
+      ISBN 0-916151-88-3 (first edition)
+
+  English reference card:
+
+      ISBN 1-56592-729-X
+      &lt;<A REL='NOFOLLOW EXTERNAL' HREF="http://www.oreilly.com/catalog/sedawkrepr/">http://www.oreilly.com/catalog/sedawkrepr/</A>&gt;
+
+  English Book:
+
+      second edition:
+
+      _Sed &amp; Awk_, by Dale Dougherty &amp; Arnold Robbins, published
+      by O'Reilly and Associates.
+
+      _sed &amp; awk_ describes two text manipulation programs that are
+      mainstays of the UNIX programmer's toolbox.  This new edition
+      covers the sed and awk programs as they are now mandated by
+      the POSIX standard and includes discussion of the GNU versions
+      of these programs.
+
+      &lt;<A REL='NOFOLLOW EXTERNAL' HREF="http://www.ora.com/catalog/sed2/">http://www.ora.com/catalog/sed2/</A>&gt;
+      &lt;<A REL='NOFOLLOW EXTERNAL' HREF="http://www.ora.com/catalog/covers/sedawk-t.gif">http://www.ora.com/catalog/covers/sedawk-t.gif</A>&gt;
+
+      ISBN 1-56592-225-5
+
+      An errata for the second edition of Sed &amp; Awk is at
+
+      &lt;<A REL='NOFOLLOW EXTERNAL' HREF="http://www.cs.colostate.edu/~dzubera/sedawk2.txt">http://www.cs.colostate.edu/~dzubera/sedawk2.txt</A>&gt;
+
+      historical notes on the first edition:
+
+      _Sed &amp; Awk_, by Dale Dougherty, published by O'Reilly and
+      Associates.  A nice introduction to sed and awk, showing how
+      they relate to each other.  However, the first edition is
+      `full of typos and out-and-out mistakes'.
+
+      &lt;<A REL='NOFOLLOW EXTERNAL' HREF="http://www.ora.com/catalog/sed/">http://www.ora.com/catalog/sed/</A>&gt;
+
+      ISBN 0-937175-59-5
+
+      a `by no means complete' errata list is available.
+      the author mentions `later printings of the book have
+      many of the errors fixed.'
+
+      &lt;<A REL='NOFOLLOW EXTERNAL' HREF="http://www.cs.colostate.edu/~dzubera/sedawk.txt">http://www.cs.colostate.edu/~dzubera/sedawk.txt</A>&gt;
+
+  English Book:
+
+      _Unix awk and sed programmer's interactive workbook_
+
+      ISBN 0-13-082675-8
+
+      &lt;<A REL='NOFOLLOW EXTERNAL' HREF="http://www.phptr.com/phptrinteractive/">http://www.phptr.com/phptrinteractive/</A>&gt;
+      &lt;<A REL='NOFOLLOW EXTERNAL' HREF="http://www.phptr.com/phptrinteractive/unix/">http://www.phptr.com/phptrinteractive/unix/</A>&gt;
+      &lt;<A REL='NOFOLLOW EXTERNAL' HREF="http://cw.prenhall.com/patsis/">http://cw.prenhall.com/patsis/</A>&gt;
+
+      How can people publish Unix books that mix up ` and ' ?!?!
+      (Example:  "sed `s/://'" won't do what they seem to think it
+      will.)  And why create a frames-only Java-only
+      Navigator/IE-centric gratuitously-incompatible website?!
+
+      None of these things entice me to actually read the book
+      in any depth.
+
+  Deutsch Book:
+
+      awk und sed 
+      Helmut Herold
+      ISBN 3-89319-685-4
+
+      &lt;http://www.addison-wesley.de/projector/projector.asp?page=bookdetails&amp;isbn=3893196854&gt;
+      &lt;http://www.addison-wesley.de/katalog/item.ppml?textexpr=awk&amp;id=00018&gt;
+
+  Deutsch Book:
+
+      Linux-Unix Profitools, by Helmut Herold.
+      awk, sed, lex, yacc, und make 
+
+      &lt;http://www.addison-wesley.de/projector/projector.asp?page=bookdetails&amp;isbn=3827314488&gt;
+      &lt;http://www.addison-wesley.de/katalog/item.ppml?textexpr=awk&amp;id=00287&gt;
+
+      ISBN 3-8273-1448-8
+
+  English Book:
+
+      _Mastering Regular Expressions_, by Jeffrey E.F. Friedl, published
+      by O'Reilly and Associates.  (the `Hip Owls Book')
+
+      ``... you will learn how to use regular expressions to
+      solve problems and get the most out of tools that provide
+      them.  Not only that, but much more:  this book is about
+      _mastering_ regular expressions.''
+
+      &lt;<A REL='NOFOLLOW EXTERNAL' HREF="http://www.ora.com/catalog/regex/">http://www.ora.com/catalog/regex/</A>&gt;
+
+      errata, additions, change log available at the author's home page
+      &lt;<A REL='NOFOLLOW EXTERNAL' HREF="http://public.yahoo.com/~jfriedl/regex/">http://public.yahoo.com/~jfriedl/regex/</A>&gt;
+
+      ISBN 1-56592-257-3
+
+  Deutsch Book:
+
+      Friedl's _Mastering Regular Expressions_.
+
+      &lt;<A REL='NOFOLLOW EXTERNAL' HREF="http://www.oreilly.de/catalog/regexger/index.html">http://www.oreilly.de/catalog/regexger/index.html</A>&gt;
+
+  Web Site:
+
+      &lt;<A REL='NOFOLLOW EXTERNAL' HREF="http://www.cs.hmc.edu/qref/awk.html">http://www.cs.hmc.edu/qref/awk.html</A>&gt;
+
+      Getting started with Awk
+
+  Web Site:
+
+      &lt;<A REL='NOFOLLOW EXTERNAL' HREF="http://www.uga.edu/~ucns/wsg/unix/awk/">http://www.uga.edu/~ucns/wsg/unix/awk/</A>&gt;
+
+      Awk introduction
+
+  Web Site:
+
+      &lt;<A REL='NOFOLLOW EXTERNAL' HREF="http://www.mbnet.mb.ca/~natewild/awk/awk.html">http://www.mbnet.mb.ca/~natewild/awk/awk.html</A>&gt;
+        [ no longer available 1997/Oct/28 ]
+
+      Information about Tawk; Awk sample source code
+
+  Ian Gordon's Introduction to Gawk from Linux Journal
+
+      &lt;<A REL='NOFOLLOW EXTERNAL' HREF="http://www.ssc.com/lj/issue25/1156.html">http://www.ssc.com/lj/issue25/1156.html</A>&gt;
+
+  Juergen Kahrs' Gawk 3.1 introduction from Linux Journal
+
+      &lt;<A REL='NOFOLLOW EXTERNAL' HREF="http://www.ssc.com/lj/issue60/">http://www.ssc.com/lj/issue60/</A>&gt;
+
+  Awk Introduction
+
+      &lt;<A REL='NOFOLLOW EXTERNAL' HREF="http://www.softlab.ece.ntua.gr/facilities/documentation/unix/docs/awk.ps">http://www.softlab.ece.ntua.gr/facilities/documentation/unix/docs/awk.ps</A>&gt;
+      &lt;<A REL='NOFOLLOW EXTERNAL' HREF="http://www.softlab.ece.ntua.gr/facilities/documentation/unix/docs/awk.txt">http://www.softlab.ece.ntua.gr/facilities/documentation/unix/docs/awk.txt</A>&gt;
+      &lt;ftp://www.brooks.af.mil/pub/unix/white_papers/&gt;
+      [error 2001/Apr/07]
+
+      Awk introduction (PostScript and text) by awk authors
+      (somewhat old, doesn't cover the many recent extensions,
+      but still a valid introduction to the language)
+
+  Web Site:
+
+      &lt;<A REL='NOFOLLOW EXTERNAL' HREF="http://www.shelldorado.com/articles/awkcompat.html">http://www.shelldorado.com/articles/awkcompat.html</A>&gt;
+
+      Awk compatibility
+
+  Web Site:
+
+      &lt;<A REL='NOFOLLOW EXTERNAL' HREF="http://www.canberra.edu.au/~sam/whp/awk-guide.html">http://www.canberra.edu.au/~sam/whp/awk-guide.html</A>&gt;
+
+      How to get things done in Awk
+
+  Web Site:
+
+      &lt;<A REL='NOFOLLOW EXTERNAL' HREF="http://www.novia.net/~phridge/programming/awk/">http://www.novia.net/~phridge/programming/awk/</A>&gt;
+
+      Awk Programming examples
+
+  Japanese Book:
+
+      _Tanoshii UNIX -UNIX he no shoutai-_, by Aya Sakamoto
+      (UNIX is fun -an invitation to UNIX-)
+      ASCII October 1990
+      &lt;<A REL='NOFOLLOW EXTERNAL' HREF="http://www.ascii.co.jp/">http://www.ascii.co.jp/</A>&gt;
+      ISBN 4-7561-0785-0
+      A step by step UNIX tutorial for novices. Long chapter about
+      awk, which follows chapters about grep and sed, gives good
+      advice on general expressions and how awk is used in practice.
+
+  Japanese Book:
+
+     _Grep,Sed,Awk_ by Akihiro Miyoshi
+     ISBN  4-87966-794-3
+     June 1998 264 pages
+     Shuwa System Manual &amp; Reference Series
+     &lt;<A REL='NOFOLLOW EXTERNAL' HREF="http://www.shuwasystem.co.jp/books/wwwsrch/cgi-bin/content/794/index.htm">http://www.shuwasystem.co.jp/books/wwwsrch/cgi-bin/content/794/index.htm</A>&gt;
+     Serves both as a tutorial and a manual. Divided quite evenly into three
+     parts. Regular expressions explored in detail in grep section.
+
+  Japanese Book:
+
+    _Awk wo 256 bai tsukau tame no hon_ by Shimura, Washikita and Nishimura 
+    ASCII  August 1993 277 pages
+    ISBN 4-75610-162-3
+
+    Manic book titled 'The Book to Use Awk 256 Times More'. Good
+    illustrations and interesting insights. Lists '100 liners': a game,
+    fortune telling etc. 
+
+  English Booklet:
+
+    TCP/IP Internetworking With Gawk
+    ISBN 1-882114-93-0
+    &lt;<A REL='NOFOLLOW EXTERNAL' HREF="http://home.vr-web.de/Juergen.Kahrs/gawk/gawkinet.html">http://home.vr-web.de/Juergen.Kahrs/gawk/gawkinet.html</A>&gt;
+
+    An abridged form is included in O'Reilly's Effective Awk Programming 3e
+
+    Hard copy also available as book on demand from
+    &lt;<A REL='NOFOLLOW EXTERNAL' HREF="http://www.lob.de">http://www.lob.de</A>&gt;
+
+
+========================================================================
+
+11. What are some other awk resources?
+
+  Alta Vista awk Related Searches (inconspicuously placed under the
+  search edit box, given to graphical browsers only)
+
+    &lt;http://www.altavista.com/cgi-bin/query?pg=q&amp;kl=XX&amp;q=awk&gt;
+
+  Awk collections in various search engines
+
+    &lt;http://dir.yahoo.com/Computers_and_Internet/Programming_Languages/awk/&gt;
+    &lt;http://dir.altavista.com/Computers/Programming/Languages/Awk.shtml&gt;
+    &lt;<A REL='NOFOLLOW EXTERNAL' HREF="http://www.dmoz.org/Computers/Programming/Languages/Awk/">http://www.dmoz.org/Computers/Programming/Languages/Awk/</A>&gt;
+
+  Arnold Robbins' collection
+
+      &lt;<A REL='NOFOLLOW EXTERNAL' HREF="ftp://ftp.freefriends.org/arnold/Awkstuff/">ftp://ftp.freefriends.org/arnold/Awkstuff/</A>&gt;
+
+      &gt; A collection of awk related stuff that I'm starting and willing
+      &gt; to maintain.  Currently includes Henry Spencer's awf and aaa
+      &gt; programs, Brian Kernighan's chem, and Nelson Beebe's awkpretty,
+      &gt; and some smaller items.
+
+  Awk quick reference (in plain ASCII and PalmPilot format)
+
+      &lt;<A REL='NOFOLLOW EXTERNAL' HREF="http://www.castagnetto.org/download.php?fname=awkqref.zip">http://www.castagnetto.org/download.php?fname=awkqref.zip</A>&gt;
+
+  Unix and awk courseware
+
+      &lt;http://www.cit.ac.nz/smac/unix/default.htm&gt;
+
+  Awk course
+
+      &lt;http://www.ee.ic.ac.uk/course/advanced/awk/awk.html&gt;
+      [error 2001/Apr/07]
+
+  Developer information on awk
+
+      &lt;http://www.devinfo.com/languages/awk/&gt;
+
+  Spatial Analysis with Awk (course)
+
+      &lt;<A REL='NOFOLLOW EXTERNAL' HREF="http://www.udel.edu/johnmack/frec682/682awk.html">http://www.udel.edu/johnmack/frec682/682awk.html</A>&gt;
+
+  Debugger and Assertion Checker for Awk
+
+      &lt;http://www.irisa.fr/EXTERNE/manifestations/AADEBUG95/Abstracts/auguston2.html&gt;
+      [error 2001/Apr/07]
+
+  Free Compilers and Interpreters List
+
+      &lt;<A REL='NOFOLLOW EXTERNAL' HREF="http://www.idiom.com/free-compilers/LANG/awk-1.html">http://www.idiom.com/free-compilers/LANG/awk-1.html</A>&gt;
+
+  Voicenet.com awk page
+
+      &lt;http://www.voicenet.com/tech/comp/prog/awk/&gt;
+      [error 2001/Apr/07]
+
+  Four awk implementations for MS-DOS:  How do they compare?
+
+      &lt;http://www.voicenet.com/tech/comp/prog/awk/awk2.rev&gt;
+      [error 2001/Apr/07]
+
+  Gawk 3 manual
+
+      &lt;http://sunsite.ualberta.ca/Documentation/Info/by-chapter/gawk-3.0.3/&gt;
+      &lt;<A REL='NOFOLLOW EXTERNAL' HREF="ftp://sunsite.ualberta.ca/pub/Mirror/gnu/gawk/">ftp://sunsite.ualberta.ca/pub/Mirror/gnu/gawk/</A>&gt;
+
+  Unix Vault
+
+      &lt;http://www2.shore.net/~jblaine/vault/&gt;
+      [error 2001/Apr/07]
+
+  Yahoo's awk links
+
+      &lt;<A REL='NOFOLLOW EXTERNAL' HREF="http://www.yahoo.com/Computers_and_Internet/Programming_Languages/Awk/">http://www.yahoo.com/Computers_and_Internet/Programming_Languages/Awk/</A>&gt;
+
+  New Mexico Tech awk information
+
+      &lt;<A REL='NOFOLLOW EXTERNAL' HREF="http://www.nmt.edu/tcc/help/lang/awk.html">http://www.nmt.edu/tcc/help/lang/awk.html</A>&gt;
+      &lt;<A REL='NOFOLLOW EXTERNAL' HREF="http://www.nmt.edu/bin/man?awk">http://www.nmt.edu/bin/man?awk</A>&gt; [empty 1998/Apr/16]
+      &lt;<A REL='NOFOLLOW EXTERNAL' HREF="http://www.nmt.edu/bin/man?gawk">http://www.nmt.edu/bin/man?gawk</A>&gt;
+
+  A Supplemental Document For AWK
+  - or -
+  Things Al, Pete, And Brian Didn't Mention Much
+
+      &lt;http://oak.oakland.edu/pub/unix-c/info/awk-supplement.txt&gt;
+      [error 2001/Apr/07]
+
+      [
+        interesting historically -- I always wondered exactly why I
+        mistrusted setting `$n' and expecting `$0' to change -- and this
+        document explains why.  (it has since become standard behavior.)
+      ]
+
+  A* - an awk extension (paper by D.A.Ladd and J.C.Ramming)
+
+      &lt;http://sunsite.ust.hk/dblp/db/journals/tse/tse21.html&gt;
+      [error 2001/Apr/07]
+      &lt;http://www.usenix.org/~jcr/&gt; [error 1998/Apr/16]
+
+      [ does anyone know what issue of _Unix Review_ mentioned it? ]
+
+  Konrad Hambrick's `rawketry' and AltAcc data reduction scripts
+
+      &lt;ftp://ftp.netcom.com/pub/ko/konrad/rawketry/&gt;
+      &lt;ftp://ftp.netcom.com/pub/ko/konrad/altacc/software/&gt;
+
+  Ralph Becket's CGI and HTML Awk libraries
+
+      &lt;http://www.cam.sri.com/people/becket/awk/awk.html&gt;
+      [error 2001/Apr/07]
+
+  E. Stiltner's creation of HTML tables with awk
+
+      &lt;<A REL='NOFOLLOW EXTERNAL' HREF="http://www.sni.net/sccs/sccsadoc.htm">http://www.sni.net/sccs/sccsadoc.htm</A>&gt;
+      [error 2001/Apr/07]
+
+  ftwalk / hawk
+
+  &gt; a language that attempts to scale awk principles up to
+  &gt; a level competitive with Perl, Python, etc. Run as ftwalk,
+  &gt; it does a file tree walk (think of find+awk). Run as hawk,
+  &gt; it runs awk scripts (not quite compatibly).
+
+      &lt;<A REL='NOFOLLOW EXTERNAL' HREF="http://www.tomhull.com/ocston/projects/hawk.html">http://www.tomhull.com/ocston/projects/hawk.html</A>&gt;
+      &lt;<A REL='NOFOLLOW EXTERNAL' HREF="http://ftwalk.sourceforge.net/">http://ftwalk.sourceforge.net/</A>&gt;
+
+  Data Junction Content Extraction Language (DJ CXL)
+
+      similar to awk
+      &lt;<A REL='NOFOLLOW EXTERNAL' HREF="http://www.datajunction.com/products/djxl.html">http://www.datajunction.com/products/djxl.html</A>&gt;
+
+  English Book
+
+      Language and Computers
+      ISBN 0-7486-0785-4 (paperback)
+      ISBN 0-7486-0848-6 (hardcover)
+      New Scientist #2071, 1997/Mar/01, p45; paragraph titled `Dream in awk'
+      &lt;<A REL='NOFOLLOW EXTERNAL' HREF="http://www.ling.lancs.ac.uk/staff/andrew/etel.htm">http://www.ling.lancs.ac.uk/staff/andrew/etel.htm</A>&gt;
+      &lt;http://www.ling.lancs.ac.uk/staff/andrew/pubs.htm&gt;
+      &lt;<A REL='NOFOLLOW EXTERNAL' HREF="http://www.eup.ed.ac.uk/">http://www.eup.ed.ac.uk/</A>&gt;
+      &lt;<A REL='NOFOLLOW EXTERNAL' HREF="http://www.eup.ed.ac.uk/cgi/odbic.exe?input=NewWeb/Books/Barnbrook9856.htm">http://www.eup.ed.ac.uk/cgi/odbic.exe?input=NewWeb/Books/Barnbrook9856.htm</A>&gt;
+
+      [ Blackwell's in Oxford has 3 copies under General Linguistics ]
+
+      a book about computer-aided linguistics which uses awk as its
+      implementation language
+
+  English Lecture Notes; Combining sh, sed, and awk for language analysis
+
+      &lt;<A REL='NOFOLLOW EXTERNAL' HREF="ftp://ftp.u-aizu.ac.jp/u-aizu/doc/Tech-Report/1997/97-2-007.ps.gz">ftp://ftp.u-aizu.ac.jp/u-aizu/doc/Tech-Report/1997/97-2-007.ps.gz</A>&gt;
+      &lt;<A REL='NOFOLLOW EXTERNAL' HREF="ftp://ftp.u-aizu.ac.jp/u-aizu/doc/Tech-Report/1997/97-2-007.tar.gz">ftp://ftp.u-aizu.ac.jp/u-aizu/doc/Tech-Report/1997/97-2-007.tar.gz</A>&gt;
+
+  Consultix:  Awk Lecture / Lab courses (instructor-led)
+
+      &lt;<A REL='NOFOLLOW EXTERNAL' HREF="http://www.consultix-inc.com/">http://www.consultix-inc.com/</A>&gt;
+
+  How to get started with AWK
+
+      &lt;<A REL='NOFOLLOW EXTERNAL' HREF="http://www.bolthole.com/AWK.html">http://www.bolthole.com/AWK.html</A>&gt;
+
+  awk resources for the Acorn RISC OS
+
+      &lt;<A REL='NOFOLLOW EXTERNAL' HREF="http://www.awk.riscos.org.uk/">http://www.awk.riscos.org.uk/</A>&gt;
+
+  Troy A. Tiritilli's Awk Overview
+
+      &lt;http://www.students.stedwards.edu/~ttiriti/pl.htm
+      (email me; stedwards.edu mail setup is broken)
+
+  Henry Spencer's awf (Amazingly Workable Formatter)
+
+      &lt;<A REL='NOFOLLOW EXTERNAL' HREF="http://www.simtel.net/simtel.net/">http://www.simtel.net/simtel.net/</A>&gt;
+      &lt;<A REL='NOFOLLOW EXTERNAL' HREF="ftp://ftp.zoo.toronto.edu/">ftp://ftp.zoo.toronto.edu/</A>&gt;
+      (more precise URL eventually...)
+
+  Jon-Egil Korsvold's awk archive
+
+      &lt;http://www.kortext.no/awk.htm&gt; (English)
+      &lt;http://www.kortext.no/awkno.htm&gt; (Norwegian)
+
+
+========================================================================
+
+12. How do I report a bug in gawk?
+
+This is described in great detail in the gawk documentation.  In brief:
+
+   1. Make sure what you've discovered is really a bug by checking
+      the documentation and, if possible, comparing with nawk and mawk.
+
+   2. Cut down the program and data to as small as possible a test
+      case that will illustrate the bug.
+
+   3. Optionally post to <A REL='NOFOLLOW EXTERNAL' HREF="http://groups.google.com/group/comp.lang.awk" target="new">comp.lang.awk</A>; this allows others to confirm
+      or deny the behavior, and its incorrectness (or lack thereof).
+
+   4. Send mail to &lt;<A HREF="mailto:bug-gawk@gnu.org">mailto:bug-gawk@gnu.org</A>&gt;.  This automatically sends
+      a copy to Arnold Robbins.  Do not JUST post in <A REL='NOFOLLOW EXTERNAL' HREF="http://groups.google.com/group/comp.lang.awk" target="new">comp.lang.awk</A>;
+      Arnold's readership there is sporadic, and of course any Usenet
+      article can be missed, killed, or dropped.
+
+
+========================================================================
+
+13. What's wrong with gawk on Digital's OSF/1?
+
+The version of gawk shipped with OSF/1 is very old, based on gawk
+2.14.  Get the current version from a GNU mirror near you, and if
+you still have a problem, report it as per the directions in the
+gawk documentation.
+
+
+========================================================================
+
+14. How can I access shell or environment variables in an awk script?
+
+14.0 shells
+
+the examples using quoting are intended for use with any standard
+(sh-compatible-quoting) Unix shell.  as with all complex quoting,
+all these examples become much easier to work with (or under DOS
+and MS-Windows, less impossible) when put in a file and invoked with
+`awk -f filename.awk' instead.
+
+non-sh-compatible shells will require different quoting.  if you're
+not even using Unix (or a ported Unix shell), just ignore the whole
+section on quoting.
+
+14.1 Environment variables in general
+
+Answer 1:  on Unix, use "alternate quoting", e.g.
+
+        awk -F: '$1 ~ /'"$USER"'/ {print $5}' /etc/passwd
+                ^^^^^^^^*******^^^^^^^^^^^^^^
+
+        any standard Unix shell will send the underlined part as one
+        long argument (with embedded spaces) to awk, for instance:
+
+        $1 ~ /bwk/ {print $5}
+
+        Note that there may not be any spaces between the quoted
+        parts.  Otherwise, you wouldn't end up a single, long script
+        argument, because Unix shells break arguments on spaces
+        (unless they are `escaped' with `\', or in '' or "", as the
+        above example shows).
+
+Answer 2:  RTFM to see if and how your awk supports variable definitions
+           on the command line, e.g.,
+
+        awk -F: -v name="$USER" '$1 ~ name {print $5}' /etc/passwd
+
+Answer 3:  RTFM if your awk can access enviroment vars.  Then perhaps
+
+        awk -F: '$1 ~ ENVIRON["USER"] {print $5}' /etc/passwd
+
+        Always remember for your /bin/sh scripts that it's easy to put
+        things into the environment for a single command run:
+
+        name=felix age=56 awk '... ENVIRON["name"] .....'
+
+        this also works with ksh and some other shells.
+
+The first approach is extremely portable, but doesn't work with
+awk "-f" script files.  In that case, it's better to use a shell
+script and stretch a long awk command argument in '...' across
+multiple lines if need be.
+
+Also note: /bin/csh requires a \ before an embedded newline, /bin/sh not.
+
+
+14.2 Unix Shell Quoting
+
+Quoting can be such a headache for the novice, in shell programming,
+and especially in awk.
+
+Art Povelones posted a long tutorial on shell quoting on 1999/09/30
+which is probably too much detail to repeat with the FAQ; if you
+could use it, search via &lt;<A REL='NOFOLLOW EXTERNAL' HREF="http://groups.google.com/">http://groups.google.com/</A>&gt;.
+
+Tim Maher offered his &lt;<A REL='NOFOLLOW EXTERNAL' HREF="http://www.consultix-inc.com/quoting.txt">http://www.consultix-inc.com/quoting.txt</A>&gt;.
+
+This approach is probably the best, and easiest to understand and
+maintain, for most purposes:  (the '@@' is quoted to ensure the
+shell will copy verbatim, not interpreting environment variable
+substitutions etc.)
+
+    cat &lt;&lt;'@@' &gt; /tmp/never$$.awk
+    { print "Never say can't." }
+    @@
+    awk -f /tmp/never$$.awk; rm /tmp/never$$.awk
+
+If you enjoy testing your shell's quoting behavior frequently, you
+could try these:
+
+    (see below for a verbose explanation of the first one, with 7 quotes)
+
+    awk 'BEGIN { q="'"'"'";print "Never say can"q"t."; exit }'
+    nawk -v q="'" 'BEGIN { print "Never say can"q"t."; exit }'
+    awk 'BEGIN { q=sprintf("%c",39); print "Never say can"q"t."; exit }'
+    awk 'BEGIN { q=sprintf("%c",39); print "Never say \"can"q"t.\""; exit }'
+
+However, you would also have to know why you could not use this:
+
+    awk 'BEGIN { q="\'"; print "Never say \"can"q"t.\""; exit }'
+
+explanation of the 7-quote example:
+
+note that it is quoted three different ways:
+
+    awk 'BEGIN { q="'
+                     "'"
+                        '";print "Never say can"q"t."; exit }'
+
+and that argument comes out as the single string (with embedded spaces)
+
+    BEGIN { q="'";print "Never say can"q"t."; exit }
+
+which is the same as
+
+    BEGIN { q="'"; print "Never say can" q "t."; exit }
+                          ^^^^^^^^^^^^^  ^  ^^
+                          |           |  |  ||
+                          |           |  |  ||
+                          vvvvvvvvvvvvv  |  ||
+                          Never say can  v  ||
+                                         '  vv
+                                            t.
+
+which, quite possibly with too much effort to be worth it, gets you
+
+                          Never say can't.
+
+
+14.3 ENVIRON[] and "env"|getline
+
+   Modern versions of new awk (gawk, mawk, Bell Labs awk, any POSIX
+   awk) all provide an array named ENVIRON.  The array is indexed by
+   environment variable name; the value is that variable's value.
+   For instance, ENVIRON["HOME"] might be "/home/chris".  To print
+   out all the names and values, use a simple loop:
+
+        for (i in ENVIRON)
+                printf("ENVIRON['%s'] = '%s'\n", i, ENVIRON[i])
+
+   What if my awk doesn't have ENVIRON[]?
+
+   Short answer, get a better awk.  There are many freely available
+   versions.
+
+   Longer answer, on Unix you can use a pipe from the `env' or
+   `printenv' commands, but this is less pretty, and may be a
+   problem if the values contain newlines:
+
+        # test this on your system before you depend on it!
+        while ( ("env" | getline line) &gt;0 )
+        {
+                varname=line
+                varvalue=line
+                sub(/=.*$/,"",varname)
+                sub(/^[^=]*=/,"",varvalue)
+                print "var [" varname "]='" varvalue "'"
+        }
+
+14.4 exporting environment variables back to the parent process
+
+   How can I put values into the environment of the program that
+   called my awk program?
+
+   Short answer, you can't.  Unix ain't Plan 9, and you can't tweak
+   the parent's address space.
+
+   (DOS isn't even Unix, so it lets any program overwrite any memory
+   location, including the parent's environment space.  But the
+   details are [obviously] going to be fairly icky.  Avoid.)
+
+   Longer answer, write the results in a form the shell can parse
+   to a temporary file, and have the shell "source" the file after
+   running the awk program:
+
+        awk 'BEGIN { printf("NEWVAR='%s'\n", somevalue) }' &gt; /tmp/awk.$$
+        . /tmp/awk.$$        # sh/ksh/bash/pdksh/zsh etc
+        rm /tmp/awk.$$
+
+   With many shells, you can use `eval', but this is also cumbersome:
+
+        eval `awk 'BEGIN { print "NEWVAR=" somevalue }'`
+
+   Csh syntax and more robust use of quotation marks are left as
+   exercises for the reader.
+
+
+========================================================================
+
+15. Is there an easy way to determine if you have oawk or nawk?
+
+The following in a BEGIN rule will do the trick.
+
+        if (ARGC == 0)
+                # old awk
+        else
+                # new awk
+
+
+========================================================================
+
+16. How does awk deal with multiple files?
+
+  16.0 Version warning
+
+    some of these techniques will require non-ancient versions of awk.
+
+  16.1 How can awk test for the existence of a file?
+
+    the most portable way is to simply try and read from the file.
+
+        function exists(file,        dummy, ret)
+        {
+                ret=0;
+                if ( (getline dummy &lt; file) &gt;=0 )
+                {
+                        # file exists (possibly empty) and can be read
+                        ret = 1;
+                        close(file);
+                }
+                return ret;
+        }
+
+[ I've read reports that earlier versions of mawk would write to stderr
+as well as getline returning &lt;0 -- is this still true? ]
+
+        on Unix, you can probably use the `test' utility
+
+        if (system("test -r " file) == 0)
+            # file is readable
+        else
+            # file is not readable
+
+  16.2 How can I get awk to read multiple files?
+
+    it's automatic (under Unix at least) -- use something like:
+
+    awk '/^#include/ {print $2}' *.c *.h
+
+  16.3 How can I tell from which file my input is coming?
+
+    use the built-in variable FILENAME:
+
+    awk '/^#include/ {print FILENAME,$2}' *.c *.h
+
+  16.4 How can I get awk to open multiple files (selected at runtime)?
+
+    use `getline', `close', and `print EXPR &gt; FILENAME', like:
+
+    # assumes input file has at least 1 line, output file writeable
+    function double(infilename,outfilename,    aline)
+    {
+      while ( (getline aline &lt; infilename) &gt;0 )
+        print(aline aline) &gt; outfilename;
+      close(infilename);
+      close(outilename);
+    }
+
+  16.5 How can I treat the first file specially?
+
+    use FILENAME, thusly:
+
+    BEGIN { rulesfile="" }
+    rulesfile == "" { rulesfile = FILENAME; }
+    FILENAME == rulesfile { build_rule($0); }
+    FILENAME != rulesfile { apply_rule($0); }
+
+    Example:  
+
+    Suppose you have a text-line "database" and you want to make some
+    batch changes to it, by replacing some old lines with new lines.
+ 
+    BEGIN { rulesfile="" }
+    rulesfile == "" { rulesfile = FILENAME; }
+    rulesfile == FILENAME { replace[$1] = $0; }
+    rulesfile != FILENAME \
+    { 
+            if ($1 in replace) 
+                    print replace[$1];
+            else
+                    print;
+    }
+
+    another way, using ARGV:
+
+    (FILENAME == ARGV[1]) { replace[$1] = $0; next }
+    ($1 in replace) { print replace[$1]; next }
+    { print }
+
+  16.6 How can I explicitly pass in a filename to treat specially?
+
+    use `-v rulesfile=filename' like you would any other variable,
+    and then use a `getline' loop (and `close') in your BEGIN
+    statement.
+
+    BEGIN \
+    {
+      if (rulesfile=="")
+      {
+        print "must use -v rulesfile=filename";
+        exit(1);
+      }
+      while ( (getline &lt; rulesfile) &gt;0 )
+        replace[$1]=$0;
+      close(rulesfile);
+    }
+
+    {
+      if ($1 in replace)
+        print replace[$1];
+      else
+        print;
+    }
+
+
+========================================================================
+
+17. How many elements were created by split()?
+
+   when I do a split on a field, e.g.,
+ 
+        split($1,x,"string")
+ 
+   how can i find out how many elements x has (I mean other than
+   testing for null string or doing a `for (n in x)' test)?
+
+split() is a function; use its return value:
+
+        n = split($1, x, "string")
+
+
+========================================================================
+
+18. How can I split a string into characters?
+
+in portable POSIX awk, the only way to do this is to use substr to pull
+out each character, one by one.  this is painful.  however, gawk, mawk,
+and the newest version of the Bell Labs awk all allow you to set
+FS = "" and use "" as the third argument of split.
+
+so, split("chars",anarray,"") results in the array anarray containing
+5 elements -- "c", "h", "a", "r", "s".
+
+if you don't have any ^As in your string, you could try:
+
+        string=$0;
+        gsub(".", "&amp;\001", string)
+        n=split(string, anarray, "\001")
+        for (i=1;i&lt;=n;i++)
+            print "character " i "is '" anarray[i] "'";
+
+
+========================================================================
+
+19. Why does SunOS/Solaris awk behave oddly?
+
+I want to use the tolower() function with SunOS nawk, but all I get is
+
+        nawk: calling undefined function tolower
+
+The SunOS nawk is from a time before awk acquired the tolower() and
+toupper() functions.  Either use one of the freely available awks, or
+or use /usr/xpg4/bin/awk (if you have it), or write your own function
+to do it using index, substr, and gsub.
+
+An example of such a function is in O'Reilly's _Sed &amp; Awk_.
+
+Patrick TJ McPhee writes:
+
+&gt; SunOS includes three versions of awk. /usr/bin/awk is the old
+&gt; (pre-1989) version. /usr/bin/nawk is the new awk which appeared
+&gt; in 1989, and /usr/xpg4/bin/awk is supposed to conform to the single
+&gt; unix specification. No one knows why Sun continues to ship old awk.
+
+
+========================================================================
+
+20. How do I have dynamic-width printf strings, like C?
+
+with modern awks, you can just do it like you would in C (though the
+justification is less clear; C doesn't have the trivial in-line string
+concatenation that awk does), like so:
+
+        maxlen=0
+
+        for (i in arr)
+          if (maxlen&lt;length(arr[i]))
+            maxlen=length(arr[i])
+
+        for (i in arr)
+          printf("%-*s %s\n",maxlen,arr[i],i)
+
+with old awks, just do it like you would do if you didn't know about %*
+(this would be much more painful to do in C), like so:
+
+        maxlen=0
+
+        for (i in arr)
+          if (maxlen&lt;length(arr[i]))
+            maxlen=length(arr[i])
+
+        printfstring="%-" maxlen "s %s\n";
+        for (i in arr)
+          printf(printfstring,arr[i],i)
+
+
+========================================================================
+
+21. Why doesn't "\\$" behave like /\\$/ ?  Why don't parentheses match?
+
+because "\\$" is a string and /\\$/ is not; in strings, some of the
+escape characters get eaten up (like \" to escape a double-quote within
+the string).
+
+/\\$/ =&gt; regular expression:  literal backslash at end-of-expression
+
+"\\$" =&gt; string: \$ =&gt; regular expression:  literal dollar sign
+
+to get behavior like the first case in a string, use "\\\\$" .
+
+there are other, less obvious characters which need the same attention;
+under-quoting or over-quoting should be avoided:
+
+parentheses are special for alternation:
+
+/\(test\)/ =&gt; 6 characters `(test)'
+"\(test\)" =&gt; /(test)/ =&gt; 4 characters `test' (with unused grouping)
+
+an example of trying to match some diagonal compass directions:
+
+/(N|S)(E|W)/ =&gt; `NE' or `NW' or `SE' or `SW' (correct)
+"(N|S)(E|W)" =&gt; /(N|S)(E|W)/ (correct)
+"\(N|S\)\(E|W\)" =&gt; /(N|S)(E|W)/ (correct) (NOTE:  all \ had no effect)
+"\(N\|S\)\(E\|W\)" =&gt; /(N|S)(E|W)/ (correct) (NOTE:  all \ had no effect)
+
+expressions that look similar but behave totally differently:
+
+/\(N|S\)\(E|W\)/ =&gt; `(N' or `S)(E' or `W)'
+/\(N\|S\)\(E\|W\)/ =&gt; `(N|S)(E|W)' only
+
+There is also confusion regarding different forms of special characters;
+POSIX requires that `\052' be treated as any other `*', even though it
+is written with 4 bytes instead of 1.  In compatibility mode, gawk will
+treat it as though it were escaped , namely `\*'.
+
+
+========================================================================
+
+22. What is awk's exit code?
+
+normally, the `exit' command exits with a value of zero.
+
+you can supply an optional numeric value to the `exit' command to
+make it exit with a value:
+
+    if (whatever)
+        exit 12;
+
+if you have an END block, control first transfers there.  within
+the END block, an `exit' command exits immediately; if you had
+previously supplied a value, that value is used.  but, if you
+give a new value to `exit' within the END block, the new value is
+used.  this is documented in the GNU Awk User's Guide (gawk.texi).
+
+if you have an END block you want to be able to skip sometimes,
+you may have to do something like this:
+
+BEGIN \
+{
+  exitcode=0;
+  ...
+}
+
+# normal rules processing...
+{
+  ...
+  if (fatal)
+  {
+    exitcode=12;
+    exit(exitcode);
+  }
+  ...
+}
+
+END {
+  if (exitcode!=0)
+    exit(exitcode);
+  ...
+}
+
+
+========================================================================
+
+23. How can I get awk to be case-insensitive?
+
+  23.1. use tolower()
+    - portable
+    - must be explicitly used for each comparison
+
+    instead of:
+      if (avar=="a" || avar=="A") { ... }
+    use:
+      if (tolower(avar)=="a") { ... }
+
+    or at the beginning of your code, add a line like
+      { for (i=0;i&lt;=NF;i++) $i=tolower($i) }
+      { $0=tolower($0); }   # modern awks will rebuild $1..$NF also
+
+  23.2. use IGNORECASE=1;
+    - gawk only
+    - used for all comparisons, regex comparisons, index() function
+    - not used for array indexing
+
+
+========================================================================
+
+24. How can I force a numeric/non-numeric comparison?
+
+these are the canonical, work-in-all-versions snippets.  there are
+many others, most longer, some shorter (but possibly less portable).
+
+to compare two variables as numbers ONLY, use
+  if (0+var1 == 0+var2)
+
+to compare two variables as non-numeric strings ONLY, use
+  if ("" var1 == "" var2)
+
+
+========================================================================
+
+25. Why does { FS=":"; print $1 } not split the first record?
+
+basically, you should set FS before it may be called upon to split $0
+into fields.  once awk encounters a `{', it is probably too late.
+
+some awk implementations set the fields at the beginning of the
+block, and don't re-parse just because you changed FS.  to get
+the desired behavior, you must set FS _before_ reading in a line.
+
+e.g.,
+  BEGIN { FS=":" }
+  { print $1 }
+
+e.g.,
+  awk -F: '{ print $1 }'
+
+if you run code like this
+  { FS=":"; print $1 }
+
+on this data:
+  first:second:third but not last:fourth
+  First:Second:Third But Not Last:Fourth
+  FIRST:SECOND:THIRD BUT NOT LAST:FOURTH
+
+you may get either
+  this:       or this:
+  ----        -------
+  first       first:second:third
+  First       First
+  FIRST       FIRST
+
+perhaps more surprisingly, code like
+  { FS=":"; }
+  { print $1; }
+
+will also behave in the same way.
+
+
+========================================================================
+
+26. Did ^ and $ and . change in gawk?
+
+yes.  early versions cared about \n (newlines) and treated them
+specially.  version 3.* and later are more POSIX-compliant here.
+
+
+========================================================================
+
+27. Why doesn't awk 'begin {...}' work?
+
+it needs to be `BEGIN' (i.e., it's case-sensitive).
+
+
+========================================================================
+
+28. Why does awk 'BEGIN { print 6 " " -22 }' lose the space?
+
+You'd expect `6 -22', but you get `6-22'.  It's because the `" " -22'
+is grouped first, as a substraction instead of a concatenation, resulting
+in the numeric value `-22'; then it is concatenated with `6', giving the
+string `6-22'.  Gentle application of parentheses will avoid this.
+
+
+========================================================================
+
+29. How do I take advantage of gawk's networking support?
+
+(I expect this will become removed from the FAQ as people become more
+aware of the new gawk documentation covering this.  But it's new and
+cool and deserves attention.)
+
+Network interfacing in gawk is easier than in many other languages.
+Networking connections are made available like files in gawk.  You can
+open, read, write and close them.  This script opens a connection to
+the machine you are working on (localhost).  Then it reads the answer
+and closes the connection.
+
+    BEGIN \
+    {
+      NetService = "/inet/tcp/0/localhost/finger";
+      print "name" |&amp; NetService;
+      while ((NetService |&amp; getline) &gt; 0)
+        print $0;
+      close(NetService);
+    }
+
+It tells you which users are currently logged into your system.
+Note the similarity to ordinary file reading.
+
+With gawk 3.1.0, this networking support can not be used on
+Microsoft Windows unless you are using the Cygwin environment.
+If you have Cygwin installed, configure and compile gawk as if you
+were using a Unix system:
+
+   tar -xvpzf gawk-3.1.x.tar.gz   # x is patch number
+   cd gawk-3.1.x
+   ./configure &amp;&amp; make
+
+The configure step takes a llloooonnngggg time.
+
+
+========================================================================
+
+98. Miscellaneous
+
+
+========================================================================
+
+99. Credits
+
+I expect most of the information in this FAQ to be supplied by people
+other than myself -- it's just going to work better that way.  The
+newsgroup readers have a LOT more awk experience than I ever will
+(unless I multiply myself by a few thousand, which is not legal with
+today's tax laws).
+
+
+These people have contributed to the well-being of the FAQ:
+
+  arnold [at] skeeve.com (Arnold D. Robbins)
+  walkerj [at] compuserve.com (James G. Walker)
+  jland [at] worldnet.att.net (Jim Land)
+  yuli.barcohen [at] telrad.co.il (Yuli Barcohen)
+  johnd [at] mozart.inet.co.th (John DeHaven)
+  amnonc [at] mercury.co.il (Amnon Cohen)
+  saguyami [at] post.tau.ac.il (Shay)
+  hankedr [at] mail.auburn.edu (Darrel Hankerson)
+  mark [at] ispc001.demon.co.uk (Mark Katz)
+  brennan [at] whidbey.com (Michael D. Brennan)
+  neitzel [at] gaertner.de (Martin Neitzel)
+  pjf [at] osiris.cs.uoguelph.ca (Peter Jaspers-Fayer)
+  dmckeon [at] swcp.com (Denis McKeon)
+  neil_mahoney [at] il.us.swissbank.com (Neil Mahoney)
+  dzubera [at] CS.ColoState.EDU (Zube)
+  allen [at] gateway.grumman.com (John L. Allen)
+  jerabek [at] rm6208.gud.siemens.co.at (Martin Jerabek)
+  thull [at] ocston.org (Tom Hull)
+  bmarcum [at] iglou.com (Bill Marcum)
+  thobe [at] lafn.org (Glenn Thobe) 
+  boffi [at] rachele.stru.polimi.it (giacomo boffi)
+  hastinga [at] tarim.dialogic.com (Austin Hastings)
+  konrad [at] netcom.com (Konrad Hambrick)
+  jmccann [at] WOLFENET.com (James McCann)
+  eia018 [at] comp.lancs.ac.uk (Dr Andrew Wilson)
+  Alex.Schoenmakers [at] lhs.be
+  rwab1 [at] cl.cam.ac.uk (Ralph Becket)
+  jesusmc [at] scripps.edu (Jesus M. Castagnetto)
+  monty [at] primenet.com (Jim Monty)
+  epement [at] ripco.com (Eric Pement)
+  gavin [at] wraith.u-net.com (Gavin Wraith)
+  pierre [at] mail.asianet.it (Gianni Rondinini)
+  lothar [at] u-aizu.ac.jp (Lothar M. Schmitt)
+  morrisl [at] scn.org (Larry D. Morris)
+  Juergen.Kahrs [at] t-online.de
+  kahrs [at] iSenseIt.de (Juergen Kahrs)
+  tim [at] consultix-inc.com (Tim Maher/CONSULTIX)
+  phil [at] bolthole.com (Philip Brown)
+  andrew_sumner [at] bigfoot.com (Andrew Sumner)
+  jblaine [at] shore.net (Jeff Blaine)
+  dmeier.esperanto [at] gmx.de (Detlef Meier)
+  heiner.steven [at] nexgo.de (Heiner Steven)
+  joe [at] plaguesplace.dyndns.org
+  hstein [at] airmail.net (Harry Stein)
+  ptjm [at] interlog.com (Patrick TJ McPhee)
+  db21 [at] ih4ess.ih.lucent.com (David Beyerl)
+  art [at] pove.com (Art Povelones)
+  jari.aalto [at] ntc.nokia.com (Jari Aalto)
+  jlaiho [at] ichaos.nullnet.fi (Juha Laiho)
+  walter [at] wbriscoe.demon.co.uk (Walter Briscoe)
+  SimonN [at] draeger.com (Nicole Simon)
+  peter.tillier [at] btinternet.com (Peter S Tillier)
+  churchyh [at] ccwf.cc.utexas.edu (Henry Churchyard)
+  Ferran.Jorba [at] uab.es (Ferran Jorba)
+  Kalle.Tuulos [at] nmp.nokia.com (Kalle Tuulos)
+  rms [at] friko.onet.pl (Rafal Sulejman)
+  pjfarley [at] banet.net (Peter J. Farley III)
+  neel [at] gnu.org
+  afu [at] wta.att.ne.jp
+  pez68 [at] netscape.net (Peter Stromberg)
+  edgar.j.ramirez [at] lmco.com (Edgar J. Ramirez)
+  pholzleitner [at] unido.org (Peter HOLZLEITNER)
+  bps03z [at] email.mot.com (Peter Saffrey)
+  jidanni [at] kimo.com.tw (Dan Jacobson)
+  lehalle [at] earthling.net (Charles-Albert Lehalle)
+  robin.moffatt [at] ntlworld.com (Robin Moffatt)
+  markus [at] biewer.com (Markus B. Biewer)
+  vincent [at] delau.nl (Vincent de Lau)
+  vjpnreddy [at] hotmail.com (Jaya Reddy)
+  David.Billinghurst [at] riotinto.com (David Billinghurst)
+  j-korsv [at] online.no (Jon-Egil Korsvold)
+
+Thanks.
+
+========================================================================
+
+thus endeth the awk FAQ.
+
+</pre>
+<style>#qaComments #Comments_section { margin:0px;padding-top:0px;text-align:left;}#qaComments #Comments_section h2{ margin-top:0px;}#qaArchive { background:#A8CCFF;border: 1px solid #4410B6;padding:20px;}#qaArchive a:hover { color:#fff;}</style><div id='qaComments' style='background:#EEF7FF;padding:20px;margin:20px;border: 1px solid #555;padding-top:0px;'><div id="Comments_section">
+<h2 style='margin-bottom:0px;'>User Contributions:</h2>
+<div class="Comments_commentsbox" style=""></div><h4 style='margin-top:0px;'>Comment about this article, ask questions, or add new information about this topic:</h4><div class="Comments_form" id="Comments_form"><form action="#Comments_form" method="post" onsubmit="return validate_form(this);" style="margin:0px;padding:0px;"><input type="hidden" name="Comments[do]" value="add" style="display:none" /><input type="hidden" name="Comments[page]" value="/faqs/computer-lang/awk/faq/index.html" style="display:none" /><div class="Comments_name"><label for="Comments_name">Name:</label><input type="text" name="Comments[name]" value="" id="Comments_name" /></div><div class="Comments_mail"><label for="Comments_mail">E-mail:</label><input type="text" name="Comments[mail]" value="" id="Comments_mail" /><div class="Comments_showmail"><input type="checkbox" name="Comments[showmail]" value="1" id="Comments_showmail" /><label for="Comments_showmail">Show my email publicly</label></div></div><div id="img_verify"><div class="Comments_captcha"><label for="Comments_captcha">Type the code shown:</label><input type="text" name="Comments[captcha]" value="" id="Comments_captcha" /></div><input type="hidden" name="Comments[code]" value="((5#" style="display:none" /><img src="/mtc.class.php?Comments[do]=captcha&amp;Comments[captcha]=%28%285%23" alt="CAPTCHA" class="Comments_captcha" /></div><div class="Comments_text"><label for="Comments_text">Public Comment:&nbsp&nbsp;<font style="font-size:7pt;color:Gray;">(50-4000 characters)</font></label><textarea cols="40" rows="10" name="Comments[text]" id="Comments_text"></textarea></div><br /><input type="submit" value="Send" /> </form></div><br/>
+</div>
+
+<div id='qaArchive'><center><a href='/qa/fqa729.html'>Archived related questions and answers</a></center></div>
+</div></PRE>
+<DIV ALIGN=CENTER>
+<!-- TRAILER.C --><SMALL><STRONG>[ <a href='/faqs/'>Usenet FAQs</a> | <a href='/contrib/'>Web FAQs</a> | <a href='/docs/'>Documents</a> | <a href='/rfcs/'>RFC Index</a> ] </STRONG></SMALL>
+<P>
+<ADDRESS>
+Send corrections/additions to the FAQ Maintainer: <BR>awkfaq@locutus.ofB.ORG
+</ADDRESS>
+<P>
+<br/><hr class='hr4'/><br/>
+<BR><SMALL>
+<DIV ALIGN=CENTER>
+<ADDRESS>
+<STRONG>Last Update August 08 2012 @ 06:18 AM</STRONG>
+</ADDRESS>
+</DIV>
+</SMALL>
+<br/>
+<hr class="hr4" />
+</td>
+</table>
+</div>
+<!--MENU_FTR-->
+
+
+		<div style="clear:both;"></div>
+
+<!-- footer -->
+		</div>
+		<div id="footer">
+			Some parts &copy; 2012 Advameg, Inc.&nbsp;&nbsp;|&nbsp;&nbsp;
+
+			<script type="text/javascript"><!--
+			    esa("terms", "Terms of Use");
+			// --></script>
+		</div>
+	</div>
+</div>
+<!-- /footer -->
+
+
+<script type="text/javascript">
+    var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+    document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+    var pageTracker = _gat._getTracker("UA-892232-19");
+    pageTracker._trackPageview();
+</script>
+
+</body>
+
+</html>
+

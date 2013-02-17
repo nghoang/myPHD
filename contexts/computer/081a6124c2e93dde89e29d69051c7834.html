@@ -1,0 +1,1990 @@
+<style type="text/css">
+.highlight_paging {
+	font-weight:bold;
+	border: solid #000000;
+	border-width:1px 1px 1px 1px;
+}
+</style>
+
+
+<SCRIPT LANGUAGE=JavaScript>
+	function printEvent(ID)
+	{
+			var displayWindow = "Print Event"
+			var page = "print.asp?ID="+ID+"&LangType=0";
+			msgWindow=window.open(page,'displayWindow','height=600,width=600,menubar=no,resizable=yes,scrollbars=auto')
+			msgWindow.opener = self
+	}
+
+	function emailEvent(action, ID)
+	{
+
+			if (action=="Notify")
+			{
+				height = 400;
+				width = 300;
+			}
+			else
+			{
+				height= 450;
+				width=500;
+			}
+			var displayWindow = action+" Me "
+			var page = "emailevent.asp?action="+action+"&ID="+ID+"&LangType=0";
+			msgWindow=window.open(page,'displayWindow','height='+height+',width='+width+',menubar=no,resizable=yes,scrollbars=yes')
+			msgWindow.opener = self
+	}
+
+	function email(action)
+	{
+		var displayWindow = "Bulk Action"
+		var page = "pubarchrange.asp?actionMode="+action;
+		msgWindow=window.open(page,'displayWindow','height=200,width=375,menubar=no,resizable=yes,scrollbars=auto')
+		msgWindow.opener = self
+	}
+</script>
+
+<html>
+<head>
+<title>Schedule of Events</title>
+
+		<link rel="stylesheet" type="text/css" href="niftyCorners.css">
+		<link rel="stylesheet" type="text/css" href="niftyPrint.css" media="print">
+		<script type="text/javascript" src="nifty.js"></script>
+		<style type="text/css">
+
+/****************************
+Calendar Styles
+****************************/
+.popup
+{
+    color:#000000;
+    padding:1px;
+    background-color:#C8DEF9;
+    font-size:x-small;
+    width:225px;
+    border-right-width:1px;
+    border-right-style:solid;
+    border-left-width:1px;
+    border-left-style:solid;
+    border-bottom-width:1px;
+    border-bottom-style:solid;
+    border-top-width:1px;
+    border-top-style:solid;
+    border-color:#000000;
+    border-collapse:collapse;
+}
+
+.P1
+{
+	color:#FFFFFF;
+	background-color:#C8DEF9;
+	padding-left:.25em;
+	font-size:x-small;
+}
+
+.P2
+{
+    color:#000000;
+    font-size:x-small;
+}
+.searchform
+{
+	color:#000000;
+	font-family:Arial,Helvetica,sans-serif;
+	font-size:10px;
+	padding:0px;
+	text-align:left;
+	vertical-align:top;
+	background-color:transparent;
+	border-collapse:collapse;
+	width:775px;
+	margin:0px 0px 0px 10px
+}
+.list_utils_text
+{
+	background-color:#FAFAFA;
+	border-right-width:1px;
+	border-right-style:solid;
+	border-left-width:1px;
+	border-left-style:solid;
+	border-bottom-width:1px;
+	border-bottom-style:solid;
+	border-top-width:1px;
+	border-top-style:solid;
+	border-color:#999999;
+	font-family:Arial,Helvetica,sans-serif;
+	font-size:xx-small;
+	text-decoration:none;
+	vertical-align:top;
+	padding:3px 3px 3px 3px;
+	overflow:hidden;
+}
+.list_utils_text a:link
+{
+	font-family:Arial,Helvetica,sans-serif;
+	color:#333333;
+}
+.list_utils_text a:hover
+{
+	font-family:Arial,Helvetica,sans-serif;
+	color:#333333;
+}
+.list_utils_text a:visited
+{
+	font-family:Arial,Helvetica,sans-serif;
+	color:#333333;
+}
+
+#tinycal
+{
+	/*Defines the display of the event/RR calendar*/
+	color:#000000;
+	font-family:Arial,Helvetica,sans-serif;
+	font-size:10px;
+	padding:0px;
+	text-align:left;
+	vertical-align:top;
+	background-color:transparent;
+	border-collapse:collapse;
+	width:100%;
+}
+.tinycal_nav
+{
+	/*Defines the display of the month/increment decrement month navigation*/
+	background-color:#F0F0F0;
+	font-weight:bold;
+	color:#800040;
+	font-size:14px;
+	cursor:pointer;
+}
+.tinycal_weekday
+{
+	/*Defines the display of day cells*/
+	background-color:#CCCCCC;
+	border-top:1px solid #000000;
+	border-left:1px solid #000000;
+	border-bottom:1px solid #000000;
+	border-right:1px solid #000000;
+	padding:1px;
+	color:#FFFFFF;
+	font-weight:bold;
+	font-size:10px;
+}
+.tinycal_day
+{
+	/*Defines the display of blank day cells.*/
+	color:#000000;
+	background-color:#F0F0F0;
+	padding:1px;
+	vertical-align:top;
+	border:1px solid #000000;
+}
+.calendar_nav
+{
+	/*Defines the display of the month/increment decrement month navigation*/
+	color:#666699;
+	background-color:#C8DEF9;
+	font-weight:bold;
+	font-size:x-small;
+	cursor:pointer;
+}
+.calendar_current_day
+{
+	/*Defines the display of blank day cells.*/
+	color:#666699;
+	background-color:#E9E9E9;
+	border-right-width:1px;
+	border-right-style:solid;
+	border-left-width:1px;
+	border-left-style:solid;
+	border-bottom-width:1px;
+	border-bottom-style:solid;
+	border-top-width:1px;
+	border-top-style:solid;
+	border-color:#000000;
+	vertical-align:top;
+}
+.current_month
+{
+	font-family:Arial,Helvetica,sans-serif;
+	color:#666699;
+	background-color:transparent;
+	font-size:medium;
+	text-transform:uppercase;
+	padding:10px;
+	font-weight:bold;
+	cursor:none;
+}
+.calendar_weekday
+{
+	/*Defines the display of day cells*/
+	text-align:center;
+	color:#FFFFFF;
+	background-color:#CCCCCC;
+	padding:2px;
+	font-weight:bold;
+	border-right-width:1px;
+	border-right-style:solid;
+	border-left-width:1px;
+	border-left-style:solid;
+	border-bottom-width:1px;
+	border-bottom-style:solid;
+	border-top-width:1px;
+	border-top-style:solid;
+	border-color:#000000;
+	font-size:medium;
+}
+.calendar_blank
+{
+	/*Defines the display of blank day cells.*/
+	background-color:#FFFFFF;
+	border:1px solid #000000;
+}
+.calendar_day
+{
+	color:#000000;
+	background-color:#FFFFFF;
+	padding:3px;
+	vertical-align:top;
+	border-right-width:1px;
+	border-right-style:solid;
+	border-left-width:1px;
+	border-left-style:solid;
+	border-bottom-width:1px;
+	border-bottom-style:solid;
+	border-top-width:1px;
+	border-top-style:solid;
+	border-color:#000000;
+}
+.calendar_day a:link,a:visited
+{
+	color:#800000;
+	text-decoration:none;
+}
+.calendar_day a:hover
+{
+	color:#800000;
+	text-decoration:none;
+}
+#calendar
+{
+	/*Defines the display of the event/RR calendar*/
+	color:#800000;
+	font-family:Arial,Helvetica,sans-serif;
+	font-size:small;
+	padding:0px;
+	text-align:left;
+	vertical-align:top;
+	background-color:#F0F0F0;
+	border-collapse:collapse;
+	width:100%;
+}
+/*End Calendar Descriptions*/
+/*Search slider characteristics*/
+#sc1
+{
+	font-family:Arial,Helvetica,sans-serif;
+	font-size:small;
+	background-color:#FFF;
+	padding:3px 3px 3px 3px;
+	width:auto;
+	height:auto;
+	float:left;
+	vertical-align:top;
+	text-align:left;
+}
+#sc1 td
+{
+	font-size:x-small;
+	vertical-align:top;
+	padding:0px 10px 3px 3px;
+	text-align:left;
+}
+.divScrollBar
+{
+	overflow:auto;
+	font-size:xx-small;
+	height:100px;
+	width:180px;
+	padding:1px;
+	margin:0px;
+	border-right-width:1px;
+	border-right-style:solid;
+	border-left-width:1px;
+	border-left-style:solid;
+	border-bottom-width:1px;
+	border-bottom-style:solid;
+	border-top-width:1px;
+	border-top-style:solid;
+	border-color:#CCCCCC;
+	scrollbar-shadow-color:#FFF;
+	scrollbar-highlight-color:#FFF;
+	scrollbar-face-color:#CCC;
+	scrollbar-3dlight-color:#FFF;
+	scrollbar-darkshadow-color:#FFF;
+	scrollbar-track-color:#FFF;
+	scrollbar-arrow-color:#000;
+}
+.divScrollBar ul,li
+{
+	list-style:none;
+	list-style-position:outside;
+	margin-left:6px;
+}
+#event_container
+{
+	width:80%;
+	vertical-align:top;
+	height:300px;
+	color:#333333;
+	padding:5px;
+	text-decoration:none;
+	font-size:x-small;
+	font-weight:normal;
+	text-align:left;
+}
+#event_container h3
+{
+	font-family:Arial,Helvetica,sans-serif;
+	font-size:medium;
+	color:#000000;
+	border-bottom:2px solid #000000;
+	padding:0px 0px 1px 4px;
+	font-weight:bold;
+}
+.event
+{
+	/*Defines the display of the event/RR calendar*/
+	color:#000000;
+	font-family:Arial,Helvetica,sans-serif;
+	font-size:small;
+	margin:5px;
+	vertical-align:top;
+	background-color:transparent;
+	border-collapse:collapse;
+	width:550px;
+	border-bottom-width:1px;
+	border-bottom-style:solid;
+	border-color:#999999;
+}
+.event_title
+{
+	/*
+	Background color will match the color of the event type
+	*/
+	color:#000000;
+	background-color:#FFFFFF;
+	width:100%;
+	padding:0px 0px 0px 5px;
+	font-size:medium;
+	font-weight:bolder;
+	text-transform:uppercase;
+}
+.event_title a:link
+{
+	/*
+	Background color will match the color of the event type
+	*/
+	color:#333333;
+	padding:0px 0px 0px 5px;
+	font-size:medium;
+	font-weight:bolder;
+	text-transform:uppercase;
+}
+.event_title a:hover
+{
+	/*
+	Background color will match the color of the event type
+	*/
+	color:#333333;
+	padding:0px 0px 0px 5px;
+	font-size:medium;
+	font-weight:bolder;
+	text-transform:uppercase;
+}
+.event_title a:visited
+{
+	/*
+	Background color will match the color of the event type
+	*/
+	color:#333333;
+	padding:0px 0px 0px 5px;
+	font-size:medium;
+	font-weight:bolder;
+	text-transform:uppercase;
+}
+.event_fields
+{
+	text-align:left;
+	font-weight:bold;
+	padding:0px 0px 0px 5px;
+	vertical-align:top;
+	background-color:#FFFFFF;
+	color:#000000;
+}
+.event_desc
+{
+	text-align:left;
+	padding:0px 0px 0px 5px;
+	vertical-align:top;
+	background-color:#FFFFFF;
+	color:#000000;
+}
+
+.event_values
+{
+	vertical-align:top;
+	padding:0px 0px 0px 5px;
+}
+.list_title
+{
+	color:#000000;
+	font-weight:bold;
+	background-color:#C8DEF9;
+	border-color:#C8DEF9;
+	border-right-width:1px;
+	border-right-style:solid;
+	border-left-width:1px;
+	border-left-style:solid;
+	border-bottom-width:1px;
+	border-bottom-style:solid;
+	border-top-width:1px;
+	border-top-style:solid;
+}
+.list_light
+{
+	color:#000000;
+	background-color:#FFFFFF;
+}
+.list_dark
+{
+	color:#000000;
+	background-color:#CCCCCC;
+}
+/****************************
+Request Confirmation Styles
+****************************/
+.requestconfirm
+{
+	color:#000000;
+	font-family:Arial,Helvetica,sans-serif;
+	font-size:x-small;
+	padding:1px;
+	border-collapse:collapse;
+	text-align:left;
+	vertical-align:top;
+	border:1px solid #000000;
+	background-color:transparent;
+	margin-left:1em;
+	width:700px;
+}
+.requestconfirm ul,li
+{
+	list-style:square;
+	list-style-position:outside;
+}
+.requestconfirm table,td,tr
+{
+	color:#000000;
+	font-family:Arial,Helvetica,sans-serif;
+	font-size:x-small;
+}
+/****************************
+Autocomplete Styles
+****************************/
+div.autocomplete
+{
+	position:absolute;
+	background-color:white;
+	border:1px solid #888;
+	margin:0px;
+	padding:0px;
+}
+div.autocomplete ul
+{
+	list-style-type:none;
+	margin:0px;
+	padding:0px;
+}
+div.autocomplete ul li.selected { background-color:#ffb;}
+div.autocomplete ul li
+{
+	list-style-type:none;
+	display:block;
+	margin:0;
+	padding:1px;
+	cursor:pointer;
+}
+/************************************************************Additional Styles - addon to the existing changes************************************************************/.cal_nav_options{	font-family:arial;	font-size:8pt;	font-weight:bold;	text-align:center}.nopad{	padding:0px;	margin:0px;}.verticaltop{	vertical-align:top;}.littlecalunderline{	text-decoration:underline;	font-weight:bold;}.tinycaldaypointerstyle{	cursor:pointer;	font-size:xx-small;	border:1px solid #333333;}.checkboxpadding{	padding:0px 0px 0px 5px}.eventcaloptiontext{	color:#000000;	cursor:pointer;}.eventcaloptiongreytext{	color:#CCCCCC;	cursor:pointer;}.eventcaloptionunderlinetext{	color:#000000;	text-decoration:underline	cursor:pointer;}.eventcaloptionboxes{	border:1px solid #CCCCCC;	background-color:#FAFAFA;	padding:3px;	vertical-align:bottom;}.sc1boxstyle{	border:1px solid #CCCCCC}.sc1searchstyle{	margin:0px;	font-weight:bold;	font-size:larger}.eventcalendareventcontainer{	width:80%;	vertical-align:top;	padding:5px;}.eventsignupgettablite{	cursor:pointer;	text-align:center;	border:1px solid #000000;}.eventsignupgettabtitle{	font-weight:bold;	text-align:center;	border:1px solid #000000;}.bordercollapse{	border-collapse:collapse;}/* Attendance Button */#mybutton   {	border-style: outset;  border-color: #c0c0c0;  background-color: #b0b0b0;  text-decoration: none;     text-align: center;  cursor: hand;}.eventsignupdisplaytable{	margin-left:1em;	border:0px solid #000000;}.eventsignupdisplaycolumn{	border-top:0px;	border-right:0px;	border-bottom:1px solid #000000;}.eventsignupinvalidcolor{	color:#800040}.padding10px{	padding:10px 10px 10px 10px;}.borderlineblack{	border:1px solid #000000;}.borderwidthspacing{	border-width:1px 2px 1px 1px;}.roomlist{	overflow:auto;	width:100%;	height:250px;	padding:0px;	margin:0px}.roomreqdisplay{	background-color:transparent;	padding:1px;	padding-left:.5em;	border:0px;	vertical-align:middle;}.roomreqdisplaynopad{	background-color:transparent;	padding:0px;	border:0px;	vertical-align:middle	color:#000000;	font-family:Arial,Helvetica,sans-serif;	font-size:x-small;	padding:0px;	text-align:left;}.roomreqroomnamedisplay{	padding:1px;	padding-left:5em;	padding-right:5em;}.roomreqheaderstr{	padding:0px;	vertical-align:top}.roomreqsecondstr{	padding:1px;	border:0px;}.roomreqlibraryinfodisp{	font-family:arial;	background-color:white;	color:black;	font-size:medium}.bufferhighlight{	background-color:#CCCCCC;	padding:1px;}.extendhighlight{	background-color:yellow;	padding:1px;}.monthyeardispoption{	font-family:arial;	font-size:12px;	font-weight:bold;	text-align:center;}.popupinterfacebody {	font-family:Arial;	font-size:11px;	color:black;	margin-left:5px;	padding:5px;	background-color:#FAFAFA;	font-family:Arial;	font-size:x-small;	width:100%;	border:1px solid #CCCCCC;}td.popupinterfacetd {	font-family:Arial;	font-size:11px;	margin-left:5px;}h3.popupinterface {	margin:0px;	padding:0px;	color:blue;}.popupinterfaceheading {	font-family:arial;	width:100%;	background-color:#666666;	color:#FFFFFF;	font-size:medium;	font-weight:bold;}.wrapoff {	white-space:nowrap;}.popupinterfacetitle {	font-weight:bold;	font-size:medium;}.extendboxheader {	font-size: 12px;	font-weight: bolder;}
+/****************************
+Global Styles
+****************************/
+body {
+	color:#000000;
+	font-family:Arial,Helvetica,sans-serif;
+	font-size:x-small;
+	line-height:1.166;
+	margin-left:0px;
+	margin-right:0px;
+	margin-bottom:5px;
+	margin-top:0px;
+	background-color:#FFFFFF;
+	background-image:url()
+}
+#button
+{
+	color:#FFFFFF;
+	font-family:Arial,Helvetica,sans-serif;
+	font-weight:bold;
+	font-size:11px;
+	border-right-width:2px;
+	border-right-style:solid;
+	border-left-width:1px;
+	border-left-style:solid;
+	border-bottom-width:2px;
+	border-bottom-style:solid;
+	border-top-width:1px;
+	border-top-style:solid;
+	border-color:#000000;
+	background-color:#3399FF;
+}
+h3
+{
+	font-family:Arial,Helvetica,sans-serif;
+	font-size:105%;
+	font-weight:bold;
+	width:20%
+	border:2px solid #660000;
+}
+h2
+{
+	font-family:Arial,Helvetica,sans-serif;
+	font-size:110%;
+	font-weight:bold;
+	color:#900;
+}
+body a:link{
+	color:#000000;
+	text-decoration:none;
+}
+body a:visited{
+	color:#000000;
+	text-decoration:none;
+}
+body a:hover{
+	color:#000000;
+	text-decoration:none;
+}
+td
+{
+	font-family:Arial,Helvetica,sans-serif;
+	font-size:x-small;
+}
+#header
+{
+	height:auto;
+	border-bottom:1px solid #333;
+	margin:0px 0px 0px 0px;
+}
+.title
+{
+	font-family:Arial,Helvetica,sans-serif;
+	font-size:18px;
+	font-weight:bold;
+	padding:3px 0px 0px 10px;
+}
+.dropdown
+{
+	color:#000000;
+	font-family:Arial,Helvetica,sans-serif;
+	font-size:11px;
+}
+.entryformdata
+{
+	/*The Color Configuration table layout*/
+	color:#000000;
+	font-family:Arial,Helvetica,sans-serif;
+	font-size:x-small;
+	padding:5px;
+	text-align:left;
+	vertical-align:top;
+	background-color:#FFFFFF;
+	border:1px solid #333333;
+	width:auto;
+}.entryformlabel
+{
+	/*The Color Configuration table layout*/
+	color:#000000;
+	font-family:Arial,Helvetica,sans-serif;
+	font-size:x-small;
+	font-weight:bold;
+	padding:5px;
+	text-align:left;
+	vertical-align:top;
+	border:1px solid #333333;
+	background-color:#FFFFFF;
+}.entryformtitle
+{
+	/*The Color Configuration table layout*/
+	color:#000000;
+	font-family:Arial,Helvetica,sans-serif;
+	font-size:18px;
+	font-weight:bold;
+	padding:3px 0px 0px 10px;
+}.entryform
+{
+	/*The Color Configuration table layout*/
+	color:#000000;
+	font-family:Arial,Helvetica,sans-serif;
+	font-size:x-small;
+	padding:1px;
+	border-collapse:collapse;
+	text-align:left;
+	vertical-align:top;
+	border:1px solid #000000;
+	background-color:#FFFFFF;
+	width:700px;
+}input.maintbtn
+{
+ 	color:#000000;
+	font-family:Arial,Helvetica,sans-serif;
+	font-weight:bold;
+	font-size:11px;
+	border-right-width:1px;
+	border-right-style:solid;
+	border-left-width:1px;
+	border-left-style:solid;
+	border-bottom-width:1px;
+	border-bottom-style:solid;
+	border-top-width:1px;
+	border-top-style:solid;
+	border-color:#666699;
+	background-color:#CCCCCC;
+}/****************************************Additional Global Styles************************************************/.bordercollapse{	border-collapse:collapse;}.centertext{	text-align:center;}.righttext{	text-align:right;}.lefttext{	text-align:left;}.noborder{	border:0px;}.bolderfont{	font-weight:bolder}.cursorhand{	cursor:hand;}.cursorpointer{	cursor:pointer;}.clearbackground{	background-color:transparent;}.eventtitletablestyle{	border-spacing:0;	margin-bottom:2px;}
+		</style>
+
+</head>
+
+<body>
+<div id="header">
+<table border="0" width="100%">
+  <tr>
+    <td width="10%">&nbsp;</td>
+    <td width="80%" align="center"><div class="title">Peabody Public Library<BR>Schedule of Events</div></td>
+    <td width="10%">
+	<script type="text/javascript" src="common/cookies.js"></script>
+	<script language="JavaScript">
+	function change_text(x)
+	{
+		var new_val = 0;
+		if (getCookieValue("evancedSizeShift"))
+		{
+			deleteCookie("evancedSizeShift");
+		}
+		writeSessionCookie ("evancedSizeShift", x);
+	//	writePersistentCookie ("evancedSizeShift", x, "months", 1);
+
+		if (document.forms[0] && !document.regform && !document.patronsched && !document.search && !document.evententry && !document.RoomView && !document.fmSearch)
+		{
+				if (!document.forms[0].notextsizesubmit)
+					document.forms[0].submit();
+				else
+					location.reload();
+		}
+		else
+		{
+			location.reload();
+		}
+	}
+
+	</script>
+
+
+	<!--<span style="background-color:yellow;font-weight:bold;">BETA</span>-->
+	<table style="border:1px solid #333333;background-color:#FAFAFA;border-collapse:collapse;font-family:arial;">
+	<tr>
+		<td colspan="3" style="background-color:#FFFFFF;font-weight:bold;border:1px solid #333333;text-align:center;font-size:11px;vertical-align:bottom;">Text Size</td>
+	</tr>
+	<tr>
+		<td  style= "color:#FAFAFA;background-color:#999999;cursor:pointer;width:27px;border:1px solid #333333;text-align:center;vertical-align:bottom;"  onClick="change_text('regular')"><a style="font-size:10px;" onClick="change_text('regular')" title="Change Text Size" name="reg_text">T</a></td>
+		<td  style= "cursor:pointer;width:27px;border:1px solid #333333;text-align:center;vertical-align:bottom;"  onClick="change_text('larger')"><a style="font-size:12px;" onClick="change_text('larger')" title="Change Text Size" name="med_text">T</a></td>
+		<td  style= "cursor:pointer;width:27px;border:1px solid #333333;text-align:center;vertical-align:bottom;"  onClick="change_text('largest')"><a style="font-size:16px;" onClick="change_text('largest')" title="Change Text Size" name="largest_text">T</a></td>
+	</tr>
+	</table>
+</td>
+  </tr>
+</table>
+</div>
+<SCRIPT LANGUAGE=JavaScript>
+
+	function getdays(sName) {
+
+		var iMonth;
+		var iDays;
+		var iYear;
+		var iSelectDay;
+
+		//Save Selected Day
+		for (var x = 0; x < document.getElementById(sName + 'Day').options.length-1; x++) {
+			if (document.getElementById(sName + 'Day').options[x].selected)
+				break;
+		}
+		iSelectDay = parseInt(document.getElementById(sName + 'Day').options[x].value);
+
+		//Get Selected Year
+		for (var x = 0; x < document.getElementById(sName + 'Year').options.length-1; x++) {
+			if (document.getElementById(sName + 'Year').options[x].selected)
+				break;
+		}
+		iYear = parseInt(document.getElementById(sName + 'Year').options[x].value);
+
+		//Clear Start Day Selection List
+		document.getElementById(sName + 'Day').length = 0;
+
+		//Get the Month Selected and Determine Days in Month
+		for (var x = 0; x < document.getElementById(sName + 'Month').options.length-1; x++) {
+			if (document.getElementById(sName + 'Month').options[x].selected)
+				break;
+		}
+
+		iMonth = document.getElementById(sName + 'Month').options[x].value;
+		switch (iMonth) {
+			case '1':
+				iDays = 31;
+				break;
+			case '2':
+				if ((iYear%4 == 0) && (iYear%100 != 0) || (iYear%400 == 0))
+					iDays = 29;
+				else
+					iDays = 28;
+					if (document.getElementById(sName + 'Day').options[29] != null){
+						if (document.getElementById(sName + 'Day').options[29].selected)
+							iSelectDay = 28;
+					}
+				break;
+			case '3':
+				iDays = 31;
+				break;
+			case '4':
+				iDays = 30;
+				break;
+			case '5':
+				iDays = 31;
+				break;
+			case '6':
+				iDays = 30;
+				break;
+			case '7':
+				iDays = 31;
+				break;
+			case '8':
+				iDays = 31;
+				break;
+			case '9':
+				iDays = 30;
+				break;
+			case '10':
+				iDays = 31;
+				break;
+			case '11':
+				iDays = 30;
+				break;
+			case '12':
+				iDays = 31;
+				break;
+			case '':
+				iDays = 31;
+				break;
+		}
+
+		//Option to keep Blank spaces or eliminate blank spaces (eventcalendar vs. events PR)
+		if (document.getElementById(sName + 'Month').options[0].value == '') {
+			blankVal = 0;
+			document.getElementById(sName + 'Day').options[0] = new Option('', '');
+			if (iSelectDay == null)
+				document.getElementById(sName + 'Day').options[0].selected = true;
+		} else
+			blankVal = 1;
+		
+		for (var x=1; x<= iDays; x++) {
+			index = x-blankVal;
+			{
+				document.getElementById(sName + 'Day').options[index] = new Option(x.toString(), x.toString());
+			}
+			if (x == iSelectDay)
+				document.getElementById(sName + 'Day').options[index].selected = true;
+		}
+	}
+
+</SCRIPT>
+
+
+
+<script type="text/javascript">
+window.onload=function()
+{
+	if(!NiftyCheck())
+	    return;
+	Rounded("div#roundedtop","top","#FFFFFF","transparent","border #000000");
+	Rounded("div#roundedbot","bottom","#FFFFFF","transparent","smooth");
+	Rounded("div#roundedtinycal","top","#FFFFFF","transparent","smooth");
+}
+
+function printView(pubprinturl)
+{
+	var msgWindow;
+	var message;
+	msgWindow=window.open(pubprinturl,'msgWindow','height=800,width=980,resizable=yes,menubar=yes,scrollbars=yes');
+}
+
+function plink(staffurl,pubfixurl,pubdynurl)
+{
+	document.forms[0].plink_staff_url.value = staffurl;
+	document.forms[0].plink_public_url.value = pubfixurl;
+	document.forms[0].plink_public_dyn_url.value = pubdynurl;
+	var msgWindow;
+	var message;
+	msgWindow=window.open('showURL.asp?mode=0','msgWindow','height=520,width=700,menubar=no,resizable=yes,scrollbars=1');
+}
+
+function rsslink(staffurl,pubdynurl)
+{
+	document.forms[0].rsslink_staff_url.value = staffurl;
+	document.forms[0].rsslink_public_dyn_url.value = pubdynurl;
+	var msgWindow;
+	var message;
+	msgWindow=window.open('showURL.asp?mode=1','msgWindow','height=450,width=700,menubar=no,resizable=yes,scrollbars=1');
+}
+function ValidateForm ()
+{
+	var errorMessage;
+	errorMessage = "";
+	
+
+
+	if (errorMessage != "")
+		alert(errorMessage);
+	else
+		document.forms[0].submit();
+}
+function printEvent(ID)
+{
+		var displayWindow = "Print Event"
+		var page = "print.asp?ID="+ID+"&LangType=0";
+		msgWindow=window.open(page,'displayWindow','height=600,width=600,menubar=no,resizable=yes,scrollbars=yes')
+		msgWindow.opener = self
+}
+
+function emailEvent(action, ID)
+{
+
+		if (action=="Notify")
+		{
+			height = 400;
+			width = 300;
+		}
+		else
+		{
+			height= 450;
+			width=500;
+		}
+		var displayWindow = action+" Me "
+		var page = "emailevent.asp?action="+action+"&ID="+ID+"&LangType=0";
+		msgWindow=window.open(page,'displayWindow','height='+height+',width='+width+',menubar=no,resizable=yes,scrollbars=yes')
+		msgWindow.opener = self
+}
+
+function langChange(selObj)
+{
+	document.forms[0].LangType.value = selObj.options[selObj.selectedIndex].value
+	document.forms[0].submit();
+}
+
+function setMonthNavigation (navType)
+{
+	document.forms[0].date_type.value = '';
+	document.forms[0].dt.value = '';
+	document.forms[0].direction.value = navType;
+	document.forms[0].submit();
+}
+
+function UpdateValues(EventTitle, EventDate, EventTime, EventID)
+{
+
+	self.opener.document.transfer.EventTitle.value=EventTitle;
+	self.opener.document.transfer.EventDate.value=EventDate;
+	self.opener.document.transfer.EventTime.value=EventTime;
+	self.opener.document.transfer.NewEventID.value=EventID;
+
+	window.close()
+}
+
+var OngoingExpandState=0;
+function OngoingDisplay()
+{
+	OngoingExpandState = !OngoingExpandState;
+
+	if (OngoingExpandState == 0)
+	{
+		document.getElementById("ongoingclick").innerHTML = '<div style="text-align:left;float:left">Click to View Ongoing Events</div><div style="text-align:right">Click to View Ongoing Events</div>';
+	}
+	else
+	{
+		document.getElementById("ongoingclick").innerHTML = '<div style="text-align:left;float:left">Click to Close Ongoing Events</div><div style="text-align:right">Click to Close Ongoing Events</div>';
+	}
+
+	expandcontent(this, 'ongoingdisp', 'OngoingState')
+}
+
+</script>
+<link rel="stylesheet" type="text/css" href="niftyCorners.css">
+<link rel="stylesheet" type="text/css" href="niftyPrint.css" media="print">
+
+<script language="JavaScript">
+<!--
+if (document.layers) {n=1;ie=0;n6=0}
+if (document.all) {n=0;ie=1;n6=0}
+if (document.getElementById&&!document.all) {n=0;ie=0;n6=1}
+
+//Hide-Show Layer
+function SelectAllEvents()
+{
+	if (document.fmNextPrev.AllTypes.checked)
+	{
+		for(i=0; i < document.fmNextPrev.TotalEvents.value; i++)
+		{
+			document.fmNextPrev.EventType[i].checked=1
+		}
+	}
+	else
+	{
+		for(i=0; i < document.fmNextPrev.TotalEvents.value; i++)
+		{
+			document.fmNextPrev.EventType[i].checked=0
+		}
+	}
+
+}
+
+function SelectAllAges()
+{
+	if (document.fmNextPrev.AllAgeGroups.checked)
+	{
+		for(i=0; i < document.fmNextPrev.TotalAgeGroups.value; i++)
+		{
+			document.fmNextPrev.AgeGroup[i].checked=1
+		}
+	}
+	else
+	{
+		for(i=0; i < document.fmNextPrev.TotalAgeGroups.value; i++)
+		{
+			document.fmNextPrev.AgeGroup[i].checked=0
+		}
+	}
+
+}
+
+function SelectAllLibs()
+{
+	if (document.fmNextPrev.AllLibs.checked)
+	{
+		for(i=0; i < document.fmNextPrev.TotalLibs.value; i++)
+		{
+			document.fmNextPrev.Lib[i].checked=1
+		}
+	}
+	else
+	{
+		for(i=0; i < document.fmNextPrev.TotalLibs.value; i++)
+		{
+			document.fmNextPrev.Lib[i].checked=0
+		}
+	}
+}
+
+function SubmitSearch()
+{
+	document.forms[0].submit();
+}
+
+function DateSubmit(DateVal)
+{
+	document.forms[0].view_date.value = DateVal;
+	document.forms[0].submit();
+}
+
+function SwitchDisplay(DispType)
+{
+	try
+	{
+		document.forms[0].DispType[DispType].checked = "true";
+	}
+	catch (e)
+	{
+		if (DispType == 0)
+			document.forms[0].SaveDispType.value = "calendar";
+		else
+			document.forms[0].SaveDispType.value = "list";
+	}
+	ValidateForm();
+}
+function tcDateSubmit (DateVal)
+{
+	document.forms[0].date_type.value='';
+	document.forms[0].dt.value = 'sd';
+	document.forms[0].sd.value = DateVal;
+	document.forms[0].submit();
+}
+
+function eventTypeQS(eventType)
+{
+	document.fmNextPrev.AllTypes.checked = 0;
+	for(i=0; i < document.fmNextPrev.TotalEvents.value; i++)
+		{
+			document.fmNextPrev.EventType[i].checked=0;
+			if (document.fmNextPrev.EventType[i].value == eventType)
+			{
+				document.fmNextPrev.EventType[i].checked=1;
+			}
+		}
+	document.forms[0].submit();
+}
+function FormReset()
+{
+
+				document.forms[0].keyword.value= '';
+
+					document.forms[0].AllTypes.checked = 1;
+					SelectAllEvents();
+
+}
+
+function expandcontent(curobj, cid, formElement)
+{
+	var displaystate = (document.getElementById(cid).style.display=="block"||document.getElementById(cid).style.display=="")? "none" : "";
+	document.getElementById(cid).style.display = displaystate;
+
+	formval = eval("document.forms[0]." + formElement);
+	formval.value = displaystate;
+}
+
+//-->
+</script>
+<script language="JavaScript" src="date-picker.js"></script>
+
+
+<script language="JavaScript">
+var weekendmulti = [0,6];
+var weekendmultiColor = "#e0e0e0";
+var fontfaceMulti = "Arial";
+var fontsizeMulti = 2;
+
+var gNowMulti = new Date();
+var ggWinCalMulti;
+isNav = (navigator.appName.indexOf("Netscape") != -1) ? true : false;
+isIE = (navigator.appName.indexOf("Microsoft") != -1) ? true : false;
+
+CalendarMulti.Months = ["January", "February", "March", "April", "May", "June",
+"July", "August", "September", "October", "November", "December"];
+
+// Non-Leap year Month days..
+CalendarMulti.DOMonth = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+// Leap year Month days..
+CalendarMulti.lDOMonth = [31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+
+function CalendarMulti(p_item, p_WinCal, p_month, p_day, p_year, p_format) {
+	if ((p_month == null) && (p_year == null))	return;
+
+	if (p_WinCal == null)
+		this.gWinCal = ggWinCalMulti;
+	else
+		this.gWinCal = p_WinCal;
+	
+	if (p_month == null) {
+		this.gMonthName = null;
+		this.gMonth = null;
+		this.gYearly = true;
+	} else {
+		this.gMonthName = CalendarMulti.get_month(p_month);
+		this.gMonth = new Number(p_month);
+		this.gYearly = false;
+	}
+	
+	this.gDay = p_day;
+	this.gYear = p_year;
+	this.gFormat = p_format;
+	this.gBGColor = "white";
+	this.gFGColor = "black";
+	this.gTextColor = "black";
+	this.gHeaderColor = "black";
+	this.gReturnItem = p_item;
+}
+
+CalendarMulti.get_month = Calendar_get_month;
+CalendarMulti.get_daysofmonth = Calendar_get_daysofmonth;
+CalendarMulti.calc_month_year = Calendar_calc_month_year;
+//CalendarMulti.print = Calendar_print;
+
+function Calendar_get_month(monthNo) {
+	return CalendarMulti.Months[monthNo];
+}
+
+function Calendar_get_daysofmonth(monthNo, p_year) {
+	/* 
+	Check for leap year ..
+	1.Years evenly divisible by four are normally leap years, except for... 
+	2.Years also evenly divisible by 100 are not leap years, except for... 
+	3.Years also evenly divisible by 400 are leap years. 
+	*/
+	if ((p_year % 4) == 0) {
+		if ((p_year % 100) == 0 && (p_year % 400) != 0)
+			return CalendarMulti.DOMonth[monthNo];
+	
+		return CalendarMulti.lDOMonth[monthNo];
+	} else
+		return CalendarMulti.DOMonth[monthNo];
+}
+
+function Calendar_calc_month_year(p_Month, p_Year, incr) {
+	/* 
+	Will return an 1-D array with 1st element being the calculated month 
+	and second being the calculated year 
+	after applying the month increment/decrement as specified by 'incr' parameter.
+	'incr' will normally have 1/-1 to navigate thru the months.
+	*/
+	var ret_arr = new Array();
+	
+	if (incr == -1) {
+		// B A C K W A R D
+		if (p_Month == 0) {
+			ret_arr[0] = 11;
+			ret_arr[1] = parseInt(p_Year) - 1;
+		}
+		else {
+			ret_arr[0] = parseInt(p_Month) - 1;
+			ret_arr[1] = parseInt(p_Year);
+		}
+	} else if (incr == 1) {
+		// F O R W A R D
+		if (p_Month == 11) {
+			ret_arr[0] = 0;
+			ret_arr[1] = parseInt(p_Year) + 1;
+		}
+		else {
+			ret_arr[0] = parseInt(p_Month) + 1;
+			ret_arr[1] = parseInt(p_Year);
+		}
+	}
+	
+	return ret_arr;
+}
+
+function Calendar_print() {
+//	ggWinCalMulti.print();
+}
+
+function Calendar_calc_month_year(p_Month, p_Year, incr) {
+	/* 
+	Will return an 1-D array with 1st element being the calculated month 
+	and second being the calculated year 
+	after applying the month increment/decrement as specified by 'incr' parameter.
+	'incr' will normally have 1/-1 to navigate thru the months.
+	*/
+	var ret_arr = new Array();
+	
+	if (incr == -1) {
+		// B A C K W A R D
+		if (p_Month == 0) {
+			ret_arr[0] = 11;
+			ret_arr[1] = parseInt(p_Year) - 1;
+		}
+		else {
+			ret_arr[0] = parseInt(p_Month) - 1;
+			ret_arr[1] = parseInt(p_Year);
+		}
+	} else if (incr == 1) {
+		// F O R W A R D
+		if (p_Month == 11) {
+			ret_arr[0] = 0;
+			ret_arr[1] = parseInt(p_Year) + 1;
+		}
+		else {
+			ret_arr[0] = parseInt(p_Month) + 1;
+			ret_arr[1] = parseInt(p_Year);
+		}
+	}
+	
+	return ret_arr;
+}
+
+// This is for compatibility with Navigator 3, we have to create and discard one object before the prototype object exists.
+new CalendarMulti();
+
+CalendarMulti.prototype.getMonthlyCalendarCode = function() {
+	var vCode = "";
+	var vHeader_Code = "";
+	var vData_Code = "";
+	
+	// Begin Table Drawing code here..
+	vCode = vCode + "<TABLE BORDER=1 BGCOLOR=\"" + this.gBGColor + "\" ALIGN=center>";
+	
+	vHeader_Code = this.cal_header();
+	vData_Code = this.cal_data();
+	vCode = vCode + vHeader_Code + vData_Code;
+	
+	vCode = vCode + "</TABLE>";
+	
+	return vCode;
+}
+
+CalendarMulti.prototype.show = function() {
+	var vCode = "";
+	
+	this.gWinCal.document.open();
+	
+	// Setup the page...
+	this.wwrite("<html>");
+	this.wwrite("<head><title>Calendar</title>");
+	this.wwrite('<SCR' + 'IPT LANGUAGE="JAVASCRIPT">');
+	this.wwrite("function getDaysOfMonth() {");
+	this.wwrite("myString = new String('" + this.gReturnItem + "');");
+	this.wwrite("splitString = myString.split('.')");
+	this.wwrite("self.opener.getdays(splitString[1]);");
+	this.wwrite("}");
+	this.wwrite("</SCR" + "IPT>");
+	this.wwrite("</head>");
+
+	this.wwrite("<body " + 
+		"link=\"" + this.gLinkColor + "\" " + 
+		"vlink=\"" + this.gLinkColor + "\" " +
+		"alink=\"" + this.gLinkColor + "\" " +
+		"text=\"" + this.gTextColor + "\">");
+//	this.wwriteA("<FONT FACE='" + fontfaceMulti + "' SIZE=2><B>");
+//	this.wwriteA(this.gMonthName + " " + this.gYear);
+//	this.wwriteA("</B><BR>");
+
+	// Show navigation buttons
+	var prevMMYYYY = CalendarMulti.calc_month_year(this.gMonth, this.gYear, -1);
+	var prevMM = prevMMYYYY[0];
+	var prevYYYY = prevMMYYYY[1];
+
+	var nextMMYYYY = CalendarMulti.calc_month_year(this.gMonth, this.gYear, 1);
+	var nextMM = nextMMYYYY[0];
+	var nextYYYY = nextMMYYYY[1];
+	
+	this.wwrite("<TABLE WIDTH='100%' BORDER=1 CELLSPACING=0 CELLPADDING=0 BGCOLOR='#e0e0e0' ALIGN=center><TR><TD WIDTH='10%' ALIGN=center>");
+	this.wwrite("[<A HREF=\"" +
+		"javascript:window.opener.BuldMulti(" + 
+		"'" + this.gReturnItem + "', '" + this.gMonth + "', null, '" + (parseInt(this.gYear)-1) + "', '" + this.gFormat + "'" +
+		");" +
+		"\"><<<\/A>]</TD><TD WIDTH='10%' ALIGN=center>");
+	this.wwrite("[<A HREF=\"" +
+		"javascript:window.opener.BuldMulti(" + 
+		"'" + this.gReturnItem + "', '" + prevMM + "', null, '" + prevYYYY + "', '" + this.gFormat + "'" +
+		");" +
+		"\"><<\/A>]</TD><TD WIDTH='60%' ALIGN=center>");
+	this.wwrite("<B>" + this.gMonthName + " " + this.gYear + "</B></TD><TD ALIGN=center>");
+	this.wwrite("[<A HREF=\"" +
+		"javascript:window.opener.BuldMulti(" + 
+		"'" + this.gReturnItem + "', '" + nextMM + "', null, '" + nextYYYY + "', '" + this.gFormat + "'" +
+		");" +
+		"\">><\/A>]</TD><TD WIDTH='10%' ALIGN=center>");
+	this.wwrite("[<A HREF=\"" +
+		"javascript:window.opener.BuldMulti(" + 
+		"'" + this.gReturnItem + "', '" + this.gMonth + "', null, '" + (parseInt(this.gYear)+1) + "', '" + this.gFormat + "'" +
+		");" +
+		"\">>><\/A>]</TD></TR></TABLE><BR>");
+
+	// Get the complete CalendarMulti code for the month..
+	vCode = this.getMonthlyCalendarCode();
+	this.wwrite(vCode);
+
+	this.wwrite("</font></body></html>");
+	this.gWinCal.document.close();
+}
+
+CalendarMulti.prototype.showY = function() {
+	var vCode = "";
+	var i;
+	var vr, vc, vx, vy;		// Row, Column, X-coord, Y-coord
+	var vxf = 285;			// X-Factor
+	var vyf = 200;			// Y-Factor
+	var vxm = 10;			// X-margin
+	var vym;				// Y-margin
+	if (isIE)	vym = 75;
+	else if (isNav)	vym = 25;
+	
+	this.gWinCal.document.open();
+	
+	this.wwrite("<html>");
+	this.wwrite("<head><title>CalendarMulti</title>");
+	this.wwrite("<style type='text/css'>\n<!--");
+	for (i=0; i<12; i++) {
+		vc = i % 3;
+		if (i>=0 && i<= 2)	vr = 0;
+		if (i>=3 && i<= 5)	vr = 1;
+		if (i>=6 && i<= 8)	vr = 2;
+		if (i>=9 && i<= 11)	vr = 3;
+		
+		vx = parseInt(vxf * vc) + vxm;
+		vy = parseInt(vyf * vr) + vym;
+
+		this.wwrite(".lclass" + i + " {position:absolute;top:" + vy + ";left:" + vx + ";}");
+	}
+	this.wwrite("-->\n</style>");
+	this.wwrite("</head>");
+
+	this.wwrite("<body " + 
+		"link=\"" + this.gLinkColor + "\" " + 
+		"vlink=\"" + this.gLinkColor + "\" " +
+		"alink=\"" + this.gLinkColor + "\" " +
+		"text=\"" + this.gTextColor + "\">");
+	this.wwrite("<FONT FACE='" + fontfaceMulti + "' SIZE=2><B>");
+	this.wwrite("Year : " + this.gYear);
+	this.wwrite("</B><BR>");
+
+	// Show navigation buttons
+	var prevYYYY = parseInt(this.gYear) - 1;
+	var nextYYYY = parseInt(this.gYear) + 1;
+	
+	this.wwrite("<TABLE WIDTH='100%' BORDER=1 CELLSPACING=0 CELLPADDING=0 BGCOLOR='#e0e0e0'><TR><TD ALIGN=center>");
+	this.wwrite("[<A HREF=\"" +
+		"javascript:window.opener.BuldMulti(" + 
+		"'" + this.gReturnItem + "', null, null, '" + prevYYYY + "', '" + this.gFormat + "'" +
+		");" +
+		"\" alt='Prev Year'><<<\/A>]</TD><TD ALIGN=center>");
+	this.wwrite("[<A HREF=\"javascript:window.print();\">Print</A>]</TD><TD ALIGN=center>");
+	this.wwrite("[<A HREF=\"" +
+		"javascript:window.opener.BuldMulti(" + 
+		"'" + this.gReturnItem + "', null, null, '" + nextYYYY + "', '" + this.gFormat + "'" +
+		");" +
+		"\">>><\/A>]</TD></TR></TABLE><BR>");
+
+	// Get the complete CalendarMulti code for each month..
+	var j;
+	for (i=11; i>=0; i--) {
+		if (isIE)
+			this.wwrite("<DIV ID=\"layer" + i + "\" CLASS=\"lclass" + i + "\">");
+		else if (isNav)
+			this.wwrite("<LAYER ID=\"layer" + i + "\" CLASS=\"lclass" + i + "\">");
+
+		this.gMonth = i;
+		this.gMonthName = CalendarMulti.get_month(this.gMonth);
+		vCode = this.getMonthlyCalendarCode();
+		this.wwrite(this.gMonthName + "/" + this.gYear + "<BR>");
+		this.wwrite(vCode);
+
+		if (isIE)
+			this.wwrite("</DIV>");
+		else if (isNav)
+			this.wwrite("</LAYER>");
+	}
+
+	this.wwrite("</font><BR></body></html>");
+	this.gWinCal.document.close();
+}
+
+CalendarMulti.prototype.wwrite = function(wtext) {
+	this.gWinCal.document.writeln(wtext);
+}
+
+CalendarMulti.prototype.wwriteA = function(wtext) {
+	this.gWinCal.document.write(wtext);
+}
+
+CalendarMulti.prototype.cal_header = function() {
+	var vCode = "";
+	
+	vCode = vCode + "<TR>";
+	vCode = vCode + "<TD WIDTH='14%'><FONT SIZE='2' FACE='" + fontfaceMulti + "' COLOR='" + this.gHeaderColor + "'><B>Sun</B></FONT></TD>";
+	vCode = vCode + "<TD WIDTH='14%'><FONT SIZE='2' FACE='" + fontfaceMulti + "' COLOR='" + this.gHeaderColor + "'><B>Mon</B></FONT></TD>";
+	vCode = vCode + "<TD WIDTH='14%'><FONT SIZE='2' FACE='" + fontfaceMulti + "' COLOR='" + this.gHeaderColor + "'><B>Tue</B></FONT></TD>";
+	vCode = vCode + "<TD WIDTH='14%'><FONT SIZE='2' FACE='" + fontfaceMulti + "' COLOR='" + this.gHeaderColor + "'><B>Wed</B></FONT></TD>";
+	vCode = vCode + "<TD WIDTH='14%'><FONT SIZE='2' FACE='" + fontfaceMulti + "' COLOR='" + this.gHeaderColor + "'><B>Thu</B></FONT></TD>";
+	vCode = vCode + "<TD WIDTH='14%'><FONT SIZE='2' FACE='" + fontfaceMulti + "' COLOR='" + this.gHeaderColor + "'><B>Fri</B></FONT></TD>";
+	vCode = vCode + "<TD WIDTH='16%'><FONT SIZE='2' FACE='" + fontfaceMulti + "' COLOR='" + this.gHeaderColor + "'><B>Sat</B></FONT></TD>";
+	vCode = vCode + "</TR>";
+	
+	return vCode;
+}
+
+CalendarMulti.prototype.cal_data = function() {
+	var vDate = new Date();
+
+
+
+	vDate.setHours(vDate.getHours()+0);
+	
+	vDateTest = vDate.getMonth();
+	vDayTest = vDate.getDate();
+	vYearTest = vDate.getFullYear();
+
+	vDate.setDate(1);
+	vDate.setMonth(this.gMonth);
+	vDate.setFullYear(this.gYear);
+
+	var vFirstDay=vDate.getDay();
+	var vDay=1;
+	var vLastDay=CalendarMulti.get_daysofmonth(this.gMonth, this.gYear);
+	var vOnLastDay=0;
+	var vCode = "";
+	
+	/*
+	Get day for the 1st of the requested month/year..
+	Place as many blank cells before the 1st day of the month as necessary. 
+	*/
+
+	vCode = vCode + "<TR>";
+	for (i=0; i<vFirstDay; i++) {
+		vCode = vCode + "<TD WIDTH='14%'" + this.write_weekend_string(i) + "><FONT SIZE='2' FACE='" + fontfaceMulti + "'> </FONT></TD>";
+	}
+
+
+		CheckDay = 0;
+
+
+	// Write rest of the 1st week
+	for (j=vFirstDay; j<7; j++) {
+		vCode = vCode + "<TD WIDTH='14%'" + this.write_weekend_string(j) + "><FONT SIZE='2' FACE='" + fontfaceMulti + "'>" 
+		vCode = vCode + "<A HREF='#' "; 
+		
+		if ( (CheckDay == 2) || (CheckDay == 1 && vDay < vDayTest))
+		{
+			vCode = vCode + 'style="text-decoration: line-through">'
+		}
+		else
+		{
+			vCode = vCode + "onClick=\"self.opener.document." + this.gReturnItem + "Month.value='" + 
+				(this.gMonth + 1) + "';self.opener.document." + this.gReturnItem + "Year.value='" + 
+				this.gYear + "';getDaysOfMonth();self.opener.document." + this.gReturnItem + "Day.value='" + 
+				vDay + "';window.close();\">"
+		}	
+		vCode = vCode + this.format_day(vDay) + "</A>" 
+		vCode = vCode + "</FONT></TD>";
+
+		vDay=vDay + 1;
+	}
+	vCode = vCode + "</TR>";
+
+	// Write the rest of the weeks
+	for (k=2; k<7; k++) {
+		vCode = vCode + "<TR>";
+
+		for (j=0; j<7; j++) {
+			vCode = vCode + "<TD WIDTH='14%'" + this.write_weekend_string(j) + "><FONT SIZE='2' FACE='" + fontfaceMulti + "'>" 
+			vCode = vCode + "<A HREF='#' "; 
+
+			if ( (CheckDay == 2) || (CheckDay == 1 && vDay < vDayTest))
+			{
+				vCode = vCode + 'style="text-decoration: line-through">'
+			}
+			else
+			{
+				vCode = vCode + "onClick=\"self.opener.document." + this.gReturnItem + "Month.value='" + 
+					(this.gMonth + 1) + "';self.opener.document." + this.gReturnItem + "Year.value='" + 
+					this.gYear + "';getDaysOfMonth();self.opener.document." + this.gReturnItem + "Day.value='" + 
+					vDay + "';window.close();\">"
+			}	
+			vCode = vCode + this.format_day(vDay) + "</A>" 
+			vCode = vCode + "</FONT></TD>";
+
+			vDay=vDay + 1;
+
+			if (vDay > vLastDay) {
+				vOnLastDay = 1;
+				break;
+			}
+		}
+
+		if (j == 6)
+			vCode = vCode + "</TR>";
+		if (vOnLastDay == 1)
+			break;
+	}
+	
+	// Fill up the rest of last week with proper blanks, so that we get proper square blocks
+	for (m=1; m<(7-j); m++) {
+		if (this.gYearly)
+			vCode = vCode + "<TD WIDTH='14%'" + this.write_weekend_string(j+m) + 
+			"><FONT SIZE='2' FACE='" + fontfaceMulti + "' COLOR='gray'> </FONT></TD>";
+		else
+			vCode = vCode + "<TD WIDTH='14%'" + this.write_weekend_string(j+m) + 
+			"><FONT SIZE='2' FACE='" + fontfaceMulti + "' COLOR='gray'>" + m + "</FONT></TD>";
+	}
+	
+	return vCode;
+}
+
+CalendarMulti.prototype.format_day = function(vday) {
+	var vNowDay = gNowMulti.getDate();
+	var vNowMonth = gNowMulti.getMonth();
+	var vNowYear = gNowMulti.getFullYear();
+
+	if (vday == vNowDay && this.gMonth == vNowMonth && this.gYear == vNowYear)
+		return ("<FONT COLOR=\"RED\"><B>" + vday + "</B></FONT>");
+	else
+		return (vday);
+}
+
+CalendarMulti.prototype.write_weekend_string = function(vday) {
+	var i;
+
+	// Return special formatting for the weekendmulti day.
+	for (i=0; i<weekendmulti.length; i++) {
+		if (vday == weekendmulti[i])
+			return (" BGCOLOR=\"" + weekendmultiColor + "\"");
+	}
+	
+	return "";
+}
+
+CalendarMulti.prototype.format_data = function(p_day) {
+	var vData;
+	var vMonth = 1 + this.gMonth;
+	vMonth = (vMonth.toString().length < 2) ? "0" + vMonth : vMonth;
+	var vMon = CalendarMulti.get_month(this.gMonth).substr(0,3).toUpperCase();
+	var vFMon = CalendarMulti.get_month(this.gMonth).toUpperCase();
+	var vY4 = new String(this.gYear);
+	var vY2 = new String(this.gYear.substr(2,2));
+	var vDD = (p_day.toString().length < 2) ? "0" + p_day : p_day;
+
+	switch (this.gFormat) {
+		case "MM\/DD\/YYYY" :
+			vData = vMonth + "\/" + vDD + "\/" + vY4;
+			break;
+		case "MM\/DD\/YY" :
+			vData = vMonth + "\/" + vDD + "\/" + vY2;
+			break;
+		case "MM-DD-YYYY" :
+			vData = vMonth + "-" + vDD + "-" + vY4;
+			break;
+		case "MM-DD-YY" :
+			vData = vMonth + "-" + vDD + "-" + vY2;
+			break;
+
+		case "DD\/MON\/YYYY" :
+			vData = vDD + "\/" + vMon + "\/" + vY4;
+			break;
+		case "DD\/MON\/YY" :
+			vData = vDD + "\/" + vMon + "\/" + vY2;
+			break;
+		case "DD-MON-YYYY" :
+			vData = vDD + "-" + vMon + "-" + vY4;
+			break;
+		case "DD-MON-YY" :
+			vData = vDD + "-" + vMon + "-" + vY2;
+			break;
+
+		case "DD\/MONTH\/YYYY" :
+			vData = vDD + "\/" + vFMon + "\/" + vY4;
+			break;
+		case "DD\/MONTH\/YY" :
+			vData = vDD + "\/" + vFMon + "\/" + vY2;
+			break;
+		case "DD-MONTH-YYYY" :
+			vData = vDD + "-" + vFMon + "-" + vY4;
+			break;
+		case "DD-MONTH-YY" :
+			vData = vDD + "-" + vFMon + "-" + vY2;
+			break;
+
+		case "DD\/MM\/YYYY" :
+			vData = vDD + "\/" + vMonth + "\/" + vY4;
+			break;
+		case "DD\/MM\/YY" :
+			vData = vDD + "\/" + vMonth + "\/" + vY2;
+			break;
+		case "DD-MM-YYYY" :
+			vData = vDD + "-" + vMonth + "-" + vY4;
+			break;
+		case "DD-MM-YY" :
+			vData = vDD + "-" + vMonth + "-" + vY2;
+			break;
+
+		default :
+			vData = vMonth + "\/" + vDD + "\/" + vY4;
+	}
+
+	return vData;
+}
+
+function BuldMulti(p_item, p_month, p_day, p_year, p_format) {
+	var p_WinCal = ggWinCalMulti;
+	gCal = new CalendarMulti(p_item, p_WinCal, p_month, p_day, p_year, p_format);
+
+	// Customize your CalendarMulti here..
+	gCal.gBGColor="white";
+	gCal.gLinkColor="black";
+	gCal.gTextColor="black";
+	gCal.gHeaderColor="darkgreen";
+
+	// Choose appropriate show function
+	if (gCal.gYearly)	gCal.showY();
+	else	gCal.show();
+}
+
+function show_multi_calendar() {
+	/* 
+		p_month : 0-11 for Jan-Dec; 12 for All Months.
+		p_day	: day of month
+		p_year	: 4-digit year
+		p_format: Date format (mm/dd/yyyy, dd/mm/yy, ...)
+		p_item	: Return Item.
+	*/
+	
+	//if (!isIE) {
+	//	window.alert('This feature is enabled only for Internet Explorer');
+	//	return;
+	//}
+		
+	vWinCal = window.open("", "Calendar1", 
+		"width=300,height=300,status=no,resizable=yes,top=200,left=200");
+	vWinCal.opener = self;
+	ggWinCalMulti = vWinCal;
+	
+	p_item = arguments[0];
+	if (eval("document." + p_item + "Month.value") == '')
+		p_month = new String(gNowMulti.getMonth());
+	else 
+		p_month = eval("document." + p_item + "Month.value") - 1;
+	if (eval("document." + p_item + "Day.value") == '')
+		p_day = new String(gNowMulti.getDate());
+	else
+		p_day = eval("document." + p_item + "Day.value");
+	if (eval("document." + p_item + "Year.value") == '')
+		p_year = new String(gNowMulti.getFullYear().toString());
+	else
+		p_year = eval("document." + p_item + "Year.value");
+	if (arguments[4] == null)
+		p_format = "MM/DD/YYYY";
+	else
+		p_format = arguments[4];
+	
+	gNowMulti.setMonth(p_month);
+	gNowMulti.setDate(p_day);
+	gNowMulti.setFullYear(p_year);
+	
+	BuldMulti(p_item, p_month, p_day, p_year, p_format);
+}
+</script>
+
+<form NAME="fmNextPrev" ACTION="eventcalendar.asp" METHOD="POST">
+<input type="hidden" name="plink_public_url">
+<input type="hidden" name="plink_public_dyn_url">
+<input type="hidden" name="plink_staff_url">
+<input type="hidden" name="rsslink_public_dyn_url">
+<input type="hidden" name="rsslink_staff_url">
+<input type="hidden" name="saved_year" Value="2012">
+<input type="hidden" name="weekstart" Value ="">
+<input type="hidden" name="view_date" Value="">
+<input type="hidden" name="viewIndividualDate" Value="">
+<input type="hidden" name="LangType" Value ="0">
+<input type="hidden" name="pageTracker">
+<input type="hidden" name="perPageDispTracker" value="">
+<input type=hidden name=WindowMode VALUE=>
+<input type=hidden name=noheader VALUE=>
+<input type=hidden name=lad VALUE=>
+<input type=hidden name=transfer VALUE=>
+<input type=hidden name=SearchState VALUE="">
+<input type=hidden name=OngoingState VALUE="">
+<input type=hidden name=PageTitleStr value="">
+
+<table cellspacing="0" width="100%">
+
+
+	<tr>
+
+	<td valign="top" class="sc1boxstyle" style="display:none;" id="sc1"  class="switchcontent">
+		<table border="0" width="100%">
+		<tr><td style="margin:0px;font-weight:bold;font-size:larger">SEARCH &nbsp;<input type="button" value=" x " class=maintbtn onClick="expandcontent(this, 'sc1', 'SearchState')"></td></tr>
+
+		<tr><td style="text-align:center"><input type="button" value="Find" onclick="ValidateForm()" class="maintbtn">&nbsp;&nbsp;<input type="button" value="Clear" onclick="FormReset()" class="maintbtn"></td></tr>
+<tr><td class="searchform" style="background-color:transparent;">
+	<script type=text/javascript>
+		function forceclick(e)
+		{
+			if(window.event)
+				key = window.event.keyCode;     //IE
+			else
+				key = e.which; //Firefox
+			if (key == 13)
+			{
+				ValidateForm();
+			}
+		}
+	</script>
+	<b>Keyword:</b> <input onkeypress="return forceclick(event)" type="Text" Name="keyword" value=""><br></td></tr><tr><td class="searchform" style="background-color:transparent;">
+	<b>Display Format:</b> <input type="radio" name="DispType" value="calendar"  CHECKED>Calendar&nbsp;&nbsp;<input type="radio" name="DispType" value="list" >List</td></tr>
+	<input type="hidden" Name="CURDATE_month" Value="November">
+	<input type="hidden" Name="CURDATE_YEAR" Value="2012">
+
+	<input type="hidden" id="dt" name="dt" value="">
+	<input type="hidden" id="ds" name="ds" value="">
+	<input type="hidden" id="de" name="de" value="">
+	<input type="hidden" id="sd" name="sd" value="">
+<input type="hidden" name="Lib" Value=""><tr><td class="searchform" style="background-color:transparent;"><b>Event Types:</b><br><input type="CHECKBOX" name="AllTypes" value="ALL" OnClick="javascript:SelectAllEvents()">ALL EVENT TYPES<div class="divScrollBar"><div style="background-color:#FFFFFF;color:#000000;padding:0px 0px 0px 5px"><input type="CHECKBOX" name="EventType" value="Adults"  OnClick="javascript:document.fmNextPrev.AllTypes.checked=0">Adults</div><div style="background-color:;color:;padding:0px 0px 0px 5px"><input type="CHECKBOX" name="EventType" value="Arts and Crafts"  OnClick="javascript:document.fmNextPrev.AllTypes.checked=0">Arts and Crafts</div><div style="background-color:;color:;padding:0px 0px 0px 5px"><input type="CHECKBOX" name="EventType" value="Book Buddies"  OnClick="javascript:document.fmNextPrev.AllTypes.checked=0">Book Buddies</div><div style="background-color:;color:;padding:0px 0px 0px 5px"><input type="CHECKBOX" name="EventType" value="Book Clubs"  OnClick="javascript:document.fmNextPrev.AllTypes.checked=0">Book Clubs</div><div style="background-color:#FFFFFF;color:#000000;padding:0px 0px 0px 5px"><input type="CHECKBOX" name="EventType" value="Children"  OnClick="javascript:document.fmNextPrev.AllTypes.checked=0">Children</div><div style="background-color:;color:;padding:0px 0px 0px 5px"><input type="CHECKBOX" name="EventType" value="Computer Classes"  CHECKED OnClick="javascript:document.fmNextPrev.AllTypes.checked=0">Computer Classes</div><div style="background-color:;color:;padding:0px 0px 0px 5px"><input type="CHECKBOX" name="EventType" value="General"   OnClick="javascript:document.fmNextPrev.AllTypes.checked=0">General</div><div style="background-color:;color:#CC3300;padding:0px 0px 0px 5px"><input type="CHECKBOX" name="EventType" value="Library Closure"   OnClick="javascript:document.fmNextPrev.AllTypes.checked=0">Library Closure</div><div style="background-color:;color:;padding:0px 0px 0px 5px"><input type="CHECKBOX" name="EventType" value="Play Date"   OnClick="javascript:document.fmNextPrev.AllTypes.checked=0">Play Date</div><div style="background-color:;color:;padding:0px 0px 0px 5px"><input type="CHECKBOX" name="EventType" value="Public Events"   OnClick="javascript:document.fmNextPrev.AllTypes.checked=0">Public Events</div><div style="background-color:;color:;padding:0px 0px 0px 5px"><input type="CHECKBOX" name="EventType" value="Story Time"   OnClick="javascript:document.fmNextPrev.AllTypes.checked=0">Story Time</div><div style="background-color:;color:;padding:0px 0px 0px 5px"><input type="CHECKBOX" name="EventType" value="Summer Reading"   OnClick="javascript:document.fmNextPrev.AllTypes.checked=0">Summer Reading</div><div style="background-color:;color:;padding:0px 0px 0px 5px"><input type="CHECKBOX" name="EventType" value="Teens/YA"   OnClick="javascript:document.fmNextPrev.AllTypes.checked=0">Teens/YA</div><div style="background-color:;color:;padding:0px 0px 0px 5px"><input type="CHECKBOX" name="EventType" value="Toddler Time"   OnClick="javascript:document.fmNextPrev.AllTypes.checked=0">Toddler Time</div></div></td></tr>
+		<tr>
+			<td style="text-align:center"><br><input type="button" value="Find" onclick="ValidateForm()" class="maintbtn">&nbsp;&nbsp;<input type="button" value="Clear" onclick="FormReset()" class="maintbtn"></td>
+		</tr>
+
+		</table>
+	</td>
+
+	<script language=javascript>
+		document.getElementById('sc1').style.display = 'none';
+	</script>
+
+<input type="hidden" name="SaveDispType" value="calendar">
+<input type="hidden" name="TotalEvents" value="14">
+<input type="hidden" name="TotalAgeGroups" value="">
+<input type="hidden" name="TotalLibs" value="1">
+<input type="hidden" name="SavePointer" value="">
+<input type="hidden" name="returnToSearch" value="">
+<input type="hidden" name="CalNum" value="0">
+<input type="hidden" name="ad" value="">
+<input type="hidden" name="direction" value="">
+<input type="hidden" name="nopw" value="">
+<input type="hidden" name="qurl" value="">
+
+
+<td style="width:80%;vertical-align:top;padding:5px;">
+<font color="#336699">The events that require registration are underlined.</font><font color="#336699"><BR>To see the events for which you are currently registered, click "Display Personal Schedule".<BR></font>
+	<table>
+	<tr>
+
+		<td style="border:1px solid #CCCCCC;background-color:#FAFAFA;padding:3px;vertical-align:bottom;"><a style="color:#000000;cursor:pointer;" onClick="expandcontent(this, 'sc1', 'SearchState')" name="search"><b>Search Slider</b></a></td>
+
+		<td style="border:1px solid #CCCCCC;background-color:#FAFAFA;padding:3px;vertical-align:bottom;"><a style="color:#000000;cursor:pointer;" href="patronsched.asp?rts=&num=0&view_date=11/1/2012&df=calendar&EventType=computer+classes&Lib=&LangType=0&WindowMode=&noheader= ">Display Personal Schedule</a></td>
+
+	<td style="border:1px solid #CCCCCC;background-color:#FAFAFA;padding:3px;vertical-align:bottom;color:#000000;"><strong>View:</strong>
+	<a style="color:#CCCCCC;cursor:pointer;" onClick = "javascript:SwitchDisplay('0')">Calendar View</a> | <a style="color:#000000;text-decoration:underline;cursor:pointer;" onClick="javascript:SwitchDisplay('1')">List View</a></td>
+
+
+		<td style="border:1px solid #CCCCCC;background-color:#FAFAFA;padding:3px;vertical-align:bottom;"><a style="color:#000000;cursor:pointer;" onclick="javascript:printView('eventspr.asp?ag=&LangType=0&printmode=1&opmode=report&dt=html&pgtitle=Peabody+Public+Library%3CBR%3ESchedule+of+Events&df=cal&et=Computer+Classes&lib=0&drSel=tm&tmMonth=11&tmYear=2012')">Print View</a></td>
+		<td style="border:1px solid #CCCCCC;background-color:#FAFAFA;padding:3px;vertical-align:bottom;"><a style="color:#000000;cursor:pointer;" href="http://in.evanced.info/peabody/lib/eventsxml.asp?ag=&et=Computer+Classes&lib=0&nd=30&feedtitle=Peabody+Public+Library%3CBR%3ESchedule+of+Events&dm=rss2&LangType=0" target="_blank"><img border="0" height="12px" src="common/cal_tools/index-feed.jpg"> RSS Feed</a></td>
+
+		<td style="padding:3px;vertical-align:bottom;">
+
+				&nbsp;&nbsp;<input class=maintbtn type=button onclick=javascript:top.location.href="http://ppl.lib.in.us" value="Home">
+
+		</td>
+
+		
+	</tr>
+	</table>
+
+<div ID="divBody" STYLE="width:98%;margin-left:0px;z-index:2">
+<div ID="poptextDiv" STYLE="
+		visibility:hidden;
+        position:absolute;
+        width:0px;
+        top:inherit;
+        left:0px;
+        border-top:2px black solid;
+        border-bottom:2px black solid;
+        border-right:2px black solid;
+        background-color:#FFFFFF;
+        layer-background-color:#FFFFFF;
+        padding:10 5 10 5;
+        z-index:200">
+
+</div>
+<STYLE TYPE="text/css">
+<!--
+#dek {POSITION:absolute;VISIBILITY:hidden;Z-INDEX:200;}
+//-->
+</STYLE>
+
+<DIV ID="dek" class=popup></DIV>
+
+<SCRIPT TYPE="text/javascript">
+<!--
+
+Xoffset=-60;    // modify these values to ...
+Yoffset= 20;    // change the popup position.
+
+var old,skn,iex=(document.all),yyy=-1000, xxx=-1000;
+var mousex, mousey;
+
+var ns4=(document.layers) ? true : false;
+var ns6=(!document.all && document.getElementById) ? true : false;
+var ie4=(document.all && document.getElementById) ? true : false;
+
+if (ns4)
+	skn=document.dek
+else if (ns6)
+	skn=document.getElementById("dek").style
+else if (ie4)
+	skn=document.all.dek.style
+if(ns4)document.captureEvents(Event.MOUSEMOVE);
+else{
+	skn.visibility="visible"
+	skn.display="none"
+}
+document.onmousemove=get_mouse;
+
+function popup(msg,bak, xval, yval){
+//var content="<table><tr><td class=popup>"+msg+"</td></tr></table>";
+var content = msg;
+yyy=yval;
+xxx=xval;
+ if(ns4){skn.document.write(content);skn.document.close();skn.visibility="visible"}
+ if(ns6){document.getElementById("dek").innerHTML=content;skn.display=''}
+ if(ie4){document.all("dek").innerHTML=content;skn.display=''}
+}
+
+function get_mouse(e){
+
+	try {
+		var x=(ns4||ns6)?e.pageX:event.x+document.body.scrollLeft;
+		mousex = x;
+		skn.left=x+xxx;
+		var y=(ns4||ns6)?e.pageY:event.y+document.body.scrollTop;
+		mousey = y;
+		skn.top=y+yyy;
+	}
+	catch(e) {
+	}
+}
+
+function kill(){
+yyy=-1000;
+if(ns4){skn.visibility="hidden";}
+else if (ns6||ie4)
+skn.display="none"
+}
+
+//-->
+</SCRIPT><table ID=calendar><tr valign=middle align=center><td colspan=8 class="calendar_nav nopad"><div id=roundedtop></div></td></tr><tr valign=middle align=center><td colspan=8 class=calendar_nav><img src="common/cal_tools/spacer.gif" width=650 height=1 border=0 alt="spacer"><br>			<a onclick="javascript:DateSubmit('11/1/2011')">&lt;&lt; Prev Year</a>&nbsp;&nbsp;&nbsp;&nbsp;
+<a onclick='javascript:DateSubmit("1/1/2012")'>Jan</a>&nbsp;&nbsp;&nbsp;<a onclick='javascript:DateSubmit("2/1/2012")'>Feb</a>&nbsp;&nbsp;&nbsp;<a onclick='javascript:DateSubmit("3/1/2012")'>Mar</a>&nbsp;&nbsp;&nbsp;<a onclick='javascript:DateSubmit("4/1/2012")'>Apr</a>&nbsp;&nbsp;&nbsp;<a onclick='javascript:DateSubmit("5/1/2012")'>May</a>&nbsp;&nbsp;&nbsp;<a onclick='javascript:DateSubmit("6/1/2012")'>Jun</a>&nbsp;&nbsp;&nbsp;<a onclick='javascript:DateSubmit("7/1/2012")'>Jul</a>&nbsp;&nbsp;&nbsp;<a onclick='javascript:DateSubmit("8/1/2012")'>Aug</a>&nbsp;&nbsp;&nbsp;<a onclick='javascript:DateSubmit("9/1/2012")'>Sep</a>&nbsp;&nbsp;&nbsp;<a onclick='javascript:DateSubmit("10/1/2012")'>Oct</a>&nbsp;&nbsp;&nbsp;<a onclick='javascript:DateSubmit("11/1/2012")'>Nov</a>&nbsp;&nbsp;&nbsp;<a onclick='javascript:DateSubmit("12/1/2012")'>Dec</a>&nbsp;&nbsp;&nbsp;<a onclick='javascript:DateSubmit("11/1/2013")'>&nbsp;&nbsp;&nbsp;&nbsp;Next Year &gt;&gt;</a></td></tr><tr valign=middle align=center><td colspan=8  class=calendar_nav><a onclick='javascript:document.forms[0].direction.value="subPrev"; SubmitSearch()'>&lt;Prev</a><span style="margin:1px 10px 1px 10px;padding:0px" class=current_month>November 2012</span><a onclick='javascript:document.forms[0].direction.value="subNext"; SubmitSearch()'>Next&gt;</a></td></tr><tr valign=middle><td colspan=8 class=calendar_weekday id=ongoingclick style="border:0px;padding-left:5em;padding-right:5em;text-align:left;cursor:hand" onclick="OngoingDisplay();"><div style="text-align:left;float:left">Click to View Ongoing Events</div><div style="text-align:right">Click to View Ongoing Events</div></td></tr><tr id=ongoingdisp style="display:none"><td colspan=8>There are currently no ongoing events for the selected dates.</td></tr><tr><TH WIDTH="1%" class=calendar_weekday style="border-right:0px solid #000000;"></TH><th WIDTH="14%" class=calendar_weekday>Sunday</th><th WIDTH="14%" class=calendar_weekday>Monday</th><th WIDTH="14%" class=calendar_weekday>Tuesday</th><th WIDTH="14%" class=calendar_weekday>Wednesday</th><th WIDTH="14%" class=calendar_weekday>Thursday</th><th WIDTH="14%" class=calendar_weekday>Friday</th><th WIDTH="14%" class=calendar_weekday>Saturday</th></tr><tr valign=center>
+<td  onclick="document.forms[0].dt.value='dr';document.forms[0].ds.value='2012-10-28';document.forms[0].de.value='2012-11-3';document.forms[0].submit();"width=5 class=calendar_weekday style="cursor:pointer;font-size:x-small;border:1px solid #333333;"><br>W<br>e<br>e<br>k<br>44<br></td>
+<td class='calendar_blank'>&nbsp</td>
+<td class='calendar_blank'>&nbsp</td>
+<td class='calendar_blank'>&nbsp</td>
+<td class='calendar_blank'>&nbsp</td>
+<td class='calendar_day'>1<br><br><br></td>
+<td class='calendar_day'>2<br><br><br></td>
+<td class='calendar_day'>3<br><br><br></td>
+</tr>
+<tr valign=center>
+<td  onclick="document.forms[0].dt.value='dr';document.forms[0].ds.value='2012-11-4';document.forms[0].de.value='2012-11-10';document.forms[0].submit();"width=5 class=calendar_weekday style="cursor:pointer;font-size:x-small;border:1px solid #333333;"><br>W<br>e<br>e<br>k<br>45<br></td>
+<td class='calendar_day'>4<br><br><br></td>
+<td class='calendar_day'>5<br><br><br></td>
+<td class='calendar_current_day'>6<br><br><br></td>
+<td class='calendar_day'>7<br><br><br></td>
+<td class='calendar_day'>8<br><br><br></td>
+<td class='calendar_day'>9<br><br><br></td>
+<td class='calendar_day'>10<br><br><br></td>
+</tr>
+<tr valign=center>
+<td  onclick="document.forms[0].dt.value='dr';document.forms[0].ds.value='2012-11-11';document.forms[0].de.value='2012-11-17';document.forms[0].submit();"width=5 class=calendar_weekday style="cursor:pointer;font-size:x-small;border:1px solid #333333;"><br>W<br>e<br>e<br>k<br>46<br></td>
+<td class='calendar_day'>11<br><br><br></td>
+<td class='calendar_day'>12<br><br><br></td>
+<td class='calendar_day'>13<br><br><br></td>
+<td class='calendar_day'>14<br><br><br></td>
+<td class='calendar_day'>15<br><br><br></td>
+<td class='calendar_day'>16<br><br><br></td>
+<td class='calendar_day'>17<br><br><br></td>
+</tr>
+<tr valign=center>
+<td  onclick="document.forms[0].dt.value='dr';document.forms[0].ds.value='2012-11-18';document.forms[0].de.value='2012-11-24';document.forms[0].submit();"width=5 class=calendar_weekday style="cursor:pointer;font-size:x-small;border:1px solid #333333;"><br>W<br>e<br>e<br>k<br>47<br></td>
+<td class='calendar_day'>18<br><br><br></td>
+<td class='calendar_day'>19<br><br><br></td>
+<td class='calendar_day'>20<br><br><br></td>
+<td class='calendar_day'>21<br><br><br></td>
+<td class='calendar_day'>22<br><br><br></td>
+<td class='calendar_day'>23<br><br><br></td>
+<td class='calendar_day'>24<br><br><br></td>
+</tr>
+<tr valign=center>
+<td  onclick="document.forms[0].dt.value='dr';document.forms[0].ds.value='2012-11-25';document.forms[0].de.value='2012-12-1';document.forms[0].submit();"width=5 class=calendar_weekday style="cursor:pointer;font-size:x-small;border:1px solid #333333;"><br>W<br>e<br>e<br>k<br>48<br></td>
+<td class='calendar_day'>25<br><br><br></td>
+<td class='calendar_day'>26<br><br><br></td>
+<td class='calendar_day'>27<br><br><br></td>
+<td class='calendar_day'>28<br><br><br></td>
+<td class='calendar_day'>29<br><br><br></td>
+<td class='calendar_day'>30<br></td>
+<td class='calendar_blank'>&nbsp</td>
+</tr>
+<tr valign=center>
+<td  onclick="document.forms[0].dt.value='dr';document.forms[0].ds.value='2012-12-2';document.forms[0].de.value='2012-12-8';document.forms[0].submit();"width=5 class=calendar_weekday style="cursor:pointer;font-size:x-small;border:1px solid #333333;"><br>W<br>e<br>e<br>k<br>49<br></td>
+<td class='calendar_blank'>&nbsp</td>
+<td class='calendar_blank'>&nbsp</td>
+<td class='calendar_blank'>&nbsp</td>
+<td class='calendar_blank'>&nbsp</td>
+<td class='calendar_blank'>&nbsp</td>
+<td class='calendar_blank'>&nbsp</td>
+<td class='calendar_blank'>&nbsp</td>
+</tr>
+
+		  <tr valign="middle" align="center">
+             <td colspan="8" class="calendar_nav">
+				<img src="common/cal_tools/spacer.gif" width="650" height="1" border="0" alt><br>
+				<a onclick="javascript:DateSubmit('11/1/2011')">&lt;&lt; Prev Year</a>&nbsp;&nbsp;&nbsp;&nbsp;
+
+					<a onclick="javascript:DateSubmit('1/1/2012')">Jan</a>&nbsp;&nbsp;&nbsp;
+
+					<a onclick="javascript:DateSubmit('2/1/2012')">Feb</a>&nbsp;&nbsp;&nbsp;
+
+					<a onclick="javascript:DateSubmit('3/1/2012')">Mar</a>&nbsp;&nbsp;&nbsp;
+
+					<a onclick="javascript:DateSubmit('4/1/2012')">Apr</a>&nbsp;&nbsp;&nbsp;
+
+					<a onclick="javascript:DateSubmit('5/1/2012')">May</a>&nbsp;&nbsp;&nbsp;
+
+					<a onclick="javascript:DateSubmit('6/1/2012')">Jun</a>&nbsp;&nbsp;&nbsp;
+
+					<a onclick="javascript:DateSubmit('7/1/2012')">Jul</a>&nbsp;&nbsp;&nbsp;
+
+					<a onclick="javascript:DateSubmit('8/1/2012')">Aug</a>&nbsp;&nbsp;&nbsp;
+
+					<a onclick="javascript:DateSubmit('9/1/2012')">Sep</a>&nbsp;&nbsp;&nbsp;
+
+					<a onclick="javascript:DateSubmit('10/1/2012')">Oct</a>&nbsp;&nbsp;&nbsp;
+
+					<a onclick="javascript:DateSubmit('11/1/2012')">Nov</a>&nbsp;&nbsp;&nbsp;
+
+					<a onclick="javascript:DateSubmit('12/1/2012')">Dec</a>&nbsp;&nbsp;&nbsp;
+
+				<a onclick="javascript:DateSubmit('11/1/2013')">&nbsp;&nbsp;&nbsp;&nbsp;Next Year &gt;&gt;</a>
+			  </td>
+		  </tr>
+          <tr valign="middle" align="center">
+             <td colspan="8" class="calendar_nav">
+				  <a onclick="javascript:document.forms[0].direction.value='subPrev'; SubmitSearch()">&lt;Prev</a>
+				  <span class="current_month">November 2012</span>
+				  <a onclick="javascript:document.forms[0].direction.value='subNext'; SubmitSearch()">Next&gt;</a>
+             </td>
+          </tr>
+
+		 <tr valign="middle" align="center">
+			<td colspan="8" class="calendar_nav" style="padding:0px;margin:0px;"><div id="roundedbot"></div></td>
+		 </tr>
+	</table>
+
+	<br>
+	<table width="100%" style="border-right-width:0px;border-left-width:0px;border-top-width:0px;border-bottom-width:0px;" border="0">
+		<tr>
+		<td align=center><input class=maintbtn type=button onclick=javascript:top.location.href="http://ppl.lib.in.us" value="Home">
+			<br><br>
+			<span style="font-size:x-small">Powered By:</span><br><a href="http://www.evancedsolutions.com"><img ALIGN="CENTER" SRC="elogo.jpg" BORDER="0" ALT="E*vanced Solutions provides event registration & room reservation management tools for libraries & public organizations." width="90" height="54"></a>
+		</td>
+		</tr>
+	</table>
+
+
+</td>
+</tr>
+
+
+
+</table>
+
+</form>
+
+
+
+</body>
+</html>
