@@ -26,13 +26,17 @@ public class GenerateClosedPairsByWN {
 			{
 				String term = "";
 				String term_close = "";
-				String term_far = "";
+				String term_far1 = "";
+				String term_far2 = "";
+				String term_far3 = "";
 				
 				while (term_far.equals("") || term.equals("") || term_close.equals(""))
 				{
 					term = wn.GenerateRandomNoun();
 					term_close = wn.GetASibling(term);
-					term_far = wn.GetAFar2Level(term);
+					term_far1 = wn.GetAFar1Level(term);
+					term_far2 = wn.GetAFar2Level(term);
+					term_far3 = wn.GetAFar3Level(term);
 				}
 				Float distance_close = wn.GetDistance(term, term_close);
 				Float distance_far = wn.GetDistance(term, term_far);

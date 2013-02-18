@@ -261,4 +261,80 @@ public class WordNetLib {
 		}
 		return "";
 	}
+	
+
+
+	public String GetAFar3Level(String term) {
+		String[] parent1 = riwn.getHypernyms(term, RiWordnet.NOUN);
+		if (parent1 == null)
+			return "";
+		Vector<String> parent_col_1 = new Vector<String>();
+		for (String p1 : parent1)
+			parent_col_1.add(p1);
+		Collections.shuffle(parent_col_1);
+		for (String p1 : parent_col_1)
+		{
+			String[] parent2 = riwn.getHypernyms(p1, RiWordnet.NOUN);
+			if (parent2 == null)
+				continue;
+			Vector<String> parent_col_2 = new Vector<String>();
+			for (String p2 : parent1)
+				parent_col_2.add(p2);
+			Collections.shuffle(parent_col_2);
+			for (String p2 : parent_col_2)
+			{
+				String[] child1 = riwn.getHyponyms(p2, RiWordnet.NOUN);
+				if (child1 == null)
+					continue;
+				Vector<String> child_col_1 = new Vector<String>();
+				for (String c1 : child1)
+					if (c1.equals(p1) == false)
+						child_col_1.add(c1);
+				Collections.shuffle(child_col_1);
+				for (String c1 : child_col_1)
+				{
+					String[] child2 = riwn.getHyponyms(c1, RiWordnet.NOUN);
+					if (child2 == null)
+						continue;
+					Vector<String> child_col_2 = new Vector<String>();
+					for (String c2 : child2)
+						child_col_2.add(c2);
+					Collections.shuffle(child_col_2);
+					for (String c2 : child_col_2)
+					{
+						if (c2.equals(term) == false)
+							return c2;
+					}
+				}
+			}
+		}
+		return "";
+	}
+	
+	public String GetAFar1Level(String term) {
+		String[] parent1 = riwn.getHypernyms(term, RiWordnet.NOUN);
+		if (parent1 == null)
+			return "";
+		Vector<String> parent_col_1 = new Vector<String>();
+		for (String p1 : parent1)
+			parent_col_1.add(p1);
+		Collections.shuffle(parent_col_1);
+		for (String p1 : parent_col_1)
+		{
+			String[] child1 = riwn.getHyponyms(p1, RiWordnet.NOUN);
+			if (child1 == null)
+				continue;
+			Vector<String> child_col_1 = new Vector<String>();
+			for (String c1 : child1)
+				if (c1.equals(p1) == false)
+					child_col_1.add(c1);
+			Collections.shuffle(child_col_1);
+			for (String c1 : child_col_1)
+			{
+				if (c1.equals(term) == false)
+					return c1;
+			}
+		}
+		return "";
+	}
 }

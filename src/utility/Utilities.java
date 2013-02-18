@@ -175,29 +175,6 @@ public class Utilities {
 		}
 	}
 
-	public static Vector<String> ReadMulStringXPath(String file, String path) {
-		Vector<String> res = new Vector<String>();
-		try {
-			DocumentBuilderFactory domFactory = DocumentBuilderFactory
-					.newInstance();
-			DocumentBuilder builder = domFactory.newDocumentBuilder();
-			Document doc = builder.parse(new File(file));
-
-			XPath xpath = XPathFactory.newInstance().newXPath();
-			XPathExpression expr = xpath.compile(path);
-			NodeList result = (NodeList) expr.evaluate(doc,
-					XPathConstants.NODESET);
-			for (int i = 0; i < result.getLength(); i++) {
-				Element item = (Element) result.item(i);
-				res.add(item.getTextContent());
-			}
-			return res;
-		} catch (Exception ex) {
-			ex.printStackTrace();
-			return res;
-		}
-	}
-
 	public static String readFileAsString(String filePath) {
 		try {
 			if (!IsFileExist(filePath)) {
@@ -511,32 +488,6 @@ public class Utilities {
 			}
 		}
 		return res;
-	}
-
-	public static void WriteSetting(String file, String name, String value) {
-		try {
-			if (IsFileExist(file + ".xml") == false) {
-				WriteFile(file + ".xml", "<settings></settings>", false);
-			}
-			DocumentBuilderFactory domFactory = DocumentBuilderFactory
-					.newInstance();
-			DocumentBuilder builder = domFactory.newDocumentBuilder();
-			Document doc = builder.parse(new File(file + ".xml"));
-			NodeList list = doc.getElementsByTagName(name);
-			if (list.getLength() > 0) {
-				Node node = (Node) doc.createElement(name);
-				node.setTextContent(value);
-				doc.getElementsByTagName("settings").item(0)
-						.replaceChild(node, list.item(0));
-			} else {
-				Element node = doc.createElement(name);
-				node.setTextContent(value);
-				doc.getElementsByTagName("settings").item(0).appendChild(node);
-			}
-			Utilities.WriteXML(file + ".xml", doc, false);
-		} catch (Exception ex) {
-			ex.printStackTrace();
-		}
 	}
 
 	public static Vector<String> GetFileInFolder(String folder) {
