@@ -37,7 +37,7 @@ public class ExpWordPair3Google implements IWebClientX {
 		g = new GoogleSimilarityDistance();
 		client.callback = this;
 		g.client = client;
-		while (g.client.CheckGoogleBlock("intitle:jobs analysts") == true)
+		while (g.client.CheckGoogleBlock("jobs AND analysts") == true)
 			if (Measure() == 2)
 			{
 				break;
@@ -46,7 +46,7 @@ public class ExpWordPair3Google implements IWebClientX {
 	
 	public int Measure()
 	{
-		String table = "6";
+		String table = "_3_10";
 		
 		int result = 1;
 		try
@@ -149,7 +149,7 @@ public class ExpWordPair3Google implements IWebClientX {
 	public void FinishedCaptcha() {
 		if (Measure() == 0)
 		{
-			while (g.client.CheckGoogleBlock("intitle:analysts tree") == true)
+			while (g.client.CheckGoogleBlock("analysts AND tree") == true)
 				if (Measure() == 2)
 					break;
 		}

@@ -24,12 +24,47 @@ public class ExpWordPair3 {
 		// TODO Auto-generated method stub
 		ExpWordPair3 program = new ExpWordPair3();
 		program.Init();
-		program.Generate(7, 30, 2,"6");
-		program.Generate(7, 30, 3,"6");
-		program.Generate(7, 30, 4,"6");
-		program.Generate(7, 30, 5,"6");
-		program.Generate(7, 30, 6,"6");
-		program.Generate(7, 30, 7,"6");
+		program.Generate(1, 20, 2,"_2_1");
+		program.Generate(1, 20, 3,"_2_1");
+		program.Generate(1, 20, 4,"_2_1");
+		program.Generate(1, 20, 5,"_2_1");
+		program.Generate(1, 20, 6,"_2_1");
+		program.Generate(1, 20, 7,"_2_1");
+
+		program.Generate(7, 20, 2,"_2_7");
+		program.Generate(7, 20, 3,"_2_7");
+		program.Generate(7, 20, 4,"_2_7");
+		program.Generate(7, 20, 5,"_2_7");
+		program.Generate(7, 20, 6,"_2_7");
+		program.Generate(7, 20, 7,"_2_7");
+
+		program.Generate(10, 20, 2,"_2_10");
+		program.Generate(10, 20, 3,"_2_10");
+		program.Generate(10, 20, 4,"_2_10");
+		program.Generate(10, 20, 5,"_2_10");
+		program.Generate(10, 20, 6,"_2_10");
+		program.Generate(10, 20, 7,"_2_10");
+		
+		program.Generate(1, 20, 2,"_3_1");
+		program.Generate(1, 20, 3,"_3_1");
+		program.Generate(1, 20, 4,"_3_1");
+		program.Generate(1, 20, 5,"_3_1");
+		program.Generate(1, 20, 6,"_3_1");
+		program.Generate(1, 20, 7,"_3_1");
+
+		program.Generate(7, 20, 2,"_3_7");
+		program.Generate(7, 20, 3,"_3_7");
+		program.Generate(7, 20, 4,"_3_7");
+		program.Generate(7, 20, 5,"_3_7");
+		program.Generate(7, 20, 6,"_3_7");
+		program.Generate(7, 20, 7,"_3_7");
+
+		program.Generate(10, 20, 2,"_3_10");
+		program.Generate(10, 20, 3,"_3_10");
+		program.Generate(10, 20, 4,"_3_10");
+		program.Generate(10, 20, 5,"_3_10");
+		program.Generate(10, 20, 6,"_3_10");
+		program.Generate(10, 20, 7,"_3_10");
 		program.Close();
 	}
 	
