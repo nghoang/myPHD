@@ -108,8 +108,11 @@ public class GoogleSimilarityDistance {
 				this.newContent = content;
 				return -1;
 			}
-			double countw1 = Double.parseDouble(Utilities.SimpleRegexSingle(
-					resultParser, content, 1).replace(",", ""));
+			String temp = Utilities.SimpleRegexSingle(
+					resultParser, content, 1).replace(",", "");
+			if (temp.equals(""))
+				return 1;
+			double countw1 = Double.parseDouble(temp);
 
 			last_query = "http://www.google.com/search?q="
 					+ Utilities.EncodeQuery(context + w2);
@@ -126,8 +129,11 @@ public class GoogleSimilarityDistance {
 			// } catch (InterruptedException e) {
 			// e.printStackTrace();
 			// }
-			double countw2 = Double.parseDouble(Utilities.SimpleRegexSingle(
-					resultParser, content, 1).replace(",", ""));
+			temp = Utilities.SimpleRegexSingle(
+					resultParser, content, 1).replace(",", "");
+			if (temp.equals(""))
+				return 1;
+			double countw2 = Double.parseDouble(temp);
 			last_query = "http://www.google.com/search?q="
 					+ Utilities.EncodeQuery(context + "" + w1 + " "+ middle +" " + w2);
 			content = client.GetMethod(last_query);

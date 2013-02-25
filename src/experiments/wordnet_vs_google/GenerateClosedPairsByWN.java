@@ -1,4 +1,4 @@
-package experiments.wordnet_vs_google;
+/*package experiments.wordnet_vs_google;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -58,3 +58,4 @@ public class GenerateClosedPairsByWN {
 	}
 
 }
+*/
