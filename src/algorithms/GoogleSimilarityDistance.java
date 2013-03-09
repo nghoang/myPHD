@@ -39,7 +39,12 @@ public class GoogleSimilarityDistance {
 
 	public double Similarity(String w1, String w2, String context)
 	{
-		return Similarity(w1,w2,context," AND ");
+		return Similarity(w1,w2,context," AND ","");
+	}
+
+	public double Similarity(String w1, String w2, String context, String ex)
+	{
+		return Similarity(w1,w2,context," AND ", ex);
 	}
 	
 	public double ReadCache(String id)
@@ -60,7 +65,7 @@ public class GoogleSimilarityDistance {
 		Utilities.WriteFile("google-distance-cache.txt", wid + ":" + result + "\n",true);
 	}
 	
-	public double Similarity(String w1, String w2, String context, String middle) {
+	public double Similarity(String w1, String w2, String context, String middle, String ex) {
 		try {
 			/*MeasurePair cache = MeasurePair.IsScored(w1, w2, pairs);
 			if (cache != null)
@@ -68,7 +73,7 @@ public class GoogleSimilarityDistance {
 
 			//w1 = "\"" + w1 + "\"";
 			//w2 = "\"" + w2 + "\"";
-			String wid = context + "-" + w1 + "-" + middle + "-"+ w2;
+			String wid = context + "-" + w1 + "-" + middle + "-"+ w2+"-"+ex;
 			wid = wid.replace(":", "_").trim();
 			Double cacheFile = ReadCache(wid);
 			if (cacheFile != -1)
@@ -95,7 +100,7 @@ public class GoogleSimilarityDistance {
 			if (client == null)
 				client = new WebClientX();
 			last_query = "http://www.google.com/search?q="
-					+ Utilities.EncodeQuery(w1 + context);
+					+ Utilities.EncodeQuery((w1 + " "+ex+" " + context).replace("  ", " "));
 			String content = client.GetMethod(last_query);
 			if (content.indexOf("did not match any documents.") > 0)
 				return 1;
@@ -115,7 +120,7 @@ public class GoogleSimilarityDistance {
 			double countw1 = Double.parseDouble(temp);
 
 			last_query = "http://www.google.com/search?q="
-					+ Utilities.EncodeQuery(context + w2);
+					+ Utilities.EncodeQuery((w2 + " "+ex+" " + context).replace("  ", " "));
 			content = client.GetMethod(last_query);
 			if (content.indexOf("did not match any documents.") > 0)
 				return 1;
@@ -135,7 +140,7 @@ public class GoogleSimilarityDistance {
 				return 1;
 			double countw2 = Double.parseDouble(temp);
 			last_query = "http://www.google.com/search?q="
-					+ Utilities.EncodeQuery(context + "" + w1 + " "+ middle +" " + w2);
+					+ Utilities.EncodeQuery((context + "" + w1 + " "+ middle +" " + w2 + " " + ex).replace("  ", " ").trim());
 			content = client.GetMethod(last_query);
 			if (content.indexOf("did not match any documents.") > 0)
 				return 1;
@@ -173,8 +178,8 @@ public class GoogleSimilarityDistance {
 			//pairs.add(new MeasurePair(w1, w2, (float) result));
 
 			return result;
-		} catch (Exception ex) {
-			ex.printStackTrace();
+		} catch (Exception exp) {
+			exp.printStackTrace();
 			return -1;
 		}
 	}

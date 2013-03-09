@@ -4084,3 +4084,463 @@ device-collusion- AND -phosphorescence:0.7224826987986245
 -stagecraft- AND -recidivism:0.5358154613725016
 -pony- AND -slammer:0.4856483539559001
 -hayrack- AND -purdah:0.4795783329291668
+-Cord- AND -Smile:0.8638135901441502
+-Oracle- AND -Sage:0.6946179665372505
+-Forest- AND -Woodland:0.5314652025596409
+-cord- AND -smile:0.9141868793008892
+-noon- AND -string:1.122641886729466
+-rooster- AND -voyage:0.27672870580850134
+-fruit- AND -furnace:0.7350106895700605
+-autograph- AND -shore:0.7574761704228892
+-automobile- AND -wizard:0.7118915767026669
+-mound- AND -stove:0.3207321137212778
+-grin- AND -implement:0.40709441503365795
+-asylum- AND -fruit:0.743542087177991
+-asylum- AND -monk:0.5726353691625756
+-graveyard- AND -madhouse:0.22608269295866418
+-glass- AND -magician:0.8182985112058099
+-boy- AND -rooster:0.8234921434293674
+-cushion- AND -jewel:0.7762141578934728
+-monk- AND -slave:0.6521875888033862
+-asylum- AND -cemetery:0.661356771857386
+-coast- AND -forest:0.36178557071602047
+-grin- AND -lad:0.21180889675051448
+-shore- AND -woodland:0.5929716638928826
+-monk- AND -oracle:0.7731715518914212
+-boy- AND -sage:0.7999003755442164
+-mound- AND -shore:0.5981744141880235
+-automobile- AND -cushion:0.5366260717073144
+-lad- AND -wizard:0.7844808435698561
+-forest- AND -graveyard:0.721166199767308
+-food- AND -rooster:0.8463118820822527
+-cemetery- AND -woodland:0.6636980060057894
+-shore- AND -voyage:0.6050505484221211
+-bird- AND -woodland:0.6714027361978551
+-coast- AND -hill:0.2540686312847995
+-furnace- AND -implement:0.6962735225165975
+-crane- AND -rooster:0.7070981893790748
+-hill- AND -woodland:0.3585465352821543
+-car- AND -journey:0.6621327646917513
+-cemetery- AND -mound:0.6235530232139891
+-glass- AND -jewel:0.7613420538197397
+-magician- AND -oracle:0.7718406533144264
+-crane- AND -implement:0.6639088922500713
+-brother- AND -lad:0.677126346071765
+-sage- AND -wizard:0.7676322890055831
+-oracle- AND -sage:0.777016178464883
+-bird- AND -cock:0.5755656694936417
+-bird- AND -crane:0.6574026258887447
+-food- AND -fruit:0.5151233604180752
+-brother- AND -monk:0.5912995788923741
+-asylum- AND -madhouse:0.5717876615103458
+-furnace- AND -stove:0.47028488937967566
+-magician- AND -wizard:0.5879475538563929
+-hill- AND -mound:0.41156594949619896
+-cord- AND -string:1.0739878953211028
+-glass- AND -tumbler:0.6542512313465434
+-serf- AND -slave:0.6178818185573329
+-grin- AND -smile:0.5882352514602245
+-journey- AND -voyage:0.6049692744868711
+-autograph- AND -signature:0.7019342990113507
+-coast- AND -shore:0.4150483404764014
+-forest- AND -woodland:0.528327991288654
+-implement- AND -tool:0.6159168513517019
+-cock- AND -rooster:0.825546211364374
+-boy- AND -lad:0.670865441312049
+-cushion- AND -pillow:0.3983828388273826
+-cemetery- AND -graveyard:0.49174895349700287
+-automobile- AND -car:0.4810283973666912
+-gem- AND -jewel:0.550199944163227
+-midday- AND -noon:0.47009489565546214
+-king- AND -cabbage:0.8315919113237389
+-professor- AND -cucumber:0.8733603740860719
+-chord- AND -smile:0.8487819053926827
+-sugar- AND -approach:0.4716589098770396
+-stock- AND -jaguar:0.8848111097381129
+-stock- AND -life:0.370027826262897
+-delay- AND -racism:0.6668859855977879
+-drink- AND -ear:0.5902976936624786
+-stock- AND -CD:0.8230246436615958
+-stock- AND -phone:0.5817018250560524
+-holy- AND -sex:0.7352717216876505
+-production- AND -hike:0.7147371989687904
+-precedent- AND -group:0.7226584408788517
+-energy- AND -secretary:0.4532317487242725
+-stock- AND -egg:0.8575267355985801
+-month- AND -hotel:1.2654146901093188
+-cup- AND -substance:0.8796270899724583
+-possibility- AND -girl:0.8708312592125685
+-cup- AND -entity:0.9422036749985504
+-Wednesday- AND -news:0.444432025291734
+-direction- AND -combination:0.454114113343512
+-reason- AND -hypertension:0.7671239799723631
+-problem- AND -airport:0.4923934796598029
+-sign- AND -recess:0.9191306704809213
+-cup- AND -article:0.6612235399448576
+-precedent- AND -collection:0.6617743429863601
+-Arafat- AND -Jackson:0.6159972047489688
+-volunteer- AND -motto:0.6368633172099523
+-listing- AND -proximity:0.7658265999947086
+-opera- AND -industry:0.7287512180088586
+-drink- AND -mother:0.36911108990003877
+-line- AND -insurance:0.45488698812009215
+-announcement- AND -effort:0.4301629222146258
+-precedent- AND -cognition:0.3180175583206776
+-media- AND -gain:0.5988463702779144
+-cup- AND -artifact:0.5046751043465892
+-peace- AND -insurance:0.5249782642340745
+-Mars- AND -water:0.8094039235156538
+-viewer- AND -serial:0.14728999308469548
+-prejudice- AND -recognition:0.4727274511233651
+-president- AND -medal:0.513341284812045
+-drink- AND -car:0.5628374978546744
+-century- AND -nation:0.28329480471935153
+-practice- AND -institution:0.5211898588888406
+-governor- AND -interview:0.49106207956702314
+-morality- AND -importance:0.504871214500152
+-delay- AND -news:0.7617931069298127
+-money- AND -operation:0.4071133619570803
+-announcement- AND -production:0.6388119687153491
+-five- AND -month:0.7844572406503645
+-school- AND -center:0.0224201467522729
+-experience- AND -music:0.3794647442737406
+-seven- AND -series:0.46882298922325033
+-report- AND -gain:0.6254473570464382
+-music- AND -project:0.592410271691361
+-atmosphere- AND -landscape:0.5930359926471908
+-minority- AND -peace:0.6060538774894643
+-morality- AND -marriage:0.565408624172226
+-cup- AND -object:0.844342853109085
+-peace- AND -atmosphere:0.6614482675136824
+-stock- AND -live:0.6085325217491487
+-population- AND -development:0.4840178955066902
+-architecture- AND -century:0.4239755918371067
+-precedent- AND -information:0.7224887211619365
+-situation- AND -isolation:0.5362380018903873
+-chance- AND -credibility:0.6614018588309191
+-profit- AND -warning:0.5097504608957325
+-media- AND -trading:0.6274157409463914
+-theater- AND -history:0.3386795240549732
+-day- AND -summer:0.2721217393919505
+-development- AND -issue:0.2683392753880221
+-focus- AND -life:0.5022258685022255
+-start- AND -year:0.036713759525033494
+-consumer- AND -confidence:0.45232667971356255
+-attempt- AND -peace:0.498063151407549
+-deployment- AND -departure:0.6172478175220931
+-benchmark- AND -index:0.9229214333496414
+-observation- AND -architecture:0.6470157364965718
+-lad- AND -brother:0.677126346071765
+-computer- AND -news:0.6305250215104253
+-start- AND -match:0.5387996259401008
+-board- AND -recommendation:0.7424842562333995
+-life- AND -term:0.2765593912928118
+-image- AND -surface:0.861073094638119
+-investigation- AND -effort:0.3649350070533419
+-smart- AND -student:1.1878643998700555
+-hospital- AND -infrastructure:0.6015867585658237
+-ministry- AND -culture:0.47633023340346303
+-peace- AND -plan:0.5140584679817947
+-word- AND -similarity:0.7532334357171732
+-consumer- AND -energy:0.22430817766899816
+-tiger- AND -organism:0.48941197065345354
+-situation- AND -conclusion:0.40799286509851884
+-space- AND -chemistry:0.6763188551054052
+-car- AND -flight:0.6226976607541198
+-street- AND -children:0.20903364979236738
+-journal- AND -association:0.3393890261577807
+-cup- AND -food:0.3910328635747886
+-doctor- AND -personnel:0.8019084127708203
+-travel- AND -activity:0.5279034740702008
+-death- AND -inmate:0.5591542679797602
+-secretary- AND -senate:0.24234048359282087
+-energy- AND -laboratory:0.4658063310444743
+-impartiality- AND -interest:0.6840843365821244
+-doctor- AND -liability:0.8108956472772927
+-death- AND -row:0.48612875947740397
+-man- AND -governor:0.655330939555373
+-territory- AND -kilometer:0.48174647557953154
+-credit- AND -information:0.3981343736307924
+-size- AND -prominence:0.7697091510816138
+-exhibit- AND -memorabilia:0.6826753970879159
+-territory- AND -surface:0.6983527206733694
+-arrangement- AND -accommodation:0.6319014424121744
+-change- AND -attitude:0.58485569920578
+-disability- AND -death:0.5831965448051497
+-alcohol- AND -chemistry:0.6173426380145538
+-glass- AND -metal:0.46647969683916524
+-psychology- AND -discipline:0.4315692617837922
+-tiger- AND -fauna:0.7962599081574009
+-summer- AND -nature:0.3331093132407208
+-decoration- AND -valor:1.0822035293276164
+-OPEC- AND -country:0.8244733969804888
+-Mars- AND -scientist:0.7915698778563982
+-money- AND -laundering:0.5386771022403087
+-lobster- AND -wine:0.621504561005682
+-planet- AND -people:0.6624211094601631
+-plane- AND -car:0.6529490992814246
+-smart- AND -stupid:0.992751174736161
+-journey- AND -car:0.6193109464612218
+-precedent- AND -example:0.5510078464277074
+-tiger- AND -zoo:0.6040230445326403
+-deployment- AND -withdrawal:0.5056879439710882
+-cup- AND -liquid:0.7174541014178075
+-reason- AND -criterion:0.6276122833090932
+-equipment- AND -maker:0.7656482766244266
+-cucumber- AND -potato:0.3533383778536049
+-king- AND -rook:0.8207225927520673
+-grocery- AND -money:0.5412008601683134
+-life- AND -lesson:0.6791992399238108
+-energy- AND -crisis:0.20144783840999014
+-drink- AND -mouth:0.4524031409011141
+-baseball- AND -season:0.2735621959259545
+-game- AND -round:0.5281496709654633
+-announcement- AND -warning:0.6077362400541482
+-registration- AND -arrangement:0.6821973164336678
+-arrival- AND -hotel:0.645089622428101
+-shower- AND -flood:0.7798926620713758
+-precedent- AND -antecedent:0.48733156197313604
+-weapon- AND -secret:0.5253270830362186
+-dollar- AND -loss:0.43468920792629256
+-game- AND -series:0.30949713708550114
+-lover- AND -quarrel:0.5987458287558731
+-bread- AND -butter:0.3813137684445
+-movie- AND -popcorn:0.7056140263269897
+-preservation- AND -world:0.8153370163040545
+-skin- AND -eye:0.39212683122006076
+-food- AND -preparation:0.5765128205647134
+-production- AND -crew:0.5049006887628165
+-family- AND -planning:0.5435732192537573
+-disaster- AND -area:0.6894217183171869
+-nature- AND -man:0.6589601060842393
+-shower- AND -thunderstorm:0.7356227029779908
+-train- AND -car:0.5169335445368823
+-record- AND -number:0.3281455726066368
+-video- AND -archive:0.8554745388630526
+-discovery- AND -space:0.6292577172302026
+-governor- AND -office:0.5455505969549829
+-oil- AND -stock:0.6307736314096314
+-listing- AND -category:0.6168411809717137
+-gender- AND -equality:0.4880590174476889
+-psychology- AND -doctor:0.5849405168778835
+-competition- AND -price:0.7292435000410802
+-street- AND -place:0.1482341633709856
+-tool- AND -implement:0.6156324436480568
+-luxury- AND -car:0.49917222627574664
+-victim- AND -emergency:0.36284863857130484
+-dividend- AND -calculation:0.4086851934369599
+-Japanese- AND -American:0.5036895870772304
+-space- AND -world:0.8634929189838764
+-water- AND -seepage:0.6209293341285481
+-government- AND -crisis:0.25085500024122465
+-cup- AND -coffee:0.41133967667649407
+-psychology- AND -clinic:0.6439146908678927
+-professor- AND -doctor:0.5034675997356381
+-minister- AND -party:0.5088750465073135
+-football- AND -tennis:0.21275553126016286
+-precedent- AND -law:0.5479944171566632
+-fertility- AND -egg:0.5687776999362819
+-lawyer- AND -evidence:0.38630037708341153
+-bishop- AND -rabbi:0.596236694499711
+-psychology- AND -science:0.3684815229385239
+-bed- AND -closet:0.5953442909864677
+-Arafat- AND -peace:0.7464880028910043
+-movie- AND -critic:0.5619591657717754
+-problem- AND -challenge:0.43055966268878565
+-television- AND -radio:0.6617432642492685
+-love- AND -sex:1.0517212807273668
+-computer- AND -laboratory:0.6095494467209166
+-student- AND -professor:0.3463192700282251
+-concert- AND -virtuoso:0.6109306023458403
+-football- AND -basketball:0.21975876751953585
+-cup- AND -tableware:1.0482841753774172
+-drug- AND -abuse:0.23482649680770099
+-tiger- AND -mammal:0.70574028771387
+-psychology- AND -fear:0.6124654822025827
+-drink- AND -eat:-0.36552344810686804
+-opera- AND -performance:0.9861790790461608
+-money- AND -withdrawal:0.6904560980919813
+-street- AND -block:0.4805856573019685
+-FBI- AND -fingerprint:0.6702068853475591
+-game- AND -defeat:0.6071550519350765
+-doctor- AND -nurse:0.46480184119316315
+-tiger- AND -animal:0.5919664172779541
+-psychology- AND -anxiety:0.34673043048667496
+-liability- AND -insurance:0.4378656713510087
+-stroke- AND -hospital:0.5147018388145088
+-game- AND -victory:0.5746417804794965
+-company- AND -stock:1.0533382662630606
+-tiger- AND -carnivore:0.7578475656821876
+-investor- AND -earning:0.573556287678019
+-phone- AND -equipment:0.5747650355099458
+-summer- AND -drought:0.6773612895448695
+-museum- AND -theater:0.3864691990577289
+-psychology- AND -health:0.5460377639038193
+-cup- AND -drink:0.49130217215266886
+-jaguar- AND -car:0.6838803902747392
+-money- AND -possession:0.6438929746370433
+-country- AND -citizen:0.6022956964363585
+-tiger- AND -cat:0.769624354271418
+-physics- AND -chemistry:0.1443806146667951
+-movie- AND -star:0.5166982131344077
+-dollar- AND -profit:0.4336547608629488
+-hundred- AND -percent:0.3920385920234032
+-fighting- AND -defeating:0.5544174757573066
+-psychology- AND -depression:0.40313313306544674
+-jaguar- AND -cat:0.9171593151756516
+-media- AND -radio:0.47962825483571464
+-Mexico- AND -Brazil:0.08717211396071957
+-book- AND -library:0.4396186136158622
+-book- AND -paper:0.3708995339585027
+-marathon- AND -sprint:0.6090171893766918
+-seafood- AND -sea:0.6722460492905366
+-psychology- AND -cognition:0.39725621296785735
+-currency- AND -market:0.48809501295723184
+-telephone- AND -communication:0.40583091720276665
+-day- AND -dawn:0.7146980087150361
+-canyon- AND -landscape:0.6336434784918914
+-tennis- AND -racket:0.5581667925795124
+-announcement- AND -news:0.6731795579667286
+-money- AND -property:0.5828963884467497
+-computer- AND -internet:0.9353425996888542
+-rock- AND -jazz:0.49100208758598163
+-century- AND -year:0.5622919275375646
+-boxing- AND -round:0.5022516469632099
+-computer- AND -keyboard:0.5400579686050065
+-dividend- AND -payment:0.4109960412747196
+-profit- AND -loss:0.4315830252417145
+-Arafat- AND -terror:0.6902077860503409
+-Jerusalem- AND -Palestinian:0.2706874438306404
+-admission- AND -ticket:0.42160555943309597
+-game- AND -team:0.3384924991510344
+-psychology- AND -mind:0.5616757324639421
+-television- AND -film:0.4398247887852214
+-wood- AND -forest:0.4397046063845827
+-money- AND -deposit:0.5704614556334746
+-dollar- AND -yen:0.3875046633531794
+-cell- AND -phone:0.48543536746039356
+-lobster- AND -food:0.6444723672657421
+-aluminum- AND -metal:0.5105389878902648
+-baby- AND -mother:0.4284444583947708
+-life- AND -death:0.4530613531834981
+-liquid- AND -water:0.558614050156728
+-treatment- AND -recovery:0.39856174999296107
+-movie- AND -theater:0.5230497579111408
+-planet- AND -space:0.40896508346465665
+-soap- AND -opera:0.5561396938047086
+-planet- AND -astronomer:0.645040592250452
+-closet- AND -clothes:0.49461502955814435
+-tiger- AND -feline:0.6902829412570628
+-tiger- AND -jaguar:0.692932964628892
+-planet- AND -sun:0.6247927954999966
+-hotel- AND -reservation:0.5800164204136459
+-credit- AND -card:0.07813557562019975
+-planet- AND -constellation:0.7105736396822445
+-planet- AND -moon:0.342114812800263
+-psychology- AND -psychiatry:0.5942034959594863
+-stock- AND -market:0.20594579822090564
+-planet- AND -galaxy:0.6544507863574057
+-physics- AND -proton:0.4338299453404036
+-bank- AND -money:0.12996272690469599
+-war- AND -troops:0.44609543480805325
+-Harvard- AND -Yale:0.25410730727846026
+-vodka- AND -brandy:0.4968887666236374
+-news- AND -report:0.32281484646956204
+-psychology- AND -Freud:0.46516452443010997
+-money- AND -wealth:0.36504735129837484
+-man- AND -woman:0.6774274687371635
+-network- AND -hardware:0.41187323238221474
+-FBI- AND -investigation:0.27812469840549253
+-nature- AND -environment:0.31159185031881226
+-seafood- AND -food:0.5316221594494361
+-weather- AND -forecast:0.28790222905363533
+-championship- AND -tournament:0.17705903370546452
+-law- AND -lawyer:0.36685930021341745
+-money- AND -dollar:0.3823350184327664
+-calculation- AND -computation:0.35640993564256784
+-planet- AND -star:0.6450614784827456
+-Jerusalem- AND -Israel:0.2755751249490159
+-vodka- AND -gin:0.010394843905511413
+-money- AND -bank:0.6180476595831079
+-computer- AND -software:0.1271227435999997
+-murder- AND -manslaughter:0.3166435638171712
+-king- AND -queen:0.4935787703700308
+-OPEC- AND -oil:0.608316429223856
+-Maradona- AND -football:0.6596029859039136
+-mile- AND -kilometer:0.7067147159019245
+-seafood- AND -lobster:0.3629530324652496
+-environment- AND -ecology:0.536312985337292
+-street- AND -avenue:0.39067196685730704
+-car- AND -automobile:0.9011290298845834
+-type- AND -kind:0.5568629944684563
+-football- AND -soccer:0.22294753713383872
+-money- AND -currency:0.5273303074524385
+-money- AND -cash:0.31579107782565624
+-dollar- AND -buck:0.6601247045405535
+-fuck- AND -sex:0.5151551713388757
+-tiger- AND -tiger:-0.08940648651487719
+AND -cord- AND -smile:0.06683947628287286
+AND -fruit- AND -furnace:-0.05208623926230012
+AND -automobile- AND -wizard:0.2405635113282994
+AND -graveyard- AND -madhouse:0.32652269644091625
+AND -glass- AND -magician:-0.03794476541033672
+AND -boy- AND -rooster:-0.07386750623907681
+AND -boy- AND -sage:0.14710585268778836
+AND -automobile- AND -cushion:0.6244250704448515
+AND -lad- AND -wizard:0.04385369404738428
+AND -food- AND -rooster:0.09761159030170989
+AND -cemetery- AND -woodland:0.5422260029214463
+AND -furnace- AND -implement:0.08526086236876913
+AND -crane- AND -rooster:0.36167818231979637
+AND -hill- AND -woodland:0.07735709744366588
+AND -car- AND -journey:-0.0065006425890222
+AND -cemetery- AND -mound:0.5506048963339002
+AND -glass- AND -jewel:0.1296344199418519
+AND -magician- AND -oracle:0.41844200388701575
+AND -crane- AND -implement:0.30774791602900464
+AND -brother- AND -lad:-0.052869066141790245
+AND -oracle- AND -sage:0.2087866200720376
+AND -food- AND -fruit:0.02412635751754044
+AND -brother- AND -monk:0.10129029373873638
+AND -furnace- AND -stove:0.3359408681624691
+AND -magician- AND -wizard:0.6539143802517859
+AND -hill- AND -mound:-0.12150836285541725
+AND -cord- AND -string:0.19534609644316295
+AND -glass- AND -tumbler:0.055408088192302286
+AND -serf- AND -slave:0.2560051943639029
+AND -journey- AND -voyage:0.10728445411293853
+AND -cock- AND -rooster:0.166266899983479
+AND -boy- AND -lad:0.06730158236449857
+AND -cemetery- AND -graveyard:0.4363112864650955
+AND -automobile- AND -car:0.40061072623339006
+AND -gem- AND -jewel:0.04397494233095644
+-fruit--furnace-AND whole:0.21035762032373354
+-fruit--furnace-AND unit:-0.01755183483877659
+-rooster--voyage-AND entity:0.22070888246896933
+-rooster--voyage-AND ~entity:0.2197472798392836
+-fruit--furnace-AND ~whole:0.782421728644617
+-fruit--furnace-AND ~unit:0.1337933875418141
+-cord--smile-AND ~entity:-0.16717682399526682
+-noon--string-AND ~entity:0.07538356318299068
+-autograph--shore-AND ~entity:-0.1591359719130403
+-automobile--wizard-AND ~whole:1.0636206912056543
+-automobile--wizard-AND ~unit:0.4903752970932228
+-mound--stove-AND ~artifact:0.0023108228392454944
+-mound--stove-AND ~artefact:0.06414302910797937
+-grin--implement-AND ~entity:0.02234467764934579
+-asylum--fruit-AND ~whole:0.3285251500961443
+-asylum--fruit-AND ~unit:0.16360318737937338
+-midday--noon-AND ~noon:0.46795856131601665
+-midday--noon-AND ~midday:0.4725603144728243
+-midday--noon-AND ~noonday:-0.02583524626220512
+-midday--noon-AND ~noontide:0.027123066673155408
+-brother--lad-AND ~person:0.618973148089581
+-brother--lad-AND ~individual:-0.03035881705200176
+-brother--lad-AND ~someone:0.6952261117951017
+-brother--lad-AND ~somebody:0.5316033830690762
+-brother--lad-AND ~mortal:-0.03348344841793085
+-brother--lad-AND ~soul:0.37300449343551184
+-coast--hill-AND ~formation:-0.18954377696533753
+-coast- AND -hill-:0.41843874329949204
+-brother- AND -lad-:0.6498836844798858
+-coast--hill-AND formation:-0.2398349531856143
