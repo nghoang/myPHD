@@ -12,7 +12,7 @@ import com.ngochoang.crawlerinterface.IWebClientX;
 import AppParameters.AppConst;
 import algorithms.GoogleSimilarityDistance;
 
-public class Testing implements IWebClientX{
+public class TestDistanceWithCommonTerms implements IWebClientX{
 
 	static GoogleSimilarityDistance g;
 	static WebClientX client = null;
@@ -20,7 +20,7 @@ public class Testing implements IWebClientX{
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		(new Testing()).run();
+		(new TestDistanceWithCommonTerms()).run();
 	}
 	
 	public void run()
@@ -29,7 +29,7 @@ public class Testing implements IWebClientX{
 		g = new GoogleSimilarityDistance();
 		g.client = client;
 		client.callback = this;
-		if (g.client.CheckGoogleBlock("jobs AND analysts"))
+		if (g.client.CheckGoogleBlock("allintitle: jobs AND analysts"))
 			Measure();
 	}
 
@@ -46,20 +46,24 @@ public class Testing implements IWebClientX{
 			connect = DriverManager
 			          .getConnection(AppConst.DB_CONNECTION_DISTANCE_TEST);
 			statement = connect.createStatement();
-			resultSet = statement.executeQuery("SELECT * FROM cpbd_3 WHERE google=0 OR google=-1 ORDER BY human");
+			resultSet = statement.executeQuery("SELECT * FROM dataset3");
 			while (resultSet.next())
 			{
-				String term2 = resultSet.getString("term1");
-				String term1 = resultSet.getString("term2");
-				float distance = (float)g.Similarity(term1, term2);
-				System.out.println(term1 + " " + term2 + " " + distance);
+				String term1 = resultSet.getString("term1");
+				String term2 = resultSet.getString("term2");
+				String common = resultSet.getString("common");
+				float distance = (float)g.SimilarityFlex(term1 + " intitle:" + common, 
+						term1 + " intitle: " + common, 
+						term1 + " " + term2 + " intitle:" + common);
+				System.out.println(term1 + "," + term2 + "," + common + "," + distance);
 				if (distance == -1)
 					System.exit(0);
 				
-				preparedStatement = connect.prepareStatement("UPDATE cpbd_3 SET google=? WHERE term1=? AND term2=?");
+				preparedStatement = connect.prepareStatement("UPDATE dataset3 SET google=? WHERE term1=? AND term2=? AND common=?");
 				preparedStatement.setFloat(1, distance);
-				preparedStatement.setString(2, term2);
-				preparedStatement.setString(3, term1);
+				preparedStatement.setString(2, term1);
+				preparedStatement.setString(3, term2);
+				preparedStatement.setString(4, common);
 				preparedStatement.executeUpdate();
 				preparedStatement.close();
 				
